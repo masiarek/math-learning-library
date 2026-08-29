@@ -1,0 +1,42 @@
+1. SIG FIGS QUANTIZE UNCERTAINTY VERY COARSELY
+   Two numbers, both written with 2 significant figures:
+      1.0  ->  +/- 0.05  =   5.00% relative
+      9.9  ->  +/- 0.05  =   0.51% relative
+   Same sig-fig count, a ten-fold difference in what is actually known.
+   Sig figs can only step by factors of 10; reality does not.
+
+2. THE REAL RULES
+   For independent random errors, add in QUADRATURE (not linearly):
+     sum / difference   sigma = sqrt(sa^2 + sb^2)          absolute
+     product / quotient  rel  = sqrt(ra^2 + rb^2)          relative
+   Linear addition is the worst case -- correct only if the errors
+   are perfectly correlated, which independent measurements are not.
+
+3. A RECTANGLE
+     side a   12.30 +/- 0.10  (0.81%)
+     side b   4.50 +/- 0.10  (2.22%)
+     area     55.4 +/- 1.3  (2.37%)
+     sig-fig answer:  12.3 x 4.5 -> 2 s.f. -> 55
+     Here the two roughly agree: the propagated 55.4 +/- 1.3 and the
+     sig-fig '55' make about the same claim. They do not always.
+
+4. WHERE SIG FIGS UNDERSTATE -- ACCUMULATION
+   Ten independent measurements, each 1.0 +/- 0.05, added up:
+     sig figs   every term known to the 0.1 place, so the sum is too
+                -> 10.0          which CLAIMS +/- 0.05
+     truth      sigma = sqrt(10) x 0.05 = 0.158
+                -> 10.00 +/- 0.16  (1.58%)
+     sig figs claims 3.2x more precision than is there.
+     Error accumulates; the place-value rule cannot see that it has.
+
+5. WHERE SIG FIGS OVERSTATE -- A LUCKY LAST DIGIT
+   One measurement, 1.0 +/- 0.05, squared:
+     sig figs   2 s.f. in, 2 s.f. out -> 1.0   which CLAIMS +/- 0.05
+     truth      1.000 +/- 0.071  (7.07%)
+     the real spread is 1.41x wider than the notation admits.
+
+6. WHAT TO ACTUALLY DO
+   Sig figs are fine for a one-step classroom calculation and for
+   reporting a single measurement. The moment a value passes through
+   several steps, carry the uncertainty explicitly and round ONCE,
+   at the end -- rounding at every step is itself a source of error.

@@ -1,0 +1,47 @@
+1. WHAT THE NOTATION CLAIMS
+   written        3,200,000 people   (as 3.2 x 10^6)
+   sig figs       2
+   really means   3,150,000 to 3,250,000
+   uncertainty    +/- 50,000
+   The five zeros are placeholders. They say 'millions', not 'zero'.
+
+2. ADDING ONE PERSON TO A POPULATION ESTIMATE
+   3,200,000 + 2 = 3,200,002 exactly. But 'exactly' is not the
+   question -- the question is what you KNOW:
+     known to the 100,000 place   (the estimate)
+     known to the       1 place   (the 2 people, a count)
+   The sum can be no better than the worse of the two, so it stops
+   at the hundred-thousands place:
+     Decimal('3.2E+6') + Decimal('2')  ->  3.2E+6
+   The +2 is real, and it is invisible. A window 100,000 wide
+   cannot resolve a step of 2.
+
+3. COUNTING THEM
+         47.3   3 s.f.   non-zero digits always count
+         4007   4 s.f.   zeros BETWEEN digits count
+       0.0052   2 s.f.   leading zeros never count
+        5.200   4 s.f.   trailing zeros after a decimal point count
+         2.54   3 s.f.   an ordinary measurement
+
+   And the ambiguous case, which is why scientists stopped writing it:
+      3200000   7 s.f.   as written, 7 s.f. -- claims 7 known digits
+       3.2E+6   2 s.f.   2 s.f. -- no ambiguity, ever
+
+4. MULTIPLY AND DIVIDE: FEWEST SIG FIGS WINS
+     4.56 x 1.4 = 6.384        <- what a calculator shows
+     inputs have 3 and 2 s.f., so the answer gets 2
+     4.56 x 1.4 = 6.4           <- what you may claim
+
+5. ADD AND SUBTRACT: PLACE VALUE WINS (not sig-fig count)
+   This is the rule most people never learn, and it is a different rule.
+     12.11 + 0.3 = 12.41         <- what a calculator shows
+     12.11 is known to 10^-2, 0.3 only to 10^-1
+     so the answer stops at 10^-1:  12.4
+     note 12.11 has 4 s.f. and the answer has 3 --
+     counting sig figs here would have given the wrong answer.
+
+6. THE SAME DISTINCTION, IN PYTHON'S FORMAT SPEC
+     f"{v:.2f}"   ->  3200002.00      2 DECIMAL PLACES (a fixed spot)
+     f"{v:.2g}"   ->  3.2e+06         2 SIGNIFICANT FIGURES (relative)
+     f"{w:.3g}"   ->  0.000123     3 s.f. -- correct
+     f"{w:.3f}"   ->  0.000        3 d.p. -- the number is gone

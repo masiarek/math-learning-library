@@ -1,0 +1,51 @@
+1. ON PAPER, WITH NO COMPUTER INVOLVED
+     A = 1.2345   5 s.f.   +/- 0.00005   = 0.0041% relative
+     B = 1.2344   5 s.f.   +/- 0.00005   = 0.0041% relative
+     A - B = 0.0001                        1 s.f.
+     uncertainty +/- 0.0000707  =  71% relative
+     Ten significant figures went in. About one came out.
+     Relative error was amplified 17,458x.
+
+     Nothing was done wrong. The information simply was not there:
+     both measurements were consistent with a difference of zero.
+
+2. THE SAME THING TO A COMPUTER
+   Cancellation does not CREATE error. It removes the large leading
+   digits that were hiding error already there.
+     0.1 + 0.2 is stored as  0.3000000000000000444089209850062616169452667236328125
+     0.3       is stored as  0.299999999999999988897769753748434595763683319091796875
+     the sum is wrong by     4.441E-17
+     which is                1.480E-14 %  -- invisible
+
+   Now subtract. The true answer is exactly zero:
+     (0.1 + 0.2) - 0.3  =  5.551115123125783e-17
+     The absolute error did not change. The 0.3 that was masking it
+     is gone, so a rounding artifact is now 100% of the answer.
+
+3. THE CLASSIC: THE QUADRATIC FORMULA
+   x^2 + bx + c = 0, with b enormous and c small.
+     b = 1e+08   c = 1
+     sqrt(b^2 - 4c) = 99999999.99999999
+       ...which is b itself to every digit a float can hold.
+
+     naive   (-b + sqrt(b^2-4c)) / 2   = -7.450580596923828e-09
+     stable  -2c / (b + sqrt(b^2-4c))  = -1e-08
+     exact   (50-digit arithmetic)     = -1.00000000000000010e-8
+
+     naive  is off by  25.4942%
+     stable is off by   0.0000%
+     Same formula, same inputs, same hardware. One subtraction moved.
+
+4. CONDITIONING vs STABILITY -- two different faults
+   ill-CONDITIONED problem : small input change -> large output change.
+                             The problem's fault. No algorithm escapes it.
+   un-STABLE algorithm     : the problem is fine; this route through it
+                             is not. Section 3 is this kind, and the fix
+                             was free.
+   Section 1 is the first kind: no cleverness recovers digits that were
+   never measured. Knowing which one you have is the whole skill.
+
+5. THE PRACTICAL RULE
+   Whenever you subtract two quantities that are close, stop and ask
+   what the difference is RELATIVE to its own uncertainty. If the
+   answer is 'not much', the digits on your screen are decoration.

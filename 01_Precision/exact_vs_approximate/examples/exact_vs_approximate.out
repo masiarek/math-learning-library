@@ -1,0 +1,37 @@
+1. COUNTED THINGS ARE EXACT
+   Nobody 'measures' a ballot. You either have it or you don't.
+     ballots cast            1,284   sig figs: infinite
+     inches in a foot           12   sig figs: infinite
+     trials run                  3   sig figs: infinite
+   No instrument could refine any of these. There is no last
+   uncertain digit, because there is no uncertain digit at all.
+
+2. MEASURED THINGS CARRY THEIR INSTRUMENT
+   The same physical length, three rulers:
+         2.5 cm   2 s.f.   means 2.45 to 2.55           (a school ruler, marked in mm)
+        2.54 cm   3 s.f.   means 2.535 to 2.545         (a vernier caliper)
+      2.5400 cm   5 s.f.   means 2.53995 to 2.54005     (a micrometer)
+   Same object. The digits describe the RULER, not the object.
+
+3. THE TEST
+   Ask: could a better instrument change this digit?
+     yes -> the digit is measured, and sig figs apply
+     no  -> the number is exact, and sig figs do not
+
+4. WHY IT MATTERS IN ARITHMETIC
+   Three measured lengths, averaged. The 3 is a COUNT, so it is
+   exact and does not limit the answer:
+     (2.51 + 2.47 + 2.54) / 3
+     = 7.52 / 3
+     = 2.506666666666666666666666667
+     -> 2.51 cm      3 s.f., limited by the RULER, never by the 3
+
+   Had the 3 been treated as 1 significant figure, the answer would
+   collapse to 3 cm -- throwing away two digits that were really there.
+
+5. THE TRAP
+   A census figure looks counted and is not:
+     '3,200,000 people'  is an ESTIMATE, 2 s.f., +/- 50,000
+     '3,200,002 people'  would be a COUNT, 7 s.f., exact
+   Same units, same object, same digits. Only the method differs,
+   and the method is the entire question.
