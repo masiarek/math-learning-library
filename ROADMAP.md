@@ -10,9 +10,9 @@ What exists, and what is deliberately not written yet. A topic listed here has *
 
 The four lessons close one argument, but they leave three doors open:
 
-- **What a float actually stores** — the binary mechanics under lesson 4. The Rust library already has [a thorough page on this ↗](https://masiarek.github.io/rust-learning-library/19_Numbers/what_a_float_stores/README.html); the open question is whether this library needs its own or should simply link there. Duplicating it would be the wrong instinct.
-- **Summation algorithms** — Kahan and Neumaier compensated summation, and pairwise summation. The natural sequel to "error accumulates over ten terms": here is how to add a million of them without it.
-- **Interval arithmetic** — carrying a lower and upper bound through every operation instead of a value and a sigma. The uncompromising version of this whole chapter.
+- **What a float actually stores** — the binary mechanics under lesson 4. The Rust library already has [a thorough page on this ↗](https://masiarek.github.io/rust-learning-library/19_Numbers/what_a_float_stores/index.html); linked from [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md) and the [glossary](GLOSSARY.md) rather than reproduced here. The open question is whether this library ever needs its own — a *math* treatment would be about representable sets and rounding as a function, not about one language's floats. Duplicating the Rust page would be the wrong instinct.
+- **Summation algorithms** — Kahan and Neumaier compensated summation, and pairwise summation. The natural sequel to "error accumulates over ten terms": here is how to add a million of them without it. Nothing in any sibling library covers compensated summation, so this one is genuinely open — though the Rust library's [letting the compiler reorder a float sum ↗](https://masiarek.github.io/rust-learning-library/19_Numbers/letting_the_compiler_reorder/index.html) already owns the adjacent half, that `a + b + c` means `(a + b) + c` and reassociating changes the answer.
+- **Interval arithmetic** — carrying a lower and upper bound through every operation instead of a value and a sigma. The uncompromising version of this whole chapter. The Rust library got there first ([Did the rounding decide it? ↗](https://masiarek.github.io/rust-learning-library/09_Advanced/interval_arithmetic/index.html)), and its angle is a good one — because interval error is one-sided, a verdict of *decided* is a proof. A page here would need a different one, or no page.
 
 ## Candidate chapters
 

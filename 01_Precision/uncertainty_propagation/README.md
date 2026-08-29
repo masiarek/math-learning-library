@@ -124,3 +124,4 @@ python3 01_Precision/uncertainty_propagation/examples/uncertainty_propagation.py
 
 - [Significant figures](../significant_figures/README.md) — the rules this page derives
 - [Catastrophic cancellation](../catastrophic_cancellation/README.md) — the one operation that breaks every estimate above
+- [Letting the compiler reorder a float sum ↗](https://masiarek.github.io/rust-learning-library/19_Numbers/letting_the_compiler_reorder/index.html) — the machine's version of "order of accumulation matters", in the sibling Rust library

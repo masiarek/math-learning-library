@@ -91,6 +91,10 @@ Section 2 above is the sentence worth taking away, and it is the one usually got
 
 `0.1 + 0.2` in binary floating point comes out as `0.3000000000000000444…`. The error — about 4.4 × 10⁻¹⁷ — is buried in the seventeenth digit, and as a share of `0.3` it is 1.5 × 10⁻¹⁴ percent. Utterly invisible; you could ship it for years.
 
+> **Why `0.1` was wrong before you did anything to it.** This page takes for granted that `0.1` is not 0.1, and never explains it. The reason is that a fraction survives in binary only when its denominator is a power of two — `1/2`, `1/4`, `3/4` are exact; `1/10` and `1/5` repeat forever and get cut off. That is a lesson of its own, and the sibling Rust library already has a thorough one: [**What a float actually stores** ↗](https://masiarek.github.io/rust-learning-library/19_Numbers/what_a_float_stores/index.html). It is a Rust page, but the IEEE 754 mechanics it walks through — the repeating binary expansion, the 24- and 53-bit cuts, and the fact that the discarded tail *rounds* rather than truncates, so errors go in both directions — are the same on every machine and in every language.
+>
+> Read that one for **where the error comes from**; this one is **what happens to it next**.
+
 Now subtract `0.3`. The true answer is exactly zero. The computed answer is `5.551115123125783e-17`.
 
 The **absolute error did not change**. It was 4.4 × 10⁻¹⁷ before the subtraction and it is about that after. What changed is that the `0.3` which had been masking it is gone, so a rounding artifact is promoted from the seventeenth digit to the *only* digit. That is the whole mechanism, in measurement and in binary alike: cancellation removes the large leading digits that were hiding the error you already had.
@@ -133,3 +137,4 @@ python3 01_Precision/catastrophic_cancellation/examples/catastrophic_cancellatio
 
 - [Uncertainty propagation](../uncertainty_propagation/README.md) — where the ±0.00007 came from
 - [Significant figures](../significant_figures/README.md) — the rules this page is the exception to
+- [What a float actually stores ↗](https://masiarek.github.io/rust-learning-library/19_Numbers/what_a_float_stores/index.html) — the binary mechanics under section 2, in the sibling Rust library

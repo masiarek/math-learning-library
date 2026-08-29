@@ -32,8 +32,7 @@ Now add two people.
 
 The arithmetic is not in doubt: 3,200,000 + 2 = 3,200,002. But arithmetic was never the question. The question is what you *know*, and you know the population to the nearest hundred thousand. A window 100,000 wide cannot resolve a step of 2. The honest answer is still **3,200,000** — the two people are real, and they are invisible.
 
-!!! note "The 2 is exact, and it still doesn't help"
-    Those two people were *counted*, so the number `2` is exact and carries no uncertainty of its own — see [exact vs approximate](../exact_vs_approximate/README.md). An exact addend can never *degrade* a result. What it also cannot do is *improve* one: the sum inherits the precision of its worst-known term, and the estimate is the worst-known term by five orders of magnitude.
+> **The 2 is exact, and it still doesn't help.** Those two people were *counted*, so the number `2` is exact and carries no uncertainty of its own — see [exact vs approximate](../exact_vs_approximate/README.md). An exact addend can never *degrade* a result. What it also cannot do is *improve* one: the sum inherits the precision of its worst-known term, and the estimate is the worst-known term by five orders of magnitude.
 
 ## What the program prints
 

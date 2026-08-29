@@ -10,7 +10,7 @@ Terms used across the library, with the page that explains each in full.
 
 **Exact number** — one that was counted or defined rather than measured (ballots cast, inches per foot, π). Has infinitely many significant figures and never limits a calculation. See [exact vs approximate](01_Precision/exact_vs_approximate/README.md).
 
-**Floating point** — the machine's binary approximation of a real number. Its errors look like measurement errors and are unrelated to them: the value was known perfectly and the *hardware* could not hold it. See [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md).
+**Floating point** — the machine's binary approximation of a real number. Its errors look like measurement errors and are unrelated to them: the value was known perfectly and the *hardware* could not hold it. What a float *stores* is covered in full by the sibling Rust library ([What a float actually stores ↗](https://masiarek.github.io/rust-learning-library/19_Numbers/what_a_float_stores/index.html)); what happens when you subtract two of them is [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md).
 
 **Quadrature** — combining independent uncertainties as √(a² + b²) rather than a + b. Linear addition is the worst case and is correct only for perfectly correlated errors. See [uncertainty propagation](01_Precision/uncertainty_propagation/README.md).
 
