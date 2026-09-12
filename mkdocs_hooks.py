@@ -49,6 +49,7 @@ NAV_ORDER: dict[str, list[str]] = {
         "index.md",
         "00_Start_Here",
         "01_Precision",
+        "02_Measure_Zero",
         "GLOSSARY.md",
         "ROADMAP.md",
     ],
@@ -61,6 +62,18 @@ NAV_ORDER: dict[str, list[str]] = {
         "significant_figures",
         "uncertainty_propagation",
         "catastrophic_cancellation",
+    ],
+    # One argument, in five steps: what "no length" means without measuring,
+    # two sets that have no length despite infinitely many points (countable,
+    # then uncountable), the set that looks just as thin and is not, and what
+    # zero then means for chance.
+    "02_Measure_Zero": [
+        "README.md",
+        "what_measure_zero_means",
+        "countable_sets",
+        "cantor_set",
+        "fat_cantor_set",
+        "probability_zero",
     ],
 }
 
@@ -108,17 +121,35 @@ def _order_key(path: str, name: str) -> tuple[int, str]:
     return (len(listed), name.lower())
 
 
+def _readme_h1(section) -> str:
+    """The H1 of a section's own README.md, read from disk ("" if it has none)."""
+    for child in section.children:
+        page_file = getattr(child, "file", None)
+        if page_file is None or page_file.src_uri.rsplit("/", 1)[-1] != "README.md":
+            continue
+        with open(page_file.abs_src_path, encoding="utf-8") as fh:
+            for line in fh:
+                if line.startswith("# "):
+                    return line[2:].strip()
+    return ""
+
+
 def _visit(items: list, path: str, depth: int) -> None:
     for child in items:
         if not _is_section(child):
             continue
         name = _on_disk_name(child, depth)
-        # Only a numbered chapter folder gets relabelled. A lesson folder's
-        # section label already comes from its page H1, which is authored prose;
-        # title-casing it here would turn "Significant figures" into
-        # "Significant Figures" and fight the page it points at.
+        # A numbered chapter folder is relabelled from its name. A lesson folder
+        # takes its page's H1, which is authored prose. Left alone, MkDocs titles
+        # a section from its folder name, and that only looks right while the two
+        # happen to agree: `fat_cantor_set` came out "Fat cantor set", losing the
+        # capital on a proper noun and the article in the H1. Title-casing the
+        # folder name instead would fight the page just as badly
+        # ("Significant Figures").
         if PREFIX.match(name):
             child.title = _label(name)
+        else:
+            child.title = _readme_h1(child) or child.title
 
     items.sort(key=lambda c: _order_key(path, _on_disk_name(c, depth)))
 

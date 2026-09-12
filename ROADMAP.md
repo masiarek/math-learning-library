@@ -6,6 +6,8 @@ What exists, and what is deliberately not written yet. A topic listed here has *
 
 **[01_Precision](01_Precision/README.md)** — how much of this number is real. Four lessons: [exact vs approximate](01_Precision/exact_vs_approximate/README.md), [significant figures](01_Precision/significant_figures/README.md), [uncertainty propagation](01_Precision/uncertainty_propagation/README.md), [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md).
 
+**[02_Measure_Zero](02_Measure_Zero/README.md)** — how infinitely many points can take up no room. Five lessons: [what measure zero means](02_Measure_Zero/what_measure_zero_means/README.md), [countable sets](02_Measure_Zero/countable_sets/README.md), [the Cantor set](02_Measure_Zero/cantor_set/README.md), [the fat Cantor set](02_Measure_Zero/fat_cantor_set/README.md), [probability zero](02_Measure_Zero/probability_zero/README.md).
+
 ## The rest of the precision chapter
 
 The four lessons close one argument, but they leave three doors open:
@@ -14,11 +16,19 @@ The four lessons close one argument, but they leave three doors open:
 - **Summation algorithms** — Kahan and Neumaier compensated summation, and pairwise summation. The natural sequel to "error accumulates over ten terms": here is how to add a million of them without it. Nothing in any sibling library covers compensated summation, so this one is genuinely open — though the Rust library's [letting the compiler reorder a float sum ↗](https://masiarek.github.io/rust-learning-library/19_Numbers/letting_the_compiler_reorder/index.html) already owns the adjacent half, that `a + b + c` means `(a + b) + c` and reassociating changes the answer.
 - **Interval arithmetic** — carrying a lower and upper bound through every operation instead of a value and a sigma. The uncompromising version of this whole chapter. The Rust library got there first ([Did the rounding decide it? ↗](https://masiarek.github.io/rust-learning-library/09_Advanced/interval_arithmetic/index.html)), and its angle is a good one — because interval error is one-sided, a verdict of *decided* is a proof. A page here would need a different one, or no page.
 
+## The rest of the measure-zero chapter
+
+The five lessons close their argument, and leave three doors open:
+
+- **The Cantor function** — the "halve the digits" map from [the Cantor set](02_Measure_Zero/cantor_set/README.md), extended to all of [0, 1] by holding it constant across every deleted gap. It is continuous and climbs from 0 to 1, yet its slope is 0 everywhere except on a set of measure zero — the cleanest proof that "derivative 0 almost everywhere" does not mean "constant". The natural sequel to the fat Cantor set's Riemann sums.
+- **Two meanings of small** — measure zero is one way to call a set negligible; *meagre*, built from nowhere dense sets, is another. The [fat Cantor set](02_Measure_Zero/fat_cantor_set/README.md) is where they first disagree, and they can disagree completely: the line splits into a meagre set and a set of measure zero. The page would need a program that makes that visible, which is the hard part.
+- **Sets with no length at all** — the Vitali set, which cannot be given a length consistently, and so the reason measure theory has to decide which sets get one. Measure zero sidesteps the question, since it only ever measures intervals. But the Vitali set needs the axiom of choice and no program can build it, so by this library's own rule it may never get a page.
+
 ## Candidate chapters
 
 Not started, and listed in rough order of how likely they are to earn a place:
 
-- **Probability** — the other discipline built entirely on "how much do you know?", and the natural sequel to uncertainty propagation. Bayes, distributions, and why an interval is a better answer than a number.
+- **Probability** — the other discipline built entirely on "how much do you know?", and the natural sequel to uncertainty propagation. Bayes, distributions, and why an interval is a better answer than a number. [Probability zero](02_Measure_Zero/probability_zero/README.md) already opens the door from the continuous side.
 - **Proof** — induction, contradiction, construction. The part of mathematics that has nothing to do with computation, included precisely because everything else here does.
 - **Discrete** — counting, graphs, recurrences. Best served by runnable examples of anything in this library.
 - **Linear algebra** — worth doing only with a strong angle. Conditioning of a matrix connects it straight back to chapter 1, which is the angle.

@@ -14,6 +14,8 @@ It is not a textbook and does not try to be. A textbook covers a syllabus; this 
 
 It begins with a question that sounds settled and is not: **are significant figures just rounding?** The answer is no, and unpacking why takes you from a blackboard example about a population estimate all the way to why the textbook quadratic formula returns an answer that is 25% wrong.
 
+[**02_Measure_Zero/**](../02_Measure_Zero/README.md) — *How can infinitely many points take up no room?* Five lessons on sets so thin that they have no length, area or volume: the rationals, the Cantor set, and the fat Cantor set, which is full of gaps and still has length 1/2. It stands on its own; the one thing it assumes is the idea of a limit.
+
 ## How to run anything here
 
 Every lesson folder has an `examples/` directory with a `.py` file and a `.out` answer key. Run the program directly:

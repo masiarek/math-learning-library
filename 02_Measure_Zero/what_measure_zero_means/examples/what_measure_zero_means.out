@@ -1,0 +1,51 @@
+1. ONE POINT
+   Cover the point 1/2 with an interval as long as the budget allows:
+     budget 1/10        interval (9/20, 11/20)                       length 1/10
+     budget 1/1000      interval (999/2000, 1001/2000)               length 1/1000
+     budget 1/1000000   interval (999999/2000000, 1000001/2000000)   length 1/1000000
+   The point's length is at most 1/10, at most 1/1000, at most any
+   positive number you care to name. Only one length qualifies: 0.
+
+2. FINITELY MANY POINTS
+   Five points, a budget of 1/100. Split it evenly: each point gets 1/500.
+     0     inside (-1/1000, 1/1000)
+     1/4   inside (249/1000, 251/1000)
+     1/2   inside (499/1000, 501/1000)
+     3/4   inside (749/1000, 751/1000)
+     1     inside (999/1000, 1001/1000)
+   total length: 5 x 1/500 = 1/100, within the budget.
+   Any finite list of points works the same way: split the budget evenly.
+
+3. THE DEFINITION
+   A set has MEASURE ZERO if, for every budget eps > 0, it fits inside
+   a list of intervals -- finitely many, or an infinite list -- whose
+   lengths add up to at most eps.
+
+   Only the lengths of INTERVALS are ever added. Nobody has to say what
+   the 'length' of the set itself is, and that is the whole trick: the
+   definition works on sets far too ragged to measure directly.
+
+4. ONE SET OF POINTS, TWO ROOMS
+   The points of [0,1], cut into n equal pieces, each piece covered.
+   On a line a piece needs an interval. In the plane it needs a square.
+
+             n   each interval   total length   each square       total area
+             1   1               1              1                 1
+            10   1/10            1              1/100             1/10
+           100   1/100           1              1/10000           1/100
+         1,000   1/1000          1              1/1000000         1/1000
+     1,000,000   1/1000000       1              1/1000000000000   1/1000000
+
+   On the line these covers total 1 for every n. In the plane the total
+   shrinks like 1/n, because a square's SECOND side shrinks too:
+   n x (1/n)^2 = 1/n.
+
+   So [0,1] has area 0 and length 1. 'Measure zero' always means measure
+   zero IN some space: thin compared with the room around it.
+
+5. THE QUESTION THIS LEAVES
+   Section 4 had help: a segment is thin in the plane because it has one
+   dimension fewer than the plane. Can a set with infinitely many points
+   have length zero INSIDE the line itself?
+     countably many points     the rationals     (next lesson)
+     uncountably many points   the Cantor set    (the one after)

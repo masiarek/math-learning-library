@@ -1,0 +1,76 @@
+1. BUILD IT
+   Each step deletes the open middle third of every piece left.
+     0 |#################################################################################|
+     1 |###########################                           ###########################|
+     2 |#########         #########                           #########         #########|
+     3 |###   ###         ###   ###                           ###   ###         ###   ###|
+     4 |# #   # #         # #   # #                           # #   # #         # #   # #|
+
+     step   pieces   each piece   length left
+        0        1   1            1.000e+00
+        1        2   1/3          6.667e-01   = 2/3
+        2        4   1/9          4.444e-01   = 4/9
+        3        8   1/27         2.963e-01   = 8/27
+        4       16   1/81         1.975e-01   = 16/81
+        5       32   1/243        1.317e-01   = 32/243
+       10    1,024   1/59049      1.734e-02
+       20     2^20   1/3^20       3.007e-04
+       50     2^50   1/3^50       1.568e-09
+   Removed after n steps: exactly 1 - (2/3)^n. Removed in the limit:
+   exactly 1, the entire length of the interval we started with.
+
+2. SO IT HAS MEASURE ZERO
+   Whatever the budget, stop at a step where the pieces left fit in it:
+     budget 1/100            step 12: 2^12 pieces,  total length 7.707e-03
+     budget 1/1000000        step 35: 2^35 pieces,  total length 6.868e-07
+     budget 1/1000000000000  step 69: 2^69 pieces,  total length 7.075e-13
+   The pieces at every step cover everything that will ever survive.
+
+3. WHAT SURVIVES? THE ENDPOINTS, FOR A START
+     0, 1/9, 2/9, 1/3, 2/3, 7/9, 8/9, 1 ...
+   A piece's endpoints are never deleted. But endpoints are fractions
+   with a power of 3 underneath, so there are only countably many. If
+   nothing else survived, this would be one more countable set.
+
+4. THE BASE-3 TEST
+   Deleting a middle third deletes the numbers whose next base-3 digit
+   is 1. So x survives exactly when it can be written with only 0s and 2s.
+     x      base 3             only 0 and 2?  construction says
+     1/4    0.020202020202...  yes            survives 60 steps
+     3/4    0.202020202020...  yes            survives 60 steps
+     1/10   0.002200220022...  yes            survives 60 steps
+     1/13   0.002002002002...  yes            survives 60 steps
+     1/3    0.022222222222...  yes            survives 60 steps
+     1/2    0.111111111111...  no             deleted at step 1
+     1/5    0.012101210121...  no             deleted at step 2
+     5/9    0.12               no             deleted at step 1
+   1/4 survives, and it is no endpoint -- its denominator is 4, not a
+   power of 3. (1/3 = 0.1 in base 3, but also 0.0222..., so it passes.)
+
+5. HALVE THE DIGITS
+   Turn every 2 into a 1 and read the result in base 2:
+     point  base 3              digits halved, base 2  is
+     1/4    0.020202020202... -> 0.010101010101...      1/3
+     3/4    0.202020202020... -> 0.101010101010...      2/3
+     1/10   0.002200220022... -> 0.001100110011...      1/5
+     1/13   0.002002002002... -> 0.001001001001...      1/7
+     1/3    0.022222222222... -> 0.011111111111...      1/2
+     2/3    0.2               -> 0.1                    1/2
+
+   Now run it backwards. Pick ANY number, write it in base 2, double
+   the digits, and read base 3. The result is always in the Cantor set:
+     1/3    -> 1/4            which halves back to 1/3
+     1/7    -> 1/13           which halves back to 1/7
+     5/8    -> 20/27          which halves back to 5/8
+     7/10   -> 23/30          which halves back to 7/10
+     99/100 -> 530909/531450  which halves back to 99/100
+   Every number in [0,1] is hit, so the Cantor set has at least as many
+   points as [0,1] itself: UNCOUNTABLY many. (1/3 and 2/3 both land on
+   1/2, so some numbers are hit twice -- which costs the argument nothing.)
+
+6. HOW BIG IS IT?
+     total length          0
+     number of points      as many as the whole interval [0,1]
+     contains an interval  no -- every piece gets cut at the next step
+     dimension             log 2 / log 3 = 0.6309
+                           more than a point's 0, less than a line's 1

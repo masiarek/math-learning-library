@@ -1,0 +1,64 @@
+1. THE MODEL: PROBABILITY IS LENGTH
+   X is a uniform random number in [0,1]. For any interval,
+   P(X lands in it) = the interval's length.
+     P(0 <= X <= 1/3) = 1/3
+     P(1/4 <= X <= 3/4) = 1/2
+     P(9/10 <= X <= 1) = 1/10
+
+2. ONE EXACT VALUE
+   If X = 1/2, then X is inside every interval around 1/2:
+     P(X = 1/2)  <=  P(X within 1/10            of 1/2) = 1/5
+     P(X = 1/2)  <=  P(X within 1/1000          of 1/2) = 1/500
+     P(X = 1/2)  <=  P(X within 1/1000000       of 1/2) = 1/500000
+     P(X = 1/2)  <=  P(X within 1/1000000000000 of 1/2) = 1/500000000000
+   P(X = 1/2) is at most every one of these numbers, so it is 0.
+   Nothing about 1/2 was special: every single value has probability 0.
+
+3. BUT X HAS TO LAND SOMEWHERE
+   Every value has probability 0, and every draw produces one of them.
+   So an event of probability 0 happens on every single draw:
+     probability 0   does not mean   impossible
+     probability 1   does not mean   certain -- it means ALMOST SURELY
+
+   It is also why probabilities add up over a LIST of events and no
+   further: [0,1] is made of its points, every point has probability 0,
+   and the whole of [0,1] has probability 1.
+
+4. MEASURE ZERO MEANS PROBABILITY ZERO
+   A set inside intervals of total length eps has probability at most
+   eps. A measure-zero set does that for EVERY eps, so:
+     X is rational            measure 0   probability 0
+     X is in the Cantor set   measure 0   probability 0
+     X is irrational          measure 1   probability 1: almost surely
+   Yet 1/2 is rational, 1/4 is in the Cantor set, and both are possible.
+
+5. WHAT A COMPUTER ACTUALLY DRAWS
+   Five draws from random.random(), seeded, as exact multiples of 2^-53:
+     0.11911988496396309  = 1,072,936,539,072,241 / 2^53
+     0.5025157552312506   = 4,526,259,536,014,527 / 2^53
+     0.511822712773071    = 4,610,089,157,049,118 / 2^53
+     0.8600005876492754   = 7,746,196,652,151,369 / 2^53
+     0.10263685050695981  =   924,470,563,395,251 / 2^53
+   Every draw is a whole number of 2^-53 steps, so random() has exactly
+   2^53 = 9,007,199,254,740,992 possible values. A finite set.
+
+   Doubles in [0, 1): 4,607,182,418,800,017,408 = 1023 x 2^52.
+   random() can return 2^53 of them -- 2 in every 1023. The rest are
+   never drawn, and 0.1 is one of the rest:
+     0.5 is stored as 1/2                                 a multiple of 2^-53? yes
+     0.1 is stored as 3602879701896397/36028797018963968  a multiple of 2^-53? no
+
+6. THE SAME QUESTIONS, ON THE MACHINE
+     P(random() == 0.5)          = 1/2^53 = 1.110e-16   not 0
+     P(two draws are equal)      = 1/2^53 = 1.110e-16   not 0
+     P(random() == 0.1)          = 0, and here 0 IS impossible
+     P(random() is rational)     = 1, and certain: every float is a fraction
+     draws until a repeat        about 119 million on average
+
+7. TWO WORLDS, BOTH RIGHT
+   the model:    X is almost surely irrational, and P(X = 0.5) = 0
+   the machine:  every draw is rational, and P(random() == 0.5) = 1/2^53
+   With finitely many outcomes, probability 0 means impossible again --
+   the subtlety needs a continuum. And since every finite set has measure
+   zero, the model gives 'X is a float' probability 0. The machine lives
+   entirely inside an event of probability zero.
