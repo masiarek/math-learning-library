@@ -18,11 +18,23 @@ It begins with a question that sounds settled and is not: **are significant figu
 
 ## How to run anything here
 
-Every lesson folder has an `examples/` directory with a `.py` file and a `.out` answer key. Run the program directly:
+Every lesson folder has an `examples/` directory with a `.py` file and a `.out` answer key. Every command on these pages is written to be run from the root of a clone, so start there:
+
+```bash
+git clone https://github.com/masiarek/math-learning-library.git
+```
+
+```bash
+cd math-learning-library
+```
+
+Then run any program directly:
 
 ```bash
 python3 01_Precision/significant_figures/examples/significant_figures.py
 ```
+
+Each program also runs from its own `examples/` folder, as `python3 significant_figures.py`: the examples read no files, so they do not care where they are started.
 
 No virtual environment, no install step, no dependencies. If you have `python3`, you are ready.
 

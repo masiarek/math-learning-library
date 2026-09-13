@@ -141,6 +141,8 @@ The model's 0 for two equal draws is measure zero once more. The pair (X, Y) is 
 
 ## Run it yourself
 
+From the root of your clone of this repository:
+
 ```bash
 python3 02_Measure_Zero/probability_zero/examples/probability_zero.py
 ```

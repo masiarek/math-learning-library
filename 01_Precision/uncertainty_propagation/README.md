@@ -116,6 +116,8 @@ The honest summary: significant figures are the right tool for *reporting* and t
 
 ## Run it yourself
 
+From the root of your clone of this repository:
+
 ```bash
 python3 01_Precision/uncertainty_propagation/examples/uncertainty_propagation.py
 ```

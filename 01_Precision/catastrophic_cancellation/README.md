@@ -129,6 +129,8 @@ Where this shows up in real code: differences of large timestamps, `variance = E
 
 ## Run it yourself
 
+From the root of your clone of this repository:
+
 ```bash
 python3 01_Precision/catastrophic_cancellation/examples/catastrophic_cancellation.py
 ```

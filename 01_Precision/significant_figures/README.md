@@ -165,6 +165,8 @@ For a single measurement and a one-step calculation, that is fine and it is what
 
 ## Run it yourself
 
+From the root of your clone of this repository:
+
 ```bash
 python3 01_Precision/significant_figures/examples/significant_figures.py
 ```

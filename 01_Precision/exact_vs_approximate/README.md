@@ -98,6 +98,8 @@ The reverse trap is just as live. Vote totals, inventory counts, and row counts 
 
 ## Run it yourself
 
+From the root of your clone of this repository:
+
 ```bash
 python3 01_Precision/exact_vs_approximate/examples/exact_vs_approximate.py
 ```

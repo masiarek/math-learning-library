@@ -147,6 +147,8 @@ The criterion is also why measure zero was worth defining without Lebesgue measu
 
 ## Run it yourself
 
+From the root of your clone of this repository:
+
 ```bash
 python3 02_Measure_Zero/fat_cantor_set/examples/fat_cantor_set.py
 ```

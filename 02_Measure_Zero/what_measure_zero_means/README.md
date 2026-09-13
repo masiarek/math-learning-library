@@ -113,6 +113,8 @@ A segment is thin in the plane for an easy reason: it has one dimension fewer th
 
 ## Run it yourself
 
+From the root of your clone of this repository:
+
 ```bash
 python3 02_Measure_Zero/what_measure_zero_means/examples/what_measure_zero_means.py
 ```

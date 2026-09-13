@@ -133,6 +133,8 @@ So measured with finitely many intervals, the rationals in [0, 1] are as big as 
 
 ## Run it yourself
 
+From the root of your clone of this repository:
+
 ```bash
 python3 02_Measure_Zero/countable_sets/examples/countable_sets.py
 ```

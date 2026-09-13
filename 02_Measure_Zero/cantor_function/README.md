@@ -203,6 +203,8 @@ A distribution like this, with all of its probability on a set of measure zero a
 
 ## Run it yourself
 
+From the root of your clone of this repository:
+
 ```bash
 python3 02_Measure_Zero/cantor_function/examples/cantor_function.py
 ```

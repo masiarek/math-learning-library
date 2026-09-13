@@ -162,6 +162,8 @@ What the Cantor set *does* have is gaps everywhere, and no interval inside it at
 
 ## Run it yourself
 
+From the root of your clone of this repository:
+
 ```bash
 python3 02_Measure_Zero/cantor_set/examples/cantor_set.py
 ```
