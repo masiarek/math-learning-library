@@ -170,5 +170,6 @@ python3 02_Measure_Zero/cantor_set/examples/cantor_set.py
 
 - [Countable sets](../countable_sets/README.md) — the listable case, where measure zero comes for free
 - [The fat Cantor set](../fat_cantor_set/README.md) — the same recipe with narrower gaps, and half the length survives
+- [The Cantor function](../cantor_function/README.md) — the halve-the-digits map stretched across the gaps; the "hit twice" wrinkle above is what keeps it from jumping
 - [Probability zero](../probability_zero/README.md) — a random number lands in the Cantor set with probability 0, though 1/4 is a possible draw
 - [Cantor set ↗](https://en.wikipedia.org/wiki/Cantor_set) — Wikipedia, including the dimension and the history

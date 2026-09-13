@@ -4,7 +4,7 @@
 
 A single point has no length. That much is easy. The surprise is how far it goes. The rational numbers are infinitely many, crowded into every stretch of the line, and together they still have no length. The Cantor set has as many points as the whole interval [0, 1], and it still has no length. **Measure zero** is the name for this kind of thinness: a set so thin that it has zero length, area or volume, however many points it holds — infinitely many, even uncountably many.
 
-The chapter is one argument in five steps. Each lesson answers a question the previous one raises, so they are worth reading in order.
+The chapter is one argument in six steps. Each lesson answers a question the previous one raises, so they are worth reading in order.
 
 | # | Lesson | The question it answers |
 |---|---|---|
@@ -12,13 +12,14 @@ The chapter is one argument in five steps. Each lesson answers a question the pr
 | 2 | [Countable sets](countable_sets/README.md) | Can a set that is everywhere on the line have no length? |
 | 3 | [The Cantor set](cantor_set/README.md) | Can a set with as many points as [0, 1] have no length? |
 | 4 | [The fat Cantor set](fat_cantor_set/README.md) | If a set has no interval anywhere inside it, must it have no length? |
-| 5 | [Probability zero](probability_zero/README.md) | If an event has probability zero, can it still happen? |
+| 5 | [The Cantor function](cantor_function/README.md) | If a function's slope is 0 almost everywhere, must it stay flat? |
+| 6 | [Probability zero](probability_zero/README.md) | If an event has probability zero, can it still happen? |
 
 ## The through-line
 
 **How many points** and **how much room** are different questions. The first has answers like *finite*, *countable*, *uncountable*; the second has answers like *0*, *1/2*, *1*. Lessons 2 and 3 show that having few points is not what makes a set thin: countably many points can take no room, and so can uncountably many. Lesson 4 closes the other door. The fat Cantor set is as riddled with gaps as the Cantor set — no interval anywhere inside it — and it still fills half of [0, 1].
 
-So measure zero is an idea of its own, and a precise one. It is the exact meaning of *negligible* in analysis: a function has a Riemann integral precisely when the places it jumps have measure zero, which is what lesson 4 shows failing. And it is the exact meaning of *negligible* in probability, where lesson 5 turns it into *almost surely* — and then asks what becomes of all this on a computer, which only ever draws from a finite set.
+So measure zero is an idea of its own, and a precise one. It is the exact meaning of *negligible* in analysis: a function has a Riemann integral precisely when the places it jumps have measure zero, which is what lesson 4 shows failing. Lesson 5 shows the limit of that word. The Cantor function is flat everywhere except on a set of measure zero, and it still climbs all the way from 0 to 1, because a negligible set can carry everything that matters. And measure zero is the exact meaning of *negligible* in probability, where lesson 6 turns it into *almost surely* — and then asks what becomes of all this on a computer, which only ever draws from a finite set.
 
 ## A note on the code
 

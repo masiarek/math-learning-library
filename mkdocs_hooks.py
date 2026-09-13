@@ -63,16 +63,18 @@ NAV_ORDER: dict[str, list[str]] = {
         "uncertainty_propagation",
         "catastrophic_cancellation",
     ],
-    # One argument, in five steps: what "no length" means without measuring,
+    # One argument, in six steps: what "no length" means without measuring,
     # two sets that have no length despite infinitely many points (countable,
-    # then uncountable), the set that looks just as thin and is not, and what
-    # zero then means for chance.
+    # then uncountable), the set that looks just as thin and is not, a function
+    # whose whole climb happens on a set of length zero, and what zero then
+    # means for chance.
     "02_Measure_Zero": [
         "README.md",
         "what_measure_zero_means",
         "countable_sets",
         "cantor_set",
         "fat_cantor_set",
+        "cantor_function",
         "probability_zero",
     ],
 }

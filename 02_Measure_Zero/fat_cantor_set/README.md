@@ -155,6 +155,7 @@ python3 02_Measure_Zero/fat_cantor_set/examples/fat_cantor_set.py
 
 - [The Cantor set](../cantor_set/README.md) — the a = 1/3 setting of the same dial
 - [What measure zero means](../what_measure_zero_means/README.md) — the theorem the proof above leans on
+- [The Cantor function](../cantor_function/README.md) — the next lesson: a function that has a Riemann integral, and whose derivative still cannot give back the function
 - [Probability zero](../probability_zero/README.md) — a random number lands in the fat Cantor set with probability 1/2
 - [Smith–Volterra–Cantor set ↗](https://en.wikipedia.org/wiki/Smith%E2%80%93Volterra%E2%80%93Cantor_set) — Wikipedia: the construction, the general dial, and the history
 - [Volterra's function ↗](https://en.wikipedia.org/wiki/Volterra%27s_function) — Wikipedia: a function built on a fat Cantor set whose derivative exists everywhere, stays bounded, and still has no Riemann integral

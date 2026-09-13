@@ -31,7 +31,7 @@ Read them in that order; each one answers a question the previous one raises.
 
 [**02_Measure_Zero/**](02_Measure_Zero/README.md) — *How can infinitely many points take up no room?*
 
-The second chapter is about sets so thin that they have zero length, area or volume, even when they hold infinitely many points — even uncountably many. It does not need chapter 1, and it ends with a set that is full of gaps and still fills half the room.
+The second chapter is about sets so thin that they have zero length, area or volume, even when they hold infinitely many points — even uncountably many. It does not need chapter 1. On the way it meets a set that is full of gaps and still fills half the room, and a staircase that climbs from 0 to 1 while standing still almost everywhere.
 
 | Lesson | What it teaches |
 |---|---|
@@ -39,6 +39,7 @@ The second chapter is about sets so thin that they have zero length, area or vol
 | [Countable sets](02_Measure_Zero/countable_sets/README.md) | Why the rationals, found inside every interval, still have measure zero |
 | [The Cantor set](02_Measure_Zero/cantor_set/README.md) | Uncountably many points, and total length zero |
 | [The fat Cantor set](02_Measure_Zero/fat_cantor_set/README.md) | No interval inside it, yet length 1/2 — and why that breaks the Riemann integral |
+| [The Cantor function](02_Measure_Zero/cantor_function/README.md) | The devil's staircase: continuous, flat almost everywhere, and still climbing from 0 to 1 |
 | [Probability zero](02_Measure_Zero/probability_zero/README.md) | Why probability zero is not impossible, and why on a computer it is |
 
 ## Why a math library and not a Python one

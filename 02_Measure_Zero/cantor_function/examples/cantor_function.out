@@ -1,0 +1,119 @@
+1. THE RULE
+   Read x in base 3. Cut everything after the first 1. Turn 2s into 1s.
+   Read what is left in base 2.
+     x        base 3           after the rule   F(x)
+     1/4      0.0202020202...  0.0101010101...  1/3
+     3/4      0.2020202020...  0.1010101010...  2/3
+     1/5      0.0121012101...  0.01             1/4
+     1/2      0.1111111111...  0.1              1/2
+     5/9      0.12             0.1              1/2
+     200/243  0.21102          0.11             3/4
+     1/13     0.0020020020...  0.0010010010...  1/7
+     7/10     0.2002200220...  0.1001100110...  3/5
+   A number with no 1 is in the Cantor set, and the rule just halves its
+   digits -- lesson 3's map. A number that cannot be written without a 1
+   lies in a gap, and cutting at the first 1 gives the whole gap one value.
+
+2. THE STAIRCASE
+   1 |                                                                               ##
+     |                                                                           #####
+     |                                                                         ###
+     |                                                               ###########
+     |                                                             ###
+     |                                                         #####
+     |                                                       ###
+     |                           #############################
+     |                         ###
+     |                     #####
+     |                   ###
+     |         ###########
+     |       ###
+     |   #####
+     | ###
+   0 |##
+     +---------------------------------------------------------------------------------
+      x = 0                                                                        x = 1
+
+3. FLAT ON EVERY GAP
+   Each gap the Cantor set deletes becomes one tread of the staircase:
+     step   gap              F on the whole gap
+        1   (1/3, 2/3)       1/2
+        2   (1/9, 2/9)       1/4
+        2   (7/9, 8/9)       3/4
+        3   (1/27, 2/27)     1/8
+        3   (7/27, 8/27)     3/8
+        3   (19/27, 20/27)   5/8
+        3   (25/27, 26/27)   7/8
+   Checked at both ends and at 50 points inside every gap.
+   The gaps have total length 1 (lesson 3), so the slope of F is 0
+   everywhere except on the Cantor set, a set of length 0. F is flat
+   ALMOST EVERYWHERE.
+
+4. THE SAME FUNCTION, BUILT FROM RAMPS
+   Start with the diagonal F_0(x) = x. For F_n, squeeze F_(n-1) into
+   [0,1/3] and [2/3,1] at half height, and hold 1/2 across the middle.
+      n   largest change from F_(n-1)  digit rule agrees on the 3^n grid?
+      1   1/6                          yes
+      2   1/12                         yes
+      3   1/24                         yes
+      4   1/48                         yes
+      5   1/96                         yes
+      6   1/192                        yes
+      7   1/384                        yes
+      8   1/768                        yes
+   The largest change halves every time, so the ramps close in on one
+   function at a steady rate (checked on grids 81 times finer: F stays
+   within (1/3)(1/2)^n of F_n). A limit of continuous functions that
+   converges like that is continuous. The staircase never jumps.
+
+5. WHERE THE CLIMB HIDES
+   F_n has 2^n ramps, each rising 1/2^n over a run of 1/3^n: slope (3/2)^n.
+   In the limit the ramps are gone, and so is any finite slope. The slope
+   of F just to the left of 1/3, over a run of 1/3^n:
+      n   run            rise       slope
+      1   1/3            1/2        1.50
+      2   1/9            1/4        2.25
+      3   1/27           1/8        3.38
+      5   1/243          1/32       7.59
+     10   1/59049        1/1024     57.67
+     20   1/3^20         1/2^20     3,325.26
+   To the right of 1/3 the slope is 0 (it is the start of a gap). To the
+   left it grows without bound. F has no derivative at 1/3.
+
+   So where does the rise of 1 happen? Not on the gaps: they contribute
+   nothing. The pieces left at step n have total length (2/3)^n, and F
+   climbs 1/2^n across each of the 2^n of them -- all 1 of the rise,
+   packed into a length that goes to 0:
+     step  1:     2 pieces, total length 6.667e-01, total rise 1
+     step  3:     8 pieces, total length 2.963e-01, total rise 1
+     step  5:    32 pieces, total length 1.317e-01, total rise 1
+     step 10: 1,024 pieces, total length 1.734e-02, total rise 1
+
+6. THE GRAPH IS AS LONG AS AN L
+   Length of the graph of F_n = its flat parts + its 2^n ramps:
+      n   flat parts  ramps       total
+      0   0.000000    1.414214    1.414214
+      1   0.333333    1.201850    1.535184
+      2   0.555556    1.094318    1.649873
+      5   0.868313    1.008633    1.876946
+     10   0.982658    1.000150    1.982809
+     20   0.999699    1.000000    1.999699
+     50   1.000000    1.000000    2.000000
+   Walking right 1 and then up 1 is a path of length 2. The staircase's
+   graph closes in on exactly that: all of its run on the flat treads,
+   and all of its rise over a set of length zero.
+
+7. A RANDOM NUMBER WITH NO DENSITY
+   Build Y by flipping a fair coin for each base-3 digit: heads 2, tails 0.
+   Y always lands in the Cantor set. Counting all 2^16 ways the first 16
+   flips can go, exactly:
+     x      P(Y <= x) is between     F(x)
+     1/4    0.333328 and 0.333344    1/3
+     1/5    0.250000 and 0.250000    1/4
+     1/2    0.500000 and 0.500000    1/2
+     7/10   0.599991 and 0.600006    3/5
+     9/10   0.799988 and 0.800003    4/5
+   P(Y <= x) is the Cantor function. It has no jumps, so no single value
+   of Y has positive probability. Yet all of Y's probability sits on the
+   Cantor set, length 0 -- so no density function could describe Y: it
+   would give a set of length 0 probability 0.

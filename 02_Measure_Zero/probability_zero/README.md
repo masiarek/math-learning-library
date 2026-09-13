@@ -148,6 +148,7 @@ python3 02_Measure_Zero/probability_zero/examples/probability_zero.py
 ## See also
 
 - [Countable sets](../countable_sets/README.md) — why the rationals have probability zero
+- [The Cantor function](../cantor_function/README.md) — a random number whose every single value has probability zero, and which still has no density
 - [Exact vs approximate](../../01_Precision/exact_vs_approximate/README.md) — counted numbers are exact, which is why a tie in a count is never "measure zero"
 - [Catastrophic cancellation](../../01_Precision/catastrophic_cancellation/README.md) — the finite world of floats at its least forgiving
 - [Almost surely ↗](https://en.wikipedia.org/wiki/Almost_surely) — Wikipedia
