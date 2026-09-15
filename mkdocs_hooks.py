@@ -53,14 +53,15 @@ NAV_ORDER: dict[str, list[str]] = {
         "GLOSSARY.md",
         "ROADMAP.md",
     ],
-    # One argument, in four steps: what kind of number is this, what does the
-    # notation claim, what is the rigorous version of that claim, and where does
-    # the claim collapse.
+    # One argument, in five steps: what kind of number is this, what does the
+    # notation claim, what is the rigorous version of that claim, what the
+    # machine does to a number it cannot hold, and where does the claim collapse.
     "01_Precision": [
         "README.md",
         "exact_vs_approximate",
         "significant_figures",
         "uncertainty_propagation",
+        "machine_numbers",
         "catastrophic_cancellation",
     ],
     # One argument, in six steps: what "no length" means without measuring,

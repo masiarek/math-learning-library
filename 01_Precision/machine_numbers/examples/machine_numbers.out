@@ -1,0 +1,184 @@
+1. FOUR NUMBERS PICK A SET
+   A toy system, small enough to print whole:
+     radix beta = 2    precision p = 3 digits    exponent e from -1 to 2
+   A member is  d0.d1d2 (in binary) x 2^e,  with d0 = 1:
+
+     significand     e = -1    e = 0    e = 1    e = 2
+       1.00 = 1         0.5        1        2        4
+       1.01 = 1.25    0.625     1.25      2.5        5
+       1.10 = 1.5      0.75      1.5        3        6
+       1.11 = 1.75    0.875     1.75      3.5        7
+
+   16 positive, 16 negative and zero: 33 members.
+   Per sign: (beta - 1) x beta^(p-1) x (number of exponents) = 1 x 4 x 4 = 16.
+   Largest 7, smallest positive 0.5.
+   Every other real number -- 0.1, 1/3, 0.51, pi -- is simply not in the set.
+
+2. THE GAPS GROW WITH THE NUMBERS
+   Every multiple of 1/8 from 0 to 7, marked where a member sits:
+
+     0       1       2       3       4       5       6       7
+     |...|||||.|.|.|.|...|...|...|...|.......|.......|.......|
+
+   Between one power of 2 and the next, the members are evenly spaced:
+     from 0.5 to 1     gap 0.125
+     from   1 to 2     gap 0.25
+     from   2 to 4     gap 0.5
+     from   4 to 7     gap 1
+   The gap doubles when the number doubles, so the gap RELATIVE to the
+   number stays between 1/7 and 1/4 everywhere. A float keeps a fixed
+   number of significant digits, never a fixed number of decimal places.
+
+   THE HOLE AT ZERO. Below 0.5 there is nothing but 0. So two different
+   members can have a difference too small to be a member:
+     0.625 (-) 0.5  =  round(0.125)  =  0      although 0.625 != 0.5
+   IEEE 754 fills the hole with SUBNORMALS: d0 = 0 is allowed at e = -1.
+
+     |||||||||.|.|.|.|...|...|...|...|.......|.......|.......|
+
+     0.625 (-) 0.5  =  round(0.125)  =  0.125
+   From here on the toy system has them: 19 per sign, 39 members.
+
+3. ROUNDING IS A FUNCTION, AND IEEE 754 DEFINES FIVE
+   Each one sends every real number to a member, or to an infinity:
+     RD toward -inf    RU toward +inf    RZ toward zero
+     RN to nearest, a tie going to the EVEN significand or AWAY from zero
+
+     x          RD        RU        RZ        RN_even   RN_away
+     1/10       0         0.125     0         0.125     0.125
+     1/3        0.25      0.375     0.25      0.375     0.375
+     1.625      1.5       1.75      1.5       1.5       1.75
+     -1.625     -1.75     -1.5      -1.5      -1.5      -1.75
+     7.25       7         +inf      7         7         7
+     7.5        7         +inf      7         +inf      +inf
+     0.03125    0         0.125     0         0         0
+
+   1.625 is a tie: 1.5 = 1.10 ends in 0 and 1.75 = 1.11 does not.
+   7.5 is half a gap past the largest member, so both RNs overflow.
+
+   Checked on every multiple of 1/64 from -8 to 8 (1,025 values):
+     RD(x) <= x <= RU(x)                                True
+     both RNs always return RD(x) or RU(x)              True
+     RZ(x) is RD(x) when x >= 0, and RU(x) when x < 0   True
+
+   Python's float only ever uses RN even. Its decimal module has all five:
+     x      ROUND_FLOOR     ROUND_CEILING   ROUND_DOWN      ROUND_HALF_EVEN ROUND_HALF_UP
+     2.5    2               3               2               2               3
+     -2.5   -3              -2              -2              -2              -3
+     2.4    2               3               2               2               2
+   (ROUND_HALF_UP is the decimal module's name for ties away from zero.)
+
+   An operation is the exact result, then a rounding function:
+     a (+) b = RN(a + b),  and the same for (-), (x) and (/).
+     1.25 (+) 0.625 = RN(1.875) = 2      0.125 (x) 0.25 = RN(0.03125) = 0
+   From here on, every operation rounds to nearest, ties to even.
+
+4. WHICH LAWS OF ARITHMETIC SURVIVE
+   Tested on every member (39), every pair (1,521) and every triple
+   (59,319) of the toy system. Cases where a step overflows are skipped.
+
+   a (+) b  =  b (+) a
+       holds: 0 failures in 1,401 pairs
+   a (x) b  =  b (x) a
+       holds: 0 failures in 1,233 pairs
+   a <= b   implies   a (+) c <= b (+) c
+       holds: 0 failures in 26,162 triples
+   a (-) b = 0   implies   a = b
+       holds: 0 failures in 1,401 pairs
+       ...but without subnormals: 44 failures in 969 pairs, e.g. 0.625 (-) 0.5 = 0
+   b/2 <= a <= 2b   implies   a (-) b is exact  (Sterbenz)
+       holds: 0 failures in 139 pairs
+       ...but without subnormals: 28 failures in 124 pairs
+
+   (a (+) b) (+) c  =  a (+) (b (+) c)
+       FAILS: 13,972 failures in 47,823 triples
+       (1 (+) 0.125) (+) 0.125 = 1,  but  1 (+) (0.125 (+) 0.125) = 1.25
+   a (x) (b (+) c)  =  (a (x) b) (+) (a (x) c)
+       FAILS: 9,444 failures in 37,463 triples
+       1.5 (x) (1 (+) 0.125) = 1.5,  but  (1.5 (x) 1) (+) (1.5 (x) 0.125) = 1.75
+   b != 0   implies   a (+) b != a
+       FAILS: 80 failures in 1,362 pairs
+       4 (+) 0.125 = 4
+   a (x) (1 (/) a)  =  1
+       FAILS: 8 failures in 36 members
+       7 (x) (1 (/) 7) = 7 (x) 0.125 = 0.875
+
+   The survivors each compare one exact result with itself: a + b and
+   b + a are the same real number before any rounding happens. The
+   failures compare two ROUTES, and each route rounds in different places.
+
+5. THE FLOAT YOU ALREADY USE IS THE SAME CONSTRUCTION
+   Read off this machine:  beta = 2,  p = 53,  e from -1022 to 1023
+     members              18,437,736,874,454,810,623
+       equal to 2^64 - 2^53 - 1?      True
+     largest              1.7976931348623157e+308
+       equal to (2 - 2^-52) x 2^1023? True
+     smallest normal      2.2250738585072014e-308  = 2^-1022: True
+     smallest subnormal   5e-324  = 2^-1074: True
+     gap above 1.0        2.220446049250313e-16
+     gap above 1e+16      2.0
+     gap above 1e+308     1.99584030953472e+292
+
+   The laws of section 4, on real floats:
+     0.1 + 0.2 == 0.2 + 0.1       True
+     (0.1 + 0.2) + 0.3            0.6000000000000001
+     0.1 + (0.2 + 0.3)            0.6
+     100.0 * (0.1 + 0.2)          30.000000000000004
+     100.0 * 0.1 + 100.0 * 0.2    30.0
+     2.0**53 + 1.0 == 2.0**53     True
+     49.0 * (1.0 / 49.0)          0.9999999999999999
+     (0.1 + 0.2) - 0.3            5.551115123125783e-17
+       ...exactly the difference of the two stored values? True
+
+   Which fractions can be members at ANY precision? In radix beta, a
+   fraction in lowest terms can be, only if every prime factor of its
+   denominator also divides beta:
+
+                radix 2   radix 10  radix 3
+     1/10       no        yes       no
+     1/3        no        no        yes
+     3/8        yes       yes       no
+     1/6        no        no        no
+
+6. OFF THE ENDS OF THE RANGE
+   The largest float is about 1.8e308. Factorials outrun it quickly:
+     170!  as a float  = 7.257415615307994e+306
+     171!  as a float  = inf
+     1000! has 2,568 digits, 1001! has 2,571
+
+   1001! / 1000! is exactly 1001. With floats:
+     1001! -> inf    1000! -> inf    inf / inf = nan
+   If overflow stopped at the largest float instead of going to inf:
+     largest / largest = 1.0     a quiet, plausible, wrong answer
+
+   Three ways to stay inside the set:
+     cancel first      1001! / 1000!  =  1001 x 1000! / 1000!  =  1001
+     exact integers    factorial(1001) // factorial(1000)  =  1001
+     logarithms        exp(lgamma(1002) - lgamma(1001))  =  1001   to 9 s.f.
+
+   And off the bottom, where the smallest subnormal is 5e-324:
+     5e-324 / 2  =  0.0     a tie between 0 and 5e-324, and 0 is even
+
+7. CHOOSING THE FOUR NUMBERS IS THE COMPROMISE
+                bits  radix    p    emin   emax   largest     members
+     binary16     16      2   11     -14     15   6.55E+4     6.35e+04
+     binary32     32      2   24    -126    127   3.40E+38    4.28e+09
+     binary64     64      2   53   -1022   1023   1.79E+308   1.84e+19
+     decimal64    64     10   16    -383    384   9.99E+384   1.38e+19
+   Brute force on binary16: its 65,536 bit patterns give 63,487 distinct
+   finite values. The count formula gives 63,487.
+
+   What each one stores for a few numbers, as a relative error:
+                1/10        1/3         2^24 + 1    70,000
+     binary16   -2.4e-04    -2.4e-04    overflow    overflow
+     binary32   +1.5e-08    +3.0e-08    -6.0e-08    exact
+     binary64   +5.6e-17    -5.6e-17    exact       exact
+     decimal64  exact       -1.0e-16    exact       exact
+
+   Relative gap just above 1, and just below the next power of the radix:
+     binary64    2.2e-16  and  1.1e-16    varies 2x
+     decimal64   1.0e-15  and  1.0e-16    varies 10x
+
+   More bits buy precision and range, and cost memory and speed. Radix 10
+   makes 1/10 exact, but its gaps wobble 10x instead of 2x, and the same
+   64 bits give fewer distinct values. Every choice gives something up.
