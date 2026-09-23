@@ -138,6 +138,7 @@ python3 01_Precision/catastrophic_cancellation/examples/catastrophic_cancellatio
 ## See also
 
 - [Uncertainty propagation](../uncertainty_propagation/README.md) — where the ±0.00007 came from
+- [Relative error and correct digits](../relative_error/README.md) — what "amplified 17,458×" is measuring, and why a count of correct digits could not have said it
 - [Significant figures](../significant_figures/README.md) — the rules this page is the exception to
 - [Machine numbers](../machine_numbers/README.md) — the finite set the second half of this page lives in, and why its subtractions are exact
 - [What a float actually stores ↗](https://masiarek.github.io/rust-learning-library/19_Numbers/what_a_float_stores/index.html) — the binary mechanics under section 2, in the sibling Rust library

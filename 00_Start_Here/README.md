@@ -10,7 +10,7 @@ It is not a textbook and does not try to be. A textbook covers a syllabus; this 
 
 ## What to read first
 
-[**01_Precision/**](../01_Precision/README.md) — *How much of this number is real?* Four lessons, in order, on measurement, significant figures, uncertainty, and where digits go when a subtraction destroys them.
+[**01_Precision/**](../01_Precision/README.md) — *How much of this number is real?* Six lessons, in order, on measurement, significant figures, relative error, uncertainty, the finite set a machine keeps instead of the real line, and where digits go when a subtraction destroys them.
 
 It begins with a question that sounds settled and is not: **are significant figures just rounding?** The answer is no, and unpacking why takes you from a blackboard example about a population estimate all the way to why the textbook quadratic formula returns an answer that is 25% wrong.
 

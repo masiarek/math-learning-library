@@ -4,13 +4,13 @@ What exists, and what is deliberately not written yet. A topic listed here has *
 
 ## Written
 
-**[01_Precision](01_Precision/README.md)** — how much of this number is real. Five lessons: [exact vs approximate](01_Precision/exact_vs_approximate/README.md), [significant figures](01_Precision/significant_figures/README.md), [uncertainty propagation](01_Precision/uncertainty_propagation/README.md), [machine numbers](01_Precision/machine_numbers/README.md), [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md).
+**[01_Precision](01_Precision/README.md)** — how much of this number is real. Six lessons: [exact vs approximate](01_Precision/exact_vs_approximate/README.md), [significant figures](01_Precision/significant_figures/README.md), [relative error and correct digits](01_Precision/relative_error/README.md), [uncertainty propagation](01_Precision/uncertainty_propagation/README.md), [machine numbers](01_Precision/machine_numbers/README.md), [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md).
 
 **[02_Measure_Zero](02_Measure_Zero/README.md)** — how infinitely many points can take up no room. Six lessons: [what measure zero means](02_Measure_Zero/what_measure_zero_means/README.md), [countable sets](02_Measure_Zero/countable_sets/README.md), [the Cantor set](02_Measure_Zero/cantor_set/README.md), [the fat Cantor set](02_Measure_Zero/fat_cantor_set/README.md), [the Cantor function](02_Measure_Zero/cantor_function/README.md), [probability zero](02_Measure_Zero/probability_zero/README.md).
 
 ## The rest of the precision chapter
 
-The five lessons close one argument, but they leave three doors open:
+The six lessons close one argument, but they leave three doors open:
 
 - **Sequences that converge to the wrong limit** — two examples from chapter 1 of the *Handbook of Floating-Point Arithmetic*. Muller's recurrence uₙ = 111 − 1130/uₙ₋₁ + 3000/(uₙ₋₁uₙ₋₂), started at 2 and −4, converges to 6, and computed in floating point heads for 100 instead. The "Chaotic Bank Society" account aₙ = n·aₙ₋₁ − 1, started at e − 1, tends to 0, but e − 1 rounds up to the nearest double and the balance after 25 years comes out as 1.2 × 10⁹ rather than about 0.04. Both are ill-conditioned problems, the kind [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md) says no algorithm escapes. They also carry an argument about reproducibility: on an x86-64 machine, the book's own Table 1.1 matches plain binary64 in rows 3–16 and 80-bit extended intermediates in rows 17–31, so no single run reproduces all of it. The page would need a program that shows the sensitivity, not just the wrong answer.
 - **Summation algorithms** — Kahan and Neumaier compensated summation, and pairwise summation. The natural sequel to "error accumulates over ten terms": here is how to add a million of them without it. Nothing in any sibling library covers compensated summation, so this one is genuinely open — though the Rust library's [letting the compiler reorder a float sum ↗](https://masiarek.github.io/rust-learning-library/19_Numbers/letting_the_compiler_reorder/index.html) already owns the adjacent half, that `a + b + c` means `(a + b) + c` and reassociating changes the answer.
@@ -34,6 +34,6 @@ Not started, and listed in rough order of how likely they are to earn a place:
 
 ## Rules for adding a chapter
 
-A chapter earns its place by having an **argument**, not a syllabus. `01_Precision` is four lessons long because that is how many it took to get from "is this just rounding?" to "the textbook quadratic formula is 25% wrong"; it is not four because four is a nice number.
+A chapter earns its place by having an **argument**, not a syllabus. `01_Precision` began as four lessons because that is how many it took to get from "is this just rounding?" to "the textbook quadratic formula is 25% wrong"; it was not four because four is a nice number, and each lesson added since had to answer a question the argument had left open.
 
 Every lesson needs a program. If an idea cannot be demonstrated by something that runs and prints, it may still be a good idea — but it belongs somewhere other than this library.

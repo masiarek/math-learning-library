@@ -2,7 +2,7 @@
 
 Terms used across the library, with the page that explains each in full.
 
-**Absolute error** — the difference between a value and the truth, in the value's own units (`±0.05 cm`). What `+` and `−` propagate. See [uncertainty propagation](01_Precision/uncertainty_propagation/README.md).
+**Absolute error** — |x − x̂|, the difference between a value and the truth, in the value's own units (`±0.05 cm`). What `+` and `−` propagate. Defined in [relative error and correct digits](01_Precision/relative_error/README.md); propagated in [uncertainty propagation](01_Precision/uncertainty_propagation/README.md).
 
 **Almost everywhere** — everywhere except on a set of measure zero. The Cantor function's slope is 0 almost everywhere, and the function still climbs from 0 to 1, so an almost-everywhere fact can miss the thing that matters. Probability's name for the same idea is *almost surely*. See [the Cantor function](02_Measure_Zero/cantor_function/README.md).
 
@@ -14,9 +14,13 @@ Terms used across the library, with the page that explains each in full.
 
 **Catastrophic cancellation** — the loss of most significant figures when two nearly equal numbers are subtracted. It does not create error; it removes the leading digits that were hiding error already present. See [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md).
 
+**Componentwise relative error** — for vectors, the largest of the individual relative errors, max |xᵢ − x̂ᵢ| / |xᵢ|. A normwise relative error ‖x − x̂‖ / ‖x‖ can report four correct digits while a small component is 10% wrong; this measure cannot. See [relative error and correct digits](01_Precision/relative_error/README.md).
+
 **Conditioning** — how much a problem's output changes for a small change in its input. A property of the *problem*, not of any algorithm; an ill-conditioned problem defeats every method. See [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md).
 
 **Correct rounding** — returning exactly what the chosen rounding function gives for the exact result, as if the operation had been carried out with unlimited precision. IEEE 754 requires it for +, −, ×, ÷ and √, which is why those give the same bits on every conforming machine. See [machine numbers](01_Precision/machine_numbers/README.md).
+
+**Correct significant digits** — a count with only p + 1 possible values and two competing definitions: x and x̂ round to the same p-digit number, or |x − x̂| is under half a unit in the p-th digit of x. The first is not monotone (0.9949 and 0.9951 agree to one and three digits but not two); the second calls 0.123 and 0.127 two-digit agreement. The relative error is the precise measure. See [relative error and correct digits](01_Precision/relative_error/README.md).
 
 **Countable** — able to be written as a list — a first, a second, a third — with every member somewhere in it. The whole numbers and the rationals are countable; [0, 1] is not. Every countable set has measure zero. See [countable sets](02_Measure_Zero/countable_sets/README.md).
 
@@ -38,7 +42,7 @@ Terms used across the library, with the page that explains each in full.
 
 **Quadrature** — combining independent uncertainties as √(a² + b²) rather than a + b. Linear addition is the worst case and is correct only for perfectly correlated errors. See [uncertainty propagation](01_Precision/uncertainty_propagation/README.md).
 
-**Relative error** — error as a fraction of the value (`0.81%`). What `×` and `÷` propagate, and the reason their rule counts significant figures. See [uncertainty propagation](01_Precision/uncertainty_propagation/README.md).
+**Relative error** — |x − x̂| / |x|, the error as a fraction of the true value (`0.81%`); equivalently |ρ| where x̂ = x(1 + ρ). Undefined at x = 0, unchanged by a change of units, and the measure numerical analysis reports in place of a count of correct digits. What `×` and `÷` propagate, and the reason their rule counts significant figures. Defined in [relative error and correct digits](01_Precision/relative_error/README.md); propagated in [uncertainty propagation](01_Precision/uncertainty_propagation/README.md).
 
 **Rounding** — the mechanical operation of cutting a number at some place. The *action*; significant figures are the argument for where the action must stop. See [significant figures](01_Precision/significant_figures/README.md).
 
@@ -50,8 +54,14 @@ Terms used across the library, with the page that explains each in full.
 
 **Stability** — whether a particular *algorithm* preserves the accuracy a well-conditioned problem allows. The textbook quadratic formula is unstable for one of its two roots; a conjugate rearrangement fixes it for free. See [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md).
 
+**Standard model** — the assumption behind rounding error analysis: every basic floating-point operation returns the exact result times (1 + δ) with |δ| ≤ u, the unit roundoff. Checked exactly on thousands of operations in [relative error and correct digits](01_Precision/relative_error/README.md).
+
 **Sterbenz's lemma** — if two floats a and b satisfy b/2 ≤ a ≤ 2b, then a − b is computed exactly. So the subtraction in a catastrophic cancellation adds no error of its own. See [machine numbers](01_Precision/machine_numbers/README.md).
 
 **Subnormal** — a float below the smallest normal one, written with a leading zero digit at the lowest exponent. Subnormals fill the gap between zero and the smallest normal number; without them, a − b could round to 0 while a ≠ b. See [machine numbers](01_Precision/machine_numbers/README.md).
 
+**Tablemaker's dilemma** — an entry computed as 0.124|5000000, correct to a few digits past the bar, cannot be rounded at the bar until some further digit breaks the run of zeros, and nothing says in advance how far out that digit is. An exact tie is possible only for an algebraic value. See [relative error and correct digits](01_Precision/relative_error/README.md).
+
 **Uncountable** — too big to be written as a list. [0, 1] is uncountable, and so is the Cantor set, which still has measure zero. See [the Cantor set](02_Measure_Zero/cantor_set/README.md).
+
+**Unit roundoff** — u = 2⁻⁵³ ≈ 1.1 × 10⁻¹⁶ for binary64: the largest relative error that rounding a real number to the nearest float can make, and the bound on δ in the standard model. See [relative error and correct digits](01_Precision/relative_error/README.md) and [machine numbers](01_Precision/machine_numbers/README.md).

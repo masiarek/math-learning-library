@@ -18,12 +18,13 @@ The examples are **stdlib-only, on purpose**. A library about how much of a numb
 
 [**01_Precision/**](01_Precision/README.md) — *How much of this number is real?*
 
-The first chapter is a single argument in five steps, and it starts from a question that sounds like it has an obvious answer and does not: **are significant figures just rounding?**
+The first chapter is a single argument in six steps, and it starts from a question that sounds like it has an obvious answer and does not: **are significant figures just rounding?**
 
 | Lesson | What it teaches |
 |---|---|
 | [Exact vs approximate](01_Precision/exact_vs_approximate/README.md) | Which numbers have significant figures at all — and why a counted thing has infinitely many |
 | [Significant figures](01_Precision/significant_figures/README.md) | What the notation claims, and why the rule for `+` is a *different rule* from the rule for `×` |
+| [Relative error and correct digits](01_Precision/relative_error/README.md) | Why "correct to three digits" has no definition that behaves, and the one number to report instead |
 | [Uncertainty propagation](01_Precision/uncertainty_propagation/README.md) | The rigorous version those rules approximate, and the two places they lie |
 | [Machine numbers](01_Precision/machine_numbers/README.md) | What a float really is — an exact member of a finite set — the five ways to round into it, and which laws of arithmetic survive |
 | [Catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md) | The one operation that destroys ten significant figures at once, silently |

@@ -125,6 +125,7 @@ python3 01_Precision/uncertainty_propagation/examples/uncertainty_propagation.py
 ## See also
 
 - [Significant figures](../significant_figures/README.md) — the rules this page derives
+- [Relative error and correct digits](../relative_error/README.md) — the previous lesson: the relative error defined precisely, and why it is the measure to report rather than a digit count
 - [Machine numbers](../machine_numbers/README.md) — the next lesson: error no measurement put there, from rounding a known number into a finite set
 - [Catastrophic cancellation](../catastrophic_cancellation/README.md) — the one operation that breaks every estimate above
 - [Letting the compiler reorder a float sum ↗](https://masiarek.github.io/rust-learning-library/19_Numbers/letting_the_compiler_reorder/index.html) — the machine's version of "order of accumulation matters", in the sibling Rust library

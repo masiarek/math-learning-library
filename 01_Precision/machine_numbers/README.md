@@ -306,6 +306,7 @@ python3 01_Precision/machine_numbers/examples/machine_numbers.py
 ## See also
 
 - [Significant figures](../significant_figures/README.md) — the fixed-significant-digits idea a float is built on
+- [Relative error and correct digits](../relative_error/README.md) — rounding into this set as a relative error: |ρ| ≤ 2⁻⁵³ for every real number and every single operation, checked exactly
 - [Catastrophic cancellation](../catastrophic_cancellation/README.md) — the next lesson: what a subtraction does with the rounding error two members already carry
 - [Probability zero](../../02_Measure_Zero/probability_zero/README.md) — counting the floats in [0, 1), and why a random real is almost never one of them
 - [What a float actually stores ↗](https://masiarek.github.io/rust-learning-library/19_Numbers/what_a_float_stores/index.html) — the same set seen as bits, in the sibling Rust library

@@ -159,7 +159,7 @@ Set `prec = 28` and the same expression returns `Decimal('3200002')`. The knob i
 
 ## Where this stops being enough
 
-Significant figures compress "how well do I know this?" into a digit count — one number where the honest answer needs two. That compression is lossy, and it is lossy in both directions: `1.0` and `9.9` are both two significant figures, but one is known to ±5% and the other to ±0.5%, a ten-fold difference the notation cannot express.
+Significant figures compress "how well do I know this?" into a digit count — one number where the honest answer needs two. That compression is lossy, and it is lossy in both directions: `1.0` and `9.9` are both two significant figures, but one is known to ±5% and the other to ±0.5%, a ten-fold difference the notation cannot express. The next lesson, [relative error and correct digits](../relative_error/README.md), is about the one number that can express it, and about why "correct to p significant digits" turns out to have no definition that behaves.
 
 For a single measurement and a one-step calculation, that is fine and it is what the rules are for. Past that, carry the uncertainty explicitly: [uncertainty propagation](../uncertainty_propagation/README.md). And there is one operation that destroys significant figures faster than any rule anticipates — see [catastrophic cancellation](../catastrophic_cancellation/README.md).
 
@@ -174,5 +174,6 @@ python3 01_Precision/significant_figures/examples/significant_figures.py
 ## See also
 
 - [Exact vs approximate](../exact_vs_approximate/README.md) — which numbers have significant figures at all, and which have infinitely many
+- [Relative error and correct digits](../relative_error/README.md) — the next lesson: the continuous measure a digit count approximates, and two definitions of "correct digit" that both misbehave
 - [Uncertainty propagation](../uncertainty_propagation/README.md) — the rigorous version these rules approximate
 - [Catastrophic cancellation](../catastrophic_cancellation/README.md) — where the digits go
