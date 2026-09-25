@@ -165,7 +165,15 @@ def main() -> None:
         n1 = z1[0] ** 2 + z1[1] ** 2
         n2 = z2[0] ** 2 + z2[1] ** 2
         print(f"      {n1} x {n2} = {n1 * n2} = ({z[0]})^2 + ({z[1]})^2 = {z[0] ** 2 + z[1] ** 2}")
-    print("      Brahmagupta wrote that identity in the 7th century, a thousand")
+    print("      Multiply by the mirror image (x2, -y2) instead and the signs swap:")
+    print("      (x1^2 + y1^2)(x2^2 + y2^2) = (x1x2 + y1y2)^2 + (x1y2 - x2y1)^2,")
+    print("      a second way to write the same product as two squares:")
+    for z1, z2 in [((F(1), F(2)), (F(2), F(3))), ((F(3), F(4)), (F(5), F(12)))]:
+        z = mul(z1, (z2[0], -z2[1]))
+        n1 = z1[0] ** 2 + z1[1] ** 2
+        n2 = z2[0] ** 2 + z2[1] ** 2
+        print(f"      {n1} x {n2} = {n1 * n2} = ({z[0]})^2 + ({z[1]})^2 = {z[0] ** 2 + z[1] ** 2}")
+    print("      Brahmagupta wrote both forms in the 7th century, a thousand")
     print("      years before anyone wrote the symbol i.")
 
 

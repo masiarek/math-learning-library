@@ -97,7 +97,12 @@ Section 1 of the program applies the rule to (3, 2) and (1, 4), one component at
       so a product of two sums of two squares is again one:
       5 x 13 = 65 = (-4)^2 + (7)^2 = 65
       25 x 169 = 4225 = (-33)^2 + (56)^2 = 4225
-      Brahmagupta wrote that identity in the 7th century, a thousand
+      Multiply by the mirror image (x2, -y2) instead and the signs swap:
+      (x1^2 + y1^2)(x2^2 + y2^2) = (x1x2 + y1y2)^2 + (x1y2 - x2y1)^2,
+      a second way to write the same product as two squares:
+      5 x 13 = 65 = (8)^2 + (1)^2 = 65
+      25 x 169 = 4225 = (63)^2 + (-16)^2 = 4225
+      Brahmagupta wrote both forms in the 7th century, a thousand
       years before anyone wrote the symbol i.
 ```
 <!-- /output -->
@@ -175,9 +180,13 @@ which is the pair of angle-addition formulas, cos(a + b) and sin(a + b), produce
 (x₁² + y₁²)(x₂² + y₂²)  =  (x₁x₂ − y₁y₂)² + (x₁y₂ + x₂y₁)²
 ```
 
-So a product of two sums of two squares is again a sum of two squares, and the rule says which one. Brahmagupta wrote that down in the seventh century, a thousand years before anyone wrote the symbol i, and it is a step in the proof of which whole numbers are sums of two squares.
+So a product of two sums of two squares is again a sum of two squares, and the rule says which one: 5 × 13 = 65 = 4² + 7². In complex language, x² + y² is the squared length |z|² of the pair, and the identity says |z₁z₂|² = |z₁|²|z₂|², lengths multiply. But the identity itself is a statement about whole numbers, and it needs no complex numbers to state or to use. Brahmagupta wrote it down in the seventh century, a thousand years before anyone wrote the symbol i, and it is a step in the proof of which whole numbers are sums of two squares.
 
-The rule also has siblings. Change the minus sign in the first component to a plus and you get the split-complex numbers; delete the y₁y₂ term altogether and you get the dual numbers, which automatic differentiation uses. Double the pair to a quadruple and the same construction, done once more, gives Hamilton's quaternions, which is how he found them. Complex multiplication is the case that happens to make a field.
+There is a second form with the signs swapped, (x₁x₂ + y₁y₂)² + (x₁y₂ − x₂y₁)², and the rule explains that one too: it is what you get by multiplying z₁ by the mirror image (x₂, −y₂) of z₂, the **conjugate**, whose squared length is the same. So 65 is also 8² + 1², and section 8 prints both.
+
+The same construction done in four components gives Euler's four-square identity and Hamilton's quaternions, and in eight gives Degen's eight-square identity and the octonions. Each step up loses a law: quaternion multiplication is not commutative, octonion multiplication is not even associative. Complex multiplication, in two components, is the last one that keeps them all.
+
+The rule also has siblings in two components. Change the minus sign in the first component to a plus and you get the split-complex numbers; delete the y₁y₂ term altogether and you get the dual numbers, which automatic differentiation uses. Complex multiplication is the one of the three that makes a field.
 
 ## Run it yourself
 

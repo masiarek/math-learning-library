@@ -73,5 +73,10 @@
       so a product of two sums of two squares is again one:
       5 x 13 = 65 = (-4)^2 + (7)^2 = 65
       25 x 169 = 4225 = (-33)^2 + (56)^2 = 4225
-      Brahmagupta wrote that identity in the 7th century, a thousand
+      Multiply by the mirror image (x2, -y2) instead and the signs swap:
+      (x1^2 + y1^2)(x2^2 + y2^2) = (x1x2 + y1y2)^2 + (x1y2 - x2y1)^2,
+      a second way to write the same product as two squares:
+      5 x 13 = 65 = (8)^2 + (1)^2 = 65
+      25 x 169 = 4225 = (63)^2 + (-16)^2 = 4225
+      Brahmagupta wrote both forms in the 7th century, a thousand
       years before anyone wrote the symbol i.
