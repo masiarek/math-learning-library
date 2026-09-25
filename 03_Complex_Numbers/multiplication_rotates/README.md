@@ -179,3 +179,6 @@ python3 03_Complex_Numbers/multiplication_rotates/examples/multiplication_rotate
 
 - [Multiplication as pairs](../multiplication_as_pairs/README.md) — the rule this page is the geometry of, and where the two-squares identity first appears
 - [Rotation (mathematics) ↗](https://en.wikipedia.org/wiki/Rotation_(mathematics)#Complex_numbers) — Wikipedia, rotations of the plane as complex multiplication
+- [Complex number fundamentals, 3Blue1Brown ↗](https://www.3blue1brown.com/lessons/ldm-complex-numbers/) — the same picture as a video lesson, with i as a quarter turn
+- [Complex Variables lecture notes, Kenneth Shum ↗](https://mypage.cuhk.edu.cn/academics/wkshum/files/complex_variables_lecture_notes.pdf) — the matrix construction alongside the pair one
+- [Where this is taught](../README.md#where-this-is-taught) — more notes and the textbooks
