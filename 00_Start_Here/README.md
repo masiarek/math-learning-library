@@ -16,7 +16,7 @@ It begins with a question that sounds settled and is not: **are significant figu
 
 [**02_Measure_Zero/**](../02_Measure_Zero/README.md) — *How can infinitely many points take up no room?* Six lessons on sets so thin that they have no length, area or volume: the rationals, the Cantor set, the fat Cantor set (full of gaps, and still length 1/2), and the Cantor function, a staircase that climbs from 0 to 1 while standing still almost everywhere. It stands on its own; the one thing it assumes is the idea of a limit.
 
-[**03_Complex_Numbers/**](../03_Complex_Numbers/README.md) — *What is a complex number, before anyone says √−1?* One lesson so far: a complex number is a pair of reals, multiplication is a rule on pairs, and i² = −1 is what the rule does to the pair (0, 1). It needs nothing but school algebra.
+[**03_Complex_Numbers/**](../03_Complex_Numbers/README.md) — *What is a complex number, before anyone says √−1?* Two lessons: a complex number is a pair of reals and multiplication is a rule on pairs, so i² = −1 is what the rule does to the pair (0, 1); then the geometry, in which multiplying scales and turns the plane and i² = −1 is two quarter turns making a half turn. It needs nothing but school algebra.
 
 ## How to run anything here
 

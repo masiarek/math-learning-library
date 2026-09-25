@@ -1,0 +1,58 @@
+1. MULTIPLYING BY (0, 1) IS A QUARTER TURN
+   Take each compass point and multiply it by (0, 1):
+     (1, 0)    east   . (0, 1) = (0, 1)    north
+     (0, 1)    north  . (0, 1) = (-1, 0)   west
+     (-1, 0)   west   . (0, 1) = (0, -1)   south
+     (0, -1)   south  . (0, 1) = (1, 0)    east
+   East to north to west to south to east: a quarter turn
+   counterclockwise, every time.
+
+2. SO (0, 1) . (0, 1) = (-1, 0) IS 'TWO QUARTER TURNS ARE A HALF TURN'
+     after 1 multiplication  by (0, 1): (0, 1)    a quarter turn
+     after 2 multiplications by (0, 1): (-1, 0)   a half turn
+     after 3 multiplications by (0, 1): (0, -1)   three quarters turn
+     after 4 multiplications by (0, 1): (1, 0)    a full turn
+   A half turn sends every point to the opposite side of the origin,
+   which is exactly what multiplying by -1 does. So (0, 1) squared
+   behaves as -1, and that is the whole content of i^2 = -1.
+
+3. THE TWO AXES, MULTIPLIED
+   Horizontal times horizontal: angle 0 + 0, stays horizontal.
+     (2, 0)    . (3, 0)    = (6, 0)
+     (-4, 0)   . (5, 0)    = (-20, 0)
+   Vertical times vertical: angle 90 + 90 = 180, lands on the
+   NEGATIVE horizontal axis.
+     (0, 3)    . (0, 2)    = (-6, 0)
+     (0, 1)    . (0, 1)    = (-1, 0)
+     (0, -2)   . (0, 5)    = (10, 0)
+   In the usual notation the last three read 3i . 2i = -6,
+   i . i = -1, and (-2i)(5i) = 10. The minus sign is the half turn.
+
+4. LENGTHS MULTIPLY (compared as squares, so the check is exact)
+     z1           z2            |z1|^2  |z2|^2  |z1 z2|^2   product of the two
+     (3, 4)       (5, 12)           25     169       4225   25 x 169 = 4225
+     (1, 1)       (1, 1)             2       2          4   2 x 2 = 4
+     (0, 3)       (0, 2)             9       4         36   9 x 4 = 36
+     (1/2, 1/3)   (-2, 5)        13/36      29     377/36   13/36 x 29 = 377/36
+   |z1 z2|^2 = |z1|^2 |z2|^2 in every row, so |z1 z2| = |z1| |z2|.
+
+5. ANGLES ADD (checked with angles that are known exactly)
+   A 3-4-5 triangle gives a unit point at angle A = atan(4/3), and a
+   5-12-13 triangle one at angle B = atan(12/5). Their product should
+   sit at angle A + B, and there is a way to check that without ever
+   computing an angle: the point at A + B, turned back by A, is at B.
+     a      = (3/5, 4/5)          |a|^2 = 1
+     b      = (5/13, 12/13)        |b|^2 = 1
+     a . b  = (-33/65, 56/65)      |a.b|^2 = 1
+     (a . b) turned back by A = (5/13, 12/13)   which is b again: True
+   Turning back by A means multiplying by the mirror image (3/5, -4/5),
+   the point at angle -A. It works because angles add.
+
+6. SCALE AND TURN AT ONCE
+   Multiplying (1, 0) by (0, 3) should be: turn a quarter, stretch by 3.
+     (1, 0)    . (0, 3) = (0, 3)    |z|^2 = 1, |w|^2 = 9 = 9 x 1
+     (2, 1)    . (0, 3) = (-3, 6)   |z|^2 = 5, |w|^2 = 45 = 9 x 5
+     (-1, -1)  . (0, 3) = (3, -3)   |z|^2 = 2, |w|^2 = 18 = 9 x 2
+   Every point turned a quarter turn and grew by a factor of 3.
+   That is what the rule always does: multiply by the length of the
+   second point, turn by its angle.

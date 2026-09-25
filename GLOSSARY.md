@@ -16,6 +16,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Complex multiplication** — the rule (x₁, y₁) · (x₂, y₂) = (x₁x₂ − y₁y₂, x₁y₂ + x₂y₁) on pairs of reals. It is the whole definition of the complex numbers: i is the pair (0, 1), and i² = −1 is what the rule gives for (0, 1) · (0, 1). See [multiplication as pairs](03_Complex_Numbers/multiplication_as_pairs/README.md).
 
+**Complex multiplication, geometrically** — multiplying by a point z scales the plane by the distance of z from the origin and turns it by the angle of z. Lengths multiply, angles add. So (0, 1) is a quarter turn and i² = −1 says two quarter turns are a half turn. See [multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md).
+
 **Componentwise relative error** — for vectors, the largest of the individual relative errors, max |xᵢ − x̂ᵢ| / |xᵢ|. A normwise relative error ‖x − x̂‖ / ‖x‖ can report four correct digits while a small component is 10% wrong; this measure cannot. See [relative error and correct digits](01_Precision/relative_error/README.md).
 
 **Conditioning** — how much a problem's output changes for a small change in its input. A property of the *problem*, not of any algorithm; an ill-conditioned problem defeats every method. See [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md).
