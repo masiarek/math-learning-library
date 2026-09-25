@@ -8,7 +8,7 @@ What exists, and what is deliberately not written yet. A topic listed here has *
 
 **[02_Measure_Zero](02_Measure_Zero/README.md)** — how infinitely many points can take up no room. Six lessons: [what measure zero means](02_Measure_Zero/what_measure_zero_means/README.md), [countable sets](02_Measure_Zero/countable_sets/README.md), [the Cantor set](02_Measure_Zero/cantor_set/README.md), [the fat Cantor set](02_Measure_Zero/fat_cantor_set/README.md), [the Cantor function](02_Measure_Zero/cantor_function/README.md), [probability zero](02_Measure_Zero/probability_zero/README.md).
 
-**[03_Complex_Numbers](03_Complex_Numbers/README.md)** — what a complex number is, before anyone says √−1. One lesson: [multiplication as pairs](03_Complex_Numbers/multiplication_as_pairs/README.md).
+**[03_Complex_Numbers](03_Complex_Numbers/README.md)** — what a complex number is, before anyone says √−1. Two lessons: [multiplication as pairs](03_Complex_Numbers/multiplication_as_pairs/README.md), [multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md).
 
 ## The rest of the precision chapter
 
@@ -27,9 +27,9 @@ The six lessons close their argument, and leave two doors open:
 
 ## The rest of the complex-numbers chapter
 
-One lesson defines the object. The doors it leaves open:
+Two lessons define the object and say what it does. The doors they leave open:
 
-- **Polar form** — the rule on pairs says that lengths multiply and angles add, which section 8 of [multiplication as pairs](03_Complex_Numbers/multiplication_as_pairs/README.md) only glimpses. A page would need a program that shows |z₁z₂| = |z₁||z₂| exactly, which means Gaussian integers or squared lengths, not floats and `atan2`.
+- **Polar form proper** — [multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) shows that lengths multiply and angles add without ever computing an angle. The next step is to write z as a length and an angle outright, r(cos θ, sin θ), and get de Moivre's formula and the n-th roots of unity, which is where the picture pays off. The exactness problem is real: most angles are not exact, so the page would need roots of unity that are, such as the 4th and 6th.
 - **The siblings** — split-complex numbers (change the minus to a plus), dual numbers (drop the y₁y₂ term, and get automatic differentiation for free), and quaternions (do the pair construction twice). The same program shape as the first lesson, with a different rule each time, and a demonstration of which laws each one loses.
 - **Complex floats** — Python's `complex` is two doubles, so every warning in [01_Precision](01_Precision/README.md) applies twice over, and the naive product formula overflows on inputs that the true product does not. Connects the chapter back to chapter 1.
 

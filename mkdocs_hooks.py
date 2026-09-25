@@ -86,6 +86,7 @@ NAV_ORDER: dict[str, list[str]] = {
     "03_Complex_Numbers": [
         "README.md",
         "multiplication_as_pairs",
+        "multiplication_rotates",
     ],
 }
 
