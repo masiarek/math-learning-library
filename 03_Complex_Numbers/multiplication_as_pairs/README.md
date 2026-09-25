@@ -200,4 +200,6 @@ python3 03_Complex_Numbers/multiplication_as_pairs/examples/multiplication_as_pa
 
 - [Machine numbers](../../01_Precision/machine_numbers/README.md) — Python's `complex` holds two floats, so each component is a member of the finite set described there
 - [Complex number ↗](https://en.wikipedia.org/wiki/Complex_number#Construction_as_ordered_pairs) — Wikipedia, the construction as ordered pairs
+- [Introduction to Complex Numbers, UC Davis ↗](https://www.math.ucdavis.edu/~anne/WQ2007/mat67-Lbc-Complex_Numbers.pdf) — free notes that open with the same construction
+- [Where this is taught](../README.md#where-this-is-taught) — more notes and the textbooks
 - [Brahmagupta–Fibonacci identity ↗](https://en.wikipedia.org/wiki/Brahmagupta%E2%80%93Fibonacci_identity) — Wikipedia
