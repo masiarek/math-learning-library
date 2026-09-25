@@ -56,3 +56,18 @@
    Every point turned a quarter turn and grew by a factor of 3.
    That is what the rule always does: multiply by the length of the
    second point, turn by its angle.
+
+7. THE SAME THING AS A MATRIX
+   'Multiply by (x, y)' is a linear map of the plane, so it is a 2x2
+   matrix. Reading the rule with (x2, y2) = (x, y) fixed and (x1, y1)
+   as the input column, the matrix is [[x, -y], [y, x]].
+     multiply by (0, 1)        = [[0, -1], [1, 0]]
+     multiply by (0, 3)        = [[0, -3], [3, 0]]
+     multiply by (3/5, 4/5)    = [[3/5, -4/5], [4/5, 3/5]]
+   For (0, 1) that is [[0, -1], [1, 0]], the standard quarter-turn
+   matrix. Apply it to a column (x, y) and out comes (-y, x):
+     [[0, -1], [1, 0]] . (1, 0)   = (0, 1)
+     [[0, -1], [1, 0]] . (2, 1)   = (-1, 2)
+   Square it by multiplying matrices, and by the pair rule:
+     [[0, -1], [1, 0]]^2 = [[-1, 0], [0, -1]]   and (0, 1) . (0, 1) = (-1, 0)
+   Both say -1 times the identity: a half turn, i^2 = -1 as a matrix.

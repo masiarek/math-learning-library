@@ -80,6 +80,21 @@ is "multiply the lengths, add the angles", written out in coordinates. This page
    Every point turned a quarter turn and grew by a factor of 3.
    That is what the rule always does: multiply by the length of the
    second point, turn by its angle.
+
+7. THE SAME THING AS A MATRIX
+   'Multiply by (x, y)' is a linear map of the plane, so it is a 2x2
+   matrix. Reading the rule with (x2, y2) = (x, y) fixed and (x1, y1)
+   as the input column, the matrix is [[x, -y], [y, x]].
+     multiply by (0, 1)        = [[0, -1], [1, 0]]
+     multiply by (0, 3)        = [[0, -3], [3, 0]]
+     multiply by (3/5, 4/5)    = [[3/5, -4/5], [4/5, 3/5]]
+   For (0, 1) that is [[0, -1], [1, 0]], the standard quarter-turn
+   matrix. Apply it to a column (x, y) and out comes (-y, x):
+     [[0, -1], [1, 0]] . (1, 0)   = (0, 1)
+     [[0, -1], [1, 0]] . (2, 1)   = (-1, 2)
+   Square it by multiplying matrices, and by the pair rule:
+     [[0, -1], [1, 0]]^2 = [[-1, 0], [0, -1]]   and (0, 1) . (0, 1) = (-1, 0)
+   Both say -1 times the identity: a half turn, i^2 = -1 as a matrix.
 ```
 <!-- /output -->
 
@@ -131,6 +146,26 @@ Turning back by A means multiplying by the mirror image (3/5, −4/5), the point
 Section 6 multiplies three points by (0, 3), which is distance 3 at angle 90°. Every one turns a quarter turn and its squared length grows by 9, so its length grew by 3. Scale by the length, turn by the angle, and that is what the rule always does.
 
 So here is complex multiplication with the algebra removed. To multiply by z: stretch the plane by |z|, then turn it by the angle of z. Points on the positive real axis have angle 0 and only stretch, which is the multiplication of school. Points on the vertical axis turn you sideways, and turning sideways twice leaves you facing backwards. That backwards is the minus sign, and it is the only new thing.
+
+## The same thing as a matrix
+
+"Multiply by z" sends a point of the plane to a point of the plane, and it does so linearly, so it is a 2 × 2 matrix. Reading the rule with (x₂, y₂) = (x, y) held fixed and (x₁, y₁) as the input column gives
+
+```text
+multiply by (x, y)  =  [ x  −y ]
+                       [ y   x ]
+```
+
+and section 7 prints that matrix for a few points. For (0, 1) it is
+
+```text
+[ 0  −1 ]   [ x ]     [ −y ]
+[ 1   0 ] · [ y ]  =  [  x ]
+```
+
+which is the standard matrix of a quarter turn counterclockwise, and (x, y) ↦ (−y, x) is what the pair rule gave in section 1. Square that matrix by ordinary matrix multiplication and the result is −1 times the identity, the matrix that scales every vector by −1. Square (0, 1) by the pair rule and the result is (−1, 0). They are the same computation in two notations, and both say the half turn.
+
+So if matrices feel more solid than pairs, the whole chapter can be read that way: a complex number x + yi *is* the matrix [[x, −y], [y, x]], addition is matrix addition, and complex multiplication is matrix multiplication. Every such matrix is a scaling by √(x² + y²) composed with a rotation, and the products of two of them is again one of them. The pair rule is just the shortcut for multiplying two matrices of that shape.
 
 ## Run it yourself
 

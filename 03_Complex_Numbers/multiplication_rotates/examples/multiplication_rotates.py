@@ -112,6 +112,25 @@ def main() -> None:
     print("   Every point turned a quarter turn and grew by a factor of 3.")
     print("   That is what the rule always does: multiply by the length of the")
     print("   second point, turn by its angle.")
+    print()
+
+    print("7. THE SAME THING AS A MATRIX")
+    print("   'Multiply by (x, y)' is a linear map of the plane, so it is a 2x2")
+    print("   matrix. Reading the rule with (x2, y2) = (x, y) fixed and (x1, y1)")
+    print("   as the input column, the matrix is [[x, -y], [y, x]].")
+    for z in [(F(0), F(1)), (F(0), F(3)), (F(3, 5), F(4, 5))]:
+        x, y = z
+        print(f"     multiply by {show(z):<13} = [[{x}, {-y}], [{y}, {x}]]")
+    print("   For (0, 1) that is [[0, -1], [1, 0]], the standard quarter-turn")
+    print("   matrix. Apply it to a column (x, y) and out comes (-y, x):")
+    for z in [(F(1), F(0)), (F(2), F(1))]:
+        print(f"     [[0, -1], [1, 0]] . {show(z):<8} = {show(mul(z, NORTH))}")
+    print("   Square it by multiplying matrices, and by the pair rule:")
+    m = [[F(0), F(-1)], [F(1), F(0)]]
+    sq = [[sum(m[i][k] * m[k][j] for k in range(2)) for j in range(2)] for i in range(2)]
+    print(f"     [[0, -1], [1, 0]]^2 = [[{sq[0][0]}, {sq[0][1]}], [{sq[1][0]}, {sq[1][1]}]]"
+          f"   and (0, 1) . (0, 1) = {show(mul(NORTH, NORTH))}")
+    print("   Both say -1 times the identity: a half turn, i^2 = -1 as a matrix.")
 
 
 if __name__ == "__main__":
