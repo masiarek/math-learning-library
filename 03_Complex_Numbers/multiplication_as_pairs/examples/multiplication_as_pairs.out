@@ -1,0 +1,77 @@
+1. THE RULE, APPLIED TO TWO PAIRS
+   z1 = (3, 2)    z2 = (1, 4)
+   first  = x1*x2 - y1*y2 = 3*1 - 2*4 = 3 - 8 = -5
+   second = x1*y2 + x2*y1 = 3*4 + 1*2 = 12 + 2 = 14
+   z1 . z2 = (-5, 14)
+   Four real multiplications, one subtraction, one addition. That is all.
+
+2. THE PAIR (0, 1) SQUARES TO (-1, 0)
+   (0, 1) . (0, 1) = (0*0 - 1*1, 0*1 + 0*1) = (-1, 0)
+   Nothing was taken the square root of. The rule has this property
+   because of the minus sign in its first component, and for no other
+   reason. Calling (0, 1) by the name i is a choice of notation.
+
+3. THE REAL NUMBERS SIT INSIDE, AS THE PAIRS (x, 0)
+   (2, 0)    . (3, 0)    = (6, 0)     and 2 x 3 = 6
+   (-5, 0)   . (7, 0)    = (-35, 0)   and -5 x 7 = -35
+   (1/2, 0)  . (4/3, 0)  = (2/3, 0)   and 1/2 x 4/3 = 2/3
+   On pairs with second part 0, the rule is ordinary multiplication,
+   so the reals were not replaced by something new; they were kept.
+
+4. WHAT (x, 0) . (0, 1) DOES: SCALES THE SECOND AXIS
+   (2, 0)     . (0, 1) = (0, 2)
+   (-3, 0)    . (0, 1) = (0, -3)
+   (1/2, 0)   . (0, 1) = (0, 1/2)
+   So every pair splits: (x, y) = (x, 0) + (y, 0) . (0, 1), which in
+   the usual notation reads x + y i.
+   (3, 2) = (3, 0) + (2, 0) . (0, 1) = (3, 2)   [3 + 2i]
+   (-1, -5) = (-1, 0) + (-5, 0) . (0, 1) = (-1, -5)   [-1 - 5i]
+
+5. THE LAWS OF ARITHMETIC HOLD (checked on a grid of pairs)
+   36 pairs, coordinates from {-2, -1, 0, 1/2, 1, 3}, exact fractions:
+     commutative   z1.z2 = z2.z1                  1,296 cases, 0 failures
+     associative   (z1.z2).z3 = z1.(z2.z3)       46,656 cases, 0 failures
+     distributive  z1.(z2+z3) = z1.z2 + z1.z3    46,656 cases, 0 failures
+     identity      (1, 0).z = z                      36 cases, 0 failures
+   A finite check; the page gives the two-line algebra that covers all.
+
+6. AND EVERY NON-ZERO PAIR HAS A RECIPROCAL
+   (3, 4)         inverse (3/25, -4/25)        product (1, 0)
+   (0, 1)         inverse (0, -1)              product (1, 0)
+   (1/2, -1/3)    inverse (18/13, 12/13)       product (1, 0)
+   The inverse is (x, -y) / (x^2 + y^2), and x^2 + y^2 is 0 only for (0, 0).
+   Those are the field axioms: the pairs with this rule are a FIELD,
+   the complex numbers, built from the reals with no new symbol.
+
+7. THE SAME RULE, AS PYTHON'S complex TYPE
+   (3, 2)       . (1, 4)       = (-5, 14)       complex: (-5+14j)   same
+   (0, 1)       . (0, 1)       = (-1, 0)        complex: (-1+0j)   same
+   (2, -1)      . (2, 1)       = (5, 0)         complex: (5+0j)   same
+   (1/2, 3/2)   . (-2, 1/4)    = (-11/8, -23/8) complex: (-1.375-2.875j)   same
+   The built-in type stores exactly a pair (z.real, z.imag) and applies
+   this rule. The 'j' it prints is the name it gives the pair (0, 1).
+
+8. THE SAME RULE, WHERE NOBODY SAYS 'COMPLEX'
+   a. Rotating the plane. Multiplying by the unit pair (cos t, sin t)
+      turns every point through the angle t. Take t = 90 degrees:
+      after 1 quarter turn : (-1, 3)
+      after 2 quarter turns: (-3, -1)
+      after 3 quarter turns: (1, -3)
+      after 4 quarter turns: (3, 1)
+      Four quarter turns come back to (3, 1). This is the 2x2 matrix
+      [[x, -y], [y, x]] acting on a column vector, written on one line.
+
+   b. Adding angles. For unit pairs (cos a, sin a) . (cos b, sin b) the
+      rule reads (cos a cos b - sin a sin b, cos a sin b + cos b sin a):
+      the two angle-addition formulas at once, cos(a+b) and sin(a+b).
+      With 3-4-5 and 5-12-13 triangles the check is exact:
+      (3/5, 4/5) . (5/13, 12/13) = (-33/65, 56/65)
+      and (-33/65)^2 + (56/65)^2 = 1, still on the unit circle.
+
+   c. Sums of two squares. The rule proves the identity
+      (x1^2 + y1^2)(x2^2 + y2^2) = (x1x2 - y1y2)^2 + (x1y2 + x2y1)^2,
+      so a product of two sums of two squares is again one:
+      5 x 13 = 65 = (-4)^2 + (7)^2 = 65
+      25 x 169 = 4225 = (-33)^2 + (56)^2 = 4225
+      Brahmagupta wrote that identity in the 7th century, a thousand
+      years before anyone wrote the symbol i.

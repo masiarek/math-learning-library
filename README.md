@@ -44,6 +44,14 @@ The second chapter is about sets so thin that they have zero length, area or vol
 | [The Cantor function](02_Measure_Zero/cantor_function/README.md) | The devil's staircase: continuous, flat almost everywhere, and still climbing from 0 to 1 |
 | [Probability zero](02_Measure_Zero/probability_zero/README.md) | Why probability zero is not impossible, and why on a computer it is |
 
+[**03_Complex_Numbers/**](03_Complex_Numbers/README.md) — *What is a complex number, before anyone says √−1?*
+
+The third chapter builds the complex numbers the way Hamilton did: a complex number is a pair (x, y) of reals, and multiplication is the rule (x₁, y₁) · (x₂, y₂) = (x₁x₂ − y₁y₂, x₁y₂ + x₂y₁). The number whose square is −1 is a consequence of that rule, not an assumption behind it.
+
+| Lesson | What it teaches |
+|---|---|
+| [Multiplication as pairs](03_Complex_Numbers/multiplication_as_pairs/README.md) | The rule, why (0, 1) squares to (−1, 0), why x + yi is the same thing, and where the same rule appears with no complex numbers in sight |
+
 ## Why a math library and not a Python one
 
 The code here is the *illustration*, never the subject. Mathematics is exact — `1/3` is exactly one third, forever — and that is precisely why a chapter on significant figures has to explain that they are **not** a mathematical idea but a measurement one, living in the gap between the world and the arithmetic.

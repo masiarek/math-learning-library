@@ -14,6 +14,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Catastrophic cancellation** — the loss of most significant figures when two nearly equal numbers are subtracted. It does not create error; it removes the leading digits that were hiding error already present. See [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md).
 
+**Complex multiplication** — the rule (x₁, y₁) · (x₂, y₂) = (x₁x₂ − y₁y₂, x₁y₂ + x₂y₁) on pairs of reals. It is the whole definition of the complex numbers: i is the pair (0, 1), and i² = −1 is what the rule gives for (0, 1) · (0, 1). See [multiplication as pairs](03_Complex_Numbers/multiplication_as_pairs/README.md).
+
 **Componentwise relative error** — for vectors, the largest of the individual relative errors, max |xᵢ − x̂ᵢ| / |xᵢ|. A normwise relative error ‖x − x̂‖ / ‖x‖ can report four correct digits while a small component is 10% wrong; this measure cannot. See [relative error and correct digits](01_Precision/relative_error/README.md).
 
 **Conditioning** — how much a problem's output changes for a small change in its input. A property of the *problem*, not of any algorithm; an ill-conditioned problem defeats every method. See [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md).
