@@ -54,7 +54,6 @@ NAV_ORDER: dict[str, list[str]] = {
         "04_Sets",
         "GLOSSARY.md",
         "ROADMAP.md",
-        "sap",
     ],
     # One argument, in six steps: what kind of number is this, what does the
     # notation claim, how good is an approximation when a digit count cannot
@@ -97,37 +96,6 @@ NAV_ORDER: dict[str, list[str]] = {
         "README.md",
         "cartesian_product",
         "cardinality",
-    ],
-    # SAP material staged for the SAP library; see sap/README.md.
-    "sap": [
-        "README.md",
-        "currency",
-    ],
-    # Four movements: the objects (keys, types, local currencies, rates); one
-    # line item in the G/L and the fourth currency it carries; the whole system
-    # (Universal Journal, ledgers, UPA, CO, ML, group); the practical side.
-    "sap/currency": [
-        "README.md",
-        "currency_keys_and_decimals",
-        "currency_types",
-        "local_and_parallel_currencies",
-        "exchange_rates",
-        "update_currency_pswsl",
-        "only_balances_in_local_currency",
-        "exchange_rate_differences_on_clearing",
-        "foreign_currency_valuation",
-        "universal_journal_currencies",
-        "ledgers_and_currencies",
-        "universal_parallel_accounting",
-        "controlling_currencies",
-        "material_ledger_currencies",
-        "group_currency_and_translation",
-        "rounding_and_amount_fields",
-        "abap_currency_handling",
-        "payments_and_currency_management",
-        "reporting_and_troubleshooting",
-        "introducing_and_changing_currencies",
-        "resources",
     ],
 }
 
