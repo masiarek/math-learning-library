@@ -23,7 +23,7 @@ FS10N (or FAGLB03) shows 0.00 for an account in EUR; FBL3N filtered on EUR shows
 
 1. FS03 → *Control data*: is *Only balances in local currency* set? If not, the account has a bucket per currency.
 2. FB03 on a suspicious line → *General ledger currency* field: that is PSWSL. If it differs from the document currency, the line was posted in the course of a clearing (KBA 2219419).
-3. FBL3N with the *General ledger currency* column added (it is in the field catalogue) reconciles to FS10N; the document currency column does not.
+3. FBL3N with the update currency and amount columns added (BSEG-PSWSL and PSWBT, available as special fields through OBVU when the layout does not offer them) reconciles to FS10N; the document currency column does not.
 4. KBA 1904331 is the case where the local balance is zero and the items still cannot be cleared: the per-currency buckets are not.
 
 ## Shape 2: the document currency is not the currency shown

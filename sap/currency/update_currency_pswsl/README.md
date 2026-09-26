@@ -25,7 +25,7 @@ For most accounts that per-currency total is simply the document currency amount
 
 ## The rule
 
-The decision is made per G/L account, by the *Only balances in local currency* indicator on the company code segment of the account master (SKB1-XSALH, [its own page](../only_balances_in_local_currency/README.md)), and it is three lines of ABAP in SAPMF05A:
+The decision is made per G/L account, by the *Only balances in local currency* indicator on the company code segment of the account master (SKB1-XSALH, [its own page](../only_balances_in_local_currency/README.md)), and it comes down to three lines of logic in SAPMF05A, paraphrased here:
 
 ```abap
 IF skb1-xsalh = space.
