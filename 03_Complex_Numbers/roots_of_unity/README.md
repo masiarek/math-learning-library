@@ -6,7 +6,7 @@
 
 ## Where the picture pays off
 
-The [previous lesson](../multiplication_rotates/README.md) showed that multiplying by a point of length 1 turns the plane by that point's angle and changes no lengths. It never computed an angle, and this page will not either. It asks the one question that "angles add" makes easy: **what happens when a unit point is multiplied by itself, over and over?**
+[Multiplication rotates](../multiplication_rotates/README.md) showed that multiplying by a point of length 1 turns the plane by that point's angle and changes no lengths. It never computed an angle, and this page will not either. It asks the one question that "angles add" makes easy: **what happens when a unit point is multiplied by itself, over and over?**
 
 It walks around the unit circle in equal steps. Each multiplication turns by the same angle A, so after n of them the point sits at angle nA. In cosines and sines,
 
@@ -165,7 +165,7 @@ So this is the typical unit point: it has fractional coordinates and its angle i
 
 ## Carrying √3 exactly
 
-The unit point at 1/4 of a turn is (0, 1), and the previous lesson watched it come back after four steps. The one at 1/12 of a turn, 30°, is (cos 30°, sin 30°) = (√3/2, 1/2), and √3 is not a fraction. A float would round it, and then, as section 7 shows, twelve multiplications later the point is near (1, 0) and not at it. The word this page cares about is *exactly*, so the program does not round.
+The unit point at 1/4 of a turn is (0, 1), and the rotation lesson watched it come back after four steps. The one at 1/12 of a turn, 30°, is (cos 30°, sin 30°) = (√3/2, 1/2), and √3 is not a fraction. A float would round it, and then, as section 7 shows, twelve multiplications later the point is near (1, 0) and not at it. The word this page cares about is *exactly*, so the program does not round.
 
 It keeps numbers of the form a + b√3 with a and b fractions, and multiplies them by
 
@@ -183,7 +183,7 @@ The pair rule from lesson 1 does not care what its coordinates are, so long as t
 
 Section 4 raises h = (√3/2, 1/2) to every power from 0 to 12. It visits (√3/2, 1/2), (1/2, √3/2), (0, 1), (−1/2, √3/2), and so on around the circle to (√3/2, −1/2), and then h¹² = (1, 0): an equality of fractions, not a float near 1. Twelve steps of a twelfth of a turn is one turn.
 
-The twelve points are the marks of a clock face, numbered counterclockwise from (1, 0). Among them are the four compass points the previous lesson reached with quarter turns, at marks 0, 3, 6 and 9, and the eight points with coordinates ±1/2 and ±√3/2, which are the cosines and sines of 30° and 60° and their reflections.
+The twelve points are the marks of a clock face, numbered counterclockwise from (1, 0). Among them are the four compass points the rotation lesson reached with quarter turns, at marks 0, 3, 6 and 9, and the eight points with coordinates ±1/2 and ±√3/2, which are the cosines and sines of 30° and 60° and their reflections.
 
 ## zⁿ = 1 has exactly n solutions
 
@@ -199,7 +199,7 @@ Mark 4 is w = (−1/2, √3/2), and section 6 cubes it: w³ = (1, 0). The polyno
 
 The quadratic formula solves z² + z + 1 = 0 as well, and gives (−1 ± √−3)/2. School algebra stops there, at the square root of a negative number. In pairs, √−3 is the point (0, √3): the program squares it and gets (−3, 0), then computes (−1 + √−3)/2 as a pair and gets (−1/2, √3/2), which is w. The formula was right all along; it was waiting for somewhere to put √−3, and the place is the vertical axis.
 
-The section ends with a fact that holds for every n > 1: **the n-th roots of unity add up to (0, 0)**. The three cube roots do, the four fourth roots do, all twelve marks do. Geometrically they are balanced around the origin. Algebraically the argument is two lines: if S is the sum and w is a primitive root, multiplying every root by w only shuffles the roots among themselves, so wS = S, so (w − 1)S = 0, and since w ≠ 1 and the pairs are a field, S = 0.
+The section ends with a fact that holds for every n > 1: **the n-th roots of unity add up to (0, 0)**. The three cube roots do, the four fourth roots do, all twelve marks do. Geometrically they are balanced around the origin. Algebraically the argument is two lines: if S is the sum and w is a primitive root, multiplying every root by w only shuffles the roots among themselves, so wS = S, so (w − 1)S = 0, and since w ≠ 1 and two nonzero pairs never multiply to (0, 0) ([multiplication can be undone](../multiplication_can_be_undone/README.md)), S = 0.
 
 ## The same thing in floats
 
@@ -219,6 +219,7 @@ python3 03_Complex_Numbers/roots_of_unity/examples/roots_of_unity.py
 
 - [Multiplication rotates](../multiplication_rotates/README.md) — angles add, which this page applies n times over
 - [Multiplication as pairs](../multiplication_as_pairs/README.md) — the pairs are a field, which is what makes "at most n solutions" true
+- [Multiplication can be undone](../multiplication_can_be_undone/README.md) — no two nonzero pairs multiply to (0, 0), the step that makes the roots of unity add up to nothing
 - [Root of unity ↗](https://en.wikipedia.org/wiki/Root_of_unity) — Wikipedia
 - [De Moivre's formula ↗](https://en.wikipedia.org/wiki/De_Moivre%27s_formula) — Wikipedia
 - [Niven's theorem ↗](https://en.wikipedia.org/wiki/Niven%27s_theorem) — Wikipedia, which angles have a rational cosine

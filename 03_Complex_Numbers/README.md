@@ -2,13 +2,14 @@
 
 **Level:** 101 → 201 · for anyone who has multiplied out (a + b)(c + d)
 
-The usual introduction to complex numbers asks you to accept a number whose square is −1, and then to trust that arithmetic with it still works. This chapter takes the other road, the one Hamilton took in 1835: a complex number **is** a pair of real numbers, and multiplication is a rule on pairs. The rule is written down, nothing is assumed, and the number whose square is −1 comes out at the end as a consequence rather than going in at the start as an axiom. The second lesson says what the rule *does*: it scales and turns the plane, so that i² = −1 is nothing more than a quarter turn done twice. The third is where that picture pays off: multiply a unit point by itself and it walks around the circle in equal steps, so the equation zⁿ = 1 has exactly n solutions, the n-th roots of unity, and the program finds the twelve of them on a clock face with √3 carried exactly.
+The usual introduction to complex numbers asks you to accept a number whose square is −1, and then to trust that arithmetic with it still works. This chapter takes the other road, the one Hamilton took in 1835: a complex number **is** a pair of real numbers, and multiplication is a rule on pairs. The rule is written down, nothing is assumed, and the number whose square is −1 comes out at the end as a consequence rather than going in at the start as an axiom. The second lesson says what the rule *does*: it scales and turns the plane, so that i² = −1 is nothing more than a quarter turn done twice. The third says why the rule is this one: the obvious entry-by-entry product lets two nonzero pairs multiply to zero, and only the complex rule can always be undone. The fourth is where that picture pays off: multiply a unit point by itself and it walks around the circle in equal steps, so the equation zⁿ = 1 has exactly n solutions, the n-th roots of unity, and the program finds the twelve of them on a clock face with √3 carried exactly.
 
 | # | Lesson | The question it answers |
 |---|---|---|
 | 1 | [Multiplication as pairs](multiplication_as_pairs/README.md) | What is complex multiplication, if not "multiply out and replace i² by −1"? |
 | 2 | [Multiplication rotates](multiplication_rotates/README.md) | Why should two positive things multiply to something negative? |
-| 3 | [Roots of unity](roots_of_unity/README.md) | Which points come back to (1, 0) when multiplied by themselves, and how many solutions does zⁿ = 1 have? |
+| 3 | [Multiplication can be undone](multiplication_can_be_undone/README.md) | Why this rule, and not the obvious entry-by-entry one? |
+| 4 | [Roots of unity](roots_of_unity/README.md) | Which points come back to (1, 0) when multiplied by themselves, and how many solutions does zⁿ = 1 have? |
 
 ## Where this is taught
 
@@ -28,7 +29,9 @@ For lesson 2, multiplication as rotation:
 - [Visual Complex Analysis, Tristan Needham ↗](https://books.google.com/books/about/Visual_Complex_Analysis.html?id=ogz5FjmiqlQC) — the book for the rotation-first approach; chapter 1 is often in the preview, and there is a [short review ↗](https://scholarcommons.scu.edu/cgi/viewcontent.cgi?article=1000&context=math_compsci)
 - [Transforms, Berkeley CS184 ↗](https://cs184.eecs.berkeley.edu/sp24/lecture/4-38/transforms) — the rotation matrix from the linear-algebra side, as computer graphics uses it
 
-For lesson 3, de Moivre's formula and the roots of unity:
+For lesson 3, division and ℂ*: Titu Andreescu and Dorin Andrica, *Complex Numbers from A to … Z* (Birkhäuser, 2014), §1.1.1, which names ℂ* alongside the pair definition; its two worked examples are the lesson's first kata.
+
+For lesson 4, de Moivre's formula and the roots of unity:
 
 - [Complex Number Primer: powers and roots, Paul's Online Notes ↗](https://tutorial.math.lamar.edu/extras/complexprimer/roots.aspx) — de Moivre's formula and the n-th roots, computed with angles the way a course does it
 - [Root of unity ↗](https://en.wikipedia.org/wiki/Root_of_unity) — Wikipedia
@@ -46,4 +49,4 @@ Textbooks for the course itself, which needs calculus, roughly in order of diffi
 
 ## A note on the code
 
-The examples compute with exact fractions (`fractions.Fraction`), never with Python's built-in `complex` type, except in one section each of lessons 1 and 3 that compares the two. The point is that the rule is nothing but real arithmetic, and a program that quietly used `complex` would hide exactly the thing the page is trying to show. Lesson 3 needs √3, and carries it as a symbol with the rule √3 · √3 = 3 rather than as a float, so that h¹² = (1, 0) is an equality and not an approximation.
+The examples compute with exact fractions (`fractions.Fraction`), never with Python's built-in `complex` type, except in one section each of lessons 1 and 4 that compares the two. The point is that the rule is nothing but real arithmetic, and a program that quietly used `complex` would hide exactly the thing the page is trying to show. Lesson 4 needs √3, and carries it as a symbol with the rule √3 · √3 = 3 rather than as a float, so that h¹² = (1, 0) is an equality and not an approximation.

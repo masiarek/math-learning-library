@@ -88,6 +88,7 @@ NAV_ORDER: dict[str, list[str]] = {
         "README.md",
         "multiplication_as_pairs",
         "multiplication_rotates",
+        "multiplication_can_be_undone",
         "roots_of_unity",
     ],
     # Groundwork the other chapters take for granted: how a set that
