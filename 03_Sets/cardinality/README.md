@@ -2,7 +2,7 @@
 
 **Level:** 101 → 201 · for anyone who has counted the rows in a table
 
-**One line:** |A| is the size of a set, and it is defined by matching rather than counting — which changes nothing for a finite set, lets ℕ be the same size as its even numbers, and proves that some functions have no program.
+**One line:** |A| is the size of a set, defined by matching rather than counting — which changes nothing for a finite set, lets ℕ be the same size as its even numbers, proves that some functions have no program, and is the one word behind index size, foreign-key ranges, UML multiplicities and "high-cardinality" telemetry.
 
 ## The bars
 
@@ -56,6 +56,10 @@ For a finite set that is the whole story, and "cardinality" is a long word for "
    a lookup to 1 row; an index on `role` narrows it to 10. The
    cardinality of the column is what decides whether the index is
    worth reading.
+   an index on (country, role) can hold at most |country| x |role|
+   = 4 x 2 = 8 distinct keys; this table uses 5 of them.
+   The product rule again: the key space of a compound index is a
+   Cartesian product, and its cardinality is the product of the parts.
 
 5. CARDINALITY OF A RELATIONSHIP: HOW MANY ROWS ON EACH SIDE
    KNA1 (customers)  = C001, C002, C003, C004
@@ -134,9 +138,15 @@ The word turns up in computing far more often than in a first mathematics course
 
 **Databases.** The cardinality of a column is how many distinct values it holds. Section 4 takes a 12-row table: `name` has cardinality 12, `country` 4, `role` 2. A query planner keeps estimates of exactly these numbers, because an index on a high-cardinality column narrows a lookup to a row or two and an index on a low-cardinality one barely narrows it at all. `COUNT(DISTINCT x)` computes it; a wrong estimate of it is the classic reason a query picks a bad plan. Relationship cardinality in a schema, one-to-one and one-to-many, is the same word applied to how many rows on each side can match.
 
+A compound index makes the product rule concrete. An index on `(country, role)` has a key space that is the Cartesian product of the two columns' value sets, so its cardinality is at most |country| · |role|, which section 4 prints as 4 × 2 = 8 possible keys, of which the table uses 6. Two fields with 2 and 3 values give an index of cardinality 6. Every extra column multiplies.
+
 **Relationships between tables.** The second database meaning is the one a schema designer uses: the cardinality of a foreign key says how many rows on each side can match. One-to-one, one-to-many, many-to-many. It is still |set|: for each invoice, the set of customers it names has cardinality exactly 1; for each customer, the set of invoices naming it has cardinality 0, 1 or more. Section 5 computes both on a five-invoice, four-customer table and reads off the answer.
 
 The ABAP Dictionary writes this in two notations, and they run in opposite directions, which is a documented pitfall. In transaction SE11 the check table comes first: `1:CN` means each invoice names exactly one customer (`1`, or `C` if the field may be empty), and each customer has any number of invoices (`CN`; `1`, `C` and `N` are the other options). In the DDL syntax of ABAP Cloud the foreign key table comes first, and the ranges are spelled out: the same relationship is `with foreign key [0..*,1]`, read as *0 or more invoices per customer, exactly 1 customer per invoice*. So `1:CN` and `[0..*,1]` describe one relationship, and a reader who applies the SE11 order to a DDL bracket, or the reverse, gets the parent and child swapped. The program prints both forms from the same data. The joins that consume these relationships are the sibling ABAP library's [`SELECT` ↗](https://masiarek.github.io/abap-learning-library/02_Keywords/select/index.html), and the Dictionary objects that declare them are its [DDIC, domains and data elements ↗](https://masiarek.github.io/abap-learning-library/03_Topics/ddic_and_domains/index.html).
+
+**Object models.** UML draws composition as a line from a diamond on the composite class to the component class, and writes a cardinality at the component end: `1` for exactly one, `*` for any number, `1..4` or `1..*` for a range. That is the foreign-key idea drawn as a picture, and the DDL brackets above use the same `0..*` spelling. A GIS relationship class ([ArcGIS ↗](https://desktop.arcgis.com/en/arcmap/latest/manage-data/relationships/relationship-class-properties.htm)) offers the same three choices, one-to-one, one-to-many and many-to-many, between an origin and a destination table.
+
+**Observability.** In telemetry the word is used for a field, and it means how many distinct values that field takes across all events. A `species` field on human users has cardinality 1. A `country` field has a couple of hundred. A `user_id`, `request_id` or `container_id` has the highest possible, since nearly every value is unique. Two consequences follow, and both are |set| in disguise. Metrics systems store one time series per distinct combination of tag values, so tagging a metric with a high-cardinality field multiplies the series count by that field's cardinality, which is why metrics stay cheap only with low-cardinality tags and why they cannot answer "which host?" once there are enough hosts. Debugging a novel failure, on the other hand, needs exactly those fields, because the needle is usually one user or one request. That is the argument for wide structured events over pre-aggregated metrics. A high-cardinality value can always be bucketed down to a low-cardinality one, last names by first letter, say; the reverse is impossible, since the information is gone. **Dimensionality** is the related but different count: not how many values a field has, but how many fields an event has.
 
 **Approximate counting.** Counting distinct visitors across a billion events needs a billion-entry set, unless an estimate will do. HyperLogLog gives one within a few percent using a few kilobytes, and the field is called cardinality estimation. Redis exposes both: `SCARD` for an exact set cardinality and `PFCOUNT` for the estimate.
 
@@ -157,6 +167,7 @@ python3 03_Sets/cardinality/examples/cardinality.py
 - [The Cantor set](../../02_Measure_Zero/cantor_set/README.md) — uncountable, and still of length zero
 - [`SELECT` ↗](https://masiarek.github.io/abap-learning-library/02_Keywords/select/index.html) — the sibling ABAP library: joins, and why the joining belongs on the database
 - [DDIC, domains and data elements ↗](https://masiarek.github.io/abap-learning-library/03_Topics/ddic_and_domains/index.html) — the sibling ABAP library: where a foreign key and its cardinality are declared
+- [Relationship class properties ↗](https://desktop.arcgis.com/en/arcmap/latest/manage-data/relationships/relationship-class-properties.htm) — ArcGIS: the same three cardinalities between an origin and a destination table
 - [Cardinality ↗](https://en.wikipedia.org/wiki/Cardinality) — Wikipedia
 - [Cantor's diagonal argument ↗](https://en.wikipedia.org/wiki/Cantor%27s_diagonal_argument) — Wikipedia
 - [HyperLogLog ↗](https://en.wikipedia.org/wiki/HyperLogLog) — cardinality estimation in a few kilobytes

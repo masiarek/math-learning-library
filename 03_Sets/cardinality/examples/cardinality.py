@@ -84,6 +84,13 @@ def main() -> None:
     print("   a lookup to 1 row; an index on `role` narrows it to 10. The")
     print("   cardinality of the column is what decides whether the index is")
     print("   worth reading.")
+    countries = {r[1] for r in rows}
+    roles = {r[2] for r in rows}
+    combos = {(r[1], r[2]) for r in rows}
+    print(f"   an index on (country, role) can hold at most |country| x |role|")
+    print(f"   = {len(countries)} x {len(roles)} = {len(countries) * len(roles)} distinct keys; this table uses {len(combos)} of them.")
+    print("   The product rule again: the key space of a compound index is a")
+    print("   Cartesian product, and its cardinality is the product of the parts.")
     print()
 
     print("5. CARDINALITY OF A RELATIONSHIP: HOW MANY ROWS ON EACH SIDE")

@@ -38,6 +38,10 @@
    a lookup to 1 row; an index on `role` narrows it to 10. The
    cardinality of the column is what decides whether the index is
    worth reading.
+   an index on (country, role) can hold at most |country| x |role|
+   = 4 x 2 = 8 distinct keys; this table uses 5 of them.
+   The product rule again: the key space of a compound index is a
+   Cartesian product, and its cardinality is the product of the parts.
 
 5. CARDINALITY OF A RELATIONSHIP: HOW MANY ROWS ON EACH SIDE
    KNA1 (customers)  = C001, C002, C003, C004
