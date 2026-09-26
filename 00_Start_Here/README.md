@@ -16,7 +16,7 @@ It begins with a question that sounds settled and is not: **are significant figu
 
 [**02_Measure_Zero/**](../02_Measure_Zero/README.md) — *How can infinitely many points take up no room?* Six lessons on sets so thin that they have no length, area or volume: the rationals, the Cantor set, the fat Cantor set (full of gaps, and still length 1/2), and the Cantor function, a staircase that climbs from 0 to 1 while standing still almost everywhere. It stands on its own; the one thing it assumes is the idea of a limit.
 
-[**03_Sets/**](../03_Sets/README.md) — *What is this collection, exactly?* Groundwork the other chapters lean on, starting with the Cartesian product: what ℝ² is, why an ordered pair is not a two-element set, and why A × B and B × A can share no member at all.
+[**03_Sets/**](../03_Sets/README.md) — *What is this collection, exactly?* Groundwork the other chapters lean on, starting with the Cartesian product: what ℝ² is, why an ordered pair is not a two-element set, and why A × B and B × A can share no member at all. Then cardinality: what |A| means, why it is defined by matching rather than counting, and how the same idea sizes a type, a database column, and the set of all programs.
 
 ## How to run anything here
 

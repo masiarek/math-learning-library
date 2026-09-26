@@ -51,6 +51,7 @@ The third chapter is groundwork: the constructions every other page takes for gr
 | Lesson | What it teaches |
 |---|---|
 | [The Cartesian product](03_Sets/cartesian_product/README.md) | What ℝ² is, why (2, 5) is not (5, 2), why A × B is not B × A, and why (1, 1) counts |
+| [Cardinality of sets](03_Sets/cardinality/README.md) | What \|A\| means, why size is defined by matching, and where it shows up in types, databases and computability |
 
 ## Why a math library and not a Python one
 

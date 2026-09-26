@@ -1,0 +1,89 @@
+1. COUNTING AND MATCHING AGREE ON FINITE SETS
+   C = ['bishop', 'knight', 'pawn', 'rook']
+   D = ['east', 'north', 'south', 'west']
+   |C| = 4, |D| = 4
+     bishop  <-> east
+     knight  <-> north
+     pawn    <-> south
+     rook    <-> west
+   one-to-one, nothing left over:  True
+   can C match ['east', 'north', 'south']?  every pairing leaves one of C over,
+   because |C| = 4 and |E| = 3.
+
+2. THE BARS MEAN SIZE, AND SIZE DEPENDS ON THE KIND OF THING
+   |-4|          = 4           absolute value of a number
+   |{-4}|        = 1           cardinality of a one-member set
+   |{-4, 4}|     = 2           cardinality of a two-member set
+   |{1, 1, 1}|   = 1           a set does not count repeats
+
+3. THE PRODUCT RULE  |A x B| = |A| . |B|
+   |A| = 4, |B| = 7, |A x B| = 28 = 4 x 7
+   Same rule, read as types: a pair type has as many values as the
+   product of its parts. Some sizes every programmer already knows:
+     bool                        2
+     uint8                     256
+     uint16                 65,536
+     (bool, uint8)             512   product type: 2 x 256
+     (uint8, uint8)         65,536   product type: 256 x 256 = uint16
+     bool | uint8              258   sum type (tagged union): 2 + 256
+     Optional[uint8]           257   None | uint8: 1 + 256
+     uint8 -> bool       1.158e+77   function type: 2^256 tables
+
+4. CARDINALITY OF A COLUMN
+   a table of 12 rows:   name   country   role
+     COUNT(DISTINCT name)     = 12   = |{ann, bob, cy, dee, eli, fay, ...}|
+     COUNT(DISTINCT country)  =  4   = |{DE, FR, PL, US}|
+     COUNT(DISTINCT role)     =  2   = |{admin, user}|
+   A query planner keeps these numbers. An index on `name` narrows
+   a lookup to 1 row; an index on `role` narrows it to 10. The
+   cardinality of the column is what decides whether the index is
+   worth reading.
+
+5. CARDINALITY OF A RELATIONSHIP: HOW MANY ROWS ON EACH SIDE
+   KNA1 (customers)  = C001, C002, C003, C004
+   VBRK (invoices)   = INV1->C001, INV2->C001, INV3->C002, INV4->C001, INV5->C004
+   customers per invoice:  [1]   every invoice names exactly one customer
+   invoices per customer:  [0, 1, 3]   a customer has 0, 1 or many
+   SE11 notation, check table first:        1:CN
+   DDL notation, foreign key table first:   [0..*,1]
+   Same relationship, the two sides written in opposite orders. The
+   numbers are cardinalities of sets: |{customers of INV1}| = 1 and
+   |{invoices of C001}| = 3, and the notation records the range.
+
+6. MATCHING WORKS WHERE COUNTING STOPS: N AND THE EVEN NUMBERS
+   Pair n with 2n. The first few pairs, and the rule for all of them:
+     0<->0  1<->2  2<->4  3<->6  4<->8  5<->10  6<->12  7<->14  8<->16  9<->18  ...   n <-> 2n
+   in the first 100,000 pairs, every even number below 200,000 is hit
+   exactly once:  True
+   The rule never runs out on either side, so by the matching
+   definition |N| = |even numbers|, though one is a proper part of
+   the other. Counting has no opinion here; it never finishes.
+
+7. AND MATCHING CAN FAIL: THE DIAGONAL
+   Suppose someone claims to have listed EVERY infinite 0/1 sequence,
+   row 0, row 1, row 2, ... Here are 8 rows of such a list:
+     row 0:  [0]  1   0   1   0   1   0   1
+     row 1:   1  [1]  1   1   1   1   1   1
+     row 2:   0   1  [0]  1   0   1   0   1
+     row 3:   1   1   0  [0]  1   1   0   0
+     row 4:   0   1   0   1  [0]  1   0   1
+     row 5:   1   1   1   1   1  [1]  1   1
+     row 6:   0   1   1   0   1   0  [0]  1
+     row 7:   1   1   1   1   1   1   1  [1]
+     diagonal:         0   1   0   0   0   1   0   1
+     flipped:          1   0   1   1   1   0   1   0
+   the flipped diagonal differs from row r in column r, for every r:
+   [True, True, True, True, True, True, True, True]
+   So it is a 0/1 sequence that is on no row of the list. Whatever
+   list is offered, this builds a sequence it missed. No matching of
+   N onto the set of 0/1 sequences exists: that set is UNCOUNTABLE.
+
+8. WHY A PROGRAMMER SHOULD CARE: MORE FUNCTIONS THAN PROGRAMS
+   A program is a finite string over a finite alphabet. Those can be
+   listed, shortest first, alphabetically within a length:
+     a  b  aa  ab  ba  bb  aaa  aab  aba  abb  baa  bab  bba  bbb  ...
+   So |programs| = |N|. A function from N to {0, 1} is an infinite
+   0/1 sequence, and section 7 showed those cannot be listed. There
+   are more such functions than there are programs, so some of them
+   have no program at all. That is the cardinality argument for the
+   existence of uncomputable functions, and it needs no example.
