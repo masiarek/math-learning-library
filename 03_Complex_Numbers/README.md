@@ -27,7 +27,16 @@ For lesson 2, multiplication as rotation:
 - [Visual Complex Analysis, Tristan Needham ↗](https://books.google.com/books/about/Visual_Complex_Analysis.html?id=ogz5FjmiqlQC) — the book for the rotation-first approach; chapter 1 is often in the preview, and there is a [short review ↗](https://scholarcommons.scu.edu/cgi/viewcontent.cgi?article=1000&context=math_compsci)
 - [Transforms, Berkeley CS184 ↗](https://cs184.eecs.berkeley.edu/sp24/lecture/4-38/transforms) — the rotation matrix from the linear-algebra side, as computer graphics uses it
 
-Textbooks, roughly in order of difficulty: Churchill and Brown, *Complex Variables and Applications*, chapter 1, which defines complex numbers as ordered pairs and is the most common undergraduate choice; Saff and Snider, *Fundamentals of Complex Analysis*; Ahlfors, *Complex Analysis*; Stein and Shakarchi, *Complex Analysis*; and Needham above, which is not a first course but is the one for the geometry.
+Easier books, to read before any of the textbooks below. None of them needs calculus. They need the school algebra that lesson 1 uses, and some trigonometry: the unit circle, and the angle-addition formulas for cos(A + B) and sin(A + B), which lesson 2 shows are the multiplication rule in disguise. Roughly easiest first:
+
+- [Imagining Numbers, Barry Mazur ↗](https://books.google.com/books/about/Imagining_Numbers.html?id=nFOD5DxYJu8C) — the gentlest, written for readers with no mathematical background; about how anyone comes to imagine a number like √−15 at all, with more ideas than exercises
+- [An Imaginary Tale: The Story of √−1, Paul Nahin ↗](https://press.princeton.edu/books/paperback/9780691169248/an-imaginary-tale) — the history, with the mathematics done properly; the early chapters, on cubic equations, need only algebra, and calculus arrives later
+- [Complex Numbers and Geometry, Liang-shin Hahn ↗](https://bookstore.ams.org/text-52) — short and self-contained, assuming nothing about complex numbers, and proving theorems of plane geometry with complex multiplication; the one to pick if you read only one
+- [Precalculus, Art of Problem Solving ↗](https://artofproblemsolving.com/store/book/precalculus) — chapters 6–8 are complex numbers, then complex numbers with trigonometry, then with geometry; the book for practice, with problems from routine to olympiad
+- [Complex Numbers from A to …Z, Titu Andreescu and Dorin Andrica ↗](https://books.google.com/books/about/Complex_Numbers_from_A_to_Z.html?id=vbM5rLOu_WUC) — a step up: competition problems solved with complex numbers
+- [Complex Numbers in Geometry, I. M. Yaglom ↗](https://books.google.com/books/about/Complex_Numbers_in_Geometry.html?id=LL_iBQAAQBAJ) — ordinary complex numbers alongside dual and double numbers, the siblings on the [roadmap](../ROADMAP.md); the most demanding of these
+
+Textbooks for the course itself, which needs calculus, roughly in order of difficulty: Churchill and Brown, *Complex Variables and Applications*, chapter 1, which defines complex numbers as ordered pairs and is the most common undergraduate choice; Beck, Marchesi, Pixton and Sabalka, [A First Course in Complex Analysis ↗](https://matthbeck.github.io/complex.html), free and at about the same level; Saff and Snider, *Fundamentals of Complex Analysis*; Ahlfors, *Complex Analysis*; Stein and Shakarchi, *Complex Analysis*; and Needham above, which is not a first course but is the one for the geometry.
 
 ## A note on the code
 
