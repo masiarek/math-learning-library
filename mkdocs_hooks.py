@@ -50,6 +50,7 @@ NAV_ORDER: dict[str, list[str]] = {
         "00_Start_Here",
         "01_Precision",
         "02_Measure_Zero",
+        "03_Complex_Numbers",
         "04_Sets",
         "GLOSSARY.md",
         "ROADMAP.md",
@@ -81,6 +82,12 @@ NAV_ORDER: dict[str, list[str]] = {
         "cantor_function",
         "probability_zero",
     ],
+    # A complex number is a pair of reals and multiplication is a rule on
+    # pairs; the square root of -1 is a consequence, not an assumption.
+    "03_Complex_Numbers": [
+        "README.md",
+        "multiplication_as_pairs",
+        "multiplication_rotates",
     # Groundwork the other chapters take for granted: how a set that
     # remembers order is built from ones that do not.
     "04_Sets": [

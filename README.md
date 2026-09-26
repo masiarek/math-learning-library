@@ -44,9 +44,17 @@ The second chapter is about sets so thin that they have zero length, area or vol
 | [The Cantor function](02_Measure_Zero/cantor_function/README.md) | The devil's staircase: continuous, flat almost everywhere, and still climbing from 0 to 1 |
 | [Probability zero](02_Measure_Zero/probability_zero/README.md) | Why probability zero is not impossible, and why on a computer it is |
 
+[**03_Complex_Numbers/**](03_Complex_Numbers/README.md) — *What is a complex number, before anyone says √−1?*
+
+The third chapter builds the complex numbers the way Hamilton did: a complex number is a pair (x, y) of reals, and multiplication is the rule (x₁, y₁) · (x₂, y₂) = (x₁x₂ − y₁y₂, x₁y₂ + x₂y₁). The number whose square is −1 is a consequence of that rule, not an assumption behind it.
+
+| Lesson | What it teaches |
+|---|---|
+| [Multiplication as pairs](03_Complex_Numbers/multiplication_as_pairs/README.md) | The rule, why (0, 1) squares to (−1, 0), why x + yi is the same thing, and where the same rule appears with no complex numbers in sight |
+| [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) | Multiplying scales by a length and turns by an angle, so i² = −1 is two quarter turns making a half turn |
 [**04_Sets/**](04_Sets/README.md) — *What is this collection, exactly?*
 
-The third chapter is groundwork: the constructions every other page takes for granted, checked on real sets. It needs nothing from chapters 1 or 2.
+The fourth chapter is groundwork: the constructions every other page takes for granted, checked on real sets. It needs nothing from chapters 1 or 2.
 
 | Lesson | What it teaches |
 |---|---|
