@@ -51,6 +51,7 @@ NAV_ORDER: dict[str, list[str]] = {
         "01_Precision",
         "02_Measure_Zero",
         "03_Complex_Numbers",
+        "04_Sets",
         "GLOSSARY.md",
         "ROADMAP.md",
     ],
@@ -87,6 +88,12 @@ NAV_ORDER: dict[str, list[str]] = {
         "README.md",
         "multiplication_as_pairs",
         "multiplication_rotates",
+    # Groundwork the other chapters take for granted: how a set that
+    # remembers order is built from ones that do not.
+    "04_Sets": [
+        "README.md",
+        "cartesian_product",
+        "cardinality",
     ],
 }
 

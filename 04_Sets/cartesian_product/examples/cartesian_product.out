@@ -1,0 +1,59 @@
+1. A PAIR IS ORDERED; A SET IS NOT
+   (2, 5) == (5, 2)   is False
+   {2, 5} == {5, 2}   is True
+   (3, 3) has 2 entries;  {3, 3} has 1 member
+   Two pairs are equal exactly when both entries match in order.
+
+2. THE PRODUCT, FROM THE DEFINITION
+   P = {a, b}   Q = {1, 2, 3}
+   P x Q is every (p, q) with p in P and q in Q, laid out as a grid:
+   rows are members of P, columns are members of Q.
+     P x Q =  (a, 1)   (a, 2)   (a, 3)
+              (b, 1)   (b, 2)   (b, 3)
+   |P| x |Q| = 2 x 3 = 6;  the grid has 6 cells.
+
+3. SWAP THE FACTORS AND YOU GET A DIFFERENT SET
+     Q x P =  (1, a)   (1, b)
+              (2, a)   (2, b)
+              (3, a)   (3, b)
+   P x Q == Q x P            is False
+   members they share:       []
+   ('a', 1) in P x Q         is True
+   ('a', 1) in Q x P         is False
+   'a' is not in Q, so it cannot be a first entry of a Q x P pair.
+   Same size, and not one member in common. The product is not
+   commutative: which set feeds which slot is part of the definition.
+
+4. A SET TIMES ITSELF, AND THE PAIRS WITH A REPEATED ENTRY
+   S = {0, 1}
+     S x S =  (0, 0)   (0, 1)
+              (1, 0)   (1, 1)
+   (0, 0) in S x S           is True
+   (1, 1) in S x S           is True
+   |S x S| = 4, not 2. Dropping the repeats is the usual
+   mistake: nothing in the definition says the two entries differ.
+
+5. THE COUNT IS ALWAYS THE PRODUCT OF THE SIZES
+     |A|  |B|  |A x B|  |A| x |B|
+       0    0        0          0
+       0    1        0          0
+       0    3        0          0
+       0    5        0          0
+       1    0        0          0
+       1    1        1          1
+       1    3        3          3
+       1    5        5          5
+       2    0        0          0
+       2    1        2          2
+       2    3        6          6
+       2    5       10         10
+       3    0        0          0
+       3    1        3          3
+       3    3        9          9
+       3    5       15         15
+   Including the empty set: a product with an empty factor is empty,
+   because there is nothing to put in that slot.
+
+6. THE SAME THING PYTHON CALLS itertools.product
+   set(product(P, Q)) == P x Q   is True
+   The library and the definition agree, pair for pair.
