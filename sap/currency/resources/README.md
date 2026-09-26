@@ -275,20 +275,46 @@ Notes and KBAs are reachable at `https://me.sap.com/notes/<number>` (S-user logi
 
 ## Books
 
-Chapters that deal with currencies, from the publishers' tables of contents. SAP PRESS titles are at sap-press.com; editions change, so look for the current one.
+Chapters and sections that deal with currencies, taken from the printed tables of contents (page numbers are the printed ones). SAP PRESS titles are at sap-press.com; editions change, so look for the current one. Entries without section names are titles whose relevance is known from the publisher's description only.
 
-| Title | Author(s), publisher | Where the currencies are |
+### Finance and the general ledger
+
+| Title | Author(s), publisher, edition | Currency chapters and sections |
 |---|---|---|
-| *Financial Accounting in SAP S/4HANA: Business User Guide* | Tritschler, Walz, Rupp, Mucka · SAP PRESS | General ledger master data and the currency fields of a journal entry; foreign currency valuation and regrouping in the closing chapter |
-| *Configuring SAP S/4HANA Finance* | Pougkas · SAP PRESS | Organizational structure (company code, currencies), ledgers and currency types (FINSC_LEDGER), exchange rates, foreign currency valuation |
-| *SAP S/4HANA Finance: The Reference Guide to What's New* | Salmon, Haesendonckx · SAP PRESS | The Universal Journal and its currencies; parallel accounting; UPA in the later edition |
-| *Controlling with SAP S/4HANA: Business User Guide* | Salmon, Walz · SAP PRESS | Controlling area currency, object currency, transfer prices and group valuation |
-| *Material Ledger in SAP S/4HANA* and *Actual Costing with the SAP Material Ledger* | Ovigele and others · SAP PRESS | ML currency types (OMX2/OMX3), parallel valuation, actual costing per currency |
-| *Group Reporting with SAP S/4HANA* | Ryan, Ulrich and others · SAP PRESS | Currency translation methods, exchange rate indicators, translation differences |
-| *SAP Foreign Currency Revaluation: FAS 52 and GAAP Requirements* | Finke · Wiley | The one book devoted entirely to valuation: methods, account determination, the accounting behind it |
-| *New General Ledger in SAP ERP Financials* | Bauer, Siebert · SAP PRESS | The new G/L's parallel currencies per ledger, the ancestor of FINSC_LEDGER |
-| *Core Data Services for ABAP* | Colle, Dentzer, Hrastnik · SAP PRESS | Amount and currency annotations, currency conversion in views |
-| Introductory ABAP texts (*Getting Started with ABAP*, *ABAP: An Introduction*, and their predecessors) | SAP PRESS | The CURRENCY addition on WRITE and the Dictionary reference field |
+| *General Ledger Accounting with SAP S/4HANA* | Seetharaju and others · SAP PRESS · 2023 | The most currency-focused finance title. Chapter 5 *Parallel Reporting*: 5.6 parallel ledger approach (leading ledger, non-leading ledger, ledger group, open item management by ledger group), 5.7 parallel accounting in asset accounting, Controlling and materials management, 5.8 *Customizing Ledgers and Currencies* (p. 192). Chapter 6 *Currencies* (p. 231): 6.1 currency definitions, 6.2 currencies in SAP General Ledger, in SAP ERP, in the S/4HANA Universal Journal, 6.2.3 currency types, 6.2.4 currency type as functional currency, 6.2.5 associated ledger settings |
+| *Financial Accounting with SAP S/4HANA: Business User Guide* | Tritschler, Walz, Rupp, Mucka · SAP PRESS · 2nd ed. 2023 | 1.3.2 extension ledger versus special ledger; 1.3.5 *Parallel Accounting and Currencies* (p. 33); 3.3.6 parallel accounting; 3.3.7 Universal Parallel Accounting; foreign currency valuation in the closing sections of the G/L (3.6.3), accounts payable (4.6.2) and accounts receivable (5.8.1) chapters; 6.2.6 chart of depreciation and ledger assignment |
+| *Configuring SAP S/4HANA Finance* | Jotev · SAP PRESS · 3rd ed. 2024 | 4.3 ledgers; 4.4 Universal Parallel Accounting; 4.6 *Currencies* (p. 104): 4.6.1 currency types, 4.6.2 exchange rate type, 4.6.3 exchange rates; 5.4.3 foreign currency valuation; 8.4.2 multiple valuation principles and 8.4.5 revaluation in fixed assets; 16.3.2 *Multiple Currencies and Valuations* in the Material Ledger; 17.2.4 multiple group currencies in group reporting |
+| *SAP S/4HANA Finance: The Reference Guide to What's New* | Salmon, Haesendonckx · SAP PRESS · 2019 | 2.2.2 *Multiple Currencies* (p. 106) in the chapter on local and global accounting; 11.1.2 compulsory use of the Material Ledger; 12.2.2 currencies in group reporting |
+| *SAP Foreign Currency Revaluation: FAS 52 and GAAP Requirements* | Finke · Wiley · 2006 | The one book devoted entirely to valuation: chapter 2 *SAP Revaluation Overview*, then the FAS 52 requirements, the methods and the configuration |
+| *SAP ERP Financial Accounting and Controlling: Configuration and Use Management* | Okungbowa · Apress · 2015 | Chapter 7 *Maintaining Currency Types and Currency Pairs* (the ECC configuration: OB22, OB07, OB08, OBBS) |
+| *New General Ledger in SAP ERP Financials* and its successor *The SAP General Ledger* | Bauer, Siebert · SAP PRESS | The new G/L's parallel currencies per ledger, the ancestor of FINSC_LEDGER (sections not verified) |
+
+### Controlling and the Material Ledger
+
+| Title | Author(s), publisher, edition | Currency chapters and sections |
+|---|---|---|
+| *Actual Costing with the SAP Material Ledger* | Reis · SAP PRESS · 2015 | 2.2.1 multiple currencies and 2.2.2 multiple valuations; 3.4.2 cost component split in controlling area currency; chapter 4 *Material Ledger Configuration and Startup*: 4.1 *Multiple Currencies Configuration* (activate valuation areas, assign currency types to the ML type, assign ML types to the valuation area), 4.4 reconciliation of the ML currencies; 5.1.2 and 5.1.7 exchange rate differences for open items (KDM) and from lower level (KDV); 5.3 exchange rate differences; 6.2 *External Procurement and Exchange Rate Variances* (the rate at PO, goods receipt and invoice receipt, account determination in foreign currency); chapter 12 *Transfer Prices and Multiple Valuation Approaches* (currency and valuation profile, parallel currencies, currency types in the ML); 14.1.4 group valuation |
+| *Product Cost Controlling with SAP S/4HANA* | Jordan and others · SAP PRESS · 2024 | 8.5.3 cost component split in controlling area currency; chapter 16 *Actual Costing*: 16.2.2 assign currency types to the ML type, 16.2.3 standard currency types, 16.2.4 currency and valuation profile; chapter 19 *Event-Based Product Costing*: 19.1 Universal Parallel Accounting, multiple valuation of cost of goods manufactured, activity and material prices in multiple ledgers, 19.4 group and profit center valuation |
+| *Controlling with SAP S/4HANA: Business User Guide* | Salmon, Walz · SAP PRESS · 2nd ed. 2025 | 1.2.7 the impact of Universal Parallel Accounting for Controlling; 3.3.1 ledger and 3.3.2 *Currencies* (p. 126); 7.3.2 parallel valuation in event-based revenue recognition; 10.3.2 assets under construction with UPA; 11.3 *Group and Profit Center Valuation with Universal Parallel Accounting* |
+| *Material Ledger in SAP S/4HANA: Functionality and Configuration* | Ovigele · SAP PRESS · 2nd ed. 2022 | Chapter 2 *Configuring Currency Types, Ledgers, and Valuation Views*: currency types for the general ledger and the Universal Journal, conversion settings per company code, the currency and valuation profile |
+| *Material Valuation and the Material Ledger in SAP S/4HANA* | King · Espresso Tutorials | Valuation in up to three currencies in parallel, with and without transfer pricing (sections not verified) |
+| *Profitability Analysis with SAP S/4HANA* | Schmalzing · SAP PRESS · 2nd ed. 2021 | Operating concern currency and the currencies of margin analysis (sections not verified) |
+
+### Group reporting and Universal Parallel Accounting
+
+| Title | Author(s), publisher, edition | Currency chapters and sections |
+|---|---|---|
+| *Group Reporting with SAP S/4HANA* | Ryan, Bala, Raghav, Mohammed · SAP PRESS · 2nd ed. 2024 | Chapter 5 *Currency Translation* (p. 243): what currency translation is, translation in S/4HANA, 5.2 configuring it (exchange rate types, exchange rate indicators, translation methods, method assignment per consolidation unit, FS item translation attributes), 5.3 translating reported currency and validating the run |
+| *First Steps in SAP S/4HANA Universal Parallel Accounting* | Salmon · Espresso Tutorials | Ledgers, accounting principles, fiscal year variants and the currencies under UPA (sections not verified) |
+| *Introducing Universal Parallel Accounting with SAP S/4HANA* | Chowdavarapu · SAP PRESS E-Bite | Asset, production and inventory accounting under UPA (sections not verified) |
+
+### ABAP and CDS
+
+| Title | Author(s), publisher, edition | Currency chapters and sections |
+|---|---|---|
+| *ABAP Development for SAP HANA* | Ahmed, Naik · SAP PRESS · 2021 | 7.4.6 *Currency Conversion* in calculation views; 8.4.4 *Conversion Functions* in CDS (unit and currency conversion); 7.1.6 semantics |
+| *Core Data Services for ABAP* | Colle, Dentzer, Hrastnik · SAP PRESS · 3rd ed. 2023 | Amount and currency annotations and the CURRENCY_CONVERSION function (sections not verified) |
+| *Complete ABAP* and the introductory ABAP texts | Bandari; O'Neill and others · SAP PRESS | The Dictionary chapter on CURR and CUKY with the reference field, and the CURRENCY addition on WRITE (sections not verified) |
 
 ## Blogs and community articles
 
