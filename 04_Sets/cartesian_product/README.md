@@ -117,7 +117,7 @@ That copy is the x-axis, and it is worth being precise about it. Is ℝ a subset
 From the root of your clone of this repository:
 
 ```bash
-python3 03_Sets/cartesian_product/examples/cartesian_product.py
+python3 04_Sets/cartesian_product/examples/cartesian_product.py
 ```
 
 ## See also

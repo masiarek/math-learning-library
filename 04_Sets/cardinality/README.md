@@ -253,7 +253,7 @@ Put the two counts together. The programs are countable and the functions are no
 From the root of your clone of this repository:
 
 ```bash
-python3 03_Sets/cardinality/examples/cardinality.py
+python3 04_Sets/cardinality/examples/cardinality.py
 ```
 
 ## See also

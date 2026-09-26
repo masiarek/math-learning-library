@@ -1,4 +1,4 @@
-# 03_Sets — what is this collection, exactly?
+# 04_Sets — what is this collection, exactly?
 
 **Level:** 101 · for anyone who has written a pair of coordinates
 

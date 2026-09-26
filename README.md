@@ -44,14 +44,14 @@ The second chapter is about sets so thin that they have zero length, area or vol
 | [The Cantor function](02_Measure_Zero/cantor_function/README.md) | The devil's staircase: continuous, flat almost everywhere, and still climbing from 0 to 1 |
 | [Probability zero](02_Measure_Zero/probability_zero/README.md) | Why probability zero is not impossible, and why on a computer it is |
 
-[**03_Sets/**](03_Sets/README.md) — *What is this collection, exactly?*
+[**04_Sets/**](04_Sets/README.md) — *What is this collection, exactly?*
 
 The third chapter is groundwork: the constructions every other page takes for granted, checked on real sets. It needs nothing from chapters 1 or 2.
 
 | Lesson | What it teaches |
 |---|---|
-| [The Cartesian product](03_Sets/cartesian_product/README.md) | What ℝ² is, why (2, 5) is not (5, 2), why A × B is not B × A, and why (1, 1) counts |
-| [Cardinality of sets](03_Sets/cardinality/README.md) | What \|A\| means, why size is defined by matching, and where it shows up in types, databases and computability |
+| [The Cartesian product](04_Sets/cartesian_product/README.md) | What ℝ² is, why (2, 5) is not (5, 2), why A × B is not B × A, and why (1, 1) counts |
+| [Cardinality of sets](04_Sets/cardinality/README.md) | What \|A\| means, why size is defined by matching, and where it shows up in types, databases and computability |
 
 ## Why a math library and not a Python one
 
