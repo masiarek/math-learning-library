@@ -8,6 +8,18 @@
 
 ℝ² = ℝ × ℝ = {(x, y) | x, y ∈ ℝ}. Read it slowly: the set of all objects of the form (x, y), where x is a real number and y is a real number. That is the coordinate plane, and every point in it is one ordered pair.
 
+Symbol by symbol:
+
+| Piece | Say it | What it means |
+|---|---|---|
+| ℝ | "R", or "the reals" | the set of all real numbers, such as −5, 0, 1/3, √2 and π |
+| ℝ² | "R two" | a short name, defined by the rest of the line; the ² counts copies of ℝ, as 3² = 3 × 3 counts copies of 3 |
+| = | "is" | here, "is by definition": the line gives one set three names |
+| × | "cross" | the Cartesian product, defined just below |
+| { … \| … } | "the set of all … such that …" | **set-builder notation**: the shape of a member left of the bar, the condition it must meet right of it; some books write a colon instead of the bar |
+| (x, y) | "the pair x, y" | an ordered pair: a first entry and a second entry, each in its own place |
+| x, y ∈ ℝ | "x and y are in ℝ" | ∈ means "is a member of", and the comma is short for "x ∈ ℝ and y ∈ ℝ", each chosen freely, so x = y is allowed |
+
 Replace ℝ with any two sets and the same recipe defines the **Cartesian product**:
 
 > A × B = {(a, b) | a ∈ A, b ∈ B}

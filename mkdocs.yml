@@ -34,8 +34,12 @@ use_directory_urls: false
 # The leading slash anchors the pattern to the repo root. Without it, .gitignore
 # semantics would match README.md at ANY depth and silently delete every folder's
 # section landing page from the site.
+#
+# CLAUDE.md holds instructions for coding agents, not reader content, so it is
+# left off the site entirely.
 exclude_docs: |
   /README.md
+  /CLAUDE.md
   __pycache__/
 
 # Built and linkable, but kept out of the sidebar: house conventions are for
