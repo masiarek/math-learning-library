@@ -12,6 +12,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Cantor set** — what survives when the open middle third of [0, 1] is deleted, then the middle third of every piece left, forever. Uncountably many points and total length 0; exactly the numbers that can be written in base 3 with only 0s and 2s. See [the Cantor set](02_Measure_Zero/cantor_set/README.md).
 
+**Cartesian product** — A × B, the set of every ordered pair (a, b) with a ∈ A and b ∈ B. It has |A| · |B| members, includes pairs with a repeated entry, and is not commutative: A × B and B × A share no member unless A = B. ℝ × ℝ = ℝ² is the coordinate plane. See [the Cartesian product](03_Sets/cartesian_product/README.md).
+
 **Catastrophic cancellation** — the loss of most significant figures when two nearly equal numbers are subtracted. It does not create error; it removes the leading digits that were hiding error already present. See [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md).
 
 **Componentwise relative error** — for vectors, the largest of the individual relative errors, max |xᵢ − x̂ᵢ| / |xᵢ|. A normwise relative error ‖x − x̂‖ / ‖x‖ can report four correct digits while a small component is 10% wrong; this measure cannot. See [relative error and correct digits](01_Precision/relative_error/README.md).
@@ -39,6 +41,8 @@ Terms used across the library, with the page that explains each in full.
 **Measure zero** — a set has measure zero if, for every ε > 0, it fits inside a list of intervals whose lengths add up to at most ε. With squares or cubes in place of intervals, the same definition gives zero area or zero volume. Also called a *null set*. See [what measure zero means](02_Measure_Zero/what_measure_zero_means/README.md).
 
 **Nowhere dense** — for a closed set on the line, containing no interval at all: there are gaps everywhere. Both Cantor sets are nowhere dense, but only the standard one has measure zero. See [the fat Cantor set](02_Measure_Zero/fat_cantor_set/README.md).
+
+**Ordered pair** — (a, b), an object that remembers which entry is first: (a, b) = (c, d) exactly when a = c and b = d. Unlike the set {a, b}, it distinguishes (2, 5) from (5, 2) and does not collapse (3, 3). See [the Cartesian product](03_Sets/cartesian_product/README.md).
 
 **Quadrature** — combining independent uncertainties as √(a² + b²) rather than a + b. Linear addition is the worst case and is correct only for perfectly correlated errors. See [uncertainty propagation](01_Precision/uncertainty_propagation/README.md).
 

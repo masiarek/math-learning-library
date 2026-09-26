@@ -8,6 +8,8 @@ What exists, and what is deliberately not written yet. A topic listed here has *
 
 **[02_Measure_Zero](02_Measure_Zero/README.md)** — how infinitely many points can take up no room. Six lessons: [what measure zero means](02_Measure_Zero/what_measure_zero_means/README.md), [countable sets](02_Measure_Zero/countable_sets/README.md), [the Cantor set](02_Measure_Zero/cantor_set/README.md), [the fat Cantor set](02_Measure_Zero/fat_cantor_set/README.md), [the Cantor function](02_Measure_Zero/cantor_function/README.md), [probability zero](02_Measure_Zero/probability_zero/README.md).
 
+**[03_Sets](03_Sets/README.md)** — what a collection is, exactly. One lesson so far: [the Cartesian product](03_Sets/cartesian_product/README.md).
+
 ## The rest of the precision chapter
 
 The six lessons close one argument, but they leave three doors open:
@@ -22,6 +24,13 @@ The six lessons close their argument, and leave two doors open:
 
 - **Two meanings of small** — measure zero is one way to call a set negligible; *meagre*, built from nowhere dense sets, is another. The [fat Cantor set](02_Measure_Zero/fat_cantor_set/README.md) is where they first disagree, and they can disagree completely: the line splits into a meagre set and a set of measure zero. The page would need a program that makes that visible, which is the hard part.
 - **Sets with no length at all** — the Vitali set, which cannot be given a length consistently, and so the reason measure theory has to decide which sets get one. Measure zero sidesteps the question, since it only ever measures intervals. But the Vitali set needs the axiom of choice and no program can build it, so by this library's own rule it may never get a page.
+
+## The rest of the sets chapter
+
+One lesson is a start, not an argument. The natural next steps, each with an obvious program:
+
+- **Relations and functions** — a function is a subset of A × B with one pair per first entry. The product page builds the pairs; this one would pick out which subsets are functions, and check injective and surjective on finite sets by brute force.
+- **Power sets** — every subset of a set, and why there are 2ⁿ of them. The counting argument is the same grid idea as |A × B| = |A| · |B|, one dimension per member.
 
 ## Candidate chapters
 
