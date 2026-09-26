@@ -6,6 +6,7 @@ Instructions for Claude Code sessions working in this repository.
 
 - **Always push.** After every commit, push the branch right away with `git push -u origin <branch>`. Never leave a commit only in the local clone: web sessions run in temporary containers, and an unpushed commit is lost when the container goes away.
 - If a push is refused, say so at once and quote the error. Don't carry on as if it worked.
+- **Always publish.** The site is built from `master` only, so work on a branch is invisible to readers. When a piece of work is complete and pushed, open a pull request against `master` in the same session, and merge it: the owner has said they do not want to check or click anything. Report the pull request URL and the page URL on the site.
 
 ## Conventions
 
