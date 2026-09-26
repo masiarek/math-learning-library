@@ -2,13 +2,14 @@
 
 **Level:** 101 → 201 · for anyone who has multiplied out (a + b)(c + d)
 
-The usual introduction to complex numbers asks you to accept a number whose square is −1, and then to trust that arithmetic with it still works. This chapter takes the other road, the one Hamilton took in 1835: a complex number **is** a pair of real numbers, and multiplication is a rule on pairs. The rule is written down, nothing is assumed, and the number whose square is −1 comes out at the end as a consequence rather than going in at the start as an axiom. The second lesson says what the rule *does*: it scales and turns the plane, so that i² = −1 is nothing more than a quarter turn done twice. The third says why the rule is this one: the obvious entry-by-entry product lets two nonzero pairs multiply to zero, and only the complex rule can always be undone.
+The usual introduction to complex numbers asks you to accept a number whose square is −1, and then to trust that arithmetic with it still works. This chapter takes the other road, the one Hamilton took in 1835: a complex number **is** a pair of real numbers, and multiplication is a rule on pairs. The rule is written down, nothing is assumed, and the number whose square is −1 comes out at the end as a consequence rather than going in at the start as an axiom. The second lesson says what the rule *does*: it scales and turns the plane, so that i² = −1 is nothing more than a quarter turn done twice. The third says why the rule is this one: the obvious entry-by-entry product lets two nonzero pairs multiply to zero, and only the complex rule can always be undone. The fourth is where that picture pays off: multiply a unit point by itself and it walks around the circle in equal steps, so the equation zⁿ = 1 has exactly n solutions, the n-th roots of unity, and the program finds the twelve of them on a clock face with √3 carried exactly.
 
 | # | Lesson | The question it answers |
 |---|---|---|
 | 1 | [Multiplication as pairs](multiplication_as_pairs/README.md) | What is complex multiplication, if not "multiply out and replace i² by −1"? |
 | 2 | [Multiplication rotates](multiplication_rotates/README.md) | Why should two positive things multiply to something negative? |
 | 3 | [Multiplication can be undone](multiplication_can_be_undone/README.md) | Why this rule, and not the obvious entry-by-entry one? |
+| 4 | [Roots of unity](roots_of_unity/README.md) | Which points come back to (1, 0) when multiplied by themselves, and how many solutions does zⁿ = 1 have? |
 
 ## Where this is taught
 
@@ -30,8 +31,22 @@ For lesson 2, multiplication as rotation:
 
 For lesson 3, division and ℂ*: Titu Andreescu and Dorin Andrica, *Complex Numbers from A to … Z* (Birkhäuser, 2014), §1.1.1, which names ℂ* alongside the pair definition; its two worked examples are the lesson's first kata.
 
-Textbooks, roughly in order of difficulty: Churchill and Brown, *Complex Variables and Applications*, chapter 1, which defines complex numbers as ordered pairs and is the most common undergraduate choice; Saff and Snider, *Fundamentals of Complex Analysis*; Ahlfors, *Complex Analysis*; Stein and Shakarchi, *Complex Analysis*; and Needham above, which is not a first course but is the one for the geometry.
+For lesson 4, de Moivre's formula and the roots of unity:
+
+- [Complex Number Primer: powers and roots, Paul's Online Notes ↗](https://tutorial.math.lamar.edu/extras/complexprimer/roots.aspx) — de Moivre's formula and the n-th roots, computed with angles the way a course does it
+- [Root of unity ↗](https://en.wikipedia.org/wiki/Root_of_unity) — Wikipedia
+
+Easier books, to read before any of the textbooks below. None of them needs calculus. They need the school algebra that lesson 1 uses, and some trigonometry: the unit circle, and the angle-addition formulas for cos(A + B) and sin(A + B), which lesson 2 shows are the multiplication rule in disguise. Roughly easiest first:
+
+- [Imagining Numbers, Barry Mazur ↗](https://books.google.com/books/about/Imagining_Numbers.html?id=nFOD5DxYJu8C) — the gentlest, written for readers with no mathematical background; about how anyone comes to imagine a number like √−15 at all, with more ideas than exercises
+- [An Imaginary Tale: The Story of √−1, Paul Nahin ↗](https://press.princeton.edu/books/paperback/9780691169248/an-imaginary-tale) — the history, with the mathematics done properly; the early chapters, on cubic equations, need only algebra, and calculus arrives later
+- [Complex Numbers and Geometry, Liang-shin Hahn ↗](https://bookstore.ams.org/text-52) — short and self-contained, assuming nothing about complex numbers, and proving theorems of plane geometry with complex multiplication; the one to pick if you read only one
+- [Precalculus, Art of Problem Solving ↗](https://artofproblemsolving.com/store/book/precalculus) — chapters 6–8 are complex numbers, then complex numbers with trigonometry, then with geometry; the book for practice, with problems from routine to olympiad
+- [Complex Numbers from A to …Z, Titu Andreescu and Dorin Andrica ↗](https://books.google.com/books/about/Complex_Numbers_from_A_to_Z.html?id=vbM5rLOu_WUC) — a step up: competition problems solved with complex numbers
+- [Complex Numbers in Geometry, I. M. Yaglom ↗](https://books.google.com/books/about/Complex_Numbers_in_Geometry.html?id=LL_iBQAAQBAJ) — ordinary complex numbers alongside dual and double numbers, the siblings on the [roadmap](../ROADMAP.md); the most demanding of these
+
+Textbooks for the course itself, which needs calculus, roughly in order of difficulty: Churchill and Brown, *Complex Variables and Applications*, chapter 1, which defines complex numbers as ordered pairs and is the most common undergraduate choice; Beck, Marchesi, Pixton and Sabalka, [A First Course in Complex Analysis ↗](https://matthbeck.github.io/complex.html), free and at about the same level; Saff and Snider, *Fundamentals of Complex Analysis*; Ahlfors, *Complex Analysis*; Stein and Shakarchi, *Complex Analysis*; and Needham above, which is not a first course but is the one for the geometry.
 
 ## A note on the code
 
-The examples compute with exact fractions (`fractions.Fraction`), never with Python's built-in `complex` type, except in one section that compares the two. The point is that the rule is nothing but real arithmetic, and a program that quietly used `complex` would hide exactly the thing the page is trying to show.
+The examples compute with exact fractions (`fractions.Fraction`), never with Python's built-in `complex` type, except in one section each of lessons 1 and 4 that compares the two. The point is that the rule is nothing but real arithmetic, and a program that quietly used `complex` would hide exactly the thing the page is trying to show. Lesson 4 needs √3, and carries it as a symbol with the rule √3 · √3 = 3 rather than as a float, so that h¹² = (1, 0) is an equality and not an approximation.

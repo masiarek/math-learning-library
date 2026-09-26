@@ -53,6 +53,7 @@ The third chapter builds the complex numbers the way Hamilton did: a complex num
 | [Multiplication as pairs](03_Complex_Numbers/multiplication_as_pairs/README.md) | The rule, why (0, 1) squares to (−1, 0), why x + yi is the same thing, and where the same rule appears with no complex numbers in sight |
 | [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) | Multiplying scales by a length and turns by an angle, so i² = −1 is two quarter turns making a half turn |
 | [Multiplication can be undone](03_Complex_Numbers/multiplication_can_be_undone/README.md) | Why pairs are not multiplied entry by entry: zero divisors, and ℂ* as the pairs you can divide by |
+| [Roots of unity](03_Complex_Numbers/roots_of_unity/README.md) | Multiplying a unit point by itself walks around the circle in equal steps, so zⁿ = 1 has exactly n solutions: the twelve marks of a clock face, with √3 carried exactly |
 
 [**04_Sets/**](04_Sets/README.md) — *What is this collection, exactly?*
 
