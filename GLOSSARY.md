@@ -62,6 +62,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Scientific notation** — writing a value as mantissa × 10ⁿ, so the mantissa carries the precision claim and the exponent carries the magnitude. The only unambiguous way to write trailing zeros. See [significant figures](01_Precision/significant_figures/README.md).
 
+**Set-builder notation** — {(x, y) | x, y ∈ ℝ}, read "the set of all (x, y) such that x and y are in ℝ": the shape of a member left of the bar, the condition it must meet right of it. Python's set comprehension `{(x, y) for x in S for y in S}` is the same notation, runnable. See [the Cartesian product](04_Sets/cartesian_product/README.md).
+
 **Significant figures** — the digits of a measurement that carry information about the instrument rather than about place value. A claim about knowledge, not a formatting choice. See [significant figures](01_Precision/significant_figures/README.md).
 
 **Stability** — whether a particular *algorithm* preserves the accuracy a well-conditioned problem allows. The textbook quadratic formula is unstable for one of its two roots; a conjugate rearrangement fixes it for free. See [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md).
@@ -77,3 +79,5 @@ Terms used across the library, with the page that explains each in full.
 **Uncountable** — too big to be written as a list. [0, 1] is uncountable, and so is the Cantor set, which still has measure zero. See [the Cantor set](02_Measure_Zero/cantor_set/README.md).
 
 **Unit roundoff** — u = 2⁻⁵³ ≈ 1.1 × 10⁻¹⁶ for binary64: the largest relative error that rounding a real number to the nearest float can make, and the bound on δ in the standard model. See [relative error and correct digits](01_Precision/relative_error/README.md) and [machine numbers](01_Precision/machine_numbers/README.md).
+
+**Zero divisor** — a nonzero number that multiplies some other nonzero number to give zero. Multiplying pairs entry by entry creates them, since (1, 0)(0, 1) = (0, 0), and a zero divisor can never be divided by. Complex multiplication has none: the product's x² + y² is the product of the two factors' x² + y², which is zero only when a factor is (0, 0). See [multiplication can be undone](03_Complex_Numbers/multiplication_can_be_undone/README.md).
