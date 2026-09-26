@@ -8,7 +8,7 @@ What exists, and what is deliberately not written yet. A topic listed here has *
 
 **[02_Measure_Zero](02_Measure_Zero/README.md)** — how infinitely many points can take up no room. Six lessons: [what measure zero means](02_Measure_Zero/what_measure_zero_means/README.md), [countable sets](02_Measure_Zero/countable_sets/README.md), [the Cantor set](02_Measure_Zero/cantor_set/README.md), [the fat Cantor set](02_Measure_Zero/fat_cantor_set/README.md), [the Cantor function](02_Measure_Zero/cantor_function/README.md), [probability zero](02_Measure_Zero/probability_zero/README.md).
 
-**[03_Complex_Numbers](03_Complex_Numbers/README.md)** — what a complex number is, before anyone says √−1. Two lessons: [multiplication as pairs](03_Complex_Numbers/multiplication_as_pairs/README.md), [multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md).
+**[03_Complex_Numbers](03_Complex_Numbers/README.md)** — what a complex number is, before anyone says √−1. Three lessons: [multiplication as pairs](03_Complex_Numbers/multiplication_as_pairs/README.md), [multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md), [roots of unity](03_Complex_Numbers/roots_of_unity/README.md).
 **[04_Sets](04_Sets/README.md)** — what a collection is, exactly. Two lessons so far: [the Cartesian product](04_Sets/cartesian_product/README.md), [cardinality of sets](04_Sets/cardinality/README.md).
 
 ## The rest of the precision chapter
@@ -28,10 +28,10 @@ The six lessons close their argument, and leave two doors open:
 
 ## The rest of the complex-numbers chapter
 
-Two lessons define the object and say what it does. The doors they leave open:
+Three lessons define the object, say what it does, and cash the geometry in for the roots of unity. The doors they leave open:
 
-- **Polar form proper** — [multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) shows that lengths multiply and angles add without ever computing an angle. The next step is to write z as a length and an angle outright, r(cos θ, sin θ), and get de Moivre's formula and the n-th roots of unity, which is where the picture pays off. The exactness problem is real: most angles are not exact, so the page would need roots of unity that are, such as the 4th and 6th.
-- **The siblings** — split-complex numbers (change the minus to a plus), dual numbers (drop the y₁y₂ term, and get automatic differentiation for free), and quaternions (do the pair construction twice). The same program shape as the first lesson, with a different rule each time, and a demonstration of which laws each one loses.
+- **The angle itself** — three lessons, and not one angle computed. [Roots of unity](03_Complex_Numbers/roots_of_unity/README.md) got de Moivre's formula and the twelve marks of a clock without one, by carrying √3 as a symbol. Writing z = r(cos θ, sin θ) with θ as a *number* means `atan2`, a float, and every warning in [01_Precision](01_Precision/README.md); and Euler's formula e^{iθ} = cos θ + i sin θ, the reason the polar form is usually written re^{iθ}, needs the power series of the exponential, which is calculus. The chapter's exact-fractions rule has nothing to check there, so a page would need a different angle on the angle.
+- **The siblings** — split-complex numbers (change the minus to a plus), dual numbers (drop the y₁y₂ term, and get automatic differentiation for free), and quaternions (do the pair construction twice). [Roots of unity](03_Complex_Numbers/roots_of_unity/README.md) already uses one more member of the family, the rule with +3 in place of −1, which is how it carries a + b√3 exactly. The same program shape as the first lesson, with a different rule each time, and a demonstration of which laws each one loses.
 - **Complex floats** — Python's `complex` is two doubles, so every warning in [01_Precision](01_Precision/README.md) applies twice over, and the naive product formula overflows on inputs that the true product does not. Connects the chapter back to chapter 1.
 ## The rest of the sets chapter
 

@@ -1,0 +1,115 @@
+1. THE POWERS OF A UNIT POINT STAY ON THE CIRCLE
+   z = (3/5, 4/5), the 3-4-5 point, sits at some angle A that is never
+   computed. Multiply it by itself:
+     z^0 = (1, 0)                           |z^0|^2 = 1
+     z^1 = (3/5, 4/5)                       |z^1|^2 = 1
+     z^2 = (-7/25, 24/25)                   |z^2|^2 = 1
+     z^3 = (-117/125, 44/125)               |z^3|^2 = 1
+     z^4 = (-527/625, -336/625)             |z^4|^2 = 1
+     z^5 = (-237/3125, -3116/3125)          |z^5|^2 = 1
+     z^6 = (11753/15625, -10296/15625)      |z^6|^2 = 1
+   Angles add, so z^n sits at angle nA: de Moivre's formula,
+   (cos A, sin A)^n = (cos nA, sin nA). For n = 2 and 3 the right-hand
+   side has a formula in cos A = 3/5 and sin A = 4/5, checked exactly:
+     (2 cos^2 A - 1, 2 sin A cos A)             = (-7/25, 24/25)       = z^2: True
+     (4 cos^3 A - 3 cos A, 3 sin A - 4 sin^3 A) = (-117/125, 44/125)   = z^3: True
+   Clear the denominators and every power is a Pythagorean triple:
+     z^2:  7^2 + 24^2 = 625 = 25^2
+     z^3:  117^2 + 44^2 = 15625 = 125^2
+     z^4:  527^2 + 336^2 = 390625 = 625^2
+
+2. THIS POINT NEVER COMES BACK
+   In lowest terms the denominators of z^n are exactly 5^n:
+     n =  1   5^1  = 5
+     n =  6   5^6  = 15625
+     n = 12   5^12 = 244140625
+     n = 24   5^24 = 59604644775390625
+   Both coordinates have denominator 5^n for every n from 1 to 24: True.
+   A fraction with denominator 5^n is not 1, so z^n is never (1, 0). The
+   3-4-5 point turns by A at every step and never completes a whole
+   number of turns: A is not 1/12 of a turn, or 5/17, or any fraction.
+
+3. CARRYING sqrt(3) EXACTLY
+   The point at 1/12 of a turn is (cos 30, sin 30) = (sqrt(3)/2, 1/2),
+   and sqrt(3) is not a fraction. So the program keeps numbers of the
+   form a + b sqrt(3), a and b fractions, and multiplies them by
+     (a + b sqrt(3)) . (c + d sqrt(3)) = (ac + 3bd) + (ad + bc) sqrt(3)
+     sqrt(3) . sqrt(3)               = 3
+     (1 + sqrt(3)) . (1 - sqrt(3))   = -2
+     (1/2 + sqrt(3)/2)^2             = 1 + sqrt(3)/2
+     (sqrt(3)/2)^2 + (1/2)^2         = 1     so (sqrt(3)/2, 1/2) is a unit point
+   Nothing is rounded. The pair rule mul() is the same four lines as in
+   the previous lessons: it only asks that coordinates add, subtract and
+   multiply, and these do.
+
+4. THE TWELVE MARKS OF A CLOCK FACE
+   h = (sqrt(3)/2, 1/2), one twelfth of a turn, multiplied by itself:
+     k =  0   h^0  = (1, 0)
+     k =  1   h^1  = (sqrt(3)/2, 1/2)
+     k =  2   h^2  = (1/2, sqrt(3)/2)
+     k =  3   h^3  = (0, 1)
+     k =  4   h^4  = (-1/2, sqrt(3)/2)
+     k =  5   h^5  = (-sqrt(3)/2, 1/2)
+     k =  6   h^6  = (-1, 0)
+     k =  7   h^7  = (-sqrt(3)/2, -1/2)
+     k =  8   h^8  = (-1/2, -sqrt(3)/2)
+     k =  9   h^9  = (0, -1)
+     k = 10   h^10 = (1/2, -sqrt(3)/2)
+     k = 11   h^11 = (sqrt(3)/2, -1/2)
+     k = 12   h^12 = (1, 0)                     back at the start, exactly
+   Every |h^k|^2 is 1: True. Twelve steps of a twelfth of
+   a turn is one turn, so h^12 = 1: h is a 12th root of unity. The four
+   compass points are among the marks, at k = 0, 3, 6 and 9.
+
+5. z^n = 1 HAS EXACTLY n SOLUTIONS
+   Each mark raised to the powers 2, 3, 4, 6 and 12. A 1 means the result
+   is (1, 0); a dot means it is not.
+      k   mark                    z^2  z^3  z^4  z^6 z^12   first return
+      0   (1, 0)                    1    1    1    1    1        1
+      1   (sqrt(3)/2, 1/2)          .    .    .    .    1       12
+      2   (1/2, sqrt(3)/2)          .    .    .    1    1        6
+      3   (0, 1)                    .    .    1    .    1        4
+      4   (-1/2, sqrt(3)/2)         .    1    .    1    1        3
+      5   (-sqrt(3)/2, 1/2)         .    .    .    .    1       12
+      6   (-1, 0)                   1    .    1    1    1        2
+      7   (-sqrt(3)/2, -1/2)        .    .    .    .    1       12
+      8   (-1/2, -sqrt(3)/2)        .    1    .    1    1        3
+      9   (0, -1)                   .    .    1    .    1        4
+     10   (1/2, -sqrt(3)/2)         .    .    .    1    1        6
+     11   (sqrt(3)/2, -1/2)         .    .    .    .    1       12
+     solutions of z^n = 1:          2    3    4    6   12
+   The solutions of z^n = 1 are the marks k that are multiples of 12/n:
+   n of them, evenly spaced. A degree-n equation has at most n solutions
+   in a field, so these are all of them. The marks that need all twelve
+   steps, k = 1, 5, 7 and 11, are the primitive 12th roots of unity, and
+   they are exactly the k with no factor in common with 12.
+
+6. THE CUBE ROOTS OF UNITY, AND WHERE sqrt(-3) LIVES
+   Mark 4 is w = (-1/2, sqrt(3)/2). Its powers:
+     w^1 = (-1/2, sqrt(3)/2)
+     w^2 = (-1/2, -sqrt(3)/2)       which is mark 8: True
+     w^3 = (1, 0)
+   z^3 - 1 = (z - 1)(z^2 + z + 1), so a cube root of 1 other than 1 must
+   solve z^2 + z + 1 = 0:
+     w^2 + w + 1 = (0, 0)
+   The quadratic formula says z = (-1 +/- sqrt(-3)) / 2. In pairs, sqrt(-3)
+   is the point (0, sqrt(3)):
+     (0, sqrt(3)) . (0, sqrt(3))           = (-3, 0)
+     ((-1, 0) + (0, sqrt(3))) . (1/2, 0)   = (-1/2, sqrt(3)/2)    which is w: True
+   And the roots of unity always add up to nothing:
+     the 3 cube roots,   marks 0, 4, 8:     sum = (0, 0)
+     the 4 fourth roots, marks 0, 3, 6, 9:  sum = (0, 0)
+     all 12 marks:                          sum = (0, 0)
+
+7. THE SAME THING IN FLOATS
+   Build the same points from math.sqrt(3) / 2, the nearest double to
+   sqrt(3)/2, and multiply with the same mul():
+     w         = (-0.5, 0.8660254037844386)
+     w . w . w = (0.9999999999999998, 1.1102230246251565e-16)
+                 off (1, 0) by (-2.220446049250313e-16, 1.1102230246251565e-16)
+     h         = (0.8660254037844386, 0.5)
+     h^12      = (0.9999999999999993, 3.3306690738754696e-16)
+                 off (1, 0) by (-6.661338147750939e-16, 3.3306690738754696e-16)
+   Neither is (1, 0). The rule is exact; the coordinates were rounded
+   once, at the start, and every multiplication carried the error along.
+   Exactly, w^3 = (1, 0) and h^12 = (1, 0), as sections 4 and 6 found.

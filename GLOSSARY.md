@@ -32,6 +32,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Countable** — able to be written as a list — a first, a second, a third — with every member somewhere in it; equivalently, of cardinality ℵ₀ or finite. The whole numbers and the rationals are countable; [0, 1] is not. Every countable set has measure zero. See [countable sets](02_Measure_Zero/countable_sets/README.md) and [cardinality](04_Sets/cardinality/README.md).
 
+**De Moivre's formula** — (cos A, sin A)ⁿ = (cos nA, sin nA): the n-th power of a unit point is the unit point at n times the angle. It is "angles add" applied n − 1 times, and its n = 2 and n = 3 cases are the double- and triple-angle formulas. See [roots of unity](03_Complex_Numbers/roots_of_unity/README.md).
+
 **Diagonal argument** — Cantor's proof that the infinite 0/1 sequences cannot be listed: flip the r-th bit of the r-th row and the result is on no row. It makes ℝ uncountable, and makes the functions from ℕ to {0, 1} outnumber the programs. See [cardinality](04_Sets/cardinality/README.md).
 
 **Dense** — found inside every interval, however short. The rationals are dense in the line and still have measure zero. See [countable sets](02_Measure_Zero/countable_sets/README.md).
@@ -55,6 +57,8 @@ Terms used across the library, with the page that explains each in full.
 **Quadrature** — combining independent uncertainties as √(a² + b²) rather than a + b. Linear addition is the worst case and is correct only for perfectly correlated errors. See [uncertainty propagation](01_Precision/uncertainty_propagation/README.md).
 
 **Relative error** — |x − x̂| / |x|, the error as a fraction of the true value (`0.81%`); equivalently |ρ| where x̂ = x(1 + ρ). Undefined at x = 0, unchanged by a change of units, and the measure numerical analysis reports in place of a count of correct digits. What `×` and `÷` propagate, and the reason their rule counts significant figures. Defined in [relative error and correct digits](01_Precision/relative_error/README.md); propagated in [uncertainty propagation](01_Precision/uncertainty_propagation/README.md).
+
+**Root of unity** — a solution of zⁿ = 1; equivalently, a unit point that is back at (1, 0) after n multiplications by itself. There are exactly n of them, spaced evenly around the unit circle, and the twelfth roots are the marks of a clock face. A *primitive* n-th root needs all n steps to return, and its powers visit all n. See [roots of unity](03_Complex_Numbers/roots_of_unity/README.md).
 
 **Rounding** — the mechanical operation of cutting a number at some place. The *action*; significant figures are the argument for where the action must stop. See [significant figures](01_Precision/significant_figures/README.md).
 
