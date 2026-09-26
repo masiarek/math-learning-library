@@ -34,18 +34,33 @@ For a finite set that is the whole story, and "cardinality" is a long word for "
    |{-4, 4}|     = 2           cardinality of a two-member set
    |{1, 1, 1}|   = 1           a set does not count repeats
 
-3. THE PRODUCT RULE  |A x B| = |A| . |B|
+3. THE PRODUCT RULE  |A x B| = |A| . |B|,  READ AS TYPES
    |A| = 4, |B| = 7, |A x B| = 28 = 4 x 7
-   Same rule, read as types: a pair type has as many values as the
-   product of its parts. Some sizes every programmer already knows:
-     bool                        2
-     uint8                     256
-     uint16                 65,536
-     (bool, uint8)             512   product type: 2 x 256
-     (uint8, uint8)         65,536   product type: 256 x 256 = uint16
-     bool | uint8              258   sum type (tagged union): 2 + 256
-     Optional[uint8]           257   None | uint8: 1 + 256
-     uint8 -> bool       1.158e+77   function type: 2^256 tables
+   A type is a set of values, so it has a cardinality, and the type
+   constructors follow the set rules. Build each one and count it:
+     type             built as                     count   rule
+     void             no values                        0   0
+     unit / None      one value                        1   1
+     bool             {False, True}                    2   2
+     u2               {0, 1, 2, 3}                     4   2^2
+     (bool, u2)       every pair                       8   2 x 4    product type
+     bool | u2        tagged L or R                    6   2 + 4    sum type
+     Optional[u2]     u2 or None                       5   4 + 1    sum with unit
+     u2 -> bool       every truth table               16   2^4      function type
+   Sizes a programmer already knows come from the same rules:
+     uint8                         256   2^8
+     (uint8, uint8)             65,536   256 x 256, the same count as uint16 = 65,536
+     (bool, uint8)                 512   2 x 256
+     bool | uint8                  258   2 + 256
+     Optional[uint8]               257   1 + 256: one more than uint8, and a
+                                        uint8 cannot hold it, which is why -1
+                                        as 'no value' is a bug waiting to happen
+     uint8 -> bool           1.158e+77   2^256
+   The algebra of sets is the algebra of types. Distributivity, checked:
+     |(bool | u2) x bool| = 12 = |bool x bool| + |u2 x bool| = 4 + 8 = 12
+   And it is why an exhaustive match on (bool, u2) needs 8 arms, a
+   match on bool | u2 needs 6, and a fuzzer that tries every
+   (uint8, uint8) input has exactly 65,536 cases to run.
 
 4. CARDINALITY OF A COLUMN
    a table of 12 rows:   name   country   role
@@ -104,11 +119,51 @@ For a finite set that is the whole story, and "cardinality" is a long word for "
    A program is a finite string over a finite alphabet. Those can be
    listed, shortest first, alphabetically within a length:
      a  b  aa  ab  ba  bb  aaa  aab  aba  abb  baa  bab  bba  bbb  ...
-   So |programs| = |N|. A function from N to {0, 1} is an infinite
-   0/1 sequence, and section 7 showed those cannot be listed. There
-   are more such functions than there are programs, so some of them
-   have no program at all. That is the cardinality argument for the
-   existence of uncomputable functions, and it needs no example.
+   over a 2-letter alphabet there are 2^L strings of length L, so
+   every string has a finite position in the list, and |programs| = |N|.
+   (A real alphabet has 128 or 256 letters, which changes the count
+   per length and nothing else.)
+
+   A function from N to {0, 1} is an infinite 0/1 sequence, and section
+   7 showed those cannot be listed. The same diagonal works for N -> N:
+   given any list of functions g_0, g_1, g_2, ..., define
+     d(n) = g_n(n) + 1
+     g_0..g_5 at their own index:  [0, 2, 4, 7, 1, 95]
+     d at those points:            [1, 3, 5, 8, 2, 96]
+     d differs from every g_n at n: True
+   d is a perfectly good function from N to N and it is on no list,
+   so |N -> N| > |N| = |programs|. Some functions have no program.
+
+   How many is 'some'? Every program computes at most one function,
+   so the computable functions are at most countable. The functions
+   N -> {0, 1} match the subsets of N, and Cantor's theorem says
+   |P(N)| > |N|. Almost every function, in the cardinality sense, is
+   uncomputable; the ones we can compute are the rare exceptions.
+   This argument names no specific function. The halting problem is
+   the famous named example, but counting gets there first.
+
+9. COMBINATORICS: A SEARCH SPACE IS THE CARDINALITY OF A SET
+   subsets of {w, x, y, z}: 16 = 2^4
+     {}  {w}  {x}  {y}  {z}  {w,x}  {w,y}  {w,z}  {x,y}  {x,z}  {y,z}  {w,x,y}  {w,x,z}  {w,y,z}  {x,y,z}  {w,x,y,z}
+   (each item is in or out: a 4-fold product of {in, out}, so 2 x 2 x 2 x 2)
+
+       n     subsets 2^n   edges n(n-1)/2            orderings n!
+       4              16                6               2.400e+01
+      10           1,024               45               3.629e+06
+      20       1,048,576              190               2.433e+18
+      30   1,073,741,824              435               2.653e+32
+      60       1.153e+18            1,770               8.321e+81
+   The rows n <= 10 were counted by enumeration and matched the formula;
+   the rest are the formula alone, because enumerating 2^60 subsets is
+   the point: a brute-force search visits every member of a set, and
+   the set's cardinality is the running time. 2^n and n! are the
+   cardinalities that make a problem 'exponential'. An algorithm that
+   beats brute force is one that decides without visiting every member.
+
+   Two more counts that are the same rule:
+     edges of the complete graph on 5 nodes:   10 = C(5, 2)
+     possible graphs on 5 nodes:            1,024 = 2^10   (each edge in or out)
+     length-4 passwords over 10 digits:        10,000 = 10^4   (a 4-fold product)
 ```
 <!-- /output -->
 
@@ -132,25 +187,66 @@ Section 3 checks |A × B| = |A| · |B| on a 4-by-7 grid, the rule from [the Cart
 
 ## Where a programmer meets it
 
-The word turns up in computing far more often than in a first mathematics course, almost always in the finite sense.
+The word turns up in computing far more often than in a first mathematics course, almost always in the finite sense. Three of these are the set rules read as something else: types, search spaces, and the count of programs.
 
-**Types.** A type's cardinality is how many values it has, and the rules are the set rules. `bool` has 2 values and `uint8` has 256. A pair `(bool, uint8)` has 2 × 256 = 512, which is why languages call it a **product type**, and `(uint8, uint8)` has 256 × 256 = 65,536, the same as `uint16`, which is why two bytes can be packed into one. A tagged union `bool | uint8` has 2 + 256 = 258, a **sum type**, and `Optional[uint8]` has 1 + 256. A function type `uint8 -> bool` has 2²⁵⁶ values, one per truth table. Section 3 prints the table. The count is useful in practice: it is the number of cases an exhaustive `match` must cover, and the number of values a fuzzer would need to try them all.
+### Types
 
-**Databases.** The cardinality of a column is how many distinct values it holds. Section 4 takes a 12-row table: `name` has cardinality 12, `country` 4, `role` 2. A query planner keeps estimates of exactly these numbers, because an index on a high-cardinality column narrows a lookup to a row or two and an index on a low-cardinality one barely narrows it at all. `COUNT(DISTINCT x)` computes it; a wrong estimate of it is the classic reason a query picks a bad plan. Relationship cardinality in a schema, one-to-one and one-to-many, is the same word applied to how many rows on each side can match.
+A type is a set of values, so it has a cardinality, and every way of building a new type from old ones is a way of building a new set. Section 3 constructs each one as an actual Python set and counts it.
+
+| type | built as | count | rule |
+|---|---|---|---|
+| void, never | no values | 0 | 0 |
+| unit, `None`, `()` | one value | 1 | 1 |
+| `bool` | {False, True} | 2 | 2 |
+| `u2` | {0, 1, 2, 3} | 4 | 2² |
+| `(bool, u2)` | every pair | 8 | 2 × 4 |
+| `bool \| u2` | tagged left or right | 6 | 2 + 4 |
+| `Optional[u2]` | `u2` or `None` | 5 | 4 + 1 |
+| `u2 -> bool` | every truth table | 16 | 2⁴ |
+
+The names languages use for these constructors are the arithmetic. A pair, tuple, struct or record is a **product type** because it is a Cartesian product and its cardinality is the product of the parts: `(bool, uint8)` has 2 × 256 = 512 values, and `(uint8, uint8)` has 256 × 256 = 65,536, exactly the count of `uint16`, which is why two bytes pack into one and back without loss. A tagged union, enum with payloads, or variant is a **sum type** because a value is *either* from the left set *or* from the right, so the cardinality is the sum: `bool | uint8` has 258. `Optional[T]` is the sum of T with the unit type, one more value than T. That one extra value is the reason a `uint8` cannot hold "a uint8 or nothing": 257 values do not fit in 256, and every scheme that uses −1 or 255 as "no value" is stealing a member of T to pay for it. A function type `A -> B` has |B|^|A| values, one per lookup table, so `uint8 -> bool` has 2²⁵⁶ of them.
+
+Because the rules are the set rules, the algebra of sets holds for types. Section 3 checks distributivity, |(bool | u2) × bool| = |bool × bool| + |u2 × bool| = 4 + 8 = 12, by building both sides. The practical readings are direct. An exhaustive `match` on `(bool, u2)` needs 8 arms and on `bool | u2` needs 6, and the compiler that warns about a missing arm is counting. A fuzzer that tries every `(uint8, uint8)` input has exactly 65,536 cases and can be exhaustive; one that tries every `(uint32, uint32)` input has 2⁶⁴ and cannot. Two types with the same cardinality can be converted into each other without loss, and two with different cardinalities cannot, whatever the code says.
+
+### Databases
+
+ The cardinality of a column is how many distinct values it holds. Section 4 takes a 12-row table: `name` has cardinality 12, `country` 4, `role` 2. A query planner keeps estimates of exactly these numbers, because an index on a high-cardinality column narrows a lookup to a row or two and an index on a low-cardinality one barely narrows it at all. `COUNT(DISTINCT x)` computes it; a wrong estimate of it is the classic reason a query picks a bad plan. Relationship cardinality in a schema, one-to-one and one-to-many, is the same word applied to how many rows on each side can match.
 
 A compound index makes the product rule concrete. An index on `(country, role)` has a key space that is the Cartesian product of the two columns' value sets, so its cardinality is at most |country| · |role|, which section 4 prints as 4 × 2 = 8 possible keys, of which the table uses 6. Two fields with 2 and 3 values give an index of cardinality 6. Every extra column multiplies.
 
-**Relationships between tables.** The second database meaning is the one a schema designer uses: the cardinality of a foreign key says how many rows on each side can match. One-to-one, one-to-many, many-to-many. It is still |set|: for each invoice, the set of customers it names has cardinality exactly 1; for each customer, the set of invoices naming it has cardinality 0, 1 or more. Section 5 computes both on a five-invoice, four-customer table and reads off the answer.
+### Relationships between tables
+
+ The second database meaning is the one a schema designer uses: the cardinality of a foreign key says how many rows on each side can match. One-to-one, one-to-many, many-to-many. It is still |set|: for each invoice, the set of customers it names has cardinality exactly 1; for each customer, the set of invoices naming it has cardinality 0, 1 or more. Section 5 computes both on a five-invoice, four-customer table and reads off the answer.
 
 The ABAP Dictionary writes this in two notations, and they run in opposite directions, which is a documented pitfall. In transaction SE11 the check table comes first: `1:CN` means each invoice names exactly one customer (`1`, or `C` if the field may be empty), and each customer has any number of invoices (`CN`; `1`, `C` and `N` are the other options). In the DDL syntax of ABAP Cloud the foreign key table comes first, and the ranges are spelled out: the same relationship is `with foreign key [0..*,1]`, read as *0 or more invoices per customer, exactly 1 customer per invoice*. So `1:CN` and `[0..*,1]` describe one relationship, and a reader who applies the SE11 order to a DDL bracket, or the reverse, gets the parent and child swapped. The program prints both forms from the same data. The joins that consume these relationships are the sibling ABAP library's [`SELECT` ↗](https://masiarek.github.io/abap-learning-library/02_Keywords/select/index.html), and the Dictionary objects that declare them are its [DDIC, domains and data elements ↗](https://masiarek.github.io/abap-learning-library/03_Topics/ddic_and_domains/index.html).
 
-**Object models.** UML draws composition as a line from a diamond on the composite class to the component class, and writes a cardinality at the component end: `1` for exactly one, `*` for any number, `1..4` or `1..*` for a range. That is the foreign-key idea drawn as a picture, and the DDL brackets above use the same `0..*` spelling. A GIS relationship class ([ArcGIS ↗](https://desktop.arcgis.com/en/arcmap/latest/manage-data/relationships/relationship-class-properties.htm)) offers the same three choices, one-to-one, one-to-many and many-to-many, between an origin and a destination table.
+### Object models
 
-**Observability.** In telemetry the word is used for a field, and it means how many distinct values that field takes across all events. A `species` field on human users has cardinality 1. A `country` field has a couple of hundred. A `user_id`, `request_id` or `container_id` has the highest possible, since nearly every value is unique. Two consequences follow, and both are |set| in disguise. Metrics systems store one time series per distinct combination of tag values, so tagging a metric with a high-cardinality field multiplies the series count by that field's cardinality, which is why metrics stay cheap only with low-cardinality tags and why they cannot answer "which host?" once there are enough hosts. Debugging a novel failure, on the other hand, needs exactly those fields, because the needle is usually one user or one request. That is the argument for wide structured events over pre-aggregated metrics. A high-cardinality value can always be bucketed down to a low-cardinality one, last names by first letter, say; the reverse is impossible, since the information is gone. **Dimensionality** is the related but different count: not how many values a field has, but how many fields an event has.
+ UML draws composition as a line from a diamond on the composite class to the component class, and writes a cardinality at the component end: `1` for exactly one, `*` for any number, `1..4` or `1..*` for a range. That is the foreign-key idea drawn as a picture, and the DDL brackets above use the same `0..*` spelling. A GIS relationship class ([ArcGIS ↗](https://desktop.arcgis.com/en/arcmap/latest/manage-data/relationships/relationship-class-properties.htm)) offers the same three choices, one-to-one, one-to-many and many-to-many, between an origin and a destination table.
 
-**Approximate counting.** Counting distinct visitors across a billion events needs a billion-entry set, unless an estimate will do. HyperLogLog gives one within a few percent using a few kilobytes, and the field is called cardinality estimation. Redis exposes both: `SCARD` for an exact set cardinality and `PFCOUNT` for the estimate.
+### Observability
 
-**Computability.** Section 8 is the one place the infinite version explains something concrete. A program is a finite string over a finite alphabet, and those can be listed shortest first, so |programs| = |ℕ|. A function from ℕ to {0, 1} is an infinite 0/1 sequence, and section 7 showed those cannot be listed. There are strictly more functions than programs, so some functions have no program that computes them. The argument proves uncomputable functions exist without exhibiting one. The halting problem is the famous exhibit, but the counting comes first, and it is nothing but cardinality.
+ In telemetry the word is used for a field, and it means how many distinct values that field takes across all events. A `species` field on human users has cardinality 1. A `country` field has a couple of hundred. A `user_id`, `request_id` or `container_id` has the highest possible, since nearly every value is unique. Two consequences follow, and both are |set| in disguise. Metrics systems store one time series per distinct combination of tag values, so tagging a metric with a high-cardinality field multiplies the series count by that field's cardinality, which is why metrics stay cheap only with low-cardinality tags and why they cannot answer "which host?" once there are enough hosts. Debugging a novel failure, on the other hand, needs exactly those fields, because the needle is usually one user or one request. That is the argument for wide structured events over pre-aggregated metrics. A high-cardinality value can always be bucketed down to a low-cardinality one, last names by first letter, say; the reverse is impossible, since the information is gone. **Dimensionality** is the related but different count: not how many values a field has, but how many fields an event has.
+
+### Approximate counting
+
+ Counting distinct visitors across a billion events needs a billion-entry set, unless an estimate will do. HyperLogLog gives one within a few percent using a few kilobytes, and the field is called cardinality estimation. Redis exposes both: `SCARD` for an exact set cardinality and `PFCOUNT` for the estimate.
+
+### Combinatorics and algorithms
+
+Every "how many" in an algorithms course is the cardinality of a set, and most of them are the product rule in disguise. Section 9 counts the subsets of a 4-element set by listing all 16 of them. The reason there are 2ⁿ is that each element is in or out, so a subset is a member of {in, out} × {in, out} × … × {in, out}, an n-fold product with cardinality 2 × 2 × … × 2. The edges of a complete graph on n nodes are the 2-element subsets, n(n−1)/2 of them; the possible graphs on those nodes are the subsets of the edge set, 2^(n(n−1)/2); the orderings of n items are n!; the 4-digit passwords are 10⁴, a 4-fold product. The program checks every formula by enumeration up to n = 10 and then prints the formula alone for n = 20, 30 and 60.
+
+That switch is the point. A brute-force algorithm visits every member of some set, so the set's cardinality is its running time, and 2⁶⁰ subsets or 60! orderings cannot be visited. "Exponential" is a statement about the cardinality of the search space, and an algorithm that beats brute force is one that decides without touching every member. Counting the set is the first thing to do with a new problem, because it says whether enumeration is an option at all.
+
+### Computability
+
+Section 8 is the one place the infinite version explains something concrete, and it is worth following slowly, because it proves that uncomputable functions exist without ever naming one.
+
+A program is a finite string over a finite alphabet. Finite strings can be listed: all the strings of length 1, then length 2, then 3, alphabetically within each length. Over a 2-letter alphabet there are 2^L strings of length L, so every string appears at some finite position, and a real alphabet of 128 or 256 characters changes only the count per length. So |programs| = |ℕ|, and since each program computes at most one function, the computable functions are at most countable.
+
+Now count the functions. A function from ℕ to {0, 1} is an infinite 0/1 sequence, and section 7 showed those cannot be listed. Section 8 runs the same diagonal on functions from ℕ to ℕ: given any list g₀, g₁, g₂, …, define d(n) = gₙ(n) + 1. Then d differs from g₀ at 0, from g₁ at 1, and from every gₙ at n, so d is on no list. The program builds d from six concrete functions and checks the six disagreements. Whatever list is offered, this produces a function it missed, so |ℕ → ℕ| > |ℕ|.
+
+Put the two counts together. The programs are countable and the functions are not, so there are strictly more functions than programs, and some functions have no program. The functions ℕ → {0, 1} correspond to the subsets of ℕ, and Cantor's theorem, the diagonal argument once more, says |P(ℕ)| > |ℕ|. In the cardinality sense almost every function is uncomputable; the computable ones are the rare exceptions. The halting problem is the famous named example, and the counting argument is why one had to exist. It is pure cardinality, and it is the reason a lesson on the sizes of infinite sets belongs in a library that a programmer reads.
 
 ## Run it yourself
 

@@ -13,7 +13,8 @@ distinct values in a column, and the count of rows on each side of a foreign key
 are more functions than programs.
 """
 
-from itertools import product
+import math
+from itertools import combinations, permutations, product
 
 
 def matched(A: frozenset, B: frozenset, pairing: dict) -> bool:
@@ -48,24 +49,49 @@ def main() -> None:
     print(f"   |{{1, 1, 1}}|   = {len({1, 1, 1})}           a set does not count repeats")
     print()
 
-    print("3. THE PRODUCT RULE  |A x B| = |A| . |B|")
+    print("3. THE PRODUCT RULE  |A x B| = |A| . |B|,  READ AS TYPES")
     A = frozenset(range(4))
     B = frozenset("abcdefg")
     AB = frozenset(product(A, B))
     print(f"   |A| = {len(A)}, |B| = {len(B)}, |A x B| = {len(AB)} = {len(A)} x {len(B)}")
-    print("   Same rule, read as types: a pair type has as many values as the")
-    print("   product of its parts. Some sizes every programmer already knows:")
-    bool_vals = 2
-    u8 = 2**8
-    u16 = 2**16
-    print(f"     bool             {bool_vals:>12,}")
-    print(f"     uint8            {u8:>12,}")
-    print(f"     uint16           {u16:>12,}")
-    print(f"     (bool, uint8)    {bool_vals * u8:>12,}   product type: 2 x 256")
-    print(f"     (uint8, uint8)   {u8 * u8:>12,}   product type: 256 x 256 = uint16")
-    print(f"     bool | uint8     {bool_vals + u8:>12,}   sum type (tagged union): 2 + 256")
-    print(f"     Optional[uint8]  {1 + u8:>12,}   None | uint8: 1 + 256")
-    print(f"     uint8 -> bool    {bool_vals ** u8:>12.3e}   function type: 2^256 tables")
+    print("   A type is a set of values, so it has a cardinality, and the type")
+    print("   constructors follow the set rules. Build each one and count it:")
+    Bool = frozenset({False, True})
+    U2 = frozenset(range(4))                 # a 2-bit unsigned int, small enough to enumerate
+    Unit = frozenset({()})                   # one value, like Python's None or Rust's ()
+    Void = frozenset()                       # no value at all
+    pair = frozenset(product(Bool, U2))      # (bool, u2)
+    tagged = frozenset({("L", b) for b in Bool} | {("R", u) for u in U2})   # bool | u2
+    optional = frozenset(U2 | {None})        # Optional[u2]
+    funcs = frozenset(product(Bool, repeat=len(U2)))   # u2 -> bool, as truth tables
+    print(f"     {'type':<16} {'built as':<28} {'count':>5}   rule")
+    print(f"     {'void':<16} {'no values':<28} {len(Void):>5}   0")
+    print(f"     {'unit / None':<16} {'one value':<28} {len(Unit):>5}   1")
+    print(f"     {'bool':<16} {'{False, True}':<28} {len(Bool):>5}   2")
+    print(f"     {'u2':<16} {'{0, 1, 2, 3}':<28} {len(U2):>5}   2^2")
+    print(f"     {'(bool, u2)':<16} {'every pair':<28} {len(pair):>5}   2 x 4    product type")
+    print(f"     {'bool | u2':<16} {'tagged L or R':<28} {len(tagged):>5}   2 + 4    sum type")
+    print(f"     {'Optional[u2]':<16} {'u2 or None':<28} {len(optional):>5}   4 + 1    sum with unit")
+    print(f"     {'u2 -> bool':<16} {'every truth table':<28} {len(funcs):>5}   2^4      function type")
+    print("   Sizes a programmer already knows come from the same rules:")
+    u8, u16 = 2**8, 2**16
+    print(f"     uint8                {u8:>12,}   2^8")
+    print(f"     (uint8, uint8)       {u8 * u8:>12,}   256 x 256, the same count as uint16 = {u16:,}")
+    print(f"     (bool, uint8)        {2 * u8:>12,}   2 x 256")
+    print(f"     bool | uint8         {2 + u8:>12,}   2 + 256")
+    print(f"     Optional[uint8]      {1 + u8:>12,}   1 + 256: one more than uint8, and a")
+    print(f"                                        uint8 cannot hold it, which is why -1")
+    print(f"                                        as 'no value' is a bug waiting to happen")
+    print(f"     uint8 -> bool        {2 ** u8:>12.3e}   2^256")
+    print("   The algebra of sets is the algebra of types. Distributivity, checked:")
+    left = frozenset(product(tagged, Bool))                       # (bool | u2) x bool
+    right = frozenset({("L", p) for p in product(Bool, Bool)} | {("R", p) for p in product(U2, Bool)})
+    bb = len(frozenset(product(Bool, Bool)))
+    ub = len(frozenset(product(U2, Bool)))
+    print(f"     |(bool | u2) x bool| = {len(left)} = |bool x bool| + |u2 x bool| = {bb} + {ub} = {len(right)}")
+    print("   And it is why an exhaustive match on (bool, u2) needs 8 arms, a")
+    print("   match on bool | u2 needs 6, and a fuzzer that tries every")
+    print("   (uint8, uint8) input has exactly 65,536 cases to run.")
     print()
 
     print("4. CARDINALITY OF A COLUMN")
@@ -156,15 +182,65 @@ def main() -> None:
     listing = []
     length = 1
     while len(listing) < 14:
-        for s in product(alphabet, repeat=length):
-            listing.append("".join(s))
+        for s_ in product(alphabet, repeat=length):
+            listing.append("".join(s_))
         length += 1
     print("     " + "  ".join(listing[:14]) + "  ...")
-    print("   So |programs| = |N|. A function from N to {0, 1} is an infinite")
-    print("   0/1 sequence, and section 7 showed those cannot be listed. There")
-    print("   are more such functions than there are programs, so some of them")
-    print("   have no program at all. That is the cardinality argument for the")
-    print("   existence of uncomputable functions, and it needs no example.")
+    print(f"   over a {len(alphabet)}-letter alphabet there are {len(alphabet)}^L strings of length L, so")
+    print("   every string has a finite position in the list, and |programs| = |N|.")
+    print("   (A real alphabet has 128 or 256 letters, which changes the count")
+    print("   per length and nothing else.)")
+    print()
+    print("   A function from N to {0, 1} is an infinite 0/1 sequence, and section")
+    print("   7 showed those cannot be listed. The same diagonal works for N -> N:")
+    print("   given any list of functions g_0, g_1, g_2, ..., define")
+    print("     d(n) = g_n(n) + 1")
+    gs = [lambda n: n, lambda n: 2 * n, lambda n: n * n, lambda n: 7, lambda n: n % 3, lambda n: 100 - n]
+    d = [gs[n](n) + 1 for n in range(len(gs))]
+    print(f"     g_0..g_5 at their own index:  {[gs[n](n) for n in range(len(gs))]}")
+    print(f"     d at those points:            {d}")
+    print(f"     d differs from every g_n at n: {all(d[n] != gs[n](n) for n in range(len(gs)))}")
+    print("   d is a perfectly good function from N to N and it is on no list,")
+    print("   so |N -> N| > |N| = |programs|. Some functions have no program.")
+    print()
+    print("   How many is 'some'? Every program computes at most one function,")
+    print("   so the computable functions are at most countable. The functions")
+    print("   N -> {0, 1} match the subsets of N, and Cantor's theorem says")
+    print("   |P(N)| > |N|. Almost every function, in the cardinality sense, is")
+    print("   uncomputable; the ones we can compute are the rare exceptions.")
+    print("   This argument names no specific function. The halting problem is")
+    print("   the famous named example, but counting gets there first.")
+    print()
+
+    print("9. COMBINATORICS: A SEARCH SPACE IS THE CARDINALITY OF A SET")
+    items = ("w", "x", "y", "z")
+    subsets = [c for k in range(len(items) + 1) for c in combinations(items, k)]
+    print(f"   subsets of {{{', '.join(items)}}}: {len(subsets)} = 2^{len(items)}")
+    print("     " + "  ".join("{" + ",".join(c) + "}" if c else "{}" for c in subsets))
+    print("   (each item is in or out: a 4-fold product of {in, out}, so 2 x 2 x 2 x 2)")
+    print()
+    print(f"     {'n':>3}  {'subsets 2^n':>14}  {'edges n(n-1)/2':>15}  {'orderings n!':>22}")
+    for n in (4, 10, 20, 30, 60):
+        S_ = frozenset(range(n))
+        edges = math.comb(n, 2)
+        if n <= 10:
+            assert len(list(combinations(S_, 2))) == edges
+            assert sum(1 for _ in permutations(S_)) == math.factorial(n)
+        subs = f"{2**n:,}" if n <= 30 else f"{2**n:.3e}"
+        print(f"     {n:>3}  {subs:>14}  {edges:>15,}  {math.factorial(n):>22.3e}")
+    print("   The rows n <= 10 were counted by enumeration and matched the formula;")
+    print("   the rest are the formula alone, because enumerating 2^60 subsets is")
+    print("   the point: a brute-force search visits every member of a set, and")
+    print("   the set's cardinality is the running time. 2^n and n! are the")
+    print("   cardinalities that make a problem 'exponential'. An algorithm that")
+    print("   beats brute force is one that decides without visiting every member.")
+    print()
+    print("   Two more counts that are the same rule:")
+    n_nodes = 5
+    complete = frozenset(combinations(range(n_nodes), 2))
+    print(f"     edges of the complete graph on {n_nodes} nodes:   {len(complete)} = C({n_nodes}, 2)")
+    print(f"     possible graphs on {n_nodes} nodes:            {2 ** len(complete):,} = 2^{len(complete)}   (each edge in or out)")
+    print(f"     length-4 passwords over 10 digits:        {10 ** 4:,} = 10^4   (a 4-fold product)")
 
 
 if __name__ == "__main__":

@@ -16,18 +16,33 @@
    |{-4, 4}|     = 2           cardinality of a two-member set
    |{1, 1, 1}|   = 1           a set does not count repeats
 
-3. THE PRODUCT RULE  |A x B| = |A| . |B|
+3. THE PRODUCT RULE  |A x B| = |A| . |B|,  READ AS TYPES
    |A| = 4, |B| = 7, |A x B| = 28 = 4 x 7
-   Same rule, read as types: a pair type has as many values as the
-   product of its parts. Some sizes every programmer already knows:
-     bool                        2
-     uint8                     256
-     uint16                 65,536
-     (bool, uint8)             512   product type: 2 x 256
-     (uint8, uint8)         65,536   product type: 256 x 256 = uint16
-     bool | uint8              258   sum type (tagged union): 2 + 256
-     Optional[uint8]           257   None | uint8: 1 + 256
-     uint8 -> bool       1.158e+77   function type: 2^256 tables
+   A type is a set of values, so it has a cardinality, and the type
+   constructors follow the set rules. Build each one and count it:
+     type             built as                     count   rule
+     void             no values                        0   0
+     unit / None      one value                        1   1
+     bool             {False, True}                    2   2
+     u2               {0, 1, 2, 3}                     4   2^2
+     (bool, u2)       every pair                       8   2 x 4    product type
+     bool | u2        tagged L or R                    6   2 + 4    sum type
+     Optional[u2]     u2 or None                       5   4 + 1    sum with unit
+     u2 -> bool       every truth table               16   2^4      function type
+   Sizes a programmer already knows come from the same rules:
+     uint8                         256   2^8
+     (uint8, uint8)             65,536   256 x 256, the same count as uint16 = 65,536
+     (bool, uint8)                 512   2 x 256
+     bool | uint8                  258   2 + 256
+     Optional[uint8]               257   1 + 256: one more than uint8, and a
+                                        uint8 cannot hold it, which is why -1
+                                        as 'no value' is a bug waiting to happen
+     uint8 -> bool           1.158e+77   2^256
+   The algebra of sets is the algebra of types. Distributivity, checked:
+     |(bool | u2) x bool| = 12 = |bool x bool| + |u2 x bool| = 4 + 8 = 12
+   And it is why an exhaustive match on (bool, u2) needs 8 arms, a
+   match on bool | u2 needs 6, and a fuzzer that tries every
+   (uint8, uint8) input has exactly 65,536 cases to run.
 
 4. CARDINALITY OF A COLUMN
    a table of 12 rows:   name   country   role
@@ -86,8 +101,48 @@
    A program is a finite string over a finite alphabet. Those can be
    listed, shortest first, alphabetically within a length:
      a  b  aa  ab  ba  bb  aaa  aab  aba  abb  baa  bab  bba  bbb  ...
-   So |programs| = |N|. A function from N to {0, 1} is an infinite
-   0/1 sequence, and section 7 showed those cannot be listed. There
-   are more such functions than there are programs, so some of them
-   have no program at all. That is the cardinality argument for the
-   existence of uncomputable functions, and it needs no example.
+   over a 2-letter alphabet there are 2^L strings of length L, so
+   every string has a finite position in the list, and |programs| = |N|.
+   (A real alphabet has 128 or 256 letters, which changes the count
+   per length and nothing else.)
+
+   A function from N to {0, 1} is an infinite 0/1 sequence, and section
+   7 showed those cannot be listed. The same diagonal works for N -> N:
+   given any list of functions g_0, g_1, g_2, ..., define
+     d(n) = g_n(n) + 1
+     g_0..g_5 at their own index:  [0, 2, 4, 7, 1, 95]
+     d at those points:            [1, 3, 5, 8, 2, 96]
+     d differs from every g_n at n: True
+   d is a perfectly good function from N to N and it is on no list,
+   so |N -> N| > |N| = |programs|. Some functions have no program.
+
+   How many is 'some'? Every program computes at most one function,
+   so the computable functions are at most countable. The functions
+   N -> {0, 1} match the subsets of N, and Cantor's theorem says
+   |P(N)| > |N|. Almost every function, in the cardinality sense, is
+   uncomputable; the ones we can compute are the rare exceptions.
+   This argument names no specific function. The halting problem is
+   the famous named example, but counting gets there first.
+
+9. COMBINATORICS: A SEARCH SPACE IS THE CARDINALITY OF A SET
+   subsets of {w, x, y, z}: 16 = 2^4
+     {}  {w}  {x}  {y}  {z}  {w,x}  {w,y}  {w,z}  {x,y}  {x,z}  {y,z}  {w,x,y}  {w,x,z}  {w,y,z}  {x,y,z}  {w,x,y,z}
+   (each item is in or out: a 4-fold product of {in, out}, so 2 x 2 x 2 x 2)
+
+       n     subsets 2^n   edges n(n-1)/2            orderings n!
+       4              16                6               2.400e+01
+      10           1,024               45               3.629e+06
+      20       1,048,576              190               2.433e+18
+      30   1,073,741,824              435               2.653e+32
+      60       1.153e+18            1,770               8.321e+81
+   The rows n <= 10 were counted by enumeration and matched the formula;
+   the rest are the formula alone, because enumerating 2^60 subsets is
+   the point: a brute-force search visits every member of a set, and
+   the set's cardinality is the running time. 2^n and n! are the
+   cardinalities that make a problem 'exponential'. An algorithm that
+   beats brute force is one that decides without visiting every member.
+
+   Two more counts that are the same rule:
+     edges of the complete graph on 5 nodes:   10 = C(5, 2)
+     possible graphs on 5 nodes:            1,024 = 2^10   (each edge in or out)
+     length-4 passwords over 10 digits:        10,000 = 10^4   (a 4-fold product)
