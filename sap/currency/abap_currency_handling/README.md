@@ -43,8 +43,12 @@ The SAP community cheat sheet *Amounts and Quantities in ABAP CDS* collects the 
 |---|---|
 | `WRITE amount CURRENCY key.` | Places the decimal separator according to the key's decimals in TCURX: two unless the key is in the table. For type `p` the decimals of the data type are ignored, so this is a re-interpretation of the digits, not a rescaling ([WRITE options ↗](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/abapwrite_int_options.htm)). |
 | `WRITE amount TO text CURRENCY key DECIMALS n ROUND r NO-GROUPING.` | The same for a character target, with rounding and grouping control ([WRITE TO ↗](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-us/abapwrite_to_options.htm)). |
-| `\|{ amount CURRENCY = key }\|` | The string-template form; `\|{ 12345678 CURRENCY = 'EUR' }\|` gives `123.456,78` under a German country setting ([string template format options ↗](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-us/abapcompute_string_format_options.htm)). |
+| A string template with the `CURRENCY` format option | The same placement for a string result; the example below gives `123.456,78` under a German country setting ([string template format options ↗](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-us/abapcompute_string_format_options.htm)). |
 | `SET COUNTRY code.` | Switches the decimal and thousands separators and the date format for the session to the country's (T005X); an unknown code gives a decimal point and a comma for thousands. |
+
+```abap
+DATA(text) = |{ 12345678 CURRENCY = 'EUR' }|.   " 123.456,78 with SET COUNTRY 'DE'
+```
 
 One of the introductory ABAP textbooks introduces the CURRENCY addition with the line "due to SAP's international presence, the need to display currency in the appropriate formats brings the CURRENCY command into play", and adds that the formats are defined for all countries but "some smaller or newer countries might need to be added", which is TCURX again.
 
