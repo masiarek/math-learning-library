@@ -70,6 +70,8 @@ uv run --group docs mkdocs serve
 
 [**Linear algebra: a reading guide**](../reading_guides/linear_algebra/README.md) — why linear algebra is useful, what to know before starting it, and which book to learn it from, including an honest verdict on *Linear Algebra Done Right*. It is a reference page, not a lesson; its one worked example, the first problem in Hefferon's textbook, is backed by a program like everything else.
 
+[**Precalculus: a reading guide**](../reading_guides/precalculus/README.md) — what the course before calculus is for, where it sits (it is not pre-algebra, which comes four years earlier), what to know before starting it, and which book to learn it from, with a verdict on Glencoe's classroom textbook. A reference page, not a lesson; its one worked example, the doubling time of money at compound interest, is backed by a program like everything else.
+
 ## Sibling libraries
 
 - [rust-learning-library ↗](https://masiarek.github.io/rust-learning-library/) — same format, for Rust

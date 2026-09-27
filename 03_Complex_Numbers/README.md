@@ -13,7 +13,7 @@ The usual introduction to complex numbers asks you to accept a number whose squa
 
 ## Where this is taught
 
-The subject is **complex analysis**, and the pair construction is the standard opening of its first chapter, usually titled "The complex numbers" or "The complex plane". The construction is Hamilton's, from 1835. The same material also closes an abstract-algebra course, as building ℂ from ℝ, and appears in linear algebra as the 2 × 2 matrices [[x, −y], [y, x]].
+The subject is **complex analysis**, and the pair construction is the standard opening of its first chapter, usually titled "The complex numbers" or "The complex plane". The construction is Hamilton's, from 1835. The same material also closes an abstract-algebra course, as building ℂ from ℝ, and appears in linear algebra as the 2 × 2 matrices [[x, −y], [y, x]]. In school it is the complex-numbers chapter of a precalculus course, done with angles and de Moivre's formula; [Precalculus: a reading guide](../reading_guides/precalculus/README.md) says where that course sits and which book to take it from.
 
 Free notes that match lesson 1, the pair construction:
 

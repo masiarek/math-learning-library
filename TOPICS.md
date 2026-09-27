@@ -22,6 +22,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — multiplying scales by a length and turns by an angle
         - [Multiplication can be undone](03_Complex_Numbers/multiplication_can_be_undone/README.md) — why pairs are not multiplied entry by entry
         - [Roots of unity](03_Complex_Numbers/roots_of_unity/README.md) — zⁿ = 1 has exactly n solutions, evenly spaced around a circle
+        - ↪ [Precalculus: a reading guide](reading_guides/precalculus/README.md) — where complex numbers sit in the course before calculus, what to know first, which book to read
 - **Sets and size**
     - **Building sets** · from [Sets](04_Sets/README.md)
         - [The Cartesian product](04_Sets/cartesian_product/README.md) — ordered pairs, ℝ², and why A × B is not B × A
@@ -40,6 +41,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - [A definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md) — axioms as a test that any set can pass or fail
         - [Subsets inherit the laws](06_Algebraic_Structures/subsets_inherit_the_laws/README.md) — why a subspace needs three checks, not eight
         - [Maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md) — linear maps, logarithms and determinants have one shape
+        - ↪ [Precalculus: a reading guide](reading_guides/precalculus/README.md) — exponentials and logarithms as the course before calculus teaches them, and which book to learn them from
     - **Linear algebra** · from [Linear Systems](07_Linear_Systems/README.md)
         - [Linear equations and their solutions](07_Linear_Systems/linear_equations/README.md) — an equation is a test, and a solution of a system passes every one
         - ↪ [A definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md) — the definition of a vector space
