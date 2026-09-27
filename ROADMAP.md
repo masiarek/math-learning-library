@@ -79,6 +79,7 @@ Not started, and listed in rough order of how likely they are to earn a place:
 - **Proof** — induction, contradiction, construction. The part of mathematics that has nothing to do with computation, included precisely because everything else here does.
 - **Discrete** — counting, graphs, recurrences. Best served by runnable examples of anything in this library.
 - **Linear algebra, beyond systems** — worth doing only with a strong angle. Conditioning of a matrix connects it straight back to chapter 1, which is the angle, and it is planned as part of [07_Linear_Systems](07_Linear_Systems/README.md). The definitions of a vector space, a subspace and a linear map are already in [06_Algebraic_Structures](06_Algebraic_Structures/README.md), as examples of structures. Until more exists, [a reading guide](reading_guides/linear_algebra/README.md) says why the subject is useful, what to know first, and which book to learn it from.
+- **Functions and trigonometry** — the two halves of precalculus, and the widest gap here: every page uses functions and none says what one is, and the complex-numbers chapter never computes an angle. A function as a subset of A × B is listed under the sets chapter above, and the angle under the complex-numbers chapter. Until more exists, [a reading guide](reading_guides/precalculus/README.md) says what the course is for, where it sits, what to know first, and which book to learn it from.
 
 ## Rules for adding a chapter
 

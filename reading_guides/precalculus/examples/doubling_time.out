@@ -1,0 +1,73 @@
+1. TWO WAYS TO GROW: A LINE AND A CURVE
+   Start with 100.00 at 5% a year.
+   simple interest:    balance after t years = 100 + 5·t        (add 5.00 every year)
+   compound interest:  balance after t years = 100 · (21/20)^t   (multiply by 21/20 every year)
+
+       t    simple   compound   compound gained that year
+       0    100.00     100.00                        0.00
+       1    105.00     105.00                        5.00
+       2    110.00     110.25                        5.25
+       3    115.00     115.76                        5.51
+       5    125.00     127.63                        6.08
+      10    150.00     162.89                        7.76
+      14    170.00     197.99                        9.43
+      15    175.00     207.89                        9.90
+      20    200.00     265.33                       12.63
+      30    250.00     432.19                       20.58
+      50    350.00    1146.74                       54.61
+   Simple interest gains the same 5.00 every year, so its graph is a
+   straight line. Compound interest gains 5% of a balance that has
+   already grown, so the gains grow too, and the graph bends upward.
+
+2. WHICH YEAR DOES THE MONEY DOUBLE?
+   simple:    100 + 5·t = 200
+              subtract 100:   5·t = 100
+              divide by 5:    t = 20
+              Each step undoes one operation of arithmetic.
+
+   compound:  100 · (21/20)^t = 200
+              divide by 100:  (21/20)^t = 2
+              ...and now t is an exponent. No operation of arithmetic
+              undoes 'raise 21/20 to a power', so try values of t:
+                  t   (21/20)^t  doubled?
+                 12      1.7959     False
+                 13      1.8856     False
+                 14      1.9799     False
+                 15      2.0789      True
+                 16      2.1829      True
+   The balance first doubles in year 15: (21/20)^14 < 2 ≤ (21/20)^15.
+   The exact moment, the t with (21/20)^t = 2, is between 14 and 15,
+   and it is not a fraction at all: (21/20)^(p/q) = 2 would mean
+   21^p = 2^q · 20^p, an odd number equal to an even one.
+
+3. THE LOGARITHM IS THE NAME OF THE ANSWER
+   The number t with (21/20)^t = 2 is written log base 21/20 of 2.
+   It has no exact decimal, so this section, alone in the program, uses floats:
+     t = ln 2 / ln 1.05  =  0.693147 / 0.048790  =  14.206699
+     check:  1.05^14.206699 = 2.0000000000
+     that is 14 years and about 75 days, in the year-15 row of the table
+   Dividing one natural logarithm by another is the change-of-base formula,
+   and it is why a calculator needs only one log key.
+
+   The rule of 72 says the doubling time is about 72 / rate = 72 / 5 = 14.4 years,
+   because ln 2 = 0.693 and ln(1 + r) is close to r when r is small,
+   so t is close to 0.693 / r, and 72 divides more evenly than 69.3.
+
+4. THE EXPONENTIAL WINS EVENTUALLY, WHATEVER THE RATES
+   1% compound against 5% simple. The line is ahead for a long time:
+       t   simple 5%   compound 1%
+       0      100.00        100.00
+      10      150.00        110.46
+      50      350.00        164.46
+     100      600.00        270.48
+     200     1100.00        731.60
+     300     1600.00       1978.85
+   The curve passes the line in year 269:  compound 1453.62 > simple 1445.00,
+   and in year 268 it had not:          compound 1439.22 < simple 1440.00.
+   No logarithm finds that year. A logarithm undoes an exponential when
+   the other side is a number, as in section 2, not when it is another
+   function of t. Trying values is the only method here, and it works
+   because an exponential with base above 1 outgrows every line, and
+   every polynomial, in the end. The books call this end behaviour.
+   Even 2^t against t^10: t^10 takes the lead at t = 2, keeps it through t = 58,
+   and 2^t passes it at t = 59.
