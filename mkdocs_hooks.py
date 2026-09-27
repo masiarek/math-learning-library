@@ -55,6 +55,7 @@ NAV_ORDER: dict[str, list[str]] = {
         "05_Statistics",
         "06_Algebraic_Structures",
         "GLOSSARY.md",
+        "reading_guides",
         "ROADMAP.md",
     ],
     # One argument, in six steps: what kind of number is this, what does the
