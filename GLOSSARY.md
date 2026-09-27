@@ -60,9 +60,9 @@ Terms used across the library, with the page that explains each in full.
 
 **Measure zero** — a set has measure zero if, for every ε > 0, it fits inside a list of intervals whose lengths add up to at most ε. With squares or cubes in place of intervals, the same definition gives zero area or zero volume. Also called a *null set*. See [what measure zero means](02_Measure_Zero/what_measure_zero_means/README.md).
 
-**Median** — the middle value once the numbers are sorted, or halfway between the two middle ones: half the values lie below it and half above. An average but not a mean, and the one a single huge value cannot drag. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
+**Median** — the middle value once the numbers are sorted, or halfway between the two middle ones: at least half the values are at or below it, and at least half are at or above it. An average but not a mean, and the one a single huge value cannot drag. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
 
-**Mode** — the value that occurs most often. An average, but not a mean. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
+**Mode** — the value that occurs most often. When several values tie for most often, a set has more than one mode. An average, but not a mean. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
 
 **Nowhere dense** — for a closed set on the line, containing no interval at all: there are gaps everywhere. Both Cantor sets are nowhere dense, but only the standard one has measure zero. See [the fat Cantor set](02_Measure_Zero/fat_cantor_set/README.md).
 

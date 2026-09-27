@@ -47,7 +47,7 @@ Two lessons are a start, not an argument. The natural next steps, each with an o
 
 One lesson settles the names. The next steps each have an obvious program:
 
-- **What the median minimises** — the mean is the number that makes the sum of *squared* distances smallest, and the median the one that makes the sum of plain distances smallest. That is the real reason one outlier drags the mean and not the median, and a program can find both minimums by trying every candidate.
+- **What the median minimises** — the mean is the number that makes the sum of *squared* distances smallest, and the median makes the sum of plain distances as small as it can be. That is the real reason one outlier drags the mean and not the median, and a program can find both minimums by trying every candidate.
 - **Weighted means** — a grade-point average, a price index, NumPy's `average` with its `weights`. The arithmetic mean is the special case with every weight equal, and [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md) already met one in disguise: the harmonic mean of two speeds is their mean weighted by time.
 - **Spread** — variance and standard deviation, and another pair of names for nearly the same thing: dividing by n or by n − 1, which Python's `statistics` module splits into `pvariance` and `variance`. The quadratic mean from the first lesson is the standard deviation's shape.
 
