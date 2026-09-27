@@ -60,6 +60,10 @@ To preview it locally:
 uv run --group docs mkdocs serve
 ```
 
+## Reading beyond this library
+
+[**Linear algebra: a reading guide**](../reading_guides/linear_algebra/README.md) — why linear algebra is useful, what to know before starting it, and which book to learn it from, including an honest verdict on *Linear Algebra Done Right*. It is a reference page, not a lesson; its one worked example, the first problem in Hefferon's textbook, is backed by a program like everything else.
+
 ## Sibling libraries
 
 - [rust-learning-library ↗](https://masiarek.github.io/rust-learning-library/) — same format, for Rust

@@ -1,0 +1,41 @@
+1. EACH BALANCE IS ONE LINEAR EQUATION
+   balance 1
+     left of the pivot:    h at 40 cm, c at 15 cm
+     right of the pivot:   2 kg at 50 cm
+     left moments = right moments:   40h + 15c = 50 · 2
+     unknowns on the left:           40h + 15c = 100
+   balance 2
+     left of the pivot:    c at 25 cm
+     right of the pivot:   2 kg at 25 cm, h at 50 cm
+     left moments = right moments:   25c = 25 · 2 + 50h
+     unknowns on the left:           -50h + 25c = 50
+   Every unknown appears only multiplied by a number and added up.
+   No h², no h·c, no √h: that is what makes the equations linear.
+
+2. ONE BALANCE IS NOT ENOUGH
+   Balance 1 alone says 40h + 15c = 100. Try some masses for h:
+         h  c from balance 1  balance 2 holds?
+         0              20/3             False
+       1/4                 6             False
+         1                 4              True
+       5/2                 0             False
+   Every row balances stick 1, and there are infinitely many more:
+   the solutions of one equation in two unknowns fill a whole line.
+   A second, different balance is a second line, and two lines that
+   are not parallel cross at exactly one point.
+
+3. GAUSS'S METHOD: REMOVE h FROM ONE ROW, THEN SOLVE
+   row 1:   40h + 15c = 100
+   row 2:  -50h + 25c = 50
+   Add 5/4 times row 1 to row 2, because -50 + 5/4 · 40 = 0:
+     the c term:      25 + 5/4 · 15 = 175/4
+     the right side:  50 + 5/4 · 100 = 175
+   row 2 is now:   (175/4)c = 175
+   so c = 175 / (175/4) = 4
+   Put c = 4 into row 1:   40h + 15 · 4 = 100,  so 40h = 40  and  h = 1
+   With a thousand unknowns the steps are the same, only more of them.
+
+4. PUT THE ANSWER BACK ON BOTH STICKS
+   h = 1 kg,  c = 4 kg
+   balance 1:  left 40 · 1 + 15 · 4 = 100   right 50 · 2 = 100   balanced: True
+   balance 2:  left 25 · 4 = 100   right 25 · 2 + 50 · 1 = 100   balanced: True
