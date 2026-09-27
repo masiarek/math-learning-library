@@ -1,0 +1,75 @@
+1. FOUR LAWS, ONE OPERATION
+   commutative   a.b = b.a
+   associative   (a.b).c = a.(b.c)
+   identity      there is an e with a.e = e.a = a for every a
+   inverses      every a has a b with a.b = b.a = e
+   Every book's list of 'rules' is these four, for its own set and its own '.'.
+
+2. TEN SETS, ONE CHECK
+   set, operation                comm  assoc  ident   inv   the name for that combination
+   integers, +                    yes    yes    yes   yes   commutative group
+   vectors in R^2, +              yes    yes    yes   yes   commutative group
+   integers, x                    yes    yes    yes    -    commutative monoid
+   fractions except 0, x          yes    yes    yes   yes   commutative group
+   fourth roots of unity, x       yes    yes    yes   yes   commutative group
+   integers, -                     -      -      -     -    no name: not even associative
+   integers, max                  yes    yes     -     -    commutative semigroup
+   strings, concatenation          -     yes    yes    -    monoid
+   invertible 2x2 matrices, x      -     yes    yes   yes   group
+   floats, +                      yes     -     yes   yes   no name: not even associative
+   The integers under + and the vectors under + fill the same row: the
+   school book and the linear-algebra book are listing the same four laws.
+
+3. THE MISSING LAW IS THE NEWS: A WITNESS FOR EVERY '-'
+   integers, x
+     no inverses:      nothing x 2 gives 1
+   integers, -
+     not commutative:  1 - 2 = -1
+                       2 - 1 = 1
+     not associative:  (1 - 1) - 1 = -1
+                       1 - (1 - 1) = 1
+     no identity:      1 - 0 = 1,  but 0 - 1 = -1
+     no inverses:      with no identity there is nothing to get back to
+   integers, max
+     no identity:      see section 4
+     no inverses:      with no identity there is nothing to get back to
+   strings, concatenation
+     not commutative:  'ab' + 'c' = 'abc'
+                       'c' + 'ab' = 'cab'
+     no inverses:      nothing + 'ab' gives ''
+   invertible 2x2 matrices, x
+     not commutative:  [[0, -1], [1, 0]] x [[1, 1], [0, 1]] = [[0, -1], [1, 1]]
+                       [[1, 1], [0, 1]] x [[0, -1], [1, 0]] = [[1, -1], [1, 0]]
+   floats, +
+     not associative:  (0.1 + 0.2) + 0.3 = 0.6000000000000001
+                       0.1 + (0.2 + 0.3) = 0.6
+
+4. A SAMPLE CAN REFUTE A LAW, NOT PROVE ONE
+   integers, max, on the samples [1, 2, 3, 0, -1, -2, -3]:
+     members that act as an identity on every sample: [-3]
+     but max(-3, -4) = -3, not -4
+   An identity for max would have to be at most every integer, and no
+   integer is. The smallest sample passed only because nothing smaller
+   was tried. That is why every 'yes' above is a theorem about the
+   whole set, and every '-' is a witness you can check by hand.
+
+5. TWO OPERATIONS, AND THE LAW THAT LINKS THEM
+   distributive  a x (b + c) = a x b + a x c,  and  (a + b) x c = a x c + b x c
+   set            + comm. group  x assoc, ident  distrib  x comm  x inverses   name
+   integers                 yes             yes      yes     yes           -   commutative ring
+   fractions                yes             yes      yes     yes         yes   field
+   2x2 matrices             yes             yes      yes       -           -   ring
+   floats                     -               -        -                       none: not a ring
+   The witnesses:
+     integers: nothing x 2 gives 1
+     2x2 matrices: [[0, -1], [1, 0]] x [[1, 0], [0, 0]] = [[0, 0], [1, 0]]
+                   [[1, 0], [0, 0]] x [[0, -1], [1, 0]] = [[0, -1], [0, 0]]
+     2x2 matrices: nothing x [[1, 0], [0, 0]] gives [[1, 0], [0, 1]]
+     floats: + is not associative (section 3)
+     floats: (0.1 x 0.1) x 0.3 = 0.0030000000000000005
+             0.1 x (0.1 x 0.3) = 0.003
+     floats: 0.1 x (0.1 + 0.3) = 0.04000000000000001
+             0.1 x 0.1 + 0.1 x 0.3 = 0.04
+   A field is two rows of section 2, a commutative group under + and
+   another under x once 0 is set aside, joined by distributivity. That
+   is the whole list of field axioms, and the F in 'a vector space over F'.

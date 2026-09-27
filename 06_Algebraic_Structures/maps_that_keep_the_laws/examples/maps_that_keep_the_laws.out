@@ -1,0 +1,57 @@
+1. WHAT A LINEAR MAP KEEPS
+   additivity    T(u + v) = Tu + Tv     adding then mapping = mapping then adding
+   homogeneity   T(av) = aTv            scaling then mapping = mapping then scaling
+
+2. FIVE MAPS, TWO CHECKS
+   multiply by i:  (x, y) -> (-y, x)    linear
+   flatten:        (x, y) -> (x, 0)     linear
+   log2: positive numbers -> R          linear
+   x -> x + 1                           not linear
+       additivity:   T(1 + 1) = 3,  but T(1) + T(1) = 4
+       homogeneity:  T(-2 * 1) = -1,  but -2 * T(1) = -4
+   x -> x * x                           not linear
+       additivity:   T(1 + 1) = 4,  but T(1) + T(1) = 2
+       homogeneity:  T(-2 * 1) = 4,  but -2 * T(1) = -2
+   log2 is linear from lesson 2's positive numbers, where '+' is * and 'av'
+   is v**a, to the ordinary numbers:
+     log2(8 * 1/4) = 1 = log2 8 + log2 1/4 = 3 + (-2)
+     log2(8**3) = 9 = 3 log2 8 = 3 * 3
+
+3. THE SAME SHAPE, WITH OTHER OPERATIONS
+   the law                        from                 to                on every sample pair
+   len(s + t) = len(s) + len(t)   strings, +        -> whole numbers, +  holds
+   2**(a + b) = 2**a * 2**b       integers, +       -> fractions, *      holds
+   det(AB) = det(A) det(B)        2x2 matrices, *   -> numbers, *        holds
+   |zw|^2 = |z|^2 |w|^2           complex pairs, *  -> numbers, *        holds
+   M(zw) = M(z) M(w)              complex pairs, *  -> 2x2 matrices, *   holds
+   |z + w|^2 = |z|^2 + |w|^2      complex pairs, +  -> numbers, +        FAILS
+       at (1, 2) and (1, 2):  20 on the left, 10 on the right
+   M sends (x, y) to [[x, -y], [y, x]]. Squared length keeps multiplication
+   but not addition: a map keeps a particular operation, not every one.
+
+4. A MAP THAT CAN BE UNDONE: ONE STRUCTURE, TWO NOTATIONS
+   log2 and 2**n undo each other:
+     log2 2 = 1,   2**1 = 2
+     log2 8 = 3,   2**3 = 8
+     log2 1/4 = -2,   2**-2 = 1/4
+   Multiply in one world, or add in the other:
+     8 * 1/4 = 2
+     log2: 3 + (-2) = 1,  and 2**1 = 2
+   The positive numbers under * are the numbers under + with every member
+   renamed. That is why they passed lesson 2's test: they are R in disguise.
+
+5. PRODUCTS OF LINEAR MAPS: WHICH LAWS, AND WHY
+   Here ST means S after T, and S + T means v -> Sv + Tv.
+   S, T, U are turn, flatten and shear, checked on the sample vectors:
+     associative   (ST)U = S(TU)        True   any functions: both sides send v to S(T(U(v)))
+     identity      TI = IT = T          True   any functions
+     distributive  (S + T)U = SU + TU   True   any functions: both sides are S(U(v)) + T(U(v))
+     distributive  S(T + U) = ST + SU   True   needs S to be additive
+     commutative   ST = TS              False
+   With S = (x, y) -> (x + 1, y), which is not additive, the second distributive
+   law fails: at v = (1, 2), S(T + U) gives (5, 2) and ST + SU gives (6, 2).
+   And order matters: turn after flatten sends (1, 2) to (0, 1),
+   flatten after turn sends it to (-2, 0).
+   Associative with an identity is lesson 1's monoid; with + and distributivity
+   it is a ring: the linear maps from a space to itself are one, and not a
+   commutative one.

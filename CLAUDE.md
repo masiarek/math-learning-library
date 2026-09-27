@@ -8,6 +8,12 @@ Instructions for Claude Code sessions working in this repository.
 - If a push is refused, say so at once and quote the error. Don't carry on as if it worked.
 - **Always publish.** The site is built from `master` only, so work on a branch is invisible to readers. When a piece of work is complete and pushed, open a pull request against `master` in the same session, and merge it: the owner has said they do not want to check or click anything. Report the pull request URL and the page URL on the site.
 
+## Missing topics become lessons
+
+When a conversation turns up a topic this library does not cover yet, and it is worth a page, write the lesson (or chapter) and publish it in the same session, without asking first: branch, commit, push, pull request, merge, as above. The owner has asked for this standing rule.
+
+"Worth a page" means it meets [ROADMAP.md](ROADMAP.md)'s rules: it has an argument, not just a syllabus, and a program can demonstrate it. If it does not, answer the question and say in one line why it is not a lesson. Either way, check first that no existing page already covers it, and extend that page instead of repeating it.
+
 ## Conventions
 
 House rules for writing pages are in [CONTRIBUTING.md](CONTRIBUTING.md):
