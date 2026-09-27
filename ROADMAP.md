@@ -16,6 +16,8 @@ What exists, and what is deliberately not written yet. A topic listed here has *
 
 **[06_Algebraic_Structures](06_Algebraic_Structures/README.md)** — why every book lists the same laws. Four lessons: [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md), [a definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md), [subsets inherit the laws](06_Algebraic_Structures/subsets_inherit_the_laws/README.md), [maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md).
 
+**[07_Linear_Systems](07_Linear_Systems/README.md)** — what it means to solve a system of equations. One lesson so far: [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md).
+
 ## The rest of the precision chapter
 
 The six lessons close one argument, but they leave three doors open:
@@ -61,6 +63,14 @@ Four lessons follow the repetition from the list of laws to the maps that carry 
 - **Products** — ℝ² as ℝ × ℝ with the operations done in each coordinate. It would join this chapter to [the Cartesian product](04_Sets/cartesian_product/README.md), and it is the one construction of Birkhoff's three that the chapter has not touched.
 - **Groups of symmetries** — the rotations and reflections of a square, eight of them, composed like the maps of lesson 4 and not commutative. The first group most algebra books draw, and a small enough table to print whole.
 
+## The rest of the linear-systems chapter
+
+One lesson says what a solution is. The rest of Hefferon's first section says how to find one, and each step has an obvious program:
+
+- **Gauss's method keeps the solutions** — swapping two equations, multiplying one by a nonzero number, and adding a multiple of one to another never change the set of solutions. That is the theorem that makes solving legal. A program can check it on tuples before and after each step, and show why multiplying by zero is banned: it turns an equation into 0 = 0 and lets tuples through that failed before. The [reading guide's balance example](reading_guides/linear_algebra/README.md#what-a-first-problem-looks-like) already runs the method once.
+- **One, none, or infinitely many** — every linear system has exactly one of three kinds of solution set, and elimination shows which: a single tuple, nothing, or a family like (t, 6 − 2t, t) from the first lesson. Two lines can cross, be parallel, or be the same line, and that picture is the whole proof in two unknowns.
+- **Conditioning** — how many significant figures the answer to a system keeps when it is solved in floats. This is the angle the candidate entry below names, and it connects the chapter back to [01_Precision](01_Precision/README.md).
+
 ## Candidate chapters
 
 Not started, and listed in rough order of how likely they are to earn a place:
@@ -68,7 +78,7 @@ Not started, and listed in rough order of how likely they are to earn a place:
 - **Probability** — the other discipline built entirely on "how much do you know?", and the natural sequel to uncertainty propagation. Bayes, distributions, and why an interval is a better answer than a number. [Probability zero](02_Measure_Zero/probability_zero/README.md) already opens the door from the continuous side, and the expected value would be [the mean](05_Statistics/mean_vs_average/README.md) once more, with probabilities as the weights.
 - **Proof** — induction, contradiction, construction. The part of mathematics that has nothing to do with computation, included precisely because everything else here does.
 - **Discrete** — counting, graphs, recurrences. Best served by runnable examples of anything in this library.
-- **Linear algebra** — worth doing only with a strong angle. Conditioning of a matrix connects it straight back to chapter 1, which is the angle. The definitions of a vector space, a subspace and a linear map are already in [06_Algebraic_Structures](06_Algebraic_Structures/README.md), as examples of structures; a chapter here would start after them. Until then, [a reading guide](reading_guides/linear_algebra/README.md) says why the subject is useful, what to know first, and which book to learn it from.
+- **Linear algebra, beyond systems** — worth doing only with a strong angle. Conditioning of a matrix connects it straight back to chapter 1, which is the angle, and it is planned as part of [07_Linear_Systems](07_Linear_Systems/README.md). The definitions of a vector space, a subspace and a linear map are already in [06_Algebraic_Structures](06_Algebraic_Structures/README.md), as examples of structures. Until more exists, [a reading guide](reading_guides/linear_algebra/README.md) says why the subject is useful, what to know first, and which book to learn it from.
 
 ## Rules for adding a chapter
 

@@ -140,6 +140,8 @@ If you can do all three of these, you are ready for Strang now:
 
 If number 2 feels uncomfortable, do a proof book before Axler.
 
+Often what stops a beginner is not missing mathematics but notation: subscripts such as x₂ and aᵢ,ⱼ, the ⋯ in a long sum, ∈ ℝ and ℝⁿ. If a book's first definition reads like a wall of symbols, [linear equations and their solutions](../../07_Linear_Systems/linear_equations/README.md) takes Hefferon's Definition 1.1 apart one symbol at a time.
+
 ## Which book
 
 ### *Linear Algebra Done Right* (Sheldon Axler)
@@ -182,8 +184,9 @@ It works best as a **second course**, taken after a computational first pass, or
 
 ## What this library already covers
 
-One chapter already teaches the opening of a proof-based course, and several other pages are its ingredients:
+Two chapters already teach the opening of a course, and several other pages are its ingredients:
 
+- [07_Linear_Systems](../../07_Linear_Systems/README.md) — the first section of Hefferon's book. [Linear equations and their solutions](../../07_Linear_Systems/linear_equations/README.md) reads Definition 1.1 symbol by symbol, on the same two balances as the example above.
 - [06_Algebraic_Structures](../../06_Algebraic_Structures/README.md) — the first definitions of any linear algebra course taught from axioms. [A definition is a test](../../06_Algebraic_Structures/a_definition_is_a_test/README.md) is the definition of a vector space, [subsets inherit the laws](../../06_Algebraic_Structures/subsets_inherit_the_laws/README.md) is why a subspace needs only three checks, and [maps that keep the laws](../../06_Algebraic_Structures/maps_that_keep_the_laws/README.md) is what a linear map is. They follow Axler's sections 1B, 1C and 3A, so they are a good way to try his style before starting the book.
 - [The Cartesian product](../../04_Sets/cartesian_product/README.md) — ℝ² as ordered pairs. A vector in ℝⁿ is the same idea with n entries.
 - [Multiplication as pairs](../../03_Complex_Numbers/multiplication_as_pairs/README.md) and [multiplication rotates](../../03_Complex_Numbers/multiplication_rotates/README.md) — complex multiplication as a rotation and scaling of the plane. That is a 2×2 matrix in disguise, and the natural way into rotation matrices.
@@ -191,4 +194,4 @@ One chapter already teaches the opening of a proof-based course, and several oth
 - [Roots of unity](../../03_Complex_Numbers/roots_of_unity/README.md) — useful later for the eigenvalues of rotations.
 - [Relative error and correct digits](../../01_Precision/relative_error/README.md) and [catastrophic cancellation](../../01_Precision/catastrophic_cancellation/README.md) — the errors a computer makes when it solves Ax = b in floating point. A matrix's *condition number* says roughly how many significant digits the answer loses, which is the angle the [roadmap](../../ROADMAP.md) names for a linear algebra chapter here.
 
-What the library does not cover yet are three of the prerequisites above: proofs, functions (one-to-one and onto) and systems of linear equations. The [roadmap](../../ROADMAP.md) lists the first two.
+What the library does not cover yet are two of the prerequisites above: proofs, and functions (one-to-one and onto). The [roadmap](../../ROADMAP.md) lists both.

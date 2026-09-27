@@ -83,6 +83,16 @@ The sixth chapter starts from a complaint: a school book lists a + b = b + a for
 | [Subsets inherit the laws](06_Algebraic_Structures/subsets_inherit_the_laws/README.md) | Why a subspace needs three checks instead of eight, and why a subgroup needs a fourth |
 | [Maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md) | Linear maps, logarithms, determinants and string length as one shape; 2⁰ = 1, log 1 = 0, T(0) = 0 and det I = 1 as one proof; and the slide rule as an isomorphism |
 
+[**07_Linear_Systems/**](07_Linear_Systems/README.md) — *What does it mean to solve a system of equations?*
+
+The seventh chapter follows the first section of Jim Hefferon's *Linear Algebra*. Before any method, it says what is being looked for: a linear equation is a test that a list of numbers passes or fails, and a solution of a system passes every test at once. It needs nothing but school algebra.
+
+| Lesson | What it teaches |
+|---|---|
+| [Linear equations and their solutions](07_Linear_Systems/linear_equations/README.md) | Hefferon's Definition 1.1 symbol by symbol: coefficients, constants, tuples and the double subscripts aᵢ,ⱼ, checked on two balances and a system in three unknowns, and why *linear* means keeping sums and multiples |
+
+**Looking for a subject rather than a chapter?** The [topic map](TOPICS.md) sorts every lesson into branches and follows the threads that run between chapters.
+
 ## Why a math library and not a Python one
 
 The code here is the *illustration*, never the subject. Mathematics is exact — `1/3` is exactly one third, forever — and that is precisely why a chapter on significant figures has to explain that they are **not** a mathematical idea but a measurement one, living in the gap between the world and the arithmetic.
