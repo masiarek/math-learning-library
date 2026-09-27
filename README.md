@@ -72,6 +72,17 @@ The fifth chapter is about the single number that stands in for a list: the aver
 |---|---|
 | [Mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md) | Why one calculation has so many names, what the adjective *arithmetic* is for, and why "the average salary" can honestly be three different numbers |
 
+[**06_Algebraic_Structures/**](06_Algebraic_Structures/README.md) — *Why does every book list the same laws?*
+
+The sixth chapter starts from a complaint: a school book lists a + b = b + a for the integers, a linear-algebra book lists u + v = v + u for vectors, and then lists the same laws again for linear maps. The answer is that there are only four laws to list, and the chapter follows the tools that stop the repetition: a definition that any set can pass, subsets that inherit the laws, and maps that carry them across. It needs school algebra; lessons 2 to 4 are easier after a first look at vectors.
+
+| Lesson | What it teaches |
+|---|---|
+| [The laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md) | The four laws every book reprints, the names for their combinations, and a witness for every law that fails, from subtraction to floats |
+| [A definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md) | The vector-space axioms run against five candidates, and why 0v = 0, proved once, says x⁰ = 1 in a space where adding means multiplying |
+| [Subsets inherit the laws](06_Algebraic_Structures/subsets_inherit_the_laws/README.md) | Why a subspace needs three checks instead of eight, and why a subgroup needs a fourth |
+| [Maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md) | Linear maps, logarithms, determinants and string length as one shape; 2⁰ = 1, log 1 = 0, T(0) = 0 and det I = 1 as one proof; and the slide rule as an isomorphism |
+
 ## Why a math library and not a Python one
 
 The code here is the *illustration*, never the subject. Mathematics is exact — `1/3` is exactly one third, forever — and that is precisely why a chapter on significant figures has to explain that they are **not** a mathematical idea but a measurement one, living in the gap between the world and the arithmetic.

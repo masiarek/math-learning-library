@@ -182,12 +182,13 @@ It works best as a **second course**, taken after a computational first pass, or
 
 ## What this library already covers
 
-None of these pages is about linear algebra, and each is one of its ingredients:
+One chapter already teaches the opening of a proof-based course, and several other pages are its ingredients:
 
+- [06_Algebraic_Structures](../../06_Algebraic_Structures/README.md) — the first definitions of any linear algebra course taught from axioms. [A definition is a test](../../06_Algebraic_Structures/a_definition_is_a_test/README.md) is the definition of a vector space, [subsets inherit the laws](../../06_Algebraic_Structures/subsets_inherit_the_laws/README.md) is why a subspace needs only three checks, and [maps that keep the laws](../../06_Algebraic_Structures/maps_that_keep_the_laws/README.md) is what a linear map is. They follow Axler's sections 1B, 1C and 3A, so they are a good way to try his style before starting the book.
 - [The Cartesian product](../../04_Sets/cartesian_product/README.md) — ℝ² as ordered pairs. A vector in ℝⁿ is the same idea with n entries.
 - [Multiplication as pairs](../../03_Complex_Numbers/multiplication_as_pairs/README.md) and [multiplication rotates](../../03_Complex_Numbers/multiplication_rotates/README.md) — complex multiplication as a rotation and scaling of the plane. That is a 2×2 matrix in disguise, and the natural way into rotation matrices.
 - [Multiplication can be undone](../../03_Complex_Numbers/multiplication_can_be_undone/README.md) — zero divisors, and which elements you can divide by. Matrices have both problems, and that is exactly what *invertible* is about.
 - [Roots of unity](../../03_Complex_Numbers/roots_of_unity/README.md) — useful later for the eigenvalues of rotations.
 - [Relative error and correct digits](../../01_Precision/relative_error/README.md) and [catastrophic cancellation](../../01_Precision/catastrophic_cancellation/README.md) — the errors a computer makes when it solves Ax = b in floating point. A matrix's *condition number* says roughly how many significant digits the answer loses, which is the angle the [roadmap](../../ROADMAP.md) names for a linear algebra chapter here.
 
-What the library does not cover yet are three of the prerequisites above: proofs, functions (one-to-one, onto, inverse) and systems of linear equations. The [roadmap](../../ROADMAP.md) lists the first two.
+What the library does not cover yet are three of the prerequisites above: proofs, functions (one-to-one and onto) and systems of linear equations. The [roadmap](../../ROADMAP.md) lists the first two.

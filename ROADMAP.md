@@ -14,6 +14,8 @@ What exists, and what is deliberately not written yet. A topic listed here has *
 
 **[05_Statistics](05_Statistics/README.md)** — what one number says about many. One lesson so far: [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
 
+**[06_Algebraic_Structures](06_Algebraic_Structures/README.md)** — why every book lists the same laws. Four lessons: [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md), [a definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md), [subsets inherit the laws](06_Algebraic_Structures/subsets_inherit_the_laws/README.md), [maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md).
+
 ## The rest of the precision chapter
 
 The six lessons close one argument, but they leave three doors open:
@@ -51,6 +53,14 @@ One lesson settles the names. The next steps each have an obvious program:
 - **Weighted means** — a grade-point average, a price index, NumPy's `average` with its `weights`. The arithmetic mean is the special case with every weight equal, and [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md) already met one in disguise: the harmonic mean of two speeds is their mean weighted by time.
 - **Spread** — variance and standard deviation, and another pair of names for nearly the same thing: dividing by n or by n − 1, which Python's `statistics` module splits into `pvariance` and `variance`. The quadratic mean from the first lesson is the standard deviation's shape.
 
+## The rest of the algebraic-structures chapter
+
+Four lessons follow the repetition from the list of laws to the maps that carry them. The doors they leave open:
+
+- **Quotients** — the integers modulo n, where 12 + 1 = 1 on a clock. A quotient is the image of a homomorphism, the "images" in Birkhoff's theorem, which [maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md) names but never builds; and ℤ modulo n is a field exactly when n is prime. A program can build the addition and multiplication tables and run lesson 1's checks for each n, which is an obvious page.
+- **Products** — ℝ² as ℝ × ℝ with the operations done in each coordinate. It would join this chapter to [the Cartesian product](04_Sets/cartesian_product/README.md), and it is the one construction of Birkhoff's three that the chapter has not touched.
+- **Groups of symmetries** — the rotations and reflections of a square, eight of them, composed like the maps of lesson 4 and not commutative. The first group most algebra books draw, and a small enough table to print whole.
+
 ## Candidate chapters
 
 Not started, and listed in rough order of how likely they are to earn a place:
@@ -58,7 +68,7 @@ Not started, and listed in rough order of how likely they are to earn a place:
 - **Probability** — the other discipline built entirely on "how much do you know?", and the natural sequel to uncertainty propagation. Bayes, distributions, and why an interval is a better answer than a number. [Probability zero](02_Measure_Zero/probability_zero/README.md) already opens the door from the continuous side, and the expected value would be [the mean](05_Statistics/mean_vs_average/README.md) once more, with probabilities as the weights.
 - **Proof** — induction, contradiction, construction. The part of mathematics that has nothing to do with computation, included precisely because everything else here does.
 - **Discrete** — counting, graphs, recurrences. Best served by runnable examples of anything in this library.
-- **Linear algebra** — worth doing only with a strong angle. Conditioning of a matrix connects it straight back to chapter 1, which is the angle. Until then, [a reading guide](reading_guides/linear_algebra/README.md) says why the subject is useful, what to know first, and which book to learn it from.
+- **Linear algebra** — worth doing only with a strong angle. Conditioning of a matrix connects it straight back to chapter 1, which is the angle. The definitions of a vector space, a subspace and a linear map are already in [06_Algebraic_Structures](06_Algebraic_Structures/README.md), as examples of structures; a chapter here would start after them. Until then, [a reading guide](reading_guides/linear_algebra/README.md) says why the subject is useful, what to know first, and which book to learn it from.
 
 ## Rules for adding a chapter
 

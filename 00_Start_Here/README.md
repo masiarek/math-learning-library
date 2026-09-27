@@ -22,6 +22,8 @@ It begins with a question that sounds settled and is not: **are significant figu
 
 [**05_Statistics/**](../05_Statistics/README.md) — *What does one number say about many?* It starts with a question about words: why is "add them up and divide by how many" called the average, the mean, the arithmetic mean and the arithmetic average? Because they are not quite synonyms. *Average* covers the median and the mode too, and *arithmetic* tells the everyday mean apart from the geometric and harmonic means, which are the right answers for growth rates and speeds. It needs nothing but school arithmetic.
 
+[**06_Algebraic_Structures/**](../06_Algebraic_Structures/README.md) — *Why does every book list the same laws?* Four lessons on the repetition every reader of mathematics notices. The rules for the integers and the axioms for vectors are the same four laws, and names like *group* and *field* only say which ones hold. Stated as a definition, the list becomes a test: a theorem proved from it holds in every set that passes, so 0v = 0 in a vector space becomes x⁰ = 1 among the positive numbers. A subspace needs only three of the eight checks, because the "for all" laws come free. And a map that keeps the operations, such as a linear map, a logarithm or a determinant, carries theorems across, so 2⁰ = 1, log 1 = 0, T(0) = 0 and det I = 1 are one proof. It needs school algebra, and a first look at vectors helps from lesson 2 on.
+
 ## How to run anything here
 
 Every lesson folder has an `examples/` directory with a `.py` file and a `.out` answer key. Every command on these pages is written to be run from the root of a clone, so start there:
