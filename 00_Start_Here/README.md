@@ -24,6 +24,10 @@ It begins with a question that sounds settled and is not: **are significant figu
 
 [**06_Algebraic_Structures/**](../06_Algebraic_Structures/README.md) — *Why does every book list the same laws?* Four lessons on the repetition every reader of mathematics notices. The rules for the integers and the axioms for vectors are the same four laws, and names like *group* and *field* only say which ones hold. Stated as a definition, the list becomes a test: a theorem proved from it holds in every set that passes, so 0v = 0 in a vector space becomes x⁰ = 1 among the positive numbers. A subspace needs only three of the eight checks, because the "for all" laws come free. And a map that keeps the operations, such as a linear map, a logarithm or a determinant, carries theorems across, so 2⁰ = 1, log 1 = 0, T(0) = 0 and det I = 1 are one proof. It needs school algebra, and a first look at vectors helps from lesson 2 on.
 
+[**07_Linear_Systems/**](../07_Linear_Systems/README.md) — *What does it mean to solve a system of equations?* It starts where a linear algebra book starts, with the definition before the method: a linear combination is a recipe of fixed coefficients, a linear equation is a test that a list of numbers passes or fails, and a solution of a system passes every test at once. The first lesson reads Hefferon's Definition 1.1 symbol by symbol, on the two balances from the page before it. It needs nothing but school algebra.
+
+The sidebar lists the chapters A to Z. The numbers above are the suggested order, and the [topic map](../TOPICS.md) groups every lesson by subject, for when you know what you want but not where it is.
+
 ## How to run anything here
 
 Every lesson folder has an `examples/` directory with a `.py` file and a `.out` answer key. Every command on these pages is written to be run from the root of a clone, so start there:

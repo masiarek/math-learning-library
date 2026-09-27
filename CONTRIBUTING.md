@@ -77,7 +77,13 @@ Mark external links with `↗` so a reader knows they are leaving.
 
 ## Nav order
 
-Sidebar reading order lives in `NAV_ORDER` in `mkdocs_hooks.py`, keyed by folder path. **Never set order by renaming files to `01_`, `02_`** — a filename is a permanent URL, and inserting one lesson would move every page after it. Unlisted pages sort alphabetically at the bottom, so adding a page needs no edit there.
+The owner's preference, and the rule: **the sidebar lists the chapters by name, A to Z.** People look a subject up by name, so "Algebraic Structures" comes before "Complex Numbers" whatever their numbers. The hook does this by itself: every numbered chapter lands where the `CHAPTERS` marker sits in the top-level `NAV_ORDER` list, sorted by the name shown in the sidebar, so a new chapter needs no edit there. The numbers stay in the folder names as the suggested reading order, which [Start Here](00_Start_Here/README.md) spells out.
+
+**Inside a chapter, the lessons keep their reading order**, not A to Z, because each chapter is one argument and every lesson answers a question the one before it raised. That order lives in `NAV_ORDER` in `mkdocs_hooks.py`, keyed by folder path. **Never set order by renaming files to `01_`, `02_`** — a filename is a permanent URL, and inserting one lesson would move every page after it. Unlisted pages sort alphabetically at the bottom.
+
+## The topic map
+
+[`TOPICS.md`](TOPICS.md) is the second way in: every lesson sorted by subject into a tree with branches, plus threads that follow one idea across chapters. **A new lesson needs a place in the tree**, as one line with a link and a short description, and a ↪ entry in any other branch it belongs to. If a new lesson links to a lesson in another chapter, check whether the link belongs in one of the threads. The build enforces the first part: `mkdocs build --strict` fails if any lesson is missing from the map.
 
 ## Before you commit
 

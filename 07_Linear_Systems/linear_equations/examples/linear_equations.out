@@ -1,0 +1,74 @@
+1. A LINEAR COMBINATION: MULTIPLY EACH VARIABLE BY A FIXED NUMBER, THEN ADD
+   coefficients a₁ = 40, a₂ = 15;  variables x₁ = h, x₂ = c
+   the combination 40h + 15c, worked out at a few (h, c):
+     (1, 4)    40·1 + 15·4 = 100
+     (4, 1)    40·4 + 15·1 = 175
+     (0, 0)    40·0 + 15·0 = 0
+     (1/2, 2)  40·1/2 + 15·2 = 50
+   The coefficients stay fixed. Only the numbers put in for h and c change.
+
+2. A LINEAR EQUATION IS A TEST THAT A TUPLE PASSES OR FAILS
+   equation:  40h + 15c = 100   (the constant d is 100)
+     (h, c)      left side   = 100?
+     (1, 4)            100   yes
+     (4, 1)            175   no   the same two numbers, in the other order
+     (5/2, 0)          100   yes
+     (0, 20/3)         100   yes
+     (1/4, 6)          100   yes
+   4 of these 5 tuples pass. One equation in two unknowns has
+   infinitely many solutions, and together they fill a line.
+   A tuple is ordered: its first entry is always h and its second is c.
+
+3. THE DOUBLE SUBSCRIPTS: aᵢ,ⱼ IS EQUATION i, VARIABLE j
+   the system of the two balances:
+     equation 1:    40h + 15c = 100
+     equation 2:   -50h + 25c = 50
+   the same numbers, each with its name from the definition:
+               x₁ = h        x₂ = c        constant
+     row 1     a₁,₁ = 40     a₁,₂ = 15     d₁ = 100
+     row 2     a₂,₁ = -50    a₂,₂ = 25     d₂ = 50
+   m = 2 equations, n = 2 unknowns.
+   The first subscript says which equation, the second which variable:
+   a₂,₁ = -50 is the number in front of x₁ in equation 2.
+
+4. A SOLUTION OF THE SYSTEM PASSES EVERY EQUATION
+     (h, c)      equation 1   equation 2   system
+     (1, 4)      yes          yes          yes
+     (5/2, 0)    yes          no           no
+     (0, 20/3)   yes          no           no
+     (0, 2)      no           yes          no
+     (2, 6)      no           yes          no
+   Each equation alone has infinitely many solutions. The system keeps only
+   the tuples that pass both, and of these five only (1, 4) does.
+   Finding it without guessing is the job of Gauss's method.
+
+5. THE SAME DEFINITION FOR ANY m AND n
+     equation 1:  x₁ + x₂ + x₃ = 6
+     equation 2:  x₁ + 0x₂ - x₃ = 0
+   m = 2 equations, n = 3 unknowns, so a solution is a triple.
+   a₂,₂ = 0: a zero coefficient is allowed, and x₂ still has its slot.
+     (x₁, x₂, x₃)    equation 1   equation 2   system
+     (1, 4, 1)       yes          yes          yes
+     (2, 2, 2)       yes          yes          yes
+     (1, 2, 3)       yes          no           no
+     (6, 0, 0)       yes          no           no
+   Equation 2 says x₃ = x₁. Put that into equation 1 and x₂ = 6 - 2x₁.
+   So every triple (t, 6 - 2t, t) should pass both. Checking some t:
+     t = 0     (0, 6, 0)       system: yes
+     t = 1     (1, 4, 1)       system: yes
+     t = 3     (3, 0, 3)       system: yes
+     t = 7/2   (7/2, -1, 7/2)  system: yes
+     t = -5    (-5, 16, -5)    system: yes
+   Fewer equations than unknowns, and a whole line of solutions again.
+
+6. WHY 'LINEAR': THE LEFT SIDE KEEPS SUMS AND MULTIPLES
+   L(h, c) = 40h + 15c
+     L(1, 4) = 100,  L(5/2, 0) = 100,  their sum = 200
+     L(7/2, 4) = 200   sum kept: yes
+     3·L(1, 4) = 300,  L(3, 12) = 300   multiple kept: yes
+   L(h, c) = h² + 15c
+     L(1, 4) = 61,  L(5/2, 0) = 25/4,  their sum = 269/4
+     L(7/2, 4) = 289/4   sum kept: no
+     3·L(1, 4) = 183,  L(3, 12) = 189   multiple kept: no
+   A linear combination keeps both, for every pair of tuples. One squared
+   variable breaks both, and so does h·c, √h or 1/h.

@@ -24,6 +24,11 @@ House rules for writing pages are in [CONTRIBUTING.md](CONTRIBUTING.md):
 - a link to a folder points at its `README.md`;
 - sidebar reading order lives in `NAV_ORDER` in `mkdocs_hooks.py`.
 
+## Navigation: the owner's preference
+
+- **Chapters in the sidebar are sorted by name, A to Z.** The hook does it automatically through the `CHAPTERS` marker in `NAV_ORDER`, so never list chapters there by number. Lessons inside a chapter keep their reading order, because each chapter is one argument.
+- **Every lesson has a place in [TOPICS.md](TOPICS.md)**, the topic map: a tree by subject with branches, a ↪ cross-reference wherever a lesson also belongs to another branch, and threads that follow one idea across chapters. Add the new lesson there in the same commit; `mkdocs build --strict` fails if one is missing.
+
 ## Before every commit
 
 ```bash

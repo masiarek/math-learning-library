@@ -1,6 +1,6 @@
 """Build-time fixes that would otherwise cost a pinned plugin dependency.
 
-Two jobs, both about the sidebar:
+Three jobs, all about finding your way around:
 
 1. **Clean chapter labels.** MkDocs derives a section label from the folder name
    on disk, so `01_Precision/` reads as "01 Precision". The numeric prefix exists
@@ -9,7 +9,17 @@ Two jobs, both about the sidebar:
    its page's own H1, which is already written the way it should read.
 
 2. **Order the sections.** `NAV_ORDER` states the intended reading order per
-   folder, keyed by folder path, listing children by their on-disk name.
+   folder, keyed by folder path, listing children by their on-disk name. At the
+   top level the chapters are the exception: they sort by name, A to Z, wherever
+   the `CHAPTERS` marker sits, because the owner looks a subject up by name. The
+   numbers still give the suggested reading order, which Start Here spells out.
+   Inside a chapter the lessons keep their reading order, because each chapter
+   is one argument and its steps depend on the ones before.
+
+3. **Keep the topic map complete.** `TOPICS.md` groups every lesson by subject.
+   A lesson missing from it is logged as a warning, and `mkdocs build --strict`
+   (what CI runs) fails on a warning, so a new lesson cannot ship without a
+   place on the map.
 
 Why order here rather than by renaming files: a filename is a permanent URL.
 Renumbering `03_` to `04_` to insert a lesson would move every page after it and
@@ -26,9 +36,22 @@ touched.
 
 from __future__ import annotations
 
+import logging
 import re
+from pathlib import Path
 
 PREFIX = re.compile(r"^(\d+)[_-]")
+
+# Where the numbered chapters go in the top-level order: all of them, A to Z by
+# the name shown in the sidebar, so a new chapter needs no edit here.
+CHAPTERS = "*chapters*"
+
+# A lesson page: <numbered chapter>/<lesson>/README.md. Start Here is not one.
+LESSON = re.compile(r"^(?!00_)\d+_[^/]+/[^/]+/README\.md$")
+TOPIC_MAP = "TOPICS.md"
+LINK = re.compile(r"\]\(([^)#\s]+\.md)(?:#[^)]*)?\)")
+
+log = logging.getLogger("mkdocs.hooks.topic_map")
 
 # Words the naive title-caser gets wrong.
 FIXUPS = {
@@ -48,12 +71,8 @@ NAV_ORDER: dict[str, list[str]] = {
     "": [
         "index.md",
         "00_Start_Here",
-        "01_Precision",
-        "02_Measure_Zero",
-        "03_Complex_Numbers",
-        "04_Sets",
-        "05_Statistics",
-        "06_Algebraic_Structures",
+        "TOPICS.md",
+        CHAPTERS,
         "GLOSSARY.md",
         "reading_guides",
         "ROADMAP.md",
@@ -117,6 +136,12 @@ NAV_ORDER: dict[str, list[str]] = {
         "subsets_inherit_the_laws",
         "maps_that_keep_the_laws",
     ],
+    # What a system of linear equations is, then how to solve one without
+    # changing its solutions: the first section of Hefferon's book.
+    "07_Linear_Systems": [
+        "README.md",
+        "linear_equations",
+    ],
 }
 
 
@@ -160,6 +185,8 @@ def _order_key(path: str, name: str) -> tuple[int, str]:
     listed = NAV_ORDER.get(path, [])
     if name in listed:
         return (listed.index(name), "")
+    if CHAPTERS in listed and PREFIX.match(name):
+        return (listed.index(CHAPTERS), _label(name).lower())
     return (len(listed), name.lower())
 
 
@@ -206,3 +233,20 @@ def on_nav(nav, config, files):
     """Relabel numbered chapters and apply NAV_ORDER, depth-first."""
     _visit(nav.items, "", 0)
     return nav
+
+
+def on_files(files, config):
+    """Warn about every lesson that TOPICS.md does not link to."""
+    docs = Path(config["docs_dir"])
+    topic_map = docs / TOPIC_MAP
+    if not topic_map.exists():
+        log.warning("%s is missing: it should list every lesson by subject", TOPIC_MAP)
+        return files
+    linked = {
+        (topic_map.parent / target).resolve()
+        for target in LINK.findall(topic_map.read_text(encoding="utf-8"))
+    }
+    for page in files.documentation_pages():
+        if LESSON.match(page.src_uri) and (docs / page.src_uri).resolve() not in linked:
+            log.warning("%s has no place in %s; add it to the tree", page.src_uri, TOPIC_MAP)
+    return files
