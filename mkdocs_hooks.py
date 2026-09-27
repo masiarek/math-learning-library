@@ -52,6 +52,7 @@ NAV_ORDER: dict[str, list[str]] = {
         "02_Measure_Zero",
         "03_Complex_Numbers",
         "04_Sets",
+        "05_Statistics",
         "GLOSSARY.md",
         "ROADMAP.md",
     ],
@@ -97,6 +98,12 @@ NAV_ORDER: dict[str, list[str]] = {
         "README.md",
         "cartesian_product",
         "cardinality",
+    ],
+    # One number standing in for many: what each kind of average keeps, and
+    # why the names for them nest instead of meaning the same thing.
+    "05_Statistics": [
+        "README.md",
+        "mean_vs_average",
     ],
 }
 
