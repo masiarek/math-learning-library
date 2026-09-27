@@ -53,6 +53,7 @@ NAV_ORDER: dict[str, list[str]] = {
         "03_Complex_Numbers",
         "04_Sets",
         "05_Statistics",
+        "06_Algebraic_Structures",
         "GLOSSARY.md",
         "ROADMAP.md",
     ],
@@ -104,6 +105,16 @@ NAV_ORDER: dict[str, list[str]] = {
     "05_Statistics": [
         "README.md",
         "mean_vs_average",
+    ],
+    # Why every book lists the same laws: one menu of four, the list as a test
+    # a set can pass, subsets that need only closure, and maps that carry the
+    # operations from one set to another.
+    "06_Algebraic_Structures": [
+        "README.md",
+        "laws_of_an_operation",
+        "a_definition_is_a_test",
+        "subsets_inherit_the_laws",
+        "maps_that_keep_the_laws",
     ],
 }
 

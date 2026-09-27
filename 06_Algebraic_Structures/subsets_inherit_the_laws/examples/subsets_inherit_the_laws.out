@@ -1,0 +1,40 @@
+1. THREE CONDITIONS INSTEAD OF EIGHT
+   U, a subset of a vector space V, is a subspace when:
+     additive identity                    0 is in U
+     closed under addition                u, w in U  implies  u + w in U
+     closed under scalar multiplication   a a scalar, u in U  implies  au in U
+
+2. FIVE SUBSETS OF R^2
+   subset U                   8 equations   3 conditions
+   the line y = 2x                   hold   a subspace
+   just the origin {(0, 0)}          hold   a subspace
+   the half-plane x >= 0             hold   not a subspace
+       scalar multiplication: (-2)(1, 2) = (-2, -4) is outside U
+   the line y = 2x + 1               hold   not a subspace
+       0 in U:                (0, 0) is not in U
+       addition:              (0, 1) + (0, 1) = (0, 2) is outside U
+       scalar multiplication: (-2)(0, 1) = (0, -2) is outside U
+   the two axes together             hold   not a subspace
+       addition:              (1, 0) + (0, 1) = (1, 1) is outside U
+   The eight equations hold on every sample of every subset, because they
+   are computed with the arithmetic of R^2. They cannot tell a subspace from
+   a subset that is not one. Only the closure conditions can.
+
+3. WHERE THE TWO 'THERE EXISTS' AXIOMS COME FROM
+   Six of the eight say 'for all': true for every vector of R^2, so true for
+   every vector of U. Two say 'there exists', and the witness must be IN U:
+     additive identity:  0 must be in U                -> condition 1
+     additive inverse:   -u must be in U, for each u   -> (-1)u = -u, and
+                         U is closed under scalar multiplication
+   the line y = 2x:  -(1, 2) = (-1)(1, 2) = (-1, -2),  in U: True
+   the half-plane x >= 0:  -(1, 2) = (-1)(1, 2) = (-1, -2),  in U: False
+   The inverse of (1, 2) exists in R^2 either way. In the half-plane it is
+   outside U, so U has no inverse for (1, 2) of its own.
+
+4. THE SAME TEST FOR A GROUP NEEDS A FOURTH CONDITION
+   subset U of the integers       0 in U  closed under +  closed under -
+   multiples of 3                    yes             yes             yes   a subgroup
+   natural numbers 0, 1, 2, ...      yes             yes              no   not a subgroup
+       the inverse of 1 is -1, which is outside U
+   A vector space gets inverses from the scalar -1. A group has no scalars,
+   so its subgroup test has to ask for inverses separately.
