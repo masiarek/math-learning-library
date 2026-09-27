@@ -20,6 +20,8 @@ It begins with a question that sounds settled and is not: **are significant figu
 
 [**04_Sets/**](../04_Sets/README.md) — *What is this collection, exactly?* Groundwork the other chapters lean on, starting with the Cartesian product: what ℝ² is, why an ordered pair is not a two-element set, and why A × B and B × A can share no member at all. Then cardinality: what |A| means, why it is defined by matching rather than counting, and how the same idea sizes a type, a database column, and the set of all programs.
 
+[**05_Statistics/**](../05_Statistics/README.md) — *What does one number say about many?* It starts with a question about words: why is "add them up and divide by how many" called the average, the mean, the arithmetic mean and the arithmetic average? Because they are not quite synonyms. *Average* covers the median and the mode too, and *arithmetic* tells the everyday mean apart from the geometric and harmonic means, which are the right answers for growth rates and speeds. It needs nothing but school arithmetic.
+
 ## How to run anything here
 
 Every lesson folder has an `examples/` directory with a `.py` file and a `.out` answer key. Every command on these pages is written to be run from the root of a clone, so start there:

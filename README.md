@@ -64,6 +64,14 @@ The fourth chapter is groundwork: the constructions every other page takes for g
 | [The Cartesian product](04_Sets/cartesian_product/README.md) | What ℝ² is, why (2, 5) is not (5, 2), why A × B is not B × A, and why (1, 1) counts |
 | [Cardinality of sets](04_Sets/cardinality/README.md) | What \|A\| means, why size is defined by matching, and where it shows up in types, databases and computability |
 
+[**05_Statistics/**](05_Statistics/README.md) — *What does one number say about many?*
+
+The fifth chapter is about the single number that stands in for a list: the average score, the average salary, the average speed. It starts with the names. *Average*, *mean* and *arithmetic mean* are one calculation in a classroom and three different sizes of word outside it. It needs nothing from the other chapters.
+
+| Lesson | What it teaches |
+|---|---|
+| [Mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md) | Why one calculation has so many names, what the adjective *arithmetic* is for, and why "the average salary" can honestly be three different numbers |
+
 ## Why a math library and not a Python one
 
 The code here is the *illustration*, never the subject. Mathematics is exact — `1/3` is exactly one third, forever — and that is precisely why a chapter on significant figures has to explain that they are **not** a mathematical idea but a measurement one, living in the gap between the world and the arithmetic.

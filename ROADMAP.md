@@ -12,6 +12,8 @@ What exists, and what is deliberately not written yet. A topic listed here has *
 
 **[04_Sets](04_Sets/README.md)** — what a collection is, exactly. Two lessons so far: [the Cartesian product](04_Sets/cartesian_product/README.md), [cardinality of sets](04_Sets/cardinality/README.md).
 
+**[05_Statistics](05_Statistics/README.md)** — what one number says about many. One lesson so far: [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
+
 ## The rest of the precision chapter
 
 The six lessons close one argument, but they leave three doors open:
@@ -41,11 +43,19 @@ Two lessons are a start, not an argument. The natural next steps, each with an o
 - **Relations and functions** — a function is a subset of A × B with one pair per first entry. The product page builds the pairs; this one would pick out which subsets are functions, and check injective and surjective on finite sets by brute force.
 - **Power sets** — every subset of a set, and why there are 2ⁿ of them. The counting argument is the same grid idea as |A × B| = |A| · |B|, one dimension per member. For an infinite set it is Cantor's theorem, |P(A)| > |A|, the diagonal argument from [cardinality](04_Sets/cardinality/README.md) run once more.
 
+## The rest of the statistics chapter
+
+One lesson settles the names. The next steps each have an obvious program:
+
+- **What the median minimises** — the mean is the number that makes the sum of *squared* distances smallest, and the median the one that makes the sum of plain distances smallest. That is the real reason one outlier drags the mean and not the median, and a program can find both minimums by trying every candidate.
+- **Weighted means** — a grade-point average, a price index, NumPy's `average` with its `weights`. The arithmetic mean is the special case with every weight equal, and [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md) already met one in disguise: the harmonic mean of two speeds is their mean weighted by time.
+- **Spread** — variance and standard deviation, and another pair of names for nearly the same thing: dividing by n or by n − 1, which Python's `statistics` module splits into `pvariance` and `variance`. The quadratic mean from the first lesson is the standard deviation's shape.
+
 ## Candidate chapters
 
 Not started, and listed in rough order of how likely they are to earn a place:
 
-- **Probability** — the other discipline built entirely on "how much do you know?", and the natural sequel to uncertainty propagation. Bayes, distributions, and why an interval is a better answer than a number. [Probability zero](02_Measure_Zero/probability_zero/README.md) already opens the door from the continuous side.
+- **Probability** — the other discipline built entirely on "how much do you know?", and the natural sequel to uncertainty propagation. Bayes, distributions, and why an interval is a better answer than a number. [Probability zero](02_Measure_Zero/probability_zero/README.md) already opens the door from the continuous side, and the expected value would be [the mean](05_Statistics/mean_vs_average/README.md) once more, with probabilities as the weights.
 - **Proof** — induction, contradiction, construction. The part of mathematics that has nothing to do with computation, included precisely because everything else here does.
 - **Discrete** — counting, graphs, recurrences. Best served by runnable examples of anything in this library.
 - **Linear algebra** — worth doing only with a strong angle. Conditioning of a matrix connects it straight back to chapter 1, which is the angle.
