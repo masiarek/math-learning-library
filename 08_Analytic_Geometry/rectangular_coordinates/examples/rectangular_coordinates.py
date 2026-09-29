@@ -195,6 +195,21 @@ def main() -> None:
     print("   the second. Not one coordinate changed; only which way the y-axis points.")
     print("   The same flip turns the line through (0, 0) and (2, 2) from rising to falling.")
     print("   Which direction is positive is a choice, and the arrow records it.")
+    print()
+
+    print("11. A COORDINATE IS A NUMBER, NOT THE POINT ON THE AXIS BELOW IT")
+    P = (3, 5)
+    foot = (P[0], 0)
+    x = P[0]
+    print(f"   P = {fmt(P)};  the foot of the perpendicular from P to the x-axis is F = {fmt(foot)};")
+    print(f"   the x-coordinate of P is the number the axis reads at F:  x = {x}")
+    print(f"     F == x                 is {foot == x}      a point with two coordinates is not a number")
+    print(f"     2 * x                  is {2 * x}          arithmetic works on the number")
+    print(f"     2 * F                  is {2 * foot}   what Python does when a point is treated as one")
+    print(f"     y = 2x + 1 at P:  2 * {x} + 1 = {2 * x + 1}   the equation takes the number, never the point")
+    print(f"     F's own x-coordinate   is {foot[0]}          P and its foot share it; that is the relationship")
+    print("   Geometry to numbers and back: the foot is the geometry side, the")
+    print("   coordinate is the number side, and the equations live on the number side.")
 
 
 if __name__ == "__main__":

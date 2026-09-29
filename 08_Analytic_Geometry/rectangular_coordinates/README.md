@@ -78,6 +78,8 @@ What the number line says is this page's idea one dimension down: each point is 
 
 Why not just say "the x-axis number", or "the x-axis address"? You can, and "the x-value" is what most people say aloud, including mathematicians. The word *coordinate* earns its keep in three ways, none of them a rule against plain speech. It works everywhere: for any axis, for the three coordinates of a point in space, and for polar coordinates, whose two numbers lie on no axis at all, so one word covers what "x-axis number" would need a new phrase for each time. It avoids a misreading: "a number on the x-axis" names a point of the axis, (3, 0), while the x-coordinate of (3, 5) is a number the point is not on; the coordinate is read off the axis, it does not live there. And it is the word in every book and every language, *współrzędna* in Polish, so it is the one you need in order to read. *Address* is a fine metaphor for the whole pair, and the book's own phrase "the coordinates of P" means exactly that. Say what you like; learn the standard word to read.
 
+There is one more way to put the objection, and it is the sharpest: why not call the x-coordinate of P "the point on the x-axis under P"? That point exists and has a name, the *foot* of the perpendicular from P to the axis, and the picture is exactly right: drop a line from P = (3, 5) straight down and it lands on (3, 0). But (3, 0) is a point, with two coordinates of its own, and 3 is a number, and the whole subject rests on not confusing the two. Wikipedia's first paragraph on coordinate systems ends with the reason: a coordinate system lets "problems in geometry be translated into problems about numbers and vice versa". The foot is still on the geometry side of that translation. The coordinate is the number side, and it is the side the equations live on: y = 2x + 1 takes the number 3 and gives 7, and there is nothing it can do with the point (3, 0). Section 11 of the program makes Python say it: the foot is not equal to the number, doubling the number gives 6 and doubling the point gives nonsense, and the one thing the point and P share is their x-coordinate, which is what the perpendicular was for.
+
 One usage does need watching, because it is common enough to feel like the definition. In everyday speech and in software, "a coordinate" often means a whole location: a GPS coordinate, a `Coordinate` class holding a latitude and a longitude. Mathematics never uses the word that way. One coordinate is one number, one per axis, and the location is the *coordinates*, plural: the word was coined in the plural, *co-ordinatae*, the numbers "ordered together", and each of them is one of the co-ordinates. So (x, y) is two coordinates, a point on a line has one, and a point in space has three.
 
 ## Plotting
@@ -248,6 +250,17 @@ The program stores each point as a Python tuple, which is an ordered pair, and s
    the second. Not one coordinate changed; only which way the y-axis points.
    The same flip turns the line through (0, 0) and (2, 2) from rising to falling.
    Which direction is positive is a choice, and the arrow records it.
+
+11. A COORDINATE IS A NUMBER, NOT THE POINT ON THE AXIS BELOW IT
+   P = (3, 5);  the foot of the perpendicular from P to the x-axis is F = (3, 0);
+   the x-coordinate of P is the number the axis reads at F:  x = 3
+     F == x                 is False      a point with two coordinates is not a number
+     2 * x                  is 6          arithmetic works on the number
+     2 * F                  is (3, 0, 3, 0)   what Python does when a point is treated as one
+     y = 2x + 1 at P:  2 * 3 + 1 = 7   the equation takes the number, never the point
+     F's own x-coordinate   is 3          P and its foot share it; that is the relationship
+   Geometry to numbers and back: the foot is the geometry side, the
+   coordinate is the number side, and the equations live on the number side.
 ```
 <!-- /output -->
 
@@ -488,7 +501,7 @@ The skill is two-way and small, so practise both directions until neither needs 
 
 ## Flashcards
 
-The same page as a deck of 70 Anki cards, one fact per card and one or two short sentences on the back, with the reasons left on this page: [`rectangular_coordinates.txt`](anki/rectangular_coordinates.txt). In Anki choose File → Import, pick the file, and the header lines inside it set the separator, the note type (Basic), the deck name and the tags, so nothing needs changing in the dialog. Each card carries a tag for its kind, `definition`, `quadrants`, `plotting` and so on, for studying one kind at a time.
+The same page as a deck of 71 Anki cards, one fact per card and one or two short sentences on the back, with the reasons left on this page: [`rectangular_coordinates.txt`](anki/rectangular_coordinates.txt). In Anki choose File → Import, pick the file, and the header lines inside it set the separator, the note type (Basic), the deck name and the tags, so nothing needs changing in the dialog. Each card carries a tag for its kind, `definition`, `quadrants`, `plotting` and so on, for studying one kind at a time.
 
 ## Where this goes next
 

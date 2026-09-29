@@ -129,3 +129,14 @@
    the second. Not one coordinate changed; only which way the y-axis points.
    The same flip turns the line through (0, 0) and (2, 2) from rising to falling.
    Which direction is positive is a choice, and the arrow records it.
+
+11. A COORDINATE IS A NUMBER, NOT THE POINT ON THE AXIS BELOW IT
+   P = (3, 5);  the foot of the perpendicular from P to the x-axis is F = (3, 0);
+   the x-coordinate of P is the number the axis reads at F:  x = 3
+     F == x                 is False      a point with two coordinates is not a number
+     2 * x                  is 6          arithmetic works on the number
+     2 * F                  is (3, 0, 3, 0)   what Python does when a point is treated as one
+     y = 2x + 1 at P:  2 * 3 + 1 = 7   the equation takes the number, never the point
+     F's own x-coordinate   is 3          P and its foot share it; that is the relationship
+   Geometry to numbers and back: the foot is the geometry side, the
+   coordinate is the number side, and the equations live on the number side.
