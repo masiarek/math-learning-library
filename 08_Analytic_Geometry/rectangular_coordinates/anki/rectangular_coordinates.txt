@@ -65,6 +65,7 @@ Which quadrant is (−2, −3) in?	Quadrant III: x < 0, y < 0.	quadrants
 Which quadrant is (−3, 1) in?	Quadrant II: x < 0, y > 0.	quadrants
 Which quadrant is (3, 2) in?	Quadrant I: x > 0, y > 0.	quadrants
 In which order are the quadrants numbered around the origin?	Counterclockwise: I top right, II top left, III bottom left, IV bottom right.	quadrants
+Why are the quadrants numbered counterclockwise?	An angle opens from the positive x-axis toward the positive y-axis, which with x right and y up is counterclockwise. Its first quarter turn, 0° to 90°, sweeps quadrant I, and II, III, IV follow the turn.	reasoning
 Are (2, 5) and (5, 2) the same point?	No. (2, 5) is 2 right and 5 up; (5, 2) is 5 right and 2 up.	ordered-pair
 Why is a quadrant nothing but a pair of signs?	Membership depends on the signs of x and y, never on their sizes: (1, 1) and (1000, 5) share quadrant I.	reasoning
 What happens to the quadrant of (x, y) when x is replaced by −x?	The point reflects across the y-axis: I and II swap, III and IV swap.	reasoning
