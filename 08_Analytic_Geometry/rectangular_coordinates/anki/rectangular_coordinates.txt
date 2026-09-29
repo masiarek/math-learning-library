@@ -1,0 +1,55 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Rectangular coordinates
+#tags:math precalculus rectangular-coordinates
+#columns:Front	Back	Tags
+#tags column:3
+On the real number line, how is a point located?	By one real number, called the coordinate of the point.	definition
+How many numbers locate a point in a plane, and what are they called together?	Two. Together they form an ordered pair (x, y), the coordinates of the point.	definition
+In a rectangular coordinate system, what is the horizontal number line called?	The x-axis.	definition
+In a rectangular coordinate system, what is the vertical number line called?	The y-axis.	definition
+What is the origin O?	The point where the x-axis and the y-axis intersect. It reads 0 on both axes, so its coordinates are (0, 0).	definition
+Must the x-axis and the y-axis use the same scale?	No. Mathematics usually uses the same scale on both; an application may use a different scale on each axis.	definition
+Which points on the x-axis carry positive numbers, and which carry negative numbers?	Points to the right of O are positive; points to the left of O are negative.	definition
+Which points on the y-axis carry positive numbers, and which carry negative numbers?	Points above O are positive; points below O are negative.	definition
+What does the arrowhead at the end of an axis mean?	It marks the positive direction of that axis.	definition
+What are the two names of the coordinate system built from two perpendicular number lines?	The rectangular coordinate system, also called the Cartesian coordinate system, after René Descartes.	definition
+What is the xy-plane?	The plane in which the x-axis and the y-axis lie.	definition
+What are the coordinate axes?	The x-axis and the y-axis.	definition
+In the ordered pair (x, y) of a point P, what does x measure?	The signed distance of P from the y-axis: how far right or left P is.	signed-distance
+In the ordered pair (x, y) of a point P, what does y measure?	The signed distance of P from the x-axis: how far up or down P is.	signed-distance
+What does signed mean in the signed distance x?	x > 0 when P is to the right of the y-axis, and x < 0 when P is to the left of it.	signed-distance
+The x-coordinate measures distance from which axis, the x-axis or the y-axis?	The y-axis. It measures right or left of the vertical line, and the vertical line is the y-axis.	signed-distance
+What is the ordered pair (x, y) of a point P called?	The coordinates of P.	definition
+How do you plot the point (−3, 1)?	Go 3 units along the x-axis to the left of O, then straight up 1 unit, and place a dot there.	plotting
+What does it mean to plot a point?	To place a dot at the location in the plane given by its coordinates.	plotting
+What are the coordinates of the origin?	(0, 0).	definition
+What form do the coordinates of a point on the x-axis have?	(x, 0): the y-coordinate is 0.	axes
+What form do the coordinates of a point on the y-axis have?	(0, y): the x-coordinate is 0.	axes
+A point has y-coordinate 0. Where is it?	On the x-axis.	axes
+A point has x-coordinate 0. Where is it?	On the y-axis.	axes
+What is another name for the x-coordinate of a point?	The abscissa.	vocabulary
+What is another name for the y-coordinate of a point?	The ordinate.	vocabulary
+What is the abscissa of a point?	Its x-coordinate.	vocabulary
+What is the ordinate of a point?	Its y-coordinate.	vocabulary
+How is the point P whose coordinates are (x, y) usually written and said?	Written P = (x, y), and said simply the point (x, y).	vocabulary
+What are the quadrants?	The four regions into which the coordinate axes divide the xy-plane, numbered I to IV counterclockwise starting from the upper right.	quadrants
+Signs of x and y in quadrant I?	x > 0 and y > 0 (upper right).	quadrants
+Signs of x and y in quadrant II?	x < 0 and y > 0 (upper left).	quadrants
+Signs of x and y in quadrant III?	x < 0 and y < 0 (lower left).	quadrants
+Signs of x and y in quadrant IV?	x > 0 and y < 0 (lower right).	quadrants
+A point has x < 0 and y > 0. Which quadrant?	Quadrant II.	quadrants
+A point has x > 0 and y < 0. Which quadrant?	Quadrant IV.	quadrants
+A point has x < 0 and y < 0. Which quadrant?	Quadrant III.	quadrants
+A point has x > 0 and y > 0. Which quadrant?	Quadrant I.	quadrants
+Which quadrant is a point on a coordinate axis in?	None. Points on the axes belong to no quadrant, because 0 is neither positive nor negative.	quadrants
+Which quadrant is (3, −2) in?	Quadrant IV: x > 0 and y < 0.	quadrants
+Which quadrant is (−2, −3) in?	Quadrant III: x < 0 and y < 0.	quadrants
+Which quadrant is (−3, 1) in?	Quadrant II: x < 0 and y > 0.	quadrants
+Which quadrant is (3, 2) in?	Quadrant I: x > 0 and y > 0.	quadrants
+In which order are the quadrants numbered around the origin?	Counterclockwise: I upper right, II upper left, III lower left, IV lower right.	quadrants
+Are (2, 5) and (5, 2) the same point?	No. An ordered pair remembers which entry is first: (2, 5) is 2 right and 5 up; (5, 2) is 5 right and 2 up.	ordered-pair
+Why is a quadrant nothing but a pair of signs?	Membership depends only on whether x and y are positive or negative, never on their sizes: (1, 1) and (1000, 5) are both in quadrant I.	reasoning
+What happens to the quadrant of (x, y) when x is replaced by −x?	The point reflects across the y-axis: quadrants I and II swap, and III and IV swap.	reasoning
+In which quadrants is the product xy positive?	I and III, where x and y have the same sign. It is negative in II and IV.	reasoning

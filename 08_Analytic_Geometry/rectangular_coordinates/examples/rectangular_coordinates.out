@@ -1,0 +1,88 @@
+1. THE PLANE, AND THE FOUR POINTS OF THE FIGURE
+   y
+     4   .  .  .  .  |  .  .  .  .
+     3   .  .  .  .  |  .  .  .  .
+     2   .  .  .  .  |  .  .  B  .
+     1   .  A  .  .  |  .  .  .  .
+     0   -  -  -  -  O  -  -  -  -
+    -1   .  .  .  .  |  .  .  .  .
+    -2   .  .  .  .  |  .  .  C  .
+    -3   .  .  D  .  |  .  .  .  .
+    -4   .  .  .  .  |  .  .  .  .
+        -4 -3 -2 -1  0  1  2  3  4   x
+   A = (-3, 1)
+   B = (3, 2)
+   C = (3, -2)
+   D = (-2, -3)
+   The y-axis is the column of |, the x-axis the row of -, O the origin.
+
+2. EACH COORDINATE IS A SIGNED DISTANCE, AND FROM THE OTHER AXIS
+     point      x: from the y-axis     y: from the x-axis     to plot it
+     (-3, 1)    3 left  of it         1 up   from it        3 left, then 1 up
+     (3, 2)     3 right of it         2 up   from it        3 right, then 2 up
+     (3, -2)    3 right of it         2 down from it        3 right, then 2 down
+     (-2, -3)   2 left  of it         3 down from it        2 left, then 3 down
+   x says how far right or left, which is distance from the vertical
+   line, the y-axis. The sign says which side; the size says how far.
+
+3. THE PAIR IS ORDERED: (-3, 1) IS NOT (1, -3)
+     (-3, 1) == (1, -3)   is False
+     (-3, 1)   3 left, 1 up      quadrant II
+     (1, -3)   1 right, 3 down   quadrant IV
+   Same two numbers, different point. The first entry is always x.
+
+4. A QUADRANT IS NOTHING BUT THE PAIR OF SIGNS
+     point        sign of x   sign of y   quadrant
+     (3, 2)           +           +       I
+     (-3, 1)          -           +       II
+     (-2, -3)         -           -       III
+     (3, -2)          +           -       IV
+     (1, 1)           +           +       I
+     (1000, 5)        +           +       I
+     (-1, 1000)       -           +       II
+     (0, 0)           0           0       none: on an axis
+     (4, 0)           +           0       none: on an axis
+     (0, -2)          0           -       none: on an axis
+   (1, 1) and (1000, 5) share a quadrant: the sizes never enter into it.
+   A 0 has no sign, so a point with a 0 coordinate has no quadrant.
+
+5. WHY THE AXES MUST BELONG TO NO QUADRANT
+   every point with integer coordinates from -2 to 2, 5 x 5 = 25 points:
+     quadrant I: 4   II: 4   III: 4   IV: 4   on an axis: 9
+     4 + 4 + 4 + 4 + 9 = 25: each point counted exactly once.
+   the same 25 points if the quadrants were defined with >= and <= instead:
+     quadrant I: 9   II: 9   III: 9   IV: 9
+     9 + 9 + 9 + 9 = 36 memberships for 25 points: the origin would be in
+     all four and every other axis point in two. Strict signs make the
+     four quadrants a partition: every point off the axes is in exactly one.
+
+6. WHAT THE WORD BUYS YOU: A SIGN CHANGE IS A CHANGE OF QUADRANT
+     point        (-x, y)          (x, -y)          (-x, -y)
+                  across y-axis    across x-axis    through O
+     (-3, 1)   II   (3, 1)    I      (-3, -1)  III    (3, -1)   IV
+     (3, 2)    I    (-3, 2)   II     (3, -2)   IV     (-3, -2)  III
+     (3, -2)   IV   (-3, -2)  III    (3, 2)    I      (-3, 2)   II
+     (-2, -3)  III  (2, -3)   IV     (-2, 3)   II     (2, 3)    I
+   Negating x swaps I with II and III with IV, whatever the numbers are.
+   That is why a graph's symmetry can be checked one quadrant at a time.
+
+7. THE SIGN OF A PRODUCT NAMES TWO QUADRANTS
+     point        x * y    sign   quadrant
+     (3, 2)          6     +      I
+     (-3, 1)        -3     -      II
+     (-2, -3)        6     +      III
+     (3, -2)        -6     -      IV
+     (5, 5)         25     +      I
+     (-5, 5)       -25     -      II
+   xy > 0 exactly in I and III, xy < 0 exactly in II and IV. So 'the graph
+   of y = 1/x lies in quadrants I and III' is a fact about the sign of xy.
+
+8. A QUARTER TURN MOVES A POINT ONE QUADRANT ON
+   the rule (x, y) -> (-y, x), which is multiplication by i in 03_Complex_Numbers:
+     (-3, 1)   quadrant II   ->  (-1, -3)  quadrant III
+     (3, 2)    quadrant I    ->  (-2, 3)   quadrant II
+     (3, -2)   quadrant IV   ->  (2, 3)    quadrant I
+     (-2, -3)  quadrant III  ->  (3, -2)   quadrant IV
+   I -> II -> III -> IV -> I: the quadrants are numbered in the direction
+   a quarter turn goes, counterclockwise, which is why the numbering is
+   the one it is and not clockwise.

@@ -15,6 +15,8 @@ House rules for writing a page here. Readers browsing lessons do not need this f
 
 One idea per folder. The folder name is the idea, in `lower_snake_case`, and it becomes a permanent URL — so name it for what it teaches, not for where it currently sits in the reading order.
 
+A lesson may also carry `anki/<stem>.txt`, the page as a deck of flashcards in Anki's plain-text import format: header lines (`#separator:tab`, `#notetype:Basic`, `#deck:`, `#tags:`) and then one card per line, front, back and a tag separated by tabs. One fact per card, no HTML, no double quotes, and the page links to it from a **Flashcards** section. A folder may hold more than one example when the second is a tool for the reader, such as a checker for the book's exercises; its recorded output is whatever it prints with no arguments.
+
 ## The page
 
 Open with the title, then two lines that let a reader decide in five seconds whether this is their page:

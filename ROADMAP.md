@@ -18,6 +18,8 @@ What exists, and what is deliberately not written yet. A topic listed here has *
 
 **[07_Linear_Systems](07_Linear_Systems/README.md)** — what it means to solve a system of equations. One lesson so far: [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md).
 
+**[08_Analytic_Geometry](08_Analytic_Geometry/README.md)** — what it means to draw a number. One lesson so far: [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md).
+
 ## The rest of the precision chapter
 
 The six lessons close one argument, but they leave three doors open:
@@ -70,6 +72,14 @@ One lesson says what a solution is. The rest of Hefferon's first section says ho
 - **Gauss's method keeps the solutions** — swapping two equations, multiplying one by a nonzero number, and adding a multiple of one to another never change the set of solutions. That is the theorem that makes solving legal. A program can check it on tuples before and after each step, and show why multiplying by zero is banned: it turns an equation into 0 = 0 and lets tuples through that failed before. The [reading guide's balance example](reading_guides/linear_algebra/README.md#what-a-first-problem-looks-like) already runs the method once.
 - **One, none, or infinitely many** — every linear system has exactly one of three kinds of solution set, and elimination shows which: a single tuple, nothing, or a family like (t, 6 − 2t, t) from the first lesson. Two lines can cross, be parallel, or be the same line, and that picture is the whole proof in two unknowns.
 - **Conditioning** — how many significant figures the answer to a system keeps when it is solved in floats. This is the angle the candidate entry below names, and it connects the chapter back to [01_Precision](01_Precision/README.md).
+
+## The rest of the analytic-geometry chapter
+
+One lesson sets up the plane. The next pages of any precalculus book each have an obvious program:
+
+- **The distance formula** — Pythagoras in coordinates: the distance between (x₁, y₁) and (x₂, y₂) is √((x₂ − x₁)² + (y₂ − y₁)²), because the two points and the corner (x₂, y₁) make a right triangle. Question 4 of [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md) already meets it as a 3-4-5 triangle. A program can check it on triangles whose sides are exact, and show that the formula does not care which point is called first.
+- **The midpoint** — the point halfway along, ((x₁ + x₂)/2, (y₁ + y₂)/2), which is [the arithmetic mean](05_Statistics/mean_vs_average/README.md) taken one coordinate at a time. A program can check that it is the same distance from both ends and that it lies on the segment.
+- **Graphs of equations** — the graph of an equation in x and y is the set of every point whose coordinates pass it, which makes it the same object as the solution set in [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md), drawn. Intercepts are the points where the graph meets an axis, so they have a 0 coordinate; symmetry about an axis is the sign change of lesson 1's section 6. A program can plot a solution set on the text grid and find the intercepts by searching for a 0.
 
 ## Candidate chapters
 
