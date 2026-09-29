@@ -54,6 +54,22 @@ In English the letters won, and a reader can go a lifetime saying x-coordinate. 
 
 One caution about a whiteboard that turns up everywhere: the abscissa is the number x, not the horizontal line. The line is the x-axis, or in the languages above the axis *of abscissas*.
 
+For a reader who learned this in Polish, or is about to, the page's vocabulary in that language. *Współrzędna* is the Latin word rebuilt from Polish parts, *współ-* for "co-" and *rzędna* for "ordinate", so the etymology above is visible in the word itself.
+
+| English | Polish |
+|---|---|
+| coordinate, coordinates | współrzędna, współrzędne |
+| coordinate system; rectangular or Cartesian | układ współrzędnych; prostokątny or kartezjański układ współrzędnych |
+| number line | oś liczbowa |
+| x-axis, y-axis | oś x and oś y; oś odciętych and oś rzędnych; also oś OX and oś OY |
+| origin | początek układu współrzędnych |
+| x-coordinate, abscissa | współrzędna x, odcięta |
+| y-coordinate, ordinate | współrzędna y, rzędna |
+| ordered pair | para uporządkowana |
+| to plot a point | zaznaczyć punkt |
+| quadrant; quadrant I | ćwiartka; pierwsza ćwiartka |
+| plane | płaszczyzna |
+
 ## Names on the number line
 
 Everything on this page happens first in one dimension, and the number line has its own names. The book's word for the number is *coordinate*: the real number associated with a point. The other direction has a name in most algebra books: the point associated with a number is the *graph* of the number, so the coordinate of the graph of 3 is 3, and "graph the number −2" means put a dot there. The number is also the point's *signed distance* from 0, which Larson calls its *directed distance*; 0 is the *origin*; and older books call the point 1 the *unit point*, because choosing it fixes the scale. *Position* is what physics calls the coordinate of a moving point, and *address* is a classroom metaphor. Three words that circulate for this and do not fit: a *locus* is the set of all points meeting a condition, a line or a curve rather than one point; a *tick mark* is a scale mark drawn at every unit whether or not a point is plotted there; and *abscissa* belongs to the plane, where it is the x-coordinate of a point that has two, and on a lone number line nobody uses it.
@@ -472,11 +488,19 @@ The skill is two-way and small, so practise both directions until neither needs 
 
 ## Flashcards
 
-The same page as a deck of 68 Anki cards, one fact per card and one or two short sentences on the back, with the reasons left on this page: [`rectangular_coordinates.txt`](anki/rectangular_coordinates.txt). In Anki choose File → Import, pick the file, and the header lines inside it set the separator, the note type (Basic), the deck name and the tags, so nothing needs changing in the dialog. Each card carries a tag for its kind, `definition`, `quadrants`, `plotting` and so on, for studying one kind at a time.
+The same page as a deck of 70 Anki cards, one fact per card and one or two short sentences on the back, with the reasons left on this page: [`rectangular_coordinates.txt`](anki/rectangular_coordinates.txt). In Anki choose File → Import, pick the file, and the header lines inside it set the separator, the note type (Basic), the deck name and the tags, so nothing needs changing in the dialog. Each card carries a tag for its kind, `definition`, `quadrants`, `plotting` and so on, for studying one kind at a time.
 
 ## Where this goes next
 
 The next page in every precalculus book is the distance between two points, which is Pythagoras written in coordinates, and after it the midpoint. Then the book's real subject: the graph of an equation in x and y is the set of all points whose coordinates pass the equation, so a line of solutions in [linear equations and their solutions](../../07_Linear_Systems/linear_equations/README.md) becomes a line on the page. The [roadmap](../../ROADMAP.md) lists all three.
+
+## Po polsku, w skrócie
+
+Dwie osie liczbowe, pozioma i pionowa, przecinają się pod kątem prostym w punkcie, który na obu odczytujemy jako 0. To cały aparat. Odtąd każdy punkt płaszczyzny jest jedną parą uporządkowaną liczb rzeczywistych (x, y), a każda para jest jednym punktem. Pierwsza liczba, x, to odległość punktu od osi y ze znakiem: na prawo dodatnia, na lewo ujemna. Druga, y, to odległość od osi x ze znakiem: w górę dodatnia, w dół ujemna. Pułapka: x mierzy się od osi *y*, bo mówi, jak daleko w prawo lub w lewo, a „w prawo lub w lewo" liczy się od linii pionowej. Każda z tych liczb to jedna współrzędna; para to współrzędne punktu, w liczbie mnogiej.
+
+Ćwiartka to nic więcej niż para znaków. Pierwsza: x > 0 i y > 0; druga: x < 0 i y > 0; trzecia: obie ujemne; czwarta: x > 0 i y < 0. Wielkość liczb nie ma znaczenia: (1, 1) i (1000, 5) leżą w tej samej ćwiartce. Punkty na osiach nie należą do żadnej ćwiartki, bo zero nie ma znaku; gdyby definicja używała ≥ zamiast >, początek układu leżałby we wszystkich czterech naraz. Ćwiartki numeruje się przeciwnie do ruchu wskazówek zegara, bo w tę stronę biegnie kąt od dodatniej osi x ku dodatniej osi y. Ta jedna umowa decyduje o znaku kątów, nachyleń i obrotów: ekran komputera odwraca oś y i ten sam wzór na obrót kręci w drugą stronę.
+
+Programy na tej stronie sprawdzają każde z tych twierdzeń na konkretnych punktach, a `plot_points.py` rysuje dowolne punkty i podaje dla każdego ćwiartkę albo oś, więc można nim sprawdzić własny rysunek.
 
 ## See also
 

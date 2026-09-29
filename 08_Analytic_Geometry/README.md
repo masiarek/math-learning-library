@@ -18,6 +18,10 @@ What comes next is on the [roadmap](../ROADMAP.md): the distance between two poi
 
 The opening section of the chapter on graphs in any precalculus book; the lessons here follow Michael Sullivan's *Precalculus*, but Stewart, Larson, Blitzer and the free Stitz and Zeager cover the same page in the same order. For which book to read, see [Precalculus: a reading guide](../reading_guides/precalculus/README.md).
 
+## Po polsku, w skrócie
+
+Pomysł Kartezjusza: dwie osie liczbowe pod kątem prostym zamieniają każdy punkt płaszczyzny w parę liczb, a każdą parę liczb w punkt. Od tej chwili pytanie o rysunek jest pytaniem o arytmetykę, a równanie ma swój obraz. Rozdział idzie w kolejności podręcznika do precalculusu, strona po stronie, z pytaniami z książki na końcu każdej lekcji i talią fiszek Anki obok.
+
 ## A note on the code
 
 Every point is a Python tuple of integers, so "is in quadrant II" is a check on two signs and every count is exact. Nothing is drawn: the one picture in the chapter is a grid of text cells, which is enough to see where four points land.
