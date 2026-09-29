@@ -22,6 +22,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — multiplying scales by a length and turns by an angle
         - [Multiplication can be undone](03_Complex_Numbers/multiplication_can_be_undone/README.md) — why pairs are not multiplied entry by entry
         - [Roots of unity](03_Complex_Numbers/roots_of_unity/README.md) — zⁿ = 1 has exactly n solutions, evenly spaced around a circle
+        - [Euler's identity](03_Complex_Numbers/eulers_identity/README.md) — e^{iπ} = −1: the exponential turns adding into multiplying, so an imaginary input can only turn, and half a turn from 1 is −1
         - ↪ [Precalculus: a reading guide](reading_guides/precalculus/README.md) — where complex numbers sit in the course before calculus, what to know first, which book to read
 - **Sets and size**
     - **Building sets** · from [Sets](04_Sets/README.md)
@@ -42,6 +43,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - [A definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md) — axioms as a test that any set can pass or fail
         - [Subsets inherit the laws](06_Algebraic_Structures/subsets_inherit_the_laws/README.md) — why a subspace needs three checks, not eight
         - [Maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md) — linear maps, logarithms and determinants have one shape
+        - ↪ [Euler's identity](03_Complex_Numbers/eulers_identity/README.md) — the exponential as the map that turns adding into multiplying, followed into the plane
         - ↪ [Precalculus: a reading guide](reading_guides/precalculus/README.md) — exponentials and logarithms as the course before calculus teaches them, and which book to learn them from
     - **Linear algebra** · from [Linear Systems](07_Linear_Systems/README.md)
         - [Linear equations and their solutions](07_Linear_Systems/linear_equations/README.md) — an equation is a test, and a solution of a system passes every one
@@ -75,6 +77,7 @@ A computer holds a finite set of numbers, and that fact reaches well beyond chap
 4. [Probability zero](02_Measure_Zero/probability_zero/README.md) — a finite set has measure zero, so a real number picked at random is almost never a float.
 5. [Exact vs approximate](01_Precision/exact_vs_approximate/README.md) → [Mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md) — a count is exact, so dividing by it costs no significant figures.
 6. [Linear equations and their solutions](07_Linear_Systems/linear_equations/README.md) — exact fractions, so "a tuple passes" means the two sides are equal, not nearly equal.
+7. [Euler's identity](03_Complex_Numbers/eulers_identity/README.md) — `cmath.exp(1j * math.pi)` is not −1: the double nearest π falls short of it by 1.2 × 10⁻¹⁶, and the answer sits exactly that far above the axis.
 
 ### Two kinds of size
 

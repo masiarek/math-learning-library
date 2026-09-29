@@ -60,6 +60,10 @@ Terms used across the library, with the page that explains each in full.
 
 **Distributive** — a × (b + c) = a × b + a × c, and (a + b) × c = a × c + b × c: the law that links two operations. It is what turns two groups on one set into a ring. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
 
+**Euler's formula** — e^{it} = (cos t, sin t): the exponential of an imaginary number is the unit point at angle t, in radians. It is what compounding gives, since (1 + it/n)ⁿ is n small turns whose angles add up to t while their stretches fade to nothing, and it is forced by the law e^{a+b} = e^a e^b, because multiplying unit points can only add angles. See [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
+
+**Euler's identity** — e^{iπ} = −1, the t = π row of Euler's formula: the unit point half a turn from (1, 0) is (−1, 0). It is i² = −1 with the quarter turn cut finer, and the program reaches it exactly as (0, 1)², as (1, 1)⁴ / 4 and as the sixth power of the clock's first mark. `cmath.exp(1j * math.pi)` is not −1 but −1 + 1.2 × 10⁻¹⁶ i, because `math.pi` is not π. See [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
+
 **Exact number** — one that was counted or defined rather than measured (ballots cast, inches per foot, π). Has infinitely many significant figures and never limits a calculation. See [exact vs approximate](01_Precision/exact_vs_approximate/README.md).
 
 **Fat Cantor set** — also the *Smith–Volterra–Cantor set*. Built like the Cantor set, but the gaps deleted at step n are 1/4ⁿ long. It contains no interval and still has length 1/2 — the proof that full of gaps does not mean measure zero. See [the fat Cantor set](02_Measure_Zero/fat_cantor_set/README.md).
@@ -108,11 +112,15 @@ Terms used across the library, with the page that explains each in full.
 
 **Ordinate** — the y-coordinate of a point: its signed distance from the x-axis, positive above it and negative below. The x-coordinate is the *abscissa*. See [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md).
 
+**Polar form** — a nonzero complex number written as r e^{iθ}: its length r times the unit point at its angle θ. Multiplying two of them multiplies the lengths and adds the angles, which is the law of exponents, and de Moivre's formula is (e^{iθ})ⁿ = e^{inθ}. `cmath.polar` reads r and θ off a number and `cmath.rect` puts them back. See [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
+
 **Quadrant** — one of the four regions the coordinate axes cut the plane into, numbered I to IV counterclockwise from the upper right. Membership depends only on the signs of x and y, so (1, 1) and (1000, 5) share a quadrant, and a point on an axis, where one coordinate is 0, is in none. See [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md).
 
 **Quadratic mean** — also the *root mean square*: the square root of the mean of the squares, the one number that keeps the sum of squares. The rated value of an AC voltage is one. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
 
 **Quadrature** — combining independent uncertainties as √(a² + b²) rather than a + b. Linear addition is the worst case and is correct only for perfectly correlated errors. See [uncertainty propagation](01_Precision/uncertainty_propagation/README.md).
+
+**Radian** — the unit of angle in which a point of the unit circle turned through angle t travels a distance t along the circle, so a full turn is 2π and a half turn is π. It is the unit Euler's formula needs, because compounding (1 + it/n)ⁿ turns through the number t itself, and it is the reason the identity has a π in it and not 180. See [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
 
 **Rectangular coordinates** — also *Cartesian coordinates*, after Descartes: the ordered pair (x, y) that locates a point of the plane by its signed distances from two perpendicular number lines, x from the y-axis and y from the x-axis. The origin O = (0, 0) is where the axes cross. See [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md).
 

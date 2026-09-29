@@ -54,6 +54,7 @@ The third chapter builds the complex numbers the way Hamilton did: a complex num
 | [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) | Multiplying scales by a length and turns by an angle, so i² = −1 is two quarter turns making a half turn |
 | [Multiplication can be undone](03_Complex_Numbers/multiplication_can_be_undone/README.md) | Why pairs are not multiplied entry by entry: zero divisors, and ℂ* as the pairs you can divide by |
 | [Roots of unity](03_Complex_Numbers/roots_of_unity/README.md) | Multiplying a unit point by itself walks around the circle in equal steps, so zⁿ = 1 has exactly n solutions: the twelve marks of a clock face, with √3 carried exactly |
+| [Euler's identity](03_Complex_Numbers/eulers_identity/README.md) | What e^{iπ} = −1 means, why the exponential can do nothing with an imaginary input but turn, and what the formula is for: the half turn reached exactly, the polar form, and why Python's answer is −1 + 1.2 × 10⁻¹⁶ i |
 
 [**04_Sets/**](04_Sets/README.md) — *What is this collection, exactly?*
 

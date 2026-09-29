@@ -2,7 +2,7 @@
 
 **Level:** 101 → 201 · for anyone who has multiplied out (a + b)(c + d)
 
-The usual introduction to complex numbers asks you to accept a number whose square is −1, and then to trust that arithmetic with it still works. This chapter takes the other road, the one Hamilton took in 1835: a complex number **is** a pair of real numbers, and multiplication is a rule on pairs. The rule is written down, nothing is assumed, and the number whose square is −1 comes out at the end as a consequence rather than going in at the start as an axiom. The second lesson says what the rule *does*: it scales and turns the plane, so that i² = −1 is nothing more than a quarter turn done twice. The third says why the rule is this one: the obvious entry-by-entry product lets two nonzero pairs multiply to zero, and only the complex rule can always be undone. The fourth is where that picture pays off: multiply a unit point by itself and it walks around the circle in equal steps, so the equation zⁿ = 1 has exactly n solutions, the n-th roots of unity, and the program finds the twelve of them on a clock face with √3 carried exactly.
+The usual introduction to complex numbers asks you to accept a number whose square is −1, and then to trust that arithmetic with it still works. This chapter takes the other road, the one Hamilton took in 1835: a complex number **is** a pair of real numbers, and multiplication is a rule on pairs. The rule is written down, nothing is assumed, and the number whose square is −1 comes out at the end as a consequence rather than going in at the start as an axiom. The second lesson says what the rule *does*: it scales and turns the plane, so that i² = −1 is nothing more than a quarter turn done twice. The third says why the rule is this one: the obvious entry-by-entry product lets two nonzero pairs multiply to zero, and only the complex rule can always be undone. The fourth is where that picture pays off: multiply a unit point by itself and it walks around the circle in equal steps, so the equation zⁿ = 1 has exactly n solutions, the n-th roots of unity, and the program finds the twelve of them on a clock face with √3 carried exactly. The fifth answers the question the first four kept putting off, the angle as a number: e^{iπ} = −1 is not e multiplied by itself πi times but the exponential's one law, that adding inputs multiplies outputs, carried into the plane, where the only thing multiplication can do to a unit point is turn it, and the point half a turn from 1 is −1.
 
 | # | Lesson | The question it answers |
 |---|---|---|
@@ -10,6 +10,7 @@ The usual introduction to complex numbers asks you to accept a number whose squa
 | 2 | [Multiplication rotates](multiplication_rotates/README.md) | Why should two positive things multiply to something negative? |
 | 3 | [Multiplication can be undone](multiplication_can_be_undone/README.md) | Why this rule, and not the obvious entry-by-entry one? |
 | 4 | [Roots of unity](roots_of_unity/README.md) | Which points come back to (1, 0) when multiplied by themselves, and how many solutions does zⁿ = 1 have? |
+| 5 | [Euler's identity](eulers_identity/README.md) | What does e^{iπ} = −1 mean, why does it want to be true, and how is it used? |
 
 ## Where this is taught
 
@@ -36,6 +37,13 @@ For lesson 4, de Moivre's formula and the roots of unity:
 - [Complex Number Primer: powers and roots, Paul's Online Notes ↗](https://tutorial.math.lamar.edu/extras/complexprimer/roots.aspx) — de Moivre's formula and the n-th roots, computed with angles the way a course does it
 - [Root of unity ↗](https://en.wikipedia.org/wiki/Root_of_unity) — Wikipedia
 
+For lesson 5, Euler's formula and the identity:
+
+- [What is Euler's formula actually saying?, 3Blue1Brown ↗](https://www.3blue1brown.com/lessons/ldm-eulers-formula) — the Lockdown Math lecture whose three questions the lesson follows: what does it mean, why does it want to be true, how is it used
+- [The Feynman Lectures on Physics, vol. I, chapter 22: Algebra ↗](https://www.feynmanlectures.caltech.edu/I_22.html) — from counting to e^{iθ} in one chapter, with the imaginary powers computed by hand; the closest thing in print to the lesson's argument
+- [Euler's formula ↗](https://en.wikipedia.org/wiki/Euler%27s_formula) — Wikipedia, with the proofs a course gives
+- Paul Nahin, *Dr. Euler's Fabulous Formula* (Princeton, 2006) — a whole book on the formula and its uses, the sequel to *An Imaginary Tale* below
+
 Easier books, to read before any of the textbooks below. None of them needs calculus. They need the school algebra that lesson 1 uses, and some trigonometry: the unit circle, and the angle-addition formulas for cos(A + B) and sin(A + B), which lesson 2 shows are the multiplication rule in disguise. Roughly easiest first:
 
 - [Imagining Numbers, Barry Mazur ↗](https://books.google.com/books/about/Imagining_Numbers.html?id=nFOD5DxYJu8C) — the gentlest, written for readers with no mathematical background; about how anyone comes to imagine a number like √−15 at all, with more ideas than exercises
@@ -47,6 +55,10 @@ Easier books, to read before any of the textbooks below. None of them needs calc
 
 Textbooks for the course itself, which needs calculus, roughly in order of difficulty: Churchill and Brown, *Complex Variables and Applications*, chapter 1, which defines complex numbers as ordered pairs and is the most common undergraduate choice; Beck, Marchesi, Pixton and Sabalka, [A First Course in Complex Analysis ↗](https://matthbeck.github.io/complex.html), free and at about the same level; Saff and Snider, *Fundamentals of Complex Analysis*; Ahlfors, *Complex Analysis*; Stein and Shakarchi, *Complex Analysis*; and Needham above, which is not a first course but is the one for the geometry.
 
+## Po polsku, w skrócie
+
+Zwykły podręcznik każe uwierzyć w liczbę, której kwadrat to −1, i zaufać, że arytmetyka dalej działa. Ten rozdział idzie drogą Hamiltona: liczba zespolona **jest** parą liczb rzeczywistych, a mnożenie to spisana reguła na parach, (x₁, y₁) · (x₂, y₂) = (x₁x₂ − y₁y₂, x₁y₂ + x₂y₁). Niczego się nie zakłada; to, że (0, 1)² = (−1, 0), wychodzi z reguły na końcu, zamiast wchodzić na początku jako aksjomat. Druga lekcja mówi, co reguła robi: skaluje i obraca płaszczyznę, więc i² = −1 to tylko dwa ćwierćobroty dające półobrót. Trzecia mówi, czemu reguła jest właśnie taka: oczywiste mnożenie po współrzędnych pozwala dwóm niezerowym parom dać zero, a reguła zespolona nigdy, więc tylko ją da się zawsze odwrócić. Czwarta zbiera plon: punkt okręgu mnożony przez siebie obchodzi okrąg równymi krokami, więc zⁿ = 1 ma dokładnie n rozwiązań, a program znajduje dwanaście znaków tarczy zegara z √3 niesionym dokładnie. Piąta odpowiada na pytanie, które cztery pierwsze odkładały, o kąt jako liczbę: e^{iπ} = −1 to prawo potęg, dodawanie na wejściu to mnożenie na wyjściu, przeniesione na płaszczyznę, gdzie mnożenie może z punktem okręgu zrobić tylko jedno, obrócić go, a pół obrotu od 1 to −1.
+
 ## A note on the code
 
-The examples compute with exact fractions (`fractions.Fraction`), never with Python's built-in `complex` type, except in one section each of lessons 1 and 4 that compares the two. The point is that the rule is nothing but real arithmetic, and a program that quietly used `complex` would hide exactly the thing the page is trying to show. Lesson 4 needs √3, and carries it as a symbol with the rule √3 · √3 = 3 rather than as a float, so that h¹² = (1, 0) is an equality and not an approximation.
+The examples compute with exact fractions (`fractions.Fraction`), never with Python's built-in `complex` type, except in one section each of lessons 1 and 4 that compares the two. The point is that the rule is nothing but real arithmetic, and a program that quietly used `complex` would hide exactly the thing the page is trying to show. Lesson 4 needs √3, and carries it as a symbol with the rule √3 · √3 = 3 rather than as a float, so that h¹² = (1, 0) is an equality and not an approximation. Lesson 5 is the exception the rule was waiting for: π is not a fraction, so its compounding of (1 + iπ/n)ⁿ runs in floats, and its last sections use `cmath`, the standard library's complex exponential, because a program that asks Python for e^{iπ} and gets −1 + 1.2 × 10⁻¹⁶ i is the point. The half turn itself it still reaches exactly, as powers of the clock's marks.
