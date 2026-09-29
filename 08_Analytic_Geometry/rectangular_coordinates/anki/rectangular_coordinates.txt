@@ -33,6 +33,9 @@ What is another name for the x-coordinate of a point?	The abscissa.	vocabulary
 What is another name for the y-coordinate of a point?	The ordinate.	vocabulary
 What is the abscissa of a point?	Its x-coordinate.	vocabulary
 What is the ordinate of a point?	Its y-coordinate.	vocabulary
+Where do the words abscissa and ordinate come from?	Latin, from the 1600s, before x and y were the standard letters. Abscissa means cut off: the piece of the axis from O to the foot of the perpendicular from the point. Ordinata means applied in order: that perpendicular itself. Leibniz used both and coined the word coordinates.	vocabulary
+Is the abscissa the x-axis?	No. The abscissa is the number x of a point. The horizontal line is the x-axis, also called the axis of abscissas.	vocabulary
+What are abscissa and ordinate called in Polish, French and German?	Polish odcięta and rzędna, French abscisse and ordonnée, German Abszisse and Ordinate. In those languages they are the only names for the two coordinates.	vocabulary
 How is the point P whose coordinates are (x, y) usually written and said?	Written P = (x, y), and said simply the point (x, y).	vocabulary
 What are the quadrants?	The four regions into which the coordinate axes divide the xy-plane, numbered I to IV counterclockwise starting from the upper right.	quadrants
 Signs of x and y in quadrant I?	x > 0 and y > 0 (upper right).	quadrants
