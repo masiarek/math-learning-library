@@ -26,6 +26,8 @@ It begins with a question that sounds settled and is not: **are significant figu
 
 [**07_Linear_Systems/**](../07_Linear_Systems/README.md) — *What does it mean to solve a system of equations?* It starts where a linear algebra book starts, with the definition before the method: a linear combination is a recipe of fixed coefficients, a linear equation is a test that a list of numbers passes or fails, and a solution of a system passes every test at once. The first lesson reads Hefferon's Definition 1.1 symbol by symbol, on the two balances from the page before it. It needs nothing but school algebra.
 
+[**08_Analytic_Geometry/**](../08_Analytic_Geometry/README.md) — *What does it mean to draw a number?* The first page of every precalculus book, read the way this library reads pages: a point is two signed distances, x from the y-axis and y from the x-axis, and a quadrant is nothing but the pair of signs, which is why the axes belong to none and why the word reaches into trigonometry, complex numbers and the symmetry of graphs. Each lesson ends with the book's questions, answers folded away, and a deck of Anki flashcards. It needs nothing but a number line.
+
 The sidebar lists the chapters A to Z. The numbers above are the suggested order, and the [topic map](../TOPICS.md) groups every lesson by subject, for when you know what you want but not where it is.
 
 ## How to run anything here

@@ -1,0 +1,48 @@
+PROBLEM 15: plot each point; state which quadrant or coordinate axis it lies on
+     y
+     6   .  .  .  .  .  .  |  .  .  .  .  .  .
+     5   .  .  .  .  .  .  |  .  .  .  .  .  D
+     4   .  .  .  .  .  .  |  .  .  .  .  .  .
+     3   .  .  .  .  .  .  |  .  .  .  .  .  .
+     2   .  .  .  A  .  .  |  .  .  .  .  .  .
+     1   .  .  .  .  .  .  |  .  .  .  .  .  .
+     0   -  -  -  -  -  -  O  -  -  -  -  -  B
+    -1   .  .  .  .  .  .  |  .  .  .  .  .  .
+    -2   .  .  .  .  C  .  |  .  .  .  .  .  .
+    -3   .  .  .  .  .  .  E  .  .  .  .  .  F
+    -4   .  .  .  .  .  .  |  .  .  .  .  .  .
+    -5   .  .  .  .  .  .  |  .  .  .  .  .  .
+    -6   .  .  .  .  .  .  |  .  .  .  .  .  .
+        -6 -5 -4 -3 -2 -1  0  1  2  3  4  5  6   x
+   A = (-3, 2)    quadrant II
+   B = (6, 0)     on the x-axis
+   C = (-2, -2)   quadrant III
+   D = (6, 5)     quadrant I
+   E = (0, -3)    on the y-axis
+   F = (6, -3)    quadrant IV
+
+PROBLEM 16: plot each point; state which quadrant or coordinate axis it lies on
+     y
+     6   .  .  .  .  .  .  |  .  .  .  .  .  .
+     5   .  .  .  .  .  .  |  .  .  .  .  .  .
+     4   .  .  .  C  .  .  |  A  .  .  .  .  .
+     3   .  .  .  .  .  .  |  .  .  .  .  .  .
+     2   .  .  .  .  .  .  |  .  .  .  .  .  .
+     1   .  .  .  .  .  .  E  .  .  .  D  .  .
+     0   -  -  -  F  -  -  O  -  -  -  -  -  -
+    -1   .  .  .  .  .  .  |  .  .  .  .  .  .
+    -2   .  .  .  .  .  .  |  .  .  .  .  .  .
+    -3   .  .  .  .  .  .  |  .  .  .  .  .  .
+    -4   .  .  .  B  .  .  |  .  .  .  .  .  .
+    -5   .  .  .  .  .  .  |  .  .  .  .  .  .
+    -6   .  .  .  .  .  .  |  .  .  .  .  .  .
+        -6 -5 -4 -3 -2 -1  0  1  2  3  4  5  6   x
+   A = (1, 4)     quadrant I
+   B = (-3, -4)   quadrant III
+   C = (-3, 4)    quadrant II
+   D = (4, 1)     quadrant I
+   E = (0, 1)     on the y-axis
+   F = (-3, 0)    on the x-axis
+
+To check a plot of your own:  python3 plot_points.py -3,2 6,0 0,-3
+For eight points to practise on:  python3 plot_points.py --drill 3

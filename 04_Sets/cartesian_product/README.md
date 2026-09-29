@@ -134,6 +134,7 @@ python3 04_Sets/cartesian_product/examples/cartesian_product.py
 
 ## See also
 
+- [Rectangular coordinates](../../08_Analytic_Geometry/rectangular_coordinates/README.md) — the pairs of ℝ² as points of the plane: each coordinate a signed distance from an axis, and the four quadrants as the four pairs of signs
 - [Countable sets](../../02_Measure_Zero/countable_sets/README.md) — why a finite product can be listed and ℝ × ℝ cannot
 - [Cartesian product ↗](https://en.wikipedia.org/wiki/Cartesian_product) — Wikipedia
 - [Ordered pair ↗](https://en.wikipedia.org/wiki/Ordered_pair) — Wikipedia, including the Kuratowski construction

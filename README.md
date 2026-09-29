@@ -91,6 +91,14 @@ The seventh chapter follows the first section of Jim Hefferon's *Linear Algebra*
 |---|---|
 | [Linear equations and their solutions](07_Linear_Systems/linear_equations/README.md) | Hefferon's Definition 1.1 symbol by symbol: coefficients, constants, tuples and the double subscripts aᵢ,ⱼ, checked on two balances and a system in three unknowns, and why *linear* means keeping sums and multiples |
 
+[**08_Analytic_Geometry/**](08_Analytic_Geometry/README.md) — *What does it mean to draw a number?*
+
+The eighth chapter is the first page of every precalculus book: two number lines at right angles turn each point of the plane into a pair of numbers, and each pair into a point. Every lesson ends with the book's questions, answers folded away, and a deck of Anki flashcards. It needs nothing but a number line.
+
+| Lesson | What it teaches |
+|---|---|
+| [Rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md) | A point is two signed distances, and from the other axis than you expect; a quadrant is the pair of signs and nothing more, so the axes belong to none; and why that one word runs through trigonometry, complex numbers and the symmetry of graphs |
+
 **Looking for a subject rather than a chapter?** The [topic map](TOPICS.md) sorts every lesson into branches and follows the threads that run between chapters.
 
 ## Why a math library and not a Python one

@@ -26,6 +26,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
 - **Sets and size**
     - **Building sets** · from [Sets](04_Sets/README.md)
         - [The Cartesian product](04_Sets/cartesian_product/README.md) — ordered pairs, ℝ², and why A × B is not B × A
+        - ↪ [Rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md) — the pairs of ℝ² as points of the plane
     - **Size by matching** · from [Sets](04_Sets/README.md) and [Measure Zero](02_Measure_Zero/README.md)
         - [Cardinality of sets](04_Sets/cardinality/README.md) — size defined by matching, not counting
         - [Countable sets](02_Measure_Zero/countable_sets/README.md) — any set that can be listed, even the rationals, has measure zero
@@ -48,6 +49,12 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - ↪ [Subsets inherit the laws](06_Algebraic_Structures/subsets_inherit_the_laws/README.md) — subspaces
         - ↪ [Maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md) — linear maps
         - ↪ [Linear algebra: a reading guide](reading_guides/linear_algebra/README.md) — why it is useful, what to know first, which book to read
+- **Geometry**
+    - **The coordinate plane** · from [Analytic Geometry](08_Analytic_Geometry/README.md)
+        - [Rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md) — a point is two signed distances, a quadrant is two signs, and the axes belong to none
+        - ↪ [The Cartesian product](04_Sets/cartesian_product/README.md) — the set ℝ² that the plane is
+        - ↪ [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — a complex number is a point of this plane, and multiplying by i moves it one quadrant on
+        - ↪ [Precalculus: a reading guide](reading_guides/precalculus/README.md) — the course this is the first page of, and which book to read it in
 - **Chance and data**
     - **Averages** · from [Statistics](05_Statistics/README.md)
         - [Mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md) — one calculation, three sizes of word
@@ -93,6 +100,15 @@ A definition in the axiomatic style is a test that objects pass or fail, and a t
 1. [A definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md) — the vector-space axioms as a test for whole sets.
 2. [Subsets inherit the laws](06_Algebraic_Structures/subsets_inherit_the_laws/README.md) — the shorter test for a subspace.
 3. [Linear equations and their solutions](07_Linear_Systems/linear_equations/README.md) — the same idea one level down: an equation is a test for a tuple.
+
+### The plane as pairs
+
+ℝ² is a set of ordered pairs, and three chapters use it as a plane.
+
+1. [The Cartesian product](04_Sets/cartesian_product/README.md) — the set: every (x, y) with x and y real, and why the order matters.
+2. [Rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md) — the plane: each pair is a point, each coordinate a signed distance from an axis, and the four quadrants are the four pairs of signs.
+3. [Multiplication as pairs](03_Complex_Numbers/multiplication_as_pairs/README.md) → [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — the same points with a multiplication, which turns them; multiplying by i moves a point one quadrant counterclockwise.
+4. [Linear equations and their solutions](07_Linear_Systems/linear_equations/README.md) — one equation in x and y has a line of solutions, and each solution is a point of the plane.
 
 ### The complex numbers as a field
 

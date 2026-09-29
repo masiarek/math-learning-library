@@ -142,6 +142,12 @@ NAV_ORDER: dict[str, list[str]] = {
         "README.md",
         "linear_equations",
     ],
+    # Descartes' idea, in the order a precalculus book takes it: a point is a
+    # pair of signed distances, and a quadrant is the pair of signs.
+    "08_Analytic_Geometry": [
+        "README.md",
+        "rectangular_coordinates",
+    ],
 }
 
 
