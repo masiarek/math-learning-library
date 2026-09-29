@@ -54,6 +54,16 @@ In English the letters won, and a reader can go a lifetime saying x-coordinate. 
 
 One caution about a whiteboard that turns up everywhere: the abscissa is the number x, not the horizontal line. The line is the x-axis, or in the languages above the axis *of abscissas*.
 
+## Names on the number line
+
+Everything on this page happens first in one dimension, and the number line has its own names. The book's word for the number is *coordinate*: the real number associated with a point. The other direction has a name in most algebra books: the point associated with a number is the *graph* of the number, so the coordinate of the graph of 3 is 3, and "graph the number −2" means put a dot there. The number is also the point's *signed distance* from 0, which Larson calls its *directed distance*; 0 is the *origin*; and older books call the point 1 the *unit point*, because choosing it fixes the scale. *Position* is what physics calls the coordinate of a moving point, and *address* is a classroom metaphor. Three words that circulate for this and do not fit: a *locus* is the set of all points meeting a condition, a line or a curve rather than one point; a *tick mark* is a scale mark drawn at every unit whether or not a point is plotted there; and *abscissa* belongs to the plane, where it is the x-coordinate of a point that has two, and on a lone number line nobody uses it.
+
+What the number line says is this page's idea one dimension down: each point is exactly one real number and each real number exactly one point, so "the point 3" and "the number 3" are the same phrase. The plane does it twice.
+
+Why not just say "the x-axis number", or "the x-axis address"? You can, and "the x-value" is what most people say aloud, including mathematicians. The word *coordinate* earns its keep in three ways, none of them a rule against plain speech. It works everywhere: for any axis, for the three coordinates of a point in space, and for polar coordinates, whose two numbers lie on no axis at all, so one word covers what "x-axis number" would need a new phrase for each time. It avoids a misreading: "a number on the x-axis" names a point of the axis, (3, 0), while the x-coordinate of (3, 5) is a number the point is not on; the coordinate is read off the axis, it does not live there. And it is the word in every book and every language, *współrzędna* in Polish, so it is the one you need in order to read. *Address* is a fine metaphor for the whole pair, and the book's own phrase "the coordinates of P" means exactly that. Say what you like; learn the standard word to read.
+
+One usage does need watching, because it is common enough to feel like the definition. In everyday speech and in software, "a coordinate" often means a whole location: a GPS coordinate, a `Coordinate` class holding a latitude and a longitude. Mathematics never uses the word that way. One coordinate is one number, one per axis, and the location is the *coordinates*, plural: the word was coined in the plural, *co-ordinatae*, the numbers "ordered together", and each of them is one of the co-ordinates. So (x, y) is two coordinates, a point on a line has one, and a point in space has three.
+
 ## Plotting
 
 To plot (−3, 1): go 3 units along the x-axis to the left of O, then straight up 1 unit, and put a dot there. The instructions come in the order of the pair, first entry then second, and that order is the whole content of the word *ordered*: (−3, 1) is 3 left and 1 up, while (1, −3) is 1 right and 3 down, a different point in a different quadrant. Section 3 checks it, and [the Cartesian product](../../04_Sets/cartesian_product/README.md) is the page on why a pair remembers which entry is first.
@@ -462,7 +472,7 @@ The skill is two-way and small, so practise both directions until neither needs 
 
 ## Flashcards
 
-The same page as a deck of 65 Anki cards, one fact per card and one or two short sentences on the back, with the reasons left on this page: [`rectangular_coordinates.txt`](anki/rectangular_coordinates.txt). In Anki choose File → Import, pick the file, and the header lines inside it set the separator, the note type (Basic), the deck name and the tags, so nothing needs changing in the dialog. Each card carries a tag for its kind, `definition`, `quadrants`, `plotting` and so on, for studying one kind at a time.
+The same page as a deck of 68 Anki cards, one fact per card and one or two short sentences on the back, with the reasons left on this page: [`rectangular_coordinates.txt`](anki/rectangular_coordinates.txt). In Anki choose File → Import, pick the file, and the header lines inside it set the separator, the note type (Basic), the deck name and the tags, so nothing needs changing in the dialog. Each card carries a tag for its kind, `definition`, `quadrants`, `plotting` and so on, for studying one kind at a time.
 
 ## Where this goes next
 

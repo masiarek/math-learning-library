@@ -6,8 +6,11 @@
 #columns:Front	Back	Tags
 #tags column:3
 On a number line, how many numbers locate a point, and what is the number called?	One. It is called the coordinate of the point.	definition
+On a number line, what is the point that corresponds to a number called?	The graph of the number. The number is the coordinate of the point.	vocabulary
+Why say coordinate rather than x-axis number?	Coordinate works for any axis, any dimension and any system, including polar, whose numbers lie on no axis. And a number on the x-axis is a point (3, 0), while the x-coordinate of (3, 5) is read off the axis without lying on it.	vocabulary
+Is abscissa used for a point on a plain number line?	No. Abscissa is the x-coordinate of a point in the plane. On a line the word is coordinate.	vocabulary
 In the plane, how many numbers locate a point, and what are they called together?	Two. Together they are the ordered pair (x, y), the coordinates of the point.	definition
-Is (x, y) one coordinate or two?	Two: x is the x-coordinate and y is the y-coordinate. The pair is the point's coordinates, plural.	definition
+Is (x, y) one coordinate or two?	Two: x is the x-coordinate and y is the y-coordinate. The pair is the point's coordinates, plural. Everyday speech says a coordinate for a whole location; mathematics never does.	definition
 What is the x-axis?	The horizontal number line.	definition
 What is the y-axis?	The vertical number line.	definition
 In the xy-plane, what is the origin O?	The point where the x-axis and the y-axis intersect. Its coordinates are (0, 0).	definition
