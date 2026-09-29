@@ -5,30 +5,35 @@
 #tags:math precalculus rectangular-coordinates
 #columns:Front	Back	Tags
 #tags column:3
-On a number line, one dimension, how many numbers locate a point, and what is the number called?	One. It is the coordinate of the point. In the plane a point needs two, its x-coordinate and its y-coordinate, and the pair (x, y) is called its coordinates.	definition
-Is (x, y) one coordinate or two?	Two. A coordinate is one real number, one per axis: x is the x-coordinate and y is the y-coordinate. The pair (x, y) is the coordinates of the point, plural. A point on a line has one coordinate, a point in the plane two, a point in space three.	definition
-How many numbers locate a point in a plane, and what are they called together?	Two, one coordinate per axis. Together they form an ordered pair (x, y), the coordinates of the point.	definition
-In a rectangular coordinate system, what is the horizontal number line called?	The x-axis.	definition
-In a rectangular coordinate system, what is the vertical number line called?	The y-axis.	definition
-In the xy-plane, what is the origin O?	The point where the x-axis and the y-axis intersect: the point chosen as 0 on both axes, so its coordinates are (0, 0). On a number line the origin is the single point 0; in space it is (0, 0, 0). One 0 per axis.	definition
-Is the origin a special point of the plane?	No, though its coordinates are always (0, 0): that is what origin means. Which point of the plane gets those coordinates is the choice made when the axes were drawn. Move the axes and another point becomes the origin, and every coordinate changes with it; the points themselves and the distances between them do not. It is the centre of the picture, not of the plane, which has no centre.	definition
-Must the x-axis and the y-axis use the same scale?	No. Mathematics usually uses the same scale on both; an application may use a different scale on each axis.	definition
-Which points on the x-axis carry positive numbers, and which carry negative numbers?	Points to the right of O are positive; points to the left of O are negative.	definition
-Which points on the y-axis carry positive numbers, and which carry negative numbers?	Points above O are positive; points below O are negative.	definition
-What does the arrowhead at the end of an axis mean?	It marks the positive direction of that axis. Some books put arrowheads on both ends to mean the line goes on forever, and then the numbers along the axis say which way is positive.	definition
-Why does it matter which direction of an axis is positive?	It fixes the orientation of the plane. With x positive to the right and y positive upward, the turn from the x-axis to the y-axis is counterclockwise, which is why quadrants, angles and rotations run counterclockwise and a line through (0, 0) and (2, 2) rises. Flip one axis and every rotation and every slope changes sign on the picture.	reasoning
-A computer screen has the origin at the top left with y positive downward. What changes?	Nothing in the numbers, everything in the picture: the book's counterclockwise is the screen's clockwise, the visible screen is the book's quadrant IV, and a rotation formula copied from a textbook turns the wrong way. The most common sign bug in graphics code.	reasoning
-What are the two names of the coordinate system built from two perpendicular number lines?	The rectangular coordinate system, also called the Cartesian coordinate system, after René Descartes.	definition
+On a number line, how many numbers locate a point, and what is the number called?	One. It is called the coordinate of the point.	definition
+In the plane, how many numbers locate a point, and what are they called together?	Two. Together they are the ordered pair (x, y), the coordinates of the point.	definition
+Is (x, y) one coordinate or two?	Two: x is the x-coordinate and y is the y-coordinate. The pair is the point's coordinates, plural.	definition
+What is the x-axis?	The horizontal number line.	definition
+What is the y-axis?	The vertical number line.	definition
+In the xy-plane, what is the origin O?	The point where the x-axis and the y-axis intersect. Its coordinates are (0, 0).	definition
+What are the coordinates of the origin on a line, in the plane, and in space?	0 on a line, (0, 0) in the plane, (0, 0, 0) in space: one 0 per axis.	definition
+Is the origin a special point of the plane?	No. It is whichever point was chosen as 0 on both axes when they were drawn. Its coordinates are (0, 0) by definition.	definition
+Must the x-axis and the y-axis use the same scale?	No. Mathematics usually does; an application may use a different scale on each axis.	definition
+Which points on the x-axis are positive, and which negative?	Right of O positive, left of O negative.	definition
+Which points on the y-axis are positive, and which negative?	Above O positive, below O negative.	definition
+What does the arrowhead at the end of an axis mean?	It marks the positive direction of that axis.	definition
+Can an axis have arrowheads on both ends?	Yes. Then they mean the line goes on forever, and the numbers along the axis say which way is positive.	definition
+Why does it matter which direction of an axis is positive?	It sets the orientation: with x right and y up, the turn from the x-axis to the y-axis is counterclockwise. Flip one axis and every rotation and slope changes sign on the picture.	reasoning
+A computer screen has y positive downward. What changes?	The numbers do not; the picture does. Counterclockwise becomes clockwise, so a textbook rotation formula turns the wrong way.	reasoning
+What are the two names of the coordinate system built from two perpendicular number lines?	Rectangular coordinate system, or Cartesian coordinate system, after René Descartes.	definition
 What is the xy-plane?	The plane in which the x-axis and the y-axis lie.	definition
+What other names does the xy-plane go by?	The Cartesian plane, or the coordinate plane.	vocabulary
+What is genuinely different from rectangular coordinates?	Polar coordinates: the same point named by its distance from the origin and its angle from the x-axis.	vocabulary
 What are the coordinate axes?	The x-axis and the y-axis.	definition
-In the ordered pair (x, y) of a point P, what does x measure?	The signed distance of P from the y-axis: how far right or left P is.	signed-distance
-In the ordered pair (x, y) of a point P, what does y measure?	The signed distance of P from the x-axis: how far up or down P is.	signed-distance
-What does signed mean in the signed distance x?	x > 0 when P is to the right of the y-axis, and x < 0 when P is to the left of it.	signed-distance
-The x-coordinate measures distance from which axis, the x-axis or the y-axis?	The y-axis. It measures right or left of the vertical line, and the vertical line is the y-axis.	signed-distance
+In the ordered pair (x, y) of a point, what does x measure?	The signed distance of the point from the y-axis: how far right or left.	signed-distance
+In the ordered pair (x, y) of a point, what does y measure?	The signed distance of the point from the x-axis: how far up or down.	signed-distance
+What does signed mean in signed distance?	The sign says which side: x > 0 right of the y-axis, x < 0 left of it.	signed-distance
+The x-coordinate measures distance from which axis?	The y-axis. Right or left is measured from the vertical line.	signed-distance
+What does Larson call the signed distance of a point from an axis?	The directed distance. Two names, one number.	vocabulary
 What is the ordered pair (x, y) of a point P called?	The coordinates of P.	definition
-How do you plot the point (−3, 1)?	Go 3 units along the x-axis to the left of O, then straight up 1 unit, and place a dot there.	plotting
-What does it mean to plot a point?	To place a dot at the location in the plane given by its coordinates.	plotting
-What are the coordinates of the origin in the plane, on a line, and in space?	(0, 0) in the plane, 0 on a line, (0, 0, 0) in space: one 0 per axis.	definition
+How do you plot the point (−3, 1)?	Go 3 units left of O along the x-axis, then 1 unit straight up, and place a dot.	plotting
+What does it mean to plot a point?	To place a dot at the location its coordinates give.	plotting
+Must the coordinates of a point be whole numbers?	No. (−1.5, −2.5) is a point in quadrant III. The grid lines are only a reading aid.	plotting
 What form do the coordinates of a point on the x-axis have?	(x, 0): the y-coordinate is 0.	axes
 What form do the coordinates of a point on the y-axis have?	(0, y): the x-coordinate is 0.	axes
 A point has y-coordinate 0. Where is it?	On the x-axis.	axes
@@ -37,33 +42,30 @@ What is another name for the x-coordinate of a point?	The abscissa.	vocabulary
 What is another name for the y-coordinate of a point?	The ordinate.	vocabulary
 What is the abscissa of a point?	Its x-coordinate.	vocabulary
 What is the ordinate of a point?	Its y-coordinate.	vocabulary
-Where do the words abscissa and ordinate come from?	Latin, from the 1600s, before x and y were the standard letters. Abscissa means cut off: the piece of the axis from O to the foot of the perpendicular from the point. Ordinata means applied in order: that perpendicular itself. Leibniz used both and coined the word coordinates.	vocabulary
-Is the abscissa the x-axis?	No. The abscissa is the number x of a point. The horizontal line is the x-axis, also called the axis of abscissas.	vocabulary
-What are abscissa and ordinate called in Polish, French and German?	Polish odcięta and rzędna, French abscisse and ordonnée, German Abszisse and Ordinate. In those languages they are the only names for the two coordinates.	vocabulary
-How is the point P whose coordinates are (x, y) usually written and said?	Written P = (x, y), and said simply the point (x, y).	vocabulary
-What does Larson call the signed distance of a point from an axis?	The directed distance. Directed distance and signed distance are two names for one number: the coordinate, whose sign says which side of the axis the point is on.	vocabulary
-What other names does the xy-plane go by?	The Cartesian plane, or the coordinate plane. Rectangular coordinate system and Cartesian coordinate system are likewise one thing: rectangular says the axes meet at right angles, Cartesian credits Descartes.	vocabulary
-What is genuinely different from rectangular (Cartesian) coordinates?	Polar coordinates: the same point of the same plane named by its distance from the origin and its angle from the x-axis instead of by x and y. A different naming, not a different plane.	vocabulary
-The notation (x, y) has two meanings. What are they?	A point in the plane, an ordered pair; or the open interval of all real numbers t with x < t < y. Only the context says which.	notation
-Does a vector start at the origin?	Not necessarily. A vector is a displacement, such as 3 right and 1 up, and can be drawn from any starting point, its initial point or tail. Drawn from O its tip lands on the point (3, 1), which is why the point (3, 1) and the vector (3, 1) share a notation. The vector from P = (2, 3) to Q = (5, 4) is (5 − 2, 4 − 3) = (3, 1), the same vector.	notation
-Can (5, 2) be an open interval?	No. An interval (a, b) needs a < b, and 5 < 2 fails, so that interval would be empty. (5, 2) can only be the point 5 right and 2 up.	notation
-Must the coordinates of a point be whole numbers?	No. (−1.5, −2.5) is a point in quadrant III, and (√2, 1/3) is a point in quadrant I. The plane is every pair of real numbers; the grid lines are only a reading aid.	plotting
-What are the quadrants?	The four regions into which the coordinate axes divide the xy-plane, numbered I to IV counterclockwise starting from the upper right.	quadrants
-Signs of x and y in quadrant I?	x > 0 and y > 0 (upper right).	quadrants
-Signs of x and y in quadrant II?	x < 0 and y > 0 (upper left).	quadrants
-Signs of x and y in quadrant III?	x < 0 and y < 0 (lower left).	quadrants
-Signs of x and y in quadrant IV?	x > 0 and y < 0 (lower right).	quadrants
+Where do the words abscissa and ordinate come from?	Latin, 1600s: abscissa means cut off, ordinata means applied in order. Older than the letters x and y.	vocabulary
+Is the abscissa the x-axis?	No. The abscissa is the number x. The line is the x-axis, or the axis of abscissas.	vocabulary
+What are abscissa and ordinate called in Polish, French and German?	Odcięta and rzędna; abscisse and ordonnée; Abszisse and Ordinate.	vocabulary
+How is the point P whose coordinates are (x, y) usually written and said?	P = (x, y), and simply the point (x, y).	vocabulary
+The notation (x, y) has three meanings. What are they?	A point in the plane; the open interval of all t with x < t < y; a vector, x right and y up.	notation
+Can (5, 2) be an open interval?	No. An interval (a, b) needs a < b. (5, 2) must be the point.	notation
+Does a vector start at the origin?	Not necessarily. A vector is a displacement and can start anywhere. Started at O, the vector (3, 1) ends at the point (3, 1).	notation
+What is the vector from P = (2, 3) to Q = (5, 4)?	(5 − 2, 4 − 3) = (3, 1): the coordinates of Q minus those of P.	notation
+What are the quadrants?	The four regions the axes divide the plane into, numbered I to IV counterclockwise from the top right.	quadrants
+Signs of x and y in quadrant I?	x > 0 and y > 0 (top right).	quadrants
+Signs of x and y in quadrant II?	x < 0 and y > 0 (top left).	quadrants
+Signs of x and y in quadrant III?	x < 0 and y < 0 (bottom left).	quadrants
+Signs of x and y in quadrant IV?	x > 0 and y < 0 (bottom right).	quadrants
 A point has x < 0 and y > 0. Which quadrant?	Quadrant II.	quadrants
 A point has x > 0 and y < 0. Which quadrant?	Quadrant IV.	quadrants
 A point has x < 0 and y < 0. Which quadrant?	Quadrant III.	quadrants
 A point has x > 0 and y > 0. Which quadrant?	Quadrant I.	quadrants
-Which quadrant is a point on a coordinate axis in?	None. Points on the axes belong to no quadrant, because 0 is neither positive nor negative.	quadrants
-Which quadrant is (3, −2) in?	Quadrant IV: x > 0 and y < 0.	quadrants
-Which quadrant is (−2, −3) in?	Quadrant III: x < 0 and y < 0.	quadrants
-Which quadrant is (−3, 1) in?	Quadrant II: x < 0 and y > 0.	quadrants
-Which quadrant is (3, 2) in?	Quadrant I: x > 0 and y > 0.	quadrants
-In which order are the quadrants numbered around the origin?	Counterclockwise: I upper right, II upper left, III lower left, IV lower right.	quadrants
-Are (2, 5) and (5, 2) the same point?	No. An ordered pair remembers which entry is first: (2, 5) is 2 right and 5 up; (5, 2) is 5 right and 2 up.	ordered-pair
-Why is a quadrant nothing but a pair of signs?	Membership depends only on whether x and y are positive or negative, never on their sizes: (1, 1) and (1000, 5) are both in quadrant I.	reasoning
-What happens to the quadrant of (x, y) when x is replaced by −x?	The point reflects across the y-axis: quadrants I and II swap, and III and IV swap.	reasoning
-In which quadrants is the product xy positive?	I and III, where x and y have the same sign. It is negative in II and IV.	reasoning
+Which quadrant is a point on a coordinate axis in?	None. 0 has no sign, and a quadrant is a pair of signs.	quadrants
+Which quadrant is (3, −2) in?	Quadrant IV: x > 0, y < 0.	quadrants
+Which quadrant is (−2, −3) in?	Quadrant III: x < 0, y < 0.	quadrants
+Which quadrant is (−3, 1) in?	Quadrant II: x < 0, y > 0.	quadrants
+Which quadrant is (3, 2) in?	Quadrant I: x > 0, y > 0.	quadrants
+In which order are the quadrants numbered around the origin?	Counterclockwise: I top right, II top left, III bottom left, IV bottom right.	quadrants
+Are (2, 5) and (5, 2) the same point?	No. (2, 5) is 2 right and 5 up; (5, 2) is 5 right and 2 up.	ordered-pair
+Why is a quadrant nothing but a pair of signs?	Membership depends on the signs of x and y, never on their sizes: (1, 1) and (1000, 5) share quadrant I.	reasoning
+What happens to the quadrant of (x, y) when x is replaced by −x?	The point reflects across the y-axis: I and II swap, III and IV swap.	reasoning
+In which quadrants is the product xy positive?	I and III, where x and y have the same sign. Negative in II and IV.	reasoning

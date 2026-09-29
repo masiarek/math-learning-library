@@ -451,7 +451,7 @@ The skill is two-way and small, so practise both directions until neither needs 
 
 ## Flashcards
 
-The same page as a deck of 62 Anki cards, one fact per card: [`rectangular_coordinates.txt`](anki/rectangular_coordinates.txt). In Anki choose File → Import, pick the file, and the header lines inside it set the separator, the note type (Basic), the deck name and the tags, so nothing needs changing in the dialog. Each card carries a tag for its kind, `definition`, `quadrants`, `plotting` and so on, for studying one kind at a time.
+The same page as a deck of 64 Anki cards, one fact per card and one or two short sentences on the back, with the reasons left on this page: [`rectangular_coordinates.txt`](anki/rectangular_coordinates.txt). In Anki choose File → Import, pick the file, and the header lines inside it set the separator, the note type (Basic), the deck name and the tags, so nothing needs changing in the dialog. Each card carries a tag for its kind, `definition`, `quadrants`, `plotting` and so on, for studying one kind at a time.
 
 ## Where this goes next
 
