@@ -182,13 +182,34 @@ A standard American high-school classroom textbook, from the same series as Glen
 
 **Verdict.** If it is the book your school uses, or you can get it for a few dollars, it is a fine source of practice, and its coverage is not in question. It is not the best book for precalculus, because there is no such book: the content is fixed and uncontroversial, and the books differ in how they are written and what they cost. For someone reading alone, a book written to be read, below, is a better main text, with Glencoe's exercises on the side.
 
+### Michael Sullivan, *Precalculus*, 11th edition (Pearson, 2020; Global Edition 2023)
+
+The college counterpart of Glencoe: one of the four classroom books that between them cover most American precalculus courses, with Stewart, Larson and Blitzer, and the one whose apparatus for self-checking is the most complete. The Global Edition is the same book with some exercises reset outside the United States and a lower price.
+
+**What it is.** A complete course in fourteen chapters, from graphs and functions through polynomial, rational, exponential and logarithmic functions, three chapters of trigonometry, polar coordinates and vectors, conics, systems and matrices, sequences and induction, counting and probability, and a preview of calculus, with an eleven-section review appendix at the back. About eleven hundred pages. Every topic in the table above is in it, and the [rectangular coordinates](../../08_Analytic_Geometry/rectangular_coordinates/README.md) lesson in this library follows its first section.
+
+**Strengths**
+
+- **Every example has a matching exercise.** Each worked example ends with "Now Work Problem n", pointing at the exercise that practises exactly that skill, so a reader can check understanding one example at a time instead of at the end of the section.
+- **It tells you what to review, and when.** Each section opens with *Preparing for this section*, naming the appendix sections it needs with page numbers, and each exercise set opens with *Are You Prepared?*, a few problems that test them. That is the just-in-time route through the appendix described below, built into the book.
+- **Exercise sets in layers.** Concepts and Vocabulary, fill-in-the-blank and true or false, which make ready flashcards; Skill Building; Applications and Extensions; Explaining Concepts; and, new in this edition, *Retain Your Knowledge*, problems from earlier sections placed later so that they come back after an interval. A book that does its own spaced repetition. Answers to the odd-numbered exercises are at the back.
+- **Reliable.** Eleven editions have removed the errors, and the boxed procedures are exact enough to follow blind.
+
+**Weaknesses**
+
+- **Written for a classroom, not a reader.** The explanations are procedures with worked examples; the book says how far more often than why, and it has no voice. It is a reference with a very good exercise bank, not a text to read through.
+- **Heavy.** Eleven hundred pages, with graphing-calculator screens, "real-world" applications and MyLab pointers that serve the course rather than the mathematics, and nothing marks which of it matters most.
+- **Expensive new.** Well over a hundred dollars in the American edition; the Global Edition and any recent used copy cost a fraction, and the content has not changed in a way that matters for years.
+
+**Verdict.** If you have it, keep it, and use it the way it is built to be used: for the exercises and the self-checks, working each section's *Now Work* pairs and *Are You Prepared?* problems rather than reading it front to back. It is the best of the classroom books for someone checking their own work, because its apparatus was designed for exactly that. For understanding why a method works, read the same section in Axler or Stitz and Zeager first, then do Sullivan's problems; the two together are a better course than either alone.
+
 ### Alternatives, by goal
 
 | If you want… | Read |
 |---|---|
 | **A book written to be read alone** | Sheldon Axler, *Precalculus: A Prelude to Calculus* (Wiley). Short sections, explanations of why, and it stops at what calculus needs. Fewer drill exercises than a classroom book. |
 | **A free, complete textbook** | Carl Stitz and Jeff Zeager, [*Precalculus* ↗](https://www.stitz-zeager.com/) (free PDF), written by two community-college teachers with more voice than most; or [OpenStax, *Precalculus 2e* ↗](https://openstax.org/details/books/precalculus-2e) (free online and PDF), plainer and closer to the classroom books. |
-| **The other classroom books** | James Stewart, Lothar Redlin and Saleem Watson, *Precalculus: Mathematics for Calculus* (Cengage), the usual college choice and the one whose sequel is the most-used calculus book. Larson, Sullivan and Blitzer are interchangeable with it and with Glencoe. Any edition from the last twenty years is fine, and the older ones cost nothing. |
+| **The other classroom books** | James Stewart, Lothar Redlin and Saleem Watson, *Precalculus: Mathematics for Calculus* (Cengage), the usual college choice and the one whose sequel is the most-used calculus book. Larson and Blitzer are interchangeable with it and with Glencoe; Sullivan, reviewed above, has the best self-checking apparatus of the four. Any edition from the last twenty years is fine, and the older ones cost nothing. |
 | **Video and checked practice** | [Khan Academy, *Precalculus* ↗](https://www.khanacademy.org/math/precalculus) (free), with exercises that grade themselves; and 3Blue1Brown's *Lockdown Math* series (free), starting with [complex numbers ↗](https://www.3blue1brown.com/lessons/ldm-complex-numbers/), for logarithms, trigonometry and Euler's formula with pictures. |
 | **A fast review before calculus** | George Simmons, *Precalculus Mathematics in a Nutshell*, about 120 pages of geometry, algebra and trigonometry for someone who once knew them; or the algebra and trigonometry review in [Paul's Online Math Notes ↗](https://tutorial.math.lamar.edu/) (free). |
 | **One rigorous book from arithmetic up** | Serge Lang, *Basic Mathematics* (Springer). Terse and proof-flavoured, and it covers everything from pre-algebra to precalculus in one volume. |
