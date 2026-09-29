@@ -109,6 +109,7 @@ A definition in the axiomatic style is a test that objects pass or fail, and a t
 2. [Rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md) — the plane: each pair is a point, each coordinate a signed distance from an axis, and the four quadrants are the four pairs of signs.
 3. [Multiplication as pairs](03_Complex_Numbers/multiplication_as_pairs/README.md) → [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — the same points with a multiplication, which turns them; multiplying by i moves a point one quadrant counterclockwise.
 4. [Linear equations and their solutions](07_Linear_Systems/linear_equations/README.md) — one equation in x and y has a line of solutions, and each solution is a point of the plane.
+5. [A definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md) — the same pairs read as vectors, displacements rather than locations, and the axioms they pass.
 
 ### The complex numbers as a field
 
