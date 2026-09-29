@@ -34,6 +34,8 @@ Two of these rows hide the two mistakes everyone makes once.
 
 Sullivan says *rectangular coordinate system* and *xy-plane*; Larson and Wikipedia say *Cartesian plane*; other books say *coordinate plane*. They are one thing. *Rectangular* says how the axes meet, at right angles; *Cartesian* says who had the idea; *xy-plane* names the axes, and earns its keep later, when a z-axis is added and the xy-plane is one of three coordinate planes. What all three add to *the plane* of school geometry is the pair of axes: the same points, now with names.
 
+The plane before the axes has a property with a name, and it is the reason the origin is a choice: it is *homogeneous*. Every point looks exactly like every other, and sliding the whole plane carries any point onto any other without changing a single distance, so nothing in the plane itself can pick out a centre or a zero. The axes do the picking. That is the whole of the origin's specialness: it is special relative to the coordinate system drawn over the plane, and (0, 0) by definition, not by any property of the point.
+
 The word *rectangular* also points at the one real alternative. Polar coordinates name the same point of the same plane by a different pair, its distance from the origin and its angle from the x-axis, so (1, 1) in rectangular coordinates is (√2, 45°) in polar. That is what "different from Cartesian" means when it means anything: not a different plane, a different way of naming its points, and the conversion between the two is a trigonometry chapter. Until then, rectangular, Cartesian and xy are three names for one plane, the way abscissa and x-coordinate are two names for one number.
 
 ## Which way is positive, and who cares
