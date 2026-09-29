@@ -1,0 +1,133 @@
+1. e ON THE REAL LINE IS COMPOUNDING
+   e^3 is e . e . e, and e^(1/2) or e^pi is not e multiplied by itself
+   some number of times. What defines e^x for every x is compounding,
+   (1 + x/n)^n with n growing without bound. At x = 1:
+     n = 1        (1 + 1/1)^1        = 2            = 2.000000000
+     n = 2        (1 + 1/2)^2        = 9/4          = 2.250000000
+     n = 3        (1 + 1/3)^3        = 64/27        = 2.370370370
+     n = 4        (1 + 1/4)^4        = 625/256      = 2.441406250
+     n = 12       (1 + 1/12)^12                     = 2.613035290
+     n = 365      (1 + 1/365)^365                   = 2.714567482
+     n = 10^6     (1 + 1/10^6)^10^6                 = 2.718280469
+     e                                              = 2.718281828
+   The one thing repeated multiplication leaves behind is its law,
+   e^(a + b) = e^a . e^b: adding inputs multiplies outputs.
+     e^0 = 1.000000   e^1 = 2.718282   e^2 = 7.389056   e^3 = 20.085537
+   Add 1 to the input and the output is multiplied by e, every time:
+     e^1 / e^0 = 2.718282   e^2 / e^1 = 2.718282   e^3 / e^2 = 2.718282
+   The question of this page: what should adding i to the input do?
+
+2. COMPOUNDING AN IMAGINARY NUMBER
+   1 + i t/n is the pair (1, t/n), and raising it to the n-th power
+   needs nothing but the pair rule. At t = 1, exactly in fractions:
+     n = 1   (1 + i/1)^1 = (1, 1)                 |z|^2 = 2
+     n = 2   (1 + i/2)^2 = (3/4, 1)               |z|^2 = 25/16
+     n = 3   (1 + i/3)^3 = (2/3, 26/27)           |z|^2 = 1000/729
+     n = 4   (1 + i/4)^4 = (161/256, 15/16)       |z|^2 = 83521/65536
+   The squared length is (1 + 1/n^2)^n, a little above 1 and falling
+   toward it, and the points are heading somewhere: (cos 1, sin 1) is
+   (0.540302, 0.841471). At t = pi, which is not a fraction, in floats:
+     n          (1 + i pi/n)^n                   length       angle / pi
+     1          (1.0000000, 3.1415927)           3.296908     0.40190674
+     2          (-1.4674011, 3.1415927)          3.467401     0.63909293
+     3          (-2.2898681, 1.9932120)          3.035851     0.77201173
+     4          (-2.3205974, 1.2037004)          2.614205     0.84768947
+     10         (-1.5933623, 0.1560636)          1.600987     0.96892192
+     100        (-1.0505598, 0.0010852)          1.050560     0.99967121
+     10000      (-1.0004936, 0.0000001)          1.000494     0.99999997
+     1000000    (-1.0000049, 0.0000000)          1.000005     1.00000000
+   The length falls to 1 and the angle climbs to pi: the point is
+   settling on (-1, 0). Each factor (1, pi/n) is a small stretch and a
+   small turn, and lesson 2 says what n of them do: the stretches
+   multiply and the turns add.
+     one factor, n = 10^6:  stretch sqrt(1 + (pi/n)^2)   = 1.0000000000049
+                            turn    atan(pi/n)           = 0.0000031415927 rad
+     all n of them:         stretch (1 + (pi/n)^2)^(n/2) = 1.00000493   -> 1
+                            turn    n atan(pi/n)         = 3.14159265   -> pi
+
+3. WHY pi, AND NOT 180: THE UNIT OF ANGLE
+   The turn that n factors add up to is n atan(t/n), and it tends to t
+   itself. A point of the unit circle turned through an angle t travels
+   a distance t along the circle exactly when angles are measured in
+   radians, so that is the unit e^(i t) comes in: e^(i t) is the unit
+   point at t radians, e^(i t) = (cos t, sin t). Python's cmath agrees:
+     t = 1    cmath.exp(1j t) = (0.5403023059, 0.8414709848)     = (cos t, sin t): True
+     t = 2    cmath.exp(1j t) = (-0.4161468365, 0.9092974268)    = (cos t, sin t): True
+     t = pi   cmath.exp(1j t) = (-1.0000000000, 0.0000000000)    = (cos t, sin t): True
+     t = 10   cmath.exp(1j t) = (-0.8390715291, -0.5440211109)   = (cos t, sin t): True
+   Half a turn is pi radians, a full turn 2 pi, and 180 is 180 radians,
+   which is 28.65 turns and lands nowhere special:
+     e^(i pi/2) = (0.0000000000, 1.0000000000)     a quarter turn:  i
+     e^(i pi)   = (-1.0000000000, 0.0000000000)    a half turn:    -1
+     e^(2 pi i) = (1.0000000000, 0.0000000000)     a full turn:     1
+     e^(180 i)  = (-0.5984600691, -0.8011526357)   180 radians, 28.65 turns
+
+4. THE HALF TURN, EXACTLY
+   Euler's formula says e^(i t) is the unit point at angle t radians, so
+   e^(i pi) is the point half a turn from (1, 0). A half turn can be cut
+   into equal turns that are exact, and the pair rule does the rest with
+   no float in sight:
+     the turn            e^(i pi/k), exactly    taken k times
+     2 quarter turns     (0, 1)                 (0, 1)^2 = (-1, 0)
+     3 sixth turns       (1/2, sqrt(3)/2)       (1/2, sqrt(3)/2)^3 = (-1, 0)
+     4 eighth turns      (1, 1) / sqrt(2)       (1, 1)^4 / (sqrt(2))^4 = (-4, 0) / 4 = (-1, 0)
+     6 twelfth turns     (sqrt(3)/2, 1/2)       (sqrt(3)/2, 1/2)^6 = (-1, 0)
+     12 twelfth turns    (sqrt(3)/2, 1/2)       (sqrt(3)/2, 1/2)^12 = (1, 0)   a full turn: e^(2 pi i) = 1
+   Every half turn is (-1, 0) exactly. e^(i pi) = -1 is i^2 = -1 with
+   the quarter turn cut finer: the point (0, 1) is e^(i pi/2), the twelve
+   marks of the clock face are e^(i pi k/6), and the n-th roots of unity
+   of the previous lesson are e^(2 pi i k/n).
+
+5. HOW IT IS USED: EVERY POINT IS r e^(i theta)
+   A nonzero pair has a length r and an angle theta, so it is r times the
+   unit point at theta: r e^(i theta), the polar form. cmath.polar reads
+   r and theta off a point and cmath.rect puts them back:
+     z              r        theta
+     (3, 4)         5.0      0.9272952180
+     (5, 12)        13.0     1.1760052071
+     (-33, 56)      65.0     2.1033004251   their product
+     5 x 13 = 65, and 0.9272952180 + 1.1760052071 = 2.1033004251
+     cmath.rect(65, 2.1033004251) = (-33.0000000000, 56.0000000000)
+   Lengths multiply and angles add, the two halves of lesson 2, and
+   they are now one line, the law of exponents:
+     r1 e^(i a) . r2 e^(i b) = r1 r2 e^(i (a + b))
+   De Moivre's formula is the same line n times over, (e^(i t))^n =
+   e^(i n t), and the angle-addition formulas for cos(a + b) and
+   sin(a + b) are its two coordinates.
+
+6. IN A PROGRAM THE ANSWER IS NOT -1, AND THE ERROR IS pi - math.pi
+     cmath.exp(1j * math.pi)       = (-1+1.2246467991473532e-16j)
+     cmath.exp(1j * math.pi) == -1 : False
+     cmath.exp(1j * math.pi) + 1   = 1.2246467991473532e-16j
+   The identity is exact and the program is not wrong. math.pi is a
+   double, and the double nearest pi falls a little short of it:
+     math.pi        = 3.141592653589793115997963...   the double, written out
+     pi             = 3.141592653589793238462643...
+     pi - math.pi   = 1.2246467991473532e-16
+     sin(math.pi)   = 1.2246467991473532e-16
+   e^(i math.pi) stops 1.22e-16 radians before the half turn, and at
+   that distance along the circle it sits 1.22e-16 above the axis. The
+   whole error is in the input, and none of it in the exponential.
+     cmath.isclose(cmath.exp(1j * math.pi), -1): True
+
+7. THE SERIES, THE WAY A COURSE PROVES IT
+   Calculus writes e^x = 1 + x + x^2/2! + x^3/3! + ... and puts x = i pi
+   in. The powers of i cycle through the four compass points, (1, 0),
+   (0, 1), (-1, 0), (0, -1), so the even terms are real with alternating
+   signs, the series of cos pi, and the odd terms are imaginary, the
+   series of sin pi. The sum of the first k terms:
+     k =  1   (1.000000, 0.000000)
+     k =  2   (1.000000, 3.141593)
+     k =  3   (-3.934802, 3.141593)
+     k =  4   (-3.934802, -2.026120)
+     k =  5   (0.123910, -2.026120)
+     k =  6   (0.123910, 0.524044)
+     k =  7   (-1.211353, 0.524044)
+     k =  8   (-1.211353, -0.075221)
+     k =  9   (-0.976022, -0.075221)
+     k = 10   (-0.976022, 0.006925)
+     k = 12   (-1.001829, -0.000445)
+     k = 16   (-1.000004, -0.000001)
+     k = 20   (-1.000000, 0.000000)
+     k = 24   (-1.000000, 0.000000)
+   The same point the compounding found, reached by a different road.

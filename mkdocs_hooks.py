@@ -105,13 +105,15 @@ NAV_ORDER: dict[str, list[str]] = {
         "probability_zero",
     ],
     # A complex number is a pair of reals and multiplication is a rule on
-    # pairs; the square root of -1 is a consequence, not an assumption.
+    # pairs; the square root of -1 is a consequence, not an assumption, and
+    # e^(i pi) = -1 is the same half turn with a name for every point on it.
     "03_Complex_Numbers": [
         "README.md",
         "multiplication_as_pairs",
         "multiplication_rotates",
         "multiplication_can_be_undone",
         "roots_of_unity",
+        "eulers_identity",
     ],
     # Groundwork the other chapters take for granted: how a set that
     # remembers order is built from ones that do not.
