@@ -60,6 +60,8 @@ Everything on this page happens first in one dimension, and the number line has 
 
 What the number line says is this page's idea one dimension down: each point is exactly one real number and each real number exactly one point, so "the point 3" and "the number 3" are the same phrase. The plane does it twice.
 
+Why not just say "the x-axis number", or "the x-axis address"? You can, and "the x-value" is what most people say aloud, including mathematicians. The word *coordinate* earns its keep in three ways, none of them a rule against plain speech. It works everywhere: for any axis, for the three coordinates of a point in space, and for polar coordinates, whose two numbers lie on no axis at all, so one word covers what "x-axis number" would need a new phrase for each time. It avoids a misreading: "a number on the x-axis" names a point of the axis, (3, 0), while the x-coordinate of (3, 5) is a number the point is not on; the coordinate is read off the axis, it does not live there. And it is the word in every book and every language, *współrzędna* in Polish, so it is the one you need in order to read. *Address* is a fine metaphor for the whole pair, and the book's own phrase "the coordinates of P" means exactly that. Say what you like; learn the standard word to read.
+
 ## Plotting
 
 To plot (−3, 1): go 3 units along the x-axis to the left of O, then straight up 1 unit, and put a dot there. The instructions come in the order of the pair, first entry then second, and that order is the whole content of the word *ordered*: (−3, 1) is 3 left and 1 up, while (1, −3) is 1 right and 3 down, a different point in a different quadrant. Section 3 checks it, and [the Cartesian product](../../04_Sets/cartesian_product/README.md) is the page on why a pair remembers which entry is first.
@@ -468,7 +470,7 @@ The skill is two-way and small, so practise both directions until neither needs 
 
 ## Flashcards
 
-The same page as a deck of 67 Anki cards, one fact per card and one or two short sentences on the back, with the reasons left on this page: [`rectangular_coordinates.txt`](anki/rectangular_coordinates.txt). In Anki choose File → Import, pick the file, and the header lines inside it set the separator, the note type (Basic), the deck name and the tags, so nothing needs changing in the dialog. Each card carries a tag for its kind, `definition`, `quadrants`, `plotting` and so on, for studying one kind at a time.
+The same page as a deck of 68 Anki cards, one fact per card and one or two short sentences on the back, with the reasons left on this page: [`rectangular_coordinates.txt`](anki/rectangular_coordinates.txt). In Anki choose File → Import, pick the file, and the header lines inside it set the separator, the note type (Basic), the deck name and the tags, so nothing needs changing in the dialog. Each card carries a tag for its kind, `definition`, `quadrants`, `plotting` and so on, for studying one kind at a time.
 
 ## Where this goes next
 
