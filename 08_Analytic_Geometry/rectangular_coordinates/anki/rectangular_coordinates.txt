@@ -16,6 +16,7 @@ Is (x, y) one coordinate or two?	Two: x is the x-coordinate and y is the y-coord
 What is the x-axis?	The horizontal number line.	definition
 What is the y-axis?	The vertical number line.	definition
 In the xy-plane, what is the origin O?	The point where the x-axis and the y-axis intersect. Its coordinates are (0, 0).	definition
+What does the number of axes of a coordinate system tell you?	The dimension of the space: one axis per dimension and one coordinate per axis. A line has one, the plane two, space three.	definition
 What are the coordinates of the origin on a line, in the plane, and in space?	0 on a line, (0, 0) in the plane, (0, 0, 0) in space: one 0 per axis.	definition
 Is the origin a special point of the plane?	No. It is whichever point was chosen as 0 on both axes when they were drawn. Its coordinates are (0, 0) by definition.	definition
 Must the x-axis and the y-axis use the same scale?	No. Mathematics usually does; an application may use a different scale on each axis.	definition
