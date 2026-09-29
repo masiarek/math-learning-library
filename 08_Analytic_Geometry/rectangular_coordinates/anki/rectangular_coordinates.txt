@@ -29,6 +29,9 @@ A computer screen has y positive downward. What changes?	The numbers do not; the
 What are the two names of the coordinate system built from two perpendicular number lines?	Rectangular coordinate system, or Cartesian coordinate system, after René Descartes.	definition
 What is the xy-plane?	The plane in which the x-axis and the y-axis lie.	definition
 What other names does the xy-plane go by?	The Cartesian plane, or the coordinate plane.	vocabulary
+Why does Axler say the coordinates are called rectangular?	Each point's coordinates are determined by a rectangle: corners at the origin, the point, and its two feet on the axes, with sides |x| and |y|.	vocabulary
+What names does Axler prefer to x-axis, y-axis, x-coordinate and y-coordinate?	Horizontal axis and vertical axis; first coordinate and second coordinate. They name the slot, so they survive an axis called t and a point written (y, x).	vocabulary
+What two choices fix the scale on an axis?	Where 0 goes, the origin, and where 1 goes, the unit point. Every other label is then determined.	definition
 What is genuinely different from rectangular coordinates?	Polar coordinates: the same point named by its distance from the origin and its angle from the x-axis.	vocabulary
 What are the coordinate axes?	The x-axis and the y-axis.	definition
 In the ordered pair (x, y) of a point, what does x measure?	The signed distance of the point from the y-axis: how far right or left.	signed-distance
