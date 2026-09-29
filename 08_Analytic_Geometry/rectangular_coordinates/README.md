@@ -30,6 +30,14 @@ Two of these rows hide the two mistakes everyone makes once.
 
 **Same scale, or not.** In mathematics the two axes usually carry the same scale, so that a unit right is as long on the page as a unit up. In an application, years along one axis and dollars along the other, each axis takes whatever scale suits it. The coordinates are numbers and do not change; only the picture does.
 
+## Two names for one number
+
+The table gives x a second name, *abscissa*, and y a second name, *ordinate*, and the natural reaction is that a second name for a thing that already has one is silly. It is the other way round: these are the old names, and x and y are the newcomers. Both words are Latin, from the century in which coordinates were invented and before any letters were fixed for the axes. *Abscissa* is "cut off": the piece of the axis cut off between the origin and the foot of the perpendicular dropped from the point. *Ordinata* is "applied in order": that perpendicular itself, one of the family of parallel lines drawn in order to the axis in the Latin editions of Apollonius' work on conics. Leibniz used both in the 1690s, and coined *coordinates* for the pair. So a book that says "the x-coordinate, or abscissa" gives the modern name first and the original second.
+
+In English the letters won, and a reader can go a lifetime saying x-coordinate. In most other languages the old words are the only ones: Polish *odcięta* and *rzędna*, French *abscisse* and *ordonnée*, German *Abszisse* and *Ordinate*, Russian *абсцисса* and *ордината*, each the Latin word translated or borrowed, and the axes are named after them, *oś odciętych* and *oś rzędnych* in Polish. The words also name the role rather than the letter, so they still mean something when the axes are called t and s. The concept is one and the names are two, which is why the [glossary](../../GLOSSARY.md) lists the second pair as synonyms of the first and nothing more.
+
+One caution about a whiteboard that turns up everywhere: the abscissa is the number x, not the horizontal line. The line is the x-axis, or in the languages above the axis *of abscissas*.
+
 ## Plotting
 
 To plot (−3, 1): go 3 units along the x-axis to the left of O, then straight up 1 unit, and put a dot there. The instructions come in the order of the pair, first entry then second, and that order is the whole content of the word *ordered*: (−3, 1) is 3 left and 1 up, while (1, −3) is 1 right and 3 down, a different point in a different quadrant. Section 3 checks it, and [the Cartesian product](../../04_Sets/cartesian_product/README.md) is the page on why a pair remembers which entry is first.
@@ -329,7 +337,7 @@ The skill is two-way and small, so practise both directions until neither needs 
 
 ## Flashcards
 
-The same page as a deck of 48 Anki cards, one fact per card: [`rectangular_coordinates.txt`](anki/rectangular_coordinates.txt). In Anki choose File → Import, pick the file, and the header lines inside it set the separator, the note type (Basic), the deck name and the tags, so nothing needs changing in the dialog. Each card carries a tag for its kind, `definition`, `quadrants`, `plotting` and so on, for studying one kind at a time.
+The same page as a deck of 51 Anki cards, one fact per card: [`rectangular_coordinates.txt`](anki/rectangular_coordinates.txt). In Anki choose File → Import, pick the file, and the header lines inside it set the separator, the note type (Basic), the deck name and the tags, so nothing needs changing in the dialog. Each card carries a tag for its kind, `definition`, `quadrants`, `plotting` and so on, for studying one kind at a time.
 
 ## Where this goes next
 
