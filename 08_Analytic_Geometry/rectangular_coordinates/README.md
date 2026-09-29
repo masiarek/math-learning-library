@@ -494,6 +494,14 @@ The same page as a deck of 70 Anki cards, one fact per card and one or two short
 
 The next page in every precalculus book is the distance between two points, which is Pythagoras written in coordinates, and after it the midpoint. Then the book's real subject: the graph of an equation in x and y is the set of all points whose coordinates pass the equation, so a line of solutions in [linear equations and their solutions](../../07_Linear_Systems/linear_equations/README.md) becomes a line on the page. The [roadmap](../../ROADMAP.md) lists all three.
 
+## Po polsku, w skrócie
+
+Dwie osie liczbowe, pozioma i pionowa, przecinają się pod kątem prostym w punkcie, który na obu odczytujemy jako 0. To cały aparat. Odtąd każdy punkt płaszczyzny jest jedną parą uporządkowaną liczb rzeczywistych (x, y), a każda para jest jednym punktem. Pierwsza liczba, x, to odległość punktu od osi y ze znakiem: na prawo dodatnia, na lewo ujemna. Druga, y, to odległość od osi x ze znakiem: w górę dodatnia, w dół ujemna. Pułapka: x mierzy się od osi *y*, bo mówi, jak daleko w prawo lub w lewo, a „w prawo lub w lewo" liczy się od linii pionowej. Każda z tych liczb to jedna współrzędna; para to współrzędne punktu, w liczbie mnogiej.
+
+Ćwiartka to nic więcej niż para znaków. Pierwsza: x > 0 i y > 0; druga: x < 0 i y > 0; trzecia: obie ujemne; czwarta: x > 0 i y < 0. Wielkość liczb nie ma znaczenia: (1, 1) i (1000, 5) leżą w tej samej ćwiartce. Punkty na osiach nie należą do żadnej ćwiartki, bo zero nie ma znaku; gdyby definicja używała ≥ zamiast >, początek układu leżałby we wszystkich czterech naraz. Ćwiartki numeruje się przeciwnie do ruchu wskazówek zegara, bo w tę stronę biegnie kąt od dodatniej osi x ku dodatniej osi y. Ta jedna umowa decyduje o znaku kątów, nachyleń i obrotów: ekran komputera odwraca oś y i ten sam wzór na obrót kręci w drugą stronę.
+
+Programy na tej stronie sprawdzają każde z tych twierdzeń na konkretnych punktach, a `plot_points.py` rysuje dowolne punkty i podaje dla każdego ćwiartkę albo oś, więc można nim sprawdzić własny rysunek.
+
 ## See also
 
 - [The Cartesian product](../../04_Sets/cartesian_product/README.md) — ℝ² as a set of pairs, and why (2, 5) is not (5, 2)

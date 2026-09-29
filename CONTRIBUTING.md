@@ -33,6 +33,10 @@ Open with the title, then two lines that let a reader decide in five seconds whe
 
 Do not hard-wrap paragraphs. Write each paragraph as one long line and let the editor soft-wrap; Markdown collapses single newlines anyway, so wrapped and unwrapped prose render identically and unwrapped diffs are readable.
 
+## A short explanation in Polish
+
+Every new lesson ends with a section `## Po polsku, w skrócie`, placed just before **See also**, and every new chapter `README.md` carries one before its closing notes. It is a few paragraphs that explain the idea in Polish, in the author's own words: what the claim is, where the trap is, what the program shows. It is an explanation, not a translation of the page, so it may leave things out and may say them differently; a reader who knows only Polish should come away with the idea, and a reader who knows both should not find the page repeated. The owner asked for this on every page written from October 2026 on, and older pages get it when they are next touched.
+
 ## Output is generated, never typed
 
 Mark the spot and let the tool fill it:
