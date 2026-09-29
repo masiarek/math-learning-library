@@ -16,7 +16,7 @@ Two number lines, one horizontal and one vertical, crossing at right angles wher
 |---|---|---|
 | x-axis | "the x axis" | the horizontal number line. Positive to the right of O, negative to the left; the arrowhead marks the positive direction. |
 | y-axis | "the y axis" | the vertical number line. Positive above O, negative below. |
-| O | "the origin" | the point where the two axes cross: the one chosen as 0 on both when the axes were laid down, so O = (0, 0), one 0 per axis. On a number line the origin is the single point 0. It is a choice, not a feature of the plane: draw the axes elsewhere and another point is the origin, and every coordinate changes, while the points and the distances between them do not. |
+| O | "the origin" | the point where the two axes cross: the one chosen as 0 on both when the axes were laid down, so O = (0, 0), one 0 per axis. On a number line the origin is the single point 0. Its coordinates are (0, 0) by definition; *which* point of the plane gets them is a choice, not a feature of the plane: draw the axes elsewhere and another point is the origin, and every coordinate changes, while the points and the distances between them do not. It is the centre of the picture, because that is where the axes are drawn, and not of the plane, which has none. |
 | xy-plane | "the x y plane" | the plane the two axes lie in; the **coordinate axes** are the two lines themselves. |
 | (x, y) | "the point x, y" | an **ordered pair**: the **coordinates** of a point P, plural, one coordinate per axis. On a number line a point has one coordinate; in the plane it has two; in space, three. The book writes P = (x, y) and then just says "the point (x, y)". |
 | x | "the x coordinate", or **abscissa** | the **signed distance** of P from the *y*-axis: how far right (x > 0) or left (x < 0) of the vertical line. |
@@ -41,6 +41,8 @@ The word *rectangular* also points at the one real alternative. Polar coordinate
 The arrowhead on an axis marks its positive direction, and it is fair to ask whether that is worth a card. Some books draw arrowheads on both ends of each axis, and that is fine: there the arrows mean "the line goes on forever both ways", and the numbers along the axis say which way is positive. Either way, something has to say it, because which way is positive is not decoration. It is the *orientation* of the plane, and a surprising amount hangs on it.
 
 With x positive to the right and y positive upward, the turn from the positive x-axis toward the positive y-axis is counterclockwise. That one fact is why the quadrants are numbered counterclockwise, why angles are measured counterclockwise, why [multiplying by i](../../03_Complex_Numbers/multiplication_rotates/README.md) is a counterclockwise quarter turn, and why a line through the origin and (2, 2) "rises". Flip one axis and every one of those turns the other way. Nobody does that on paper, but every computer screen does: pixel coordinates put the origin at the top left with y positive *downward*, so the mathematician's counterclockwise is the screen's clockwise, the visible screen is what the book would call quadrant IV, and a rotation formula copied from a textbook turns the wrong way. That is the most common sign bug in graphics code, and it is exactly the arrow.
+
+That is also the whole answer to why the quadrants are numbered counterclockwise. An angle in standard position starts on the positive x-axis and opens toward the positive y-axis, and with the usual axes that is counterclockwise. Its first quarter turn, 0° to 90°, sweeps the region above the positive x-axis and to the right of the positive y-axis, where both coordinates are positive; that is quadrant I, first because the sweep starts there. The next quarter turns sweep II, III and IV in order, so the numbers on the quadrants are the order a growing angle visits them. Nothing about the plane prefers counterclockwise. The axes do: draw y downward and the same rule numbers the quadrants clockwise on the page, as the two pictures below show.
 
 Section 10 of the program draws the same four points twice, once with y upward and once with y downward, not one coordinate changed. The quarter turn visits them in the order 1, 2, 3, 4 in both pictures, counterclockwise in the first and clockwise in the second. The same choice decides the sign of a slope, of an angle, of an area computed by a determinant, of a physics equation for a falling object where "up is positive" or "down is positive" flips the sign of g, and of a compass bearing, measured clockwise from north where mathematics measures counterclockwise from east. So who cares: anyone who has ever had a rotation come out backwards. The arrow is the one mark on the figure that says which way is around.
 
@@ -363,6 +365,15 @@ Quadrant I, x > 0 and y > 0, is below and to the right of the origin, which is t
 
 </details>
 
+**18. Why are the quadrants numbered counterclockwise rather than clockwise?**
+
+<details><summary>Answer</summary>
+
+Because an angle is measured from the positive x-axis toward the positive y-axis, and with x to the right and y upward that turn is counterclockwise. The first quarter turn, 0° to 90°, sweeps the region where both coordinates are positive, so it is quadrant I, and II, III and IV follow the turn. The rule is "from the first axis toward the second"; it is the axes, not the plane, that make it counterclockwise.
+
+</details>
+
+
 
 
 ## Plot it yourself, and let the program check it
@@ -451,7 +462,7 @@ The skill is two-way and small, so practise both directions until neither needs 
 
 ## Flashcards
 
-The same page as a deck of 62 Anki cards, one fact per card: [`rectangular_coordinates.txt`](anki/rectangular_coordinates.txt). In Anki choose File → Import, pick the file, and the header lines inside it set the separator, the note type (Basic), the deck name and the tags, so nothing needs changing in the dialog. Each card carries a tag for its kind, `definition`, `quadrants`, `plotting` and so on, for studying one kind at a time.
+The same page as a deck of 65 Anki cards, one fact per card and one or two short sentences on the back, with the reasons left on this page: [`rectangular_coordinates.txt`](anki/rectangular_coordinates.txt). In Anki choose File → Import, pick the file, and the header lines inside it set the separator, the note type (Basic), the deck name and the tags, so nothing needs changing in the dialog. Each card carries a tag for its kind, `definition`, `quadrants`, `plotting` and so on, for studying one kind at a time.
 
 ## Where this goes next
 
