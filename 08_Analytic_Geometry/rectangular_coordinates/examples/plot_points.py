@@ -4,6 +4,7 @@
 Run:  python3 plot_points.py                          the book's problems 15 and 16
       python3 plot_points.py -3,2 6,0 "(0, -3)"       your own points, labelled A, B, C ...
       python3 plot_points.py P=2,5 Q=5,2              your own labels
+      python3 plot_points.py -1.5,-2.5 1/2,3          decimals and fractions, drawn at the nearest cell
       python3 plot_points.py --drill 3                eight points to plot, answers below a line
 
 Without arguments it plots the two "Skill Building" exercises that follow the
@@ -14,14 +15,18 @@ and the last column with what you drew. --drill takes a seed, so the same
 number always gives the same eight points and the answers can be checked
 against a friend's.
 
-Coordinates are integers, because the grid has one cell per unit.
+The grid has one cell per unit, so a point between grid lines is drawn at the
+nearest cell with a lowercase letter; its quadrant or axis is stated exactly,
+from the signs, which do not care about grid lines.
 """
 
+import math
 import random
 import string
 import sys
+from fractions import Fraction
 
-Point = tuple[int, int]
+Point = tuple[Fraction, Fraction]
 
 # Sullivan, Precalculus, section 1.1, problems 15 and 16: "plot each point in
 # the xy-plane. State which quadrant or on what coordinate axis each point lies."
@@ -49,16 +54,38 @@ def where(point: Point) -> str:
     return "quadrant IV"
 
 
+def num(v) -> str:
+    """An integer as itself, a terminating decimal as a decimal, anything else as a fraction."""
+    v = Fraction(v)
+    if v.denominator == 1:
+        return str(v.numerator)
+    d = v.denominator
+    while d % 2 == 0:
+        d //= 2
+    while d % 5 == 0:
+        d //= 5
+    return repr(float(v)) if d == 1 else f"{v.numerator}/{v.denominator}"
+
+
 def fmt(point: Point) -> str:
-    return f"({point[0]}, {point[1]})"
+    return f"({num(point[0])}, {num(point[1])})"
+
+
+def grid_cell(point: Point) -> tuple[int, int]:
+    """The grid cell a point is drawn in: its own if integer, else the nearest."""
+    return tuple(math.floor(Fraction(v) + Fraction(1, 2)) for v in point)  # type: ignore[return-value]
+
+
+def on_grid(point: Point) -> bool:
+    return all(Fraction(v).denominator == 1 for v in point)
 
 
 def plot(points: list[tuple[str, Point]]) -> None:
     """The grid: axes as | and -, origin O, one letter per point, * where two share a cell."""
-    reach = max([6] + [abs(c) for _, p in points for c in p])
-    cells: dict[Point, list[str]] = {}
+    reach = max([6] + [abs(c) for _, p in points for c in grid_cell(p)])
+    cells: dict[tuple[int, int], list[str]] = {}
     for label, p in points:
-        cells.setdefault(p, []).append(label)
+        cells.setdefault(grid_cell(p), []).append(label if on_grid(p) else label.lower())
     print("     y")
     for y in range(reach, -reach - 1, -1):
         row = []
@@ -88,19 +115,22 @@ def report(points: list[tuple[str, Point]]) -> None:
     for p in sorted(shared):
         names = ", ".join(label for label, q in points if q == p)
         print(f"   * at {fmt(p)}: {names} are the same point")
+    for label, p in points:
+        if not on_grid(p):
+            print(f"   {label.lower()}: {fmt(p)} lies between grid lines and is drawn at the nearest cell {grid_cell(p)}")
 
 
 def parse(args: list[str]) -> list[tuple[str, Point]]:
-    """'-3,2', '(−3, 2)' or 'P=-3,2' -> a labelled point; unlabelled ones get A, B, C ..."""
+    """'-3,2', '(-3, 2)', '-1.5,1/2' or 'P=-3,2' -> a labelled point; unlabelled ones get A, B, C ..."""
     points = []
     letters = iter(string.ascii_uppercase)
     for arg in args:
         label, _, coords = arg.rpartition("=")
         text = coords.replace("−", "-").replace("(", "").replace(")", "").replace(" ", "")
         try:
-            x, y = (int(part) for part in text.split(","))
-        except ValueError:
-            sys.exit(f"cannot read {arg!r}: write a point as x,y with integer coordinates, e.g. -3,2")
+            x, y = (Fraction(part) for part in text.split(","))
+        except (ValueError, ZeroDivisionError):
+            sys.exit(f"cannot read {arg!r}: write a point as x,y, e.g. -3,2 or -1.5,-2.5 or 1/2,3")
         points.append((label or next(letters), (x, y)))
     return points
 
