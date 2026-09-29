@@ -16,7 +16,7 @@ Two number lines, one horizontal and one vertical, crossing at right angles wher
 |---|---|---|
 | x-axis | "the x axis" | the horizontal number line. Positive to the right of O, negative to the left; the arrowhead marks the positive direction. |
 | y-axis | "the y axis" | the vertical number line. Positive above O, negative below. |
-| O | "the origin" | the point where the two axes cross. It reads 0 on both, so O = (0, 0). |
+| O | "the origin" | the point where the two axes cross: the one chosen as 0 on both when the axes were laid down, so O = (0, 0), one 0 per axis. On a number line the origin is the single point 0. It is a choice, not a feature of the plane: draw the axes elsewhere and another point is the origin, and every coordinate changes, while the points and the distances between them do not. |
 | xy-plane | "the x y plane" | the plane the two axes lie in; the **coordinate axes** are the two lines themselves. |
 | (x, y) | "the point x, y" | an **ordered pair**: the **coordinates** of a point P, plural, one coordinate per axis. On a number line a point has one coordinate; in the plane it has two; in space, three. The book writes P = (x, y) and then just says "the point (x, y)". |
 | x | "the x coordinate", or **abscissa** | the **signed distance** of P from the *y*-axis: how far right (x > 0) or left (x < 0) of the vertical line. |
@@ -52,9 +52,11 @@ Section 1 draws the book's figure as a grid of cells: the four points (−3, 1),
 
 The grid lines are a reading aid, not a rule. (−1.5, −2.5) is as much a point as (−2, −3), in quadrant III by the same two signs, and so is (√2, 1/3): the plane is every pair of real numbers, all of ℝ², and the integer points are the ones with a grid line through them. The checker below takes decimals and fractions and draws them at the nearest cell.
 
-## One notation, two meanings
+## One notation, three meanings
 
 Larson ends his page with a warning worth its own card: (x, y) means a point in the plane, and (x, y) also means an open interval on the number line, every real number t with x < t < y. Two objects, one notation, and only the context says which. The point (2, 5) is an ordered pair, a member of ℝ²; the interval (2, 5) is a set of numbers, and 3 is in it. Section 9 of the program keeps them apart in the one way Python can: a tuple `(2, 5)` holds the numbers 2 and 5 and nothing else, so `3 in (2, 5)` is false, while the interval is the test `2 < t < 5`, which 3 passes. There is one sure sign: an interval (a, b) needs a < b, so (5, 2) can only be a point. Intervals are the tool of [what measure zero means](../../02_Measure_Zero/what_measure_zero_means/README.md), where every length is a length of intervals, and none of them is a point.
+
+The third reading is a vector. The point (3, 1) is a location, one place in the plane. The vector (3, 1) is a displacement, three right and one up, and a displacement can start anywhere: drawn from (2, 3) it ends at (5, 4), drawn from (−3, −4) it ends at (0, −3), and it is the same vector each time, because a vector remembers the trip and not the starting point. Drawn from the origin O, its tip lands exactly on the point (3, 1), which is why the two share a notation and why linear algebra treats ℝ² as both at once: the vector from P = (2, 3) to Q = (5, 4) has components (5 − 2, 4 − 3), the coordinates of Q minus those of P. So a vector has no origin of its own, only an initial point, and O is special to it only as the starting point that makes tip and point coincide. [A definition is a test](../../06_Algebraic_Structures/a_definition_is_a_test/README.md) runs the vector-space axioms on exactly these pairs.
 
 ## What a quadrant is, and why the word earns its keep
 
@@ -307,6 +309,15 @@ None in what they name: the same plane with the same two axes. *Rectangular* des
 
 </details>
 
+**16. A vector is drawn from (2, 3) to (5, 4). What are its components, and where does it end if drawn from the origin instead?**
+
+<details><summary>Answer</summary>
+
+Its components are (5 − 2, 4 − 3) = (3, 1): three right and one up. Drawn from O it ends at the point (3, 1). Same vector, different starting point; the origin is only the starting point that makes the vector's tip and the point with the same numbers coincide.
+
+</details>
+
+
 
 ## Plot it yourself, and let the program check it
 
@@ -394,7 +405,7 @@ The skill is two-way and small, so practise both directions until neither needs 
 
 ## Flashcards
 
-The same page as a deck of 58 Anki cards, one fact per card: [`rectangular_coordinates.txt`](anki/rectangular_coordinates.txt). In Anki choose File → Import, pick the file, and the header lines inside it set the separator, the note type (Basic), the deck name and the tags, so nothing needs changing in the dialog. Each card carries a tag for its kind, `definition`, `quadrants`, `plotting` and so on, for studying one kind at a time.
+The same page as a deck of 60 Anki cards, one fact per card: [`rectangular_coordinates.txt`](anki/rectangular_coordinates.txt). In Anki choose File → Import, pick the file, and the header lines inside it set the separator, the note type (Basic), the deck name and the tags, so nothing needs changing in the dialog. Each card carries a tag for its kind, `definition`, `quadrants`, `plotting` and so on, for studying one kind at a time.
 
 ## Where this goes next
 
@@ -406,6 +417,7 @@ The next page in every precalculus book is the distance between two points, whic
 - [Multiplication as pairs](../../03_Complex_Numbers/multiplication_as_pairs/README.md) — a complex number is a point (x, y) of this plane
 - [Multiplication rotates](../../03_Complex_Numbers/multiplication_rotates/README.md) — multiplying by i is the quarter turn of section 8, one quadrant on
 - [Linear equations and their solutions](../../07_Linear_Systems/linear_equations/README.md) — one equation in x and y has a whole line of solutions, and those solutions are points here
+- [A definition is a test](../../06_Algebraic_Structures/a_definition_is_a_test/README.md) — the same pairs read as vectors, and the axioms they pass
 - [Mean, average, arithmetic mean](../../05_Statistics/mean_vs_average/README.md) — the two means that a scatter plot's quadrants are drawn from
 - [Precalculus: a reading guide](../../reading_guides/precalculus/README.md) — where this sits in the course, and which book to read it in
 - [Cartesian coordinate system ↗](https://en.wikipedia.org/wiki/Cartesian_coordinate_system) — Wikipedia, with the history and the higher-dimensional version
