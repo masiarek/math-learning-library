@@ -36,6 +36,14 @@ Sullivan says *rectangular coordinate system* and *xy-plane*; Larson and Wikiped
 
 The word *rectangular* also points at the one real alternative. Polar coordinates name the same point of the same plane by a different pair, its distance from the origin and its angle from the x-axis, so (1, 1) in rectangular coordinates is (√2, 45°) in polar. That is what "different from Cartesian" means when it means anything: not a different plane, a different way of naming its points, and the conversion between the two is a trigonometry chapter. Until then, rectangular, Cartesian and xy are three names for one plane, the way abscissa and x-coordinate are two names for one number.
 
+## Which way is positive, and who cares
+
+The arrowhead on an axis marks its positive direction, and it is fair to ask whether that is worth a card. Some books draw arrowheads on both ends of each axis, and that is fine: there the arrows mean "the line goes on forever both ways", and the numbers along the axis say which way is positive. Either way, something has to say it, because which way is positive is not decoration. It is the *orientation* of the plane, and a surprising amount hangs on it.
+
+With x positive to the right and y positive upward, the turn from the positive x-axis toward the positive y-axis is counterclockwise. That one fact is why the quadrants are numbered counterclockwise, why angles are measured counterclockwise, why [multiplying by i](../../03_Complex_Numbers/multiplication_rotates/README.md) is a counterclockwise quarter turn, and why a line through the origin and (2, 2) "rises". Flip one axis and every one of those turns the other way. Nobody does that on paper, but every computer screen does: pixel coordinates put the origin at the top left with y positive *downward*, so the mathematician's counterclockwise is the screen's clockwise, the visible screen is what the book would call quadrant IV, and a rotation formula copied from a textbook turns the wrong way. That is the most common sign bug in graphics code, and it is exactly the arrow.
+
+Section 10 of the program draws the same four points twice, once with y upward and once with y downward, not one coordinate changed. The quarter turn visits them in the order 1, 2, 3, 4 in both pictures, counterclockwise in the first and clockwise in the second. The same choice decides the sign of a slope, of an angle, of an area computed by a determinant, of a physics equation for a falling object where "up is positive" or "down is positive" flips the sign of g, and of a compass bearing, measured clockwise from north where mathematics measures counterclockwise from east. So who cares: anyone who has ever had a rotation come out backwards. The arrow is the one mark on the figure that says which way is around.
+
 ## Two names for one number
 
 The table gives x a second name, *abscissa*, and y a second name, *ordinate*, and the natural reaction is that a second name for a thing that already has one is silly. It is the other way round: these are the old names, and x and y are the newcomers. Both words are Latin, from the century in which coordinates were invented and before any letters were fixed for the axes. *Abscissa* is "cut off": the piece of the axis cut off between the origin and the foot of the perpendicular dropped from the point. *Ordinata* is "applied in order": that perpendicular itself, one of the family of parallel lines drawn in order to the axis in the Latin editions of Apollonius' work on conics. Leibniz used both in the 1690s, and coined *coordinates* for the pair. So a book that says "the x-coordinate, or abscissa" gives the modern name first and the original second.
@@ -182,6 +190,36 @@ The program stores each point as a Python tuple, which is an ordered pair, and s
    (5, 2) as a point is 5 right and 2 up, quadrant I. As an interval:
      t = 3:  5 < 3 < 2  is False;   no t passes, the interval (5, 2) is empty,
      so when a < b fails the notation can only mean the point.
+
+10. THE ARROW DECIDES WHICH WAY IS AROUND
+   the quarter turn (x, y) -> (-y, x), applied three times from (3, 2):
+     (3, 2) -> (-2, 3) -> (-3, -2) -> (2, -3),  quadrants I II III IV
+   the four positions, numbered 1 to 4, with y positive UPWARD (the book):
+     4   .  .  .  .  |  .  .  .  .
+     3   .  .  2  .  |  .  .  .  .
+     2   .  .  .  .  |  .  .  1  .
+     1   .  .  .  .  |  .  .  .  .
+     0   -  -  -  -  O  -  -  -  -
+    -1   .  .  .  .  |  .  .  .  .
+    -2   .  3  .  .  |  .  .  .  .
+    -3   .  .  .  .  |  .  4  .  .
+    -4   .  .  .  .  |  .  .  .  .
+        -4 -3 -2 -1  0  1  2  3  4   x
+   the same four points, same numbers, with y positive DOWNWARD (a computer screen):
+    -4   .  .  .  .  |  .  .  .  .
+    -3   .  .  .  .  |  .  4  .  .
+    -2   .  3  .  .  |  .  .  .  .
+    -1   .  .  .  .  |  .  .  .  .
+     0   -  -  -  -  O  -  -  -  -
+     1   .  .  .  .  |  .  .  .  .
+     2   .  .  .  .  |  .  .  1  .
+     3   .  .  2  .  |  .  .  .  .
+     4   .  .  .  .  |  .  .  .  .
+        -4 -3 -2 -1  0  1  2  3  4   x
+   1 -> 2 -> 3 -> 4 runs counterclockwise in the first picture and clockwise in
+   the second. Not one coordinate changed; only which way the y-axis points.
+   The same flip turns the line through (0, 0) and (2, 2) from rising to falling.
+   Which direction is positive is a choice, and the arrow records it.
 ```
 <!-- /output -->
 
@@ -317,6 +355,14 @@ Its components are (5 − 2, 4 − 3) = (3, 1): three right and one up. Drawn fr
 
 </details>
 
+**17. A screen puts the origin at the top left with y positive downward. Where on the screen is the book's quadrant I, and which way does a counterclockwise rotation formula turn there?**
+
+<details><summary>Answer</summary>
+
+Quadrant I, x > 0 and y > 0, is below and to the right of the origin, which is the visible screen; the book's picture has it above. A formula that turns counterclockwise with y upward turns clockwise on that screen, because the y-axis points the other way. Section 10 shows the same four points both ways.
+
+</details>
+
 
 
 ## Plot it yourself, and let the program check it
@@ -405,7 +451,7 @@ The skill is two-way and small, so practise both directions until neither needs 
 
 ## Flashcards
 
-The same page as a deck of 60 Anki cards, one fact per card: [`rectangular_coordinates.txt`](anki/rectangular_coordinates.txt). In Anki choose File → Import, pick the file, and the header lines inside it set the separator, the note type (Basic), the deck name and the tags, so nothing needs changing in the dialog. Each card carries a tag for its kind, `definition`, `quadrants`, `plotting` and so on, for studying one kind at a time.
+The same page as a deck of 62 Anki cards, one fact per card: [`rectangular_coordinates.txt`](anki/rectangular_coordinates.txt). In Anki choose File → Import, pick the file, and the header lines inside it set the separator, the note type (Basic), the deck name and the tags, so nothing needs changing in the dialog. Each card carries a tag for its kind, `definition`, `quadrants`, `plotting` and so on, for studying one kind at a time.
 
 ## Where this goes next
 

@@ -15,7 +15,9 @@ Is the origin a special point of the plane?	No. It is the point chosen as 0 when
 Must the x-axis and the y-axis use the same scale?	No. Mathematics usually uses the same scale on both; an application may use a different scale on each axis.	definition
 Which points on the x-axis carry positive numbers, and which carry negative numbers?	Points to the right of O are positive; points to the left of O are negative.	definition
 Which points on the y-axis carry positive numbers, and which carry negative numbers?	Points above O are positive; points below O are negative.	definition
-What does the arrowhead at the end of an axis mean?	It marks the positive direction of that axis.	definition
+What does the arrowhead at the end of an axis mean?	It marks the positive direction of that axis. Some books put arrowheads on both ends to mean the line goes on forever, and then the numbers along the axis say which way is positive.	definition
+Why does it matter which direction of an axis is positive?	It fixes the orientation of the plane. With x positive to the right and y positive upward, the turn from the x-axis to the y-axis is counterclockwise, which is why quadrants, angles and rotations run counterclockwise and a line through (0, 0) and (2, 2) rises. Flip one axis and every rotation and every slope changes sign on the picture.	reasoning
+A computer screen has the origin at the top left with y positive downward. What changes?	Nothing in the numbers, everything in the picture: the book's counterclockwise is the screen's clockwise, the visible screen is the book's quadrant IV, and a rotation formula copied from a textbook turns the wrong way. The most common sign bug in graphics code.	reasoning
 What are the two names of the coordinate system built from two perpendicular number lines?	The rectangular coordinate system, also called the Cartesian coordinate system, after René Descartes.	definition
 What is the xy-plane?	The plane in which the x-axis and the y-axis lie.	definition
 What are the coordinate axes?	The x-axis and the y-axis.	definition
