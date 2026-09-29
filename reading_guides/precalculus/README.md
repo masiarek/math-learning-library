@@ -201,6 +201,24 @@ A standard American high-school classroom textbook, from the same series as Glen
 - **Returning after years away:** Simmons or Paul's Online Notes, then straight into a calculus book with a review chapter, and back to a precalculus book only for what gives trouble.
 - **Strong and impatient:** Art of Problem Solving, with Lang alongside.
 
+## The review appendix: read it just in time
+
+Every classroom precalculus book opens with a review of algebra, and the temptation is to read it first. Do not. In Sullivan's *Precalculus* the review is Appendix A, eleven sections and about ninety pages, and the book itself says which parts each section needs: every section opens with a *Preparing for this section* box naming the appendix sections to review, with page numbers, and every exercise set opens with *Are You Prepared?*, a few problems that test exactly those, each with a page reference. So the working order is: open the section you are on, do its *Are You Prepared?* problems cold, and read only the appendix section each miss points to. Before section 1.1 that means A.1 and A.2, and A.2 mostly for the Pythagorean theorem. Stewart, Larson and Blitzer have the same device under other names.
+
+What the appendix sections are for, when they are first needed, and what this library already has on each:
+
+| Section | Reviews | First needed by | In this library |
+|---|---|---|---|
+| A.1 Algebra Essentials | sets, the real number line, absolute value as distance, exponent laws, scientific notation | 1.1 | [the Cartesian product](../../04_Sets/cartesian_product/README.md) for sets; [01_Precision](../../01_Precision/README.md) for scientific notation; the number line in [rectangular coordinates](../../08_Analytic_Geometry/rectangular_coordinates/README.md) |
+| A.2 Geometry Essentials | Pythagoras, area and volume, similar triangles | 1.1, the distance formula | not yet; the distance formula is on the [roadmap](../../ROADMAP.md) |
+| A.3 to A.7 | polynomials, factoring, synthetic division, rational expressions, roots and rational exponents | chapters 2 to 4, as they arise | [a definition is a test](../../06_Algebraic_Structures/a_definition_is_a_test/README.md) proves the exponent laws A.7 states |
+| A.8 Solving Equations | linear, quadratic and radical equations | 1.2, intercepts | [catastrophic cancellation](../../01_Precision/catastrophic_cancellation/README.md), on what the quadratic formula does to a calculator |
+| A.9 Problem Solving | interest, mixture and motion problems | optional | the doubling-time example above |
+| A.10 Interval Notation; Inequalities | intervals, solving inequalities | 2.1, domains | the interval reading of (x, y) in [rectangular coordinates](../../08_Analytic_Geometry/rectangular_coordinates/README.md) |
+| A.11 Complex Numbers | i, arithmetic, complex roots of quadratics | chapter 4, zeros of polynomials | all of [03_Complex_Numbers](../../03_Complex_Numbers/README.md), built without √−1 |
+
+The section numbers are the 10th and 11th editions'; an older edition shifts them by one or two, and the *Preparing for this section* boxes are the reliable map in any of them.
+
 ## What this library already covers
 
 Pieces of the course, from an angle the books do not take:
