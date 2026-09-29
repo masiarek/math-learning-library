@@ -48,6 +48,8 @@ What is the ordinate of a point?	Its y-coordinate.	vocabulary
 Where do the words abscissa and ordinate come from?	Latin, 1600s: abscissa means cut off, ordinata means applied in order. Older than the letters x and y.	vocabulary
 Is the abscissa the x-axis?	No. The abscissa is the number x. The line is the x-axis, or the axis of abscissas.	vocabulary
 What are abscissa and ordinate called in Polish, French and German?	Odcięta and rzędna; abscisse and ordonnée; Abszisse and Ordinate.	vocabulary
+What is the Polish word for coordinate?	Współrzędna, plural współrzędne: współ- is co- and rzędna is ordinate, the Latin word rebuilt from Polish parts. A coordinate system is układ współrzędnych.	vocabulary
+What are quadrant, origin and ordered pair in Polish?	Ćwiartka (pierwsza ćwiartka is quadrant I), początek układu współrzędnych, para uporządkowana.	vocabulary
 How is the point P whose coordinates are (x, y) usually written and said?	P = (x, y), and simply the point (x, y).	vocabulary
 The notation (x, y) has three meanings. What are they?	A point in the plane; the open interval of all t with x < t < y; a vector, x right and y up.	notation
 Can (5, 2) be an open interval?	No. An interval (a, b) needs a < b. (5, 2) must be the point.	notation
