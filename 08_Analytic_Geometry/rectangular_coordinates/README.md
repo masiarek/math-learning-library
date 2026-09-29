@@ -18,7 +18,7 @@ Two number lines, one horizontal and one vertical, crossing at right angles wher
 | y-axis | "the y axis" | the vertical number line. Positive above O, negative below. |
 | O | "the origin" | the point where the two axes cross. It reads 0 on both, so O = (0, 0). |
 | xy-plane | "the x y plane" | the plane the two axes lie in; the **coordinate axes** are the two lines themselves. |
-| (x, y) | "the point x, y" | an **ordered pair**: the **coordinates** of a point P. The book writes P = (x, y) and then just says "the point (x, y)". |
+| (x, y) | "the point x, y" | an **ordered pair**: the **coordinates** of a point P, plural, one coordinate per axis. On a number line a point has one coordinate; in the plane it has two; in space, three. The book writes P = (x, y) and then just says "the point (x, y)". |
 | x | "the x coordinate", or **abscissa** | the **signed distance** of P from the *y*-axis: how far right (x > 0) or left (x < 0) of the vertical line. |
 | y | "the y coordinate", or **ordinate** | the signed distance of P from the *x*-axis: how far up (y > 0) or down (y < 0) from the horizontal line. |
 | (x, 0), (0, y) | | the shape of a point on the x-axis, and of a point on the y-axis. |
@@ -394,7 +394,7 @@ The skill is two-way and small, so practise both directions until neither needs 
 
 ## Flashcards
 
-The same page as a deck of 57 Anki cards, one fact per card: [`rectangular_coordinates.txt`](anki/rectangular_coordinates.txt). In Anki choose File → Import, pick the file, and the header lines inside it set the separator, the note type (Basic), the deck name and the tags, so nothing needs changing in the dialog. Each card carries a tag for its kind, `definition`, `quadrants`, `plotting` and so on, for studying one kind at a time.
+The same page as a deck of 58 Anki cards, one fact per card: [`rectangular_coordinates.txt`](anki/rectangular_coordinates.txt). In Anki choose File → Import, pick the file, and the header lines inside it set the separator, the note type (Basic), the deck name and the tags, so nothing needs changing in the dialog. Each card carries a tag for its kind, `definition`, `quadrants`, `plotting` and so on, for studying one kind at a time.
 
 ## Where this goes next
 

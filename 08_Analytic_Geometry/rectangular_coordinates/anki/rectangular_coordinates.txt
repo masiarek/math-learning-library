@@ -5,8 +5,9 @@
 #tags:math precalculus rectangular-coordinates
 #columns:Front	Back	Tags
 #tags column:3
-On the real number line, how is a point located?	By one real number, called the coordinate of the point.	definition
-How many numbers locate a point in a plane, and what are they called together?	Two. Together they form an ordered pair (x, y), the coordinates of the point.	definition
+On a number line, one dimension, how many numbers locate a point, and what is the number called?	One. It is the coordinate of the point. In the plane a point needs two, its x-coordinate and its y-coordinate, and the pair (x, y) is called its coordinates.	definition
+Is (x, y) one coordinate or two?	Two. A coordinate is one real number, one per axis: x is the x-coordinate and y is the y-coordinate. The pair (x, y) is the coordinates of the point, plural. A point on a line has one coordinate, a point in the plane two, a point in space three.	definition
+How many numbers locate a point in a plane, and what are they called together?	Two, one coordinate per axis. Together they form an ordered pair (x, y), the coordinates of the point.	definition
 In a rectangular coordinate system, what is the horizontal number line called?	The x-axis.	definition
 In a rectangular coordinate system, what is the vertical number line called?	The y-axis.	definition
 What is the origin O?	The point where the x-axis and the y-axis intersect. It reads 0 on both axes, so its coordinates are (0, 0).	definition
