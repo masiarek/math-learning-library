@@ -80,6 +80,15 @@ Why not just say "the x-axis number", or "the x-axis address"? You can, and "the
 
 There is one more way to put the objection, and it is the sharpest: why not call the x-coordinate of P "the point on the x-axis under P"? That point exists and has a name, the *foot* of the perpendicular from P to the axis, and the picture is exactly right: drop a line from P = (3, 5) straight down and it lands on (3, 0). But (3, 0) is a point, with two coordinates of its own, and 3 is a number, and the whole subject rests on not confusing the two. Wikipedia's first paragraph on coordinate systems ends with the reason: a coordinate system lets "problems in geometry be translated into problems about numbers and vice versa". The foot is still on the geometry side of that translation. The coordinate is the number side, and it is the side the equations live on: y = 2x + 1 takes the number 3 and gives 7, and there is nothing it can do with the point (3, 0). Section 11 of the program makes Python say it: the foot is not equal to the number, doubling the number gives 6 and doubling the point gives nonsense, and the one thing the point and P share is their x-coordinate, which is what the perpendicular was for.
 
+So the definition that holds everywhere is this: a coordinate is one of the numbers in a tuple that, together, fix a position, and the axis label only says which slot of the tuple is meant. Whether the slot has an axis of its own varies from system to system:
+
+| Coordinate system | The coordinates | Does each one lie on an axis? |
+|---|---|---|
+| Rectangular, in the plane or in space | x, y, and z | yes, one axis each |
+| Polar | r and θ | no: r is a distance from the origin and θ is an angle |
+| The complex plane | Re z and Im z | yes, two real coordinates with two axes; a complex number is a point with two real coordinates, not a point with one complex coordinate |
+| ℂ², and the "coordinates may be complex numbers" of the encyclopedia | z₁ and z₂, each a complex number | no axis in the ordinary sense: each slot holds a whole complex number, so a point has two complex coordinates and four real ones |
+
 One usage does need watching, because it is common enough to feel like the definition. In everyday speech and in software, "a coordinate" often means a whole location: a GPS coordinate, a `Coordinate` class holding a latitude and a longitude. Textbooks and Wikipedia do not use the word that way, though informal and machine-written glossaries sometimes hedge, "a number (or set of numbers)", which is the everyday sense leaking in. In the books, one coordinate is one number, one per axis, and the location is the *coordinates*, plural: the word was coined in the plural, *co-ordinatae*, the numbers "ordered together", and each of them is one of the co-ordinates. So (x, y) is two coordinates, a point on a line has one, and a point in space has three.
 
 ## Plotting
@@ -501,7 +510,7 @@ The skill is two-way and small, so practise both directions until neither needs 
 
 ## Flashcards
 
-The same page as a deck of 71 Anki cards, one fact per card and one or two short sentences on the back, with the reasons left on this page: [`rectangular_coordinates.txt`](anki/rectangular_coordinates.txt). In Anki choose File → Import, pick the file, and the header lines inside it set the separator, the note type (Basic), the deck name and the tags, so nothing needs changing in the dialog. Each card carries a tag for its kind, `definition`, `quadrants`, `plotting` and so on, for studying one kind at a time.
+The same page as a deck of 72 Anki cards, one fact per card and one or two short sentences on the back, with the reasons left on this page: [`rectangular_coordinates.txt`](anki/rectangular_coordinates.txt). In Anki choose File → Import, pick the file, and the header lines inside it set the separator, the note type (Basic), the deck name and the tags, so nothing needs changing in the dialog. Each card carries a tag for its kind, `definition`, `quadrants`, `plotting` and so on, for studying one kind at a time.
 
 ## Where this goes next
 
