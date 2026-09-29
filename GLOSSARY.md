@@ -24,6 +24,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Cantor set** — what survives when the open middle third of [0, 1] is deleted, then the middle third of every piece left, forever. Uncountably many points and total length 0; exactly the numbers that can be written in base 3 with only 0s and 2s. See [the Cantor set](02_Measure_Zero/cantor_set/README.md).
 
+**Cartesian plane** — the plane with a pair of perpendicular number lines chosen in it, so that every point is an ordered pair (x, y). Also the *coordinate plane* and the *xy-plane*; the coordinates themselves are *rectangular* or *Cartesian*. See [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md).
+
 **Cartesian product** — A × B, the set of every ordered pair (a, b) with a ∈ A and b ∈ B. It has |A| · |B| members, includes pairs with a repeated entry, and is not commutative: A × B and B × A share no member unless A = B. ℝ × ℝ = ℝ² is the coordinate plane. See [the Cartesian product](04_Sets/cartesian_product/README.md).
 
 **Catastrophic cancellation** — the loss of most significant figures when two nearly equal numbers are subtracted. It does not create error; it removes the leading digits that were hiding error already present. See [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md).
@@ -129,6 +131,8 @@ Terms used across the library, with the page that explains each in full.
 **Semigroup** — a set with an associative operation and nothing more: no identity or inverses required. The integers under max. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
 
 **Set-builder notation** — {(x, y) | x, y ∈ ℝ}, read "the set of all (x, y) such that x and y are in ℝ": the shape of a member left of the bar, the condition it must meet right of it. Python's set comprehension `{(x, y) for x in S for y in S}` is the same notation, runnable. See [the Cartesian product](04_Sets/cartesian_product/README.md).
+
+**Signed distance** — also *directed distance*: a distance with a sign that says which side. The x-coordinate of a point is its signed distance from the y-axis, positive to the right and negative to the left. See [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md).
 
 **Significant figures** — the digits of a measurement that carry information about the instrument rather than about place value. A claim about knowledge, not a formatting choice. See [significant figures](01_Precision/significant_figures/README.md).
 

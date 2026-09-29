@@ -86,3 +86,16 @@
    I -> II -> III -> IV -> I: the quadrants are numbered in the direction
    a quarter turn goes, counterclockwise, which is why the numbering is
    the one it is and not clockwise.
+
+9. THE SAME SYMBOLS, TWO OBJECTS: THE POINT (2, 5) AND THE INTERVAL (2, 5)
+   as a point, (2, 5) is a pair, 2 right and 5 up, quadrant I:
+     len((2, 5)) = 2;   3 in (2, 5) is False   a tuple holds 2 and 5, not 3
+   as an open interval, (2, 5) is a test, 2 < t < 5:
+     t = 3:  2 < 3 < 5  is True
+     t = 2:  2 < 2 < 5  is False
+     t = 5:  2 < 5 < 5  is False
+     t = 7:  2 < 7 < 5  is False
+   the endpoints fail: open means the ends are left out.
+   (5, 2) as a point is 5 right and 2 up, quadrant I. As an interval:
+     t = 3:  5 < 3 < 2  is False;   no t passes, the interval (5, 2) is empty,
+     so when a < b fails the notation can only mean the point.

@@ -159,6 +159,19 @@ def main() -> None:
     print("   I -> II -> III -> IV -> I: the quadrants are numbered in the direction")
     print("   a quarter turn goes, counterclockwise, which is why the numbering is")
     print("   the one it is and not clockwise.")
+    print()
+
+    print("9. THE SAME SYMBOLS, TWO OBJECTS: THE POINT (2, 5) AND THE INTERVAL (2, 5)")
+    point = (2, 5)
+    print(f"   as a point, (2, 5) is a pair, 2 right and 5 up, quadrant {quadrant(point)}:")
+    print(f"     len((2, 5)) = {len(point)};   3 in (2, 5) is {3 in point}   a tuple holds 2 and 5, not 3")
+    print("   as an open interval, (2, 5) is a test, 2 < t < 5:")
+    for t in (3, 2, 5, 7):
+        print(f"     t = {t}:  2 < {t} < 5  is {2 < t < 5}")
+    print("   the endpoints fail: open means the ends are left out.")
+    print(f"   (5, 2) as a point is 5 right and 2 up, quadrant {quadrant((5, 2))}. As an interval:")
+    print(f"     t = 3:  5 < 3 < 2  is {5 < 3 < 2};   no t passes, the interval (5, 2) is empty,")
+    print("     so when a < b fails the notation can only mean the point.")
 
 
 if __name__ == "__main__":

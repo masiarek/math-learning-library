@@ -8,7 +8,7 @@
 
 Two number lines, one horizontal and one vertical, crossing at right angles where both read 0. That is the whole apparatus, and it is Descartes' idea: once the lines are there, every point of the plane is one ordered pair of real numbers, and every ordered pair is one point. A question about points has become a question about numbers, which is why the subject is called *analytic* geometry and why the coordinate system carries his name.
 
-[The Cartesian product](../../04_Sets/cartesian_product/README.md) built the set of pairs, ℝ² = {(x, y) | x, y ∈ ℝ}, and left it as a set. This page is the other half of the bargain: how one pair finds its point, and what the four pieces the axes cut the plane into are for. The textbook it follows is the opening of the chapter on graphs in Michael Sullivan's *Precalculus*, and the questions at the end start from that page's exercises.
+[The Cartesian product](../../04_Sets/cartesian_product/README.md) built the set of pairs, ℝ² = {(x, y) | x, y ∈ ℝ}, and left it as a set. This page is the other half of the bargain: how one pair finds its point, and what the four pieces the axes cut the plane into are for. The textbook it follows is the opening of the chapter on graphs in Michael Sullivan's *Precalculus*; Ron Larson's *Precalculus* opens the same way with different words for the same things, and the page uses both. The questions at the end start from Sullivan's exercises.
 
 ## Symbol by symbol
 
@@ -26,9 +26,15 @@ Two number lines, one horizontal and one vertical, crossing at right angles wher
 
 Two of these rows hide the two mistakes everyone makes once.
 
-**Which axis a coordinate measures from.** The x-coordinate is the distance from the *y*-axis. It sounds backwards until you say what x measures: how far right or left. Right or left of what? Of the vertical line, and the vertical line is the y-axis. Section 2 of the program prints both distances for the four points of the book's figure, with the axis each one is measured from.
+**Which axis a coordinate measures from.** The x-coordinate is the distance from the *y*-axis. It sounds backwards until you say what x measures: how far right or left. Right or left of what? Of the vertical line, and the vertical line is the y-axis. Section 2 of the program prints both distances for the four points of the book's figure, with the axis each one is measured from. Larson's page calls the same number the *directed distance* and draws it as an arrow from the y-axis to the point, labelled x; Wikipedia's figure draws it as an arrow along the x-axis from the point's foot back to the origin. Both arrows are the same length, because they are opposite sides of the rectangle the dotted lines make, so "distance along the x-axis" and "distance from the y-axis" are one number, and *directed* and *signed* are one word.
 
 **Same scale, or not.** In mathematics the two axes usually carry the same scale, so that a unit right is as long on the page as a unit up. In an application, years along one axis and dollars along the other, each axis takes whatever scale suits it. The coordinates are numbers and do not change; only the picture does.
+
+## One plane, three names
+
+Sullivan says *rectangular coordinate system* and *xy-plane*; Larson and Wikipedia say *Cartesian plane*; other books say *coordinate plane*. They are one thing. *Rectangular* says how the axes meet, at right angles; *Cartesian* says who had the idea; *xy-plane* names the axes, and earns its keep later, when a z-axis is added and the xy-plane is one of three coordinate planes. What all three add to *the plane* of school geometry is the pair of axes: the same points, now with names.
+
+The word *rectangular* also points at the one real alternative. Polar coordinates name the same point of the same plane by a different pair, its distance from the origin and its angle from the x-axis, so (1, 1) in rectangular coordinates is (√2, 45°) in polar. That is what "different from Cartesian" means when it means anything: not a different plane, a different way of naming its points, and the conversion between the two is a trigonometry chapter. Until then, rectangular, Cartesian and xy are three names for one plane, the way abscissa and x-coordinate are two names for one number.
 
 ## Two names for one number
 
@@ -43,6 +49,12 @@ One caution about a whiteboard that turns up everywhere: the abscissa is the num
 To plot (−3, 1): go 3 units along the x-axis to the left of O, then straight up 1 unit, and put a dot there. The instructions come in the order of the pair, first entry then second, and that order is the whole content of the word *ordered*: (−3, 1) is 3 left and 1 up, while (1, −3) is 1 right and 3 down, a different point in a different quadrant. Section 3 checks it, and [the Cartesian product](../../04_Sets/cartesian_product/README.md) is the page on why a pair remembers which entry is first.
 
 Section 1 draws the book's figure as a grid of cells: the four points (−3, 1), (3, 2), (3, −2) and (−2, −3), the y-axis as a column of `|`, the x-axis as a row of `-`, and the origin as `O`.
+
+The grid lines are a reading aid, not a rule. (−1.5, −2.5) is as much a point as (−2, −3), in quadrant III by the same two signs, and so is (√2, 1/3): the plane is every pair of real numbers, all of ℝ², and the integer points are the ones with a grid line through them. The checker below takes decimals and fractions and draws them at the nearest cell.
+
+## One notation, two meanings
+
+Larson ends his page with a warning worth its own card: (x, y) means a point in the plane, and (x, y) also means an open interval on the number line, every real number t with x < t < y. Two objects, one notation, and only the context says which. The point (2, 5) is an ordered pair, a member of ℝ²; the interval (2, 5) is a set of numbers, and 3 is in it. Section 9 of the program keeps them apart in the one way Python can: a tuple `(2, 5)` holds the numbers 2 and 5 and nothing else, so `3 in (2, 5)` is false, while the interval is the test `2 < t < 5`, which 3 passes. There is one sure sign: an interval (a, b) needs a < b, so (5, 2) can only be a point. Intervals are the tool of [what measure zero means](../../02_Measure_Zero/what_measure_zero_means/README.md), where every length is a length of intervals, and none of them is a point.
 
 ## What a quadrant is, and why the word earns its keep
 
@@ -155,6 +167,19 @@ The program stores each point as a Python tuple, which is an ordered pair, and s
    I -> II -> III -> IV -> I: the quadrants are numbered in the direction
    a quarter turn goes, counterclockwise, which is why the numbering is
    the one it is and not clockwise.
+
+9. THE SAME SYMBOLS, TWO OBJECTS: THE POINT (2, 5) AND THE INTERVAL (2, 5)
+   as a point, (2, 5) is a pair, 2 right and 5 up, quadrant I:
+     len((2, 5)) = 2;   3 in (2, 5) is False   a tuple holds 2 and 5, not 3
+   as an open interval, (2, 5) is a test, 2 < t < 5:
+     t = 3:  2 < 3 < 5  is True
+     t = 2:  2 < 2 < 5  is False
+     t = 5:  2 < 5 < 5  is False
+     t = 7:  2 < 7 < 5  is False
+   the endpoints fail: open means the ends are left out.
+   (5, 2) as a point is 5 right and 2 up, quadrant I. As an interval:
+     t = 3:  5 < 3 < 2  is False;   no t passes, the interval (5, 2) is empty,
+     so when a < b fails the notation can only mean the point.
 ```
 <!-- /output -->
 
@@ -258,6 +283,31 @@ A point of the plane with an ordered pair of real numbers, each point with exact
 
 </details>
 
+**13. Is (2, 5) a point or an open interval? Is (5, 2)? Is 3 in (2, 5)?**
+
+<details><summary>Answer</summary>
+
+(2, 5) could be either, and only the sentence around it says which. (5, 2) can only be a point, because an interval (a, b) needs a < b. Whether 3 is in (2, 5) depends on the reading: 3 is in the interval, since 2 < 3 < 5, and it is not in the point, which holds only the numbers 2 and 5. Section 9.
+
+</details>
+
+**14. Which quadrant, or which axis, is each of these in: (−1.5, −2.5), (−1.5, 0), (√2, 1/3)?**
+
+<details><summary>Answer</summary>
+
+(−1.5, −2.5) is in quadrant III, (−1.5, 0) on the x-axis, and (√2, 1/3) in quadrant I. The signs decide, and the grid lines have nothing to do with it. Run `plot_points.py -1.5,-2.5 -1.5,0` to see the first two drawn at their nearest cells.
+
+</details>
+
+**15. Sullivan says *rectangular coordinate system* and Larson says *Cartesian plane*. What is the difference?**
+
+<details><summary>Answer</summary>
+
+None in what they name: the same plane with the same two axes. *Rectangular* describes the right angle between the axes, *Cartesian* credits Descartes. The one system that is genuinely different is polar coordinates, which name the same points of the same plane by distance and angle instead.
+
+</details>
+
+
 ## Plot it yourself, and let the program check it
 
 The book's own exercise after this section is to plot six points and say which quadrant or axis each lies on, and a drawing is a poor thing to check: the check is a pair of numbers, and a pencil dot is neither. So the second program, [`plot_points.py`](examples/plot_points.py), does the checking. Run with no arguments it plots the two exercises, problems 15 and 16, and that is its recorded output:
@@ -317,13 +367,20 @@ For eight points to practise on:  python3 plot_points.py --drill 3
 ```
 <!-- /output -->
 
-Do the two problems on paper first, then compare. To check points of your own, type them after the program name, as `x,y` with integer coordinates, and it draws them and states the quadrant or axis of each:
+Do the two problems on paper first, then compare. To check points of your own, type them after the program name as `x,y`, integers, decimals or fractions, and it draws them and states the quadrant or axis of each:
 
 ```bash
 python3 08_Analytic_Geometry/rectangular_coordinates/examples/plot_points.py -3,2 6,0 0,-3
 ```
 
-Unlabelled points are called A, B, C in order; `P=2,5` names one yourself. Two points in one cell print as `*` and are named below the grid, which is how the program tells you that (2, 5) written twice is one point and (2, 5) and (5, 2) are two.
+That path starts at the root of a clone, like every command in this library, so first `git clone https://github.com/masiarek/math-learning-library.git` and `cd math-learning-library`; typed from any other folder, Python answers "No such file or directory". The program needs nothing but itself, so the other route is to fetch the one file and run it where it lands:
+
+```bash
+curl -O https://raw.githubusercontent.com/masiarek/math-learning-library/master/08_Analytic_Geometry/rectangular_coordinates/examples/plot_points.py
+python3 plot_points.py -3,2 6,0 0,-3
+```
+
+Unlabelled points are called A, B, C in order; `P=2,5` names one yourself. A point between grid lines, such as `-1.5,-2.5`, is drawn at the nearest cell with a lowercase letter and its quadrant stated exactly. Two points in one cell print as `*` and are named below the grid, which is how the program tells you that (2, 5) written twice is one point and (2, 5) and (5, 2) are two.
 
 ## How to practise
 
@@ -337,7 +394,7 @@ The skill is two-way and small, so practise both directions until neither needs 
 
 ## Flashcards
 
-The same page as a deck of 51 Anki cards, one fact per card: [`rectangular_coordinates.txt`](anki/rectangular_coordinates.txt). In Anki choose File → Import, pick the file, and the header lines inside it set the separator, the note type (Basic), the deck name and the tags, so nothing needs changing in the dialog. Each card carries a tag for its kind, `definition`, `quadrants`, `plotting` and so on, for studying one kind at a time.
+The same page as a deck of 57 Anki cards, one fact per card: [`rectangular_coordinates.txt`](anki/rectangular_coordinates.txt). In Anki choose File → Import, pick the file, and the header lines inside it set the separator, the note type (Basic), the deck name and the tags, so nothing needs changing in the dialog. Each card carries a tag for its kind, `definition`, `quadrants`, `plotting` and so on, for studying one kind at a time.
 
 ## Where this goes next
 
@@ -353,3 +410,4 @@ The next page in every precalculus book is the distance between two points, whic
 - [Precalculus: a reading guide](../../reading_guides/precalculus/README.md) — where this sits in the course, and which book to read it in
 - [Cartesian coordinate system ↗](https://en.wikipedia.org/wiki/Cartesian_coordinate_system) — Wikipedia, with the history and the higher-dimensional version
 - Michael Sullivan, *Precalculus* (Pearson), the section "Rectangular Coordinates" that opens the chapter on graphs; this page follows it
+- Ron Larson, *Precalculus* (Cengage), section 1.1, the same page with *directed distance* for signed distance and the warning about (x, y) as an interval
