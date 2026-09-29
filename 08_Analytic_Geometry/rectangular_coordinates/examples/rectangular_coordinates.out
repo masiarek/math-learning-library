@@ -99,3 +99,33 @@
    (5, 2) as a point is 5 right and 2 up, quadrant I. As an interval:
      t = 3:  5 < 3 < 2  is False;   no t passes, the interval (5, 2) is empty,
      so when a < b fails the notation can only mean the point.
+
+10. THE ARROW DECIDES WHICH WAY IS AROUND
+   the quarter turn (x, y) -> (-y, x), applied three times from (3, 2):
+     (3, 2) -> (-2, 3) -> (-3, -2) -> (2, -3),  quadrants I II III IV
+   the four positions, numbered 1 to 4, with y positive UPWARD (the book):
+     4   .  .  .  .  |  .  .  .  .
+     3   .  .  2  .  |  .  .  .  .
+     2   .  .  .  .  |  .  .  1  .
+     1   .  .  .  .  |  .  .  .  .
+     0   -  -  -  -  O  -  -  -  -
+    -1   .  .  .  .  |  .  .  .  .
+    -2   .  3  .  .  |  .  .  .  .
+    -3   .  .  .  .  |  .  4  .  .
+    -4   .  .  .  .  |  .  .  .  .
+        -4 -3 -2 -1  0  1  2  3  4   x
+   the same four points, same numbers, with y positive DOWNWARD (a computer screen):
+    -4   .  .  .  .  |  .  .  .  .
+    -3   .  .  .  .  |  .  4  .  .
+    -2   .  3  .  .  |  .  .  .  .
+    -1   .  .  .  .  |  .  .  .  .
+     0   -  -  -  -  O  -  -  -  -
+     1   .  .  .  .  |  .  .  .  .
+     2   .  .  .  .  |  .  .  1  .
+     3   .  .  2  .  |  .  .  .  .
+     4   .  .  .  .  |  .  .  .  .
+        -4 -3 -2 -1  0  1  2  3  4   x
+   1 -> 2 -> 3 -> 4 runs counterclockwise in the first picture and clockwise in
+   the second. Not one coordinate changed; only which way the y-axis points.
+   The same flip turns the line through (0, 0) and (2, 2) from rising to falling.
+   Which direction is positive is a choice, and the arrow records it.

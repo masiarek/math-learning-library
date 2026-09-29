@@ -42,10 +42,14 @@ def fmt(point: tuple[int, int]) -> str:
     return f"({point[0]}, {point[1]})"
 
 
-def plot(points: list[tuple[str, tuple[int, int]]], lo: int = -4, hi: int = 4) -> None:
-    """Draw the xy-plane as a grid of cells, the axes as | and -, the origin as O."""
+def plot(points: list[tuple[str, tuple[int, int]]], lo: int = -4, hi: int = 4, y_up: bool = True) -> None:
+    """Draw the xy-plane as a grid of cells, the axes as | and -, the origin as O.
+
+    y_up=False draws y positive downward, the way a computer screen does.
+    """
     marks = {p: label for label, p in points}
-    for y in range(hi, lo - 1, -1):
+    rows = range(hi, lo - 1, -1) if y_up else range(lo, hi + 1)
+    for y in rows:
         row = []
         for x in range(lo, hi + 1):
             if (x, y) in marks:
@@ -172,6 +176,25 @@ def main() -> None:
     print(f"   (5, 2) as a point is 5 right and 2 up, quadrant {quadrant((5, 2))}. As an interval:")
     print(f"     t = 3:  5 < 3 < 2  is {5 < 3 < 2};   no t passes, the interval (5, 2) is empty,")
     print("     so when a < b fails the notation can only mean the point.")
+    print()
+
+    print("10. THE ARROW DECIDES WHICH WAY IS AROUND")
+    start = (3, 2)
+    trip = [start]
+    for _ in range(3):
+        x, y = trip[-1]
+        trip.append((-y, x))
+    print("   the quarter turn (x, y) -> (-y, x), applied three times from (3, 2):")
+    print("     " + " -> ".join(fmt(p) for p in trip) + f",  quadrants {' '.join(quadrant(p) for p in trip)}")
+    numbered = [(str(i + 1), p) for i, p in enumerate(trip)]
+    print("   the four positions, numbered 1 to 4, with y positive UPWARD (the book):")
+    plot(numbered, y_up=True)
+    print("   the same four points, same numbers, with y positive DOWNWARD (a computer screen):")
+    plot(numbered, y_up=False)
+    print("   1 -> 2 -> 3 -> 4 runs counterclockwise in the first picture and clockwise in")
+    print("   the second. Not one coordinate changed; only which way the y-axis points.")
+    print("   The same flip turns the line through (0, 0) and (2, 2) from rising to falling.")
+    print("   Which direction is positive is a choice, and the arrow records it.")
 
 
 if __name__ == "__main__":
