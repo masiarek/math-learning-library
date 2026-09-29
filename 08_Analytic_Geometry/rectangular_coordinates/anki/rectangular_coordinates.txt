@@ -11,7 +11,7 @@ How many numbers locate a point in a plane, and what are they called together?	T
 In a rectangular coordinate system, what is the horizontal number line called?	The x-axis.	definition
 In a rectangular coordinate system, what is the vertical number line called?	The y-axis.	definition
 In the xy-plane, what is the origin O?	The point where the x-axis and the y-axis intersect: the point chosen as 0 on both axes, so its coordinates are (0, 0). On a number line the origin is the single point 0; in space it is (0, 0, 0). One 0 per axis.	definition
-Is the origin a special point of the plane?	No. It is the point chosen as 0 when the axes were drawn. Move the axes and another point becomes the origin, and every coordinate changes with it; the points themselves and the distances between them do not.	definition
+Is the origin a special point of the plane?	No, though its coordinates are always (0, 0): that is what origin means. Which point of the plane gets those coordinates is the choice made when the axes were drawn. Move the axes and another point becomes the origin, and every coordinate changes with it; the points themselves and the distances between them do not. It is the centre of the picture, not of the plane, which has no centre.	definition
 Must the x-axis and the y-axis use the same scale?	No. Mathematics usually uses the same scale on both; an application may use a different scale on each axis.	definition
 Which points on the x-axis carry positive numbers, and which carry negative numbers?	Points to the right of O are positive; points to the left of O are negative.	definition
 Which points on the y-axis carry positive numbers, and which carry negative numbers?	Points above O are positive; points below O are negative.	definition
