@@ -110,7 +110,7 @@ Terms used across the library, with the page that explains each in full.
 
 **Floating point** — the machine's stand-in for the real numbers: a finite set of exact values, fixed by a radix, a precision and an exponent range, with every result rounded into it. Its errors look like measurement errors and are unrelated to them: the value was known perfectly and the *hardware* could not hold it. What the set is, and which laws of arithmetic survive rounding into it, is [machine numbers](01_Precision/machine_numbers/README.md); how its bits are laid out is covered by the sibling Rust library ([What a float actually stores ↗](https://masiarek.github.io/rust-learning-library/19_Numbers/what_a_float_stores/index.html)); what happens when you subtract two of them is [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md).
 
-**Frozenset** — Python's immutable set. It cannot change after it is made, so it is hashable and can be a member of a set or a key of a dict; it has no `add`, and "adding" builds a new one with `union` or `|`. See [sets in Python](04_Sets/python_sets/README.md).
+**Frozenset** — Python's immutable set. It cannot change after it is made, so it is hashable and can be a member of a set or a key of a dict; it has no `add`, and "adding" builds a new one with `union` or `|`. See [a set is a hash table ↗](https://masiarek.github.io/python-learning-library/04_Names_and_Objects/a_set_is_a_hash_table/index.html) in the Python library.
 
 **Geometric mean** — the n-th root of the product of n numbers: the one number that can replace every value without changing their product. The right mean for growth rates, which multiply: +100% then −50% is a geometric mean of 0% a year, not the arithmetic +25%. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
 
@@ -120,7 +120,7 @@ Terms used across the library, with the page that explains each in full.
 
 **Harmonic mean** — n divided by the sum of the reciprocals of n numbers: the one number that keeps the sum of reciprocals. The right mean for speeds over equal distances; 30 km/h out and 60 km/h back averages 40 km/h, not 45. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
 
-**Hashable** — in Python, an object whose `hash` works and never changes while it is stored, which is what a set member or dict key must be. Lists, dicts and sets are not; ints, strings, frozensets, and tuples of hashables are. A tuple that holds a list is not, so the rule is hashable, not immutable. See [sets in Python](04_Sets/python_sets/README.md).
+**Hashable** — in Python, an object whose `hash` works and never changes while it is stored, which is what a set member or dict key must be. Lists, dicts and sets are not; ints, strings, frozensets, and tuples of hashables are. A tuple that holds a list is not, so the rule is hashable, not immutable. See [a set is a hash table ↗](https://masiarek.github.io/python-learning-library/04_Names_and_Objects/a_set_is_a_hash_table/index.html) in the Python library.
 
 **Homomorphism** — a map f between two sets with operations that keeps the operation: f(a · b) = f(a) ∗ f(b). A linear map is one; so are n ↦ 2ⁿ, the logarithm, the determinant, and the length of a string. A homomorphism of groups sends the identity to the identity and inverses to inverses, which is why 2⁰ = 1, log 1 = 0, T(0) = 0 and det I = 1 are one theorem. See [maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md).
 
@@ -250,7 +250,7 @@ Terms used across the library, with the page that explains each in full.
 
 **Subspace** — a subset of a vector space that is a vector space with the same operations. It needs only three checks — it contains 0, and it is closed under + and under scalar multiplication — because the other laws are inherited. The subspaces of the plane are the origin, the lines through it, and the plane. See [subsets inherit the laws](06_Algebraic_Structures/subsets_inherit_the_laws/README.md).
 
-**Symmetric difference** — A △ B, the members of exactly one of two sets, (A ∖ B) ∪ (B ∖ A); `a ^ b` in Python. Chained over several sets it keeps what is in an odd number of them, not what is in exactly one. See [sets in Python](04_Sets/python_sets/README.md).
+**Symmetric difference** — A △ B, the members of exactly one of two sets, (A ∖ B) ∪ (B ∖ A); `a ^ b` in Python. Chained over several sets it keeps what is in an odd number of them, not what is in exactly one, because the subsets form a group under △ in which every set cancels itself; also written A ⊖ B or A + B. See [the algebra of sets](04_Sets/algebra_of_sets/README.md).
 
 **Symmetry of a graph** — about the y-axis if (−x, y) is on it whenever (x, y) is; about the x-axis for (x, −y); about the origin for (−x, −y). Tested by substituting and comparing equations; two symmetries force the third. See [graphs of equations: intercepts and symmetry](08_Analytic_Geometry/graphs_intercepts_symmetry/README.md).
 

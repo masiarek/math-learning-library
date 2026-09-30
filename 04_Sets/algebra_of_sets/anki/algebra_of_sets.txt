@@ -31,3 +31,9 @@ Why is ⊆ only a partial order?	Some sets are incomparable: {1} ⊄ {2} and {2}
 What is a poset?	A partially ordered set: a set with a reflexive, antisymmetric, transitive order, not necessarily total. The subsets of a set under ⊆ are the standard example.	order
 Why does sorted() on a list of Python sets give nonsense?	It compares with <, which for sets is proper subset, a partial order; the result depends on input order. Sort with a key such as (len(s), sorted(s)).	python
 How many subsets does U = {1, 2, 3, 4} have?	2^4 = 16.	definition
+Define the symmetric difference A △ B.	The members of exactly one of A and B: (A ∖ B) ∪ (B ∖ A) = (A ∪ B) ∖ (A ∩ B). Exclusive or.	definition
+{1, 2, 3, 4} △ {1, 4, 5} = ?	{2, 3, 5}.	example
+Which notations are used for symmetric difference?	A △ B, A ⊖ B, A ∇ B, A + B.	definition
+Why can symmetric difference be written A + B?	The subsets form a group under △: associative, commutative, identity ∅, and A △ A = ∅, so each set is its own inverse.	law
+What does a chain A △ B △ C △ ... keep?	The members that occur an odd number of times; pairs cancel.	law
+When is A △ B empty?	Exactly when A = B.	law
