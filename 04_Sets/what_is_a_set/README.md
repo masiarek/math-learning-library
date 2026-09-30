@@ -127,6 +127,28 @@ The definition offers "null set" as a second name for ∅. In most of algebra an
      a box can hold two identical marbles; a set cannot tell them apart.
    So the box is a good picture of ∅ versus {∅}, and a bad one of
    membership: take it for the first and drop it for the other three.
+
+8. CAN WE DENY 'C IS EITHER ORDINARY OR NOT'? TRY IT IN OTHER LOGICS
+   P stands for 'C ∈ C'. The definition of C says P ↔ ¬P must be TRUE.
+   Truth values run from 0 (false) to 1 (true); only 1 counts as true.
+   logic            P or not P always true?   values of P that satisfy P ↔ ¬P
+   classical        yes                       none: still a paradox
+   Kleene K3        no                        none: still a paradox
+   Godel G3         no                        none: still a paradox
+   Godel G5         no                        none: still a paradox
+   Lukasiewicz L3   no                        1/2
+   Lukasiewicz L5   no                        1/2
+   Excluded middle fails in K3 and in the Godel logics, and C still has no
+   truth value there: the paradox never needed statement 4. Only Lukasiewicz
+   logic has a 'half true' that solves it. Then Curry's version bites:
+   C_k = {x : x ∈ x → (x ∈ x → ... → false)}, with k arrows.
+   Lukasiewicz L3   no value for C_k ∈ C_k when k = 2, 3, 4, 5, 6
+   Lukasiewicz L4   no value for C_k ∈ C_k when k = 1, 3, 4, 5, 6
+   Lukasiewicz L5   no value for C_k ∈ C_k when k = 2, 4, 5, 6
+   Lukasiewicz L6   no value for C_k ∈ C_k when k = 1, 2, 3, 5, 6
+   The fixed point of C_k is k/(k+1), and a logic with finitely many values
+   always misses one. Every finite-valued repair meets a paradox it cannot
+   value; set theory instead keeps the logic and denies that C exists.
 ```
 <!-- /output -->
 
@@ -146,6 +168,18 @@ So **there is no set of all sets**. That is the theorem Russell's paradox become
 
 Section 6 shows the other half of the modern answer, and Python agrees with it. A mutable `set` cannot be put into itself at all, and a `frozenset` can only hold sets that already existed when it was made. Sets built that way, from ∅ upward in stages, never contain themselves, so "x ∉ x" is true of all of them and Russell's question never gets a foothold. The axioms of ZF describe exactly this: a world of sets built in stages, in which "the set of all sets" is not a set, only a way of speaking.
 
+## "Every set is one type or the other": drop that instead?
+
+A natural objection, asked on Mathematics Stack Exchange and elsewhere: call a set *ordinary* if it is not a member of itself and *extraordinary* if it is, and let C be the set of all ordinary sets. The usual argument says "C is either ordinary or extraordinary", then shows that both cases fail. So why not reject that step? It looks obvious, but C itself seems to be a counterexample to it, and a hypothesis should be dropped once a counterexample turns up.
+
+It is a good question. The answer has two parts.
+
+**First, the contradiction does not use that step.** Write P for "C ∈ C". The definition of C says P ↔ ¬P. Now argue without splitting into cases. Suppose P; then ¬P, which contradicts P, so P is false: ¬P. But ¬P gives P, by the definition again. Both P and ¬P follow, and no line said "either P or not P". This argument is valid even in intuitionistic logic, which rejects the law of excluded middle outright. So throwing statement 4 away leaves the contradiction exactly where it was. Section 8 checks this in logics where "P or not P" genuinely fails, Kleene's three-valued logic and Gödel's logics: in none of them can "C ∈ C" be given any truth value that makes the definition of C true.
+
+**Second, a contradiction refutes the premises together, and you choose which one to give up.** The argument uses the logic and one more premise: *C exists*, a set whose members are exactly the ordinary sets. Mathematics gives up that premise. With [Zermelo's separation](#the-repair-and-the-paradox-as-a-theorem) there is no set of *all* ordinary sets, only the ordinary members of some set you already have, and the same argument then proves that this set is never one of its own members. (In ZF every set is ordinary, by the axiom of foundation, so C would be the set of everything, which section 5 already showed cannot exist.) C is not a counterexample to "every set is one type or the other", because C is not a set.
+
+Keeping C and changing the logic can work, but only up to a point, and section 8 shows where the limit is. In Łukasiewicz's three-valued logic, "C ∈ C" can be exactly half true, since "½ ↔ not ½" is fully true there. That is the objection made precise. But Curry's paradox, C_k = {x : x ∈ x → (x ∈ x → … → false)} with k arrows, has a fixed point only at the truth value k/(k + 1). Every Łukasiewicz logic with finitely many values misses one of those, so each has a set it cannot value. Only a continuum of truth values escapes this, and naive set theory in that logic has troubles of its own. Other routes exist too: paraconsistent logics accept the contradiction and stop it from proving everything, and logics without the rule of contraction block the step "P leads to ¬P, so ¬P". All of them are real research programmes. None is how ordinary mathematics is done, which is why the standard answer keeps classical logic and denies that C exists.
+
 ## Flashcards
 
 The page as a deck of Anki cards: [`what_is_a_set.txt`](anki/what_is_a_set.txt). Import with File → Import. Tags: `definition`, `axiom`, `theorem`, `trap`, `example`, `history`, `connection`, `principle`. The Python side is a second deck, on [sets in Python](../python_sets/README.md#flashcards).
@@ -159,6 +193,8 @@ Brakuje w niej najważniejszego zdania: dwa zbiory o tych samych elementach są 
 „Dobrze określony” znaczy, że o każdym obiekcie wiadomo, czy należy, czy nie, co nie oznacza, że my to wiemy: zbiór nieparzystych liczb doskonałych jest dobrze określony, a nikt nie wie, czy jest pusty. Co gorsza, sama ostra reguła nie wystarcza: reguła „x nie należy do siebie” jest jasna, a zbioru nie wyznacza, bo pytanie, czy taki zbiór należy do siebie, prowadzi do sprzeczności (paradoks Russella). Program pokazuje to dosłownie: funkcja `russell(russell)` wywołuje samą siebie bez końca.
 
 Druga popularna definicja („zbiór to pudełko z rzeczami w środku”) lepiej wprowadza zapis a ∈ A i uczciwie przyznaje, że „kolekcja” to tylko obraz, ale gubi całkiem zasadę równości zbiorów. Obraz pudełka myli w trzech miejscach: element elementu nie jest elementem (1 ∈ {1} ∈ {{1}}, ale 1 ∉ {{1}}), jeden element może należeć do wielu zbiorów naraz, a dwie kopie tego samego to jeden element. Dobrze natomiast pokazuje, że {∅} to nie ∅: puste pudełko w pudełku to już jeden element.
+
+Częsty zarzut: może winne jest założenie „każdy zbiór jest zwykły albo niezwykły”? Nie, bo sprzeczność da się wyprowadzić bez niego: z C ∈ C wynika C ∉ C, więc C ∉ C, a stąd C ∈ C. To rozumowanie jest poprawne nawet w logice intuicjonistycznej, która odrzuca prawo wyłączonego środka. Program sprawdza to w logikach Kleenego i Gödla: tam również żadna wartość logiczna nie ratuje C. Logika Łukasiewicza daje „pół prawdy”, ale paradoks Curry’ego znowu ją łamie. Dlatego matematyka zostawia logikę klasyczną i odrzuca istnienie C.
 
 Naprawa Zermela polega na tym, że regułą wycina się elementy z już istniejącego zbioru. Wtedy paradoks zamienia się w twierdzenie: nie istnieje zbiór wszystkich zbiorów. Program sprawdza to na wszystkich 512 możliwych „wszechświatach” złożonych z trzech obiektów. Uwaga językowa: „zbiór zerowy” (ang. *null set*) w teorii miary oznacza zbiór miary zero, niekoniecznie pusty.
 

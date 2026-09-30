@@ -158,6 +158,62 @@ def main() -> None:
     print("   So the box is a good picture of ∅ versus {∅}, and a bad one of")
     print("   membership: take it for the first and drop it for the other three.")
 
+    print()
+
+    print("8. CAN WE DENY 'C IS EITHER ORDINARY OR NOT'? TRY IT IN OTHER LOGICS")
+    from fractions import Fraction as Fr
+    half = Fr(1, 2)
+
+    def kleene():
+        vals = [Fr(0), half, Fr(1)]
+        neg = lambda a: 1 - a
+        imp = lambda a, b: max(1 - a, b)
+        return "Kleene K3", vals, neg, imp
+
+    def godel(n):
+        vals = [Fr(i, n - 1) for i in range(n)]
+        imp = lambda a, b: Fr(1) if a <= b else b
+        neg = lambda a: imp(a, Fr(0))
+        return f"Godel G{n}", vals, neg, imp
+
+    def lukasiewicz(n):
+        vals = [Fr(i, n - 1) for i in range(n)]
+        imp = lambda a, b: min(Fr(1), 1 - a + b)
+        neg = lambda a: 1 - a
+        return f"Lukasiewicz L{n}", vals, neg, imp
+
+    def iff(imp, a, b):
+        return min(imp(a, b), imp(b, a))
+
+    print("   P stands for 'C ∈ C'. The definition of C says P ↔ ¬P must be TRUE.")
+    print("   Truth values run from 0 (false) to 1 (true); only 1 counts as true.")
+    print(f"   {'logic':<16} {'P or not P always true?':<25} values of P that satisfy P ↔ ¬P")
+    logics = [("classical", [Fr(0), Fr(1)], lambda a: 1 - a, lambda a, b: max(1 - a, b)),
+              kleene(), godel(3), godel(5), lukasiewicz(3), lukasiewicz(5)]
+    for name, vals, neg, imp in logics:
+        lem = all(max(v, neg(v)) == 1 for v in vals)
+        fixed = [str(v) for v in vals if iff(imp, v, neg(v)) == 1]
+        print(f"   {name:<16} {('yes' if lem else 'no'):<25} {', '.join(fixed) if fixed else 'none: still a paradox'}")
+    print("   Excluded middle fails in K3 and in the Godel logics, and C still has no")
+    print("   truth value there: the paradox never needed statement 4. Only Lukasiewicz")
+    print("   logic has a 'half true' that solves it. Then Curry's version bites:")
+    print("   C_k = {x : x ∈ x → (x ∈ x → ... → false)}, with k arrows.")
+    for n in (3, 4, 5, 6):
+        name, vals, neg, imp = lukasiewicz(n)
+        dead = []
+        for k in range(1, 7):
+            def curry(v, k=k):
+                r = Fr(0)
+                for _ in range(k):
+                    r = imp(v, r)
+                return r
+            if not [v for v in vals if iff(imp, v, curry(v)) == 1]:
+                dead.append(k)
+        print(f"   {name:<16} no value for C_k ∈ C_k when k = {', '.join(map(str, dead))}")
+    print("   The fixed point of C_k is k/(k+1), and a logic with finitely many values")
+    print("   always misses one. Every finite-valued repair meets a paradox it cannot")
+    print("   value; set theory instead keeps the logic and denies that C exists.")
+
 
 if __name__ == "__main__":
     main()
