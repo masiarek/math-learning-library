@@ -27,6 +27,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - ↪ [Euler's formula: a lesson plan](reading_guides/eulers_formula/README.md) — what to learn, in order, to follow Euler's identity and the 3Blue1Brown talk on it
 - **Sets and size**
     - **Building sets** · from [Sets](04_Sets/README.md)
+        - [What is a set?](04_Sets/what_is_a_set/README.md) — well-defined, extensionality, the empty set, null set, Russell's paradox, separation, no set of all sets
         - [The Cartesian product](04_Sets/cartesian_product/README.md) — ordered pairs, ℝ², and why A × B is not B × A
         - ↪ [Rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md) — the pairs of ℝ² as points of the plane
     - **Size by matching** · from [Sets](04_Sets/README.md) and [Measure Zero](02_Measure_Zero/README.md)
@@ -94,6 +95,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - [If A then B: converse, contrapositive and inverse](11_Logic/converse_and_contrapositive/README.md) — implication, hypothesis, conclusion, truth table, converse, inverse, contrapositive, if and only if, counterexample, affirming the consequent
         - ↪ [The Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md) — a theorem whose converse is also true
         - ↪ [A definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md) — a definition as an "if and only if"
+        - ↪ [What is a set?](04_Sets/what_is_a_set/README.md) — Russell's paradox: an argument by cases in which both cases fail
 - **Chance and data**
     - **Averages** · from [Statistics](05_Statistics/README.md)
         - [Mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md) — one calculation, three sizes of word

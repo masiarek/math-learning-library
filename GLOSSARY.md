@@ -88,6 +88,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Distributive** — a × (b + c) = a × b + a × c, and (a + b) × c = a × c + b × c: the law that links two operations. It is what turns two groups on one set into a ring. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
 
+**Empty set** — ∅, the set with no members. There is only one, because two sets with the same members are equal and any two empty sets have the same members: none. In Python it is `set()`, since `{}` is an empty dict. Some books call it the *null set*, but in measure theory a null set is any set of measure zero, which can be infinite. See [what is a set?](04_Sets/what_is_a_set/README.md).
+
 **Euler's formula** — e^{it} = (cos t, sin t): the exponential of an imaginary number is the unit point at angle t, in radians. It is what compounding gives, since (1 + it/n)ⁿ is n small turns whose angles add up to t while their stretches fade to nothing, and it is forced by the law e^{a+b} = e^a e^b, because multiplying unit points can only add angles. See [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
 
 **Euler's identity** — e^{iπ} = −1, the t = π row of Euler's formula: the unit point half a turn from (1, 0) is (−1, 0). It is i² = −1 with the quarter turn cut finer, and the program reaches it exactly as (0, 1)², as (1, 1)⁴ / 4 and as the sixth power of the clock's first mark. `cmath.exp(1j * math.pi)` is not −1 but −1 + 1.2 × 10⁻¹⁶ i, because `math.pi` is not π. See [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
@@ -95,6 +97,8 @@ Terms used across the library, with the page that explains each in full.
 **Euler's number e** — 2.71828…, the number compound interest settles on, (1 + 1/n)ⁿ as n grows, and the position at time 1 of a point that starts at 1 and always moves with velocity equal to its position. Its power series is 1 + 1 + 1/2 + 1/6 + 1/24 + ⋯. See [velocity equals position](09_Calculus/velocity_equals_position/README.md).
 
 **Exact number** — one that was counted or defined rather than measured (ballots cast, inches per foot, π). Has infinitely many significant figures and never limits a calculation. See [exact vs approximate](01_Precision/exact_vs_approximate/README.md).
+
+**Extensionality** — the axiom that two sets with the same members are the same set. It is what "distinct objects" in the textbook definition is reaching for: {2, 5} = {5, 2} and {1, 1, 2} = {1, 2}, because order and repeats are not membership. See [what is a set?](04_Sets/what_is_a_set/README.md).
 
 **Fat Cantor set** — also the *Smith–Volterra–Cantor set*. Built like the Cantor set, but the gaps deleted at step n are 1/4ⁿ long. It contains no interval and still has length 1/2 — the proof that full of gaps does not mean measure zero. See [the fat Cantor set](02_Measure_Zero/fat_cantor_set/README.md).
 
@@ -201,6 +205,8 @@ Terms used across the library, with the page that explains each in full.
 **Rounding** — the mechanical operation of cutting a number at some place. The *action*; significant figures are the argument for where the action must stop. See [significant figures](01_Precision/significant_figures/README.md).
 
 **Rounding function** — a rule sending every real number to a machine number, or to an infinity. IEEE 754 defines five: toward −∞, toward +∞, toward zero, and to nearest with ties going either to the even significand or away from zero. See [machine numbers](01_Precision/machine_numbers/README.md).
+
+**Russell's paradox** — the rule "x is not a member of itself" is sharp, yet no set R can obey it, since R ∈ R holds exactly when it does not. It shows that a well-defined rule does not always give a set. With the axiom of separation, which only cuts a rule out of an existing set, the same argument proves that no set contains every set. See [what is a set?](04_Sets/what_is_a_set/README.md).
 
 **Scale factor** — the one ratio k shared by every pair of corresponding sides of similar figures. Lengths scale by k, areas by k², volumes by k³. See [congruent and similar triangles](10_Geometry/congruent_and_similar_triangles/README.md) and [area and volume formulas](10_Geometry/area_and_volume_formulas/README.md).
 

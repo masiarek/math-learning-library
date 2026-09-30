@@ -1,0 +1,55 @@
+1. A SET IS ITS MEMBERSHIP AND NOTHING ELSE
+   {2, 5} == {5, 2}             is True     order is not recorded
+   {1, 1, 2} == {1, 2}          is True     repeats are not recorded
+   len({1, 1, 2})                = 2
+   {n*n for n in -3..3}          = [0, 1, 4, 9]   7 rules applied, 4 members
+   'Distinct' is not a demand on whoever writes the list. It is
+   the rule for equality: same members, same set (extensionality).
+
+2. THEREFORE THERE IS ONE EMPTY SET, NOT MANY
+   {n in 0..99 with n*n < 0}         = set()
+   {n in 0..99, even and odd}        = set()
+   {n in 0..99 with n > n}           = set()
+   {words of 'set' longer than 3}    = set()
+   all four equal:  True
+   Four rules, one set. 'THE empty set' is justified only by the
+   equality rule of section 1, which the textbook definition omits.
+
+3. WELL-DEFINED IS NOT THE SAME AS KNOWN
+   P = { n : n is odd and n equals the sum of its smaller divisors }
+   The rule is sharp: for any n, adding up divisors settles it.
+   even n below 10,000 that pass the test:  [6, 28, 496, 8128]
+   odd n below 100,000 that pass the test:  []
+   Is P empty? Nobody knows; it is the odd perfect number problem,
+   open since antiquity. Every n has an answer; the set as a whole
+   does not have a known one. Well-defined means the first, not the second.
+
+4. A SHARP RULE THAT DECIDES NOTHING: RUSSELL
+   Model a set as its rule: a function that answers 'is x a member?'.
+   Rules can be asked about rules, so a set may contain sets.
+   everything(everything) = True     russell(everything) = False
+   nothing(nothing)       = False    russell(nothing)    = True
+   russell(russell)       = no answer: RecursionError, the rule asks itself forever
+   And no answer could be right:
+     if russell(russell) were True , the rule says it is False
+     if russell(russell) were False, the rule says it is True
+   The rule 'x is not a member of itself' is perfectly well-defined
+   on every x, and still there is no set it describes.
+
+5. THE REPAIR: CUT A RULE OUT OF A SET YOU ALREADY HAVE
+   In a universe U, membership is a table: x in y is True or False.
+   R = { x in U : x not in x }. Is R one of the members of U?
+   every membership table on 3 objects: 512 universes
+   universes where R is none of the 3 objects:  512 of 512
+   Why always: if R were object y, ask whether y is in y. The table
+   and the rule for R give opposite answers at that one cell.
+   So no universe contains every set. Russell's paradox, restricted
+   to a set already in hand, stops being a contradiction and becomes
+   a theorem; it is Cantor's diagonal from the cardinality lesson.
+
+6. PYTHON BUILDS SETS FROM THE BOTTOM UP, SO IT NEVER MEETS RUSSELL
+   s = set(); s.add(s)   ->  TypeError: unhashable type: 'set'
+   frozensets from nothing:  0, 1, 2 members;  c contains b: True
+   A frozenset can hold only sets that existed before it, so none
+   contains itself and 'x not in x' is true of every one of them.
+   That is the axiomatic answer too: sets are built in stages.

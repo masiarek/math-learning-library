@@ -6,10 +6,13 @@ Before a chapter can talk about how long a set is, or how many points it holds, 
 
 | # | Lesson | The question it answers |
 |---|---|---|
-| 1 | [The Cartesian product](cartesian_product/README.md) | What is ℝ², and why is A × B not the same set as B × A? |
-| 2 | [Cardinality of sets](cardinality/README.md) | What do the bars in \|A\| mean, and why is "how many" defined by matching instead of counting? |
+| 1 | [What is a set?](what_is_a_set/README.md) | Is "a well-defined collection of distinct objects" a definition, and why does a sharp rule not always give a set? |
+| 2 | [The Cartesian product](cartesian_product/README.md) | What is ℝ², and why is A × B not the same set as B × A? |
+| 3 | [Cardinality of sets](cardinality/README.md) | What do the bars in \|A\| mean, and why is "how many" defined by matching instead of counting? |
 
 ## The through-line
+
+The first lesson asks what a set is, and finds that the textbook answer, a well-defined collection of distinct objects, leaves out the one rule everything else relies on: a set is its members and nothing more, so two sets with the same members are one set. It also finds the limit of "any clear rule makes a set": Russell's rule is clear and makes none, and the repair, cutting rules out of a set already in hand, turns the paradox into the theorem that no set holds every set.
 
 A set forgets everything except membership: {2, 5} and {5, 2} are one set. Almost all of mathematics needs more than that. A point in the plane has a first coordinate and a second, a function has an input and an output, a database row has columns in a fixed order. The **ordered pair** is the smallest object that remembers order, and the **Cartesian product** is the set of all of them. Everything from the coordinate plane to the definition of a function is built on it.
 
@@ -18,3 +21,7 @@ The second lesson asks how big a set is. For a finite set the answer is a count,
 ## A note on the code
 
 Python has both objects natively: a `tuple` is an ordered pair and a `set` is a set. So the programs in this chapter do not simulate the definitions, they check them: `(2, 5) == (5, 2)` is asked directly and the interpreter answers `False`.
+
+## Po polsku, w skrócie
+
+Ten rozdział to fundament: czym jest zbiór i jak z jednych zbiorów buduje się nowe. Zbiór to wyłącznie jego elementy, bez kolejności i bez powtórzeń, więc {2, 5} i {5, 2} to ten sam zbiór; para uporządkowana (2, 5) pamięta już kolejność, a iloczyn kartezjański A × B to zbiór wszystkich takich par. Moc zbioru |A| mierzy jego wielkość przez parowanie elementów, a nie liczenie, i dzięki temu ma sens także dla zbiorów nieskończonych. Programy w Pythonie nie symulują tych definicji, tylko je sprawdzają, bo `set` i `tuple` są w języku wbudowane.

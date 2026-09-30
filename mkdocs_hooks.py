@@ -120,6 +120,7 @@ NAV_ORDER: dict[str, list[str]] = {
     # remembers order is built from ones that do not.
     "04_Sets": [
         "README.md",
+        "what_is_a_set",
         "cartesian_product",
         "cardinality",
     ],
