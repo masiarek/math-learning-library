@@ -17,7 +17,7 @@ A feeling of knowing is not knowing. Lesson 1 measures the gap between the two, 
 
 ## McGuire's strategies, and where they are explained
 
-The book closes with a list of 35 strategies. The first eleven, with the chapter of the book each comes from and the lesson here that gives the reason behind it:
+The book closes with a list of 35 strategies. Here they are, shortened, with the chapter of the book each comes from and the lesson here that gives the reason behind it. Many are practical advice with no program to show them, and say so.
 
 | # | Strategy | Book | Why it works, here |
 |---|---|---|---|
@@ -32,8 +32,21 @@ The book closes with a list of 35 strategies. The first eleven, with the chapter
 | 9 | Take good class notes by hand | ch. 5 | not covered here |
 | 10 | Preview and review for every class | ch. 4 | [spaced retrieval](spaced_retrieval/README.md): the review the same day is the first spaced retrieval |
 | 11 | Do homework without using examples or textbook information | ch. 5 | [metacognition](metacognition/README.md): an answer produced without looking is the only honest test of what you know |
-
-The other twenty-four are in the book.
+| 12 | Prepare as if you have to teach the information | ch. 5 | [studying vs learning](studying_vs_learning/README.md): teach-the-material mode |
+| 13 | Study with a partner or group, and go to each session prepared | ch. 5 | not covered here |
+| 14 | Create practice exams to evaluate your mastery | ch. 5 | [metacognition](metacognition/README.md): a test, not a feeling, says when a topic is done |
+| 15 | Start homework the day it is assigned and do a little each day | ch. 9 | [spaced retrieval](spaced_retrieval/README.md): spread out beats crammed |
+| 16 | Adopt a growth mindset about intelligence | ch. 6 | [motivation](#beyond-the-lessons-motivation), below |
+| 17 | Monitor your self-talk and stay positive | ch. 6 | [motivation](#beyond-the-lessons-motivation), below |
+| 18 | Attribute results to actions, not ability | ch. 6 | [metacognition](metacognition/README.md): look at the gap before the grade |
+| 19 | Get adequate rest, nutrition and exercise | ch. 8 | [motivation](#beyond-the-lessons-motivation), below |
+| 20–24 | Keep a semester calendar and a weekly one; commit to 20–25 hours of study a week; protect your free time; prioritise by needs and wants | ch. 9 | time management, not covered here |
+| 25 | Organise test information in charts, outlines or a study guide | ch. 9 | [count the vowels](count_the_vowels/README.md): organised material is recalled, and checked for gaps |
+| 26 | Find out what types of questions the test will have | ch. 9 | [studying vs learning](studying_vs_learning/README.md): which Bloom level the test asks for |
+| 27–32 | Write down formulas before starting an exam; read directions very carefully; survey the exam and budget time; start with the easiest questions; expect memory blocks and move on, since the answer often comes back; breathe deeply and use positive self-talk against test anxiety | ch. 9 | test-taking, not covered here |
+| 33 | Analyse every returned test and quiz, and plan how to improve | ch. 9 | [metacognition](metacognition/README.md): the calibration table is that analysis |
+| 34 | Use the campus learning center for group study and tutoring | ch. 9 | not covered here |
+| 35 | Visit your professors' office hours regularly | ch. 7 | not covered here |
 
 ## Beyond the lessons: motivation
 
