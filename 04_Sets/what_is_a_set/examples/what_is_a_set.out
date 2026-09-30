@@ -53,3 +53,15 @@
    A frozenset can hold only sets that existed before it, so none
    contains itself and 'x not in x' is true of every one of them.
    That is the axiomatic answer too: sets are built in stages.
+
+7. THE BOX PICTURE: WHERE IT HELPS AND WHERE IT MISLEADS
+   an empty box is not nothing:  len(∅) = 0,  len({∅}) = 1,  ∅ == {∅} is False
+   ∈ looks one level down only:  1 ∈ {1} is True,  {1} ∈ {{1}} is True,  1 ∈ {{1}} is False
+     a thing inside a box inside a box is 'in' the big box; a member of a
+     member is not a member. ∈ is not transitive; ⊆ is.
+   one object, two sets at once:  A = {1, 2}, B = {1, 3},  1 ∈ A and 1 ∈ B is True
+     a real object sits in one box; an element can be in any number of sets.
+   two copies are one element:  {1, 1} == {1} is True
+     a box can hold two identical marbles; a set cannot tell them apart.
+   So the box is a good picture of ∅ versus {∅}, and a bad one of
+   membership: take it for the first and drop it for the other three.

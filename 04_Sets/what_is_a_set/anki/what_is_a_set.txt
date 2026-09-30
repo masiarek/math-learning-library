@@ -29,3 +29,9 @@ Which of ∪, ∩, △ and ∖ are associative?	∪, ∩ and △ are; ∖ is not
 When are two sets disjoint?	When they have no member in common: A ∩ B = ∅.	definition
 What does null set mean in measure theory, as opposed to algebra?	A set of measure zero, which may be infinite, such as the Cantor set. In algebra books it usually means ∅.	trap
 Is a well-defined collection of distinct objects a good definition of set?	A good first description, not a definition: collection is a synonym, equality is left out, and a well-defined rule can fail to give a set (Russell).	principle
+What does the box definition of a set do better than well-defined collection of distinct objects?	It centres on ∈ (a ∈ A, c ∉ A), treats collection as a picture rather than a definition, and says a set is a single object, so sets can contain sets.	principle
+What does the box definition of a set leave out?	Any rule for when two sets are equal (extensionality), and any notion of well-defined.	trap
+Is ∈ transitive? Example?	No: 1 ∈ {1} and {1} ∈ {{1}}, but 1 ∉ {{1}}. A member of a member is not a member. ⊆ is transitive.	trap
+Is ∅ equal to {∅}?	No: ∅ has no members, {∅} has one, the empty set. An empty box in a box.	theorem
+Where does the box picture of a set mislead?	Membership is one level only, one element can be in many sets, and copies do not count.	trap
+What does a, b ∈ A mean?	a ∈ A and b ∈ A.	definition

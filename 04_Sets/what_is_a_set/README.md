@@ -21,6 +21,35 @@ As a definition, it has four problems, and each one is the seed of something rea
 
 So is it a good definition? It is a good *first* definition, and it should be read the way Halmos titled his book, *Naive Set Theory*: fine for everything a first course does with sets, and not a foundation. The honest version of it is short: *set* and *member* are undefined; two sets with the same members are equal; and a rule carves a set out of a set you already have, not out of everything.
 
+## A second definition: the box
+
+Another common opening reads:
+
+> A **set** is a collection of objects known as **elements**. An element can be almost anything, such as numbers, functions, or lines. A set is a single object that can contain many elements. Think of it as a box with things inside. The box is the set, and the things are the elements. We use uppercase letters to label sets, and elements will usually be represented by lowercase letters. The symbol ∈ (fashioned after the Greek letter *epsilon*) is used to mean "element of", so if A is a set and a is an element of A, write ∈aA or, the more standard, a ∈ A. The notation a, b ∈ A means a ∈ A and b ∈ A. If c is not an element of A, write c ∉ A. If A contains no elements, it is the **empty set**. It is represented by the symbol ∅. Think of the empty set as a box with no things inside.
+
+Is it better? **Better at notation, worse at the one idea the first definition was reaching for.**
+
+What it does better:
+
+- **It does not pretend.** "Collection" is offered as a picture, not a definition, which is honest: *set* and *element of* are undefined words, and this text treats them that way.
+- **It puts ∈ at the centre.** Membership is the only primitive of set theory, and this definition is built around it: a ∈ A, c ∉ A, and the shorthand a, b ∈ A. The first definition never gives the symbol.
+- **It says a set is a single object.** That is what lets a set be an element of another set, the step that makes sets of sets, functions as sets of pairs, and Russell's question possible. "Elements can be almost anything" includes other sets.
+- **It is right that ∅ is something.** An empty box is still a box: ∅ has no members, but {∅}, the box holding an empty box, has one. Section 7 checks it.
+- In passing it shows prefix notation, ∈aA, beside the usual infix a ∈ A, the same choice as `union(a, b)` against `a | b`.
+
+What it loses:
+
+- **Equality is gone entirely.** The first definition at least said "distinct"; this one never says when two sets are the same, so nothing in it rules out {1, 1} and {1} being different, or explains why there is only *one* empty set. [Extensionality](#the-definition-on-trial) is still missing.
+- **"Well-defined" is gone too**, so it has no answer to Russell, not even the insufficient one.
+
+And the box picture misleads in three places, each checked in section 7:
+
+1. **∈ is not "inside".** A marble in a small box inside a big box is inside the big box. But 1 ∈ {1} and {1} ∈ {{1}}, while 1 ∉ {{1}}: a member of a member is not a member. ∈ looks exactly one level down; ⊆ is the relation that is transitive.
+2. **One element, many sets.** A marble sits in one box at a time; 1 is in {1, 2} and in {1, 3} at once, and in infinitely many other sets.
+3. **No copies.** A box can hold two identical marbles; {1, 1} is {1}. The box picture has no way to say so, which is the equality rule it left out.
+
+Use the box for ∅ against {∅}, and drop it for membership. Taken together, the two textbook openings make one adequate definition: this one's notation, the first one's "distinct", and the equality rule neither of them states.
+
 ## One more word: "null set"
 
 The definition offers "null set" as a second name for ∅. In most of algebra and logic books it is. In measure theory and probability, a **null set** means a set of *measure zero*, which can be infinite, even uncountable: the [Cantor set](../../02_Measure_Zero/cantor_set/README.md) is a null set in that sense and has as many points as the whole line. Read the word by the book it is in, and prefer "empty set" for ∅.
@@ -86,6 +115,18 @@ The definition offers "null set" as a second name for ∅. In most of algebra an
    A frozenset can hold only sets that existed before it, so none
    contains itself and 'x not in x' is true of every one of them.
    That is the axiomatic answer too: sets are built in stages.
+
+7. THE BOX PICTURE: WHERE IT HELPS AND WHERE IT MISLEADS
+   an empty box is not nothing:  len(∅) = 0,  len({∅}) = 1,  ∅ == {∅} is False
+   ∈ looks one level down only:  1 ∈ {1} is True,  {1} ∈ {{1}} is True,  1 ∈ {{1}} is False
+     a thing inside a box inside a box is 'in' the big box; a member of a
+     member is not a member. ∈ is not transitive; ⊆ is.
+   one object, two sets at once:  A = {1, 2}, B = {1, 3},  1 ∈ A and 1 ∈ B is True
+     a real object sits in one box; an element can be in any number of sets.
+   two copies are one element:  {1, 1} == {1} is True
+     a box can hold two identical marbles; a set cannot tell them apart.
+   So the box is a good picture of ∅ versus {∅}, and a bad one of
+   membership: take it for the first and drop it for the other three.
 ```
 <!-- /output -->
 
@@ -116,6 +157,8 @@ Podręcznikowa „definicja” zbioru, czyli „dobrze określona kolekcja róż
 Brakuje w niej najważniejszego zdania: dwa zbiory o tych samych elementach są równe (aksjomat ekstensjonalności). To dzięki niemu {2, 5} = {5, 2}, zapis {1, 1, 2} oznacza po prostu {1, 2}, a zbiór pusty jest tylko jeden, choć można go opisać na wiele sposobów.
 
 „Dobrze określony” znaczy, że o każdym obiekcie wiadomo, czy należy, czy nie, co nie oznacza, że my to wiemy: zbiór nieparzystych liczb doskonałych jest dobrze określony, a nikt nie wie, czy jest pusty. Co gorsza, sama ostra reguła nie wystarcza: reguła „x nie należy do siebie” jest jasna, a zbioru nie wyznacza, bo pytanie, czy taki zbiór należy do siebie, prowadzi do sprzeczności (paradoks Russella). Program pokazuje to dosłownie: funkcja `russell(russell)` wywołuje samą siebie bez końca.
+
+Druga popularna definicja („zbiór to pudełko z rzeczami w środku”) lepiej wprowadza zapis a ∈ A i uczciwie przyznaje, że „kolekcja” to tylko obraz, ale gubi całkiem zasadę równości zbiorów. Obraz pudełka myli w trzech miejscach: element elementu nie jest elementem (1 ∈ {1} ∈ {{1}}, ale 1 ∉ {{1}}), jeden element może należeć do wielu zbiorów naraz, a dwie kopie tego samego to jeden element. Dobrze natomiast pokazuje, że {∅} to nie ∅: puste pudełko w pudełku to już jeden element.
 
 Naprawa Zermela polega na tym, że regułą wycina się elementy z już istniejącego zbioru. Wtedy paradoks zamienia się w twierdzenie: nie istnieje zbiór wszystkich zbiorów. Program sprawdza to na wszystkich 512 możliwych „wszechświatach” złożonych z trzech obiektów. Uwaga językowa: „zbiór zerowy” (ang. *null set*) w teorii miary oznacza zbiór miary zero, niekoniecznie pusty.
 

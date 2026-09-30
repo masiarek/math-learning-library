@@ -136,6 +136,28 @@ def main() -> None:
     print("   contains itself and 'x not in x' is true of every one of them.")
     print("   That is the axiomatic answer too: sets are built in stages.")
 
+    print()
+
+    print("7. THE BOX PICTURE: WHERE IT HELPS AND WHERE IT MISLEADS")
+    empty = frozenset()
+    box_of_empty = frozenset({empty})
+    print(f"   an empty box is not nothing:  len(∅) = {len(empty)},  len({{∅}}) = {len(box_of_empty)},"
+          f"  ∅ == {{∅}} is {empty == box_of_empty}")
+    one = 1
+    inner = frozenset({one})
+    outer = frozenset({inner})
+    print(f"   ∈ looks one level down only:  1 ∈ {{1}} is {one in inner},  {{1}} ∈ {{{{1}}}} is {inner in outer},"
+          f"  1 ∈ {{{{1}}}} is {one in outer}")
+    print("     a thing inside a box inside a box is 'in' the big box; a member of a")
+    print("     member is not a member. ∈ is not transitive; ⊆ is.")
+    A, B = frozenset({1, 2}), frozenset({1, 3})
+    print(f"   one object, two sets at once:  A = {{1, 2}}, B = {{1, 3}},  1 ∈ A and 1 ∈ B is {1 in A and 1 in B}")
+    print("     a real object sits in one box; an element can be in any number of sets.")
+    print(f"   two copies are one element:  {{1, 1}} == {{1}} is {frozenset([1, 1]) == frozenset([1])}")
+    print("     a box can hold two identical marbles; a set cannot tell them apart.")
+    print("   So the box is a good picture of ∅ versus {∅}, and a bad one of")
+    print("   membership: take it for the first and drop it for the other three.")
+
 
 if __name__ == "__main__":
     main()
