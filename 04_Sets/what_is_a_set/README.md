@@ -182,7 +182,7 @@ Keeping C and changing the logic can work, but only up to a point, and section 8
 
 ## Flashcards
 
-The page as a deck of Anki cards: [`what_is_a_set.txt`](anki/what_is_a_set.txt). Import with File → Import. Tags: `definition`, `axiom`, `theorem`, `trap`, `example`, `history`, `connection`, `principle`. The Python side is a second deck, on [sets in Python](../python_sets/README.md#flashcards).
+The page as a deck of Anki cards: [`what_is_a_set.txt`](anki/what_is_a_set.txt). Import with File → Import. Tags: `definition`, `axiom`, `theorem`, `trap`, `example`, `history`, `connection`, `principle`, `logic`. The Python side is a second deck, on [sets in Python](../python_sets/README.md#flashcards).
 
 ## Po polsku, w skrócie
 

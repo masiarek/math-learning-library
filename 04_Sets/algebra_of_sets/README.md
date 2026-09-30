@@ -197,7 +197,7 @@ The section ends with the rule that turns every set equality into two subset pro
 
 ## Flashcards
 
-The page as a deck of Anki cards: [`algebra_of_sets.txt`](anki/algebra_of_sets.txt). Import with File → Import. Tags: `definition`, `law`, `trap`, `logic`, `python`, `order`.
+The page as a deck of Anki cards: [`algebra_of_sets.txt`](anki/algebra_of_sets.txt). Import with File → Import. Tags: `logic`, `definition`, `law`, `principle`, `trap`, `venn`, `order`, `example`, `python`.
 
 ## Po polsku, w skrócie
 

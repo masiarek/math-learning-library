@@ -5,15 +5,15 @@
 #tags:sets math
 #columns:Front	Back	Tags
 #tags column:3
-What is the usual order of set operations, tightest first?	Complement, difference, intersection, union; left to right within a level.	precedence
-Where does the order of set operations come from?	From logic: not before and before or, since ′ is not, ∩ is and, ∪ is or.	precedence
-How does Python bracket A | B & C?	A | (B & C): & binds tighter than |.	python
-Python's set operator precedence, tightest first?	- then & then ^ then |.	python
-How is A ∖ B ∖ C read?	(A ∖ B) ∖ C, left to right; A ∖ (B ∖ C) is different.	precedence
-With U = {1,...,5}, {5} ∪ {1,2}′ ∩ {2,3} = ?	{3, 5} by the rule (∩ first); ({5} ∪ {1,2}′) ∩ {2,3} would be {3}.	precedence
-What is wrong with writing x ∈ A ∩ x ∈ B?	∩ needs sets on both sides, and x ∈ A is a statement. Write x ∈ A ∧ x ∈ B or x ∈ A ∩ B.	trap
-What is wrong with writing x ∈ A ∧ B?	∧ needs statements on both sides, and B is a set. Write x ∈ A ∧ x ∈ B.	trap
-What does Python do with x in A & x in B?	Reads it as x in (A & x) in B and raises TypeError for a number x.	python
-What does Python return for x in A and B when x is in A?	The set B itself, which is truthy even when x is not in B: a silent bug.	python
-With (a, b) = {{a}, {a, b}}, what is (1, 2) ∩ (2, 1)?	{{1, 2}}.	notation
-As open intervals, what is (1, 2) ∪ (2, 1)?	(1, 2), because (2, 1) is empty.	notation
+In an unbracketed set expression, which operation is done first, and what is the full order?	Complement first, then difference, then intersection, then union; equals go left to right. So A ∪ B ∩ C means A ∪ (B ∩ C).	precedence
+Why is the order of set operations complement, difference, intersection, union?	It copies logic, where not binds tighter than and, and and tighter than or: ′ is not, ∩ is and, ∪ is or, and ∖ is 'and not'.	precedence
+How does Python group A | B & C?	A | (B & C): & binds tighter than |, the same as ∩ before ∪.	python
+List Python's set operators from tightest to loosest.	- then & then ^ then |. Inherited from C's bitwise operators, and it matches the textbook order for sets.	python
+How is A ∖ B ∖ C read, and does it matter?	(A ∖ B) ∖ C, left to right. It matters: A ∖ (B ∖ C) is a different set, because difference is not associative.	precedence
+With U = {1, 2, 3, 4, 5}, evaluate {5} ∪ {1, 2}′ ∩ {2, 3} by the precedence rule, and with the other grouping.	By the rule ∩ goes first: {5} ∪ ({3, 4, 5} ∩ {2, 3}) = {5} ∪ {3} = {3, 5}. Grouped as ({5} ∪ {3, 4, 5}) ∩ {2, 3} it is {3}. Two answers from one line of symbols, so bracket when in doubt.	precedence
+What is wrong with writing x ∈ A ∩ x ∈ B?	∩ needs a set on each side, but 'x ∈ A' is a statement, true or false. Write x ∈ A ∧ x ∈ B, or x ∈ A ∩ B.	trap
+What is wrong with writing x ∈ A ∧ B?	∧ needs a statement on each side, but B is a set. Write x ∈ A ∧ x ∈ B.	trap
+What does Python do with x in A & x in B?	& binds tighter than in, so it reads x in (A & x) in B, a chained comparison that tries to compute A & 2 and raises TypeError.	python
+What does x in A and B return in Python, and why is it dangerous?	If x is in A it returns the set B itself, which is truthy even when x is not in B, so an if takes the wrong branch and nothing complains. Write x in A and x in B.	python
+Using Kuratowski pairs, (a, b) = {{a}, {a, b}}, what is (1, 2) ∩ (2, 1)?	{{1, 2}}. (1, 2) = {{1}, {1, 2}} and (2, 1) = {{2}, {1, 2}} share only the member {1, 2}.	notation
+Read as open intervals, what is (1, 2) ∪ (2, 1)?	(1, 2). The interval (2, 1) is the set of t with 2 < t < 1, which is empty. Same symbols as the ordered pair, a different set: the context decides.	notation
