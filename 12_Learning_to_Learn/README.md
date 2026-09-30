@@ -15,6 +15,26 @@ Every other chapter here is about mathematics. This one is about the person read
 
 A feeling of knowing is not knowing. Lesson 1 measures the gap between the two, with a score that rewards nothing but an honest guess. Lesson 2 shows that what you remember depends on what you did with the material, not on how long you looked at it. Lesson 3 names the levels of doing, from recalling a formula to building the formula that produces the facts, and lesson 4 keeps what you built, at a cost that grows only with the logarithm of how long you want it. Each step is something a reader can check on themselves, which is the point: metacognition is the habit of checking.
 
+## McGuire's strategies, and where they are explained
+
+The book closes with a list of 35 strategies. The first eleven, with the chapter of the book each comes from and the lesson here that gives the reason behind it:
+
+| # | Strategy | Book | Why it works, here |
+|---|---|---|---|
+| 1 | Strive for higher levels of Bloom's taxonomy | ch. 4 | [studying vs learning](studying_vs_learning/README.md) |
+| 2 | Implement the study cycle; schedule three to four intense study sessions a day | ch. 4 | [spaced retrieval](spaced_retrieval/README.md#the-study-cycle-spacing-built-into-a-week) |
+| 3 | Actively prepare to read by previewing reading assignments | ch. 5 | [count the vowels](count_the_vowels/README.md): a principle seen first organises what follows |
+| 4 | Read actively by developing questions before you start to read | ch. 5 | [count the vowels](count_the_vowels/README.md): know the goal before you look |
+| 5 | Paraphrase the information in each paragraph of a reading assignment | ch. 5 | [studying vs learning](studying_vs_learning/README.md): understanding means putting it in your own words |
+| 6 | Read and learn actively with flashcards, concept maps, mind maps and other tools | ch. 5 | [spaced retrieval](spaced_retrieval/README.md), and the Anki deck on every lesson |
+| 7 | Read the textbook | ch. 5 | the [reading guides](../reading_guides/precalculus/README.md) say which one |
+| 8 | Always attend every class | ch. 5 | the study cycle's second step |
+| 9 | Take good class notes by hand | ch. 5 | not covered here |
+| 10 | Preview and review for every class | ch. 4 | [spaced retrieval](spaced_retrieval/README.md): the review the same day is the first spaced retrieval |
+| 11 | Do homework without using examples or textbook information | ch. 5 | [metacognition](metacognition/README.md): an answer produced without looking is the only honest test of what you know |
+
+The other twenty-four are in the book.
+
 ## Beyond the lessons: motivation
 
 McGuire's later chapters turn from strategy to motivation, and her Figure 8.1 sums them up in five things a student can do:
