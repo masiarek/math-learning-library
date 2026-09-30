@@ -94,6 +94,14 @@ list(dict.fromkeys([1.0, 1, True])) = ?	[1.0]: the three are equal, and the firs
 How do you dedupe a list of lists?	list(dict.fromkeys(map(tuple, rows))), or the quadratic 'if r not in out' loop; lists are unhashable.	sets python dedupe	Math::Sets::Sets in Python
 How does ABAP remove duplicates from an internal table?	SORT by the fields, then DELETE ADJACENT DUPLICATES COMPARING the same fields (keeps the first of each run); or INSERT into a UNIQUE-key table (first wins, sy-subrc 4 for the rest).	sets python dedupe	Math::Sets::Sets in Python
 How does Rust remove duplicates from a Vec?	sort then dedup (sorted, adjacent only), or filter with a HashSet: seen.insert(x) is true only the first time (first-seen order).	sets python dedupe	Math::Sets::Sets in Python
+Why does Python need frozenset at all?	A set can change after it is stored, so it cannot be hashed; frozenset drops every mutating method and so can be a set member or dict key.	sets python frozenset	Math::Sets::Sets in Python
+{1, 2} in {frozenset({1, 2})} = ?	True: set membership (and remove, discard) treats a set argument as if frozen.	sets python frozenset	Math::Sets::Sets in Python
+{frozenset({1, 2}): 'x'}[{1, 2}] = ?	TypeError: a dict does not freeze the key for you. Use frozenset({1, 2}).	sets python frozenset	Math::Sets::Sets in Python
+t = frozenset({1}); u = t; t |= {2}. What are t and u?	t = frozenset({1, 2}), u = frozenset({1}): |= builds a new frozenset and rebinds t.	sets python frozenset	Math::Sets::Sets in Python
+What does f.copy() return for a frozenset f?	f itself: nothing can change, so there is nothing to copy.	sets python frozenset	Math::Sets::Sets in Python
+Why does Rust have no frozenset?	Mutability belongs to the binding (let vs let mut), and the borrow checker never gives &mut to a stored element.	sets python frozenset	Math::Sets::Sets in Python
+Can a Rust HashSet contain HashSets?	No: HashSet does not implement Hash. Use BTreeSet as the element type, which does.	sets python frozenset	Math::Sets::Sets in Python
+How is a set of sets built in ABAP?	Freeze each inner set into a key (e.g. a canonical sorted string) and store it in a HASHED table WITH UNIQUE KEY.	sets python frozenset	Math::Sets::Sets in Python
 What is the usual order of set operations, tightest first?	Complement, difference, intersection, union; left to right within a level.	sets math precedence	Math::Sets::Reading a set expression
 Where does the order of set operations come from?	From logic: not before and before or, since ′ is not, ∩ is and, ∪ is or.	sets math precedence	Math::Sets::Reading a set expression
 How does Python bracket A | B & C?	A | (B & C): & binds tighter than |.	sets math python	Math::Sets::Reading a set expression
