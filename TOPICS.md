@@ -118,7 +118,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - ↪ [The Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md) — the theorem Bloom's levels are climbed on
         - ↪ [Velocity equals position](09_Calculus/velocity_equals_position/README.md) — e^t, the shape of the forgetting curve
     - **Thinking with others** · from [Learning to Learn](12_Learning_to_Learn/README.md)
-        - [Day or night: perspective taking and the cutoff under a dichotomy](12_Learning_to_Learn/day_or_night/README.md) — dichotomous thinking, perspective taking, cutoff, twilight, sorites paradox, fuzzy logic, Zakrajsek
+        - [Day or night: perspective taking and the cutoff under a dichotomy](12_Learning_to_Learn/day_or_night/README.md) — dichotomous thinking, perspective taking, cutoff, twilight, sorites paradox, fuzzy logic, Set Up for Success
         - ↪ [A share above a cutoff](05_Statistics/share_above_a_cutoff/README.md) — another cutoff on a smooth quantity
 
 ## Threads across chapters
