@@ -46,3 +46,4 @@ Which set operation gives the keys an inner join keeps? an outer join? a left an
 What does B >= A mean, in English and in Polish?	B is a superset of A; B jest nadzbiorem A.	operations
 s1 = {'a','b','c'}, s2 = {'c','d','e'}: s1 | s2 and s1 & s2?	{'a','b','c','d','e'} and {'c'}.	kata
 set((1,2,3)) & set((2,3,4)) & set((3,4,5)) = ?	{3}.	kata
+Is set2 < = set1 (with a space) a subset test?	No: SyntaxError. <= is one token and takes no space inside.	trap

@@ -216,6 +216,16 @@ def main() -> None:
     t, u = {1, 2, 3}, {5}
     print(f"   if (s <= t, u):   runs, because (s <= t, u) = ({s <= t}, {u}) is a non-empty tuple")
     print(f"   s <= t and s <= u = {s <= t and s <= u}   is what was meant")
+    n1, n2, n3 = {0, 1, 2, 3, 4}, {0, 2, 3, 4}, {0, 2, 5}
+    print(f"   the notes' version: s1 = {show(n1)}, s2 = {show(n2)}, s3 = {show(n3)}")
+    print(f"     if (s1 <= s2, s3):          always taken, tuple ({n1 <= n2}, {show(n3)})")
+    print(f"     s1 <= s2 and s1 <= s3       {n1 <= n2 and n1 <= n3}   1 is in s1 and in neither of the others")
+    try:
+        compile("s2 < = s1", "<notes>", "eval")
+        spaced = "accepted"
+    except SyntaxError as e:
+        spaced = f"SyntaxError: {e.msg}"
+    print(f"     s2 < = s1                   {spaced}   <= is one token, no space inside")
     print()
 
     print("9. REMOVING: WHICH ONES RAISE")
