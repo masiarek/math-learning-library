@@ -63,7 +63,15 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
     - **The coordinate plane** · from [Analytic Geometry](08_Analytic_Geometry/README.md)
         - [Rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md) — a point is two signed distances, a quadrant is two signs, and the axes belong to none
         - [The distance formula](08_Analytic_Geometry/distance_formula/README.md) — distance between two points, √((x₂ − x₁)² + (y₂ − y₁)²), order and signs, comparing squared distances
+        - [The midpoint formula](08_Analytic_Geometry/midpoint_formula/README.md) — midpoint, average of coordinates, perpendicular bisector, point a fraction t of the way
         - ↪ [The Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md) — the theorem the distance formula is
+        - ↪ [Mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md) — each coordinate of the midpoint is one
+    - **Graphs of equations: intercepts, symmetry, lines, circles** · from [Analytic Geometry](08_Analytic_Geometry/README.md)
+        - [Graphs of equations: intercepts and symmetry](08_Analytic_Geometry/graphs_intercepts_symmetry/README.md) — graph as a set of points, x-intercept, y-intercept, symmetry about the axes and the origin
+        - [Lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md) — slope, rise over run, point-slope, slope-intercept, general form, negative reciprocal
+        - [Circles: standard form and general form](08_Analytic_Geometry/circles/README.md) — center, radius, unit circle, completing the square
+        - ↪ [Linear equations and their solutions](07_Linear_Systems/linear_equations/README.md) — the solution set of Ax + By = C is a line
+        - ↪ [Congruent and similar triangles](10_Geometry/congruent_and_similar_triangles/README.md) — why a line has one slope
         - ↪ [The Cartesian product](04_Sets/cartesian_product/README.md) — the set ℝ² that the plane is
         - ↪ [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — a complex number is a point of this plane, and multiplying by i moves it one quadrant on
         - ↪ [Precalculus: a reading guide](reading_guides/precalculus/README.md) — the course this is the first page of, and which book to read it in
@@ -142,14 +150,18 @@ One theorem about right triangles turns out to be how every distance in this lib
 2. [Area and volume formulas](10_Geometry/area_and_volume_formulas/README.md) — the diagonal of a square, and the altitude of a triangle, both found by it.
 3. [Congruent and similar triangles](10_Geometry/congruent_and_similar_triangles/README.md) — why two sides of a right triangle fix the third, the one case where SSA works.
 4. [The distance formula](08_Analytic_Geometry/distance_formula/README.md) — the theorem with the legs read off coordinates.
-5. [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — the length of a complex number, √(x² + y²), is the same formula measured from 0.
-6. [Catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md) — the Burj Khalifa example subtracts two nearly equal squares, and a calculator pays for it.
+5. [Circles: standard form and general form](08_Analytic_Geometry/circles/README.md) — the distance formula held fixed, with twelve whole-number points on x² + y² = 25.
+6. [Lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md) — perpendicular slopes, checked by the converse.
+7. [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — the length of a complex number, √(x² + y²), is the same formula measured from 0.
+8. [Catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md) — the Burj Khalifa example subtracts two nearly equal squares, and a calculator pays for it.
 
 ### Scale factor k
 
 1. [Area and volume formulas](10_Geometry/area_and_volume_formulas/README.md) — lengths times k, areas times k², volumes times k³.
 2. [Congruent and similar triangles](10_Geometry/congruent_and_similar_triangles/README.md) — similar triangles are one triangle scaled by k.
 3. [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — multiplying by a complex number scales by its length and turns, so every triangle goes to a similar one.
+4. [The midpoint formula](08_Analytic_Geometry/midpoint_formula/README.md) — k = ½: halfway across and halfway up is halfway along.
+5. [Lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md) — every rise-over-run triangle on a line is a scaled copy of every other.
 
 ### From exponents to Euler's identity
 

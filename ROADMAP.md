@@ -18,7 +18,7 @@ What exists, and what is deliberately not written yet. A topic listed here has *
 
 **[07_Linear_Systems](07_Linear_Systems/README.md)** — what it means to solve a system of equations. One lesson so far: [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md).
 
-**[08_Analytic_Geometry](08_Analytic_Geometry/README.md)** — what it means to draw a number. Two lessons so far: [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md), [the distance formula](08_Analytic_Geometry/distance_formula/README.md).
+**[08_Analytic_Geometry](08_Analytic_Geometry/README.md)** — what it means to draw a number. Six lessons, the whole first chapter of Sullivan's *Precalculus*: [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md), [the distance formula](08_Analytic_Geometry/distance_formula/README.md), [the midpoint formula](08_Analytic_Geometry/midpoint_formula/README.md), [graphs, intercepts and symmetry](08_Analytic_Geometry/graphs_intercepts_symmetry/README.md), [lines and slope](08_Analytic_Geometry/lines_and_slope/README.md), [circles](08_Analytic_Geometry/circles/README.md).
 
 **[09_Calculus](09_Calculus/README.md)** — what a velocity is, and which motion is its own. Four lessons: [the derivative is a velocity](09_Calculus/derivative_as_velocity/README.md), [velocity equals position](09_Calculus/velocity_equals_position/README.md), [radians](09_Calculus/radians/README.md), [power series](09_Calculus/power_series/README.md). [Euler's formula: a lesson plan](reading_guides/eulers_formula/README.md) threads them into a path to e^{iπ} = −1.
 
@@ -79,18 +79,10 @@ One lesson says what a solution is. The rest of Hefferon's first section says ho
 
 ## The rest of the analytic-geometry chapter
 
-Two lessons set up the plane and measure in it. Each remaining section of the book's first chapter has an obvious program:
+Six lessons cover the book's first chapter. The doors they leave open:
 
-- **The midpoint** — the point halfway along, ((x₁ + x₂)/2, (y₁ + y₂)/2), which is [the arithmetic mean](05_Statistics/mean_vs_average/README.md) taken one coordinate at a time. A program can check that it is the same distance from both ends and that it lies on the segment.
-- **Graphs of equations** — the graph of an equation in x and y is the set of every point whose coordinates pass it, which makes it the same object as the solution set in [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md), drawn. Intercepts are the points where the graph meets an axis, so they have a 0 coordinate; symmetry about an axis is the sign change of lesson 1's section 6. A program can plot a solution set on the text grid and find the intercepts by searching for a 0.
-
-## The rest of the calculus chapter
-
-Four lessons are the part of a calculus course that Euler's formula leans on, told as motion. They measure what they cannot prove, and they leave these doors open:
-
-- **The chain rule in general** — [velocity equals position](09_Calculus/velocity_equals_position/README.md) needs only the case of a clock running k times as fast. The general rule, d/dt f(g(t)) = f′(g(t)) · g′(t), is the same picture with a clock whose speed changes, and a program can check it by stepping both sides.
-- **Area and velocity** — the other half of calculus. Adding up velocity · dt over a time gives the distance travelled, which is what [stepping with a velocity](09_Calculus/derivative_as_velocity/README.md#stepping-with-a-velocity) already does; the theorem that this is exactly the area under the velocity's graph is the fundamental theorem of calculus.
-- **Better steps** — the chapter's steps use the velocity at the start of each step, which is Euler's method, and its error falls only as fast as the step. Averaging the velocity at both ends, or four points as Runge and Kutta did, makes the error fall much faster. The page would compare them on e^{it}, where the true answer is known and the drift off the circle is visible, and would connect back to [01_Precision](01_Precision/README.md).
+- **Graphing utilities** — Sullivan's section 1.1 also teaches a graphing calculator's viewing window. A program could show how a badly chosen window hides intercepts, which is a real argument, but it is about a tool rather than the mathematics.
+- **Functions** — the book's chapter 2, and the gap listed under candidate chapters below: the circle is the first graph here that is not the graph of a function, and even and odd functions are the symmetries of lesson 4 renamed.
 
 ## Candidate chapters
 

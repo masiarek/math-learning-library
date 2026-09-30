@@ -36,11 +36,15 @@ Terms used across the library, with the page that explains each in full.
 
 **Chain rule** — the rule for the velocity of a function of a function. The case the talk uses: e^(kt) is the motion e^t on a clock running k times as fast, and speeding up the clock by k multiplies every velocity by k, so d/dt e^(kt) = k · e^(kt). See [velocity equals position](09_Calculus/velocity_equals_position/README.md).
 
+**Circle** — the set of points at a fixed distance r, the radius, from a fixed point (h, k), the center. Its equation is the distance formula held fixed: (x − h)² + (y − k)² = r². See [circles](08_Analytic_Geometry/circles/README.md).
+
 **Closed under an operation** — a subset is closed under an operation when applying it to members of the subset always gives a member of the subset. The line y = 2x is closed under + and scaling; the half-plane x ≥ 0 is not closed under scaling by −1. See [subsets inherit the laws](06_Algebraic_Structures/subsets_inherit_the_laws/README.md).
 
 **Coefficient** — a fixed number standing in front of a variable in a linear combination: in 40h + 15c the coefficients are 40 and 15. In a system, aᵢ,ⱼ is the coefficient in equation i in front of variable j. Zero is allowed. See [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md).
 
 **Commutative** — a · b = b · a: the order of the two inputs does not matter. True for adding and multiplying numbers; false for subtraction, string concatenation, matrix multiplication and composing maps. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
+
+**Completing the square** — rewriting x² + ax as (x + a/2)² − (a/2)², by adding half the coefficient squared to both sides. It turns the general form of a circle back into the standard form. See [circles](08_Analytic_Geometry/circles/README.md).
 
 **Complex multiplication** — the rule (x₁, y₁) · (x₂, y₂) = (x₁x₂ − y₁y₂, x₁y₂ + x₂y₁) on pairs of reals. It is the whole definition of the complex numbers: i is the pair (0, 1), and i² = −1 is what the rule gives for (0, 1) · (0, 1). See [multiplication as pairs](03_Complex_Numbers/multiplication_as_pairs/README.md).
 
@@ -90,6 +94,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Geometric mean** — the n-th root of the product of n numbers: the one number that can replace every value without changing their product. The right mean for growth rates, which multiply: +100% then −50% is a geometric mean of 0% a year, not the arithmetic +25%. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
 
+**Graph of an equation** — the set of all points (x, y) whose coordinates satisfy the equation. A point is on it exactly when substituting it makes the equation true. See [graphs of equations: intercepts and symmetry](08_Analytic_Geometry/graphs_intercepts_symmetry/README.md).
+
 **Group** — a set with an operation that is associative, has an identity, and gives every member an inverse. The integers under +, the nonzero fractions under ×, the invertible matrices under ×, and the n-th roots of unity under × are groups. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
 
 **Harmonic mean** — n divided by the sum of the reciprocals of n numbers: the one number that keeps the sum of reciprocals. The right mean for speeds over equal distances; 30 km/h out and 60 km/h back averages 40 km/h, not 45. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
@@ -99,6 +105,8 @@ Terms used across the library, with the page that explains each in full.
 **Hypotenuse** — the side of a right triangle opposite the right angle; always the longest side, and the c in c² = a² + b². See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md).
 
 **Identity element** — a member e with a · e = e · a = a for every a: 0 for +, 1 for ×, the empty string for concatenation, the identity matrix for matrix multiplication. There is at most one, since two identities e and e′ give e = e · e′ = e′. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
+
+**Intercept** — a coordinate of a point where a graph meets an axis. For x-intercepts set y = 0 and solve; for y-intercepts set x = 0. Sullivan means the number, 3, not the point (3, 0). See [graphs of equations: intercepts and symmetry](08_Analytic_Geometry/graphs_intercepts_symmetry/README.md).
 
 **Inverse** — for a member a, a member b with a · b = b · a = e, the identity. −3 is the inverse of 3 under +, and 1/2 is the inverse of 2 under ×. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
 
@@ -122,15 +130,21 @@ Terms used across the library, with the page that explains each in full.
 
 **Median** — the middle value once the numbers are sorted, or halfway between the two middle ones: at least half the values are at or below it, and at least half are at or above it. An average but not a mean, and the one a single huge value cannot drag. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
 
+**Midpoint** — the point halfway along a segment, ((x₁ + x₂)/2, (y₁ + y₂)/2): an average per coordinate. Equidistant from both ends and on the segment; equidistance alone describes the perpendicular bisector. See [the midpoint formula](08_Analytic_Geometry/midpoint_formula/README.md).
+
 **Mode** — the value that occurs most often. When several values tie for most often, a set has more than one mode. An average, but not a mean. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
 
 **Monoid** — a set with an operation that is associative and has an identity, but where members need not have inverses. Strings under concatenation, and the integers under ×. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
+
+**Negative reciprocal** — −1/m: the slope of a line perpendicular to one of slope m, so the two slopes multiply to −1. Flip the fraction and change its sign. See [lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md).
 
 **Nowhere dense** — for a closed set on the line, containing no interval at all: there are gaps everywhere. Both Cantor sets are nowhere dense, but only the standard one has measure zero. See [the fat Cantor set](02_Measure_Zero/fat_cantor_set/README.md).
 
 **Ordered pair** — (a, b), an object that remembers which entry is first: (a, b) = (c, d) exactly when a = c and b = d. Unlike the set {a, b}, it distinguishes (2, 5) from (5, 2) and does not collapse (3, 3). See [the Cartesian product](04_Sets/cartesian_product/README.md).
 
 **Ordinate** — the y-coordinate of a point: its signed distance from the x-axis, positive above it and negative below. The x-coordinate is the *abscissa*. See [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md).
+
+**Point-slope form** — y − y₁ = m(x − x₁), the line through (x₁, y₁) with slope m; the form to write first. See [lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md).
 
 **Polar form** — a nonzero complex number written as r e^{iθ}: its length r times the unit point at its angle θ. Multiplying two of them multiplies the lengths and adds the angles, which is the law of exponents, and de Moivre's formula is (e^{iθ})ⁿ = e^{inθ}. `cmath.polar` reads r and θ off a number and `cmath.rect` puts them back. See [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
 
@@ -176,6 +190,10 @@ Terms used across the library, with the page that explains each in full.
 
 **Similar triangles** — triangles with the same shape: corresponding angles equal and corresponding sides proportional, with one scale factor. Proved by AA, SSS (proportional) or SAS (proportional). See [congruent and similar triangles](10_Geometry/congruent_and_similar_triangles/README.md).
 
+**Slope** — rise over run, m = (y₂ − y₁)/(x₂ − x₁): one number for a whole line, because every pair of its points makes a similar right triangle. Undefined for a vertical line, 0 for a horizontal one. See [lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md).
+
+**Slope-intercept form** — y = mx + b, a line with slope m and y-intercept b. It cannot describe a vertical line. See [lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md).
+
 **Solution** — of a linear equation, an n-tuple (s₁, …, sₙ) that makes it true when sᵢ is put in for xᵢ; of a system, a tuple that is a solution of every equation at once. One equation in two unknowns has a whole line of solutions. See [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md).
 
 **Stability** — whether a particular *algorithm* preserves the accuracy a well-conditioned problem allows. The textbook quadratic formula is unstable for one of its two roots; a conjugate rearrangement fixes it for free. See [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md).
@@ -188,6 +206,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Subspace** — a subset of a vector space that is a vector space with the same operations. It needs only three checks — it contains 0, and it is closed under + and under scalar multiplication — because the other laws are inherited. The subspaces of the plane are the origin, the lines through it, and the plane. See [subsets inherit the laws](06_Algebraic_Structures/subsets_inherit_the_laws/README.md).
 
+**Symmetry of a graph** — about the y-axis if (−x, y) is on it whenever (x, y) is; about the x-axis for (x, −y); about the origin for (−x, −y). Tested by substituting and comparing equations; two symmetries force the third. See [graphs of equations: intercepts and symmetry](08_Analytic_Geometry/graphs_intercepts_symmetry/README.md).
+
 **System of linear equations** — m linear equations in the same n variables, written with double subscripts: aᵢ,ⱼ is the coefficient in equation i of variable j, and dᵢ is the constant of equation i. Its solutions are the tuples that pass every equation. See [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md).
 
 **Tablemaker's dilemma** — an entry computed as 0.124|5000000, correct to a few digits past the bar, cannot be rounded at the bar until some further digit breaks the run of zeros, and nothing says in advance how far out that digit is. An exact tie is possible only for an algebraic value. See [relative error and correct digits](01_Precision/relative_error/README.md).
@@ -197,6 +217,8 @@ Terms used across the library, with the page that explains each in full.
 **Tuple** — an ordered list of numbers, (s₁, …, sₙ), called an n-tuple when it has n entries; a pair is a 2-tuple and a triple a 3-tuple. ℝⁿ is the set of all n-tuples of reals. Order matters: (1, 4) is not (4, 1). See [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md) and [the Cartesian product](04_Sets/cartesian_product/README.md).
 
 **Uncountable** — too big to be written as a list. [0, 1] is uncountable, and so is the Cantor set, which still has measure zero. See [the Cantor set](02_Measure_Zero/cantor_set/README.md).
+
+**Unit circle** — x² + y² = 1, center (0, 0), radius 1. Every Pythagorean triple a, b, c gives a point (a/c, b/c) on it. See [circles](08_Analytic_Geometry/circles/README.md).
 
 **Unit roundoff** — u = 2⁻⁵³ ≈ 1.1 × 10⁻¹⁶ for binary64: the largest relative error that rounding a real number to the nearest float can make, and the bound on δ in the standard model. See [relative error and correct digits](01_Precision/relative_error/README.md) and [machine numbers](01_Precision/machine_numbers/README.md).
 

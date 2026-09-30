@@ -1,0 +1,78 @@
+1. A GRAPH IS A SET OF POINTS: y = x^2 - 4
+     6   .  .  .  o  .  .  |  .  .  o  .  .  .
+     5   .  .  .  *  .  .  |  .  .  *  .  .  .
+     4   .  .  .  o  .  .  |  .  .  o  .  .  .
+     3   .  .  .  o  .  .  |  .  .  o  .  .  .
+     2   .  .  .  o  o  .  |  .  o  o  .  .  .
+     1   .  .  .  .  o  .  |  .  o  .  .  .  .
+     0   -  -  -  -  *  -  +  -  *  -  -  -  -
+    -1   .  .  .  .  o  .  |  .  o  .  .  .  .
+    -2   .  .  .  .  o  o  |  o  o  .  .  .  .
+    -3   .  .  .  .  .  *  |  *  .  .  .  .  .
+    -4   .  .  .  .  .  o  *  o  .  .  .  .  .
+    -5   .  .  .  .  .  .  |  .  .  .  .  .  .
+    -6   .  .  .  .  .  .  |  .  .  .  .  .  .
+        -6 -5 -4 -3 -2 -1  0  1  2  3  4  5  6   x
+   * is a whole-number point (x, y) that makes the equation true exactly;
+   o is a square the curve passes through between such points.
+
+2. IS THE POINT ON THE GRAPH? SUBSTITUTE AND SEE
+   ( 2,  0):  y =  0,  x^2 - 4 =  0   on the graph
+   ( 1, -3):  y = -3,  x^2 - 4 = -3   on the graph
+   ( 1, -2):  y = -2,  x^2 - 4 = -3   not on it
+   (-3,  5):  y =  5,  x^2 - 4 =  5   on the graph
+   ( 0,  4):  y =  4,  x^2 - 4 = -4   not on it
+   (0, 4) fails although (0, -4) passes: a sign is a different point.
+
+3. INTERCEPTS: SET THE OTHER COORDINATE TO 0, THEN SOLVE
+   equation              x-intercepts (y = 0)    y-intercepts (x = 0)
+   y = x^2 - 4                          -2, 2                      -4
+   x = y^2                                  0                       0
+   y = x^3 - x                       -1, 0, 1                       0
+   x^2 + 4y^2 = 16                      -4, 4                   -2, 2
+   y = x + 2                               -2                       2
+   y = x^2 + 1                           none                       1
+   An intercept is a single number, a coordinate: the x-intercepts of
+   y = x^2 - 4 are -2 and 2, and the points are (-2, 0) and (2, 0).
+   y = x^2 + 1 never reaches the x-axis: x^2 = -1 has no real solution.
+   x = y^2 has 0 as both: the graph goes through the origin.
+
+4. SYMMETRY: DOES THE MIRROR IMAGE OF THE EQUATION SAY THE SAME THING?
+   equation              x-axis    y-axis    origin
+   y = x^2 - 4               no       yes        no
+   x = y^2                  yes        no        no
+   y = x^3 - x               no        no       yes
+   x^2 + 4y^2 = 16          yes       yes       yes
+   y = x + 2                 no        no        no
+   y = x^2 + 1               no       yes        no
+   x-axis: replace y by -y.  y-axis: replace x by -x.  origin: replace both.
+   If the new equation is equivalent to the old one, the graph has that symmetry.
+
+5. THE TEST, BY HAND, ON y = x^3 - x
+   origin: -y = (-x)^3 - (-x) = -x^3 + x; multiply by -1: y = x^3 - x.  Same: symmetric.
+   y-axis:  y = (-x)^3 - (-x) = -x^3 + x.  Different equation: not symmetric.
+   A witness for 'not': (2, 6) is on the graph, its y-axis mirror (-2, 6) is not: F(2, 6) = 0, F(-2, 6) = -12.
+
+6. ANY TWO SYMMETRIES FORCE THE THIRD
+   Reflecting in the x-axis and then the y-axis is a half turn about the origin:
+   (x, y) -> (x, -y) -> (-x, -y). So x^2 + 4y^2 = 16, with both axis symmetries,
+   gets origin symmetry for free. The ellipse:
+     6   .  .  .  .  .  .  |  .  .  .  .  .  .
+     5   .  .  .  .  .  .  |  .  .  .  .  .  .
+     4   .  .  .  .  .  .  |  .  .  .  .  .  .
+     3   .  .  .  .  .  .  |  .  .  .  .  .  .
+     2   .  .  .  o  o  o  *  o  o  o  .  .  .
+     1   .  .  o  o  .  .  |  .  .  o  o  .  .
+     0   -  -  *  -  -  -  +  -  -  -  *  -  -
+    -1   .  .  o  o  .  .  |  .  .  o  o  .  .
+    -2   .  .  .  o  o  o  *  o  o  o  .  .  .
+    -3   .  .  .  .  .  .  |  .  .  .  .  .  .
+    -4   .  .  .  .  .  .  |  .  .  .  .  .  .
+    -5   .  .  .  .  .  .  |  .  .  .  .  .  .
+    -6   .  .  .  .  .  .  |  .  .  .  .  .  .
+        -6 -5 -4 -3 -2 -1  0  1  2  3  4  5  6   x
+
+7. A GRAPH OF y = f(x) WITH x-AXIS SYMMETRY IS FLAT
+   If (x, y) and (x, -y) are both on it, one x has two y's unless y = 0.
+   So among graphs of functions, only y = 0 is symmetric about the x-axis;
+   x = y^2 is symmetric about it precisely because y is not a function of x there.

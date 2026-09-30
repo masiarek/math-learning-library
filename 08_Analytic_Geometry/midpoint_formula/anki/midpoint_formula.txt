@@ -1,0 +1,31 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Midpoint formula
+#tags:math precalculus midpoint-formula
+#columns:Front	Back	Tags
+#tags column:3
+State the midpoint formula.	M = ((x1 + x2)/2, (y1 + y2)/2): the average of the x's and the average of the y's.	formula
+The midpoint formula in three words?	Sum over two, for each coordinate.	formula
+Each coordinate of the midpoint is what kind of average?	The arithmetic mean of the two coordinates.	formula
+On a number line, the point halfway between a and b?	(a + b)/2.	formula
+Halfway along a segment means which two things?	Equally far from both ends, and on the segment.	why
+Is every point equally far from A and B the midpoint of AB?	No. The whole perpendicular bisector is equidistant; only one of its points is on the segment.	why
+Why is halfway across and halfway up also halfway along the diagonal?	The triangle from P1 to M is the triangle from P1 to P2 at half the size: similar, scale factor 1/2.	why
+How far is the midpoint from each end?	Half the length of the segment.	why
+Does the midpoint depend on which point is called P1?	No: x1 + x2 = x2 + x1.	why
+The point a fraction t of the way from P1 to P2?	P1 + t(P2 - P1). t = 1/2 is the midpoint.	formula
+Which values of t in P1 + t(P2 - P1) give the segment?	t from 0 to 1. Outside that range the point is on the line but past an end.	why
+Given one end P1 and the midpoint M, the other end?	P2 = 2M - P1, coordinate by coordinate.	formula
+Midpoint of (-5, 5) and (3, 1)?	(-1, 3).	problems
+Midpoint of (1.5, -2) and (-3.5, 4)?	(-1, 1).	problems
+One end (1, 2), midpoint (4, -1): other end?	(7, -4).	problems
+One end (0, 0), midpoint (3, 5): other end?	(6, 10).	problems
+The center of a circle from the two ends of a diameter?	The midpoint of the diameter.	problems
+How can midpoints test for a parallelogram?	Its diagonals bisect each other: they have the same midpoint.	problems
+The average of three points, and its name for a triangle?	The centroid, ((x1 + x2 + x3)/3, (y1 + y2 + y3)/3).	problems
+Trap: the midpoint of (2, 3) and (10, 7) is ((10 - 2)/2, (7 - 3)/2) = (4, 2)?	No. That is half the trip. The midpoint is the sum over two: (6, 5).	trap
+Trap: one end (1, 2) and midpoint (4, -1), so the other end is the average ((1 + 4)/2, (2 - 1)/2)?	No. That is a quarter of the way. The other end is 2M - P1 = (7, -4).	trap
+Trap: Q is 5 from A and 5 from B, so Q is the midpoint of AB?	Not unless Q is on the segment, which needs AB = 10.	trap
+Trap: midpoint of (-3, 4) and (3, -4) is undefined because the sums are 0?	No. It is (0, 0), the origin. A zero coordinate is a perfectly good coordinate.	trap
+Trap: which formulas use sums and which use differences?	Midpoint: sums. Distance and slope: differences.	trap

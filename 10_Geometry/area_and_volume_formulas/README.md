@@ -256,7 +256,7 @@ The page as a deck of Anki cards: [`area_and_volume_formulas.txt`](anki/area_and
 
 ## Where this goes next
 
-[Congruent and similar triangles](../congruent_and_similar_triangles/README.md) uses the scaling rule of section 1: similar triangles with sides in the ratio k have areas in the ratio k². And the circle comes back in coordinates at the end of the book's first chapter, where "radius r" becomes an equation, (x − h)² + (y − k)² = r², which is the [distance formula](../../08_Analytic_Geometry/distance_formula/README.md) held fixed.
+[Congruent and similar triangles](../congruent_and_similar_triangles/README.md) uses the scaling rule of section 1: similar triangles with sides in the ratio k have areas in the ratio k². And the circle comes back in coordinates in [circles](../../08_Analytic_Geometry/circles/README.md), at the end of the book's first chapter, where "radius r" becomes an equation, (x − h)² + (y − k)² = r², which is the [distance formula](../../08_Analytic_Geometry/distance_formula/README.md) held fixed.
 
 ## Po polsku, w skrócie
 
