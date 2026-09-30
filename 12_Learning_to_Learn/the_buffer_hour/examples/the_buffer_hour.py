@@ -4,7 +4,7 @@
 Run:  python3 the_buffer_hour.py
 
 "Reserve an hour every day in case something takes longer than expected,"
-says Set Up for Success, and "put an estimated completion time for each item;
+says The New Science of Learning, and "put an estimated completion time for each item;
 as you estimate, your estimates will improve." This program shows why both
 tips are arithmetic, not caution.
 

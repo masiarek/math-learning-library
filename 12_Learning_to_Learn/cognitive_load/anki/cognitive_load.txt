@@ -1,0 +1,19 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Learning to learn::Cognitive load
+#tags:math learning cognitive-load
+#columns:Front	Back	Tags
+#tags column:3
+Sweller's three kinds of cognitive load	Intrinsic (the task itself), extraneous (distractions that do not help), germane (the effort of building schemas and automaticity).	definition
+Why does intrinsic load fall with expertise?	An expert holds several elements as one chunk, so the same material takes fewer places in working memory.	chunk
+About how many chunks does working memory hold?	About four (Cowan, 2001); Miller's 1956 figure was seven plus or minus two.	definition
+What is a chunk?	A unit you already know well enough to hold as one: a word rather than its letters, 1492 rather than four digits.	chunk
+(a+b)^2=a^2+2ab+b^2: how many chunks for a beginner, a student, an expert?	19 symbols, 3 pieces (two sides and =), 1 identity.	chunk
+Is intrinsic load a property of the material?	No: of the material together with what the reader already knows.	trap
+Why can a conversation nearby stop a student and not an expert?	All loads share one budget; the student is near the limit and the extra load tips them over.	budget
+Why does a quiet room not help a complete beginner?	Their intrinsic load alone is far over the budget; only practice lowers it.	budget
+Study Tip 4.2	Check your environment to minimise extraneous load before you study; put your phone away.	definition
+What chunks does practice build, in the byte-pair model?	The parts that repeat across examples; the parts that change never become chunks.	practice
+What is a schema, in the model's terms?	One chunk with slots: (first + second)^2 = first^2 + 2 first second + second^2.	practice
+What is germane load?	The effort of building chunks and schemas: a short-term cost for a long-term gain.	definition

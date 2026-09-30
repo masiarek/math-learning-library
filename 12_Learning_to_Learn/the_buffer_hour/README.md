@@ -6,7 +6,7 @@
 
 ## The advice
 
-Chapter 3 of *Set Up for Success*, "Developing Your Learning Strategy", gives two tips about schedules and to-do lists that look like caution:
+Chapter 3 of Todd Zakrajsek's *The New Science of Learning* (third edition, 2022), "Developing Your Learning Strategy", gives two tips about schedules and to-do lists that look like caution:
 
 - **Reserve an hour every day** in case something takes longer than expected. If everything goes as planned, enjoy the unplanned "you time".
 - **Put an estimated completion time on each item.** As you estimate, your estimates will improve. (The author adds: "I still struggle with this.")
@@ -117,7 +117,7 @@ The page as a deck of Anki cards: [`the_buffer_hour.txt`](anki/the_buffer_hour.t
 
 ## Po polsku, w skrócie
 
-Książka *Set Up for Success* radzi zostawiać codziennie godzinę rezerwy i zapisywać przy każdym zadaniu szacowany czas. Obie rady to arytmetyka. Zadanie prawie nigdy nie kończy się dużo szybciej, niż zakładaliśmy, ale bywa, że trwa dwa albo trzy razy dłużej. Błędy szacunku idą więc w jedną stronę i się nie znoszą.
+Książka Todda Zakrajska *The New Science of Learning* radzi zostawiać codziennie godzinę rezerwy i zapisywać przy każdym zadaniu szacowany czas. Obie rady to arytmetyka. Zadanie prawie nigdy nie kończy się dużo szybciej, niż zakładaliśmy, ale bywa, że trwa dwa albo trzy razy dłużej. Błędy szacunku idą więc w jedną stronę i się nie znoszą.
 
 W modelu programu zadanie „na godzinę" trwa godzinę z szansą 60%, półtorej z szansą 30% i trzy godziny z szansą 10%. Szacunek jest uczciwy, bo godzina to najczęstszy wynik, ale średnio zadanie trwa 1,35 godziny. Dzień z pięcioma takimi zadaniami, zaplanowany na pięć godzin, mieści się w planie tylko w 7,8% przypadków. Godzina rezerwy podnosi to do 46,7%. Gdyby błędy były symetryczne, pięciogodzinny plan wystarczałby w 64% dni. To asymetria, a nie sam błąd, psuje plan.
 
