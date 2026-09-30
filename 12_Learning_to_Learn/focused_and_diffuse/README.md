@@ -152,6 +152,28 @@ The rest of *Learning How to Learn* covers ground this chapter already has a les
 | Sleep and exercise help learning | the chapter's [summary of the evidence](../README.md#the-big-four-techniques-and-how-sure-each-claim-is) |
 | Memory palaces and memorable images; habits against procrastination | not covered here: no program shows them |
 
+## A longer summary, and how sure each claim is
+
+Longer write-ups of this idea, many of them AI-written, go well past the book. A typical one says the model "is not a metaphor", names the brain networks behind each mode, and ends with a daily protocol. Most of its advice is sound and matches the book. The claims under the advice vary a lot in how well they are supported, and weighing them is [metacognition](../metacognition/README.md) applied to advice, as the chapter does for [the big four techniques](../README.md#the-big-four-techniques-and-how-sure-each-claim-is):
+
+| Claim | How sure |
+|---|---|
+| Setting a stuck problem aside helps, most after a real effort and with an undemanding task in the break | **Good evidence**: the incubation review above (Sio and Ormerod, 2009). Coming back to the problem is part of the method, not an extra. |
+| Sleep after learning consolidates it, so cutting sleep to study more is a losing trade | **Well established.** The chapter's [summary of the evidence](../README.md#the-big-four-techniques-and-how-sure-each-claim-is) says the same. |
+| Sleep helps insight | **Some evidence**: in one well-known experiment, more people found a hidden shortcut in a number task after a night's sleep than after the same time awake (Wagner and colleagues, *Nature*, 2004). There are few studies of this kind. |
+| Curiosity before studying helps memory | **Good evidence** (Gruber and colleagues, *Neuron*, 2014), including for unrelated material learned while curious. "It releases dopamine" is the proposed mechanism, not the finding. |
+| Focus and mind-wandering use networks that tend to switch each other off | **Broadly supported**: the task-control networks and the default mode network are usually anticorrelated, though how strongly depends on how the scans are processed. |
+| The default mode network causes creative ideas | **One small study** in epilepsy patients with electrodes already in place: stimulating it lowered the originality of ideas (Shofty and colleagues, *Brain*, 2022). Suggestive, not settled. |
+| Good thinkers switch between the networks at an ideal rate, on an inverted-U | **Weak**: correlations in brain scans, not a rule you can use to set your breaks. |
+| Diffuse mode *is* the default mode network, so the model "is not a metaphor" | **Overstated.** The book's own authors use it as a teaching picture; the match to brain networks is loose, as [above](#what-the-model-leaves-out). |
+| Short naps of 10–20 minutes trigger hippocampal replay; nature restores attention; TV blocks the diffuse mode | **Weak to mixed.** Replay is well shown in animals, and a nap that short is mostly light sleep. The evidence on nature is mixed, and the TV claim has no clear source. |
+| "8 hours of study with 4 hours of sleep retains less than 5 with 8" | **Invented numbers.** The direction fits the sleep research, but no study measured this trade. |
+| Carlsen walks away and "returns with a decisive move" | **An embellished story.** He does leave the board often, and the game in the book's photo was a draw. |
+
+The protocol at the end of such summaries is good advice, and each step already has a reason in this chapter. Asking yourself a question before you start is [count the vowels](../count_the_vowels/README.md): know the goal before you read. A focused block and then a real break is this page and McGuire's [intense study session](../spaced_retrieval/README.md#the-study-cycle-spacing-built-into-a-week). Recalling without notes afterwards is [spaced retrieval](../spaced_retrieval/README.md). Sleep ends the day.
+
+One line in these summaries is worth correcting with the program: "focused mode does not know when it is stuck". In section 2 the climber *does* know it has stopped, since both neighbours are lower. What it cannot know is whether it stopped on the highest hill: from inside, the top of a small hill and the top of the highest one look the same, because both have only lower neighbours. The signal to step back is therefore the one to use in practice. Stop when you have made no progress, rather than when you feel you are close, because feeling close is exactly what a local peak feels like.
+
 ## Try it
 
 1. **Time your stuck.** Next time you are stuck, note the time. After 10 more minutes with no progress, stop, walk for 5, and write down whether the problem looks different when you come back.
@@ -170,6 +192,8 @@ Barbara Oakley opisuje dwa tryby myślenia. W trybie skupionym (focused) pracuje
 Program traktuje to jak szukanie najwyższego punktu na pagórkowatym terenie. Tryb skupiony robi małe kroki pod górę i zatrzymuje się na szczycie najbliższego wzgórza; tysiąc kroków kończy się tam, gdzie trzy, bo do wyższego wzgórza trzeba najpierw zejść w dół. Dlatego „bardziej się starać” często nie pomaga: problemem jest wielkość kroku, a nie wysiłek. Psychologia nazywa to efektem Einstellung. Tryb rozproszony robi duże skoki: znajduje właściwe wzgórze, ale nie jego szczyt. Dopiero oba naraz, jeden po drugim (skupienie, przerwa, znów skupienie), dają najlepszą odpowiedź.
 
 Badania nad inkubacją (odłożeniem problemu na jakiś czas) potwierdzają, że przerwa po długiej pracy pomaga, choć nazwy „tryb skupiony” i „rozproszony” to metafora, a nie termin naukowy. Praktyczne rady z książki: najpierw pracuj, potem rób przerwę (technika Pomodoro: 25 minut skupienia i krótka nagroda); na teście zacznij od trudnego zadania, a gdy utkniesz, przejdź do łatwego i wróć; zaczynaj pracę domową wcześnie. Telefon to nie przerwa, tylko nowe zadanie dla uwagi.
+
+Popularne, dłuższe streszczenia tej idei (często pisane przez AI) twierdzą, że to „nie metafora”, tylko dokładny opis sieci mózgowych. To przesada. Dobrze potwierdzone są korzyści z przerwy po wysiłku, ze snu po nauce i z ciekawości przed nauką. Słabo potwierdzone są twierdzenia o idealnym tempie przełączania się między sieciami i o drzemkach. Liczby w stylu „8 godzin nauki i 4 snu to mniej niż 5 i 8” są wymyślone. Uwaga z programu: wspinacz wie, że stanął, ale nie wie, czy na najwyższym wzgórzu, bo szczyt małego wzgórza wygląda od środka tak samo jak szczyt najwyższego. Dlatego sygnałem do przerwy powinien być brak postępu, a nie uczucie, że rozwiązanie jest blisko.
 
 ## See also
 
