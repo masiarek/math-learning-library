@@ -150,6 +150,16 @@ NAV_ORDER: dict[str, list[str]] = {
         "README.md",
         "rectangular_coordinates",
     ],
+    # Calculus as motion, the four pieces Euler's formula leans on: a velocity
+    # at an instant, the motion whose velocity is its position, the unit in
+    # which turning is walking, and the series that motion forces.
+    "09_Calculus": [
+        "README.md",
+        "derivative_as_velocity",
+        "velocity_equals_position",
+        "radians",
+        "power_series",
+    ],
 }
 
 

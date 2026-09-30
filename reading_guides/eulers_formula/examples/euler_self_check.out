@@ -1,0 +1,50 @@
+1. EXPONENTS (step 1)
+   2^3 . 2^4 = 8 . 16 = 128 = 2^7: adding exponents multiplies.
+   2^0 . 2^3 must be 2^(0+3) = 2^3, so 2^0 is the number that changes
+   nothing when it multiplies: 2^0 = 1.
+
+2. THE NUMBER e (step 2)
+   1 in a bank at 100% a year, paid in n instalments of 1/n:
+     paid monthly        n = 12         (1 + 1/n)^n = 2.613035
+     paid daily          n = 365        (1 + 1/n)^n = 2.714567
+     paid every second   n = 31536000   (1 + 1/n)^n = 2.718282
+     paid ever more often, the limit              e = 2.718282
+
+3. A COMPLEX NUMBER IS A POINT (steps 3 to 5)
+   3 + 2i is the point (3, 2). Times i, the point (0, 1): (-2, 3),
+   which is -2 + 3i: the same arrow turned a quarter turn counterclockwise.
+
+4. POWERS OF i (step 5)
+   i^1 = (0, 1)
+   i^2 = (-1, 0)
+   i^3 = (0, -1)
+   i^4 = (1, 0)
+   Four quarter turns make a whole turn, back to 1. Two make a half turn: i^2 = -1.
+
+5. RADIANS (step 6)
+   a quarter turn = pi/2 = 1.570796 radians, a half turn = pi = 3.141593
+   From 1 to -1 round the unit circle is half of its length 2 pi: 3.141593.
+
+6. A VELOCITY AT AN INSTANT (step 7)
+   x = t^2, average velocity over [3, 3 + 1/10] = 61/10
+   x = t^2, average velocity over [3, 3 + 1/1000] = 6001/1000
+   x = t^2, average velocity over [3, 3 + 1/1000000] = 6000001/1000000
+   The averages are exactly 6 + h, and they settle on 6: the velocity at t = 3.
+
+7. VELOCITY = 2 . POSITION (step 8)
+   Start at 1, step to t = 1/2 in 100000 steps: position 2.718268; e = 2.718282.
+   Exactly e in the limit: twice the velocity is the motion e^t on a clock
+   running twice as fast, so time 1/2 here is time 1 there. d/dt e^(2t) = 2 e^(2t):
+   measured at t = 1/2, velocity / position = 2.000002
+
+8. VELOCITY = POSITION TURNED A QUARTER TURN (step 9)
+   At the start the position is (1, 0) and the velocity is i . (1, 0) =
+   (0, 1): straight up, length 1. Stepping the motion, 10^6 steps:
+   t = pi/2  position (0.000000, 1.000001)
+   t = pi    position (-1.000005, 0.000000)
+   Speed 1 round the circle: a quarter of it, pi/2, reaches i, and half,
+   pi, reaches -1. (The straight steps drift outward by a few millionths.)
+
+9. THE SERIES (step 10)
+   e^x = 1 + x + x^2/2 + x^3/6 + ...; at x = 1 the first four terms add to
+   1 + 1 + 1/2 + 1/6 = 8/3 = 2.666667, already near e = 2.718282.

@@ -148,9 +148,17 @@ From the root of your clone of this repository:
 python3 06_Algebraic_Structures/maps_that_keep_the_laws/examples/maps_that_keep_the_laws.py
 ```
 
+## Po polsku, w skrócie
+
+Odwzorowanie liniowe spełnia T(u + v) = Tu + Tv i T(av) = aTv: najpierw dodać, a potem odwzorować, daje to samo co odwrotnie. Ten sam kształt mają prawa logarytmów, prawo potęg 2^(a + b) = 2ᵃ · 2ᵇ, długość sklejonych napisów i wyznacznik iloczynu macierzy. Odwzorowanie tego rodzaju nazywa się homomorfizmem, a jeden krótki dowód o tym kształcie daje naraz 2⁰ = 1, log 1 = 0, T(0) = 0 i det I = 1. Pułapka: x ↦ x + 1 ma za wykres prostą, a liniowe nie jest, bo nie przenosi 0 na 0.
+
+Homomorfizm, który da się odwrócić, to izomorfizm: logarytm i potęga zamieniają mnożenie w dodawanie i z powrotem, i na tym działa suwak logarytmiczny. Funkcja wykładnicza wraca w rozdziale o analizie jako ruch, którego prędkość równa się położeniu, i tam to samo prawo potęg wynika z samego ruchu.
+
 ## See also
 
 - [Subsets inherit the laws](../subsets_inherit_the_laws/README.md) — the previous lesson
+- [Velocity equals position](../../09_Calculus/velocity_equals_position/README.md) — the exponent law of section 3 again, this time forced by a motion, which is how e^x gets inputs that are not whole numbers
+- [Euler's identity](../../03_Complex_Numbers/eulers_identity/README.md) — the same law carried into the plane, where it turns adding into turning
 - [Multiplication rotates](../../03_Complex_Numbers/multiplication_rotates/README.md) — multiplying by i as a quarter turn, and lengths that multiply
 - [Homomorphism ↗](https://en.wikipedia.org/wiki/Homomorphism) — Wikipedia
 - [Slide rule ↗](https://en.wikipedia.org/wiki/Slide_rule) — Wikipedia

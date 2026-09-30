@@ -1,0 +1,62 @@
+1. START AT 1, AND ALWAYS MOVE AS FAST AS YOUR POSITION
+   Over a short time dt the point moves by velocity . dt = position . dt,
+   so each step multiplies the position by (1 + dt). Steps of 1/n up
+   to t = 1 multiply 1 by (1 + 1/n), n times:
+           1 steps   position 2          = 2.000000
+           2 steps   position 9/4        = 2.250000
+           3 steps   position 64/27      = 2.370370
+           4 steps   position 625/256    = 2.441406
+          10 steps   position            = 2.593742
+         100 steps   position            = 2.704814
+        1000 steps   position            = 2.716924
+      100000 steps   position            = 2.718268
+           e                             = 2.718282
+   The steps are compounding, (1 + 1/n)^n, and they settle on e: e is
+   where the point is at time 1. Its position at time t is called e^t.
+
+2. THE POSITION AT OTHER TIMES
+     t      10^5 steps     e^t, from math.exp
+     0.0    1.000000       1.000000
+     0.5    1.648719       1.648721
+     1.0    2.718268       2.718282
+     2.0    7.388908       7.389056
+     -1.0   0.367878       0.367879
+   At t = 0 the point has not moved: e^0 = 1. For t = -1 the steps run
+   backwards in time and the point is at 1/e.
+
+3. MEASURED: THE VELOCITY OF e^t IS e^t
+   The average velocity over [t, t + 0.000001], and the position:
+     t      velocity     position     velocity / position
+     0.0    1.000000     1.000000     1.000000
+     1.0    2.718283     2.718282     1.000000
+     2.0    7.389060     7.389056     1.000001
+     3.0    20.085547    20.085537    1.000001
+   d/dt e^t = e^t. That is the whole definition, with e^0 = 1.
+
+4. THE LAW OF EXPONENTS, FROM THE MOTION
+   Every step multiplies the position by the same factor, wherever the
+   point is, so a start twice as far gives a position twice as far at
+   every time. Run for a time a, and the point is at e^a. The rest of
+   the motion is the motion from 1, scaled by e^a, so after a further
+   time b it is at e^a . e^b. It has run for a + b: e^(a+b) = e^a . e^b.
+   Exactly, in steps of 1/10: 8 steps from 1 reach 214358881/100000000,
+   3 steps then 5 more reach 214358881/100000000: equal: True.
+   With math.exp: e^0.3 . e^0.5 = 2.225541, e^0.8 = 2.225541.
+   Adding times multiplies positions. That is why e^x can be given
+   inputs that are not whole numbers, and, in the complex-numbers
+   chapter, inputs that are not real.
+
+5. VELOCITY = k . POSITION: DOUBLE, OR FLIP AND SQUISH
+   Let the velocity be k times the position. The motion is the same
+   motion with the clock running k times as fast, so its position at
+   time t is e^(kt), and every velocity is k times as large:
+     k      t      position e^(kt)   measured velocity   velocity / position
+     2      0.29   1.786038          3.572080            2.000002
+     2      1.00   7.389056          14.778127           2.000002
+     -0.5   0.60   0.740818          -0.370409           -0.500000
+     -0.5   2.00   0.367879          -0.183940           -0.500000
+   k = 2 doubles the velocity: the point runs away twice as fast. k = -0.5
+   flips the velocity to point back toward 0 and squishes it to half the
+   position: the point creeps toward 0 and never reaches it. The factor
+   k in d/dt e^(kt) = k e^(kt) is the chain rule: speeding up the clock
+   by k multiplies every velocity by k.

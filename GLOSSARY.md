@@ -32,6 +32,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Category** — a collection of objects and arrows between them, with a composition of arrows that is associative and has identities. Sets with functions, groups with homomorphisms, and vector spaces with linear maps are categories. See [maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md).
 
+**Chain rule** — the rule for the velocity of a function of a function. The case the talk uses: e^(kt) is the motion e^t on a clock running k times as fast, and speeding up the clock by k multiplies every velocity by k, so d/dt e^(kt) = k · e^(kt). See [velocity equals position](09_Calculus/velocity_equals_position/README.md).
+
 **Closed under an operation** — a subset is closed under an operation when applying it to members of the subset always gives a member of the subset. The line y = 2x is closed under + and scaling; the half-plane x ≥ 0 is not closed under scaling by −1. See [subsets inherit the laws](06_Algebraic_Structures/subsets_inherit_the_laws/README.md).
 
 **Coefficient** — a fixed number standing in front of a variable in a linear combination: in 40h + 15c the coefficients are 40 and 15. In a system, aᵢ,ⱼ is the coefficient in equation i in front of variable j. Zero is allowed. See [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md).
@@ -54,6 +56,8 @@ Terms used across the library, with the page that explains each in full.
 
 **De Moivre's formula** — (cos A, sin A)ⁿ = (cos nA, sin nA): the n-th power of a unit point is the unit point at n times the angle. It is "angles add" applied n − 1 times, and its n = 2 and n = 3 cases are the double- and triple-angle formulas. See [roots of unity](03_Complex_Numbers/roots_of_unity/README.md).
 
+**Derivative** — the velocity at an instant: the number that the average velocities (x(t + h) − x(t)) / h settle on as h shrinks, written d/dt x, x′(t) or dx/dt. For x = t² at t = 3 the averages are exactly 6 + h, so the derivative is 6. See [the derivative is a velocity](09_Calculus/derivative_as_velocity/README.md).
+
 **Diagonal argument** — Cantor's proof that the infinite 0/1 sequences cannot be listed: flip the r-th bit of the r-th row and the result is on no row. It makes ℝ uncountable, and makes the functions from ℕ to {0, 1} outnumber the programs. See [cardinality](04_Sets/cardinality/README.md).
 
 **Dense** — found inside every interval, however short. The rationals are dense in the line and still have measure zero. See [countable sets](02_Measure_Zero/countable_sets/README.md).
@@ -63,6 +67,8 @@ Terms used across the library, with the page that explains each in full.
 **Euler's formula** — e^{it} = (cos t, sin t): the exponential of an imaginary number is the unit point at angle t, in radians. It is what compounding gives, since (1 + it/n)ⁿ is n small turns whose angles add up to t while their stretches fade to nothing, and it is forced by the law e^{a+b} = e^a e^b, because multiplying unit points can only add angles. See [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
 
 **Euler's identity** — e^{iπ} = −1, the t = π row of Euler's formula: the unit point half a turn from (1, 0) is (−1, 0). It is i² = −1 with the quarter turn cut finer, and the program reaches it exactly as (0, 1)², as (1, 1)⁴ / 4 and as the sixth power of the clock's first mark. `cmath.exp(1j * math.pi)` is not −1 but −1 + 1.2 × 10⁻¹⁶ i, because `math.pi` is not π. See [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
+
+**Euler's number e** — 2.71828…, the number compound interest settles on, (1 + 1/n)ⁿ as n grows, and the position at time 1 of a point that starts at 1 and always moves with velocity equal to its position. Its power series is 1 + 1 + 1/2 + 1/6 + 1/24 + ⋯. See [velocity equals position](09_Calculus/velocity_equals_position/README.md).
 
 **Exact number** — one that was counted or defined rather than measured (ballots cast, inches per foot, π). Has infinitely many significant figures and never limits a calculation. See [exact vs approximate](01_Precision/exact_vs_approximate/README.md).
 
@@ -114,13 +120,15 @@ Terms used across the library, with the page that explains each in full.
 
 **Polar form** — a nonzero complex number written as r e^{iθ}: its length r times the unit point at its angle θ. Multiplying two of them multiplies the lengths and adds the angles, which is the law of exponents, and de Moivre's formula is (e^{iθ})ⁿ = e^{inθ}. `cmath.polar` reads r and θ off a number and `cmath.rect` puts them back. See [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
 
+**Power series** — a polynomial that never ends, a₀ + a₁x + a₂x² + ⋯. For e^x the rule "velocity = position" forces aₖ = 1/k!, and putting x = it splits the terms into the series for cos t and sin t. See [power series](09_Calculus/power_series/README.md).
+
 **Quadrant** — one of the four regions the coordinate axes cut the plane into, numbered I to IV counterclockwise from the upper right. Membership depends only on the signs of x and y, so (1, 1) and (1000, 5) share a quadrant, and a point on an axis, where one coordinate is 0, is in none. See [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md).
 
 **Quadratic mean** — also the *root mean square*: the square root of the mean of the squares, the one number that keeps the sum of squares. The rated value of an AC voltage is one. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
 
 **Quadrature** — combining independent uncertainties as √(a² + b²) rather than a + b. Linear addition is the worst case and is correct only for perfectly correlated errors. See [uncertainty propagation](01_Precision/uncertainty_propagation/README.md).
 
-**Radian** — the unit of angle in which a point of the unit circle turned through angle t travels a distance t along the circle, so a full turn is 2π and a half turn is π. It is the unit Euler's formula needs, because compounding (1 + it/n)ⁿ turns through the number t itself, and it is the reason the identity has a π in it and not 180. See [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
+**Radian** — the unit of angle in which a point of the unit circle turned through angle t travels a distance t along the circle, so a full turn is 2π and a half turn is π. It is the unit Euler's formula needs, because compounding (1 + it/n)ⁿ turns through the number t itself, and it is the reason the identity has a π in it and not 180. Only in radians is d/dt sin t = cos t. See [radians](09_Calculus/radians/README.md) and [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
 
 **Rectangular coordinates** — also *Cartesian coordinates*, after Descartes: the ordered pair (x, y) that locates a point of the plane by its signed distances from two perpendicular number lines, x from the y-axis and y from the x-axis. The origin O = (0, 0) is where the axes cross. See [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md).
 

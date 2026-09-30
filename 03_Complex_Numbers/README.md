@@ -39,7 +39,8 @@ For lesson 4, de Moivre's formula and the roots of unity:
 
 For lesson 5, Euler's formula and the identity:
 
-- [What is Euler's formula actually saying?, 3Blue1Brown ↗](https://www.3blue1brown.com/lessons/ldm-eulers-formula) — the Lockdown Math lecture whose three questions the lesson follows: what does it mean, why does it want to be true, how is it used
+- [*Designing Math*, Grant Sanderson at Config 2026 ↗](https://youtu.be/bLSLN96Gn-w) — the talk whose three questions the lesson follows: what does it mean, why does it want to be true, how is it used; [Euler's formula: a lesson plan](../reading_guides/eulers_formula/README.md) says what to learn first to follow it, and [09_Calculus](../09_Calculus/README.md) has the calculus it uses
+- [What is Euler's formula actually saying?, 3Blue1Brown ↗](https://www.3blue1brown.com/lessons/ldm-eulers-formula) — a live lecture on the same formula, from the Lockdown Math series
 - [The Feynman Lectures on Physics, vol. I, chapter 22: Algebra ↗](https://www.feynmanlectures.caltech.edu/I_22.html) — from counting to e^{iθ} in one chapter, with the imaginary powers computed by hand; the closest thing in print to the lesson's argument
 - [Euler's formula ↗](https://en.wikipedia.org/wiki/Euler%27s_formula) — Wikipedia, with the proofs a course gives
 - Paul Nahin, *Dr. Euler's Fabulous Formula* (Princeton, 2006) — a whole book on the formula and its uses, the sequel to *An Imaginary Tale* below

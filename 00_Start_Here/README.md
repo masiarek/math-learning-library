@@ -28,6 +28,10 @@ It begins with a question that sounds settled and is not: **are significant figu
 
 [**08_Analytic_Geometry/**](../08_Analytic_Geometry/README.md) — *What does it mean to draw a number?* The first page of every precalculus book, read the way this library reads pages: a point is two signed distances, x from the y-axis and y from the x-axis, and a quadrant is nothing but the pair of signs, which is why the axes belong to none and why the word reaches into trigonometry, complex numbers and the symmetry of graphs. Each lesson ends with the book's questions, answers folded away, and a deck of Anki flashcards. It needs nothing but a number line.
 
+[**09_Calculus/**](../09_Calculus/README.md) — *What is a velocity, and which motion is its own velocity?* Four lessons of calculus, told as motion the way Grant Sanderson's talk tells it: a velocity at an instant is what average velocities settle on; the motion whose velocity is its position is e^t, and the law of exponents comes out of it; in radians an angle is the distance walked round the circle; and "velocity = position" forces the power series of e^x, with cos and sin inside it. It needs school algebra and the patience to watch a number settle.
+
+**Lost in the 3Blue1Brown talk on e^{iπ} = −1?** [Euler's formula: a lesson plan](../reading_guides/eulers_formula/README.md) lists the ten ideas it assumes, in the order to learn them, with a self-check to find where to start and a table that maps each screen of the talk to the lesson that explains it.
+
 The sidebar lists the chapters A to Z. The numbers above are the suggested order, and the [topic map](../TOPICS.md) groups every lesson by subject, for when you know what you want but not where it is.
 
 ## How to run anything here
