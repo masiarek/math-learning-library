@@ -105,6 +105,10 @@ So **there is no set of all sets**. That is the theorem Russell's paradox become
 
 Section 6 shows the other half of the modern answer, and Python agrees with it. A mutable `set` cannot be put into itself at all, and a `frozenset` can only hold sets that already existed when it was made. Sets built that way, from ∅ upward in stages, never contain themselves, so "x ∉ x" is true of all of them and Russell's question never gets a foothold. The axioms of ZF describe exactly this: a world of sets built in stages, in which "the set of all sets" is not a set, only a way of speaking.
 
+## Flashcards
+
+The page as a deck of Anki cards: [`what_is_a_set.txt`](anki/what_is_a_set.txt). Import with File → Import. Tags: `definition`, `axiom`, `theorem`, `trap`, `example`, `history`, `connection`, `principle`. The Python side is a second deck, on [sets in Python](../python_sets/README.md#flashcards).
+
 ## Po polsku, w skrócie
 
 Podręcznikowa „definicja” zbioru, czyli „dobrze określona kolekcja różnych obiektów”, jest dobrym opisem na start, ale nie jest definicją. „Kolekcja” to tylko inne słowo na zbiór; w matematyce *zbiór* i *należy do* są pojęciami pierwotnymi, których się nie definiuje, a jedynie opisuje aksjomatami.

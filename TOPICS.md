@@ -28,6 +28,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
 - **Sets and size**
     - **Building sets** · from [Sets](04_Sets/README.md)
         - [What is a set?](04_Sets/what_is_a_set/README.md) — well-defined, extensionality, the empty set, null set, Russell's paradox, separation, no set of all sets
+        - [Sets in Python](04_Sets/python_sets/README.md) — creating, hashable members, operators vs methods, union, intersection, difference, symmetric difference, subset and superset, frozenset, equality, dedupe, joins as set operations
         - [The Cartesian product](04_Sets/cartesian_product/README.md) — ordered pairs, ℝ², and why A × B is not B × A
         - ↪ [Rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md) — the pairs of ℝ² as points of the plane
     - **Size by matching** · from [Sets](04_Sets/README.md) and [Measure Zero](02_Measure_Zero/README.md)

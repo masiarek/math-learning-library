@@ -121,6 +121,7 @@ NAV_ORDER: dict[str, list[str]] = {
     "04_Sets": [
         "README.md",
         "what_is_a_set",
+        "python_sets",
         "cartesian_product",
         "cardinality",
     ],
