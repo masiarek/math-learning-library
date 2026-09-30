@@ -37,7 +37,7 @@ The book closes with a list of 35 strategies. Here they are, shortened, with the
 | 9 | Take good class notes by hand | ch. 5 | not covered here |
 | 10 | Preview and review for every class | ch. 4 | [spaced retrieval](spaced_retrieval/README.md): the review the same day is the first spaced retrieval |
 | 11 | Do homework without using examples or textbook information | ch. 5 | [metacognition](metacognition/README.md): an answer produced without looking is the only honest test of what you know |
-| 12 | Prepare as if you have to teach the information | ch. 5 | [studying vs learning](studying_vs_learning/README.md): teach-the-material mode |
+| 12 | Prepare as if you have to teach the information | ch. 5 | [studying vs learning](studying_vs_learning/README.md): [teach-the-material mode](studying_vs_learning/README.md#make-an-a-mode-and-teach-the-material-mode) |
 | 13 | Study with a partner or group, and go to each session prepared | ch. 5 | not covered here |
 | 14 | Create practice exams to evaluate your mastery | ch. 5 | [metacognition](metacognition/README.md): a test, not a feeling, says when a topic is done |
 | 15 | Start homework the day it is assigned and do a little each day | ch. 9 | [spaced retrieval](spaced_retrieval/README.md): spread out beats crammed |
@@ -121,7 +121,7 @@ Summaries of the cognitive science of learning, including AI-written ones, tend 
 | active recall (retrieval practice) | close the book and write down what you remember; answer questions before checking notes | [metacognition](metacognition/README.md), [spaced retrieval](spaced_retrieval/README.md) |
 | spaced repetition | review at growing intervals, for example day 1, 3, 7, 21, 60; let Anki schedule it | [spaced retrieval](spaced_retrieval/README.md) |
 | interleaving | mix topics and problem types in one session | [interleaving](interleaving/README.md) |
-| elaboration and dual coding | connect new ideas to what you know, in your own words and in a drawing; explain it simply, as if teaching (the Feynman technique) | [studying vs learning](studying_vs_learning/README.md): teach-the-material mode |
+| elaboration and dual coding | connect new ideas to what you know, in your own words and in a drawing; explain it simply, as if teaching (the Feynman technique) | [studying vs learning](studying_vs_learning/README.md): [teach-the-material mode](studying_vs_learning/README.md#make-an-a-mode-and-teach-the-material-mode) |
 
 The same summaries then go further, and the further they go the weaker the evidence gets. Weighing a claim before you adopt it is [metacognition](metacognition/README.md) applied to advice:
 
@@ -178,7 +178,7 @@ McGuire's book was written in 2018, before a chatbot could explain any page on r
 | an explanation to read | a quiz on it; write a confidence before each answer | [metacognition](metacognition/README.md): calibration |
 | a summary | flashcards, then review them spaced | [spaced retrieval](spaced_retrieval/README.md) |
 | more examples at the same level | questions at the level above: why, what if, find the flaw | [studying vs learning](studying_vs_learning/README.md) |
-| a better explanation | to play a student while *you* explain, and ask the questions a class would | teach-the-material mode |
+| a better explanation | to play a student while *you* explain, and ask the questions a class would | [teach-the-material mode](studying_vs_learning/README.md#make-an-a-mode-and-teach-the-material-mode) |
 | the list of facts | the principle that produces them, then rebuild the list yourself | [count the vowels](count_the_vowels/README.md) |
 
 A tutor built on these rules can do well: in a Harvard physics course (Kestin and colleagues, *Scientific Reports*, 2025), students working with an AI tutor designed around them learned more, in less time, than in an active-learning class.
