@@ -100,6 +100,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - ↪ [A definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md) — a definition as an "if and only if"
         - ↪ [What is a set?](04_Sets/what_is_a_set/README.md) — Russell's paradox: an argument by cases in which both cases fail
         - ↪ [The algebra of sets](04_Sets/algebra_of_sets/README.md) — ∪ ∩ ′ are or, and, not; ⊆ is if–then; De Morgan's laws
+        - ↪ [Day or night: perspective taking](12_Learning_to_Learn/day_or_night/README.md) — a definition by cutoff, the sorites, and fuzzy logic's "day and not day"
 - **Chance and data**
     - **Averages** · from [Statistics](05_Statistics/README.md)
         - [Mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md) — one calculation, three sizes of word
@@ -116,6 +117,9 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - [Spaced retrieval](12_Learning_to_Learn/spaced_retrieval/README.md) — forgetting curve, testing effect, spacing effect, SM-2, logarithmic cost, McGuire's study cycle, intense study sessions
         - ↪ [The Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md) — the theorem Bloom's levels are climbed on
         - ↪ [Velocity equals position](09_Calculus/velocity_equals_position/README.md) — e^t, the shape of the forgetting curve
+    - **Thinking with others** · from [Learning to Learn](12_Learning_to_Learn/README.md)
+        - [Day or night: perspective taking and the cutoff under a dichotomy](12_Learning_to_Learn/day_or_night/README.md) — dichotomous thinking, perspective taking, cutoff, twilight, sorites paradox, fuzzy logic, Zakrajsek
+        - ↪ [A share above a cutoff](05_Statistics/share_above_a_cutoff/README.md) — another cutoff on a smooth quantity
 
 ## Threads across chapters
 

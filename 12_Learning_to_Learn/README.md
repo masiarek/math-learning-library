@@ -2,7 +2,7 @@
 
 **Level:** 101 · for anyone using this library, or any other, to learn mathematics
 
-Every other chapter here is about mathematics. This one is about the person reading it: how to tell whether you have learned a page, how to learn it so that it stays, and why the pages come with questions and flashcards. It follows Saundra McGuire's *Teach Yourself How to Learn*, chapters 3 and 4, and like every chapter it backs each claim with a program. It needs nothing but school arithmetic, and one lesson uses the Pythagorean theorem.
+Every other chapter here is about mathematics. This one is about the person reading it: how to tell whether you have learned a page, how to learn it so that it stays, and why the pages come with questions and flashcards. It follows Saundra McGuire's *Teach Yourself How to Learn*, chapters 3 and 4, with one lesson from Todd Zakrajsek's *The New Science of Learning*, and like every chapter it backs each claim with a program. It needs nothing but school arithmetic, and one lesson uses the Pythagorean theorem.
 
 | # | Lesson | The question it answers |
 |---|---|---|
@@ -10,10 +10,11 @@ Every other chapter here is about mathematics. This one is about the person read
 | 2 | [Count the vowels](count_the_vowels/README.md) | Why do people remember 3 of 15 phrases after one task and 12 of 15 after another, with nothing else changed? |
 | 3 | [Studying vs learning](studying_vs_learning/README.md) | What are Bloom's six levels, and what does climbing them on one theorem buy you? |
 | 4 | [Spaced retrieval](spaced_retrieval/README.md) | Why does testing yourself beat rereading, and why does keeping a fact for ten years cost only nine reviews? |
+| 5 | [Day or night: perspective taking](day_or_night/README.md) | Why do two people who agree about every fact still say "day" and "night" about the same sky, and what ends the argument? |
 
 ## The through-line
 
-A feeling of knowing is not knowing. Lesson 1 measures the gap between the two, with a score that rewards nothing but an honest guess. Lesson 2 shows that what you remember depends on what you did with the material, not on how long you looked at it. Lesson 3 names the levels of doing, from recalling a formula to building the formula that produces the facts, and lesson 4 keeps what you built, at a cost that grows only with the logarithm of how long you want it. Each step is something a reader can check on themselves, which is the point: metacognition is the habit of checking.
+A feeling of knowing is not knowing. Lesson 1 measures the gap between the two, with a score that rewards nothing but an honest guess. Lesson 2 shows that what you remember depends on what you did with the material, not on how long you looked at it. Lesson 3 names the levels of doing, from recalling a formula to building the formula that produces the facts, and lesson 4 keeps what you built, at a cost that grows only with the logarithm of how long you want it. Lesson 5 turns the same habit on arguments: a confident yes-or-no usually hides a cutoff on a smooth quantity, and naming the cutoff is where perspective taking starts. Each step is something a reader can check on themselves, which is the point: metacognition is the habit of checking.
 
 ## McGuire's strategies, and where they are explained
 
@@ -47,6 +48,17 @@ The book closes with a list of 35 strategies. Here they are, shortened, with the
 | 33 | Analyse every returned test and quiz, and plan how to improve | ch. 9 | [metacognition](metacognition/README.md): the calibration table is that analysis |
 | 34 | Use the campus learning center for group study and tutoring | ch. 9 | not covered here |
 | 35 | Visit your professors' office hours regularly | ch. 7 | not covered here |
+
+## Beyond the lessons: self-regulation
+
+Zakrajsek's chapter 2 defines *self-regulation* as the process that helps you meet your own goals: pick a target, plan how to reach it, and stick to the plan until you do. His example is a first-year student who plans an hour a day for each of four classes and is then invited on a weekend bike trip, and starts telling themselves they can study more next week. He names four parts, and three already have a lesson here:
+
+- **Metacognition**, planning, acting, evaluating afterwards and adjusting: [lesson 1](metacognition/README.md), which measures the evaluating step.
+- **Avoiding procrastination**, and the "I'll study more next week" it runs on: [spaced retrieval](spaced_retrieval/README.md) says why the deferred hours are worth less, since hours piled into one week are crammed rather than spaced.
+- **Cognitive load and automaticity**: a step practised until it is automatic stops using up attention. The [count the vowels](count_the_vowels/README.md) exercise is the nearest lesson, where an organising principle lets fifteen phrases be held as one idea.
+- **Self-efficacy**, the belief that you can carry the plan out, belongs with McGuire's mindset under [motivation](#beyond-the-lessons-motivation), below.
+
+His Study Tip 2.1 is the practical rule: **start as small as necessary, but develop a habit of completing whatever goal you set.** A goal of twenty minutes that is always met teaches the plan to be believed; a goal of four hours that is usually missed teaches the opposite. The same chapter's section on managing emotions (situation selection, attention deployment, situation modification, reappraisal, response modulation) is useful reading and not a lesson, for the reason motivation is not: no program can show it without invented data.
 
 ## Beyond the lessons: motivation
 
@@ -87,8 +99,8 @@ A tutor built on these rules can do well: in a Harvard physics course (Kestin an
 
 ## Po polsku, w skrócie
 
-Ten rozdział nie jest o matematyce, tylko o tym, jak się jej uczyć. Opiera się na książce Saundry McGuire *Teach Yourself How to Learn*. Metakognicja to myślenie o własnym myśleniu, a jej najważniejszą, mierzalną częścią jest trafna ocena, ile naprawdę umiemy: kto tylko czyta notatki drugi raz, czuje się pewny i często się myli. Pamiętamy to, co robiliśmy z materiałem, a nie to, na co patrzyliśmy (ćwiczenie z liczeniem samogłosek). Taksonomia Blooma opisuje poziomy pracy z materiałem, od zapamiętania do tworzenia, a na najwyższym poziomie potrafimy odtworzyć zapomniane fakty. Wreszcie: powtórki rozłożone w czasie i sprawdzanie się z pamięci utrwalają wiedzę, a przy rosnących odstępach liczba powtórek rośnie tylko logarytmicznie. McGuire dodaje pięć sposobów na motywację: stosuj te strategie, wierz, że inteligencja może rosnąć, mów do siebie życzliwie, przypisuj wyniki swojemu zachowaniu, a nie okolicznościom, i dbaj o sen, jedzenie i ruch. A sztuczna inteligencja? Nie zmienia tego, jak działa pamięć: przeczytanie odpowiedzi od AI to ponowne czytanie, które daje złudzenie wiedzy. Używaj jej dopiero po własnej próbie i proś ją raczej o pytania, quizy i fiszki niż o gotowe odpowiedzi. Każdą jej odpowiedź sprawdzaj, najlepiej programem, który działa.
+Ten rozdział nie jest o matematyce, tylko o tym, jak się jej uczyć. Opiera się na książce Saundry McGuire *Teach Yourself How to Learn*. Metakognicja to myślenie o własnym myśleniu, a jej najważniejszą, mierzalną częścią jest trafna ocena, ile naprawdę umiemy: kto tylko czyta notatki drugi raz, czuje się pewny i często się myli. Pamiętamy to, co robiliśmy z materiałem, a nie to, na co patrzyliśmy (ćwiczenie z liczeniem samogłosek). Taksonomia Blooma opisuje poziomy pracy z materiałem, od zapamiętania do tworzenia, a na najwyższym poziomie potrafimy odtworzyć zapomniane fakty. Wreszcie: powtórki rozłożone w czasie i sprawdzanie się z pamięci utrwalają wiedzę, a przy rosnących odstępach liczba powtórek rośnie tylko logarytmicznie. McGuire dodaje pięć sposobów na motywację: stosuj te strategie, wierz, że inteligencja może rosnąć, mów do siebie życzliwie, przypisuj wyniki swojemu zachowaniu, a nie okolicznościom, i dbaj o sen, jedzenie i ruch. A sztuczna inteligencja? Nie zmienia tego, jak działa pamięć: przeczytanie odpowiedzi od AI to ponowne czytanie, które daje złudzenie wiedzy. Używaj jej dopiero po własnej próbie i proś ją raczej o pytania, quizy i fiszki niż o gotowe odpowiedzi. Każdą jej odpowiedź sprawdzaj, najlepiej programem, który działa. Lekcja o dniu i nocy, według książki Todda Zakrajska *The New Science of Learning*, uczy patrzenia z perspektywy innych: gdy dwie osoby mówią „dzień” i „noc” o tym samym niebie, nie spierają się o fakty, tylko o próg, którego żadna nie nazwała. Ta sama książka opisuje samoregulację: wyznacz cel, zaplanuj drogę i trzymaj się planu. Najlepsza rada: zaczynaj od tak małych celów, jak trzeba, ale zawsze je wykonuj.
 
 ## A note on the code
 
-The programs are about people, so two of them rest on numbers that are not measurements, and they say so where they do. The learner in lesson 1 is invented, and the memory model in lesson 4 is a toy with the right shape. What is exact: the Brier score and why honesty minimises it, the vowel count and 15!, Euclid's formula checked against brute force, McGuire's published survey figures, and the SM-2 schedule. The books behind the chapter are listed on the [resources](../RESOURCES.md) page.
+The programs are about people, so two of them rest on numbers that are not measurements, and they say so where they do. The learner in lesson 1 is invented, and the memory model in lesson 4 is a toy with the right shape. What is exact: the sun's height at dusk in lesson 5, the Brier score and why honesty minimises it, the vowel count and 15!, Euclid's formula checked against brute force, McGuire's published survey figures, and the SM-2 schedule. The books behind the chapter are listed on the [resources](../RESOURCES.md) page.

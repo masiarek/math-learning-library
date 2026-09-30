@@ -1,0 +1,90 @@
+1. The quantity underneath: the sun's height, Starbuck, 21 June 2026
+
+   local time   sun's height
+     12:00       +64.51 deg
+     18:00       +25.85 deg
+     20:00        +6.28 deg
+     20:30        +1.83 deg
+     21:00        -2.36 deg
+     21:30        -6.23 deg
+     22:00        -9.74 deg
+     22:30       -12.82 deg
+     23:00       -15.42 deg
+     00:00       -18.97 deg
+     01:00       -20.01 deg
+
+   It falls smoothly through zero. Nothing in the column says where
+   day stops; a yes/no answer needs a cutoff, and someone has to pick it.
+
+2. Four cutoffs, four answers to 'when does night begin?'
+
+   night begins at        cutoff    Starbuck    Times Sq
+   sunset                 -0.833       20:49       20:30
+   civil dusk             -6.000       21:28       21:04
+   nautical dusk         -12.000       22:22       21:47
+   astronomical dusk     -18.000       23:39       22:37
+
+   In Starbuck the four answers span 170 minutes.
+   Every one of them is exact to the minute and anyone can recompute it.
+   They disagree because they answer four different questions.
+
+3. Same sky, different verdicts: Starbuck at 22:00
+
+   The sun is at -9.74 deg. Under each cutoff:
+     sunset               night    (top edge of the sun leaves the horizon)
+     civil dusk           night    (too dark to read outdoors)
+     nautical dusk        not yet  (sea horizon no longer visible)
+     astronomical dusk    not yet  (sky as dark as it gets)
+
+   Two people who call 22:00 'night' and 'not night yet' agree about the sky.
+   They disagree about the cutoff, and the argument ends once they say it.
+
+4. No minute is the one: the sorites
+
+   From sunset to astronomical dusk: 170 one-minute steps.
+   The largest drop in one minute:  0.138 deg
+   The smallest drop in one minute: 0.054 deg
+
+   No single minute changes the sky by even a quarter of a degree,
+   so 'if it is day now, it is day a minute later' feels safe. Applied
+   170 times it carries you from sunset to full dark. The premise is
+   false for every cutoff: at exactly one minute it fails, and the
+   cutoff is what says which minute.
+
+5. Where a cutoff is never reached: the lowest sun on the solstice
+
+   The sun's declination today is +23.45 deg, so at local midnight
+   it sits at  -(90 - latitude - declination)  degrees.
+
+    latitude   lowest sun   last cutoff the sun sinks past
+      40.76N      -25.79    astronomical dusk
+      46.52N      -20.03    astronomical dusk
+      48.00N      -18.55    astronomical dusk
+      50.00N      -16.55    nautical dusk
+      55.00N      -11.55    civil dusk
+      60.00N       -6.55    civil dusk
+      66.00N       -0.55    none: the sun never sets
+      67.00N       +0.45    none: the sun never sets
+
+   North of 48.55N there is no astronomical night in late June.
+   Ask 'when does night begin?' there with the astronomers' cutoff and
+   the honest answer is 'it doesn't', not a time.
+
+6. A third way out: a degree of day instead of a yes or no
+
+   Let  day(e) = 0 below -18 deg, 1 above -0.833 deg, a straight line
+   between. Then 'day and not day' has the value min(day, 1 - day).
+
+   local time   height      day   day and not-day
+     20:30      +1.83     1.00        0.00
+     21:00      -2.36     0.91        0.09
+     21:15      -4.33     0.80        0.20
+     21:30      -6.23     0.69        0.31
+     22:00      -9.74     0.48        0.48
+     22:30     -12.82     0.30        0.30
+     23:00     -15.42     0.15        0.15
+
+   At noon and midnight 'day and not day' is 0, as a two-valued logic
+   insists. At dusk it rises to one half. Fuzzy logic keeps both halves
+   of the dichotomy and reports how much of each; a cutoff throws that
+   number away to get a yes or no.
