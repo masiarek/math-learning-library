@@ -21,6 +21,10 @@ Lesson 2 measures in it. The distance between two points is the hypotenuse of a 
 
 Lesson 3 finds the point halfway, one [average](../05_Statistics/mean_vs_average/README.md) per coordinate, and uses the distance formula to check both halves of "halfway". Lesson 4 turns an equation into a picture: its graph is the set of points that pass it, the same object as the solution set of [a linear equation](../07_Linear_Systems/linear_equations/README.md), and intercepts and symmetry are that definition applied. Lessons 5 and 6 are the two families of graphs the chapter ends with. A line has one slope because [similar triangles](../10_Geometry/congruent_and_similar_triangles/README.md) share their ratios, and a circle's equation is the distance formula held fixed. That is the whole of the first chapter of Sullivan's *Precalculus*; the book's next chapter is functions.
 
+## All the flashcards in one file
+
+[`precalculus_chapter_1_anki.txt`](precalculus_chapter_1_anki.txt) holds every card of this chapter and of the geometry it assumes, [10_Geometry](../10_Geometry/README.md): 340 cards in nine decks, one per lesson. In Anki choose File → Import, pick the file, and click Import; the header lines put each card in its lesson's deck, under *Math*, with its tags. On a phone or a machine without a clone, download it from [this link ↗](https://raw.githubusercontent.com/masiarek/math-learning-library/master/08_Analytic_Geometry/precalculus_chapter_1_anki.txt) with the browser's "Save as".
+
 ## Where this is taught
 
 The opening section of the chapter on graphs in any precalculus book; the lessons here follow Michael Sullivan's *Precalculus*, but Stewart, Larson, Blitzer and the free Stitz and Zeager cover the same page in the same order. For which book to read, see [Precalculus: a reading guide](../reading_guides/precalculus/README.md).
