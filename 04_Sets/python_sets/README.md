@@ -14,7 +14,7 @@
 
 The second rule is Python's own. A set is a hash table: to decide whether x is a member, Python computes `hash(x)`, looks in that slot, and confirms with `==`. So:
 
-- **Members must be hashable.** A list, a dict or a set can change after it is stored, its hash would change with it, and the set would look in the wrong slot. So `{[1, 2]}` and `s.add(other_set)` raise `TypeError: unhashable type`. A tuple of hashables and a `frozenset` are fine. It is not the same as "immutable": `(1, [2])` is a tuple and still unhashable, because it holds a list.
+- **Members must be hashable.** A list, a dict or a set can change after it is stored, its hash would change with it, and the set would look in the wrong slot. So `{[1, 2]}` and `s.add(other_set)` raise `TypeError: unhashable type`. A tuple of hashables and a `frozenset` are fine. It is not the same as "immutable": `(1, [2])` is a tuple and still unhashable, because it holds a list. The sibling Python library's [Defining `__eq__` deletes `__hash__` ↗](https://masiarek.github.io/python-learning-library/07_Classes_and_the_Data_Model/defining_eq_deletes_hash/index.html) shows the failure this rule prevents: an object whose fields change while it sits in a set can no longer be found there.
 - **Equal means the same member.** `True == 1 == 1.0` and their hashes agree, so `{True, 1, 1.0, '1', (1,)}` has three members, not five.
 - **Membership is fast.** `x in s` is one hash lookup, whatever the size of `s`; `x in some_list` scans the list.
 
