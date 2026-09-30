@@ -150,6 +150,7 @@ The twelfth chapter is about the reader, not the mathematics: how to tell whethe
 | [Learned helplessness](12_Learning_to_Learn/learned_helplessness/README.md) | Honest counting, (s + 1)/(n + 2), leaves a learner who failed ten times never trying the lever that works; four small successes, or four watched ones, get them started |
 | [The buffer hour](12_Learning_to_Learn/the_buffer_hour/README.md) | Task times are skewed, so five honestly estimated one-hour tasks fit in five hours one day in thirteen; a reserved hour gives 47%, and a recorded overrun ratio corrects the estimates |
 | [Cognitive load](12_Learning_to_Learn/cognitive_load/README.md) | Working memory holds about four chunks, and a chunk is whatever practice made automatic: (a+b)² = a² + 2ab + b² is 19 items to a beginner and 1 to an expert; practice, modelled as byte-pair merging, chunks what repeats |
+| [Interleaving](12_Learning_to_Learn/interleaving/README.md) | A blocked sheet of volume problems asks you to choose a formula 4 times in 12, a mixed exam 7 in 8; a student who reuses the last formula scores 75% on the sheet and 25% on the exam |
 
 The books behind it, and behind the other chapters, are on the [resources](RESOURCES.md) page.
 
