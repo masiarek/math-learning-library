@@ -1,0 +1,62 @@
+1. THE THEOREM: TWO LEGS GIVE THE HYPOTENUSE
+   Example 1 and problems 13-18: c^2 = a^2 + b^2, then c = sqrt(c^2).
+              a    b     a^2 + b^2 = c^2      c
+     Ex 1     4    3         16 + 9 = 25      5
+     13       5   12      25 + 144 = 169     13
+     14       6    8       36 + 64 = 100     10
+     15      10   24     100 + 576 = 676     26
+     16       4    3         16 + 9 = 25      5
+     17       7   24      49 + 576 = 625     25
+     18      14   48   196 + 2304 = 2500     50
+   Every answer is a whole number, because the book picked the legs so.
+   Legs 1 and 2 give c^2 = 5 and c = sqrt(5) = 2.2361..., which no ruler reads.
+
+2. WHY IT IS TRUE: THE SAME SQUARE CUT TWO WAYS
+   A square of side a + b holds four copies of the triangle (each ab/2)
+   and a tilted square of side c in the middle. So (a + b)^2 = 4(ab/2) + c^2.
+       a   b   (a+b)^2  4 * ab/2  left over  a^2 + b^2
+       3   4        49        24         25         25
+       5  12       289       120        169        169
+       1   2         9         4          5          5
+       2   7        81        28         53         53
+   The left-over area is c^2 and it always equals a^2 + b^2: expand
+   (a+b)^2 = a^2 + 2ab + b^2 and take away the 2ab. No measuring needed.
+
+3. THE CONVERSE AS A TEST: PROBLEMS 19-26
+   Sort the sides; the longest is the only candidate for the hypotenuse.
+     19  (3, 4, 5)     right: 5^2 = 25 = 9 + 16, hypotenuse 5
+     20  (6, 8, 10)    right: 10^2 = 100 = 36 + 64, hypotenuse 10
+     21  (4, 5, 6)     acute: 6^2 = 36 < 16 + 25 = 41
+     22  (2, 2, 3)     obtuse: 3^2 = 9 > 4 + 4 = 8
+     23  (7, 24, 25)   right: 25^2 = 625 = 49 + 576, hypotenuse 25
+     24  (10, 24, 26)  right: 26^2 = 676 = 100 + 576, hypotenuse 26
+     25  (6, 4, 3)     obtuse: 6^2 = 36 > 9 + 16 = 25
+     26  (5, 4, 7)     obtuse: 7^2 = 49 > 16 + 25 = 41
+   Only 19, 20, 23, 24 are right. 25 is listed 6, 4, 3: testing 3^2 against
+   6^2 + 4^2 would be the wrong question, because 3 is not the longest side.
+
+4. THE TRAP: THE THEOREM NEEDS THE RIGHT SIDE ON THE LEFT
+   For 5, 12, 13: 13^2 = 169 and 5^2 + 12^2 = 169: right.
+   But 5^2 = 25 is not 12^2 + 13^2 = 313, and 12^2 = 144 is not 5^2 + 13^2 = 194.
+   The equation names the side opposite the right angle. Put a leg there
+   and a true right triangle fails the test.
+
+5. MORE THAN YES OR NO: THE LONGEST SIDE AGAINST THE OTHER TWO
+   Hold two sides at 3 and 4, and let the third one grow.
+     3, 4, 4   acute: 4^2 = 16 < 9 + 16 = 25
+     3, 4, 5   right: 5^2 = 25 = 9 + 16, hypotenuse 5
+     3, 4, 6   obtuse: 6^2 = 36 > 9 + 16 = 25
+     3, 4, 7   not a triangle: 3 + 4 = 7 does not exceed 7
+   Bigger than 5 opens the angle past 90 degrees; smaller closes it.
+   At 7 the triangle has gone flat: 3 + 4 = 7 is a line segment.
+
+6. EXAMPLE 3: HOW FAR CAN YOU SEE FROM THE BURJ KHALIFA?
+   The line of sight touches the Earth at a right angle to the radius, so
+   (R + h)^2 = R^2 + d^2 with R = 3960 miles and h = 1483 feet = 1483/5280 mile.
+   d^2 = (R + h)^2 - R^2 = 2Rh + h^2 = 2224.5789, so d = 47.1654 miles.
+   The h^2 term is 0.0789 of that; d is about sqrt(2Rh) = 47.1646.
+   A calculator keeping 6 significant figures, the two ways:
+     (R + h)^2 - R^2 = 2.2E+3     2Rh + h^2 = 2224.58
+   The first subtracts two numbers near 15.7 million that agree in
+   their leading digits, and the difference keeps almost none of them.
+

@@ -99,6 +99,17 @@ The eighth chapter is the first page of every precalculus book: two number lines
 | Lesson | What it teaches |
 |---|---|
 | [Rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md) | A point is two signed distances, and from the other axis than you expect; a quadrant is the pair of signs and nothing more, so the axes belong to none; and why that one word runs through trigonometry, complex numbers and the symmetry of graphs |
+| [The distance formula](08_Analytic_Geometry/distance_formula/README.md) | Pythagoras with the legs read off the coordinates; why the squares make the order of the points and the signs irrelevant, and why distances are compared by their squares |
+
+[**09_Geometry/**](09_Geometry/README.md) — *How few numbers fix a shape?*
+
+The ninth chapter is the geometry review every precalculus book assumes, Sullivan's Appendix A.2, to be read just in time: the distance formula sends the reader here first. Every lesson ends with the book's questions, answers folded away, and a deck of Anki flashcards with trap cards.
+
+| Lesson | What it teaches |
+|---|---|
+| [The Pythagorean theorem and its converse](09_Geometry/pythagorean_theorem/README.md) | c² = a² + b² one way and the converse the other, which makes a test; sort first, because only the longest side can be the hypotenuse; and what c² < a² + b² and c² > a² + b² say |
+| [Area and volume formulas](09_Geometry/area_and_volume_formulas/README.md) | The eleven formulas of the book's box, told apart by one check: the power of length is the dimension, so scaling by k gives k, k², k³ |
+| [Congruent and similar triangles](09_Geometry/congruent_and_similar_triangles/README.md) | SSS, SAS and ASA fix a triangle, AAA fixes only its shape, and SSA can fit two triangles, built and counted by a program |
 
 **Looking for a subject rather than a chapter?** The [topic map](TOPICS.md) sorts every lesson into branches and follows the threads that run between chapters.
 

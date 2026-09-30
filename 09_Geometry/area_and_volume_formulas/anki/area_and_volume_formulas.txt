@@ -1,0 +1,42 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Area and volume formulas
+#tags:math geometry area-volume
+#columns:Front	Back	Tags
+#tags column:3
+Rectangle, length l and width w: perimeter and area?	Perimeter 2l + 2w. Area lw.	formula
+Triangle, base b and altitude h: area?	One half b h.	formula
+Circle of radius r: circumference and area?	Circumference 2 pi r, which is pi d. Area pi r^2.	formula
+Closed box l by w by h: volume and surface area?	Volume lwh. Surface 2lh + 2wh + 2lw, three pairs of matching rectangles.	formula
+Sphere of radius r: volume and surface area?	Volume (4/3) pi r^3. Surface 4 pi r^2.	formula
+Closed right circular cylinder, radius r and height h: volume and surface area?	Volume pi r^2 h. Surface 2 pi r^2 + 2 pi r h: two circles and the side.	formula
+What is the altitude of a triangle?	The height measured at a right angle to the base, from the base to the opposite corner. Not a side, unless the triangle is right.	formula
+Why is the area of a triangle half of bh?	A triangle is half of a rectangle with the same base and height.	formula
+Unrolled, the side of a cylinder is what shape, and how big?	A rectangle 2 pi r wide and h tall, so its area is 2 pi r h.	formula
+How do you tell a length, an area and a volume formula apart without memorising?	Count the lengths multiplied in each term: one is a length, two an area, three a volume. Constants do not count.	dimension
+Double every length of a shape. What happens to perimeter, area, volume?	Perimeter times 2, area times 4, volume times 8.	dimension
+Scale every length by k. What happens to an area and to a volume?	Area times k^2, volume times k^3.	dimension
+Every side of a box is tripled. Volume?	27 times as large, 3^3.	dimension
+A formula for a volume grows by 4 when lengths double. What is wrong?	It is an area in disguise: a volume must grow by 8.	dimension
+Why do the constants 2, one half, pi and 4/3 not count in the dimension test?	They are pure numbers without units, so they cannot change feet into square feet.	dimension
+Which fact did Archimedes prove about the sphere's surface?	It equals the side of the cylinder that just fits around it: 2 pi r times 2r = 4 pi r^2.	formula
+How is the surface area of a sphere related to its volume?	It is what the volume gains per unit of radius: a skin of thickness t has volume about 4 pi r^2 t.	dimension
+Circle of radius 5 m: area and circumference?	25 pi, about 78.54 square meters. 10 pi, about 31.42 meters.	problems
+Sphere of radius 3 ft: volume and surface area?	36 pi cubic feet and 36 pi square feet: the same number in different units.	problems
+Cylinder r 9, h 8 against r 8, h 9: which holds more?	r 9, h 8: 648 pi against 576 pi. The radius is squared, the height is not.	problems
+Square of side 2 inside a circle, corners on the circle: area of the circle?	2 pi. The diagonal is the square root of 8, so r^2 = 8/4 = 2.	problems
+Circle inside a square of side 2, touching all sides: area outside the circle?	4 - pi, about 0.86.	problems
+Square of side 6 with a border 2 wide all round: area of the border?	64. The outer side is 6 + 2 + 2 = 10, and 100 - 36 = 64.	problems
+Wheel of diameter 16 in, 4 turns: distance?	64 pi inches, about 201 inches. One turn is pi d.	problems
+Disk of diameter 4 ft rolled 20 ft: how many turns?	20 / (4 pi) = 5/pi, about 1.59.	problems
+Norman window: rectangle 4 wide and 6 tall, semicircle on top. Area?	24 + 2 pi, about 30.28 square feet. The semicircle has radius 2, area half of 4 pi.	problems
+Ornament: triangle base 4, height 6, semicircle of diameter 4 on top. Area?	12 + 2 pi, about 18.28 square centimeters.	problems
+Trap: the volume of a sphere is 4 pi r^3?	No. (4/3) pi r^3. 4 pi r^3 is bigger than the 8r^3 cube around the sphere.	trap
+Trap: the surface area of a sphere is (4/3) pi r^2?	No. 4 pi r^2. The dimension test cannot catch this one: only the constant is wrong.	trap
+Trap: a wheel of diameter d rolls 2 pi d in one turn?	No, pi d. The 2 in 2 pi r is there because r is half of d.	trap
+Trap: triangle with base 10 and two slanted sides 13. Area one half 10 times 13?	No. The altitude is 12, from 13^2 - 5^2 = 144, so the area is 60.	trap
+Trap: a 16 inch pizza for twice the price of a 10 inch one is a bad deal?	No. Area grows with the square: 2.56 times the pizza for 2 times the price.	trap
+Trap: a circle of radius 2 has area equal to its circumference, both 4 pi. Are they equal?	Only as numbers. One is square units, the other units; change the unit and they differ.	trap
+Trap: a closed can and an open can of the same size have the same surface area?	No. The open can is missing one lid, pi r^2.	trap
+Trap: border 2 wide around a square of side 6 makes an outer square of side 8?	No, 10. The border is on both sides.	trap

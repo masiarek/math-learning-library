@@ -1,0 +1,41 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Congruent and similar triangles
+#tags:math geometry triangles
+#columns:Front	Back	Tags
+#tags column:3
+What does it mean for two triangles to be congruent?	Each pair of corresponding angles is equal and each pair of corresponding sides is equal: the same triangle in two places.	definition
+What does it mean for two triangles to be similar?	Corresponding angles are equal and corresponding sides are proportional: the same shape, possibly a different size.	definition
+What is the scale factor of two similar triangles?	The one ratio every pair of corresponding sides shares, k = d/a = e/b = f/c.	definition
+Congruent triangles are similar with what scale factor?	k = 1.	definition
+How do you tell which sides correspond?	By the angles they sit between, or the angle they are opposite, never by where they are drawn.	definition
+Symbols for congruent and for similar?	Congruent: the equals sign with a tilde above it. Similar: a tilde.	definition
+State the SSS case for congruence.	If all three pairs of corresponding sides are equal, the triangles are congruent.	congruence
+State the SAS case for congruence.	Two pairs of sides equal and the angles between them equal: congruent.	congruence
+State the ASA case for congruence.	Two pairs of angles equal and the sides between them equal: congruent.	congruence
+Why do SSS, SAS and ASA prove congruence?	Each set of three data allows only one triangle to be built, so two triangles with the same data are copies of it.	congruence
+Which of ASA, SAS, AAA, SSS is not a congruence case?	AAA. Equal angles fix the shape only, not the size.	congruence
+Why is SSA, two sides and an angle not between them, not a congruence case?	The second side can swing and meet the base in two places, so two different triangles can fit the same data.	congruence
+When does SSA work after all?	When the angle is 90 degrees: hypotenuse and leg fix a right triangle, by Pythagoras.	congruence
+State the AA case for similarity.	If two pairs of corresponding angles are equal, the triangles are similar.	similarity
+Why is AA enough, rather than AAA?	The angles add to 180 degrees, so the third is forced.	similarity
+State the SSS case for similarity.	If all three pairs of sides are in the same ratio, the triangles are similar.	similarity
+State the SAS case for similarity.	Two pairs of sides in the same ratio, and the angles between them equal: similar.	similarity
+Similar triangles, scale factor k: ratio of perimeters and of areas?	Perimeters k, areas k^2.	similarity
+Once two triangles are known similar, how do you find the angles and a missing side?	Copy the angles across. For the side, one proportion with the scale factor.	similarity
+Why is the slope of a line the same whichever two points you use?	Any two points make a right triangle with the same angles, so the triangles are similar and rise over run is one ratio.	similarity
+Example 5: sides 3 and 6 in one triangle; the side matching 3 is 5 in the other. Find x matching 6.	k = 5/3, x = 6 times 5/3 = 10.	problems
+Right triangle 30-60-90 with short leg 2, hypotenuse 4. Similar one with hypotenuse 8: short leg?	4. The scale factor is 2.	problems
+Sides 20 and 45 in one triangle, and 30 matching the 20 in a similar one. Side matching 45?	67.5. k = 3/2.	problems
+Sides 3, 2 with 120 degrees between, and 4, 3 with 120 degrees between. Similar?	No. 4/3 is not 3/2, so SAS similarity fails.	problems
+Two triangles with angles 25 and 100 degrees each. Similar?	Yes, by AA.	problems
+A 6 ft person casts a 4 ft shadow; a tree casts 30 ft. Height of the tree?	45 ft. Similar triangles by AA, k = 7.5.	problems
+Trap: two triangles with all three angles equal are congruent?	No, only similar. A triangle and its double have the same angles.	trap
+Trap: all right triangles are similar?	No. One right angle is one angle; similarity needs two. 3-4-5 is not similar to 1-1-root 2.	trap
+Trap: all equilateral triangles are similar?	Yes: every angle is 60 degrees, so AA holds. Not every trap card has the answer no.	trap
+Trap: the scale factor is 3, so the area is 3 times as big?	No, 9 times: area scales by k^2.	trap
+Trap: match the top side of one figure with the top side of the other?	No. Match by angles; the book draws similar triangles in different orientations on purpose.	trap
+Trap: two sides equal and one angle equal means congruent?	Only if the angle is between the two sides (SAS). Otherwise it is SSA and two triangles may fit.	trap
+Trap: two angles and a side equal means congruent, whichever side?	Yes, as long as it is the corresponding side: the third angle is forced, so it becomes ASA.	trap
+Trap: two triangles have equal areas, so they are congruent?	No. Base 4 height 3 and base 6 height 2 both have area 6 and differ in shape.	trap

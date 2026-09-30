@@ -52,8 +52,17 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - ↪ [Maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md) — linear maps
         - ↪ [Linear algebra: a reading guide](reading_guides/linear_algebra/README.md) — why it is useful, what to know first, which book to read
 - **Geometry**
+    - **Triangles: Pythagoras, congruence, similarity** · from [Geometry](09_Geometry/README.md)
+        - [The Pythagorean theorem and its converse](09_Geometry/pythagorean_theorem/README.md) — right triangle, hypotenuse, legs, c² = a² + b²; the converse as a test, acute and obtuse, triangle inequality
+        - [Congruent and similar triangles](09_Geometry/congruent_and_similar_triangles/README.md) — SSS, SAS, ASA, why AAA and SSA fail, scale factor, proportional sides
+        - ↪ [The distance formula](08_Analytic_Geometry/distance_formula/README.md) — Pythagoras in coordinates
+    - **Area, perimeter and volume** · from [Geometry](09_Geometry/README.md)
+        - [Area and volume formulas](09_Geometry/area_and_volume_formulas/README.md) — rectangle, triangle, circle, box, sphere, cylinder; dimension, scaling by k, k², k³
+        - ↪ [Congruent and similar triangles](09_Geometry/congruent_and_similar_triangles/README.md) — similar figures, areas in the ratio k²
     - **The coordinate plane** · from [Analytic Geometry](08_Analytic_Geometry/README.md)
         - [Rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md) — a point is two signed distances, a quadrant is two signs, and the axes belong to none
+        - [The distance formula](08_Analytic_Geometry/distance_formula/README.md) — distance between two points, √((x₂ − x₁)² + (y₂ − y₁)²), order and signs, comparing squared distances
+        - ↪ [The Pythagorean theorem and its converse](09_Geometry/pythagorean_theorem/README.md) — the theorem the distance formula is
         - ↪ [The Cartesian product](04_Sets/cartesian_product/README.md) — the set ℝ² that the plane is
         - ↪ [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — a complex number is a point of this plane, and multiplying by i moves it one quadrant on
         - ↪ [Precalculus: a reading guide](reading_guides/precalculus/README.md) — the course this is the first page of, and which book to read it in
@@ -113,6 +122,23 @@ A definition in the axiomatic style is a test that objects pass or fail, and a t
 3. [Multiplication as pairs](03_Complex_Numbers/multiplication_as_pairs/README.md) → [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — the same points with a multiplication, which turns them; multiplying by i moves a point one quadrant counterclockwise.
 4. [Linear equations and their solutions](07_Linear_Systems/linear_equations/README.md) — one equation in x and y has a line of solutions, and each solution is a point of the plane.
 5. [A definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md) — the same pairs read as vectors, displacements rather than locations, and the axioms they pass.
+
+### Pythagoras everywhere
+
+One theorem about right triangles turns out to be how every distance in this library is measured.
+
+1. [The Pythagorean theorem and its converse](09_Geometry/pythagorean_theorem/README.md) — c² = a² + b², and the converse that turns it into a test.
+2. [Area and volume formulas](09_Geometry/area_and_volume_formulas/README.md) — the diagonal of a square, and the altitude of a triangle, both found by it.
+3. [Congruent and similar triangles](09_Geometry/congruent_and_similar_triangles/README.md) — why two sides of a right triangle fix the third, the one case where SSA works.
+4. [The distance formula](08_Analytic_Geometry/distance_formula/README.md) — the theorem with the legs read off coordinates.
+5. [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — the length of a complex number, √(x² + y²), is the same formula measured from 0.
+6. [Catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md) — the Burj Khalifa example subtracts two nearly equal squares, and a calculator pays for it.
+
+### Scale factor k
+
+1. [Area and volume formulas](09_Geometry/area_and_volume_formulas/README.md) — lengths times k, areas times k², volumes times k³.
+2. [Congruent and similar triangles](09_Geometry/congruent_and_similar_triangles/README.md) — similar triangles are one triangle scaled by k.
+3. [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — multiplying by a complex number scales by its length and turns, so every triangle goes to a similar one.
 
 ### The complex numbers as a field
 
