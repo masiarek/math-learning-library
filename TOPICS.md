@@ -92,6 +92,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
 - **Chance and data**
     - **Averages** · from [Statistics](05_Statistics/README.md)
         - [Mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md) — one calculation, three sizes of word
+        - [A share above a cutoff](05_Statistics/share_above_a_cutoff/README.md) — percentile, median, skew, log-normal model, Markov's inequality, Lp(a)
     - **Probability** · from [Measure Zero](02_Measure_Zero/README.md)
         - [Probability zero](02_Measure_Zero/probability_zero/README.md) — probability zero is not impossible, except on a computer
 

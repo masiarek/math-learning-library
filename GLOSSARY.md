@@ -132,11 +132,15 @@ Terms used across the library, with the page that explains each in full.
 
 **Linear map** — a map T between vector spaces with T(u + v) = Tu + Tv and T(av) = aTv. Multiplying by i and projecting onto an axis are linear; x ↦ x + 1 is not, since a linear map always sends 0 to 0. See [maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md).
 
+**Log-normal distribution** — the distribution of a quantity whose logarithm is normally distributed. It is skewed to the right, so its mean e^(μ + σ²/2) lies above its median e^μ, and the gap grows fast with σ. See [a share above a cutoff](05_Statistics/share_above_a_cutoff/README.md).
+
 **Machine number** — a member of the finite set a floating-point format can represent, fixed by its radix, precision and exponent range. Each one is an exact number; the approximation happens when a real result is rounded into the set. See [machine numbers](01_Precision/machine_numbers/README.md).
 
 **Mean** — a family of averages, each the one number that can replace every value while keeping some total unchanged. The arithmetic mean keeps the sum, the geometric mean the product, the harmonic mean the sum of reciprocals, the quadratic mean the sum of squares. With no adjective it means the arithmetic mean. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
 
 **Measure zero** — a set has measure zero if, for every ε > 0, it fits inside a list of intervals whose lengths add up to at most ε. With squares or cubes in place of intervals, the same definition gives zero area or zero volume. Also called a *null set*. See [what measure zero means](02_Measure_Zero/what_measure_zero_means/README.md).
+
+**Markov's inequality** — for a quantity that cannot be negative, the share of values at or above c is at most mean / c. Read the other way round: if a share p is at or above c, the mean is at least p × c. See [a share above a cutoff](05_Statistics/share_above_a_cutoff/README.md).
 
 **Median** — the middle value once the numbers are sorted, or halfway between the two middle ones: at least half the values are at or below it, and at least half are at or above it. An average but not a mean, and the one a single huge value cannot drag. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
 
@@ -153,6 +157,8 @@ Terms used across the library, with the page that explains each in full.
 **Ordered pair** — (a, b), an object that remembers which entry is first: (a, b) = (c, d) exactly when a = c and b = d. Unlike the set {a, b}, it distinguishes (2, 5) from (5, 2) and does not collapse (3, 3). See [the Cartesian product](04_Sets/cartesian_product/README.md).
 
 **Ordinate** — the y-coordinate of a point: its signed distance from the x-axis, positive above it and negative below. The x-coordinate is the *abscissa*. See [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md).
+
+**Percentile** — the p-th percentile is the value with p% of the data below it. "p% of people are at or above c" says exactly that c is the (100 − p)-th percentile, and nothing else. See [a share above a cutoff](05_Statistics/share_above_a_cutoff/README.md).
 
 **Point-slope form** — y − y₁ = m(x − x₁), the line through (x₁, y₁) with slope m; the form to write first. See [lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md).
 

@@ -12,7 +12,7 @@ What exists, and what is deliberately not written yet. A topic listed here has *
 
 **[04_Sets](04_Sets/README.md)** — what a collection is, exactly. Two lessons so far: [the Cartesian product](04_Sets/cartesian_product/README.md), [cardinality of sets](04_Sets/cardinality/README.md).
 
-**[05_Statistics](05_Statistics/README.md)** — what one number says about many. One lesson so far: [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
+**[05_Statistics](05_Statistics/README.md)** — what one number says about many. Two lessons so far: [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md), [a share above a cutoff](05_Statistics/share_above_a_cutoff/README.md).
 
 **[06_Algebraic_Structures](06_Algebraic_Structures/README.md)** — why every book lists the same laws. Four lessons: [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md), [a definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md), [subsets inherit the laws](06_Algebraic_Structures/subsets_inherit_the_laws/README.md), [maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md).
 
@@ -57,7 +57,7 @@ Two lessons are a start, not an argument. The natural next steps, each with an o
 
 ## The rest of the statistics chapter
 
-One lesson settles the names. The next steps each have an obvious program:
+One lesson settles the names, and a second reads a percentile off a headline. The next steps each have an obvious program:
 
 - **What the median minimises** — the mean is the number that makes the sum of *squared* distances smallest, and the median makes the sum of plain distances as small as it can be. That is the real reason one outlier drags the mean and not the median, and a program can find both minimums by trying every candidate.
 - **Weighted means** — a grade-point average, a price index, NumPy's `average` with its `weights`. The arithmetic mean is the special case with every weight equal, and [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md) already met one in disguise: the harmonic mean of two speeds is their mean weighted by time.

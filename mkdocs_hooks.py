@@ -127,6 +127,7 @@ NAV_ORDER: dict[str, list[str]] = {
     "05_Statistics": [
         "README.md",
         "mean_vs_average",
+        "share_above_a_cutoff",
     ],
     # Why every book lists the same laws: one menu of four, the list as a test
     # a set can pass, subsets that need only closure, and maps that carry the

@@ -7,6 +7,7 @@ A list of numbers is hard to hold in your head, so people replace it with one nu
 | # | Lesson | The question it answers |
 |---|---|---|
 | 1 | [Mean, average, arithmetic mean](mean_vs_average/README.md) | Why does one calculation have so many names, and when do they stop meaning the same thing? |
+| 2 | [A share above a cutoff](share_above_a_cutoff/README.md) | What does "20% of people have Lp(a) 50+" say, and why can the mean sit at the cutoff while most people are below it? |
 
 ## The through-line
 

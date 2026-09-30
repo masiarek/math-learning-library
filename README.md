@@ -72,6 +72,7 @@ The fifth chapter is about the single number that stands in for a list: the aver
 | Lesson | What it teaches |
 |---|---|
 | [Mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md) | Why one calculation has so many names, what the adjective *arithmetic* is for, and why "the average salary" can honestly be three different numbers |
+| [A share above a cutoff](05_Statistics/share_above_a_cutoff/README.md) | What "20% of people have Lp(a) 50+" pins down (one percentile) and what it leaves free, and why a skewed quantity's mean can sit at the cutoff |
 
 [**06_Algebraic_Structures/**](06_Algebraic_Structures/README.md) — *Why does every book list the same laws?*
 
