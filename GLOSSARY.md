@@ -20,6 +20,12 @@ Terms used across the library, with the page that explains each in full.
 
 **Average** — any single value that stands for a whole set. In everyday speech it almost always means the arithmetic mean, but in statistics the median and the mode are averages too, so "the average salary" can honestly be three different numbers. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
 
+**Bloom's taxonomy** — six levels of working with an idea, in the 2001 revision: remembering, understanding, applying, analyzing, evaluating, creating (in 1956: knowledge, comprehension, application, analysis, synthesis, evaluation). See [studying vs learning](12_Learning_to_Learn/studying_vs_learning/README.md).
+
+**Brier score** — the mean of (confidence − outcome)², with outcome 1 for right and 0 for wrong: 0 is perfect, and saying 50% every time scores 0.25. It is a proper scoring rule, so its expected value is smallest when you report what you really believe. See [metacognition](12_Learning_to_Learn/metacognition/README.md).
+
+**Calibration** — how well confidence matches results: a calibrated learner's 90% answers are right about 9 times in 10. See [metacognition](12_Learning_to_Learn/metacognition/README.md).
+
 **Cantor function** — also the *devil's staircase*. Read x in base 3, cut after the first 1, turn 2s into 1s, and read the result in base 2. Continuous, climbing from 0 to 1, and flat on every gap of the Cantor set, so its whole rise happens on a set of length 0. See [the Cantor function](02_Measure_Zero/cantor_function/README.md).
 
 **Cardinality** — |A|, the size of a set. For a finite set, the number of members; in general, defined by matching: |A| = |B| when the members can be paired one to one with none left over. The same bars around a number mean absolute value. |A × B| = |A| · |B|; |ℕ| = |even numbers| = ℵ₀; |ℝ| is strictly larger. See [cardinality](04_Sets/cardinality/README.md).
@@ -144,6 +150,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Median** — the middle value once the numbers are sorted, or halfway between the two middle ones: at least half the values are at or below it, and at least half are at or above it. An average but not a mean, and the one a single huge value cannot drag. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
 
+**Metacognition** — John Flavell's word (1976) for thinking about your own thinking, including the ability to judge accurately how much you have learned, the one part a program can measure. See [metacognition](12_Learning_to_Learn/metacognition/README.md).
+
 **Midpoint** — the point halfway along a segment, ((x₁ + x₂)/2, (y₁ + y₂)/2): an average per coordinate. Equidistant from both ends and on the segment; equidistance alone describes the perpendicular bisector. See [the midpoint formula](08_Analytic_Geometry/midpoint_formula/README.md).
 
 **Mode** — the value that occurs most often. When several values tie for most often, a set has more than one mode. An average, but not a mean. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
@@ -214,6 +222,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Solution** — of a linear equation, an n-tuple (s₁, …, sₙ) that makes it true when sᵢ is put in for xᵢ; of a system, a tuple that is a solution of every equation at once. One equation in two unknowns has a whole line of solutions. See [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md).
 
+**Spacing effect** — the same number of reviews works better spread out than crammed together, because a review strengthens memory most when some has been forgotten. See [spaced retrieval](12_Learning_to_Learn/spaced_retrieval/README.md).
+
 **Stability** — whether a particular *algorithm* preserves the accuracy a well-conditioned problem allows. The textbook quadratic formula is unstable for one of its two roots; a conjugate rearrangement fixes it for free. See [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md).
 
 **Standard model** — the assumption behind rounding error analysis: every basic floating-point operation returns the exact result times (1 + δ) with |δ| ≤ u, the unit roundoff. Checked exactly on thousands of operations in [relative error and correct digits](01_Precision/relative_error/README.md).
@@ -229,6 +239,8 @@ Terms used across the library, with the page that explains each in full.
 **System of linear equations** — m linear equations in the same n variables, written with double subscripts: aᵢ,ⱼ is the coefficient in equation i of variable j, and dᵢ is the constant of equation i. Its solutions are the tuples that pass every equation. See [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md).
 
 **Tablemaker's dilemma** — an entry computed as 0.124|5000000, correct to a few digits past the bar, cannot be rounded at the bar until some further digit breaks the run of zeros, and nothing says in advance how far out that digit is. An exact tie is possible only for an algebraic value. See [relative error and correct digits](01_Precision/relative_error/README.md).
+
+**Testing effect** — retrieving something from memory makes it last longer than reading it again for the same time. See [spaced retrieval](12_Learning_to_Learn/spaced_retrieval/README.md).
 
 **Triangle inequality** — each side of a triangle is shorter than the other two added together; in coordinates, d(P, R) ≤ d(P, Q) + d(Q, R), with equality only when Q is on the segment. See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md) and [the distance formula](08_Analytic_Geometry/distance_formula/README.md).
 

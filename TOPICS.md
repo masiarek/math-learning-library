@@ -100,6 +100,16 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - [A share above a cutoff](05_Statistics/share_above_a_cutoff/README.md) — percentile, median, skew, log-normal model, Markov's inequality, Lp(a)
     - **Probability** · from [Measure Zero](02_Measure_Zero/README.md)
         - [Probability zero](02_Measure_Zero/probability_zero/README.md) — probability zero is not impossible, except on a computer
+- **Learning to learn**
+    - **Knowing what you know** · from [Learning to Learn](12_Learning_to_Learn/README.md)
+        - [Metacognition: judging what you know](12_Learning_to_Learn/metacognition/README.md) — Flavell's four abilities, calibration, overconfidence, Brier score, proper scoring rule, rereading vs self-testing
+        - [Count the vowels](12_Learning_to_Learn/count_the_vowels/README.md) — McGuire's exercise, levels of processing, knowing the goal, organising principle, 15!
+        - ↪ [If A then B: converse, contrapositive and inverse](11_Logic/converse_and_contrapositive/README.md) — why many examples prove nothing: the same distrust of feeling sure
+    - **Learning that lasts** · from [Learning to Learn](12_Learning_to_Learn/README.md)
+        - [Studying vs learning: Bloom's levels on one theorem](12_Learning_to_Learn/studying_vs_learning/README.md) — whats vs hows and whys, make-an-A vs teach-the-material, Bloom's taxonomy 1956 and 2001, Euclid's formula
+        - [Spaced retrieval](12_Learning_to_Learn/spaced_retrieval/README.md) — forgetting curve, testing effect, spacing effect, SM-2, logarithmic cost, McGuire's study cycle, intense study sessions
+        - ↪ [The Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md) — the theorem Bloom's levels are climbed on
+        - ↪ [Velocity equals position](09_Calculus/velocity_equals_position/README.md) — e^t, the shape of the forgetting curve
 
 ## Threads across chapters
 
@@ -167,6 +177,7 @@ One theorem about right triangles turns out to be how every distance in this lib
 7. [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — the length of a complex number, √(x² + y²), is the same formula measured from 0.
 8. [Catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md) — the Burj Khalifa example subtracts two nearly equal squares, and a calculator pays for it.
 9. [Related rates](09_Calculus/related_rates/README.md) — ladders and travellers: x² + y² = z², differentiated in time.
+10. [Studying vs learning](12_Learning_to_Learn/studying_vs_learning/README.md) — Bloom's six levels climbed on the theorem, up to Euclid's formula for every whole-number right triangle.
 
 ### Scale factor k
 

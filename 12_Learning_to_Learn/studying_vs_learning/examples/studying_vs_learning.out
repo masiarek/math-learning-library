@@ -1,0 +1,65 @@
+1. REMEMBERING: recall the fact
+   'In a right triangle, a^2 + b^2 = c^2.' Common triples, as flashcards:
+   (3, 4, 5), (5, 12, 13), (8, 15, 17)
+   Enough to answer 'state the theorem'. Nothing more.
+
+2. UNDERSTANDING: say why it holds, in your own terms
+   Put four copies of the (3, 4) triangle inside a square of side 3 + 4.
+   The big square has area 49; the four triangles take 24;
+   the tilted square left in the middle has area 49 - 24 = 25 = 5^2.
+   In letters: (a + b)^2 - 2ab = a^2 + b^2, and the middle square is c^2.
+
+3. APPLYING: use it on a new problem
+   A 13 m ladder stands 5 m from a wall. How high does it reach?
+   sqrt(13^2 - 5^2) = sqrt(144) = 12 m.
+
+4. ANALYZING: take the claim apart; what does each piece do?
+   (5, 12, 13): a^2 + b^2 = 169, c^2 = 169  ->  right
+   (5, 12, 12): a^2 + b^2 = 169, c^2 = 144  ->  acute
+   (5, 12, 14): a^2 + b^2 = 169, c^2 = 196  ->  obtuse
+   The comparison does more than the theorem said: it sorts every triangle
+   into three kinds, and it only works if c is the longest side.
+
+5. EVALUATING: judge a claim, with evidence
+   Claim: 'every right triangle with whole sides is a multiple of 3-4-5'.
+   Verdict: false. First counterexample: (5, 12, 13).
+
+6. CREATING: build something new that produces the facts
+   Euclid's formula: for m > n > 0, coprime, not both odd,
+   (m^2 - n^2, 2mn, m^2 + n^2) is a right triangle with no common factor.
+   m = 2, n = 1:  ( 3,  4,  5)  <- was a flashcard
+   m = 3, n = 2:  ( 5, 12, 13)  <- was a flashcard
+   m = 4, n = 1:  ( 8, 15, 17)  <- was a flashcard
+   m = 4, n = 3:  ( 7, 24, 25)
+   m = 5, n = 2:  (20, 21, 29)
+   m = 6, n = 1:  (12, 35, 37)
+   m = 5, n = 4:  ( 9, 40, 41)
+   m = 7, n = 2:  (28, 45, 53)
+   m = 6, n = 5:  (11, 60, 61)
+   m = 8, n = 1:  (16, 63, 65)
+   m = 7, n = 4:  (33, 56, 65)
+   m = 8, n = 3:  (48, 55, 73)
+   m = 7, n = 6:  (13, 84, 85)
+   m = 9, n = 2:  (36, 77, 85)
+   14 triples with hypotenuse up to 85, every one checked, from one formula.
+   A brute-force search finds 14 with no common factor; the same ones: True.
+
+7. WHERE STUDENTS SAY THEY WORKED, AND WHERE THEY SAY THEY MUST
+   McGuire's Figure 4.5: 250 general chemistry students, 2013, after hearing
+   about Bloom's (1956 names). Percent choosing each level:
+   level              high school   college
+   1. Knowledge               21%        7%   ##########         ###
+   2. Comprehension           35%        6%   #################  ###
+   3. Application             25%       14%   ############       #######
+   4. Analysis                13%       35%   ######             #################
+   5. Synthesis                3%       23%   #                  ###########
+   6. Evaluation               3%       15%   #                  #######
+   high school  average level 2.51, at level 4 or above: 19%
+   college      average level 4.06, at level 4 or above: 73%
+   Two questions moved the answer by one and a half levels: most had done well
+   by remembering and understanding, and saw that they would now need to analyze.
+
+WHAT CHANGED ON THE WAY UP
+   Level 1 stored three triples. Level 6 stores one formula and re-creates
+   those three and 11 more, on demand. A student who forgets the 'whats'
+   at level 6 can rebuild them; one who forgets them at level 1 has nothing.

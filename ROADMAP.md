@@ -26,6 +26,8 @@ What exists, and what is deliberately not written yet. A topic listed here has *
 
 **[11_Logic](11_Logic/README.md)** — what "if A then B" claims. One lesson so far: [if A then B: converse, contrapositive and inverse](11_Logic/converse_and_contrapositive/README.md).
 
+**[12_Learning_to_Learn](12_Learning_to_Learn/README.md)** — how do you know that you know? Four lessons, after McGuire's *Teach Yourself How to Learn*, chapters 3 and 4: [metacognition](12_Learning_to_Learn/metacognition/README.md), [count the vowels](12_Learning_to_Learn/count_the_vowels/README.md), [studying vs learning](12_Learning_to_Learn/studying_vs_learning/README.md), [spaced retrieval](12_Learning_to_Learn/spaced_retrieval/README.md). The book's chapter 5, the ten metacognitive learning strategies, is the obvious next lesson, if each strategy can be given a program; interleaving (mixing problem types instead of practising one at a time) is the one most clearly worth a page. McGuire's chapter 6, Dweck's fixed and growth mindsets, is not planned as a lesson: no program can demonstrate a belief without invented data, and the effect sizes are disputed, so it stays on the [resources](RESOURCES.md) page. The books are gathered on the [resources](RESOURCES.md) page.
+
 ## The rest of the precision chapter
 
 The six lessons close one argument, but they leave three doors open:
