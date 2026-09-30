@@ -1,0 +1,17 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Learning to learn::The buffer hour
+#tags:math learning planning
+#columns:Front	Back	Tags
+#tags column:3
+What is the planning fallacy?	The habit of underestimating how long a task will take, even with experience of past overruns.	definition
+Why do errors in task-time estimates not cancel out?	A task can hardly finish much early but can run far over, so the errors point one way.	skew
+Can an estimate be honest and still too short to plan with?	Yes: the most likely time can be well below the average time when the misses are all late.	trap
+In the model, a one-hour task averages how long?	1.35 hours: 1 h at 6/10, 1.5 h at 3/10, 3 h at 1/10.	skew
+Five one-hour tasks planned in five hours: chance the day fits, in the model?	(6/10)^5, about 7.8%, one day in thirteen: every task must hit its estimate.	buffer
+Five one-hour tasks with one buffer hour: chance the day fits?	46.7%, up from 7.8%.	buffer
+Same five tasks with symmetric errors: chance a five-hour plan fits?	64%: early tasks pay for late ones, so skew is what breaks the plan.	skew
+How do estimates actually improve?	Record estimated and actual time, take the average ratio, and multiply new estimates by it.	calibration
+What is the buffer hour for, once estimates are scaled?	Days worse than average: the scaled plan matches the average day, not every day.	calibration
+Set Up for Success: what if a to-do item is not done by its date?	Pick an extension; if it is not done by the extension, ask whether it needs doing at all.	definition
