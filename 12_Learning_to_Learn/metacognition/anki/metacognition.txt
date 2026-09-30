@@ -1,0 +1,19 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Learning to learn::Metacognition
+#tags:learning metacognition
+#columns:Front	Back	Tags
+#tags column:3
+What is metacognition, in Flavell's words?	Thinking about your own thinking.	definition
+Name Flavell's four aspects of metacognition.	Think about your own thinking; be aware of yourself as a problem solver; monitor, plan and control your mental processing; accurately judge your level of learning.	definition
+Which of the four aspects of metacognition can be measured?	Accurately judging your level of learning: write a confidence before answering, then compare with the results.	calibration
+What question does McGuire suggest asking while studying?	Am I understanding this material, or just memorizing it?	definition
+What does it mean to be calibrated?	Your answers given with p percent confidence are right about p percent of the time.	calibration
+What is the overconfidence gap?	Mean confidence minus the share of answers that were right. Positive means overconfident.	calibration
+What is the Brier score?	The mean of (confidence - outcome) squared, with outcome 1 for right and 0 for wrong. 0 is perfect.	scoring
+What Brier score does saying 50 percent every time give?	0.25.	scoring
+What does the Brier score charge for being 100 percent sure and wrong?	1, the most it can charge.	scoring
+Why can the Brier score not be gamed?	Its expected value p(1 - q)^2 + (1 - p)q^2 is smallest at q = p, so reporting your true belief is best. It is a proper scoring rule.	scoring
+Why does rereading make learners overconfident?	The page feels familiar, and familiarity feels like knowing. But an exam asks for recall without the page, which rereading never tests.	trap
+When should you stop studying a topic?	When a test without looking says you know it, not when it feels familiar.	trap

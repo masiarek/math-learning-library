@@ -74,6 +74,7 @@ NAV_ORDER: dict[str, list[str]] = {
         "TOPICS.md",
         CHAPTERS,
         "GLOSSARY.md",
+        "RESOURCES.md",
         "reading_guides",
         "ROADMAP.md",
     ],
@@ -175,6 +176,16 @@ NAV_ORDER: dict[str, list[str]] = {
     # Calculus as motion, the four pieces Euler's formula leans on: a velocity
     # at an instant, the motion whose velocity is its position, the unit in
     # which turning is walking, and the series that motion forces.
+    # How to know that you know, then how to learn so that it stays: the
+    # fourth of Flavell's abilities measured, the task deciding what is kept,
+    # Bloom's levels climbed on one theorem, and spacing that keeps it cheaply.
+    "12_Learning_to_Learn": [
+        "README.md",
+        "metacognition",
+        "count_the_vowels",
+        "studying_vs_learning",
+        "spaced_retrieval",
+    ],
     "09_Calculus": [
         "README.md",
         "derivative_as_velocity",

@@ -136,6 +136,19 @@ The eleventh chapter is the logic the theorems in every other chapter are writte
 |---|---|
 | [If A then B: converse, contrapositive and inverse](11_Logic/converse_and_contrapositive/README.md) | "If A then B" breaks only when A is true and B false, so the contrapositive is the same claim and the converse is not; if and only if; two classic mistakes; and why examples never prove but one counterexample disproves |
 
+[**12_Learning_to_Learn/**](12_Learning_to_Learn/README.md) — *How do you know that you know?*
+
+The twelfth chapter is about the reader, not the mathematics: how to tell whether a page has been learned, and how to learn it so that it stays. It follows Saundra McGuire's *Teach Yourself How to Learn*, and it needs nothing but school arithmetic.
+
+| Lesson | What it teaches |
+|---|---|
+| [Metacognition: judging what you know](12_Learning_to_Learn/metacognition/README.md) | Flavell's four abilities, and the one a program can measure: confidence against results, the Brier score, and why honest confidence minimises it |
+| [Count the vowels](12_Learning_to_Learn/count_the_vowels/README.md) | McGuire's exercise: 3 of 15 phrases remembered after counting vowels, 12 after knowing the goal and the principle |
+| [Studying vs learning](12_Learning_to_Learn/studying_vs_learning/README.md) | Bloom's six levels climbed on the Pythagorean theorem, up to a formula that re-creates the facts a student would memorise |
+| [Spaced retrieval](12_Learning_to_Learn/spaced_retrieval/README.md) | The forgetting curve, why testing beats rereading, the study cycle, and why a geometric review schedule makes remembering cost a logarithm |
+
+The books behind it, and behind the other chapters, are on the [resources](RESOURCES.md) page.
+
 **Looking for a subject rather than a chapter?** The [topic map](TOPICS.md) sorts every lesson into branches and follows the threads that run between chapters.
 
 ## Why a math library and not a Python one

@@ -1,0 +1,55 @@
+1. FLAVELL'S FOUR ABILITIES, AND THE ONE A PROGRAM CAN CHECK
+   1. think about your own thinking                      -> ask: what exactly don't I get?
+   2. be aware of yourself as a problem solver           -> ask: which strategies do I have for this?
+   3. monitor, plan and control your mental processing   -> ask: is this working, and what now?
+   4. accurately judge your level of learning            -> measure it: confidence against results
+   The first three are habits. The fourth is a claim, so it can be tested:
+   say how sure you are before you answer, then compare.
+
+2. ONE LEARNER, TWENTY QUESTIONS, TWO WAYS OF STUDYING (invented data)
+   after rereading the notes twice
+     mean confidence  91.5%   share right  55.0%   gap  36.5%
+          said | answers | right | share right
+          100% |       7 |     4 |       57.1%  ###########
+           90% |       9 |     5 |       55.6%  ###########
+           80% |       4 |     2 |       50.0%  ##########
+     Brier score 0.383   (0 is perfect; saying 50% every time scores 0.250)
+
+   after a week of self-testing with flashcards
+     mean confidence  80.0%   share right  75.0%   gap   5.0%
+          said | answers | right | share right
+          100% |       5 |     5 |      100.0%  ####################
+           90% |       5 |     4 |       80.0%  ################
+           80% |       2 |     2 |      100.0%  ####################
+           70% |       3 |     2 |       66.7%  #############
+           60% |       3 |     1 |       33.3%  #######
+           50% |       2 |     1 |       50.0%  ##########
+     Brier score 0.149   (0 is perfect; saying 50% every time scores 0.250)
+
+   After rereading, the learner says 90-100% and is right about half the time:
+   the page felt familiar, and familiar felt like known. After self-testing,
+   the shares right climb with the confidence, and the gap all but closes.
+   The score improved on both counts: more answers right, and better judged.
+
+3. WHY HONEST CONFIDENCE IS THE BEST STRATEGY
+   Suppose you will in fact get a kind of question right 70.0% of the time.
+   The expected Brier score of reporting q is  p(1 - q)^2 + (1 - p)q^2:
+     report  50%   expected score 0.250
+     report  60%   expected score 0.220
+     report  70%   expected score 0.210  <- smallest
+     report  80%   expected score 0.220
+     report  90%   expected score 0.250
+     report 100%   expected score 0.300
+   Its derivative, -2p(1 - q) + 2(1 - p)q = 2(q - p), is zero only at q = p.
+   Neither bravado nor modesty pays: the score is lowest for the truth. A rule
+   with that property is called proper, and it is what makes the fourth
+   ability measurable rather than a matter of opinion.
+
+4. WHAT MISJUDGING COSTS: WHEN DOES A LEARNER STOP STUDYING?
+   A learner stops a topic once they feel 90% sure. Their real chance of
+   answering right when they feel that sure is the 90% row above:
+     after rereading      feels >= 90% sure on 16, right on  9:  56.2%
+     after self-testing   feels >= 90% sure on 10, right on  9:  90.0%
+   The rereader walks into the exam sure of sixteen answers and gets nine.
+   That is the returned paper covered in red ink that McGuire describes, and
+   only a test taken before the exam could have warned of it.
