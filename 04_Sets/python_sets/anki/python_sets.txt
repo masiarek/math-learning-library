@@ -50,3 +50,11 @@ Is set2 < = set1 (with a space) a subset test?	No: SyntaxError. <= is one token 
 What does d1.keys() & d2.keys() return?	A set of the keys the two dicts share: a keys view supports set operations.	dict-views
 Do dict.items() views support set operations? dict.values()?	items() yes, when the values are hashable; values() no, it raises TypeError.	dict-views
 What does {1, 2}.update({1: 'a', 5: 'e'}) give?	{1, 2, 5}: iterating a dict yields its keys.	dict-views
+Which two decisions does every way of removing duplicates make?	Which copy represents the group (first, last, arbitrary) and what order the survivors come in (first-seen, sorted, hash order).	dedupe
+What does {w.lower(): w for w in words}.values() keep?	The LAST spelling of each word, at the FIRST spelling's position: dict keys keep their first place, values are overwritten.	dedupe
+How do you dedupe by a key and keep the first copy?	d.setdefault(key(x), x) in a loop: setdefault never overwrites.	dedupe
+What does [k for k, _ in groupby(items)] remove?	Adjacent repeats only, like Rust's dedup and ABAP's DELETE ADJACENT DUPLICATES. Sort first.	dedupe
+list(dict.fromkeys([1.0, 1, True])) = ?	[1.0]: the three are equal, and the first to arrive survives with its type.	dedupe
+How do you dedupe a list of lists?	list(dict.fromkeys(map(tuple, rows))), or the quadratic 'if r not in out' loop; lists are unhashable.	dedupe
+How does ABAP remove duplicates from an internal table?	SORT by the fields, then DELETE ADJACENT DUPLICATES COMPARING the same fields (keeps the first of each run); or INSERT into a UNIQUE-key table (first wins, sy-subrc 4 for the rest).	dedupe
+How does Rust remove duplicates from a Vec?	sort then dedup (sorted, adjacent only), or filter with a HashSet: seen.insert(x) is true only the first time (first-seen order).	dedupe
