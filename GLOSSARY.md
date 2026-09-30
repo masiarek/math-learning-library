@@ -50,6 +50,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Commutative** — a · b = b · a: the order of the two inputs does not matter. True for adding and multiplying numbers; false for subtraction, string concatenation, matrix multiplication and composing maps. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
 
+**Complement** — A′, the members of a fixed universal set U that are not in A: A′ = U ∖ A. It has no meaning without U, since there is no set of everything; in Python it is `U - a`. See [the algebra of sets](04_Sets/algebra_of_sets/README.md).
+
 **Completing the square** — rewriting x² + ax as (x + a/2)² − (a/2)², by adding half the coefficient squared to both sides. It turns the general form of a circle back into the standard form. See [circles](08_Analytic_Geometry/circles/README.md).
 
 **Complex multiplication** — the rule (x₁, y₁) · (x₂, y₂) = (x₁x₂ − y₁y₂, x₁y₂ + x₂y₁) on pairs of reals. It is the whole definition of the complex numbers: i is the pair (0, 1), and i² = −1 is what the rule gives for (0, 1) · (0, 1). See [multiplication as pairs](03_Complex_Numbers/multiplication_as_pairs/README.md).
@@ -75,6 +77,8 @@ Terms used across the library, with the page that explains each in full.
 **Counterexample** — a case where the hypothesis of an "if A then B" holds and the conclusion fails. One is enough to disprove the statement; no number of examples proves it. See [if A then B](11_Logic/converse_and_contrapositive/README.md).
 
 **De Moivre's formula** — (cos A, sin A)ⁿ = (cos nA, sin nA): the n-th power of a unit point is the unit point at n times the angle. It is "angles add" applied n − 1 times, and its n = 2 and n = 3 cases are the double- and triple-angle formulas. See [roots of unity](03_Complex_Numbers/roots_of_unity/README.md).
+
+**De Morgan's laws** — (A ∪ B)′ = A′ ∩ B′ and (A ∩ B)′ = A′ ∪ B′; in logic, not (p or q) is (not p) and (not q). Not either is neither; not both is at least one missing. See [the algebra of sets](04_Sets/algebra_of_sets/README.md).
 
 **Derivative** — the velocity at an instant: the number that the average velocities (x(t + h) − x(t)) / h settle on as h shrinks, written d/dt x, x′(t) or dx/dt. For x = t² at t = 3 the averages are exactly 6 + h, so the derivative is 6. See [the derivative is a velocity](09_Calculus/derivative_as_velocity/README.md).
 
@@ -174,6 +178,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Ordinate** — the y-coordinate of a point: its signed distance from the x-axis, positive above it and negative below. The x-coordinate is the *abscissa*. See [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md).
 
+**Partial order** — a relation that is reflexive, antisymmetric and transitive but need not compare every pair. ⊆ on sets is the standard example: {1} and {2} are incomparable, which is why `sorted()` on a list of Python sets gives no meaningful order. A set with one is a *poset*. See [the algebra of sets](04_Sets/algebra_of_sets/README.md).
+
 **Percentile** — the p-th percentile is the value with p% of the data below it. "p% of people are at or above c" says exactly that c is the (100 − p)-th percentile, and nothing else. See [a share above a cutoff](05_Statistics/share_above_a_cutoff/README.md).
 
 **Point-slope form** — y − y₁ = m(x − x₁), the line through (x₁, y₁) with slope m; the form to write first. See [lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md).
@@ -263,6 +269,8 @@ Terms used across the library, with the page that explains each in full.
 **Unit circle** — x² + y² = 1, center (0, 0), radius 1. Every Pythagorean triple a, b, c gives a point (a/c, b/c) on it. See [circles](08_Analytic_Geometry/circles/README.md).
 
 **Unit roundoff** — u = 2⁻⁵³ ≈ 1.1 × 10⁻¹⁶ for binary64: the largest relative error that rounding a real number to the nearest float can make, and the bound on δ in the standard model. See [relative error and correct digits](01_Precision/relative_error/README.md) and [machine numbers](01_Precision/machine_numbers/README.md).
+
+**Universal set** — the set U, fixed in advance, that every set under discussion is a subset of; complements are taken relative to it. There is no universal set of everything. See [the algebra of sets](04_Sets/algebra_of_sets/README.md).
 
 **Vector space** — a set with an addition and a scalar multiplication satisfying eight conditions: commutativity, two associativities, an additive identity, additive inverses, 1v = v, and two distributive laws. ℝ² is one; so are the functions from any set to ℝ, and the positive numbers with multiplication as their addition. See [a definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md).
 

@@ -28,6 +28,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
 - **Sets and size**
     - **Building sets** · from [Sets](04_Sets/README.md)
         - [What is a set?](04_Sets/what_is_a_set/README.md) — well-defined, extensionality, the empty set, null set, Russell's paradox, separation, no set of all sets
+        - [The algebra of sets](04_Sets/algebra_of_sets/README.md) — universal set, complement, De Morgan's laws, distributive and absorption laws, Boolean algebra, Venn regions, ⊆ as a partial order (poset)
         - [Sets in Python](04_Sets/python_sets/README.md) — creating, hashable members, operators vs methods, union, intersection, difference, symmetric difference, subset and superset, frozenset, equality, dedupe, joins as set operations
         - [The Cartesian product](04_Sets/cartesian_product/README.md) — ordered pairs, ℝ², and why A × B is not B × A
         - ↪ [Rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md) — the pairs of ℝ² as points of the plane
@@ -97,6 +98,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - ↪ [The Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md) — a theorem whose converse is also true
         - ↪ [A definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md) — a definition as an "if and only if"
         - ↪ [What is a set?](04_Sets/what_is_a_set/README.md) — Russell's paradox: an argument by cases in which both cases fail
+        - ↪ [The algebra of sets](04_Sets/algebra_of_sets/README.md) — ∪ ∩ ′ are or, and, not; ⊆ is if–then; De Morgan's laws
 - **Chance and data**
     - **Averages** · from [Statistics](05_Statistics/README.md)
         - [Mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md) — one calculation, three sizes of word

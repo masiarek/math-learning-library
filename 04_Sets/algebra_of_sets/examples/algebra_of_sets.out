@@ -1,0 +1,80 @@
+1. THE UNIVERSE AND ITS SUBSETS
+   U = {1, 2, 3, 4}, and it has 2^4 = 16 subsets:
+     {}            {1}           {2}           {3}           {4}           {1, 2}        {1, 3}        {1, 4}
+     {2, 3}        {2, 4}        {3, 4}        {1, 2, 3}     {1, 2, 4}     {1, 3, 4}     {2, 3, 4}     {1, 2, 3, 4}
+   the complement of A = {1, 2} is U - A = {3, 4}.
+   Python's set has no complement operator: 'everything not in A'
+   means nothing until U is fixed, so the code has to write U - A.
+
+2. EACH OPERATION IS A LOGICAL OPERATION ON MEMBERSHIP
+   A = {1, 2}, B = {2, 3}; for each x in U, is x in the result?
+       x  in A   in B   A | B  A & B  A - B  A ^ B  U - A
+       1  True   False  True   False  True   True   False
+       2  True   True   True   True   False  False  False
+       3  False  True   True   False  False  True   True
+       4  False  False  False  False  False  False  True
+   |  is or,  &  is and,  -  is 'and not',  ^  is 'exclusive or',
+   U - A is not. Checked for every x in every pair of subsets: True
+   and A <= B is 'if x in A then x in B', for every pair: True
+
+3. THE LAWS, CHECKED ON EVERY CASE
+   law                statement                           cases  holds
+   identity           A | {} = A,   A & U = A                16  True
+   domination         A | U = U,   A & {} = {}               16  True
+   idempotent         A | A = A,   A & A = A                 16  True
+   complement         A | A' = U,  A & A' = {}               16  True
+   double complement  (A')' = A                              16  True
+   commutative        A | B = B | A,  A & B = B & A         256  True
+   De Morgan          (A | B)' = A' & B'                    256  True
+   De Morgan          (A & B)' = A' | B'                    256  True
+   absorption         A | (A & B) = A                       256  True
+   difference         A - B = A & B'                        256  True
+   associative        (A | B) | C = A | (B | C)            4096  True
+   distributive       A & (B | C) = (A & B) | (A & C)      4096  True
+   distributive       A | (B & C) = (A | B) & (A | C)      4096  True
+   Every law holds in every case. Replace | & ' by or, and, not and each
+   line is a law of logic; that is why they are true, and why checking
+   the membership of one x settles them for all sets at once.
+
+4. LAWS THAT LOOK TRUE AND ARE NOT: THE SEARCH FINDS A COUNTEREXAMPLE
+   (A | B) - B = A                  fails in  175 cases, e.g. A = {1}, B = {1}
+   (A - B) | B = A                  fails in  175 cases, e.g. A = {}, B = {1}
+   A - (B - C) = (A - B) - C        fails in 2800 cases, e.g. A = {1}, B = {}, C = {1}
+   A - B = B - A                    fails in  240 cases, e.g. A = {}, B = {1}
+   A | B = A | C  implies  B = C    fails in 1040 cases, e.g. A = {1}, B = {}, C = {1}
+   One counterexample is enough to kill a law; for the true laws of
+   section 3, the search over every case is the proof that none exists.
+
+5. VENN DIAGRAMS: n SETS MAKE 2^n REGIONS, ONE PER PATTERN OF MEMBERSHIP
+   red and yellow overlap, green apart:  red = {1, 2, 5}  yellow = {1, 6}  green = {4, 7}
+     red & yellow & green               {}
+     red & yellow & not green           {1}
+     red & not yellow & green           {}
+     red & not yellow & not green       {2, 5}
+     not red & yellow & green           {}
+     not red & yellow & not green       {6}
+     not red & not yellow & green       {4, 7}
+     green.isdisjoint(red | yellow): True
+   all three overlap at 1:  red = {1, 2, 5}  yellow = {1, 6}  green = {1, 4, 7}
+     red & yellow & green               {1}
+     red & yellow & not green           {}
+     red & not yellow & green           {}
+     red & not yellow & not green       {2, 5}
+     not red & yellow & green           {}
+     not red & yellow & not green       {6}
+     not red & not yellow & green       {4, 7}
+     green.isdisjoint(red | yellow): False
+   The 8th pattern, in none of the three, is everything outside the
+   circles: the complement of the union, U - (R | Y | G).
+
+6. <= IS A PARTIAL ORDER, SO SORTING SETS DOES NOT WORK
+   reflexive True,  antisymmetric True,  transitive True
+   but of the 120 pairs of distinct subsets only 65 are comparable;
+   55 pairs, like {1} and {2}, have neither {1} <= {2} nor {2} <= {1}.
+   sorted(['{3}', '{1, 2}', '{1}']) = ['{3}', '{1}', '{1, 2}']
+   sorted(['{1, 2}', '{1}', '{3}']) = ['{1}', '{1, 2}', '{3}']
+   sorted(['{1}', '{3}', '{1, 2}']) = ['{1}', '{3}', '{1, 2}']
+   Same three sets, three different 'sorted' orders: sorted() uses <,
+   which for sets is 'proper subset', and {3} is neither above nor below
+   the others. Sort by a key that is a total order instead:
+   sorted(..., key=lambda s: (len(s), sorted(s))) = ['{1}', '{3}', '{1, 2}']

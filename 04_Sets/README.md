@@ -8,12 +8,13 @@ Before a chapter can talk about how long a set is, or how many points it holds, 
 |---|---|---|
 | 1 | [What is a set?](what_is_a_set/README.md) | Is "a well-defined collection of distinct objects" a definition, and why does a sharp rule not always give a set? |
 | 2 | [Sets in Python](python_sets/README.md) | Which of Python's set gotchas come from the mathematics, and which from hashing? |
-| 3 | [The Cartesian product](cartesian_product/README.md) | What is ℝ², and why is A × B not the same set as B × A? |
-| 4 | [Cardinality of sets](cardinality/README.md) | What do the bars in \|A\| mean, and why is "how many" defined by matching instead of counting? |
+| 3 | [The algebra of sets](algebra_of_sets/README.md) | Why are the laws of union, intersection and complement the laws of logic, and why can't Python sort a list of sets? |
+| 4 | [The Cartesian product](cartesian_product/README.md) | What is ℝ², and why is A × B not the same set as B × A? |
+| 5 | [Cardinality of sets](cardinality/README.md) | What do the bars in \|A\| mean, and why is "how many" defined by matching instead of counting? |
 
 ## The through-line
 
-The first lesson asks what a set is, and finds that the textbook answer, a well-defined collection of distinct objects, leaves out the one rule everything else relies on: a set is its members and nothing more, so two sets with the same members are one set. It also finds the limit of "any clear rule makes a set": Russell's rule is clear and makes none, and the repair, cutting rules out of a set already in hand, turns the paradox into the theorem that no set holds every set. The second lesson takes the same rule into Python, whose `set` obeys it exactly and adds one of its own, that members must be hashable; between them they explain every surprise the type has.
+The first lesson asks what a set is, and finds that the textbook answer, a well-defined collection of distinct objects, leaves out the one rule everything else relies on: a set is its members and nothing more, so two sets with the same members are one set. It also finds the limit of "any clear rule makes a set": Russell's rule is clear and makes none, and the repair, cutting rules out of a set already in hand, turns the paradox into the theorem that no set holds every set. The second lesson takes the same rule into Python, whose `set` obeys it exactly and adds one of its own, that members must be hashable; between them they explain every surprise the type has. The third lesson turns the operations into algebra: union, intersection and complement are *or*, *and* and *not* on membership, so the laws of sets are the laws of logic, checked here on every case.
 
 A set forgets everything except membership: {2, 5} and {5, 2} are one set. Almost all of mathematics needs more than that. A point in the plane has a first coordinate and a second, a function has an input and an output, a database row has columns in a fixed order. The **ordered pair** is the smallest object that remembers order, and the **Cartesian product** is the set of all of them. Everything from the coordinate plane to the definition of a function is built on it.
 
