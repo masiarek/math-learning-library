@@ -105,9 +105,9 @@ Section 4 puts the chapter's sets into the language of chance:
 
 | Event | Measure | Probability | Can it happen? |
 |---|---|---|---|
-| X is rational | 0 | 0 | yes — 1/2 is a possible draw |
-| X is in the Cantor set | 0 | 0 | yes — 1/4 is a possible draw |
-| X is in the fat Cantor set | 1/2 | 1/2 | yes, half the time |
+| X is [rational](../countable_sets/README.md) | 0 | 0 | yes — 1/2 is a possible draw |
+| X is in [the Cantor set](../cantor_set/README.md) | 0 | 0 | yes — 1/4 is a possible draw |
+| X is in [the fat Cantor set](../fat_cantor_set/README.md) | 1/2 | 1/2 | yes, half the time |
 | X is irrational | 1 | 1 | *almost surely*, but not certainly |
 
 The fat Cantor row is not in the program's output; its 1/2 comes from [the fat Cantor set](../fat_cantor_set/README.md).

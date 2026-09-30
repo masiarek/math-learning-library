@@ -33,7 +33,7 @@ Teaching works because a teacher anticipates the *questions*. Someone preparing 
 
 Benjamin Bloom and his colleagues published the original hierarchy in 1956: Knowledge, Comprehension, Application, Analysis, Synthesis, Evaluation. In 2001 one of the original authors, David Krathwohl, and one of Bloom's students, Lorin Anderson, revised it. They renamed the levels as verbs, to make them sound like things you do, and swapped the top two, so that creating now sits above evaluating. This is the pyramid on the cover of McGuire's book. She says it makes no difference which version you use, as long as you see that memorising something, understanding it well enough to put in your own words, and applying it to questions you have never seen are different things.
 
-| Level (2001) | 1956 name | Anderson and colleagues' definition, shortened | On the Pythagorean theorem |
+| Level (2001) | 1956 name | Anderson and colleagues' definition, shortened | On [the Pythagorean theorem](../../10_Geometry/pythagorean_theorem/README.md) |
 |---|---|---|---|
 | 1. Remembering | Knowledge | retrieving, recognizing and recalling relevant knowledge from long-term memory | state a² + b² = c², list 3-4-5 |
 | 2. Understanding | Comprehension | constructing meaning: interpreting, exemplifying, classifying, summarizing, inferring, comparing, explaining | say why it holds |

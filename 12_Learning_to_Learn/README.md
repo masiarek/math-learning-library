@@ -127,9 +127,9 @@ The same summaries then go further, and the further they go the weaker the evide
 
 | Claim | How sure |
 |---|---|
-| Testing yourself beats rereading; spacing beats cramming; interleaving helps with problems that are easy to confuse | **Well established**: many experiments in classrooms, over decades. |
+| [Testing yourself](metacognition/README.md) beats rereading; [spacing](spaced_retrieval/README.md) beats cramming; [interleaving](interleaving/README.md) helps with problems that are easy to confuse | **Well established**: many experiments in classrooms, over decades. |
 | Sleep consolidates memory; cramming instead of sleeping costs twice | **Well established**, though which stage of sleep does what is still argued over. |
-| Working memory holds about 3–5 chunks | **Well established** as an approximate figure (Cowan, 2001). |
+| [Working memory](cognitive_load/README.md) holds about 3–5 chunks | **Well established** as an approximate figure (Cowan, 2001). |
 | LTP, the lasting strengthening of a synapse that is used, is a cellular basis of memory; acetylcholine sharpens attention; dopamine makes plasticity easier | **Good evidence in animals**; how it adds up to studying better is not known in any detail. |
 | Aerobic exercise raises BDNF | **True for blood levels just after exercise**; the effect on what you learn in the next hour is small and uncertain. |
 | A quiet rest of 10–15 minutes after studying, with no phone, helps retention | **Some evidence** (wakeful rest after learning, Dewar and colleagues, 2012); "dramatically" and "replay at 20 times normal speed", which comes from rat studies, overstate it. |

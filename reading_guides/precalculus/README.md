@@ -29,12 +29,12 @@ Ask a calculus teacher what their students struggle with, and the answer is rare
 |---|---|
 | **Functions**: domain and range, composition, inverses, shifting and stretching a graph | Everything in calculus is done to a function. The chain rule is composition, and the derivative of an inverse function is a reciprocal slope. |
 | **Polynomial and rational functions**: zeros, factoring, long division, asymptotes | Curve sketching, limits at infinity, and partial fractions, which is how a rational function gets integrated. |
-| **Exponentials and logarithms** | eˣ is the function that is its own derivative, and ln x is the integral of 1/x. Every growth and decay model is one of the two. |
-| **Trigonometry**: the unit circle, radians, the graphs, identities, inverse functions | The derivative of sin is cos only in radians. Identities are what make trigonometric integrals possible. |
+| **Exponentials and logarithms** | eˣ is [the function that is its own derivative](../../09_Calculus/velocity_equals_position/README.md), and ln x is the integral of 1/x. Every growth and decay model is one of the two. |
+| **Trigonometry**: the unit circle, [radians](../../09_Calculus/radians/README.md), the graphs, identities, inverse functions | The derivative of sin is cos only in radians. Identities are what make trigonometric integrals possible. |
 | **Analytic geometry**: conics, parametric equations, polar coordinates | Motion along a curve, arc length, and area in polar coordinates. |
-| **Sequences, series and Σ notation** | Riemann sums, and the Taylor series that make sin, cos and eˣ computable. |
-| **Complex numbers in polar form** | Euler's formula, and the roots that a polynomial has and the real numbers cannot supply. |
-| **Systems, matrices and vectors** | Multivariable calculus and linear algebra, more than calculus itself. |
+| **Sequences, series and Σ notation** | Riemann sums, and the [Taylor series](../../09_Calculus/power_series/README.md) that make sin, cos and eˣ computable. |
+| **Complex numbers in polar form** | [Euler's formula](../eulers_formula/README.md), and the roots that a polynomial has and the real numbers cannot supply. |
+| **Systems, matrices and vectors** | Multivariable calculus and [linear algebra](../linear_algebra/README.md), more than calculus itself. |
 | **Limits**, informally, in the last chapter | The first chapter of the calculus book, seen once before. |
 
 The list is long, and the point of it is fluency rather than coverage. A student who can do the algebra of the first four rows without thinking is ready for calculus; one who has met every row once and can do none of them quickly is not.
@@ -138,10 +138,10 @@ Algebra 1, Algebra 2 and geometry, but not all of them. What precalculus will no
 | You need | Why precalculus uses it |
 |---|---|
 | **The rules of exponents**, including negative and fractional exponents, and fractions with letters in them | An exponential function is the exponent rules with the exponent as the variable, and a logarithm is those rules read backwards. The doubling example above is nothing else. |
-| **Solving linear and quadratic equations**: factoring, completing the square, the quadratic formula | Finding the zeros of a function and where two graphs meet. Completing the square is how a conic is recognised from its equation. |
-| **Lines**: slope, intercepts, the equation of the line through two points | Slope is what the derivative will generalise, and every other graph is compared with lines. |
+| **Solving linear and quadratic equations**: factoring, completing the square, the quadratic formula | Finding the zeros of a function and where two graphs meet. [Completing the square](../../08_Analytic_Geometry/circles/README.md) is how a conic is recognised from its equation. |
+| **[Lines](../../08_Analytic_Geometry/lines_and_slope/README.md)**: slope, intercepts, the equation of the line through two points | Slope is what the derivative will generalise, and every other graph is compared with lines. |
 | **Function notation** f(x), and reading a graph | The whole course is about functions, and the notation is assumed from the first page. |
-| **Geometry**: Pythagoras, similar triangles, the circumference and area of a circle | Trigonometry is similar triangles with names attached. The unit circle needs Pythagoras, and radians need circumference. |
+| **Geometry**: [Pythagoras](../../10_Geometry/pythagorean_theorem/README.md), [similar triangles](../../10_Geometry/congruent_and_similar_triangles/README.md), the [circumference and area of a circle](../../10_Geometry/area_and_volume_formulas/README.md) | Trigonometry is similar triangles with names attached. The unit circle needs Pythagoras, and [radians](../../09_Calculus/radians/README.md) need circumference. |
 | **Right-triangle trigonometry**: sine, cosine and tangent as ratios of sides | Usually taught in geometry. Precalculus extends it to every angle and turns the ratios into functions with graphs. |
 
 ### What you don't need
