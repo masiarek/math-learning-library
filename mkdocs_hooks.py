@@ -181,6 +181,7 @@ NAV_ORDER: dict[str, list[str]] = {
         "velocity_equals_position",
         "radians",
         "power_series",
+        "related_rates",
     ],
 }
 

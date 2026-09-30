@@ -84,6 +84,11 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - [Power series](09_Calculus/power_series/README.md) — "velocity = position" forces every coefficient of e^x, and cos and sin fall out of it
         - ↪ [Euler's identity](03_Complex_Numbers/eulers_identity/README.md) — the motion whose velocity is its position turned a quarter turn goes round to −1
         - ↪ [Euler's formula: a lesson plan](reading_guides/eulers_formula/README.md) — the chapter's lessons as steps 6 to 10 of a path to the identity
+    - **Related rates: derivatives in use** · from [Calculus](09_Calculus/README.md)
+        - [Related rates](09_Calculus/related_rates/README.md) — related rates, chain rule, balloon, ladder, kite, angle of elevation, differentiate first then substitute
+        - ↪ [The derivative is a velocity](09_Calculus/derivative_as_velocity/README.md) — what a rate is
+        - ↪ [Area and volume formulas](10_Geometry/area_and_volume_formulas/README.md) — the formulas differentiated, and the surface as the volume's rate
+        - ↪ [The Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md) — the ladder's equation
 - **Logic and proof**
     - **If A then B: converse, contrapositive, if and only if** · from [Logic](11_Logic/README.md)
         - [If A then B: converse, contrapositive and inverse](11_Logic/converse_and_contrapositive/README.md) — implication, hypothesis, conclusion, truth table, converse, inverse, contrapositive, if and only if, counterexample, affirming the consequent
@@ -161,6 +166,7 @@ One theorem about right triangles turns out to be how every distance in this lib
 6. [Lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md) — perpendicular slopes, checked by the converse.
 7. [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — the length of a complex number, √(x² + y²), is the same formula measured from 0.
 8. [Catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md) — the Burj Khalifa example subtracts two nearly equal squares, and a calculator pays for it.
+9. [Related rates](09_Calculus/related_rates/README.md) — ladders and travellers: x² + y² = z², differentiated in time.
 
 ### Scale factor k
 
@@ -169,6 +175,7 @@ One theorem about right triangles turns out to be how every distance in this lib
 3. [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — multiplying by a complex number scales by its length and turns, so every triangle goes to a similar one.
 4. [The midpoint formula](08_Analytic_Geometry/midpoint_formula/README.md) — k = ½: halfway across and halfway up is halfway along.
 5. [Lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md) — every rise-over-run triangle on a line is a scaled copy of every other.
+6. [Related rates](09_Calculus/related_rates/README.md) — the cyclists' triangle grows by a scale factor 20t, so its rate of growth never changes.
 
 ### From exponents to Euler's identity
 

@@ -1,0 +1,83 @@
+1. ONE EQUATION AT EVERY INSTANT, SO ONE EQUATION BETWEEN VELOCITIES
+   Each formula, differentiated in t, checked at r = 3 (or a = 3, x = 3, y = 4)
+   with every length growing at 1 unit per second:
+                                                     formula     measured  unit     
+   A = pi r^2        ->  2 pi r r'                 18.849556    18.849556  per sec  agree
+   V = (4/3) pi r^3  ->  4 pi r^2 r'              113.097336   113.097336  per sec  agree
+   S = 4 pi r^2      ->  8 pi r r'                 75.398224    75.398224  per sec  agree
+   V = a^3           ->  3 a^2 a'                  27.000000    27.000000  per sec  agree
+   C = 2 pi r        ->  2 pi r'                    6.283185     6.283185  per sec  agree
+   z = sqrt(x^2+y^2) ->  (x x' + y y')/z            1.400000     1.400000  per sec  agree
+   theta = atan(y/x) ->  (x y' - y x')/(x^2+y^2)    -0.040000    -0.040000  rad/sec  agree
+   Each factor in front of r' is what the quantity gains per unit of r:
+   4 pi r^2 is the sphere's surface, 2 pi r the circle's circumference.
+
+2. CIRCLES, SPHERES AND CUBES
+                                                     formula     measured  unit     
+   circle r=5, r'=2: A' = 2 pi r r'                62.831853    62.831853  m^2/s    agree
+   circle r=6, r'=-1: A' = 2 pi r r'              -37.699112   -37.699112  ft^2/s   agree
+   balloon V'=2, r=3: r' = V'/(4 pi r^2)            0.017684     0.017684  cm/s     agree
+   balloon V'=100, r=10: r' = V'/(4 pi r^2)         0.079577     0.079577  cm/s     agree
+   snowball V'=-5, r=4: r' = V'/(4 pi r^2)         -0.024868    -0.024868  cm/min   agree
+   cube a=4, a'=1/2: V' = 3 a^2 a'                 24.000000    24.000000  m^3/s    agree
+   cube V'=-10, a=2: a' = V'/(3 a^2)               -0.833333    -0.833333  m/s      agree
+   cube a=5, a'=-2: V' = 3 a^2 a'                -150.000000  -150.000000  cm^3/s   agree
+   sphere r=10, r'=-3: S' = 8 pi r r'            -753.982237  -753.982237  m^2/s    agree
+   circle r=7, r'=4: C' = 2 pi r'                  25.132741    25.132741  cm/s     agree
+   Sphere with r' = 9: when do V and r grow at the same numerical rate?
+   4 pi r^2 * 9 = 9 gives r^2 = 1/(4 pi), r = 0.282095 cm; there V' = 9.000000 = r'.
+   Negative answers mean decreasing: the snowball's radius shrinks.
+
+3. WHY THE NUMBERS GO IN LAST
+   Balloon, r = 3. Put r = 3 in first: V = (4/3) pi 3^3 = 36 pi, a constant,
+   and the derivative of a constant is 0. So 2 = 0: nonsense, not a small error.
+   r = 3 is true at one instant only. An equation that holds for one instant
+   has no velocity in it; only an equation that holds at every instant can be
+   differentiated. Differentiate first, then freeze the instant.
+
+4. LADDERS AND TWO TRAVELLERS
+   x^2 + y^2 = L^2 at every instant, so 2x x' + 2y y' = 0, and y' = -x x'/y.
+                                                     formula     measured  unit     
+   ladder 25, pushed in at 1, x=15 (y=20)           0.750000     0.750000  ft/s     agree
+   ladder 13, slides out at 2, x=5 (y=12)          -0.833333    -0.833333  ft/s     agree
+   ladder 10, slides out at 1, x=6 (y=8)           -0.750000    -0.750000  ft/s     agree
+   For two travellers leaving one point at right angles, z^2 = x^2 + y^2:
+   cyclists E 16, N 12 mph, after 1 h              20.000000    20.000000  per hour agree
+   cars S 30, W 40 mph, after 2 h                  50.000000    50.000000  per hour agree
+   planes E 250, N 300 mi/h, after 1 h            390.512484   390.512484  per hour agree
+
+5. WHICH RATE STAYS THE SAME? THE WORKSHEET'S 'COMPARE' QUESTION
+   Ladder 25 pushed in at 1 ft/s from x = 20 (t in seconds), and the cyclists
+   (t in hours, distance in miles):
+        t  ladder x  top speed    cyclists apart   rate
+        0        20     1.3333                 0     20
+        2        18     1.0375                40     20
+        5        15     0.7500               100     20
+       10        10     0.4364               200     20
+       14         6     0.2472               280     20
+   The ladder's length is fixed, so as x shrinks the top slows: x/y falls from
+   4/3 to 0.23. The cyclists' triangle keeps its shape (16t, 12t, 20t, always
+   similar to 4-3-5), so the distance is 20t and its rate is 20 at every moment.
+
+6. ANGLES
+   theta' = (x y' - y x')/(x^2 + y^2), the angle's velocity seen from the corner.
+                                                     formula     measured  unit     
+   ladder 20, x=12, x'=2 (y=16)                    -0.125000    -0.125000  rad/s    agree
+   ladder 15, x=9, x'=1 (y=12)                     -0.083333    -0.083333  rad/s    agree
+   kite 80 up, x=60, x'=5                          -0.040000    -0.040000  rad/s    agree
+   kite 50 up, x=120, x'=3                         -0.008876    -0.008876  rad/s    agree
+   balloon 30 away, y=40, y'=4                      0.048000     0.048000  rad/s    agree
+   balloon 40 away, y=30, y'=6                      0.096000     0.096000  rad/s    agree
+   Exactly: the ladders -1/8 and -1/12, the kites -1/25 and -3/338,
+   the balloons 6/125 and 12/125 radians per second. Radians, because
+   lesson 3 showed that only in radians is the derivative of sin cos.
+
+7. WHERE THE MODEL BREAKS: THE TOP OF A SLIDING LADDER
+   Ladder 13 sliding out at 2 ft/s. The top's speed 2x/y, as y goes to 0:
+     x = 5       y =  12.0000   top falls at       0.83 ft/s
+     x = 12      y =   5.0000   top falls at       4.80 ft/s
+     x = 12.9    y =   1.6093   top falls at      16.03 ft/s
+     x = 12.99   y =   0.5098   top falls at      50.96 ft/s
+     x = 12.999  y =   0.1612   top falls at     161.24 ft/s
+   The formula promises unbounded speed at the floor. A real ladder leaves the
+   wall before then; the equation x^2 + y^2 = 169 stops describing it.

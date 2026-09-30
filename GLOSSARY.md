@@ -180,6 +180,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Rectangular coordinates** — also *Cartesian coordinates*, after Descartes: the ordered pair (x, y) that locates a point of the plane by its signed distances from two perpendicular number lines, x from the y-axis and y from the x-axis. The origin O = (0, 0) is where the axes cross. See [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md).
 
+**Related rates** — problems where two quantities are tied by an equation at every instant, so their rates of change are tied by its derivative in time: V = (4/3)πr³ gives dV/dt = 4πr² · dr/dt. Differentiate first, then put in the numbers of the instant. See [related rates](09_Calculus/related_rates/README.md).
+
 **Relative error** — |x − x̂| / |x|, the error as a fraction of the true value (`0.81%`); equivalently |ρ| where x̂ = x(1 + ρ). Undefined at x = 0, unchanged by a change of units, and the measure numerical analysis reports in place of a count of correct digits. What `×` and `÷` propagate, and the reason their rule counts significant figures. Defined in [relative error and correct digits](01_Precision/relative_error/README.md); propagated in [uncertainty propagation](01_Precision/uncertainty_propagation/README.md).
 
 **Right triangle** — a triangle with one angle of 90°. It cannot have two, since the angles add up to 180°. See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md).
