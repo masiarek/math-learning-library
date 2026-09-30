@@ -126,6 +126,10 @@
    is a subset of every set, and disjoint from every set, itself included.
    if (s <= t, u):   runs, because (s <= t, u) = (True, {5}) is a non-empty tuple
    s <= t and s <= u = False   is what was meant
+   the notes' version: s1 = {0, 1, 2, 3, 4}, s2 = {0, 2, 3, 4}, s3 = {0, 2, 5}
+     if (s1 <= s2, s3):          always taken, tuple (False, {0, 2, 5})
+     s1 <= s2 and s1 <= s3       False   1 is in s1 and in neither of the others
+     s2 < = s1                   SyntaxError: invalid syntax   <= is one token, no space inside
 
 9. REMOVING: WHICH ONES RAISE
    s.remove(9)      -> KeyError: 9

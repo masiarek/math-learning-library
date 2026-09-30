@@ -154,6 +154,10 @@ The third rule is about manners, not meaning: `a | b` needs two sets, and `a.uni
    is a subset of every set, and disjoint from every set, itself included.
    if (s <= t, u):   runs, because (s <= t, u) = (True, {5}) is a non-empty tuple
    s <= t and s <= u = False   is what was meant
+   the notes' version: s1 = {0, 1, 2, 3, 4}, s2 = {0, 2, 3, 4}, s3 = {0, 2, 5}
+     if (s1 <= s2, s3):          always taken, tuple (False, {0, 2, 5})
+     s1 <= s2 and s1 <= s3       False   1 is in s1 and in neither of the others
+     s2 < = s1                   SyntaxError: invalid syntax   <= is one token, no space inside
 
 9. REMOVING: WHICH ONES RAISE
    s.remove(9)      -> KeyError: 9
@@ -269,6 +273,7 @@ The notes this page merges include some statements that are wrong. The program r
 | `s1.add(s2)` fails; use `update` | true |
 | an empty set is falsy | true |
 | `issubset` of an empty iterable returns False | false: `set().issubset([])` is True |
+| `set2 < = set1` tests for a subset | false: with the space it is a `SyntaxError`; `<=` is one token |
 | `{0,1,2,3,4} & {0,2,3,4} & {0,2,5}` is `{2}` | false: it is `{0, 2}` |
 | `symmetric_difference` takes several sets, like `union` | false: exactly one; chain `^` instead |
 | there is no direct way to compare two sets for equality | false: `==` (section 6) |
@@ -287,7 +292,7 @@ A `frozenset` is a set that cannot change after it is made, so it is hashable an
 
 ## Subsets, removal, order (sections 8 to 10)
 
-Every set is a subset of itself but not a *proper* subset; that is the whole difference between `<=` (⊆) and `<` (⊂). The empty set is a subset of every set and disjoint from every set, itself included. One mistake from the notes is worth its own line: `if (s1 <= s2, s3):` builds a tuple, and a non-empty tuple is always true, so the test always passes. Write `s1 <= s2 and s1 <= s3`.
+Every set is a subset of itself but not a *proper* subset; that is the whole difference between `<=` (⊆) and `<` (⊂). The empty set is a subset of every set and disjoint from every set, itself included. One mistake from the notes is worth its own line: `if (s1 <= s2, s3):` builds a tuple, and a non-empty tuple is always true, so the test always passes. Write `s1 <= s2 and s1 <= s3`. For the notes' sets, s1 = {0, 1, 2, 3, 4}, s2 = {0, 2, 3, 4} and s3 = {0, 2, 5}, the corrected test is False: 1 is in s1 and in neither of the others. The operator is written `<=` with no space; `< =` is a syntax error.
 
 `remove(x)` raises `KeyError` when x is absent and `discard(x)` does not; `pop()` removes an arbitrary member and raises on an empty set; `clear()` empties it.
 
