@@ -187,7 +187,8 @@ NAV_ORDER: dict[str, list[str]] = {
     # stops you trying and so never meets the evidence; last, the planning
     # fallacy, and the hour a schedule needs in reserve; and cognitive load,
     # where the weight of a page depends on the chunks its reader has built;
-    # and interleaving, the step a blocked practice sheet lets you skip.
+    # and interleaving, the step a blocked practice sheet lets you skip;
+    # and focused and diffuse thinking, why small steps stop on the nearest hill.
     "12_Learning_to_Learn": [
         "README.md",
         "metacognition",
@@ -199,6 +200,7 @@ NAV_ORDER: dict[str, list[str]] = {
         "the_buffer_hour",
         "cognitive_load",
         "interleaving",
+        "focused_and_diffuse",
     ],
     "09_Calculus": [
         "README.md",

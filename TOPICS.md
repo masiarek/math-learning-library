@@ -131,6 +131,9 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - ↪ [Count the vowels](12_Learning_to_Learn/count_the_vowels/README.md) — an organising principle holds fifteen phrases as one idea
         - [Interleaving](12_Learning_to_Learn/interleaving/README.md) — blocked vs interleaved practice, choosing the method, Rohrer and Taylor, volume formulas
         - ↪ [Area and volume formulas](10_Geometry/area_and_volume_formulas/README.md) — the formulas the practice sheets mix
+    - **Getting unstuck** · from [Learning to Learn](12_Learning_to_Learn/README.md)
+        - [Focused and diffuse thinking](12_Learning_to_Learn/focused_and_diffuse/README.md) — Oakley's pinball, Magnus Carlsen, local maximum, hill climbing, Einstellung effect, incubation, Poincaré, Pomodoro, hard start jump to easy
+        - ↪ [Interleaving](12_Learning_to_Learn/interleaving/README.md) — another way that feels harder and works better
 
 ## Threads across chapters
 
