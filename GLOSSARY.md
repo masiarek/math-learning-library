@@ -12,6 +12,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Almost surely** — with probability 1, which is not the same as certainly: the exceptions exist, and together they have measure zero. A number drawn at random from [0, 1] is almost surely irrational. See [probability zero](02_Measure_Zero/probability_zero/README.md).
 
+**Altitude** — of a triangle, the height measured at a right angle to the base, from the base to the opposite corner. Not a side unless the triangle is right; for a slanted triangle it is shorter than the slanted sides. Area = ½ · base · altitude. See [area and volume formulas](10_Geometry/area_and_volume_formulas/README.md).
+
 **Arithmetic mean** — the sum of the numbers divided by how many there are; what school calls "the mean" or "the average", and a spreadsheet `AVERAGE`. The one number that can replace every value without changing their sum, so the distances above and below it cancel. The adjective tells it apart from the geometric and harmonic means. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
 
 **Associative** — (a · b) · c = a · (b · c): the grouping does not change the answer, so a chain of the operation needs no brackets. True for integer addition, string concatenation and composition of functions; false for subtraction and for float addition. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
@@ -48,6 +50,10 @@ Terms used across the library, with the page that explains each in full.
 
 **Conditioning** — how much a problem's output changes for a small change in its input. A property of the *problem*, not of any algorithm; an ill-conditioned problem defeats every method. See [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md).
 
+**Congruent triangles** — triangles with every pair of corresponding sides and angles equal: the same triangle in two places. Three measurements prove it: SSS, SAS or ASA, never AAA or SSA. See [congruent and similar triangles](10_Geometry/congruent_and_similar_triangles/README.md).
+
+**Converse** — the statement with its *if* and *then* swapped. It must be proved on its own: "a dog has four legs" is true and its converse is not. The converse of the Pythagorean theorem happens to be true, which turns c² = a² + b² into a test for a right angle. See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md).
+
 **Correct rounding** — returning exactly what the chosen rounding function gives for the exact result, as if the operation had been carried out with unlimited precision. IEEE 754 requires it for +, −, ×, ÷ and √, which is why those give the same bits on every conforming machine. See [machine numbers](01_Precision/machine_numbers/README.md).
 
 **Correct significant digits** — a count with only p + 1 possible values and two competing definitions: x and x̂ round to the same p-digit number, or |x − x̂| is under half a unit in the p-th digit of x. The first is not monotone (0.9949 and 0.9951 agree to one and three digits but not two); the second calls 0.123 and 0.127 two-digit agreement. The relative error is the precise measure. See [relative error and correct digits](01_Precision/relative_error/README.md).
@@ -61,6 +67,10 @@ Terms used across the library, with the page that explains each in full.
 **Diagonal argument** — Cantor's proof that the infinite 0/1 sequences cannot be listed: flip the r-th bit of the r-th row and the result is on no row. It makes ℝ uncountable, and makes the functions from ℕ to {0, 1} outnumber the programs. See [cardinality](04_Sets/cardinality/README.md).
 
 **Dense** — found inside every interval, however short. The rationals are dense in the line and still have measure zero. See [countable sets](02_Measure_Zero/countable_sets/README.md).
+
+**Dimension of a formula** — how many lengths each term multiplies together: one for a perimeter, two for an area, three for a volume. Scaling every length by k scales the result by k to that power, which catches a misremembered formula. See [area and volume formulas](10_Geometry/area_and_volume_formulas/README.md).
+
+**Distance formula** — d(P₁, P₂) = √((x₂ − x₁)² + (y₂ − y₁)²), the Pythagorean theorem with the legs read off the coordinates. The squares erase the signs, so the order of the points does not matter. See [the distance formula](08_Analytic_Geometry/distance_formula/README.md).
 
 **Distributive** — a × (b + c) = a × b + a × c, and (a + b) × c = a × c + b × c: the law that links two operations. It is what turns two groups on one set into a ring. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
 
@@ -86,6 +96,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Homomorphism** — a map f between two sets with operations that keeps the operation: f(a · b) = f(a) ∗ f(b). A linear map is one; so are n ↦ 2ⁿ, the logarithm, the determinant, and the length of a string. A homomorphism of groups sends the identity to the identity and inverses to inverses, which is why 2⁰ = 1, log 1 = 0, T(0) = 0 and det I = 1 are one theorem. See [maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md).
 
+**Hypotenuse** — the side of a right triangle opposite the right angle; always the longest side, and the c in c² = a² + b². See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md).
+
 **Identity element** — a member e with a · e = e · a = a for every a: 0 for +, 1 for ×, the empty string for concatenation, the identity matrix for matrix multiplication. There is at most one, since two identities e and e′ give e = e · e′ = e′. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
 
 **Inverse** — for a member a, a member b with a · b = b · a = e, the identity. −3 is the inverse of 3 under +, and 1/2 is the inverse of 2 under ×. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
@@ -93,6 +105,8 @@ Terms used across the library, with the page that explains each in full.
 **Isomorphism** — a homomorphism that can be undone, showing two structures are the same one with the members renamed. The logarithm is an isomorphism from the positive numbers under × to the numbers under +, which is how a slide rule multiplies by adding lengths. See [maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md).
 
 **Lebesgue's criterion** — a bounded function on a closed interval has a Riemann integral exactly when the points where it is discontinuous form a set of measure zero. Also called the *Lebesgue–Vitali theorem*. See [the fat Cantor set](02_Measure_Zero/fat_cantor_set/README.md).
+
+**Legs** — of a right triangle, the two sides that form the right angle; the a and b in c² = a² + b². See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md).
 
 **Linear combination** — a₁x₁ + a₂x₂ + ⋯ + aₙxₙ: each variable multiplied by a fixed number, then added. No powers, no products of variables, no variable inside a function. It keeps sums and multiples, which is what makes it a linear map. See [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md).
 
@@ -122,6 +136,10 @@ Terms used across the library, with the page that explains each in full.
 
 **Power series** — a polynomial that never ends, a₀ + a₁x + a₂x² + ⋯. For e^x the rule "velocity = position" forces aₖ = 1/k!, and putting x = it splits the terms into the series for cos t and sin t. See [power series](09_Calculus/power_series/README.md).
 
+**Pythagorean theorem** — in a right triangle, the square of the hypotenuse equals the sum of the squares of the legs, c² = a² + b². Its converse is also true. See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md).
+
+**Pythagorean triple** — three whole numbers with a² + b² = c², such as 3, 4, 5 or 5, 12, 13; any multiple of one is another. See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md).
+
 **Quadrant** — one of the four regions the coordinate axes cut the plane into, numbered I to IV counterclockwise from the upper right. Membership depends only on the signs of x and y, so (1, 1) and (1000, 5) share a quadrant, and a point on an axis, where one coordinate is 0, is in none. See [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md).
 
 **Quadratic mean** — also the *root mean square*: the square root of the mean of the squares, the one number that keeps the sum of squares. The rated value of an AC voltage is one. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
@@ -134,6 +152,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Relative error** — |x − x̂| / |x|, the error as a fraction of the true value (`0.81%`); equivalently |ρ| where x̂ = x(1 + ρ). Undefined at x = 0, unchanged by a change of units, and the measure numerical analysis reports in place of a count of correct digits. What `×` and `÷` propagate, and the reason their rule counts significant figures. Defined in [relative error and correct digits](01_Precision/relative_error/README.md); propagated in [uncertainty propagation](01_Precision/uncertainty_propagation/README.md).
 
+**Right triangle** — a triangle with one angle of 90°. It cannot have two, since the angles add up to 180°. See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md).
+
 **Ring** — a set with + and × where + makes a commutative group, × is associative with an identity, and × distributes over +. The integers are a commutative ring, and the 2 × 2 matrices are a ring that is not commutative. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
 
 **Root of unity** — a solution of zⁿ = 1; equivalently, a unit point that is back at (1, 0) after n multiplications by itself. There are exactly n of them, spaced evenly around the unit circle, and the twelfth roots are the marks of a clock face. A *primitive* n-th root needs all n steps to return, and its powers visit all n. See [roots of unity](03_Complex_Numbers/roots_of_unity/README.md).
@@ -141,6 +161,8 @@ Terms used across the library, with the page that explains each in full.
 **Rounding** — the mechanical operation of cutting a number at some place. The *action*; significant figures are the argument for where the action must stop. See [significant figures](01_Precision/significant_figures/README.md).
 
 **Rounding function** — a rule sending every real number to a machine number, or to an infinity. IEEE 754 defines five: toward −∞, toward +∞, toward zero, and to nearest with ties going either to the even significand or away from zero. See [machine numbers](01_Precision/machine_numbers/README.md).
+
+**Scale factor** — the one ratio k shared by every pair of corresponding sides of similar figures. Lengths scale by k, areas by k², volumes by k³. See [congruent and similar triangles](10_Geometry/congruent_and_similar_triangles/README.md) and [area and volume formulas](10_Geometry/area_and_volume_formulas/README.md).
 
 **Scientific notation** — writing a value as mantissa × 10ⁿ, so the mantissa carries the precision claim and the exponent carries the magnitude. The only unambiguous way to write trailing zeros. See [significant figures](01_Precision/significant_figures/README.md).
 
@@ -151,6 +173,8 @@ Terms used across the library, with the page that explains each in full.
 **Signed distance** — also *directed distance*: a distance with a sign that says which side. The x-coordinate of a point is its signed distance from the y-axis, positive to the right and negative to the left. See [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md).
 
 **Significant figures** — the digits of a measurement that carry information about the instrument rather than about place value. A claim about knowledge, not a formatting choice. See [significant figures](01_Precision/significant_figures/README.md).
+
+**Similar triangles** — triangles with the same shape: corresponding angles equal and corresponding sides proportional, with one scale factor. Proved by AA, SSS (proportional) or SAS (proportional). See [congruent and similar triangles](10_Geometry/congruent_and_similar_triangles/README.md).
 
 **Solution** — of a linear equation, an n-tuple (s₁, …, sₙ) that makes it true when sᵢ is put in for xᵢ; of a system, a tuple that is a solution of every equation at once. One equation in two unknowns has a whole line of solutions. See [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md).
 
@@ -167,6 +191,8 @@ Terms used across the library, with the page that explains each in full.
 **System of linear equations** — m linear equations in the same n variables, written with double subscripts: aᵢ,ⱼ is the coefficient in equation i of variable j, and dᵢ is the constant of equation i. Its solutions are the tuples that pass every equation. See [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md).
 
 **Tablemaker's dilemma** — an entry computed as 0.124|5000000, correct to a few digits past the bar, cannot be rounded at the bar until some further digit breaks the run of zeros, and nothing says in advance how far out that digit is. An exact tie is possible only for an algebraic value. See [relative error and correct digits](01_Precision/relative_error/README.md).
+
+**Triangle inequality** — each side of a triangle is shorter than the other two added together; in coordinates, d(P, R) ≤ d(P, Q) + d(Q, R), with equality only when Q is on the segment. See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md) and [the distance formula](08_Analytic_Geometry/distance_formula/README.md).
 
 **Tuple** — an ordered list of numbers, (s₁, …, sₙ), called an n-tuple when it has n entries; a pair is a 2-tuple and a triple a 3-tuple. ℝⁿ is the set of all n-tuples of reals. Order matters: (1, 4) is not (4, 1). See [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md) and [the Cartesian product](04_Sets/cartesian_product/README.md).
 

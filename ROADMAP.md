@@ -18,9 +18,11 @@ What exists, and what is deliberately not written yet. A topic listed here has *
 
 **[07_Linear_Systems](07_Linear_Systems/README.md)** — what it means to solve a system of equations. One lesson so far: [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md).
 
-**[08_Analytic_Geometry](08_Analytic_Geometry/README.md)** — what it means to draw a number. One lesson so far: [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md).
+**[08_Analytic_Geometry](08_Analytic_Geometry/README.md)** — what it means to draw a number. Two lessons so far: [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md), [the distance formula](08_Analytic_Geometry/distance_formula/README.md).
 
 **[09_Calculus](09_Calculus/README.md)** — what a velocity is, and which motion is its own. Four lessons: [the derivative is a velocity](09_Calculus/derivative_as_velocity/README.md), [velocity equals position](09_Calculus/velocity_equals_position/README.md), [radians](09_Calculus/radians/README.md), [power series](09_Calculus/power_series/README.md). [Euler's formula: a lesson plan](reading_guides/eulers_formula/README.md) threads them into a path to e^{iπ} = −1.
+
+**[10_Geometry](10_Geometry/README.md)** — how few numbers fix a shape. Three lessons, the precalculus review of geometry: [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md), [area and volume formulas](10_Geometry/area_and_volume_formulas/README.md), [congruent and similar triangles](10_Geometry/congruent_and_similar_triangles/README.md).
 
 ## The rest of the precision chapter
 
@@ -77,9 +79,8 @@ One lesson says what a solution is. The rest of Hefferon's first section says ho
 
 ## The rest of the analytic-geometry chapter
 
-One lesson sets up the plane. The next pages of any precalculus book each have an obvious program:
+Two lessons set up the plane and measure in it. Each remaining section of the book's first chapter has an obvious program:
 
-- **The distance formula** — Pythagoras in coordinates: the distance between (x₁, y₁) and (x₂, y₂) is √((x₂ − x₁)² + (y₂ − y₁)²), because the two points and the corner (x₂, y₁) make a right triangle. Question 4 of [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md) already meets it as a 3-4-5 triangle. A program can check it on triangles whose sides are exact, and show that the formula does not care which point is called first.
 - **The midpoint** — the point halfway along, ((x₁ + x₂)/2, (y₁ + y₂)/2), which is [the arithmetic mean](05_Statistics/mean_vs_average/README.md) taken one coordinate at a time. A program can check that it is the same distance from both ends and that it lies on the segment.
 - **Graphs of equations** — the graph of an equation in x and y is the set of every point whose coordinates pass it, which makes it the same object as the solution set in [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md), drawn. Intercepts are the points where the graph meets an axis, so they have a 0 coordinate; symmetry about an axis is the sign change of lesson 1's section 6. A program can plot a solution set on the text grid and find the intercepts by searching for a 0.
 

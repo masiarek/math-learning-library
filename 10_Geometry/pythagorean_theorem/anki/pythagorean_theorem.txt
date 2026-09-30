@@ -1,0 +1,52 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Pythagorean theorem
+#tags:math geometry pythagorean-theorem
+#columns:Front	Back	Tags
+#tags column:3
+What is a right triangle?	A triangle with one angle of 90 degrees, a square corner.	vocabulary
+Can a triangle have two right angles?	No. The three angles add up to 180 degrees, so two right angles would leave 0 degrees for the third.	vocabulary
+What is the hypotenuse?	The side opposite the right angle in a right triangle. It is always the longest side.	vocabulary
+What are the legs of a right triangle?	The two sides that form the right angle.	vocabulary
+What does the small square drawn in a corner of a triangle mean?	That the angle there is a right angle, 90 degrees.	vocabulary
+State the Pythagorean theorem.	In a right triangle, the square of the hypotenuse equals the sum of the squares of the legs: c^2 = a^2 + b^2.	theorem
+In c^2 = a^2 + b^2, which letter must be the hypotenuse?	c, the side opposite the right angle. a and b are the legs, in either order.	theorem
+State the converse of the Pythagorean theorem.	If the square of one side of a triangle equals the sum of the squares of the other two, the triangle is a right triangle, and the right angle is opposite that side.	converse
+What is the converse of a statement if A then B?	If B then A. It is a different claim and must be proved separately.	converse
+Give an example of a true statement whose converse is false.	If it is a dog, it has four legs. The converse, if it has four legs it is a dog, is false.	converse
+What does the theorem let you do, and what does the converse let you do?	The theorem finds a missing side when you know the angle is right. The converse proves the angle is right when you know the three sides.	converse
+Testing three lengths for a right triangle: what is the first step?	Find the longest side. It is the only candidate for the hypotenuse.	converse
+Why check only the longest side as the hypotenuse?	A right angle would be opposite the hypotenuse, and the hypotenuse is always the longest side. With a leg in c's place, even a true right triangle fails.	converse
+Sides 6, 4, 3: right triangle?	No. The longest is 6, and 36 is not 16 + 9 = 25.	problems
+Sides 5, 12, 13: right triangle?	Yes. 13^2 = 169 = 25 + 144. The hypotenuse is 13.	problems
+Sides 7, 24, 25: right triangle?	Yes. 25^2 = 625 = 49 + 576. The hypotenuse is 25.	problems
+Sides 4, 5, 6: right triangle?	No. 36 is less than 16 + 25 = 41, so the largest angle is acute.	problems
+Sides 2, 2, 3: right triangle?	No. 9 is more than 4 + 4 = 8, so the largest angle is obtuse.	problems
+Legs 4 and 3: hypotenuse?	5, since 16 + 9 = 25.	problems
+Legs 5 and 12: hypotenuse?	13, since 25 + 144 = 169.	problems
+Legs 14 and 48: hypotenuse?	50, since 196 + 2304 = 2500. It is 7-24-25 doubled.	problems
+Hypotenuse 13 and one leg 5: the other leg?	12, since 169 - 25 = 144. Subtract from the hypotenuse's square.	problems
+Legs 1 and 1: hypotenuse?	The square root of 2, about 1.4142. Exact only as a square root.	problems
+If c^2 is less than a^2 + b^2, with c the longest side, what is the angle opposite c?	Acute, less than 90 degrees.	acute-obtuse
+If c^2 is greater than a^2 + b^2, with c the longest side, what is the angle opposite c?	Obtuse, more than 90 degrees.	acute-obtuse
+What is the triangle inequality?	Each side of a triangle is shorter than the other two added together. If not, the three lengths make no triangle.	acute-obtuse
+Sides 3, 4, 7: what kind of triangle?	None. 3 + 4 = 7, so the three lengths lie flat along a line.	acute-obtuse
+Which general law has the Pythagorean theorem as its 90 degree case?	The law of cosines, c^2 = a^2 + b^2 - 2ab cos C. At C = 90 degrees cos C = 0.	acute-obtuse
+Rearrangement proof: what does a square of side a + b contain?	Four copies of the right triangle, area ab/2 each, and a tilted square of side c in the middle.	proof
+Finish the rearrangement proof from (a + b)^2 = 4(ab/2) + c^2.	Expand: a^2 + 2ab + b^2 = 2ab + c^2. Subtract 2ab: a^2 + b^2 = c^2.	proof
+What is a Pythagorean triple?	Three whole numbers a, b, c with a^2 + b^2 = c^2, such as 3, 4, 5.	triples
+Name five Pythagorean triples worth knowing by sight.	3-4-5, 5-12-13, 8-15-17, 7-24-25, 20-21-29.	triples
+If 3, 4, 5 is a triple, why is 6, 8, 10?	Multiply every side by k and every square by k^2, so the equation still holds.	triples
+From c^2 = 25, why is c = 5 and not -5?	c is a length, and lengths are not negative. The square root sign means the non-negative root.	theorem
+Burj Khalifa example: which angle is the right angle?	Where the line of sight touches the Earth: a tangent line meets the radius at 90 degrees.	problems
+Burj Khalifa example: why is (R + h)^2 - R^2 risky on a calculator?	It subtracts two nearly equal numbers, about 15.7 million each, which cancels their leading digits. Use 2Rh + h^2 instead.	precision
+How far can you see from 1483 feet up, with Earth's radius 3960 miles?	About 47 miles: d is the square root of 2Rh + h^2, about 2224.58 square miles.	problems
+Trap: legs 3 and 4, so c = 3 + 4 = 7?	No. Squares add, not sides: c^2 = 9 + 16 = 25, c = 5. 3 + 4 = 7 would be a flat line.	trap
+Trap: hypotenuse 10, leg 6, so the other leg is the square root of 100 + 36?	No. Subtract when c is known: 100 - 36 = 64, leg 8. Adding would make a leg longer than the hypotenuse.	trap
+Trap: sides 8, 15, 17 listed as 17, 8, 15. Test 15^2 against 17^2 + 8^2?	No. Sort first: 17 is longest. 289 = 64 + 225, so it is right, with hypotenuse 17.	trap
+Trap: c^2 = a^2 + b^2 holds for every triangle if you pick the right labels?	No. It holds only for right triangles. For 4, 5, 6 no labelling works.	trap
+Trap: is the square root of (a^2 + b^2) equal to a + b?	No. The square root of 9 + 16 is 5, not 7. A square root does not split over a sum.	trap
+Trap: a triangle has sides 1, 1 and the square root of 2. Which angle is right?	The one opposite the square root of 2, the longest side: 1 + 1 = 2.	trap
+Trap: every triangle with c^2 greater than a^2 + b^2 is obtuse. True for any labels?	Only when c is the longest side. With a short side as c, the inequality says nothing about the largest angle.	trap
+Trap: the theorem proves a triangle with sides 5, 12, 13 is right. Theorem or converse?	The converse. The theorem assumes the right angle; the converse concludes it from the sides.	trap

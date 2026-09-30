@@ -99,6 +99,7 @@ The eighth chapter is the first page of every precalculus book: two number lines
 | Lesson | What it teaches |
 |---|---|
 | [Rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md) | A point is two signed distances, and from the other axis than you expect; a quadrant is the pair of signs and nothing more, so the axes belong to none; and why that one word runs through trigonometry, complex numbers and the symmetry of graphs |
+| [The distance formula](08_Analytic_Geometry/distance_formula/README.md) | Pythagoras with the legs read off the coordinates; why the squares make the order of the points and the signs irrelevant, and why distances are compared by their squares |
 
 [**09_Calculus/**](09_Calculus/README.md) — *What is a velocity, and which motion is its own velocity?*
 
@@ -110,6 +111,16 @@ The ninth chapter is calculus as motion, the four pieces the talk behind [Euler'
 | [Velocity equals position](09_Calculus/velocity_equals_position/README.md) | Start at 1 and always move as fast as your position: that is e^t, e is where you are at time 1, and the law of exponents, "double" and "flip and squish" follow |
 | [Radians](09_Calculus/radians/README.md) | Archimedes' polygons measure the circle, a radian is one radius of arc, and in radians the angle is the distance walked, so d/dt sin t = cos t |
 | [Power series](09_Calculus/power_series/README.md) | "Velocity = position" forces every coefficient of e^x to be 1/k!, and with an imaginary input the terms split into cos and sin |
+
+[**10_Geometry/**](10_Geometry/README.md) — *How few numbers fix a shape?*
+
+The tenth chapter is the geometry review every precalculus book assumes, Sullivan's Appendix A.2, to be read just in time: the distance formula sends the reader here first. Every lesson ends with the book's questions, answers folded away, and a deck of Anki flashcards with trap cards.
+
+| Lesson | What it teaches |
+|---|---|
+| [The Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md) | c² = a² + b² one way and the converse the other, which makes a test; sort first, because only the longest side can be the hypotenuse; and what c² < a² + b² and c² > a² + b² say |
+| [Area and volume formulas](10_Geometry/area_and_volume_formulas/README.md) | The eleven formulas of the book's box, told apart by one check: the power of length is the dimension, so scaling by k gives k, k², k³ |
+| [Congruent and similar triangles](10_Geometry/congruent_and_similar_triangles/README.md) | SSS, SAS and ASA fix a triangle, AAA fixes only its shape, and SSA can fit two triangles, built and counted by a program |
 
 **Looking for a subject rather than a chapter?** The [topic map](TOPICS.md) sorts every lesson into branches and follows the threads that run between chapters.
 

@@ -1,0 +1,63 @@
+1. THREE MEASUREMENTS THAT FIX A TRIANGLE: FIGURE 18
+   Each set of three is fed to the construction; one triangle comes out.
+     (a) ASA: angles 80 and 40, side 10 between them
+         sides  11.37   7.42  10.00   angles  80.00  40.00  60.00
+     (b) SSS: sides 15, 20, 8
+         sides  15.00  20.00   8.00   angles  41.68 117.55  20.77
+     (c) SAS: sides 7 and 8, angle 40 between them
+         sides   8.00   7.00   5.22   angles  80.38  59.62  40.00
+   The other three measurements are forced. Two triangles with the same
+   three data are therefore the same triangle in two places: congruent.
+
+2. THREE ANGLES DO NOT FIX A TRIANGLE: PROBLEM 5
+   Angles 30, 50, 100 (Figure 17), with the side between 30 and 50 set to 1, 2, 5:
+         sides   0.51   0.78   1.00   angles  30.00  50.00 100.00
+         sides   1.02   1.56   2.00   angles  30.00  50.00 100.00
+         sides   2.54   3.89   5.00   angles  30.00  50.00 100.00
+   Same angles, sides in the ratio 1 : 2 : 5. The angles fix the shape and
+   nothing else, so Angle-Angle-Angle is the answer to problem 5: it is not a
+   case for congruence. It is the first case for similarity.
+   And the third angle is never news: it is 180 minus the other two, so AAA
+   is really only two measurements.
+
+3. TWO SIDES AND AN ANGLE NOT BETWEEN THEM: THE CASE THAT IS MISSING
+   Side a = 8 opposite a 40 degree angle A, and side b = 10:
+         sides   8.00  10.00   2.90   angles  40.00 126.54  13.46
+         sides   8.00  10.00  12.42   angles  40.00  53.46  86.54
+   Two different triangles fit the same three data: side a can swing to
+   meet the base in two places. So Side-Side-Angle is not a congruence case,
+   unless the angle is 90 degrees, where the swing has one place to land:
+         sides  13.00   5.00  12.00   angles  90.00  22.62  67.38
+   That special case is Pythagoras: two sides of a right triangle fix the third.
+   With a = 5 too short to reach, no triangle fits at all:
+         0 triangles
+
+4. SIMILAR MEANS ONE RATIO FOR EVERY PAIR OF SIDES: FIGURES 19 AND 20
+     Figure 19  d/a, e/b, f/c       ratios 2, 2, 2
+     Figure 20b 10/30, 5/15, 6/18   ratios 1/3, 1/3, 1/3
+     Figure 20c 4/6, 12/18 (SAS)    ratios 2/3, 2/3
+   Every ratio is the same number, the scale factor. Lengths multiply by it.
+
+5. EXAMPLE 5 AND PROBLEMS 43-46: FIND x AND THE ANGLES
+   Match the sides by the angles they sit between, then one ratio gives x.
+             known pair  scale k  matches x  x = k * side   A, B, C
+     Ex 5        3 -> 5      5/3          6            10   90, 60, 30
+     43          4 -> 8        2          2             4   90, 60, 30
+     44         12 -> 6      1/2         16             8   30, 75, 75
+     45        20 -> 30      3/2         45  135/2 = 67.5   60, 95, 25
+     46         10 -> 8      4/5         50            40   50, 125, 5
+   The angles are copied, not computed: similar triangles have equal angles.
+   Only a length needs the scale factor.
+
+6. TRUE OR FALSE: PROBLEMS 10-12
+     10  sides 30, 29, 10 and 30, 29, 10: all three equal, SSS: congruent. True.
+     11  angles 25 and 100 in both: two equal angles, AA: similar. True.
+     12  120 between 3 and 2, and between 4 and 3: ratios 4/3 = 1.3333
+         and 3/2 = 1.5000 differ, so SAS fails: not similar. False.
+         Try the other pairing, 4/2 and 3/3: 2 and 1, worse.
+
+7. A SCALE FACTOR k MULTIPLIES AREA BY k^2
+     legs 3, 4 scaled by   2: area 6 ->  24, ratio 4
+     legs 3, 4 scaled by   3: area 6 ->  54, ratio 9
+     legs 3, 4 scaled by 1/2: area 6 -> 3/2, ratio 1/4
+   Similar triangles with sides in the ratio 1 : 3 have areas in the ratio 1 : 9.
