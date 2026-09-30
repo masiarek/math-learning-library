@@ -1,0 +1,67 @@
+1. A STEADY MOTION: x(t) = 5 + 3t
+   The average velocity over any stretch of time, long or short:
+     from t   to t + h   distance   time     average velocity
+     0        1          3          1        3
+     2        5/2        3/2        1/2      3
+     7        7001/1000  3/1000     1/1000   3
+   Always 3. A steady motion has one velocity, and every average finds it.
+
+2. A MOTION THAT SPEEDS UP: x(t) = t^2
+   The averages over [3, 3 + h] depend on h:
+     h = 1          average velocity = 7              = 6 + 1
+     h = 1/10       average velocity = 61/10          = 6 + 1/10
+     h = 1/100      average velocity = 601/100        = 6 + 1/100
+     h = 1/1000     average velocity = 6001/1000      = 6 + 1/1000
+     h = 1/1000000  average velocity = 6000001/1000000 = 6 + 1/1000000
+   Algebra says why: ((3 + h)^2 - 9) / h = (6h + h^2) / h = 6 + h,
+   exactly. The averages settle on 6, and no single h gives 6 itself:
+   the velocity at the instant t = 3 is 6. At other instants:
+     t = 0   average over [t, t + 1/1000] = 1/1000     settles on 0 = 2t
+     t = 1   average over [t, t + 1/1000] = 2001/1000  settles on 2 = 2t
+     t = 2   average over [t, t + 1/1000] = 4001/1000  settles on 4 = 2t
+     t = 3   average over [t, t + 1/1000] = 6001/1000  settles on 6 = 2t
+     t = 4   average over [t, t + 1/1000] = 8001/1000  settles on 8 = 2t
+   The velocity of t^2 at time t is 2t: the derivative of t^2 is 2t.
+
+3. THE NOTATION
+   d/dt x, x'(t) and dx/dt all name the velocity of x at time t, the
+   number the averages (x(t + h) - x(t)) / h settle on as h shrinks:
+     d/dt (5 + 3t) = 3          d/dt t^2 = 2t
+   'd' is for difference: dx is a small change in position, dt a small
+   change in time, and dx/dt their ratio when both are very small.
+
+4. STEPPING WITH A VELOCITY
+   Knowing the velocity lets you step forward: over a short time dt the
+   position moves by about velocity . dt. Start x = t^2 at x = 0 and
+   step to t = 3 using only the velocity 2t:
+         3 steps of dt = 1       x reaches 6            = 6.0000
+        30 steps of dt = 1/10    x reaches 87/10        = 8.7000
+       300 steps of dt = 1/100   x reaches 897/100      = 8.9700
+      3000 steps of dt = 1/1000  x reaches 8997/1000    = 8.9970
+   The true position is 3^2 = 9. Each step uses the velocity at its
+   start, which is a little too low for a motion that speeds up, and
+   the shortfall is exactly 9/n: smaller steps, smaller error.
+
+5. IN FLOATS, THE STEP CANNOT SHRINK FOREVER
+   The same average for t^2 at t = 3, in floating point:
+     h        average velocity       off 6 by
+     1e-1     6.100000000000012      1.0e-01
+     1e-2     6.009999999999849      1.0e-02
+     1e-3     6.000999999999479      1.0e-03
+     1e-4     6.000100000012054      1.0e-04
+     1e-5     6.000009999951316      1.0e-05
+     1e-6     6.000001000927568      1.0e-06
+     1e-7     6.000000087880153      8.8e-08
+     1e-8     5.999999963535174      3.6e-08
+     1e-9     6.000000496442226      5.0e-07
+     1e-10    6.000000496442226      5.0e-07
+     1e-11    6.000000496442226      5.0e-07
+     1e-12    6.000533403494046      5.3e-04
+     1e-13    5.986322548778844      1.4e-02
+     1e-14    6.217248937900877      2.2e-01
+     1e-15    5.329070518200751      6.7e-01
+   The error falls with h, then rises again. (3 + h)^2 and 9 agree in
+   more and more leading digits, and subtracting them leaves only the
+   rounding: catastrophic cancellation. Exactly, the error is h; in
+   floats the best h is near 1e-8, and no h gives more than about half
+   the digits of a double.

@@ -12,7 +12,7 @@ Terms used across the library, with the page that explains each in full.
 
 **Almost surely** — with probability 1, which is not the same as certainly: the exceptions exist, and together they have measure zero. A number drawn at random from [0, 1] is almost surely irrational. See [probability zero](02_Measure_Zero/probability_zero/README.md).
 
-**Altitude** — of a triangle, the height measured at a right angle to the base, from the base to the opposite corner. Not a side unless the triangle is right; for a slanted triangle it is shorter than the slanted sides. Area = ½ · base · altitude. See [area and volume formulas](09_Geometry/area_and_volume_formulas/README.md).
+**Altitude** — of a triangle, the height measured at a right angle to the base, from the base to the opposite corner. Not a side unless the triangle is right; for a slanted triangle it is shorter than the slanted sides. Area = ½ · base · altitude. See [area and volume formulas](10_Geometry/area_and_volume_formulas/README.md).
 
 **Arithmetic mean** — the sum of the numbers divided by how many there are; what school calls "the mean" or "the average", and a spreadsheet `AVERAGE`. The one number that can replace every value without changing their sum, so the distances above and below it cancel. The adjective tells it apart from the geometric and harmonic means. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
 
@@ -22,9 +22,9 @@ Terms used across the library, with the page that explains each in full.
 
 **Cantor function** — also the *devil's staircase*. Read x in base 3, cut after the first 1, turn 2s into 1s, and read the result in base 2. Continuous, climbing from 0 to 1, and flat on every gap of the Cantor set, so its whole rise happens on a set of length 0. See [the Cantor function](02_Measure_Zero/cantor_function/README.md).
 
-**Cantor set** — what survives when the open middle third of [0, 1] is deleted, then the middle third of every piece left, forever. Uncountably many points and total length 0; exactly the numbers that can be written in base 3 with only 0s and 2s. See [the Cantor set](02_Measure_Zero/cantor_set/README.md).
-
 **Cardinality** — |A|, the size of a set. For a finite set, the number of members; in general, defined by matching: |A| = |B| when the members can be paired one to one with none left over. The same bars around a number mean absolute value. |A × B| = |A| · |B|; |ℕ| = |even numbers| = ℵ₀; |ℝ| is strictly larger. See [cardinality](04_Sets/cardinality/README.md).
+
+**Cantor set** — what survives when the open middle third of [0, 1] is deleted, then the middle third of every piece left, forever. Uncountably many points and total length 0; exactly the numbers that can be written in base 3 with only 0s and 2s. See [the Cantor set](02_Measure_Zero/cantor_set/README.md).
 
 **Cartesian plane** — the plane with a pair of perpendicular number lines chosen in it, so that every point is an ordered pair (x, y). Also the *coordinate plane* and the *xy-plane*; the coordinates themselves are *rectangular* or *Cartesian*. See [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md).
 
@@ -33,6 +33,8 @@ Terms used across the library, with the page that explains each in full.
 **Catastrophic cancellation** — the loss of most significant figures when two nearly equal numbers are subtracted. It does not create error; it removes the leading digits that were hiding error already present. See [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md).
 
 **Category** — a collection of objects and arrows between them, with a composition of arrows that is associative and has identities. Sets with functions, groups with homomorphisms, and vector spaces with linear maps are categories. See [maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md).
+
+**Chain rule** — the rule for the velocity of a function of a function. The case the talk uses: e^(kt) is the motion e^t on a clock running k times as fast, and speeding up the clock by k multiplies every velocity by k, so d/dt e^(kt) = k · e^(kt). See [velocity equals position](09_Calculus/velocity_equals_position/README.md).
 
 **Closed under an operation** — a subset is closed under an operation when applying it to members of the subset always gives a member of the subset. The line y = 2x is closed under + and scaling; the half-plane x ≥ 0 is not closed under scaling by −1. See [subsets inherit the laws](06_Algebraic_Structures/subsets_inherit_the_laws/README.md).
 
@@ -48,9 +50,9 @@ Terms used across the library, with the page that explains each in full.
 
 **Conditioning** — how much a problem's output changes for a small change in its input. A property of the *problem*, not of any algorithm; an ill-conditioned problem defeats every method. See [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md).
 
-**Congruent triangles** — triangles with every pair of corresponding sides and angles equal: the same triangle in two places. Three measurements prove it: SSS, SAS or ASA, never AAA or SSA. See [congruent and similar triangles](09_Geometry/congruent_and_similar_triangles/README.md).
+**Congruent triangles** — triangles with every pair of corresponding sides and angles equal: the same triangle in two places. Three measurements prove it: SSS, SAS or ASA, never AAA or SSA. See [congruent and similar triangles](10_Geometry/congruent_and_similar_triangles/README.md).
 
-**Converse** — the statement with its *if* and *then* swapped. It must be proved on its own: "a dog has four legs" is true and its converse is not. The converse of the Pythagorean theorem happens to be true, which turns c² = a² + b² into a test for a right angle. See [the Pythagorean theorem and its converse](09_Geometry/pythagorean_theorem/README.md).
+**Converse** — the statement with its *if* and *then* swapped. It must be proved on its own: "a dog has four legs" is true and its converse is not. The converse of the Pythagorean theorem happens to be true, which turns c² = a² + b² into a test for a right angle. See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md).
 
 **Correct rounding** — returning exactly what the chosen rounding function gives for the exact result, as if the operation had been carried out with unlimited precision. IEEE 754 requires it for +, −, ×, ÷ and √, which is why those give the same bits on every conforming machine. See [machine numbers](01_Precision/machine_numbers/README.md).
 
@@ -60,11 +62,13 @@ Terms used across the library, with the page that explains each in full.
 
 **De Moivre's formula** — (cos A, sin A)ⁿ = (cos nA, sin nA): the n-th power of a unit point is the unit point at n times the angle. It is "angles add" applied n − 1 times, and its n = 2 and n = 3 cases are the double- and triple-angle formulas. See [roots of unity](03_Complex_Numbers/roots_of_unity/README.md).
 
-**Dense** — found inside every interval, however short. The rationals are dense in the line and still have measure zero. See [countable sets](02_Measure_Zero/countable_sets/README.md).
+**Derivative** — the velocity at an instant: the number that the average velocities (x(t + h) − x(t)) / h settle on as h shrinks, written d/dt x, x′(t) or dx/dt. For x = t² at t = 3 the averages are exactly 6 + h, so the derivative is 6. See [the derivative is a velocity](09_Calculus/derivative_as_velocity/README.md).
 
 **Diagonal argument** — Cantor's proof that the infinite 0/1 sequences cannot be listed: flip the r-th bit of the r-th row and the result is on no row. It makes ℝ uncountable, and makes the functions from ℕ to {0, 1} outnumber the programs. See [cardinality](04_Sets/cardinality/README.md).
 
-**Dimension of a formula** — how many lengths each term multiplies together: one for a perimeter, two for an area, three for a volume. Scaling every length by k scales the result by k to that power, which catches a misremembered formula. See [area and volume formulas](09_Geometry/area_and_volume_formulas/README.md).
+**Dense** — found inside every interval, however short. The rationals are dense in the line and still have measure zero. See [countable sets](02_Measure_Zero/countable_sets/README.md).
+
+**Dimension of a formula** — how many lengths each term multiplies together: one for a perimeter, two for an area, three for a volume. Scaling every length by k scales the result by k to that power, which catches a misremembered formula. See [area and volume formulas](10_Geometry/area_and_volume_formulas/README.md).
 
 **Distance formula** — d(P₁, P₂) = √((x₂ − x₁)² + (y₂ − y₁)²), the Pythagorean theorem with the legs read off the coordinates. The squares erase the signs, so the order of the points does not matter. See [the distance formula](08_Analytic_Geometry/distance_formula/README.md).
 
@@ -73,6 +77,8 @@ Terms used across the library, with the page that explains each in full.
 **Euler's formula** — e^{it} = (cos t, sin t): the exponential of an imaginary number is the unit point at angle t, in radians. It is what compounding gives, since (1 + it/n)ⁿ is n small turns whose angles add up to t while their stretches fade to nothing, and it is forced by the law e^{a+b} = e^a e^b, because multiplying unit points can only add angles. See [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
 
 **Euler's identity** — e^{iπ} = −1, the t = π row of Euler's formula: the unit point half a turn from (1, 0) is (−1, 0). It is i² = −1 with the quarter turn cut finer, and the program reaches it exactly as (0, 1)², as (1, 1)⁴ / 4 and as the sixth power of the clock's first mark. `cmath.exp(1j * math.pi)` is not −1 but −1 + 1.2 × 10⁻¹⁶ i, because `math.pi` is not π. See [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
+
+**Euler's number e** — 2.71828…, the number compound interest settles on, (1 + 1/n)ⁿ as n grows, and the position at time 1 of a point that starts at 1 and always moves with velocity equal to its position. Its power series is 1 + 1 + 1/2 + 1/6 + 1/24 + ⋯. See [velocity equals position](09_Calculus/velocity_equals_position/README.md).
 
 **Exact number** — one that was counted or defined rather than measured (ballots cast, inches per foot, π). Has infinitely many significant figures and never limits a calculation. See [exact vs approximate](01_Precision/exact_vs_approximate/README.md).
 
@@ -90,7 +96,7 @@ Terms used across the library, with the page that explains each in full.
 
 **Homomorphism** — a map f between two sets with operations that keeps the operation: f(a · b) = f(a) ∗ f(b). A linear map is one; so are n ↦ 2ⁿ, the logarithm, the determinant, and the length of a string. A homomorphism of groups sends the identity to the identity and inverses to inverses, which is why 2⁰ = 1, log 1 = 0, T(0) = 0 and det I = 1 are one theorem. See [maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md).
 
-**Hypotenuse** — the side of a right triangle opposite the right angle; always the longest side, and the c in c² = a² + b². See [the Pythagorean theorem and its converse](09_Geometry/pythagorean_theorem/README.md).
+**Hypotenuse** — the side of a right triangle opposite the right angle; always the longest side, and the c in c² = a² + b². See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md).
 
 **Identity element** — a member e with a · e = e · a = a for every a: 0 for +, 1 for ×, the empty string for concatenation, the identity matrix for matrix multiplication. There is at most one, since two identities e and e′ give e = e · e′ = e′. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
 
@@ -100,7 +106,7 @@ Terms used across the library, with the page that explains each in full.
 
 **Lebesgue's criterion** — a bounded function on a closed interval has a Riemann integral exactly when the points where it is discontinuous form a set of measure zero. Also called the *Lebesgue–Vitali theorem*. See [the fat Cantor set](02_Measure_Zero/fat_cantor_set/README.md).
 
-**Legs** — of a right triangle, the two sides that form the right angle; the a and b in c² = a² + b². See [the Pythagorean theorem and its converse](09_Geometry/pythagorean_theorem/README.md).
+**Legs** — of a right triangle, the two sides that form the right angle; the a and b in c² = a² + b². See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md).
 
 **Linear combination** — a₁x₁ + a₂x₂ + ⋯ + aₙxₙ: each variable multiplied by a fixed number, then added. No powers, no products of variables, no variable inside a function. It keeps sums and multiples, which is what makes it a linear map. See [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md).
 
@@ -128,9 +134,11 @@ Terms used across the library, with the page that explains each in full.
 
 **Polar form** — a nonzero complex number written as r e^{iθ}: its length r times the unit point at its angle θ. Multiplying two of them multiplies the lengths and adds the angles, which is the law of exponents, and de Moivre's formula is (e^{iθ})ⁿ = e^{inθ}. `cmath.polar` reads r and θ off a number and `cmath.rect` puts them back. See [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
 
-**Pythagorean theorem** — in a right triangle, the square of the hypotenuse equals the sum of the squares of the legs, c² = a² + b². Its converse is also true. See [the Pythagorean theorem and its converse](09_Geometry/pythagorean_theorem/README.md).
+**Power series** — a polynomial that never ends, a₀ + a₁x + a₂x² + ⋯. For e^x the rule "velocity = position" forces aₖ = 1/k!, and putting x = it splits the terms into the series for cos t and sin t. See [power series](09_Calculus/power_series/README.md).
 
-**Pythagorean triple** — three whole numbers with a² + b² = c², such as 3, 4, 5 or 5, 12, 13; any multiple of one is another. See [the Pythagorean theorem and its converse](09_Geometry/pythagorean_theorem/README.md).
+**Pythagorean theorem** — in a right triangle, the square of the hypotenuse equals the sum of the squares of the legs, c² = a² + b². Its converse is also true. See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md).
+
+**Pythagorean triple** — three whole numbers with a² + b² = c², such as 3, 4, 5 or 5, 12, 13; any multiple of one is another. See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md).
 
 **Quadrant** — one of the four regions the coordinate axes cut the plane into, numbered I to IV counterclockwise from the upper right. Membership depends only on the signs of x and y, so (1, 1) and (1000, 5) share a quadrant, and a point on an axis, where one coordinate is 0, is in none. See [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md).
 
@@ -138,13 +146,13 @@ Terms used across the library, with the page that explains each in full.
 
 **Quadrature** — combining independent uncertainties as √(a² + b²) rather than a + b. Linear addition is the worst case and is correct only for perfectly correlated errors. See [uncertainty propagation](01_Precision/uncertainty_propagation/README.md).
 
-**Radian** — the unit of angle in which a point of the unit circle turned through angle t travels a distance t along the circle, so a full turn is 2π and a half turn is π. It is the unit Euler's formula needs, because compounding (1 + it/n)ⁿ turns through the number t itself, and it is the reason the identity has a π in it and not 180. See [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
+**Radian** — the unit of angle in which a point of the unit circle turned through angle t travels a distance t along the circle, so a full turn is 2π and a half turn is π. It is the unit Euler's formula needs, because compounding (1 + it/n)ⁿ turns through the number t itself, and it is the reason the identity has a π in it and not 180. Only in radians is d/dt sin t = cos t. See [radians](09_Calculus/radians/README.md) and [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
 
 **Rectangular coordinates** — also *Cartesian coordinates*, after Descartes: the ordered pair (x, y) that locates a point of the plane by its signed distances from two perpendicular number lines, x from the y-axis and y from the x-axis. The origin O = (0, 0) is where the axes cross. See [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md).
 
 **Relative error** — |x − x̂| / |x|, the error as a fraction of the true value (`0.81%`); equivalently |ρ| where x̂ = x(1 + ρ). Undefined at x = 0, unchanged by a change of units, and the measure numerical analysis reports in place of a count of correct digits. What `×` and `÷` propagate, and the reason their rule counts significant figures. Defined in [relative error and correct digits](01_Precision/relative_error/README.md); propagated in [uncertainty propagation](01_Precision/uncertainty_propagation/README.md).
 
-**Right triangle** — a triangle with one angle of 90°. It cannot have two, since the angles add up to 180°. See [the Pythagorean theorem and its converse](09_Geometry/pythagorean_theorem/README.md).
+**Right triangle** — a triangle with one angle of 90°. It cannot have two, since the angles add up to 180°. See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md).
 
 **Ring** — a set with + and × where + makes a commutative group, × is associative with an identity, and × distributes over +. The integers are a commutative ring, and the 2 × 2 matrices are a ring that is not commutative. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
 
@@ -154,7 +162,7 @@ Terms used across the library, with the page that explains each in full.
 
 **Rounding function** — a rule sending every real number to a machine number, or to an infinity. IEEE 754 defines five: toward −∞, toward +∞, toward zero, and to nearest with ties going either to the even significand or away from zero. See [machine numbers](01_Precision/machine_numbers/README.md).
 
-**Scale factor** — the one ratio k shared by every pair of corresponding sides of similar figures. Lengths scale by k, areas by k², volumes by k³. See [congruent and similar triangles](09_Geometry/congruent_and_similar_triangles/README.md) and [area and volume formulas](09_Geometry/area_and_volume_formulas/README.md).
+**Scale factor** — the one ratio k shared by every pair of corresponding sides of similar figures. Lengths scale by k, areas by k², volumes by k³. See [congruent and similar triangles](10_Geometry/congruent_and_similar_triangles/README.md) and [area and volume formulas](10_Geometry/area_and_volume_formulas/README.md).
 
 **Scientific notation** — writing a value as mantissa × 10ⁿ, so the mantissa carries the precision claim and the exponent carries the magnitude. The only unambiguous way to write trailing zeros. See [significant figures](01_Precision/significant_figures/README.md).
 
@@ -166,7 +174,7 @@ Terms used across the library, with the page that explains each in full.
 
 **Significant figures** — the digits of a measurement that carry information about the instrument rather than about place value. A claim about knowledge, not a formatting choice. See [significant figures](01_Precision/significant_figures/README.md).
 
-**Similar triangles** — triangles with the same shape: corresponding angles equal and corresponding sides proportional, with one scale factor. Proved by AA, SSS (proportional) or SAS (proportional). See [congruent and similar triangles](09_Geometry/congruent_and_similar_triangles/README.md).
+**Similar triangles** — triangles with the same shape: corresponding angles equal and corresponding sides proportional, with one scale factor. Proved by AA, SSS (proportional) or SAS (proportional). See [congruent and similar triangles](10_Geometry/congruent_and_similar_triangles/README.md).
 
 **Solution** — of a linear equation, an n-tuple (s₁, …, sₙ) that makes it true when sᵢ is put in for xᵢ; of a system, a tuple that is a solution of every equation at once. One equation in two unknowns has a whole line of solutions. See [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md).
 
@@ -184,7 +192,7 @@ Terms used across the library, with the page that explains each in full.
 
 **Tablemaker's dilemma** — an entry computed as 0.124|5000000, correct to a few digits past the bar, cannot be rounded at the bar until some further digit breaks the run of zeros, and nothing says in advance how far out that digit is. An exact tie is possible only for an algebraic value. See [relative error and correct digits](01_Precision/relative_error/README.md).
 
-**Triangle inequality** — each side of a triangle is shorter than the other two added together; in coordinates, d(P, R) ≤ d(P, Q) + d(Q, R), with equality only when Q is on the segment. See [the Pythagorean theorem and its converse](09_Geometry/pythagorean_theorem/README.md) and [the distance formula](08_Analytic_Geometry/distance_formula/README.md).
+**Triangle inequality** — each side of a triangle is shorter than the other two added together; in coordinates, d(P, R) ≤ d(P, Q) + d(Q, R), with equality only when Q is on the segment. See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md) and [the distance formula](08_Analytic_Geometry/distance_formula/README.md).
 
 **Tuple** — an ordered list of numbers, (s₁, …, sₙ), called an n-tuple when it has n entries; a pair is a 2-tuple and a triple a 3-tuple. ℝⁿ is the set of all n-tuples of reals. Order matters: (1, 4) is not (4, 1). See [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md) and [the Cartesian product](04_Sets/cartesian_product/README.md).
 
@@ -195,4 +203,3 @@ Terms used across the library, with the page that explains each in full.
 **Vector space** — a set with an addition and a scalar multiplication satisfying eight conditions: commutativity, two associativities, an additive identity, additive inverses, 1v = v, and two distributive laws. ℝ² is one; so are the functions from any set to ℝ, and the positive numbers with multiplication as their addition. See [a definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md).
 
 **Zero divisor** — a nonzero number that multiplies some other nonzero number to give zero. Multiplying pairs entry by entry creates them, since (1, 0)(0, 1) = (0, 0), and a zero divisor can never be divided by. Complex multiplication has none: the product's x² + y² is the product of the two factors' x² + y², which is zero only when a factor is (0, 0). See [multiplication can be undone](03_Complex_Numbers/multiplication_can_be_undone/README.md).
-

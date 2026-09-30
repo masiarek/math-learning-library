@@ -1,0 +1,69 @@
+1. THE COEFFICIENTS ARE FORCED
+   Matching f = a0 + a1 x + a2 x^2 + ... with its derivative, term by
+   term, gives ak = a(k-1) / k. Starting from e^0 = a0 = 1:
+     a0 = 1        = 1/0!
+     a1 = 1        = 1/1!
+     a2 = 1/2      = 1/2!
+     a3 = 1/6      = 1/3!
+     a4 = 1/24     = 1/4!
+     a5 = 1/120    = 1/5!
+     a6 = 1/720    = 1/6!
+     a7 = 1/5040   = 1/7!
+     a8 = 1/40320  = 1/8!
+   So e^x = 1 + x + x^2/2 + x^3/6 + x^4/24 + ... + x^k/k! + ...
+
+2. EACH TERM'S DERIVATIVE IS THE TERM BEFORE IT
+     S6(x)  = 1 + x + x^2/2 + x^3/6 + x^4/24 + x^5/120 + x^6/720
+     S6'(x) = 1 + x + x^2/2 + x^3/6 + x^4/24 + x^5/120
+     S5(x)  = 1 + x + x^2/2 + x^3/6 + x^4/24 + x^5/120
+   S6' = S5: True. The derivative of the sum up to x^6
+   is the sum up to x^5: every term moves down one place. The sum that
+   never stops is its own derivative.
+
+3. AT x = 1 THE SUMS REACH e, FAST
+     terms 0..0   sum = 1                      = 1.0000000000
+     terms 0..1   sum = 2                      = 2.0000000000
+     terms 0..2   sum = 5/2                    = 2.5000000000
+     terms 0..3   sum = 8/3                    = 2.6666666667
+     terms 0..4   sum = 65/24                  = 2.7083333333
+     terms 0..5   sum = 163/60                 = 2.7166666667
+     terms 0..6   sum = 1957/720               = 2.7180555556
+     terms 0..9   sum = 98641/36288            = 2.7182815256
+     terms 0..12  sum = 260412269/95800320     = 2.7182818283
+     e                                         = 2.7182818285
+   Thirteen terms give nine correct decimals: the term 1/k! shrinks
+   faster than any power of 10. Compounding, (1 + 1/n)^n, needed
+   n = 10^5 steps for four.
+
+4. OTHER x: THE TERMS MAY GROW BEFORE THEY SHRINK
+     x      largest term         sum of 40 terms    e^x, from math.exp
+     2      x^1/1! = 2.000       7.389056           7.389056
+     -1     x^0/0! = 1.000       0.367879           0.367879
+     5      x^4/4! = 26.042      148.413159         148.413159
+     10     x^9/9! = 2755.732    22026.465795       22026.465795
+   Each term is the one before times x/k, so the terms grow while k is
+   less than x and shrink after. The sum still settles, for every x.
+
+5. PUT IN it: THE TERMS SPLIT INTO cos AND sin
+   (it)^k cycles through 1, i, -1, -i as k counts up, so the even terms
+   are real and the odd ones imaginary:
+     real part       1 - t^2/2 + t^4/24 - t^6/720 + t^8/40320 ...
+     imaginary part  t - t^3/6 + t^5/120 - t^7/5040 ...
+   Summed with 30 terms, they are the cosine and the sine, in radians:
+     t      cos series   math.cos     sin series   math.sin
+     1      0.540302     0.540302     0.841471     0.841471
+     pi/2   0.000000     0.000000     1.000000     1.000000
+     pi     -1.000000    -1.000000    0.000000     0.000000
+     2      -0.416147    -0.416147    0.909297     0.909297
+   So e^(it) = cos t + i sin t, Euler's formula, as a fact about
+   coefficients.
+
+6. THE DERIVATIVES OF sin AND cos, TERM BY TERM
+     d/dt sin t = 1 - t^2/2 + t^4/24 - t^6/720 + t^8/40320 ...
+     cos t      = 1 - t^2/2 + t^4/24 - t^6/720 + t^8/40320 ...
+   equal: True
+     d/dt cos t = -t + t^3/6 - t^5/120 + t^7/5040 ...
+     -sin t     = -t + t^3/6 - t^5/120 + t^7/5040 ...
+   equal: True
+   The same facts the radians lesson measured, now read off the lists.
+   The series speak radians: t in them is the arc length.

@@ -1,4 +1,4 @@
-# 09_Geometry — how few numbers fix a shape?
+# 10_Geometry — how few numbers fix a shape?
 
 **Level:** 101 · for anyone reviewing geometry before precalculus, or coming back to it after many years
 

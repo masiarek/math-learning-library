@@ -130,8 +130,8 @@ Section 6 is the book's Example 3, and it hides a warning that belongs to [catas
 To judge three lengths of your own, give them after the program name; fractions are fine:
 
 ```bash
-python3 09_Geometry/pythagorean_theorem/examples/pythagorean_theorem.py 7 24 25
-python3 09_Geometry/pythagorean_theorem/examples/pythagorean_theorem.py 1/2 2 3/2
+python3 10_Geometry/pythagorean_theorem/examples/pythagorean_theorem.py 7 24 25
+python3 10_Geometry/pythagorean_theorem/examples/pythagorean_theorem.py 1/2 2 3/2
 ```
 
 ## Questions

@@ -1,18 +1,20 @@
 # Euler's identity
 
-**Level:** 201 · for anyone who has read [multiplication rotates](../multiplication_rotates/README.md) and has seen eˣ on a calculator
+**Level:** 201 · for anyone who has read [multiplication rotates](../multiplication_rotates/README.md) and has seen eˣ on a calculator; if that is not you yet, start with [the lesson plan](../../reading_guides/eulers_formula/README.md)
 
 **One line:** e^{iπ} = −1 does not multiply e by itself πi times; it says that the exponential, whose one law is that adding inputs multiplies outputs, can do nothing with an imaginary input but turn, and the point half a turn from 1 is −1.
 
 ## Three questions
 
-A 3Blue1Brown lecture opens with the identity on a black screen and three questions under it: *what does it mean? why does it want to be true? how is it used?* This page takes them in that order. It can, because the chapter has already done the hard part: [multiplication rotates](../multiplication_rotates/README.md) showed that multiplying by a unit point turns the plane and that angles add, and [roots of unity](../roots_of_unity/README.md) walked around the circle in exact steps. What is new here is the exponential, and the one thing about it that matters:
+Grant Sanderson of 3Blue1Brown opens his talk [*Designing Math* ↗](https://youtu.be/bLSLN96Gn-w), at Config 2026, with the identity on a black screen and three questions under it: *what does it mean? why does it want to be true? how is it used?* This page takes them in that order. It can, because the chapter has already done the hard part: [multiplication rotates](../multiplication_rotates/README.md) showed that multiplying by a unit point turns the plane and that angles add, and [roots of unity](../roots_of_unity/README.md) walked around the circle in exact steps. What is new here is the exponential, and the one thing about it that matters:
 
 ```text
 e^(a + b)  =  e^a · e^b          adding inputs multiplies outputs
 ```
 
 Everything on this page is that law, applied to an input that happens to be imaginary.
+
+**If the talk lost you,** [Euler's formula: a lesson plan](../../reading_guides/eulers_formula/README.md) lists what it assumes, in the order to learn it, and links each step to the lesson here that covers it. The calculus the talk uses, a derivative as a velocity, e^t as the motion whose velocity is its position, radians and power series, is [09_Calculus](../../09_Calculus/README.md), one lesson each. This page needs none of it to make its argument, but section 3 follows the talk's own argument, and the calculus chapter says what that argument is made of.
 
 ## What the program prints
 
@@ -22,7 +24,8 @@ Everything on this page is that law, applied to an input that happens to be imag
 ```text
 1. e ON THE REAL LINE IS COMPOUNDING
    e^3 is e . e . e, and e^(1/2) or e^pi is not e multiplied by itself
-   some number of times. What defines e^x for every x is compounding,
+   some number of times; e^(pi i) even less. What defines e^x for every x
+   is compounding,
    (1 + x/n)^n with n growing without bound. At x = 1:
      n = 1        (1 + 1/1)^1        = 2            = 2.000000000
      n = 2        (1 + 1/2)^2        = 9/4          = 2.250000000
@@ -67,7 +70,47 @@ Everything on this page is that law, applied to an input that happens to be imag
      all n of them:         stretch (1 + (pi/n)^2)^(n/2) = 1.00000493   -> 1
                             turn    n atan(pi/n)         = 3.14159265   -> pi
 
-3. WHY pi, AND NOT 180: THE UNIT OF ANGLE
+3. THE SAME THING AS MOTION: VELOCITY IS k TIMES POSITION
+   Read e^(kt) as a point that moves as the time t runs, starting at
+   e^0 = 1. Its velocity, d/dt e^(kt), is k times its position, and k
+   says what that does to the arrow:
+     k = 1      velocity = position               grows
+     k = 2      velocity = 2 . position           doubled: grows faster
+     k = -0.5   velocity = -0.5 . position        flipped and squished: shrinks
+     k = i      velocity = i . position           turned 90 degrees
+   Multiplying by i is lesson 2's quarter turn. On a + bi, the a becomes
+   ai and the bi becomes bi . i = -b:
+     (3, 2) . i = (-2, 3)          and (1, 0) . i = (0, 1)
+   Move in small steps. Over a time dt the point moves by velocity . dt:
+     z  ->  z + (k z) dt  =  z (1 + k dt)
+   so n steps of dt = t/n multiply the start by (1 + k t/n)^n. That is
+   the compounding of sections 1 and 2: each factor is one small step of
+   motion. With n = 10^6 steps, at the moments the talk stops on:
+     k      t      n small steps                  e^(kt), from exp
+     1      1.00   2.718280                       2.718282
+     2      0.29   1.786038                       1.786038
+     -0.5   0.60   0.740818                       0.740818
+     i      3.14   (-1.000004, 0.001593)          (-0.999999, 0.001593)
+     i      pi     (-1.000005, 0.000000)          (-1.000000, 0.000000)
+   The talk's screen shows 1.78..., 0.74... and -1.00 + 0.00i at these
+   moments, with t rounded to two decimals. For k = i the velocity is
+   the position turned a quarter turn, so it is always at right angles
+   to it and exactly as long:
+     t      position                 velocity = i . position    position . velocity   |velocity|
+     0      (1.000000, 0.000000)     (0.000000, 1.000000)       0.000000              1.000000
+     pi/4   (0.707107, 0.707107)     (-0.707107, 0.707107)      0.000000              1.000000
+     pi/2   (0.000000, 1.000000)     (-1.000000, 0.000000)      0.000000              1.000000
+     3pi/4  (-0.707107, 0.707107)    (-0.707107, -0.707107)     0.000000              1.000000
+     pi     (-1.000000, 0.000000)    (0.000000, -1.000000)      0.000000              1.000000
+   A velocity at right angles to the position moves the point round the
+   origin and never toward it or away. A velocity of length 1 covers a
+   distance of 1 per unit of time. So at time t the point has walked a
+   distance t around the unit circle, and at t = pi it has walked half
+   of it, 2 pi / 2, to (-1, 0). Each straight step cuts the corner of the
+   circle a little, which is the stretch section 2 measured, and the
+   cut vanishes as the steps shrink.
+
+4. WHY pi, AND NOT 180: THE UNIT OF ANGLE
    The turn that n factors add up to is n atan(t/n), and it tends to t
    itself. A point of the unit circle turned through an angle t travels
    a distance t along the circle exactly when angles are measured in
@@ -84,7 +127,7 @@ Everything on this page is that law, applied to an input that happens to be imag
      e^(2 pi i) = (1.0000000000, 0.0000000000)     a full turn:     1
      e^(180 i)  = (-0.5984600691, -0.8011526357)   180 radians, 28.65 turns
 
-4. THE HALF TURN, EXACTLY
+5. THE HALF TURN, EXACTLY
    Euler's formula says e^(i t) is the unit point at angle t radians, so
    e^(i pi) is the point half a turn from (1, 0). A half turn can be cut
    into equal turns that are exact, and the pair rule does the rest with
@@ -100,7 +143,7 @@ Everything on this page is that law, applied to an input that happens to be imag
    marks of the clock face are e^(i pi k/6), and the n-th roots of unity
    of the previous lesson are e^(2 pi i k/n).
 
-5. HOW IT IS USED: EVERY POINT IS r e^(i theta)
+6. HOW IT IS USED: EVERY POINT IS r e^(i theta)
    A nonzero pair has a length r and an angle theta, so it is r times the
    unit point at theta: r e^(i theta), the polar form. cmath.polar reads
    r and theta off a point and cmath.rect puts them back:
@@ -117,7 +160,7 @@ Everything on this page is that law, applied to an input that happens to be imag
    e^(i n t), and the angle-addition formulas for cos(a + b) and
    sin(a + b) are its two coordinates.
 
-6. IN A PROGRAM THE ANSWER IS NOT -1, AND THE ERROR IS pi - math.pi
+7. IN A PROGRAM THE ANSWER IS NOT -1, AND THE ERROR IS pi - math.pi
      cmath.exp(1j * math.pi)       = (-1+1.2246467991473532e-16j)
      cmath.exp(1j * math.pi) == -1 : False
      cmath.exp(1j * math.pi) + 1   = 1.2246467991473532e-16j
@@ -132,33 +175,39 @@ Everything on this page is that law, applied to an input that happens to be imag
    whole error is in the input, and none of it in the exponential.
      cmath.isclose(cmath.exp(1j * math.pi), -1): True
 
-7. THE SERIES, THE WAY A COURSE PROVES IT
+8. THE SERIES, THE WAY A COURSE PROVES IT
    Calculus writes e^x = 1 + x + x^2/2! + x^3/3! + ... and puts x = i pi
    in. The powers of i cycle through the four compass points, (1, 0),
    (0, 1), (-1, 0), (0, -1), so the even terms are real with alternating
    signs, the series of cos pi, and the odd terms are imaginary, the
-   series of sin pi. The sum of the first k terms:
-     k =  1   (1.000000, 0.000000)
-     k =  2   (1.000000, 3.141593)
-     k =  3   (-3.934802, 3.141593)
-     k =  4   (-3.934802, -2.026120)
-     k =  5   (0.123910, -2.026120)
-     k =  6   (0.123910, 0.524044)
-     k =  7   (-1.211353, 0.524044)
-     k =  8   (-1.211353, -0.075221)
-     k =  9   (-0.976022, -0.075221)
-     k = 10   (-0.976022, 0.006925)
-     k = 12   (-1.001829, -0.000445)
-     k = 16   (-1.000004, -0.000001)
-     k = 20   (-1.000000, 0.000000)
-     k = 24   (-1.000000, 0.000000)
-   The same point the compounding found, reached by a different road.
+   series of sin pi. Each term is the one before it times pi i / k:
+   turned a quarter turn, and scaled by pi/k. Laid end to end, the terms
+   are the talk's spiral of arrows:
+      k   term (pi i)^k / k!   length pi^k/k!   points   sum of terms 0 to k
+      0   1                    1.000000         right    (1.000000, 0.000000)
+      1   pi i                 3.141593         up       (1.000000, 3.141593)
+      2   (pi^2/2!) i^2        4.934802         left     (-3.934802, 3.141593)
+      3   (pi^3/3!) i^3        5.167713         down     (-3.934802, -2.026120)
+      4   (pi^4/4!) i^4        4.058712         right    (0.123910, -2.026120)
+      5   (pi^5/5!) i^5        2.550164         up       (0.123910, 0.524044)
+      6   (pi^6/6!) i^6        1.335263         left     (-1.211353, 0.524044)
+      7   (pi^7/7!) i^7        0.599265         down     (-1.211353, -0.075221)
+      8   (pi^8/8!) i^8        0.235331         right    (-0.976022, -0.075221)
+      9   (pi^9/9!) i^9        0.082146         up       (-0.976022, 0.006925)
+     10   (pi^10/10!) i^10     0.025807         left     (-1.001829, 0.006925)
+     12   (pi^12/12!) i^12     0.001930         right    (-0.999900, -0.000445)
+     16   (pi^16/16!) i^16     0.000004         right    (-1.000000, -0.000001)
+     20   (pi^20/20!) i^20     0.000000         right    (-1.000000, 0.000000)
+     24   (pi^24/24!) i^24     0.000000         right    (-1.000000, 0.000000)
+   The arrows grow while pi/k is more than 1, up to the term k = 3, and
+   shrink ever faster after it, so the spiral winds in, onto (-1, 0):
+   the same point the compounding found, reached by a different road.
 ```
 <!-- /output -->
 
 ## What does it mean?
 
-**e^x is not repeated multiplication.** e³ is e · e · e, but e^{1/2} is not e multiplied by itself half a time, and e^π is not e multiplied by itself 3.14159… times: those phrases mean nothing. What defines e^x for every real x is compounding. Put 1 in a bank at 100% a year, paid in n instalments of 1/n each, and after a year you have (1 + 1/n)ⁿ; pay it more and more often and the amount settles at e = 2.71828…, which is what section 1 shows, exactly in fractions for small n and in floats after that. Do the same at a rate x and the limit is e^x. From repeated multiplication only one thing survives the passage to the limit, the law of exponents, and section 1 checks it on the first few whole numbers: add 1 to the input and the output is multiplied by e, every time.
+**e^x is not repeated multiplication.** e³ is e · e · e, but e^{1/2} is not e multiplied by itself half a time, and e^π is not e multiplied by itself 3.14159… times: those phrases mean nothing. What defines e^x for every real x is compounding. Put 1 in a bank at 100% a year, paid in n instalments of 1/n each, and after a year you have (1 + 1/n)ⁿ; pay it more and more often and the amount settles at e = 2.71828…, which is what section 1 shows, exactly in fractions for small n and in floats after that. Do the same at a rate x and the limit is e^x. From repeated multiplication only one thing survives the passage to the limit, the law of exponents, and section 1 checks it on the first few whole numbers: add 1 to the input and the output is multiplied by e, every time. [Velocity equals position](../../09_Calculus/velocity_equals_position/README.md) gets the same e from motion instead of money, and the same law from the motion.
 
 So the question "what does e^{iπ} mean?" is really "what does adding i to the input do?", and the compounding definition answers it without asking for anything new. Whatever e^{it} is, it should be the limit of (1 + it/n)ⁿ, and 1 + it/n is the pair (1, t/n), a point a little above 1 on the plane. Raising a pair to a power is the pair rule of [multiplication as pairs](../multiplication_as_pairs/README.md), applied n − 1 times. Section 2 does it at t = 1 in exact fractions: (1 + i/2)² = (3/4, 1), (1 + i/3)³ = (2/3, 26/27), (1 + i/4)⁴ = (161/256, 15/16). Nothing in that arithmetic is imaginary in any troubling sense. It is fractions, multiplied by the rule, and the points are heading somewhere.
 
@@ -170,27 +219,35 @@ Section 2 runs the compounding at t = π, in floats because π is not a fraction
 
 Each factor (1, π/n) is a point just above 1: a small stretch, by √(1 + π²/n²), and a small turn, by the angle atan(π/n). Lesson 2 says what n such factors do: the stretches multiply and the turns add. The n stretches multiply to (1 + π²/n²)^{n/2}, which is 1.00000493 at n = 10⁶ and heading for 1. The n turns add to n · atan(π/n), which is 3.14159265 at n = 10⁶ and heading for π, because atan(x) is x for small x up to an error of x³/3, and n of those errors together are π³/3n², which vanishes. So in the limit nothing is stretched and the plane is turned through π: the compounding of an imaginary number is a pure rotation, by exactly the number that was compounded.
 
+### The talk's version: velocity is position turned a quarter turn
+
+The talk tells the same story as motion. Read e^{kt} as a point that moves while the time t runs, starting at e⁰ = 1. Its velocity, d/dt e^{kt}, is k times its position. That is the one property of the exponential that calculus uses; [the derivative is a velocity](../../09_Calculus/derivative_as_velocity/README.md) says what d/dt means, and [velocity equals position](../../09_Calculus/velocity_equals_position/README.md) is the lesson on the property. The number k says what to do to the position arrow to get the velocity arrow. For k = 1 the velocity *is* the position, and the point runs away from 0 faster and faster. For k = 2 it is doubled. For k = −0.5 it is flipped and squished, and the point creeps back toward 0. For k = i it is the position turned a quarter turn, because multiplying by i is [lesson 2's quarter turn](../multiplication_rotates/README.md#multiplying-by-0-1-is-a-quarter-turn): in a + bi the a becomes ai and the bi becomes bi · i = −b, and section 3 turns (3, 2) into (−2, 3).
+
+Section 3 moves the point in small steps. Over a short time dt it moves by velocity · dt, so each step replaces z by z + kz · dt = z(1 + k dt), and n steps of t/n multiply the start by (1 + kt/n)ⁿ. **That is the compounding of sections 1 and 2**, one small step of motion per factor, which is why the talk's story and this page's give the same answer. At the moments the talk stops on, the steps give e^{2 · 0.29} = 1.786, e^{−0.5 · 0.60} = 0.741 and e^{3.14i} = (−1.000, 0.002), the numbers on its screen.
+
+For k = i, section 3 also checks the two facts that make the motion a circle. The velocity is at right angles to the position, so the point moves round the origin and never toward it or away from it. And the velocity is exactly as long as the position, 1, so the point covers a distance of 1 in each unit of time. After a time t it has walked a distance t round the unit circle, and after a time π it has walked half of it, to −1. That is the talk's field of arrows: at every point of the plane an arrow, the point's position turned a quarter turn, and a point dropped at 1 and carried along by them goes round the circle. Each straight step cuts the corner a little, which is the stretch section 2 measured, and the cut vanishes as the steps shrink.
+
 There is a reason this had to happen, and it is the law of exponents. Suppose only that e^{it} obeys e^{i(a+b)} = e^{ia} e^{ib} and stays on the unit circle. Multiplying unit points adds their angles and does nothing else, so the angle of e^{it} must add when t adds: it is proportional to t. Adding to the input is the only thing the exponential knows how to turn into multiplying, and turning is the only thing multiplying does on the unit circle. The exponential of an imaginary number has nowhere to go but round.
 
-What proportionality leaves to settle is the unit, and that is section 3. The turn that n factors add up to is n · atan(t/n), and it tends to t itself: the compounding turns through the number t, not through some multiple of it. A point of the unit circle turned through an angle t travels a distance t along the circle exactly when the angle is measured in **radians**, so that is the unit e^{it} comes in:
+What proportionality leaves to settle is the unit, and that is section 4. The turn that n factors add up to is n · atan(t/n), and it tends to t itself: the compounding turns through the number t, not through some multiple of it. A point of the unit circle turned through an angle t travels a distance t along the circle exactly when the angle is measured in **radians**, which is the whole point of [radians](../../09_Calculus/radians/README.md), so that is the unit e^{it} comes in:
 
 ```text
 e^(it)  =  (cos t, sin t)        t in radians          Euler's formula
 ```
 
-Python's `cmath.exp` agrees, to the last bit, at t = 1, 2, π and 10. And the unit is why the identity has a π in it: half a turn is π radians, a full turn is 2π, and 180 is 180 radians, which section 3 shows is 28.65 turns and lands at (−0.598, −0.801), nowhere special. Euler's identity is the t = π row of Euler's formula, and Euler's formula is the compounding done in the plane. Feynman, in the chapter of his lectures listed below, reached the same formula by arithmetic alone, taking square roots by hand until a table of imaginary powers appeared, and called it the most remarkable formula in mathematics.
+Python's `cmath.exp` agrees, to the last bit, at t = 1, 2, π and 10. And the unit is why the identity has a π in it: half a turn is π radians, a full turn is 2π, and 180 is 180 radians, which section 4 shows is 28.65 turns and lands at (−0.598, −0.801), nowhere special. Euler's identity is the t = π row of Euler's formula, and Euler's formula is the compounding done in the plane. Feynman, in the chapter of his lectures listed below, reached the same formula by arithmetic alone, taking square roots by hand until a table of imaginary powers appeared, and called it the most remarkable formula in mathematics.
 
 ## The half turn, exactly
 
-The chapter's rule is that nothing is rounded, and π cannot be written as a fraction, so sections 2 and 3 ran in floats. But once Euler's formula says what e^{it} *is*, the identity itself needs no float at all. e^{iπ} is the unit point half a turn from (1, 0), and a half turn can be cut into equal turns whose points are exact.
+The chapter's rule is that nothing is rounded, and π cannot be written as a fraction, so sections 2 to 4 ran in floats. But once Euler's formula says what e^{it} *is*, the identity itself needs no float at all. e^{iπ} is the unit point half a turn from (1, 0), and a half turn can be cut into equal turns whose points are exact.
 
-Section 4 cuts it four ways. Two quarter turns: e^{iπ/2} is (0, 1), and (0, 1)² = (−1, 0), which is i² = −1 from lesson 2. Three sixth turns: e^{iπ/3} is (1/2, √3/2), and its cube is (−1, 0). Four eighth turns: e^{iπ/4} is (1, 1)/√2, and (1, 1)⁴ = (−4, 0) in integer arithmetic, divided by (√2)⁴ = 4. Six twelfth turns: e^{iπ/6} is the clock's first mark (√3/2, 1/2), and its sixth power is mark 6, (−1, 0), computed as in [roots of unity](../roots_of_unity/README.md) with √3 carried as a symbol. Every one is (−1, 0) exactly, as an equality of fractions and not a float within 10⁻¹⁶ of one. Twelve twelfth turns give (1, 0): e^{2πi} = 1, a full turn.
+Section 5 cuts it four ways. Two quarter turns: e^{iπ/2} is (0, 1), and (0, 1)² = (−1, 0), which is i² = −1 from lesson 2. Three sixth turns: e^{iπ/3} is (1/2, √3/2), and its cube is (−1, 0). Four eighth turns: e^{iπ/4} is (1, 1)/√2, and (1, 1)⁴ = (−4, 0) in integer arithmetic, divided by (√2)⁴ = 4. Six twelfth turns: e^{iπ/6} is the clock's first mark (√3/2, 1/2), and its sixth power is mark 6, (−1, 0), computed as in [roots of unity](../roots_of_unity/README.md) with √3 carried as a symbol. Every one is (−1, 0) exactly, as an equality of fractions and not a float within 10⁻¹⁶ of one. Twelve twelfth turns give (1, 0): e^{2πi} = 1, a full turn.
 
 So the identity says nothing that i² = −1 did not already say in lesson 2. It says it with the quarter turn cut finer, and with a name for every point on the way: (0, 1) is e^{iπ/2}, the twelve marks of the clock face are e^{iπk/6}, and the n-th roots of unity of the previous lesson are e^{2πik/n}, which is the notation every book writes them in.
 
 ## How is it used?
 
-**Every point is r e^{iθ}.** A nonzero pair has a length r and an angle θ, so it is r times the unit point at θ, and Euler's formula names that unit point: z = r e^{iθ}, the **polar form**. Section 5 reads r and θ off three points with `cmath.polar`, and writes them back with `cmath.rect`. (3, 4) is 5 e^{0.9273i}, (5, 12) is 13 e^{1.1760i}, and their product (−33, 56), the one lesson 2 computed, is 65 e^{2.1033i}: 5 × 13 = 65, and 0.9273 + 1.1760 = 2.1033. Lengths multiply and angles add, the two halves of lesson 2, and in the polar form they are one line, the law of exponents:
+**Every point is r e^{iθ}.** A nonzero pair has a length r and an angle θ, so it is r times the unit point at θ, and Euler's formula names that unit point: z = r e^{iθ}, the **polar form**. Section 6 reads r and θ off three points with `cmath.polar`, and writes them back with `cmath.rect`. (3, 4) is 5 e^{0.9273i}, (5, 12) is 13 e^{1.1760i}, and their product (−33, 56), the one lesson 2 computed, is 65 e^{2.1033i}: 5 × 13 = 65, and 0.9273 + 1.1760 = 2.1033. Lengths multiply and angles add, the two halves of lesson 2, and in the polar form they are one line, the law of exponents:
 
 ```text
 r₁e^(ia) · r₂e^(ib)  =  r₁r₂ e^(i(a + b))
@@ -198,13 +255,13 @@ r₁e^(ia) · r₂e^(ib)  =  r₁r₂ e^(i(a + b))
 
 De Moivre's formula, (cos A, sin A)ⁿ = (cos nA, sin nA), which the previous lesson checked by hand for n = 2 and 3, is the same line n times over: (e^{it})ⁿ = e^{int}. The angle-addition formulas for cos(a + b) and sin(a + b) are the two coordinates of e^{i(a+b)} = e^{ia} e^{ib}, multiplied out by the pair rule; lesson 2 noticed that the rule and the formulas are the same fact, and this is why. Anyone who has forgotten the formulas can get them back in two lines, which is the everyday use of Euler's formula: it turns trigonometry into algebra with exponents. That is also why it runs through everything with a wave in it, alternating current, sound, the Fourier series and the Fourier transform, and why a differential equation with a sine in its solution is usually solved with e^{it} instead; but those are other subjects.
 
-**In a program, the answer is not −1.** Section 6 asks Python for e^{iπ} and gets −1 + 1.2246 × 10⁻¹⁶ i. The identity is exact and the program is not wrong; the input was. `math.pi` is a double, and the double nearest π falls short of it by 1.2246467991473532 × 10⁻¹⁶, which the program computes by subtracting the double, written out to all its digits, from π to forty. So e^{i·math.pi} stops that many radians before the half turn, and at that distance along the circle it sits exactly that far above the axis: the imaginary part of the answer *is* the error in `math.pi`, digit for digit, and `math.sin(math.pi)` prints the same number for the same reason. The whole error is in the input and none of it is in the exponential. Comparing with `==` says False; `cmath.isclose` says True. [Machine numbers](../../01_Precision/machine_numbers/README.md) is the page about why, and this is the neatest instance of it in the library: an equation that is exactly true, and a computer that cannot say so.
+**In a program, the answer is not −1.** Section 7 asks Python for e^{iπ} and gets −1 + 1.2246 × 10⁻¹⁶ i. The identity is exact and the program is not wrong; the input was. `math.pi` is a double, and the double nearest π falls short of it by 1.2246467991473532 × 10⁻¹⁶, which the program computes by subtracting the double, written out to all its digits, from π to forty. So e^{i·math.pi} stops that many radians before the half turn, and at that distance along the circle it sits exactly that far above the axis: the imaginary part of the answer *is* the error in `math.pi`, digit for digit, and `math.sin(math.pi)` prints the same number for the same reason. The whole error is in the input and none of it is in the exponential. Comparing with `==` says False; `cmath.isclose` says True. [Machine numbers](../../01_Precision/machine_numbers/README.md) is the page about why, and this is the neatest instance of it in the library: an equation that is exactly true, and a computer that cannot say so.
 
 ## The series, the way a course proves it
 
-A calculus course does not compound. It writes e^x as its power series, 1 + x + x²/2! + x³/3! + …, puts x = it in, and sorts the terms. The powers of i cycle through the four compass points, (1, 0), (0, 1), (−1, 0), (0, −1), which is lesson 2's quarter turn again, so the even terms are real with alternating signs and the odd terms are imaginary with alternating signs. The real terms are the series of cos t and the imaginary ones the series of sin t, and that is Euler's formula in three lines, for anyone who already has the three series. Section 7 adds the terms up at t = π and watches the partial sums wobble and settle: (1, 3.14), (−3.93, 3.14), (−3.93, −2.03), (0.12, −2.03), and by twenty terms (−1.000000, 0.000000). It is the same point the compounding found, reached by a different road.
+A calculus course does not compound. It writes e^x as its power series, 1 + x + x²/2! + x³/3! + …, puts x = it in, and sorts the terms. The powers of i cycle through the four compass points, (1, 0), (0, 1), (−1, 0), (0, −1), which is lesson 2's quarter turn again, so the even terms are real with alternating signs and the odd terms are imaginary with alternating signs. The real terms are the series of cos t and the imaginary ones the series of sin t, and that is Euler's formula in three lines, for anyone who already has the three series. Section 8 adds the terms up at t = π, and they are the talk's spiral of arrows. Each term is the one before it times πi/k, turned a quarter turn and scaled by π/k, so the arrows point right, up, left, down, right, and so on; they grow while π/k is more than 1, up to the term (π³/3!) i³, and shrink ever faster after it. The partial sums wobble and settle: (1, 3.14), (−3.93, 3.14), (−3.93, −2.03), (0.12, −2.03), and by twenty terms (−1.000000, 0.000000). It is the same point the compounding found, reached by a different road. Where the series comes from, and why its coefficients have to be 1/k!, is [power series](../../09_Calculus/power_series/README.md).
 
-This page has not proved that the series is e^x, or that the compounding converges, or that the two agree. Those are theorems of calculus and the [roadmap](../../ROADMAP.md) leaves them there. What the page has done is say what the identity means without them: it is the law of exponents, e^{a+b} = e^a e^b, carried into the plane, where the only thing multiplication can do to a unit point is turn it.
+This page has not proved that the series is e^x, or that the compounding converges, or that the two agree. Those are theorems of calculus. [09_Calculus](../../09_Calculus/README.md) shows why each should be true and measures it, and leaves the proofs to the books it lists. What the page has done is say what the identity means without them: it is the law of exponents, e^{a+b} = e^a e^b, carried into the plane, where the only thing multiplication can do to a unit point is turn it.
 
 ## Run it yourself
 
@@ -218,6 +275,8 @@ python3 03_Complex_Numbers/eulers_identity/examples/eulers_identity.py
 
 Wzór e^{iπ} = −1 nie każe mnożyć e przez siebie „πi razy": to nie ma sensu, tak jak nie ma sensu mnożyć e przez siebie pół raza. Potęga eˣ dla dowolnego x jest zdefiniowana przez procent składany: (1 + x/n)ⁿ przy n rosnącym bez końca. Z mnożenia przez siebie zostaje po przejściu do granicy jedno prawo: e^{a+b} = eᵃ · eᵇ, dodawanie na wejściu to mnożenie na wyjściu. Dodaj 1 do wykładnika, a wynik mnoży się przez e.
 
+Wykład Granta Sandersona opowiada to samo jako ruch. e^{kt} to punkt, który porusza się w czasie t, zaczynając od e⁰ = 1, a jego prędkość to k razy jego położenie: dla k = 2 prędkość jest podwojona, dla k = −0,5 odwrócona i ściśnięta, a dla k = i obrócona o 90°. Mały krok ruchu to mnożenie przez (1 + k dt), więc n kroków to dokładnie procent składany z następnego akapitu. Prędkość prostopadła do położenia i tej samej długości to ruch po okręgu z prędkością 1: po czasie π punkt przeszedł pół okręgu i jest w −1. Pochodną, e^t, radiany i szeregi potęgowe wyjaśnia rozdział 09_Calculus, a plan lekcji mówi, w jakiej kolejności się ich uczyć.
+
 Liczba urojona it niczego tu nie zmienia. 1 + it/n to para (1, t/n), punkt tuż nad jedynką, a potęgowanie pary to reguła mnożenia par z pierwszej lekcji. Każdy taki czynnik to maleńki obrót o kąt atan(t/n) i maleńkie rozciągnięcie o √(1 + t²/n²). Druga lekcja rozdziału mówi, co robi n takich czynników: rozciągnięcia się mnożą, a kąty dodają. Rozciągnięcia zbiegają do 1, kąty sumują się do t. W granicy zostaje czysty obrót o t radianów: e^{it} = (cos t, sin t), wzór Eulera. Musiało tak być: jeśli e^{it} ma leżeć na okręgu jednostkowym i zamieniać dodawanie w mnożenie, a mnożenie punktów okręgu tylko dodaje kąty, to kąt punktu e^{it} musi rosnąć proporcjonalnie do t. Jednostką są radiany, bo obrót, który wychodzi ze składania, to droga t przebyta po okręgu; dlatego we wzorze jest π, a nie 180. e^{180i} to obrót o 180 radianów, czyli 28,65 obrotu, punkt (−0,598, −0,801), nic szczególnego.
 
 Pół obrotu od (1, 0) to (−1, 0), i to cała tożsamość. Program sprawdza to dokładnie, bez zaokrągleń: dwa ćwierćobroty, (0, 1)² = (−1, 0), czyli i² = −1 z drugiej lekcji; trzy szóste obrotu, (1/2, √3/2)³; cztery ósme, (1, 1)⁴ = (−4, 0) podzielone przez (√2)⁴ = 4; sześć dwunastych, szósta potęga pierwszego znaku tarczy zegara z poprzedniej lekcji. Wszystko daje (−1, 0). Tożsamość Eulera to i² = −1 z drobniej pociętym obrotem.
@@ -227,15 +286,21 @@ Do czego to służy: każdy punkt płaszczyzny to r e^{iθ}, postać biegunowa, 
 ## See also
 
 - [Multiplication rotates](../multiplication_rotates/README.md) — lengths multiply and angles add, the two facts each factor of the compounding obeys
-- [Roots of unity](../roots_of_unity/README.md) — the clock face this page names e^{iπk/6}, and the √3 carried exactly that section 4 borrows
+- [Roots of unity](../roots_of_unity/README.md) — the clock face this page names e^{iπk/6}, and the √3 carried exactly that section 5 borrows
 - [Multiplication as pairs](../multiplication_as_pairs/README.md) — the pair rule, which is all the compounding uses
 - [Maps that keep the laws](../../06_Algebraic_Structures/maps_that_keep_the_laws/README.md) — the logarithm turns multiplication into addition; the exponential is the same map run backwards, and this page runs it into the plane
-- [Machine numbers](../../01_Precision/machine_numbers/README.md) — why `math.pi` is not π, and so why section 6's answer is not −1
+- [Machine numbers](../../01_Precision/machine_numbers/README.md) — why `math.pi` is not π, and so why section 7's answer is not −1
 - [Euler's identity ↗](https://en.wikipedia.org/wiki/Euler%27s_identity) — Wikipedia
 - [Euler's formula ↗](https://en.wikipedia.org/wiki/Euler%27s_formula) — Wikipedia, with the series proof and the history: Cotes had a form of it in 1714, Euler published it in 1748
 - [Radian ↗](https://en.wikipedia.org/wiki/Radian) — Wikipedia, the unit of angle in which arc length is angle
-- [What is Euler's formula actually saying?, 3Blue1Brown ↗](https://www.3blue1brown.com/lessons/ldm-eulers-formula) — the lecture whose three questions this page borrows, from the Lockdown Math series; also on [YouTube ↗](https://www.youtube.com/watch?v=ZxYOEwM6Wbk)
-- [e^{iπ} in 3.14 minutes, 3Blue1Brown ↗](https://www.youtube.com/watch?v=v0YEaeIClKY) — the compounding argument as a moving picture: a velocity always at right angles to the position
+- [Euler's formula: a lesson plan](../../reading_guides/eulers_formula/README.md) — what to learn first, step by step, to follow this page and the talk
+- [The derivative is a velocity](../../09_Calculus/derivative_as_velocity/README.md) — what d/dt means, measured
+- [Velocity equals position](../../09_Calculus/velocity_equals_position/README.md) — e^t, e, the law of exponents, and the talk's "double" and "flip and squish"
+- [Radians](../../09_Calculus/radians/README.md) — why the angle is the distance walked, and so why the identity has π in it
+- [Power series](../../09_Calculus/power_series/README.md) — where section 8's series comes from, and cos and sin inside it
+- [*Designing Math*, Grant Sanderson at Config 2026 ↗](https://youtu.be/bLSLN96Gn-w) — the talk whose three questions this page follows, and whose velocity argument is section 3
+- [What is Euler's formula actually saying?, 3Blue1Brown ↗](https://www.3blue1brown.com/lessons/ldm-eulers-formula) — a live lecture on the same formula, from the Lockdown Math series; also on [YouTube ↗](https://www.youtube.com/watch?v=ZxYOEwM6Wbk)
+- [e^{iπ} in 3.14 minutes, 3Blue1Brown ↗](https://www.youtube.com/watch?v=v0YEaeIClKY) — section 3's argument as a short animation: a velocity always at right angles to the position
 - [The Feynman Lectures on Physics, vol. I, chapter 22: Algebra ↗](https://www.feynmanlectures.caltech.edu/I_22.html) — reaches Euler's formula by arithmetic, taking square roots by hand until a table of imaginary powers appears, and ends with "the most remarkable formula in mathematics"
 - [`cmath` ↗](https://docs.python.org/3/library/cmath.html) — Python's complex exponential, with `polar` and `rect`
 - [Wzór Eulera ↗](https://pl.wikipedia.org/wiki/Wz%C3%B3r_Eulera) — Wikipedia po polsku

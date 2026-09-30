@@ -175,9 +175,18 @@ From the root of your clone of this repository:
 python3 03_Complex_Numbers/multiplication_rotates/examples/multiplication_rotates.py
 ```
 
+## Po polsku, w skrócie
+
+Mnożenie liczb zespolonych na płaszczyźnie robi dwie rzeczy naraz: mnoży długości i dodaje kąty. Mnożenie przez punkt z rozciąga całą płaszczyznę tyle razy, ile wynosi odległość z od początku układu, i obraca ją o kąt, pod którym leży z. Punkt (0, 1), czyli i, leży w odległości 1 pod kątem 90°, więc mnożenie przez i to po prostu ćwierćobrót w lewo: wschód przechodzi na północ, północ na zachód. Stąd i² = −1 przestaje być zagadką: dwa ćwierćobroty to półobrót, a półobrót przenosi każdy punkt na drugą stronę początku układu, czyli robi to samo co mnożenie przez −1.
+
+Program sprawdza obie połowy dokładnie, na ułamkach. Kwadraty długości się mnożą. Kąty się dodają, co widać bez liczenia żadnego kąta: iloczyn obrócony z powrotem o pierwszy kąt daje drugi punkt. Ta sama reguła zapisana macierzą to [[x, −y], [y, x]], a dla i to zwykła macierz obrotu o 90°. Na tym ćwierćobrocie opiera się tożsamość Eulera: prędkość i · położenie to położenie obrócone o 90°, więc punkt krąży po okręgu.
+
 ## See also
 
 - [Multiplication as pairs](../multiplication_as_pairs/README.md) — the rule this page is the geometry of, and where the two-squares identity first appears
+- [Euler's identity](../eulers_identity/README.md) — the quarter turn as a velocity: a point whose velocity is i times its position goes round the circle, and e^{iπ} = −1
+- [Radians](../../09_Calculus/radians/README.md) — the angle as the distance walked round the circle, the unit in which a turning point moves at speed 1
+- [Euler's formula: a lesson plan](../../reading_guides/eulers_formula/README.md) — this page is step 5 of it
 - [Rotation (mathematics) ↗](https://en.wikipedia.org/wiki/Rotation_(mathematics)#Complex_numbers) — Wikipedia, rotations of the plane as complex multiplication
 - [Complex number fundamentals, 3Blue1Brown ↗](https://www.3blue1brown.com/lessons/ldm-complex-numbers/) — the same picture as a video lesson, with i as a quarter turn
 - [Complex Variables lecture notes, Kenneth Shum ↗](https://mypage.cuhk.edu.cn/academics/wkshum/files/complex_variables_lecture_notes.pdf) — the matrix construction alongside the pair one

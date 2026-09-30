@@ -6,7 +6,7 @@
 
 ## The idea
 
-Two points, P₁ = (x₁, y₁) and P₂ = (x₂, y₂). How far apart are they? Add a third point, P₃ = (x₂, y₁): it has P₂'s x and P₁'s y, so it sits level with P₁ and directly below (or above) P₂. The three points make a right triangle with the right angle at P₃. Its horizontal leg is |x₂ − x₁| long and its vertical leg |y₂ − y₁|, because a horizontal distance is a difference of x-coordinates and a vertical one a difference of y-coordinates. [Pythagoras](../../09_Geometry/pythagorean_theorem/README.md) does the rest:
+Two points, P₁ = (x₁, y₁) and P₂ = (x₂, y₂). How far apart are they? Add a third point, P₃ = (x₂, y₁): it has P₂'s x and P₁'s y, so it sits level with P₁ and directly below (or above) P₂. The three points make a right triangle with the right angle at P₃. Its horizontal leg is |x₂ − x₁| long and its vertical leg |y₂ − y₁|, because a horizontal distance is a difference of x-coordinates and a vertical one a difference of y-coordinates. [Pythagoras](../../10_Geometry/pythagorean_theorem/README.md) does the rest:
 
 > **d(P₁, P₂) = √((x₂ − x₁)² + (y₂ − y₁)²)**
 
@@ -14,7 +14,7 @@ In words: subtract the x's and square, subtract the y's and square, add, take th
 
 The book's Example 1 is exactly this: from (1, 3) to (5, 6), the corner is (5, 3), the legs are 4 and 3, and the distance is 5.
 
-This page follows the opening of section 1.1, *The Distance and Midpoint Formulas*, in Michael Sullivan's *Precalculus*, which sends the reader back to [Appendix A.2](../../09_Geometry/README.md) for the Pythagorean theorem first.
+This page follows the opening of section 1.1, *The Distance and Midpoint Formulas*, in Michael Sullivan's *Precalculus*, which sends the reader back to [Appendix A.2](../../10_Geometry/README.md) for the Pythagorean theorem first.
 
 ## Symbol by symbol
 
@@ -36,7 +36,7 @@ Two things at once. They are Pythagoras, the squares on the legs. And they erase
 
 ## Exact answers
 
-d² is always exact when the coordinates are whole numbers or fractions. d is exact only when d² is a perfect square, which the book arranges in its examples and life does not. Otherwise the answer is left as a square root in simplest form, √20 = √(4 · 5) = 2√5, and a decimal only at the end. Better still: **to compare distances, compare their squares.** Squaring keeps order among non-negative numbers, so d(A, B) < d(A, C) exactly when d(A, B)² < d(A, C)², and no square root is ever taken. This is how the book's next example decides whether three points make a right triangle: by the [converse of the Pythagorean theorem](../../09_Geometry/pythagorean_theorem/README.md), using squared distances only.
+d² is always exact when the coordinates are whole numbers or fractions. d is exact only when d² is a perfect square, which the book arranges in its examples and life does not. Otherwise the answer is left as a square root in simplest form, √20 = √(4 · 5) = 2√5, and a decimal only at the end. Better still: **to compare distances, compare their squares.** Squaring keeps order among non-negative numbers, so d(A, B) < d(A, C) exactly when d(A, B)² < d(A, C)², and no square root is ever taken. This is how the book's next example decides whether three points make a right triangle: by the [converse of the Pythagorean theorem](../../10_Geometry/pythagorean_theorem/README.md), using squared distances only.
 
 ## What the program prints
 
@@ -212,7 +212,7 @@ Kwadraty robią tu dwie rzeczy: są Pitagorasem i kasują znaki. Dlatego kolejno
 
 ## See also
 
-- [The Pythagorean theorem and its converse](../../09_Geometry/pythagorean_theorem/README.md) — the theorem this formula is, and the converse used in question 7
+- [The Pythagorean theorem and its converse](../../10_Geometry/pythagorean_theorem/README.md) — the theorem this formula is, and the converse used in question 7
 - [Rectangular coordinates](../rectangular_coordinates/README.md) — the plane, and why a horizontal distance is a difference of x-coordinates
 - [Multiplication rotates](../../03_Complex_Numbers/multiplication_rotates/README.md) — the distance from the origin as the length of a complex number
 - [Precalculus: a reading guide](../../reading_guides/precalculus/README.md) — where section 1.1 sits in the course

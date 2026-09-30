@@ -13,7 +13,7 @@ Descartes' idea, and the first section of every precalculus book: two number lin
 
 Lesson 1 sets up the plane. A point is two signed distances, x from the y-axis and y from the x-axis, so [the Cartesian product](../04_Sets/cartesian_product/README.md) ℝ² is not just a set of pairs but the plane itself. A quadrant is the pair of signs and nothing more, which is why the axes belong to none and why the word carries so far: the sign of a trigonometric function, the quarter turn that [multiplying by i](../03_Complex_Numbers/multiplication_rotates/README.md) performs, and the symmetry of a graph are all statements about quadrants.
 
-Lesson 2 measures in it. The distance between two points is the hypotenuse of a right triangle whose legs are the differences of their coordinates, so the formula is [the Pythagorean theorem](../09_Geometry/pythagorean_theorem/README.md), and the squares in it erase the signs that lesson 1 took such care over: distance has no direction.
+Lesson 2 measures in it. The distance between two points is the hypotenuse of a right triangle whose legs are the differences of their coordinates, so the formula is [the Pythagorean theorem](../10_Geometry/pythagorean_theorem/README.md), and the squares in it erase the signs that lesson 1 took such care over: distance has no direction.
 
 What comes next is on the [roadmap](../ROADMAP.md): the midpoint, and the graph of an equation as the set of points that pass it.
 

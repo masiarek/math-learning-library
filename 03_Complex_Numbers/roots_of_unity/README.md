@@ -215,9 +215,17 @@ From the root of your clone of this repository:
 python3 03_Complex_Numbers/roots_of_unity/examples/roots_of_unity.py
 ```
 
+## Po polsku, w skrócie
+
+Mnożenie przez punkt okręgu jednostkowego obraca płaszczyznę o kąt tego punktu, więc mnożenie przez niego n razy obraca n razy dalej: to wzór de Moivre'a. Większość punktów okręgu nigdy nie wraca do (1, 0). Punkt (3/5, 4/5) z trójkąta 3-4-5 ma w n-tej potędze mianownik 5ⁿ, więc nigdy nie da 1: jego kąt nie jest żadnym ułamkiem pełnego obrotu. Wracają tylko punkty leżące co 1/n obrotu. Pierwiastki n-tego stopnia z jedynki to rozwiązania zⁿ = 1; jest ich dokładnie n, rozłożonych równo na okręgu, i sumują się do zera.
+
+Program znajduje dwanaście znaków tarczy zegara dokładnie, bez zaokrągleń, niosąc √3 jako symbol z regułą √3 · √3 = 3. Na koniec pokazuje pułapkę: z liczbą zmiennoprzecinkową zamiast √3/2 dwunasta potęga nie daje dokładnie (1, 0), bo błąd z pierwszego zaokrąglenia jedzie przez wszystkie mnożenia. W zapisie z tożsamości Eulera znaki tarczy to e^{iπk/6}, a pierwiastki z jedynki to e^{2πik/n}.
+
 ## See also
 
 - [Multiplication rotates](../multiplication_rotates/README.md) — angles add, which this page applies n times over
+- [Euler's identity](../eulers_identity/README.md) — the next lesson: the clock's marks named e^{iπk/6}, and the half turn reached exactly as the sixth power of the first mark
+- [Radians](../../09_Calculus/radians/README.md) — the marks sit every π/6 radians, and why angles are measured that way
 - [Multiplication as pairs](../multiplication_as_pairs/README.md) — the pairs are a field, which is what makes "at most n solutions" true
 - [Multiplication can be undone](../multiplication_can_be_undone/README.md) — no two nonzero pairs multiply to (0, 0), the step that makes the roots of unity add up to nothing
 - [Root of unity ↗](https://en.wikipedia.org/wiki/Root_of_unity) — Wikipedia
