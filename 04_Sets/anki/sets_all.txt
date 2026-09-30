@@ -36,6 +36,11 @@ Which notations are used for symmetric difference?	A △ B, A ⊖ B, A ∇ B, A 
 Why can symmetric difference be written A + B?	The subsets form a group under △: associative, commutative, identity ∅, and A △ A = ∅, so each set is its own inverse.	sets math law	Math::Sets::The algebra of sets
 What does a chain A △ B △ C △ ... keep?	The members that occur an odd number of times; pairs cancel.	sets math law	Math::Sets::The algebra of sets
 When is A △ B empty?	Exactly when A = B.	sets math law	Math::Sets::The algebra of sets
+How do ∀ and ∃ split over A ∪ B?	∀x∈A∪B p ⇔ ∀x∈A p ∧ ∀x∈B p;  ∃x∈A∪B p ⇔ ∃x∈A p ∨ ∃x∈B p.	sets math law	Math::Sets::The algebra of sets
+Does ∃x∈A p ∧ ∃x∈B p imply ∃x∈A∩B p?	No: A = {1}, B = {2}, p true on both; A ∩ B is empty.	sets math trap	Math::Sets::The algebra of sets
+Does ∀x∈A p ∨ ∀x∈B p imply ∀x∈A∪B p?	No: A = ∅ makes ∀x∈A p true vacuously while p fails on B.	sets math trap	Math::Sets::The algebra of sets
+What are ∀x∈∅ p and ∃x∈∅ p?	True and false, for every p. That is why ∅ ⊆ A.	sets math law	Math::Sets::The algebra of sets
+How is set equality proved from subsets?	A = B exactly when A ⊆ B and B ⊆ A: show both inclusions.	sets math law	Math::Sets::The algebra of sets
 How do you write the empty set in Python?	set(). {} is an empty dict.	sets python creating	Math::Sets::Sets in Python
 What does set('foo') give, and what does {'foo'} give?	{'f', 'o'} and {'foo'}: set() adds each item of one iterable; braces add each thing written, whole.	sets python creating	Math::Sets::Sets in Python
 Why does set('a', 'b', 'c') fail?	set() takes at most one argument, an iterable: TypeError set expected at most 1 argument, got 3.	sets python trap	Math::Sets::Sets in Python
@@ -81,6 +86,18 @@ Is set2 < = set1 (with a space) a subset test?	No: SyntaxError. <= is one token 
 What does d1.keys() & d2.keys() return?	A set of the keys the two dicts share: a keys view supports set operations.	sets python dict-views	Math::Sets::Sets in Python
 Do dict.items() views support set operations? dict.values()?	items() yes, when the values are hashable; values() no, it raises TypeError.	sets python dict-views	Math::Sets::Sets in Python
 What does {1, 2}.update({1: 'a', 5: 'e'}) give?	{1, 2, 5}: iterating a dict yields its keys.	sets python dict-views	Math::Sets::Sets in Python
+What is the usual order of set operations, tightest first?	Complement, difference, intersection, union; left to right within a level.	sets math precedence	Math::Sets::Reading a set expression
+Where does the order of set operations come from?	From logic: not before and before or, since ′ is not, ∩ is and, ∪ is or.	sets math precedence	Math::Sets::Reading a set expression
+How does Python bracket A | B & C?	A | (B & C): & binds tighter than |.	sets math python	Math::Sets::Reading a set expression
+Python's set operator precedence, tightest first?	- then & then ^ then |.	sets math python	Math::Sets::Reading a set expression
+How is A ∖ B ∖ C read?	(A ∖ B) ∖ C, left to right; A ∖ (B ∖ C) is different.	sets math precedence	Math::Sets::Reading a set expression
+With U = {1,...,5}, {5} ∪ {1,2}′ ∩ {2,3} = ?	{3, 5} by the rule (∩ first); ({5} ∪ {1,2}′) ∩ {2,3} would be {3}.	sets math precedence	Math::Sets::Reading a set expression
+What is wrong with writing x ∈ A ∩ x ∈ B?	∩ needs sets on both sides, and x ∈ A is a statement. Write x ∈ A ∧ x ∈ B or x ∈ A ∩ B.	sets math trap	Math::Sets::Reading a set expression
+What is wrong with writing x ∈ A ∧ B?	∧ needs statements on both sides, and B is a set. Write x ∈ A ∧ x ∈ B.	sets math trap	Math::Sets::Reading a set expression
+What does Python do with x in A & x in B?	Reads it as x in (A & x) in B and raises TypeError for a number x.	sets math python	Math::Sets::Reading a set expression
+What does Python return for x in A and B when x is in A?	The set B itself, which is truthy even when x is not in B: a silent bug.	sets math python	Math::Sets::Reading a set expression
+With (a, b) = {{a}, {a, b}}, what is (1, 2) ∩ (2, 1)?	{{1, 2}}.	sets math notation	Math::Sets::Reading a set expression
+As open intervals, what is (1, 2) ∪ (2, 1)?	(1, 2), because (2, 1) is empty.	sets math notation	Math::Sets::Reading a set expression
 What are the two undefined words that set theory starts from?	Set and member of (∈). They are described by axioms, not defined.	sets math definition	Math::Sets::What is a set
 State the axiom of extensionality.	Two sets with the same members are the same set.	sets math axiom	Math::Sets::What is a set
 Why is {2, 5} = {5, 2}?	Extensionality: they have the same members, and order is not membership.	sets math axiom	Math::Sets::What is a set
