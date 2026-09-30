@@ -35,3 +35,9 @@ Is ∈ transitive? Example?	No: 1 ∈ {1} and {1} ∈ {{1}}, but 1 ∉ {{1}}. A 
 Is ∅ equal to {∅}?	No: ∅ has no members, {∅} has one, the empty set. An empty box in a box.	theorem
 Where does the box picture of a set mislead?	Membership is one level only, one element can be in many sets, and copies do not count.	trap
 What does a, b ∈ A mean?	a ∈ A and b ∈ A.	definition
+Does Russell's paradox need the step C is either ordinary or not?	No. From P ↔ ¬P: assuming P gives ¬P, so ¬P; then ¬P gives P. No case split, valid even in intuitionistic logic.	theorem
+In Russell's argument, which premise does ZF give up?	That C exists: separation only allows the ordinary members of an existing set, never all ordinary sets.	axiom
+In ZF, which sets are ordinary (not members of themselves)?	All of them, by the axiom of foundation; so C would be the set of everything, which cannot exist.	theorem
+Which many-valued logic lets C ∈ C be half true?	Łukasiewicz: ½ ↔ ¬½ is fully true there. Kleene K3 and the Gödel logics do not.	logic
+Why doesn't finite-valued Łukasiewicz logic rescue naive set theory?	Curry's sets C_k = {x : x ∈ x → (… → false)} need the value k/(k+1), and finitely many values always miss one.	logic
+Name two non-classical escapes from Russell's paradox.	Paraconsistent logic (tolerate the contradiction) and contraction-free logic (block P → ¬P, therefore ¬P).	logic
