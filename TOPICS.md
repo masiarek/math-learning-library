@@ -120,6 +120,9 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
     - **Thinking with others** · from [Learning to Learn](12_Learning_to_Learn/README.md)
         - [Day or night: perspective taking and the cutoff under a dichotomy](12_Learning_to_Learn/day_or_night/README.md) — dichotomous thinking, perspective taking, cutoff, twilight, sorites paradox, fuzzy logic, Set Up for Success
         - ↪ [A share above a cutoff](05_Statistics/share_above_a_cutoff/README.md) — another cutoff on a smooth quantity
+    - **Believing you can** · from [Learning to Learn](12_Learning_to_Learn/README.md)
+        - [Learned helplessness](12_Learning_to_Learn/learned_helplessness/README.md) — Hiroto and Seligman, rule of succession, explore–exploit, start small, vicarious success, personalization, pervasiveness, permanence, ABC technique
+        - ↪ [Metacognition: judging what you know](12_Learning_to_Learn/metacognition/README.md) — the same loop turned round: a feeling of knowing that stops self-testing
 
 ## Threads across chapters
 

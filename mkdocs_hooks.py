@@ -183,7 +183,8 @@ NAV_ORDER: dict[str, list[str]] = {
     # How to know that you know, then how to learn so that it stays: the
     # fourth of Flavell's abilities measured, the task deciding what is kept,
     # Bloom's levels climbed on one theorem, and spacing that keeps it cheaply;
-    # then the cutoff hidden under a confident yes-or-no.
+    # then the cutoff hidden under a confident yes-or-no, and the belief that
+    # stops you trying and so never meets the evidence.
     "12_Learning_to_Learn": [
         "README.md",
         "metacognition",
@@ -191,6 +192,7 @@ NAV_ORDER: dict[str, list[str]] = {
         "studying_vs_learning",
         "spaced_retrieval",
         "day_or_night",
+        "learned_helplessness",
     ],
     "09_Calculus": [
         "README.md",
