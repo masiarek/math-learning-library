@@ -60,9 +60,34 @@ McGuire's later chapters turn from strategy to motivation, and her Figure 8.1 su
 
 None of the five is a lesson here, because none can be shown by a program without invented data; the [roadmap](../ROADMAP.md) says why, and the [resources](../RESOURCES.md) page lists the books.
 
+## Learning with AI
+
+McGuire's book was written in 2018, before a chatbot could explain any page on request. Almost nothing in this chapter changes because of that. What changes is which mistakes are easiest to make.
+
+**What stays the same.** Memory is still built by what *you* do. McGuire's resident answered the drug question correctly from his phone and could not say why; "we can solve problems and do critical thinking only with information already stored in our brains." An AI is that phone, made fluent and patient. Every argument in the four lessons is about what happens in the learner's head, and none of them is about where the explanation came from.
+
+**What gets worse.** Reading an AI's explanation is *rereading*, with every trap of [metacognition](metacognition/README.md): it is clear, confident and written for you, so it feels like knowing even more strongly than a textbook does. Asking it to solve the homework breaks strategy 11, doing homework without examples, in the most complete way possible, and it is always one click away. One field experiment in high-school mathematics (Bastani and colleagues, *PNAS*, 2025) gave students GPT-4 for practice problems. With plain access, practice scores rose, and on the exam taken without it those students scored about 17% lower than students who never had it. A version built to give hints instead of answers mostly avoided the loss.
+
+**What gets better.** Everything this chapter says to do, an AI can make cheaper, if you ask it for the right thing:
+
+| Instead of asking for | Ask for | Why, here |
+|---|---|---|
+| the answer | a hint, and only after you have tried | [metacognition](metacognition/README.md): produce before you look |
+| an explanation to read | a quiz on it; write a confidence before each answer | [metacognition](metacognition/README.md): calibration |
+| a summary | flashcards, then review them spaced | [spaced retrieval](spaced_retrieval/README.md) |
+| more examples at the same level | questions at the level above: why, what if, find the flaw | [studying vs learning](studying_vs_learning/README.md) |
+| a better explanation | to play a student while *you* explain, and ask the questions a class would | teach-the-material mode |
+| the list of facts | the principle that produces them, then rebuild the list yourself | [count the vowels](count_the_vowels/README.md) |
+
+A tutor built on these rules can do well: in a Harvard physics course (Kestin and colleagues, *Scientific Reports*, 2025), students working with an AI tutor designed around them learned more, in less time, than in an active-learning class.
+
+**One new skill.** An AI can be wrong while sounding certain, so every answer it gives is a claim to check, and checking is Bloom's level 5, evaluating. This library has one rule for that, the same one it keeps for itself: a claim counts when a program that runs agrees with it. Ask the AI for the check, not just the claim, and run it.
+
+**The rule of thumb:** use AI *after* you have tried, and use it to be *asked* questions more than to be *told* answers.
+
 ## Po polsku, w skrócie
 
-Ten rozdział nie jest o matematyce, tylko o tym, jak się jej uczyć. Opiera się na książce Saundry McGuire *Teach Yourself How to Learn*. Metakognicja to myślenie o własnym myśleniu, a jej najważniejszą, mierzalną częścią jest trafna ocena, ile naprawdę umiemy: kto tylko czyta notatki drugi raz, czuje się pewny i często się myli. Pamiętamy to, co robiliśmy z materiałem, a nie to, na co patrzyliśmy (ćwiczenie z liczeniem samogłosek). Taksonomia Blooma opisuje poziomy pracy z materiałem, od zapamiętania do tworzenia, a na najwyższym poziomie potrafimy odtworzyć zapomniane fakty. Wreszcie: powtórki rozłożone w czasie i sprawdzanie się z pamięci utrwalają wiedzę, a przy rosnących odstępach liczba powtórek rośnie tylko logarytmicznie. McGuire dodaje pięć sposobów na motywację: stosuj te strategie, wierz, że inteligencja może rosnąć, mów do siebie życzliwie, przypisuj wyniki swojemu zachowaniu, a nie okolicznościom, i dbaj o sen, jedzenie i ruch.
+Ten rozdział nie jest o matematyce, tylko o tym, jak się jej uczyć. Opiera się na książce Saundry McGuire *Teach Yourself How to Learn*. Metakognicja to myślenie o własnym myśleniu, a jej najważniejszą, mierzalną częścią jest trafna ocena, ile naprawdę umiemy: kto tylko czyta notatki drugi raz, czuje się pewny i często się myli. Pamiętamy to, co robiliśmy z materiałem, a nie to, na co patrzyliśmy (ćwiczenie z liczeniem samogłosek). Taksonomia Blooma opisuje poziomy pracy z materiałem, od zapamiętania do tworzenia, a na najwyższym poziomie potrafimy odtworzyć zapomniane fakty. Wreszcie: powtórki rozłożone w czasie i sprawdzanie się z pamięci utrwalają wiedzę, a przy rosnących odstępach liczba powtórek rośnie tylko logarytmicznie. McGuire dodaje pięć sposobów na motywację: stosuj te strategie, wierz, że inteligencja może rosnąć, mów do siebie życzliwie, przypisuj wyniki swojemu zachowaniu, a nie okolicznościom, i dbaj o sen, jedzenie i ruch. A sztuczna inteligencja? Nie zmienia tego, jak działa pamięć: przeczytanie odpowiedzi od AI to ponowne czytanie, które daje złudzenie wiedzy. Używaj jej dopiero po własnej próbie i proś ją raczej o pytania, quizy i fiszki niż o gotowe odpowiedzi. Każdą jej odpowiedź sprawdzaj, najlepiej programem, który działa.
 
 ## A note on the code
 
