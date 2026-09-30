@@ -1,0 +1,48 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Sets::Sets in Python
+#tags:sets python
+#columns:Front	Back	Tags
+#tags column:3
+How do you write the empty set in Python?	set(). {} is an empty dict.	creating
+What does set('foo') give, and what does {'foo'} give?	{'f', 'o'} and {'foo'}: set() adds each item of one iterable; braces add each thing written, whole.	creating
+Why does set('a', 'b', 'c') fail?	set() takes at most one argument, an iterable: TypeError set expected at most 1 argument, got 3.	trap
+What is {('a', 'b', 'c')}?	A set with one member, the tuple ('a', 'b', 'c').	trap
+Which of these equal {'a', 'b', 'c'}: set('abc'), set(['a', 'b', 'c']), set('a','b','c'), {('a','b','c')}?	set('abc') and set(['a', 'b', 'c']). The third raises TypeError; the fourth has one tuple member.	creating
+What does {2*x for x in [1, 1, 2, 2, 3, 3]} give?	{2, 4, 6}: a set comprehension drops duplicates as it builds.	creating
+What must be true of a set's members in Python?	They must be hashable: hash(x) must work and never change while x is stored.	hashing
+Why does s.add([1, 2, 1]) fail, and what is the fix?	A list is mutable, so unhashable. Add tuple([1, 2, 1]) instead.	hashing
+Is every tuple hashable?	No: (1, [2]) is unhashable because it holds a list. Hashable, not immutable, is the rule.	hashing
+How many members has {True, 1, 1.0, '1', (1,)}?	3: True, 1 and 1.0 are equal with equal hashes, so they are one member.	hashing
+Why does s1.add(s2) fail when s2 is a set?	add puts in ONE member, and a set is unhashable: TypeError unhashable type set.	trap
+How do you put all members of s2 into s1?	s1.update(s2) or s1 |= s2; s1 | s2 makes a new set.	operations
+How do you store a whole set as one member of another set?	Freeze it: s1.add(frozenset(s2)).	frozenset
+Is + defined for sets?	No: TypeError. Use | for union.	trap
+Operator and method for union, intersection, difference, symmetric difference?	| union(), & intersection(), - difference(), ^ symmetric_difference().	operations
+Operators for subset, proper subset, superset, proper superset?	<=, <, >=, >. issubset and issuperset are the method forms of <= and >=.	operations
+Which set test has a method but no operator?	isdisjoint(). The nearest operator form is not (a & b).	operations
+What is the difference between a | t and a.union(t) when t is a tuple?	a | t raises TypeError; a.union(t) converts t to a set and works. Operators need sets, methods take any iterable.	operators-vs-methods
+Does X & [1, 5, 9] work? X.intersection([1, 5, 9])?	No, TypeError; yes, it returns the common members.	operators-vs-methods
+Which set method takes only one argument, unlike union and intersection?	symmetric_difference. Chain ^ for more sets.	operators-vs-methods
+Can you use s.__contains__(x)?	Yes. It is what x in s calls.	trap
+How is s1 ^ s2 ^ s3 evaluated, and what does it contain?	As (s1 ^ s2) ^ s3: the elements in an odd number of the three sets.	chaining
+{0,1,2,3,4} ^ {2,3,4} ^ {2,5} = ?	{0, 1, 2, 5}: 2 is in all three, an odd count, so it stays.	chaining
+How do you test whether two sets are equal?	a == b. Order is ignored; only members count.	equality
+Why is list(a) == list(b) a wrong test for set equality?	Equal sets can iterate in different orders: list({1, 9}) is [1, 9] and list({9, 1}) is [9, 1].	equality
+Why is a.difference(b) == set() a wrong test for set equality?	It only shows a ⊆ b: {1}.difference({1, 2}) is empty but {1} != {1, 2}.	equality
+What is set().issubset([])?	True: the empty set is a subset of everything.	trap
+What does if (a <= b, c): do?	Always runs: it tests a non-empty tuple. Write a <= b and a <= c.	trap
+remove(x) vs discard(x) on a missing x?	remove raises KeyError; discard does nothing.	removing
+What does pop() do on a set, and on an empty set?	Removes and returns an arbitrary member; KeyError on an empty set.	removing
+Can a frozenset be changed? How do you add to one?	No, it has no add (AttributeError). Build a new one: fs.union([3, 4]) or fs | {3, 4}.	frozenset
+Which type does {1} | frozenset({2}) have? frozenset({2}) | {1}?	set, then frozenset: the left operand decides.	frozenset
+How do you remove duplicates from a list and keep first-seen order?	list(dict.fromkeys(L)). list(set(L)) may reorder.	dedupe
+Why does list(set([1, 2, 1, 3])) often come out sorted?	Luck: small ints hash to themselves and land in slot n mod table size. list(set([10, 3, 8])) is [8, 10, 3].	dedupe
+How do you sort a set?	sorted(s), which returns a list. A set itself has no order.	sorting
+How do you sort a set holding both ints and strs?	sorted(s, key=lambda x: (isinstance(x, str), x)): numbers first, and no int is compared with a str.	sorting
+Why use a set for visited nodes in a graph walk?	It stops cycles from looping forever, and each check is one hash lookup, not a list scan.	uses
+Which set operation gives the keys an inner join keeps? an outer join? a left anti-join?	&, |, and - on the two key columns.	uses
+What does B >= A mean, in English and in Polish?	B is a superset of A; B jest nadzbiorem A.	operations
+s1 = {'a','b','c'}, s2 = {'c','d','e'}: s1 | s2 and s1 & s2?	{'a','b','c','d','e'} and {'c'}.	kata
+set((1,2,3)) & set((2,3,4)) & set((3,4,5)) = ?	{3}.	kata

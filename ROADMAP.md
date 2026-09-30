@@ -10,7 +10,7 @@ What exists, and what is deliberately not written yet. A topic listed here has *
 
 **[03_Complex_Numbers](03_Complex_Numbers/README.md)** — what a complex number is, before anyone says √−1. Five lessons: [multiplication as pairs](03_Complex_Numbers/multiplication_as_pairs/README.md), [multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md), [multiplication can be undone](03_Complex_Numbers/multiplication_can_be_undone/README.md), [roots of unity](03_Complex_Numbers/roots_of_unity/README.md), [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
 
-**[04_Sets](04_Sets/README.md)** — what a collection is, exactly. Two lessons so far: [the Cartesian product](04_Sets/cartesian_product/README.md), [cardinality of sets](04_Sets/cardinality/README.md).
+**[04_Sets](04_Sets/README.md)** — what a collection is, exactly. Four lessons so far: [what a set is](04_Sets/what_is_a_set/README.md), [sets in Python](04_Sets/python_sets/README.md), [the Cartesian product](04_Sets/cartesian_product/README.md), [cardinality of sets](04_Sets/cardinality/README.md).
 
 **[05_Statistics](05_Statistics/README.md)** — what one number says about many. Two lessons so far: [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md), [a share above a cutoff](05_Statistics/share_above_a_cutoff/README.md).
 

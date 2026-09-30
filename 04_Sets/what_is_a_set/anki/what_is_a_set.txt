@@ -1,0 +1,31 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Sets::What is a set
+#tags:sets math
+#columns:Front	Back	Tags
+#tags column:3
+What are the two undefined words that set theory starts from?	Set and member of (∈). They are described by axioms, not defined.	definition
+State the axiom of extensionality.	Two sets with the same members are the same set.	axiom
+Why is {2, 5} = {5, 2}?	Extensionality: they have the same members, and order is not membership.	axiom
+Why is {1, 1, 2} = {1, 2}?	Being listed twice is the same as being a member once; a set records membership only.	axiom
+What does distinct objects in the textbook definition of a set really mean?	Not a demand on the list: {1, 1, 2} is a legal way to write {1, 2}. It points at extensionality, the rule for when two sets are equal.	trap
+Why can one say THE empty set rather than an empty set?	Any two empty sets have the same members, none, so by extensionality they are equal. There is exactly one.	theorem
+What does well-defined mean for a set?	Every object is determinately in or out. It does not mean anyone knows which.	definition
+Give a well-defined set nobody knows to be empty or not.	The odd perfect numbers: each n can be checked, but whether any exists is an open problem.	example
+State Russell's paradox.	Let R = {x : x ∉ x}. Then R ∈ R exactly when R ∉ R, so no such set exists.	theorem
+What does Russell's paradox show about the textbook definition of a set?	A sharp, well-defined rule does not always determine a set.	trap
+Whose system did Russell's paradox break, and when?	Frege's, in a letter of 1902 (paradox found 1901): Frege assumed every rule defines a set.	history
+State the axiom of separation (Zermelo, 1908).	For a set A and a property P, {x ∈ A : P(x)} is a set. A rule selects from an existing set, never from everything.	axiom
+Under separation, what does Russell's argument prove?	For any set U, R = {x ∈ U : x ∉ x} is not a member of U. So there is no set of all sets.	theorem
+Which earlier argument is Russell's paradox a form of?	Cantor's diagonal argument: build the object that disagrees with entry y at position y.	connection
+What is the empty set a subset of?	Every set, including itself.	theorem
+What is the difference between A ⊆ B and A ⊂ B?	⊆ allows A = B; ⊂ (proper subset) requires A ⊆ B and A ≠ B.	definition
+Is every set a subset of itself? A proper subset of itself?	Yes; no.	theorem
+Define A ∪ B, A ∩ B and A ∖ B.	Members of either; members of both; members of A that are not in B.	definition
+Define the symmetric difference A △ B.	Members of exactly one of A and B: (A ∖ B) ∪ (B ∖ A), also (A ∪ B) ∖ (A ∩ B).	definition
+What is A △ B △ C, in terms of membership?	The elements that are in an odd number of the three sets, not those in exactly one.	trap
+Which of ∪, ∩, △ and ∖ are associative?	∪, ∩ and △ are; ∖ is not: (A ∖ B) ∖ C need not equal A ∖ (B ∖ C).	theorem
+When are two sets disjoint?	When they have no member in common: A ∩ B = ∅.	definition
+What does null set mean in measure theory, as opposed to algebra?	A set of measure zero, which may be infinite, such as the Cantor set. In algebra books it usually means ∅.	trap
+Is a well-defined collection of distinct objects a good definition of set?	A good first description, not a definition: collection is a synonym, equality is left out, and a well-defined rule can fail to give a set (Russell).	principle

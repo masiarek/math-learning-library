@@ -88,6 +88,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Distributive** — a × (b + c) = a × b + a × c, and (a + b) × c = a × c + b × c: the law that links two operations. It is what turns two groups on one set into a ring. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
 
+**Empty set** — ∅, the set with no members. There is only one, because two sets with the same members are equal and any two empty sets have the same members: none. In Python it is `set()`, since `{}` is an empty dict. Some books call it the *null set*, but in measure theory a null set is any set of measure zero, which can be infinite. See [what is a set?](04_Sets/what_is_a_set/README.md).
+
 **Euler's formula** — e^{it} = (cos t, sin t): the exponential of an imaginary number is the unit point at angle t, in radians. It is what compounding gives, since (1 + it/n)ⁿ is n small turns whose angles add up to t while their stretches fade to nothing, and it is forced by the law e^{a+b} = e^a e^b, because multiplying unit points can only add angles. See [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
 
 **Euler's identity** — e^{iπ} = −1, the t = π row of Euler's formula: the unit point half a turn from (1, 0) is (−1, 0). It is i² = −1 with the quarter turn cut finer, and the program reaches it exactly as (0, 1)², as (1, 1)⁴ / 4 and as the sixth power of the clock's first mark. `cmath.exp(1j * math.pi)` is not −1 but −1 + 1.2 × 10⁻¹⁶ i, because `math.pi` is not π. See [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
@@ -96,11 +98,15 @@ Terms used across the library, with the page that explains each in full.
 
 **Exact number** — one that was counted or defined rather than measured (ballots cast, inches per foot, π). Has infinitely many significant figures and never limits a calculation. See [exact vs approximate](01_Precision/exact_vs_approximate/README.md).
 
+**Extensionality** — the axiom that two sets with the same members are the same set. It is what "distinct objects" in the textbook definition is reaching for: {2, 5} = {5, 2} and {1, 1, 2} = {1, 2}, because order and repeats are not membership. See [what is a set?](04_Sets/what_is_a_set/README.md).
+
 **Fat Cantor set** — also the *Smith–Volterra–Cantor set*. Built like the Cantor set, but the gaps deleted at step n are 1/4ⁿ long. It contains no interval and still has length 1/2 — the proof that full of gaps does not mean measure zero. See [the fat Cantor set](02_Measure_Zero/fat_cantor_set/README.md).
 
 **Field** — a set with + and × in which both are commutative and associative, both have identities (0 and 1), every member has an inverse under + and every member except 0 has one under ×, and × distributes over +. The rationals, the reals and the complex numbers are fields; the integers are not, because 2 has no inverse. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
 
 **Floating point** — the machine's stand-in for the real numbers: a finite set of exact values, fixed by a radix, a precision and an exponent range, with every result rounded into it. Its errors look like measurement errors and are unrelated to them: the value was known perfectly and the *hardware* could not hold it. What the set is, and which laws of arithmetic survive rounding into it, is [machine numbers](01_Precision/machine_numbers/README.md); how its bits are laid out is covered by the sibling Rust library ([What a float actually stores ↗](https://masiarek.github.io/rust-learning-library/19_Numbers/what_a_float_stores/index.html)); what happens when you subtract two of them is [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md).
+
+**Frozenset** — Python's immutable set. It cannot change after it is made, so it is hashable and can be a member of a set or a key of a dict; it has no `add`, and "adding" builds a new one with `union` or `|`. See [sets in Python](04_Sets/python_sets/README.md).
 
 **Geometric mean** — the n-th root of the product of n numbers: the one number that can replace every value without changing their product. The right mean for growth rates, which multiply: +100% then −50% is a geometric mean of 0% a year, not the arithmetic +25%. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
 
@@ -109,6 +115,8 @@ Terms used across the library, with the page that explains each in full.
 **Group** — a set with an operation that is associative, has an identity, and gives every member an inverse. The integers under +, the nonzero fractions under ×, the invertible matrices under ×, and the n-th roots of unity under × are groups. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
 
 **Harmonic mean** — n divided by the sum of the reciprocals of n numbers: the one number that keeps the sum of reciprocals. The right mean for speeds over equal distances; 30 km/h out and 60 km/h back averages 40 km/h, not 45. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
+
+**Hashable** — in Python, an object whose `hash` works and never changes while it is stored, which is what a set member or dict key must be. Lists, dicts and sets are not; ints, strings, frozensets, and tuples of hashables are. A tuple that holds a list is not, so the rule is hashable, not immutable. See [sets in Python](04_Sets/python_sets/README.md).
 
 **Homomorphism** — a map f between two sets with operations that keeps the operation: f(a · b) = f(a) ∗ f(b). A linear map is one; so are n ↦ 2ⁿ, the logarithm, the determinant, and the length of a string. A homomorphism of groups sends the identity to the identity and inverses to inverses, which is why 2⁰ = 1, log 1 = 0, T(0) = 0 and det I = 1 are one theorem. See [maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md).
 
@@ -202,6 +210,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Rounding function** — a rule sending every real number to a machine number, or to an infinity. IEEE 754 defines five: toward −∞, toward +∞, toward zero, and to nearest with ties going either to the even significand or away from zero. See [machine numbers](01_Precision/machine_numbers/README.md).
 
+**Russell's paradox** — the rule "x is not a member of itself" is sharp, yet no set R can obey it, since R ∈ R holds exactly when it does not. It shows that a well-defined rule does not always give a set. With the axiom of separation, which only cuts a rule out of an existing set, the same argument proves that no set contains every set. See [what is a set?](04_Sets/what_is_a_set/README.md).
+
 **Scale factor** — the one ratio k shared by every pair of corresponding sides of similar figures. Lengths scale by k, areas by k², volumes by k³. See [congruent and similar triangles](10_Geometry/congruent_and_similar_triangles/README.md) and [area and volume formulas](10_Geometry/area_and_volume_formulas/README.md).
 
 **Scientific notation** — writing a value as mantissa × 10ⁿ, so the mantissa carries the precision claim and the exponent carries the magnitude. The only unambiguous way to write trailing zeros. See [significant figures](01_Precision/significant_figures/README.md).
@@ -233,6 +243,8 @@ Terms used across the library, with the page that explains each in full.
 **Subnormal** — a float below the smallest normal one, written with a leading zero digit at the lowest exponent. Subnormals fill the gap between zero and the smallest normal number; without them, a − b could round to 0 while a ≠ b. See [machine numbers](01_Precision/machine_numbers/README.md).
 
 **Subspace** — a subset of a vector space that is a vector space with the same operations. It needs only three checks — it contains 0, and it is closed under + and under scalar multiplication — because the other laws are inherited. The subspaces of the plane are the origin, the lines through it, and the plane. See [subsets inherit the laws](06_Algebraic_Structures/subsets_inherit_the_laws/README.md).
+
+**Symmetric difference** — A △ B, the members of exactly one of two sets, (A ∖ B) ∪ (B ∖ A); `a ^ b` in Python. Chained over several sets it keeps what is in an odd number of them, not what is in exactly one. See [sets in Python](04_Sets/python_sets/README.md).
 
 **Symmetry of a graph** — about the y-axis if (−x, y) is on it whenever (x, y) is; about the x-axis for (x, −y); about the origin for (−x, −y). Tested by substituting and comparing equations; two symmetries force the third. See [graphs of equations: intercepts and symmetry](08_Analytic_Geometry/graphs_intercepts_symmetry/README.md).
 
