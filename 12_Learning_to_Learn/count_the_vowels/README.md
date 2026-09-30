@@ -180,6 +180,7 @@ It says what a complete answer looks like: fifteen items, one for each number. A
 2. **Look for the principle before memorising the items.** When a page gives a list of rules, ask what produces all of them.
 3. **Treat a practice test as a sample.** For each question, ask which concept it tests and make up a different question on the same concept.
 4. **Try the exercise on someone else**, without telling them the goal the first time. It is the fastest way to believe the result.
+5. **Take a picture walk first.** Oakley and Sejnowski's *Learning How to Learn* (2018) asks for a minute or two spent on a chapter's headings, pictures and summary before reading it, like a map before a journey. Their picture is a closet: the walk puts up the hangers, and without them the clothes fall on the floor in a jumble. It is this page's second difference, the principle, made cheap: the headings are the rule that organises the paragraphs, so each paragraph read afterwards has a place to go, and a paragraph that fits no heading is a gap you notice. On this site the headings are the page's table of contents, and a chapter's table of lessons is the walk for the whole chapter.
 
 ## Flashcards
 
@@ -191,7 +192,7 @@ To ćwiczenie Saundry McGuire. Masz 45 sekund na policzenie samogłosek w piętn
 
 Za drugim razem wiedzą, że celem jest zapamiętanie, i szukają zasady porządkującej listę: hasła odpowiadają liczbom od 1 do 15 (jeden dolar, dwie kostki, trzy kółka, cztery listki, pięć palców… kwadrans to 15 minut). Średnio pamiętają dwanaście z piętnastu, czyli 80%. Nikt w tym czasie nie zmądrzał. Zmieniły się dwie rzeczy: znajomość celu i zasada, która porządkuje materiał.
 
-Pamięć zatrzymuje to, co robiliśmy z materiałem, a nie to, co przesunęło się przed oczami. Liczenie samogłosek potrzebuje tylko liter, więc tylko litery zostają. W matematyce jest tak samo: zamiast uczyć się na pamięć wyników, trzeba znaleźć zasadę, z której wynikają, bo z niej da się je odtworzyć i sprawdzić, czy czegoś nie brakuje.
+Pamięć zatrzymuje to, co robiliśmy z materiałem, a nie to, co przesunęło się przed oczami. Liczenie samogłosek potrzebuje tylko liter, więc tylko litery zostają. W matematyce jest tak samo: zamiast uczyć się na pamięć wyników, trzeba znaleźć zasadę, z której wynikają, bo z niej da się je odtworzyć i sprawdzić, czy czegoś nie brakuje. Stąd rada Barbary Oakley: zanim przeczytasz rozdział, przejrzyj przez minutę jego nagłówki i rysunki. To jak wieszaki w szafie: dopiero na nich można porządnie powiesić to, co przeczytasz.
 
 ## See also
 
