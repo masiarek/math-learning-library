@@ -1,0 +1,39 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::If A then B
+#tags:math logic converse
+#columns:Front	Back	Tags
+#tags column:3
+In if A then B, what are A and B called?	A is the hypothesis (the assumption), B is the conclusion.	definition
+When is if A then B false?	Only when A is true and B is false.	truth-table
+If A is false, what is the truth value of if A then B?	True, whatever B is: the promise was never triggered, so it cannot be broken. Called vacuously true.	truth-table
+What is the converse of if A then B?	If B then A.	definition
+What is the inverse of if A then B?	If not A then not B.	definition
+What is the contrapositive of if A then B?	If not B then not A.	definition
+Which of converse, inverse, contrapositive always agrees with the original?	The contrapositive. It fails in exactly the same case: A true, B false.	truth-table
+Which two of the four statements always agree with each other, apart from the original and contrapositive?	The converse and the inverse: the inverse is the contrapositive of the converse.	truth-table
+If a statement is true, must its converse be true?	No. The converse fails in a different case and needs its own proof.	truth-table
+What does A if and only if B mean?	If A then B, and if B then A: both the statement and its converse are true.	iff
+How many proofs does an if and only if need?	Two, one for each direction.	iff
+State the Pythagorean theorem with its converse as one if and only if.	A triangle is right if and only if a^2 + b^2 = c^2, with c its longest side.	iff
+Why is every definition an if and only if?	It names exactly the things with the property, by agreement, so both directions hold without proof.	iff
+Can examples prove an if A then B about infinitely many cases?	No. However many cases pass, the next could fail.	mistakes
+How do you disprove if A then B?	Find one counterexample: a case where A is true and B is false.	mistakes
+Known: if A then B. Observed: B. Conclude A?	No: affirming the consequent. It confuses the statement with its converse.	mistakes
+Known: if A then B. Observed: not A. Conclude not B?	No: denying the antecedent. It confuses the statement with its inverse.	mistakes
+Known: if A then B. Observed: not B. Conclude not A?	Yes: that is the contrapositive, which is valid.	mistakes
+If it rained the street is wet. The street is wet. Did it rain?	Not necessarily: someone may have washed the street. Affirming the consequent.	mistakes
+If n is divisible by 4 then n is even. Converse true?	No: 2, 6 and 10 are even and not divisible by 4.	problems
+If n = 7 then n^2 = 49. Converse true?	No: n = -7 also has n^2 = 49.	problems
+If x > 2 then x^2 > 4. Converse? Inverse?	Both false, with the same counterexample, x = -3.	problems
+If a quadrilateral is a square, it has four right angles. Converse?	False: a 2 by 5 rectangle.	problems
+If p is prime then 2^p - 1 is prime. True?	No: p = 11 gives 2047 = 23 x 89, after four cases that work.	problems
+If 2^n - 1 is prime then n is prime. True?	Yes. Contrapositive: if n = ab, then 2^a - 1 divides 2^n - 1.	problems
+Knowing only the Pythagorean theorem, a triangle has a^2 + b^2 not equal to c^2. Conclusion?	It is not right, by the contrapositive. No converse needed.	problems
+Knowing only the Pythagorean theorem, a triangle has a^2 + b^2 = c^2. Can you conclude it is right?	Not from the theorem alone: that is affirming the consequent. The converse licenses it.	problems
+Trap: the converse and the contrapositive are the same thing?	No. Converse: swap. Contrapositive: swap and negate. Only the contrapositive is equivalent to the original.	trap
+Trap: if A then B is false whenever A is false?	No, it is true then. It is false only when A is true and B false.	trap
+Trap: a true theorem has a true converse, since it is the same idea backwards?	No. Divisible by 4 implies even; even does not imply divisible by 4.	trap
+Trap: 30 cases checked with no counterexample, so it is proved?	No. Only a general argument proves it; one counterexample would disprove it.	trap
+Trap: the inverse of a true statement is true?	Not necessarily: the inverse agrees with the converse, not with the statement.	trap

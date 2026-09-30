@@ -56,13 +56,17 @@ Terms used across the library, with the page that explains each in full.
 
 **Congruent triangles** — triangles with every pair of corresponding sides and angles equal: the same triangle in two places. Three measurements prove it: SSS, SAS or ASA, never AAA or SSA. See [congruent and similar triangles](10_Geometry/congruent_and_similar_triangles/README.md).
 
-**Converse** — the statement with its *if* and *then* swapped. It must be proved on its own: "a dog has four legs" is true and its converse is not. The converse of the Pythagorean theorem happens to be true, which turns c² = a² + b² into a test for a right angle. See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md).
+**Contrapositive** — of "if A then B", the statement "if not B then not A". It is false in exactly the same case as the original, A true and B false, so it is the same claim. See [if A then B](11_Logic/converse_and_contrapositive/README.md).
+
+**Converse** — the statement with its *if* and *then* swapped. It must be proved on its own: "a dog has four legs" is true and its converse is not. The converse of the Pythagorean theorem happens to be true, which turns c² = a² + b² into a test for a right angle. See [if A then B](11_Logic/converse_and_contrapositive/README.md) and [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md).
 
 **Correct rounding** — returning exactly what the chosen rounding function gives for the exact result, as if the operation had been carried out with unlimited precision. IEEE 754 requires it for +, −, ×, ÷ and √, which is why those give the same bits on every conforming machine. See [machine numbers](01_Precision/machine_numbers/README.md).
 
 **Correct significant digits** — a count with only p + 1 possible values and two competing definitions: x and x̂ round to the same p-digit number, or |x − x̂| is under half a unit in the p-th digit of x. The first is not monotone (0.9949 and 0.9951 agree to one and three digits but not two); the second calls 0.123 and 0.127 two-digit agreement. The relative error is the precise measure. See [relative error and correct digits](01_Precision/relative_error/README.md).
 
 **Countable** — able to be written as a list — a first, a second, a third — with every member somewhere in it; equivalently, of cardinality ℵ₀ or finite. The whole numbers and the rationals are countable; [0, 1] is not. Every countable set has measure zero. See [countable sets](02_Measure_Zero/countable_sets/README.md) and [cardinality](04_Sets/cardinality/README.md).
+
+**Counterexample** — a case where the hypothesis of an "if A then B" holds and the conclusion fails. One is enough to disprove the statement; no number of examples proves it. See [if A then B](11_Logic/converse_and_contrapositive/README.md).
 
 **De Moivre's formula** — (cos A, sin A)ⁿ = (cos nA, sin nA): the n-th power of a unit point is the unit point at n times the angle. It is "angles add" applied n − 1 times, and its n = 2 and n = 3 cases are the double- and triple-angle formulas. See [roots of unity](03_Complex_Numbers/roots_of_unity/README.md).
 
@@ -104,11 +108,17 @@ Terms used across the library, with the page that explains each in full.
 
 **Hypotenuse** — the side of a right triangle opposite the right angle; always the longest side, and the c in c² = a² + b². See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md).
 
+**Hypothesis and conclusion** — the two parts of "if A then B": A is assumed, B follows. See [if A then B](11_Logic/converse_and_contrapositive/README.md).
+
 **Identity element** — a member e with a · e = e · a = a for every a: 0 for +, 1 for ×, the empty string for concatenation, the identity matrix for matrix multiplication. There is at most one, since two identities e and e′ give e = e · e′ = e′. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
+
+**If and only if** — A ⇔ B: "if A then B" and its converse both hold, so A and B are always true together. Every definition is one; the Pythagorean theorem with its converse is one. See [if A then B](11_Logic/converse_and_contrapositive/README.md).
 
 **Intercept** — a coordinate of a point where a graph meets an axis. For x-intercepts set y = 0 and solve; for y-intercepts set x = 0. Sullivan means the number, 3, not the point (3, 0). See [graphs of equations: intercepts and symmetry](08_Analytic_Geometry/graphs_intercepts_symmetry/README.md).
 
 **Inverse** — for a member a, a member b with a · b = b · a = e, the identity. −3 is the inverse of 3 under +, and 1/2 is the inverse of 2 under ×. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
+
+**Inverse of a statement** — of "if A then B", the statement "if not A then not B". Not to be confused with the inverse of a member under an operation. It is the contrapositive of the converse, so it is true exactly when the converse is. See [if A then B](11_Logic/converse_and_contrapositive/README.md).
 
 **Isomorphism** — a homomorphism that can be undone, showing two structures are the same one with the members renamed. The logarithm is an isomorphism from the positive numbers under × to the numbers under +, which is how a slide rule multiplies by adding lengths. See [maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md).
 

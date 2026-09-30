@@ -126,6 +126,14 @@ The tenth chapter is the geometry review every precalculus book assumes, Sulliva
 | [Area and volume formulas](10_Geometry/area_and_volume_formulas/README.md) | The eleven formulas of the book's box, told apart by one check: the power of length is the dimension, so scaling by k gives k, k², k³ |
 | [Congruent and similar triangles](10_Geometry/congruent_and_similar_triangles/README.md) | SSS, SAS and ASA fix a triangle, AAA fixes only its shape, and SSA can fit two triangles, built and counted by a program |
 
+[**11_Logic/**](11_Logic/README.md) — *What does "if A then B" actually claim?*
+
+The eleventh chapter is the logic the theorems in every other chapter are written in. It needs nothing but school arithmetic.
+
+| Lesson | What it teaches |
+|---|---|
+| [If A then B: converse, contrapositive and inverse](11_Logic/converse_and_contrapositive/README.md) | "If A then B" breaks only when A is true and B false, so the contrapositive is the same claim and the converse is not; if and only if; two classic mistakes; and why examples never prove but one counterexample disproves |
+
 **Looking for a subject rather than a chapter?** The [topic map](TOPICS.md) sorts every lesson into branches and follows the threads that run between chapters.
 
 ## Why a math library and not a Python one

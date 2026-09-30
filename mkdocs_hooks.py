@@ -160,6 +160,11 @@ NAV_ORDER: dict[str, list[str]] = {
     # The geometry the precalculus book assumes, in its review appendix's
     # order: when three lengths make a right angle, why a formula's power of
     # length is its dimension, and which three measurements fix a triangle.
+    # What "if A then B" claims, and which rewordings of it need their own proof.
+    "11_Logic": [
+        "README.md",
+        "converse_and_contrapositive",
+    ],
     "10_Geometry": [
         "README.md",
         "pythagorean_theorem",

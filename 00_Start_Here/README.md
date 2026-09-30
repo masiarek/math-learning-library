@@ -34,6 +34,8 @@ It begins with a question that sounds settled and is not: **are significant figu
 
 [**10_Geometry/**](../10_Geometry/README.md) — *How few numbers fix a shape?* The geometry a precalculus book assumes, from its review appendix: the Pythagorean theorem and its converse as a test that three lengths pass or fail, the area and volume formulas told apart by one check on their dimension, and which three measurements fix a triangle, which fix only its shape, and why side-side-angle is missing from every list. Read it just in time, when the distance formula asks for it; each lesson has the book's questions and a deck of flashcards. It needs nothing but arithmetic.
 
+[**11_Logic/**](../11_Logic/README.md) — *What does "if A then B" actually claim?* The language every theorem here is written in: the one case in which "if A then B" is false, why the contrapositive says the same thing and the converse does not, what "if and only if" adds, and why a thousand examples prove nothing while one counterexample settles it. Read it whenever a book says "the converse is also true". It needs nothing but school arithmetic.
+
 The sidebar lists the chapters A to Z. The numbers above are the suggested order, and the [topic map](../TOPICS.md) groups every lesson by subject, for when you know what you want but not where it is.
 
 ## How to run anything here

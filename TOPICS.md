@@ -84,6 +84,11 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - [Power series](09_Calculus/power_series/README.md) — "velocity = position" forces every coefficient of e^x, and cos and sin fall out of it
         - ↪ [Euler's identity](03_Complex_Numbers/eulers_identity/README.md) — the motion whose velocity is its position turned a quarter turn goes round to −1
         - ↪ [Euler's formula: a lesson plan](reading_guides/eulers_formula/README.md) — the chapter's lessons as steps 6 to 10 of a path to the identity
+- **Logic and proof**
+    - **If A then B: converse, contrapositive, if and only if** · from [Logic](11_Logic/README.md)
+        - [If A then B: converse, contrapositive and inverse](11_Logic/converse_and_contrapositive/README.md) — implication, hypothesis, conclusion, truth table, converse, inverse, contrapositive, if and only if, counterexample, affirming the consequent
+        - ↪ [The Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md) — a theorem whose converse is also true
+        - ↪ [A definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md) — a definition as an "if and only if"
 - **Chance and data**
     - **Averages** · from [Statistics](05_Statistics/README.md)
         - [Mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md) — one calculation, three sizes of word
@@ -131,6 +136,7 @@ A definition in the axiomatic style is a test that objects pass or fail, and a t
 1. [A definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md) — the vector-space axioms as a test for whole sets.
 2. [Subsets inherit the laws](06_Algebraic_Structures/subsets_inherit_the_laws/README.md) — the shorter test for a subspace.
 3. [Linear equations and their solutions](07_Linear_Systems/linear_equations/README.md) — the same idea one level down: an equation is a test for a tuple.
+4. [If A then B: converse, contrapositive and inverse](11_Logic/converse_and_contrapositive/README.md) — a definition is an "if and only if" by agreement, while a theorem's converse needs its own proof.
 
 ### The plane as pairs
 

@@ -24,6 +24,8 @@ What exists, and what is deliberately not written yet. A topic listed here has *
 
 **[10_Geometry](10_Geometry/README.md)** — how few numbers fix a shape. Three lessons, the precalculus review of geometry: [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md), [area and volume formulas](10_Geometry/area_and_volume_formulas/README.md), [congruent and similar triangles](10_Geometry/congruent_and_similar_triangles/README.md).
 
+**[11_Logic](11_Logic/README.md)** — what "if A then B" claims. One lesson so far: [if A then B: converse, contrapositive and inverse](11_Logic/converse_and_contrapositive/README.md).
+
 ## The rest of the precision chapter
 
 The six lessons close one argument, but they leave three doors open:
@@ -89,7 +91,7 @@ Six lessons cover the book's first chapter. The doors they leave open:
 Not started, and listed in rough order of how likely they are to earn a place:
 
 - **Probability** — the other discipline built entirely on "how much do you know?", and the natural sequel to uncertainty propagation. Bayes, distributions, and why an interval is a better answer than a number. [Probability zero](02_Measure_Zero/probability_zero/README.md) already opens the door from the continuous side, and the expected value would be [the mean](05_Statistics/mean_vs_average/README.md) once more, with probabilities as the weights.
-- **Proof** — induction, contradiction, construction. The part of mathematics that has nothing to do with computation, included precisely because everything else here does.
+- **Proof** — induction, contradiction, construction; [11_Logic](11_Logic/README.md) has started with the statements proofs are about. The part of mathematics that has nothing to do with computation, included precisely because everything else here does.
 - **Discrete** — counting, graphs, recurrences. Best served by runnable examples of anything in this library.
 - **Linear algebra, beyond systems** — worth doing only with a strong angle. Conditioning of a matrix connects it straight back to chapter 1, which is the angle, and it is planned as part of [07_Linear_Systems](07_Linear_Systems/README.md). The definitions of a vector space, a subspace and a linear map are already in [06_Algebraic_Structures](06_Algebraic_Structures/README.md), as examples of structures. Until more exists, [a reading guide](reading_guides/linear_algebra/README.md) says why the subject is useful, what to know first, and which book to learn it from.
 - **Functions and trigonometry** — the two halves of precalculus, and the widest gap here: every page uses functions and none says what one is, and angles appear only as [radians](09_Calculus/radians/README.md), which calculus needed. A function as a subset of A × B is listed under the sets chapter above. Until more exists, [a reading guide](reading_guides/precalculus/README.md) says what the course is for, where it sits, what to know first, and which book to learn it from.

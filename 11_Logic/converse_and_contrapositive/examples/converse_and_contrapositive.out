@@ -1,0 +1,58 @@
+1. THE TRUTH TABLE: WHEN DOES 'IF A THEN B' FAIL?
+      A  B | if A then B | converse | inverse | contrapositive
+      T  T |      T      |    T     |    T    |       T
+      T  F |      F      |    T     |    T    |       F
+      F  T |      T      |    F     |    F    |       T
+      F  F |      T      |    T     |    T    |       T
+   The statement fails in one row only: A true, B false.
+   Its column matches the contrapositive's in every row: they are one claim.
+   The converse's column matches the inverse's, and differs from the statement's.
+
+2. ON THE NUMBERS 1 TO 30: A = 'n is divisible by 4', B = 'n is even'
+     statement:      if div by 4, then even                     true
+     converse:       if even, then div by 4                     FALSE, e.g. 2, 6, 10
+     inverse:        if not div by 4, then odd                  FALSE, e.g. 2, 6, 10
+     contrapositive: if odd, then not div by 4                  true
+   The counterexamples to the converse and to the inverse are the same numbers:
+   even but not divisible by 4. Each claim is true exactly when its partner is.
+
+3. ON 2135 TRIANGLES WITH WHOLE SIDES UP TO 30 (sorted, longest last)
+     if sides are 3k, 4k, 5k, then right                        true
+     converse: if right, then sides are 3k, 4k, 5k              FALSE, e.g. (5, 12, 13), (8, 15, 17), (7, 24, 25)
+   The first is true and its converse false: 5, 12, 13 is right and not 3-4-5.
+   ('Right' is tested here with a^2 + b^2 = c^2, which the converse of the
+   Pythagorean theorem entitles us to do.)
+
+4. BOTH DIRECTIONS AT ONCE: 'IF AND ONLY IF'
+     if n is a perfect square, it has an odd number of divisors true
+     if n has an odd number of divisors, it is a perfect square true
+   Both true, so: n is a perfect square IF AND ONLY IF it has an odd number of
+   divisors. The Pythagorean theorem with its converse is the same kind of pair:
+   a triangle is right if and only if a^2 + b^2 = c^2, with c the longest side.
+
+5. A FALSE 'IF' MAKES THE STATEMENT TRUE: THE ROWS WHERE A FAILS
+   'If n is divisible by 4 then n is even', checked at n = 3, 6, 8:
+     n = 3:  A F, B F  ->  T
+     n = 6:  A F, B T  ->  T
+     n = 8:  A T, B T  ->  T
+   At n = 3 and n = 6 the statement makes no promise, so it cannot be broken.
+   Only a number that is divisible by 4 and odd could refute it, and there is none.
+
+6. MANY EXAMPLES PROVE NOTHING; ONE COUNTEREXAMPLE DISPROVES
+     p =  2 (prime):  2^p - 1 =    3   prime: True
+     p =  3 (prime):  2^p - 1 =    7   prime: True
+     p =  5 (prime):  2^p - 1 =   31   prime: True
+     p =  7 (prime):  2^p - 1 =  127   prime: True
+     p = 11 (prime):  2^p - 1 = 2047   prime: False
+     p = 13 (prime):  2^p - 1 = 8191   prime: True
+   'If p is prime then 2^p - 1 is prime' survives four tests and dies at 11:
+   2047 = 23 x 89. The converse is a different claim, so it gets its own test:
+     if 2^n - 1 is prime, then n is prime (n = 1 to 30)         true
+   True here, and true for every n: if n = ab, then 2^a - 1 divides 2^n - 1.
+
+7. THE TWO CLASSIC MISTAKES, AS TRUTH-TABLE ROWS
+   Known: if A then B.  Observed: B.  Conclude A?   'Affirming the consequent'.
+     The row A = F, B = T keeps 'if A then B' true, so A may be false. Invalid.
+   Known: if A then B.  Observed: not A.  Conclude not B?   'Denying the antecedent'.
+     The same row: A false, B true. Invalid.
+   Known: if A then B.  Observed: not B.  Conclude not A?   The contrapositive. Valid.
