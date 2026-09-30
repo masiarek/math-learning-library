@@ -129,6 +129,8 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
     - **Working memory** · from [Learning to Learn](12_Learning_to_Learn/README.md)
         - [Cognitive load](12_Learning_to_Learn/cognitive_load/README.md) — Sweller, intrinsic, extraneous, germane, chunk, working memory span, automaticity, schema, byte-pair encoding
         - ↪ [Count the vowels](12_Learning_to_Learn/count_the_vowels/README.md) — an organising principle holds fifteen phrases as one idea
+        - [Interleaving](12_Learning_to_Learn/interleaving/README.md) — blocked vs interleaved practice, choosing the method, Rohrer and Taylor, volume formulas
+        - ↪ [Area and volume formulas](10_Geometry/area_and_volume_formulas/README.md) — the formulas the practice sheets mix
 
 ## Threads across chapters
 

@@ -1,0 +1,48 @@
+1. The two practice sheets and the exam
+
+   blocked:     cylinder, cylinder, cylinder, cone, cone, cone, sphere, sphere, sphere, hemisphere, hemisphere, hemisphere
+
+   interleaved: cylinder, cone, sphere, hemisphere, cone, sphere, hemisphere, cylinder, sphere, hemisphere, cylinder, cone
+
+   exam:        cone, sphere, sphere, cylinder, hemisphere, cone, cylinder, hemisphere
+
+2. How often each sheet makes you choose the formula
+
+   sheet          problems   a new kind of problem, so a choice to make
+   blocked             12      4  (33%)
+   interleaved         12     12  (100%)
+   exam                 8      7  (88%)
+
+   On the blocked sheet the formula is chosen 4 times in 12 problems; the
+   other 8 are the same as the problem before. The exam asks for a choice
+   on every problem but one. Interleaved practice rehearses what the exam
+   tests; blocked practice rehearses using a formula already chosen.
+
+3. A student who never chooses: 'use the formula from the last problem'
+
+   They work out the first problem properly and then stop choosing.
+
+   sheet          right   of   score
+   blocked           9   12     75%
+   interleaved       1   12      8%
+   exam              2    8     25%
+
+   On the blocked sheet the shortcut scores 9 of 12 without ever telling
+   a cone from a cylinder, so the sheet feels easy and the score looks good.
+   On the interleaved sheet it gets only the first problem, and on the exam
+   2 of 8. A blocked sheet's score predicts the exam badly: it measures
+   using a formula, and the exam measures choosing one. The interleaved
+   sheet's low score is the honest one, and it is low in practice, where
+   it costs nothing.
+
+4. The answers, exact
+
+   kind         r   h   volume
+   cone         5   3   25 pi
+   sphere       3   -   36 pi
+   sphere       1   -   4/3 pi
+   cylinder     1   7   7 pi
+   hemisphere   6   -   144 pi
+   cone         2   9   12 pi
+   cylinder     4   2   32 pi
+   hemisphere   3   -   18 pi
