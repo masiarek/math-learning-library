@@ -300,6 +300,27 @@ def main() -> None:
     print("       1, 3, 5 and 7 are each in two sets, an even count, so they go;")
     print("       2, 4, 6 and 8 are each in one, so they stay.")
 
+    print()
+
+    print("13. DICT VIEWS: A DICT'S KEYS ARE ALREADY A SET")
+    stock = {"apple": 3, "fig": 0, "kiwi": 5}
+    order = {"fig": 2, "kiwi": 1, "plum": 4}
+    print(f"   stock = {stock}")
+    print(f"   order = {order}")
+    both = stock.keys() & order.keys()
+    print(f"   stock.keys() & order.keys() = {show(both)}   type: {type(both).__name__}")
+    print(f"   order.keys() - stock.keys() = {show(order.keys() - stock.keys())}   ordered but never stocked")
+    print(f"   stock.keys() | ['pear']      = {show(stock.keys() | ['pear'])}   a keys view takes any iterable")
+    print(f"   stock.keys() <= set(stock)   = {stock.keys() <= set(stock)}")
+    shared = dict(stock.items() & {"fig": 0, "kiwi": 9}.items())
+    print(f"   stock.items() & {{'fig': 0, 'kiwi': 9}}.items() = {shared}   same key AND same value")
+    print(f"   stock.values() & {{0}}        -> {attempt('v & {0}', {'v': stock.values()})}")
+    print("   values can repeat and need not be hashable, so their view is not a set.")
+    s = {1, 2}
+    s.update({1: "a", 5: "e"})
+    print(f"   {{1, 2}}.update({{1: 'a', 5: 'e'}}) -> {show(s)}   iterating a dict yields its keys")
+    print(f"   set({{'x': 1, 'y': 2}}) = {show(set({'x': 1, 'y': 2}))}")
+
 
 if __name__ == "__main__":
     main()

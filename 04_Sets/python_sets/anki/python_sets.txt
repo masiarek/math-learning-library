@@ -47,3 +47,6 @@ What does B >= A mean, in English and in Polish?	B is a superset of A; B jest na
 s1 = {'a','b','c'}, s2 = {'c','d','e'}: s1 | s2 and s1 & s2?	{'a','b','c','d','e'} and {'c'}.	kata
 set((1,2,3)) & set((2,3,4)) & set((3,4,5)) = ?	{3}.	kata
 Is set2 < = set1 (with a space) a subset test?	No: SyntaxError. <= is one token and takes no space inside.	trap
+What does d1.keys() & d2.keys() return?	A set of the keys the two dicts share: a keys view supports set operations.	dict-views
+Do dict.items() views support set operations? dict.values()?	items() yes, when the values are hashable; values() no, it raises TypeError.	dict-views
+What does {1, 2}.update({1: 'a', 5: 'e'}) give?	{1, 2, 5}: iterating a dict yields its keys.	dict-views

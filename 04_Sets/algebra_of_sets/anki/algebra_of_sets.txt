@@ -1,0 +1,33 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Sets::The algebra of sets
+#tags:sets math
+#columns:Front	Back	Tags
+#tags column:3
+Which logical word is A ∪ B?	or: x ∈ A ∪ B when x ∈ A or x ∈ B.	logic
+Which logical word is A ∩ B?	and: x is in both.	logic
+Which logical word is the complement A′?	not: x ∈ A′ when x ∉ A.	logic
+Which logical statement is A ⊆ B?	For every x: if x ∈ A then x ∈ B.	logic
+What is A ∖ B in logic?	x ∈ A and not x ∈ B; so A ∖ B = A ∩ B′.	logic
+Why does a complement need a universal set U?	Not in A has no meaning without saying out of what, and there is no set of everything (Russell). So A′ = U ∖ A.	definition
+How do you write a complement in Python?	U - a, with the universe U named explicitly. set has no complement operator.	python
+State De Morgan's laws for sets.	(A ∪ B)′ = A′ ∩ B′ and (A ∩ B)′ = A′ ∪ B′.	law
+De Morgan's laws in words?	Not either is neither; not both is at least one missing.	law
+De Morgan in code: not (a or b) = ?	not a and not b.	law
+State the two distributive laws for sets.	A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C) and A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C).	law
+State the absorption law.	A ∪ (A ∩ B) = A, and A ∩ (A ∪ B) = A.	law
+State the identity and domination laws.	A ∪ ∅ = A, A ∩ U = A; A ∪ U = U, A ∩ ∅ = ∅.	law
+State the complement laws.	A ∪ A′ = U, A ∩ A′ = ∅, and (A′)′ = A.	law
+Why does checking a law on all subsets of a 4-element universe prove it?	Each law is decided member by member from which sets x is in; the small universe covers every combination of memberships, so it is the truth table.	principle
+What structure do set algebra and propositional logic share?	A Boolean algebra.	definition
+Is (A ∪ B) ∖ B = A? Counterexample?	No: A = {1}, B = {1} gives ∅. Difference does not undo union.	trap
+Does A ∪ B = A ∪ C imply B = C?	No: A = {1}, B = ∅, C = {1}. Union has no cancellation.	trap
+Is set difference associative? Commutative?	Neither: A ∖ (B ∖ C) ≠ (A ∖ B) ∖ C in general, and A ∖ B ≠ B ∖ A.	trap
+How many regions does a Venn diagram of n sets have?	2^n, one per pattern of in-or-out; for 3 sets, 8, including the outside.	venn
+What is the region outside all three circles of a Venn diagram?	The complement of the union: U ∖ (A ∪ B ∪ C).	venn
+What three properties make ⊆ an order?	Reflexive, antisymmetric (that is extensionality), transitive.	order
+Why is ⊆ only a partial order?	Some sets are incomparable: {1} ⊄ {2} and {2} ⊄ {1}.	order
+What is a poset?	A partially ordered set: a set with a reflexive, antisymmetric, transitive order, not necessarily total. The subsets of a set under ⊆ are the standard example.	order
+Why does sorted() on a list of Python sets give nonsense?	It compares with <, which for sets is proper subset, a partial order; the result depends on input order. Sort with a key such as (len(s), sorted(s)).	python
+How many subsets does U = {1, 2, 3, 4} have?	2^4 = 16.	definition

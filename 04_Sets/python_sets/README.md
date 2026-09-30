@@ -204,6 +204,19 @@ The third rule is about manners, not meaning: `a | b` needs two sets, and `a.uni
    K5  {1, 2, 3} ^ {3, 4, 5} ^ {5, 6, 7} ^ {7, 8, 1} = {2, 4, 6, 8}
        1, 3, 5 and 7 are each in two sets, an even count, so they go;
        2, 4, 6 and 8 are each in one, so they stay.
+
+13. DICT VIEWS: A DICT'S KEYS ARE ALREADY A SET
+   stock = {'apple': 3, 'fig': 0, 'kiwi': 5}
+   order = {'fig': 2, 'kiwi': 1, 'plum': 4}
+   stock.keys() & order.keys() = {'fig', 'kiwi'}   type: set
+   order.keys() - stock.keys() = {'plum'}   ordered but never stocked
+   stock.keys() | ['pear']      = {'apple', 'fig', 'kiwi', 'pear'}   a keys view takes any iterable
+   stock.keys() <= set(stock)   = True
+   stock.items() & {'fig': 0, 'kiwi': 9}.items() = {'fig': 0}   same key AND same value
+   stock.values() & {0}        -> TypeError: unsupported operand type(s) for &: 'dict_values' and 'set'
+   values can repeat and need not be hashable, so their view is not a set.
+   {1, 2}.update({1: 'a', 5: 'e'}) -> {1, 2, 5}   iterating a dict yields its keys
+   set({'x': 1, 'y': 2}) = {'x', 'y'}
 ```
 <!-- /output -->
 
@@ -307,6 +320,10 @@ Three uses cover most real code:
 - **Remembering where you have been.** A walk through a graph with cycles keeps a `visited` set and never steps into a node twice. Without it the walk loops forever; with a list instead of a set it works, but each check scans the list.
 
 And the set algebra itself on real data. The keys a database join keeps are a set operation on the two key columns: an inner join keeps customers & invoiced, an outer join customers | invoiced, a left anti-join customers - invoiced, the customers never invoiced. Pandas' `merge(how='inner' | 'outer' | 'left')` is the same algebra with the rows attached.
+
+## Dict views are sets too (section 13)
+
+A dict's keys are unique and hashable, so they already form a set, and `d.keys()` returns a view that supports the set operators directly: `stock.keys() & order.keys()` is the items both dicts mention, and `order.keys() - stock.keys()` the ones ordered but never stocked. Unlike a set, a keys view accepts any iterable on the other side of the operator. `d.items()` works the same way when the values are hashable, and matches only pairs with the same key *and* the same value. `d.values()` is not set-like at all: values can repeat and need not be hashable. The same fact explains a line in the notes: `s.update({1: 'a', 5: 'e'})` adds only 1 and 5, because iterating a dict yields its keys, and `set(d)` is the set of keys.
 
 ## Katas
 
