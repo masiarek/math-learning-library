@@ -53,6 +53,27 @@ When the test fails, *how* it fails still tells you something. Books usually lea
 
 Hold two sides at 3 and 4 and let the third grow: at 4 the triangle is acute, at 5 exactly right, at 6 obtuse, and at 7 it has collapsed to a flat line, since 3 + 4 = 7. That last one is the **triangle inequality**: any side must be shorter than the other two added together, or there is no triangle at all. In trigonometry this three-way comparison becomes the law of cosines, c² = a² + b² − 2ab cos C, and the Pythagorean theorem is the case C = 90°, where cos C = 0.
 
+## What follows from the right angle
+
+**Perpendicular.** Two lines that meet at a right angle are *perpendicular*, written ℓ₁ ⊥ ℓ₂, and then all four angles where they cross are 90°. A right angle is a quarter turn: 90°, or π/2 radians (a quarter of the unit circle's circumference 2π), or 100 gradians in surveying.
+
+**The other two angles are acute and complementary.** The angles of a triangle add up to 180°, and the right angle takes 90°, so the other two share the remaining 90°: each is less than 90°, and they add up to exactly 90°. If one is θ, the other is 90° − θ.
+
+**Why the hypotenuse is the longest side.** In any triangle the largest angle is opposite the longest side. The right angle is the largest here, so the side opposite it is the longest. The theorem says the same: c² = a² + b² is bigger than a² or b² alone. But c is still shorter than a + b, because (a + b)² = a² + b² + 2ab, and the 2ab is the gap.
+
+**The two special right triangles.** Two shapes come up so often that their side ratios are worth knowing by heart, and both come straight from the theorem:
+
+| Triangle | How to get it | Sides |
+|---|---|---|
+| 45°-45°-90° | half a square, cut along its diagonal | 1 : 1 : √2 |
+| 30°-60°-90° | half an equilateral triangle, cut down the middle | 1 : √3 : 2 |
+
+In the first, the legs are equal and c² = 1 + 1 = 2. In the second, cutting an equilateral triangle of side 2 in half gives hypotenuse 2 and short leg 1, so the long leg is √(4 − 1) = √3. The short leg is opposite the 30° angle and is always half the hypotenuse.
+
+**The theorem twice: a box's long diagonal.** In a box p × q × r, the diagonal across the bottom face has d₁² = p² + q². That diagonal and the vertical edge r meet at a right angle, so the diagonal from corner to opposite corner has d² = d₁² + r² = **p² + q² + r²**. A 3 × 4 × 12 box has face diagonal 5 and space diagonal 13. This is the [distance formula](../../08_Analytic_Geometry/distance_formula/README.md) in three dimensions.
+
+**Which comes first, Pythagoras or the law of cosines?** For any triangle, the law of cosines says c² = a² + b² − 2ab cos C. At C = 90° the cosine is 0 and Pythagoras is what remains. Some summaries turn this around and call Pythagoras "a consequence of the law of cosines". The order is the other way: the law of cosines is usually *proved* with Pythagoras, by dropping a perpendicular and applying the theorem to the two right triangles it makes. Pythagoras is the foundation, and the law of cosines generalises it. The acute/obtuse test above is the law of cosines without the cosine: −2ab cos C is negative when C is acute and positive when C is obtuse.
+
 ## What the program prints
 
 Every length is a whole number or a fraction, so every comparison is exact: "equal" means equal, not "equal to eight decimals".
@@ -122,6 +143,34 @@ Every length is a whole number or a fraction, so every comparison is exact: "equ
      (R + h)^2 - R^2 = 2.2E+3     2Rh + h^2 = 2224.58
    The first subtracts two numbers near 15.7 million that agree in
    their leading digits, and the difference keeps almost none of them.
+
+7. THE TWO SPECIAL RIGHT TRIANGLES, EXACTLY
+   45-45-90: half a square of side 1, cut along its diagonal.
+     legs 1 and 1:  c^2 = 1 + 1 = 2, so c = sqrt(2).  Ratio 1 : 1 : sqrt(2).
+   30-60-90: half an equilateral triangle of side 2, cut down the middle.
+     hypotenuse 2, short leg 1:  long leg^2 = 4 - 1 = 3, so it is sqrt(3).  Ratio 1 : sqrt(3) : 2.
+   The short leg is opposite the 30 degree angle and is half the hypotenuse.
+     scaled by 2: 45-45-90 legs 2, 2, hypotenuse 2 sqrt(2);  30-60-90 sides 2, 2 sqrt(3), 4
+     scaled by 5: 45-45-90 legs 5, 5, hypotenuse 5 sqrt(2);  30-60-90 sides 5, 5 sqrt(3), 10
+
+8. THE THEOREM TWICE: THE LONG DIAGONAL OF A BOX
+     box            face diagonal^2   space diagonal^2         d
+     3 x 4 x 12      3^2 + 4^2 = 25    25 + 12^2 = 169        13
+     2 x 3 x 6       2^2 + 3^2 = 13      13 + 6^2 = 49         7
+     1 x 1 x 1        1^2 + 1^2 = 2        2 + 1^2 = 3   sqrt(3)
+     1 x 4 x 8       1^2 + 4^2 = 17      17 + 8^2 = 81         9
+   The face diagonal and the third edge meet at a right angle, so
+   d^2 = p^2 + q^2 + r^2. The unit cube's diagonal is sqrt(3).
+
+9. THE HYPOTENUSE IS THE LONGEST SIDE, AND THE OTHER ANGLES ARE ACUTE
+   The angles add to 180, the right angle takes 90, so the other two add to 90:
+   each is acute, and they are complementary. The largest angle is opposite
+   the longest side, so the hypotenuse is the longest. And a + b > c still:
+     legs 3, 4     c^2 =    25 < (a + b)^2 =    49, so c =   5.0000 < a + b = 7
+     legs 1, 1     c^2 =     2 < (a + b)^2 =     4, so c =   1.4142 < a + b = 2
+     legs 5, 12    c^2 =   169 < (a + b)^2 =   289, so c =  13.0000 < a + b = 17
+     legs 1, 100   c^2 = 10001 < (a + b)^2 = 10201, so c = 100.0050 < a + b = 101
+   (a + b)^2 = a^2 + b^2 + 2ab, and the 2ab is the gap.
 ```
 <!-- /output -->
 
@@ -242,6 +291,38 @@ None: 3 + 4 = 7, so the "triangle" is a flat line segment. Before the Pythagorea
 
 </details>
 
+**14. A 45-45-90 triangle has legs 7. Find the hypotenuse. A 30-60-90 triangle has hypotenuse 10. Find both legs.**
+
+<details><summary>Answer</summary>
+
+7√2 ≈ 9.90. For the second, the short leg is half the hypotenuse, 5, and the long leg is 5√3 ≈ 8.66. Check: 25 + 75 = 100.
+
+</details>
+
+**15. A box measures 2 × 3 × 6. How long is a rod that fits exactly from one corner to the opposite corner?**
+
+<details><summary>Answer</summary>
+
+d² = 4 + 9 + 36 = 49, so d = 7. Or in two steps: the bottom diagonal is √13, and then √(13 + 36) = 7.
+
+</details>
+
+**16. One acute angle of a right triangle is 35°. What is the other? Could a right triangle have an angle of 95°?**
+
+<details><summary>Answer</summary>
+
+55°, since the two acute angles add up to 90°. No: 90° + 95° is already more than 180°.
+
+</details>
+
+**17. Someone says the Pythagorean theorem is "just a special case of the law of cosines, so it depends on it". What is right and what is wrong about that?**
+
+<details><summary>Answer</summary>
+
+Right: at C = 90° the law of cosines reduces to c² = a² + b². Wrong: the dependence goes the other way. The usual proof of the law of cosines drops a perpendicular and uses Pythagoras on the two right triangles. Using the law to prove the theorem would be circular.
+
+</details>
+
 ## How to practise
 
 1. **Problems 13–26 on paper, then the program.** Do each by hand, then check the whole set against section 1 and section 3 of the output above.
@@ -252,7 +333,7 @@ None: 3 + 4 = 7, so the "triangle" is a flat line segment. Before the Pythagorea
 
 ## Flashcards
 
-The page as a deck of Anki cards, one fact per card: [`pythagorean_theorem.txt`](anki/pythagorean_theorem.txt). In Anki choose File → Import and pick the file; the header lines set the separator, note type (Basic), deck and tags, so nothing needs changing in the dialog. Tags such as `vocabulary`, `theorem`, `converse` and `problems` let you study one kind at a time, and `trap` gathers the cards built around a tempting wrong answer.
+The page as a deck of Anki cards, one fact per card: [`pythagorean_theorem.txt`](anki/pythagorean_theorem.txt). In Anki choose File → Import and pick the file; the header lines set the separator, note type (Basic), deck and tags, so nothing needs changing in the dialog. Tags such as `vocabulary`, `theorem`, `converse`, `special-triangles`, `three-d`, `law-of-cosines` and `problems` let you study one kind at a time, and `trap` gathers the cards built around a tempting wrong answer.
 
 ## Where this goes next
 
@@ -261,6 +342,8 @@ The next lesson, [area and volume formulas](../area_and_volume_formulas/README.m
 ## Po polsku, w skrócie
 
 Twierdzenie Pitagorasa mówi: jeśli trójkąt jest prostokątny, to kwadrat przeciwprostokątnej równa się sumie kwadratów przyprostokątnych, c² = a² + b². Przeciwprostokątna to bok naprzeciw kąta prostego, zawsze najdłuższy; przyprostokątne to dwa boki tworzące kąt prosty. Twierdzenie odwrotne mówi to samo w drugą stronę: jeśli kwadrat jednego boku równa się sumie kwadratów dwóch pozostałych, to trójkąt jest prostokątny, a kąt prosty leży naprzeciw tego boku. To dwa osobne twierdzenia, oba prawdziwe, i razem dają test: trzy długości albo go przechodzą, albo nie.
+
+Kąt prosty to ćwierć obrotu, 90° albo π/2; pozostałe dwa kąty są ostre i sumują się do 90°. Dwa trójkąty warto znać na pamięć: 45-45-90 o bokach 1 : 1 : √2 (pół kwadratu) i 30-60-90 o bokach 1 : √3 : 2 (pół trójkąta równobocznego). Przekątna prostopadłościanu to Pitagoras dwa razy: d² = p² + q² + r². A twierdzenie cosinusów uogólnia Pitagorasa, ale to ono jest dowodzone z Pitagorasa, nie odwrotnie.
 
 Pułapka: test ma sens tylko dla najdłuższego boku. W zadaniu 25 boki podano jako 6, 4, 3, i porównanie 3² z 6² + 4² to złe pytanie. Najpierw sortujemy, potem liczymy. A gdy równości nie ma, nierówność też coś mówi: jeśli c² < a² + b², największy kąt jest ostry; jeśli c² > a² + b², rozwarty. Program sprawdza to na dokładnych liczbach i pokazuje dowód przez pola: kwadrat o boku a + b to cztery trójkąty i kwadrat o boku c w środku.
 

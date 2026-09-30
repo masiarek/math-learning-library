@@ -120,6 +120,36 @@ def main() -> None:
     print("   their leading digits, and the difference keeps almost none of them.")
     print()
 
+    print("7. THE TWO SPECIAL RIGHT TRIANGLES, EXACTLY")
+    print("   45-45-90: half a square of side 1, cut along its diagonal.")
+    print(f"     legs 1 and 1:  c^2 = 1 + 1 = 2, so c = {surd(2)}.  Ratio 1 : 1 : sqrt(2).")
+    print("   30-60-90: half an equilateral triangle of side 2, cut down the middle.")
+    print(f"     hypotenuse 2, short leg 1:  long leg^2 = 4 - 1 = 3, so it is {surd(3)}.  Ratio 1 : sqrt(3) : 2.")
+    print("   The short leg is opposite the 30 degree angle and is half the hypotenuse.")
+    for k in [2, 5]:
+        print(f"     scaled by {k}: 45-45-90 legs {k}, {k}, hypotenuse {surd(2 * k * k)};"
+              f"  30-60-90 sides {k}, {surd(3 * k * k)}, {2 * k}")
+    print()
+
+    print("8. THE THEOREM TWICE: THE LONG DIAGONAL OF A BOX")
+    print(f"     {'box':12}{'face diagonal^2':>18}{'space diagonal^2':>19}{'d':>10}")
+    for p, q, r in [(3, 4, 12), (2, 3, 6), (1, 1, 1), (1, 4, 8)]:
+        face = p * p + q * q
+        print(f"     {f'{p} x {q} x {r}':12}{f'{p}^2 + {q}^2 = {face}':>18}{f'{face} + {r}^2 = {face + r * r}':>19}{surd(face + r * r):>10}")
+    print("   The face diagonal and the third edge meet at a right angle, so")
+    print("   d^2 = p^2 + q^2 + r^2. The unit cube's diagonal is sqrt(3).")
+    print()
+
+    print("9. THE HYPOTENUSE IS THE LONGEST SIDE, AND THE OTHER ANGLES ARE ACUTE")
+    print("   The angles add to 180, the right angle takes 90, so the other two add to 90:")
+    print("   each is acute, and they are complementary. The largest angle is opposite")
+    print("   the longest side, so the hypotenuse is the longest. And a + b > c still:")
+    for a, b in [(3, 4), (1, 1), (5, 12), (1, 100)]:
+        c2 = a * a + b * b
+        print(f"     legs {f'{a}, {b}':7}  c^2 = {c2:>5} < (a + b)^2 = {(a + b) ** 2:>5}, so c = {math.sqrt(c2):8.4f} < a + b = {a + b}")
+    print("   (a + b)^2 = a^2 + b^2 + 2ab, and the 2ab is the gap.")
+    print()
+
 
 def check(args: list[str]) -> None:
     sides = tuple(Fraction(s) for s in args)
