@@ -275,6 +275,24 @@ Trap: is the square root of (a^2 + b^2) equal to a + b?	No. The square root of 9
 Trap: a triangle has sides 1, 1 and the square root of 2. Which angle is right?	The one opposite the square root of 2, the longest side: 1 + 1 = 2.	math geometry pythagorean-theorem trap	Math::Pythagorean theorem
 Trap: every triangle with c^2 greater than a^2 + b^2 is obtuse. True for any labels?	Only when c is the longest side. With a short side as c, the inequality says nothing about the largest angle.	math geometry pythagorean-theorem trap	Math::Pythagorean theorem
 Trap: the theorem proves a triangle with sides 5, 12, 13 is right. Theorem or converse?	The converse. The theorem assumes the right angle; the converse concludes it from the sides.	math geometry pythagorean-theorem trap	Math::Pythagorean theorem
+What does perpendicular mean?	Two lines meeting at a right angle; all four angles where they cross are 90 degrees. Written with the symbol that looks like an upside-down T.	math geometry pythagorean-theorem vocabulary	Math::Pythagorean theorem
+A right angle in degrees, radians and gradians?	90 degrees, pi/2 radians, 100 gradians: a quarter turn in each.	math geometry pythagorean-theorem vocabulary	Math::Pythagorean theorem
+The two acute angles of a right triangle add up to what?	90 degrees: they are complementary. If one is theta, the other is 90 - theta.	math geometry pythagorean-theorem theorem	Math::Pythagorean theorem
+Why is the hypotenuse the longest side?	The largest angle of a triangle is opposite the longest side, and the right angle is the largest.	math geometry pythagorean-theorem theorem	Math::Pythagorean theorem
+Why is the hypotenuse shorter than the sum of the legs?	(a + b)^2 = a^2 + b^2 + 2ab, which is more than c^2 by 2ab.	math geometry pythagorean-theorem theorem	Math::Pythagorean theorem
+Side ratios of a 45-45-90 triangle, and where they come from?	1 : 1 : square root of 2. Half a square cut along its diagonal: c^2 = 1 + 1.	math geometry pythagorean-theorem special-triangles	Math::Pythagorean theorem
+Side ratios of a 30-60-90 triangle, and where they come from?	1 : square root of 3 : 2. Half an equilateral triangle of side 2: long leg^2 = 4 - 1 = 3.	math geometry pythagorean-theorem special-triangles	Math::Pythagorean theorem
+In a 30-60-90 triangle, which side is half the hypotenuse?	The short leg, opposite the 30 degree angle.	math geometry pythagorean-theorem special-triangles	Math::Pythagorean theorem
+45-45-90 with legs 7: hypotenuse?	7 times the square root of 2, about 9.90.	math geometry pythagorean-theorem special-triangles	Math::Pythagorean theorem
+30-60-90 with hypotenuse 10: legs?	5 and 5 times the square root of 3, about 8.66.	math geometry pythagorean-theorem special-triangles	Math::Pythagorean theorem
+Space diagonal of a box p by q by r?	The square root of p^2 + q^2 + r^2: Pythagoras on a face, then again with the third edge.	math geometry pythagorean-theorem three-d	Math::Pythagorean theorem
+Space diagonal of a 2 by 3 by 6 box?	7, since 4 + 9 + 36 = 49.	math geometry pythagorean-theorem three-d	Math::Pythagorean theorem
+Diagonal of a unit cube?	The square root of 3.	math geometry pythagorean-theorem three-d	Math::Pythagorean theorem
+State the law of cosines.	c^2 = a^2 + b^2 - 2ab cos C, for any triangle, with C the angle opposite c.	math geometry pythagorean-theorem law-of-cosines	Math::Pythagorean theorem
+How does the law of cosines reduce to Pythagoras?	At C = 90 degrees cos C = 0, so the last term vanishes.	math geometry pythagorean-theorem law-of-cosines	Math::Pythagorean theorem
+Trap: Pythagoras is a consequence of the law of cosines?	No, the other way round. The law of cosines is usually proved with Pythagoras; Pythagoras is the special case, not the consequence.	math geometry pythagorean-theorem trap	Math::Pythagorean theorem
+Trap: in a 30-60-90 triangle, the long leg is half the hypotenuse?	No. The short leg, opposite 30 degrees, is half. The long leg is the square root of 3 times the short leg.	math geometry pythagorean-theorem trap	Math::Pythagorean theorem
+Trap: the hypotenuse is the denominator of every basic trig ratio?	No. Tangent is opposite over adjacent. Sine and cosine divide by the hypotenuse.	math geometry pythagorean-theorem trap	Math::Pythagorean theorem
 Rectangle, length l and width w: perimeter and area?	Perimeter 2l + 2w. Area lw.	math geometry area-volume formula	Math::Area and volume formulas
 Triangle, base b and altitude h: area?	One half b h.	math geometry area-volume formula	Math::Area and volume formulas
 Circle of radius r: circumference and area?	Circumference 2 pi r, which is pi d. Area pi r^2.	math geometry area-volume formula	Math::Area and volume formulas
