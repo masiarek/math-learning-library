@@ -68,3 +68,6 @@ How does the law of cosines reduce to Pythagoras?	At C = 90 degrees cos C = 0, s
 Trap: Pythagoras is a consequence of the law of cosines?	No, the other way round. The law of cosines is usually proved with Pythagoras; Pythagoras is the special case, not the consequence.	trap
 Trap: in a 30-60-90 triangle, the long leg is half the hypotenuse?	No. The short leg, opposite 30 degrees, is half. The long leg is the square root of 3 times the short leg.	trap
 Trap: the hypotenuse is the denominator of every basic trig ratio?	No. Tangent is opposite over adjacent. Sine and cosine divide by the hypotenuse.	trap
+Why is the converse of the Pythagorean theorem true?	Build a right triangle with legs a and b. Its hypotenuse is the square root of a^2 + b^2 = c, so both triangles have sides a, b, c, and SSS makes them congruent: the right angle carries over.	converse
+Which congruence rule proves the converse of the Pythagorean theorem?	Side-Side-Side.	converse
+Trap: the right angle is opposite whichever side is alone on one side of the equation?	Only if you wrote it as a^2 + b^2 = c^2. In c^2 - b^2 = a^2 a leg is alone. Safe rule: the right angle is opposite the longest side.	trap

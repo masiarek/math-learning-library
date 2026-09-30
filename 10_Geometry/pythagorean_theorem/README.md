@@ -43,6 +43,10 @@ Given three lengths, is it a right triangle? The recipe has two steps, and the f
 
 Problem 25 lists its sides as 6, 4, 3, with the longest first. Testing 3² against 6² + 4² asks the wrong question. The right question is whether 6² = 36 equals 4² + 3² = 25. It does not.
 
+## Why the converse is true
+
+The converse needs its own proof, and it is short. Take a triangle with sides a, b, c where a² + b² = c². Now build a second triangle on purpose: two legs a and b meeting at a right angle. By the theorem, its third side is √(a² + b²), which is √(c²) = c. So the two triangles have the same three sides, a, b and c, and by the Side-Side-Side rule of [congruent and similar triangles](../congruent_and_similar_triangles/README.md) they are the same triangle. The second one has a right angle between a and b, so the first one does too. The theorem proves its own converse, with one step of congruence in between.
+
 ## More than yes or no
 
 When the test fails, *how* it fails still tells you something. Books usually leave this out:
@@ -291,7 +295,15 @@ None: 3 + 4 = 7, so the "triangle" is a flat line segment. Before the Pythagorea
 
 </details>
 
-**14. A 45-45-90 triangle has legs 7. Find the hypotenuse. A 30-60-90 triangle has hypotenuse 10. Find both legs.**
+**14. Why is the converse true? Give the idea of the proof in two sentences.**
+
+<details><summary>Answer</summary>
+
+Build a right triangle with legs a and b. The theorem gives it hypotenuse √(a² + b²) = c, so it has the same three sides as the given triangle, and SSS makes them congruent, right angle included.
+
+</details>
+
+**15. A 45-45-90 triangle has legs 7. Find the hypotenuse. A 30-60-90 triangle has hypotenuse 10. Find both legs.**
 
 <details><summary>Answer</summary>
 
@@ -299,7 +311,7 @@ None: 3 + 4 = 7, so the "triangle" is a flat line segment. Before the Pythagorea
 
 </details>
 
-**15. A box measures 2 × 3 × 6. How long is a rod that fits exactly from one corner to the opposite corner?**
+**16. A box measures 2 × 3 × 6. How long is a rod that fits exactly from one corner to the opposite corner?**
 
 <details><summary>Answer</summary>
 
@@ -307,7 +319,7 @@ d² = 4 + 9 + 36 = 49, so d = 7. Or in two steps: the bottom diagonal is √13, 
 
 </details>
 
-**16. One acute angle of a right triangle is 35°. What is the other? Could a right triangle have an angle of 95°?**
+**17. One acute angle of a right triangle is 35°. What is the other? Could a right triangle have an angle of 95°?**
 
 <details><summary>Answer</summary>
 
@@ -315,7 +327,7 @@ d² = 4 + 9 + 36 = 49, so d = 7. Or in two steps: the bottom diagonal is √13, 
 
 </details>
 
-**17. Someone says the Pythagorean theorem is "just a special case of the law of cosines, so it depends on it". What is right and what is wrong about that?**
+**18. Someone says the Pythagorean theorem is "just a special case of the law of cosines, so it depends on it". What is right and what is wrong about that?**
 
 <details><summary>Answer</summary>
 
