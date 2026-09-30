@@ -1,0 +1,57 @@
+1. WHAT PYTHON'S PARSER DOES WITH AN UNBRACKETED EXPRESSION
+   A | B & C        is read as  (A | (B & C))
+   A & B | C        is read as  ((A & B) | C)
+   A - B & C        is read as  ((A - B) & C)
+   A & B ^ C        is read as  ((A & B) ^ C)
+   A ^ B | C        is read as  ((A ^ B) | C)
+   A - B - C        is read as  ((A - B) - C)
+   A | B - A & C    is read as  (A | ((B - A) & C))
+   Tighter to looser:  -  then  &  then  ^  then  |,  left to right within
+   one level. The textbook order for sets is complement, difference,
+   intersection, union: the same ladder, with the complement written
+   U - A in Python and so taken before everything else by its brackets.
+
+2. A WORKED EXAMPLE, BOTH WAYS
+   U = {1, 2, 3, 4, 5};  {1, 2}′ = {3, 4, 5}
+   {5} ∪ {1, 2}′ ∩ {2, 3}    by the rule, ∩ first:   {5} | c & {2, 3}   = {3, 5}
+   ({5} ∪ {1, 2}′) ∩ {2, 3}  with the other grouping: ({5} | c) & {2, 3} = {3}
+   Two answers from one line of symbols: the convention is not decoration.
+   Many authors never rely on it and always write the brackets; do the same
+   when a reader might not know the rule.
+
+3. PRACTICE SETS, EVALUATED BY THE RULE
+   A = {1, 3, 5, 7}   B = {4, 5, 6, 7}   C = {1, 2, 3}   U = {0, ..., 9}
+     A ∪ B            A | B          {1, 3, 4, 5, 6, 7}
+     A ∩ B            A & B          {5, 7}
+     A ∖ B            A - B          {1, 3}
+     B ∖ A            B - A          {4, 6}
+     A′               U - A          {0, 2, 4, 6, 8, 9}
+     A △ B            A ^ B          {1, 3, 4, 6}
+     A ∪ B ∩ C        A | B & C      {1, 3, 5, 7}
+     (A ∪ B) ∩ C      (A | B) & C    {1, 3}
+     A ∩ B ∪ C        A & B | C      {1, 2, 3, 5, 7}
+     A ∩ (B ∪ C)      A & (B | C)    {1, 3, 5, 7}
+     A ∖ B ∖ C        A - B - C      {}
+     A ∖ (B ∖ C)      A - (B - C)    {1, 3}
+     A ∪ B ∖ A ∩ C    A | B - A & C  {1, 3, 5, 7}
+     A′ ∩ B           (U - A) & B    {4, 6}
+
+4. THE TWO MISTAKES, AS PYTHON BUGS
+   x ∈ A ∩ x ∈ B  ->  x in A & x in B    : TypeError
+     & binds tighter than 'in', so it is read as  x in (A & x) in B,  a chained
+     comparison that asks for A & 2: an operation on sets given a number.
+   x ∈ A ∧ B      ->  x in A and B       : {2, 3}
+     parsed as (x in A) and B, which hands back the set B, not True or False.
+     with x = 1: x in A and B = {2, 3}, truthy, though 1 is not in B;
+     an 'if' takes the wrong branch and nothing complains.
+   right:  x in A and x in B = True,   x in A & B = True
+   A set goes on each side of ∩; a statement goes on each side of ∧.
+
+5. (1, 2) ∪ (2, 1): A PAIR OR AN INTERVAL?
+   as ordered pairs, (a, b) = {{a}, {a, b}} (Kuratowski):
+     (1, 2) = {{1}, {1, 2}}   (2, 1) = {{2}, {1, 2}}
+     union {{1}, {2}, {1, 2}}   intersection {{1, 2}}   (1, 2) ∖ (2, 1) = {{1}}
+   as open intervals, (2, 1) has no members, since no t has 2 < t < 1:
+     on the grid 0, 0.25, ..., 3:  (1, 2) -> [1.25, 1.5, 1.75],  (2, 1) -> []
+     so (1, 2) ∪ (2, 1) = (1, 2) and (1, 2) ∩ (2, 1) = ∅.
+   Same symbols, two different sets: read (a, b) by its context.

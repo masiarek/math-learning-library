@@ -88,3 +88,17 @@
    cancels, so a chain keeps exactly what occurs an odd number of times:
    {1, 2, 3} ^ {3, 4, 5} ^ {5, 6, 7} ^ {1, 7, 8} = {2, 4, 6, 8}
    and A ^ B is empty exactly when A = B, for every pair: True
+
+8. QUANTIFIERS OVER A UNION OR AN INTERSECTION
+   every A, B ⊆ {1, 2, 3} and every predicate p on it: 512 cases
+     ∀x∈A∪B p  ⇒  ∀x∈A∩B p              holds
+     ∀x∈A∪B p  ⇔  ∀x∈A p ∧ ∀x∈B p       holds
+     ∃x∈A∩B p  ⇒  ∃x∈A p ∧ ∃x∈B p       holds
+     ∃x∈A∪B p  ⇔  ∃x∈A p ∨ ∃x∈B p       holds
+     ∀x∈A p ∨ ∀x∈B p  ⇒  ∀x∈A∪B p       fails, e.g. A = {}, B = {1}, p true on {}
+     ∃x∈A p ∧ ∃x∈B p  ⇒  ∃x∈A∩B p       fails, e.g. A = {1}, B = {2}, p true on {1, 2}
+   ∀ splits over ∪ as ∧ and ∃ splits over ∪ as ∨; over ∩ only one
+   direction survives. And over ∅:
+     ∀x∈∅ p is True for every p, ∃x∈∅ p is False for every p
+   which is why ∅ ⊆ A: 'every x in ∅ is in A' has no x to fail on.
+   and A = B exactly when A ⊆ B and B ⊆ A, for every pair of subsets of U: True

@@ -172,6 +172,44 @@ def main() -> None:
     eq = all(((a ^ b) == E) == (a == b) for a, b in product(S, S))
     print(f"   and A ^ B is empty exactly when A = B, for every pair: {eq}")
 
+    print()
+
+    print("8. QUANTIFIERS OVER A UNION OR AN INTERSECTION")
+    V = frozenset({1, 2, 3})
+    VS = subsets(V)
+    preds = VS  # a predicate p on V is the set of x where p(x) is true
+
+    def every(X, p):
+        return all(x in p for x in X)
+
+    def some(X, p):
+        return any(x in p for x in X)
+
+    claims = [
+        ("∀x∈A∪B p  ⇒  ∀x∈A∩B p", lambda a, b, p: not every(a | b, p) or every(a & b, p)),
+        ("∀x∈A∪B p  ⇔  ∀x∈A p ∧ ∀x∈B p", lambda a, b, p: every(a | b, p) == (every(a, p) and every(b, p))),
+        ("∃x∈A∩B p  ⇒  ∃x∈A p ∧ ∃x∈B p", lambda a, b, p: not some(a & b, p) or (some(a, p) and some(b, p))),
+        ("∃x∈A∪B p  ⇔  ∃x∈A p ∨ ∃x∈B p", lambda a, b, p: some(a | b, p) == (some(a, p) or some(b, p))),
+        ("∀x∈A p ∨ ∀x∈B p  ⇒  ∀x∈A∪B p", lambda a, b, p: not (every(a, p) or every(b, p)) or every(a | b, p)),
+        ("∃x∈A p ∧ ∃x∈B p  ⇒  ∃x∈A∩B p", lambda a, b, p: not (some(a, p) and some(b, p)) or some(a & b, p)),
+    ]
+    cases = list(product(VS, VS, preds))
+    print(f"   every A, B ⊆ {show(V)} and every predicate p on it: {len(cases)} cases")
+    for text, claim in claims:
+        bad = [c for c in cases if not claim(*c)]
+        if not bad:
+            print(f"     {text:<34} holds")
+        else:
+            a, b, p = min(bad, key=lambda c: (sum(len(x) for x in c), [sorted(x) for x in c]))
+            print(f"     {text:<34} fails, e.g. A = {show(a)}, B = {show(b)}, p true on {show(p)}")
+    print("   ∀ splits over ∪ as ∧ and ∃ splits over ∪ as ∨; over ∩ only one")
+    print("   direction survives. And over ∅:")
+    print(f"     ∀x∈∅ p is {all(every(E, p) for p in preds)} for every p, "
+          f"∃x∈∅ p is {any(some(E, p) for p in preds)} for every p")
+    print("   which is why ∅ ⊆ A: 'every x in ∅ is in A' has no x to fail on.")
+    dbl = all((a == b) == (a <= b and b <= a) for a, b in product(S, S))
+    print(f"   and A = B exactly when A ⊆ B and B ⊆ A, for every pair of subsets of U: {dbl}")
+
 
 if __name__ == "__main__":
     main()

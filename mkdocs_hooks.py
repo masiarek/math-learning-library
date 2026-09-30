@@ -123,6 +123,7 @@ NAV_ORDER: dict[str, list[str]] = {
         "what_is_a_set",
         "python_sets",
         "algebra_of_sets",
+        "reading_set_expressions",
         "cartesian_product",
         "cardinality",
     ],

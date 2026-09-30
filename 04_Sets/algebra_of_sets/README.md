@@ -72,6 +72,16 @@ A △ B is the members of exactly one of A and B, (A ∖ B) ∪ (B ∖ A), which
 
 The A + B spelling is not a whim. Section 7 checks that △ is associative and commutative, that ∅ is an identity (A △ ∅ = A) and that every set is its own inverse (A △ A = ∅). So the subsets of U form a **group** under △, in the sense of [the laws of an operation](../../06_Algebraic_Structures/laws_of_an_operation/README.md), and with ∩ as multiplication they form a ring, the algebra of bits under XOR and AND. Two consequences are worth keeping. A chain A △ B △ C △ … keeps exactly the members that occur an odd number of times, because each pair of occurrences cancels: {1, 2, 3} △ {3, 4, 5} △ {5, 6, 7} △ {7, 8, 1} = {2, 4, 6, 8}. And A △ B = ∅ exactly when A = B, which makes the symmetric difference a test of equality.
 
+## Quantifiers over a union
+
+Statements about *every* or *some* member of a set follow the same logic. Section 8 checks six claims on every pair of subsets of {1, 2, 3} and every predicate p on it, 512 cases:
+
+- ∀x ∈ A ∪ B: p(x) is the same as (∀x ∈ A: p(x)) ∧ (∀x ∈ B: p(x)), and ∃x ∈ A ∪ B: p(x) is the same as (∃x ∈ A: p(x)) ∨ (∃x ∈ B: p(x)). A union splits a *for all* into *and* and a *there exists* into *or*.
+- Over an intersection only one direction survives. ∃x ∈ A ∩ B: p(x) gives an x in A and in B, but an x in A and a *different* x in B do not give one in A ∩ B: A = {1}, B = {2}, p true on both.
+- Likewise (∀x ∈ A: p) ∨ (∀x ∈ B: p) does not give ∀x ∈ A ∪ B: p. The smallest counterexample the search finds uses A = ∅, where ∀x ∈ ∅: p(x) is true for every p because there is no x to fail. That vacuous truth is also the whole proof that ∅ ⊆ A.
+
+The section ends with the rule that turns every set equality into two subset proofs: A = B exactly when A ⊆ B and B ⊆ A.
+
 ## What the program prints
 
 <!-- output:algebra_of_sets -->
@@ -168,6 +178,20 @@ The A + B spelling is not a whim. Section 7 checks that △ is associative and c
    cancels, so a chain keeps exactly what occurs an odd number of times:
    {1, 2, 3} ^ {3, 4, 5} ^ {5, 6, 7} ^ {1, 7, 8} = {2, 4, 6, 8}
    and A ^ B is empty exactly when A = B, for every pair: True
+
+8. QUANTIFIERS OVER A UNION OR AN INTERSECTION
+   every A, B ⊆ {1, 2, 3} and every predicate p on it: 512 cases
+     ∀x∈A∪B p  ⇒  ∀x∈A∩B p              holds
+     ∀x∈A∪B p  ⇔  ∀x∈A p ∧ ∀x∈B p       holds
+     ∃x∈A∩B p  ⇒  ∃x∈A p ∧ ∃x∈B p       holds
+     ∃x∈A∪B p  ⇔  ∃x∈A p ∨ ∃x∈B p       holds
+     ∀x∈A p ∨ ∀x∈B p  ⇒  ∀x∈A∪B p       fails, e.g. A = {}, B = {1}, p true on {}
+     ∃x∈A p ∧ ∃x∈B p  ⇒  ∃x∈A∩B p       fails, e.g. A = {1}, B = {2}, p true on {1, 2}
+   ∀ splits over ∪ as ∧ and ∃ splits over ∪ as ∨; over ∩ only one
+   direction survives. And over ∅:
+     ∀x∈∅ p is True for every p, ∃x∈∅ p is False for every p
+   which is why ∅ ⊆ A: 'every x in ∅ is in A' has no x to fail on.
+   and A = B exactly when A ⊆ B and B ⊆ A, for every pair of subsets of U: True
 ```
 <!-- /output -->
 

@@ -37,3 +37,8 @@ Which notations are used for symmetric difference?	A △ B, A ⊖ B, A ∇ B, A 
 Why can symmetric difference be written A + B?	The subsets form a group under △: associative, commutative, identity ∅, and A △ A = ∅, so each set is its own inverse.	law
 What does a chain A △ B △ C △ ... keep?	The members that occur an odd number of times; pairs cancel.	law
 When is A △ B empty?	Exactly when A = B.	law
+How do ∀ and ∃ split over A ∪ B?	∀x∈A∪B p ⇔ ∀x∈A p ∧ ∀x∈B p;  ∃x∈A∪B p ⇔ ∃x∈A p ∨ ∃x∈B p.	law
+Does ∃x∈A p ∧ ∃x∈B p imply ∃x∈A∩B p?	No: A = {1}, B = {2}, p true on both; A ∩ B is empty.	trap
+Does ∀x∈A p ∨ ∀x∈B p imply ∀x∈A∪B p?	No: A = ∅ makes ∀x∈A p true vacuously while p fails on B.	trap
+What are ∀x∈∅ p and ∃x∈∅ p?	True and false, for every p. That is why ∅ ⊆ A.	law
+How is set equality proved from subsets?	A = B exactly when A ⊆ B and B ⊆ A: show both inclusions.	law

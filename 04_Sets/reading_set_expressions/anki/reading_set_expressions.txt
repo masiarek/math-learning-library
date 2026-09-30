@@ -1,0 +1,19 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Sets::Reading a set expression
+#tags:sets math
+#columns:Front	Back	Tags
+#tags column:3
+What is the usual order of set operations, tightest first?	Complement, difference, intersection, union; left to right within a level.	precedence
+Where does the order of set operations come from?	From logic: not before and before or, since ′ is not, ∩ is and, ∪ is or.	precedence
+How does Python bracket A | B & C?	A | (B & C): & binds tighter than |.	python
+Python's set operator precedence, tightest first?	- then & then ^ then |.	python
+How is A ∖ B ∖ C read?	(A ∖ B) ∖ C, left to right; A ∖ (B ∖ C) is different.	precedence
+With U = {1,...,5}, {5} ∪ {1,2}′ ∩ {2,3} = ?	{3, 5} by the rule (∩ first); ({5} ∪ {1,2}′) ∩ {2,3} would be {3}.	precedence
+What is wrong with writing x ∈ A ∩ x ∈ B?	∩ needs sets on both sides, and x ∈ A is a statement. Write x ∈ A ∧ x ∈ B or x ∈ A ∩ B.	trap
+What is wrong with writing x ∈ A ∧ B?	∧ needs statements on both sides, and B is a set. Write x ∈ A ∧ x ∈ B.	trap
+What does Python do with x in A & x in B?	Reads it as x in (A & x) in B and raises TypeError for a number x.	python
+What does Python return for x in A and B when x is in A?	The set B itself, which is truthy even when x is not in B: a silent bug.	python
+With (a, b) = {{a}, {a, b}}, what is (1, 2) ∩ (2, 1)?	{{1, 2}}.	notation
+As open intervals, what is (1, 2) ∪ (2, 1)?	(1, 2), because (2, 1) is empty.	notation
