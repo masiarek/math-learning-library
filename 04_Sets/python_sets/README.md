@@ -343,6 +343,7 @@ python3 04_Sets/python_sets/examples/python_sets.py
 - [What is a set?](../what_is_a_set/README.md) — the mathematical rules this type implements: extensionality, the empty set, separation
 - [Cardinality of sets](../cardinality/README.md) — `len(s)`, and `COUNT(DISTINCT ...)` as the size of a set
 - [The Cartesian product](../cartesian_product/README.md) — the tuple, the object that does remember order
-- [The sibling Python library ↗](https://masiarek.github.io/python-learning-library/) — Python itself, where the set type's own pages belong
+- [Defining `__eq__` deletes `__hash__` ↗](https://masiarek.github.io/python-learning-library/07_Classes_and_the_Data_Model/defining_eq_deletes_hash/index.html) — the sibling Python library: the hash contract behind section 2, and a member lost from its set when its fields change
+- [`strip` is a set, not a prefix ↗](https://masiarek.github.io/python-learning-library/01_Text_and_Bytes/strip_is_a_set/index.html) — the sibling Python library: a set of characters where a prefix was meant
 - [Set types ↗](https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset) — the Python documentation: every operator and method, and the note that operators require sets
 - [Glossary: hashable ↗](https://docs.python.org/3/glossary.html#term-hashable) — the Python documentation's definition
