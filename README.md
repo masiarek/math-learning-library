@@ -147,6 +147,7 @@ The twelfth chapter is about the reader, not the mathematics: how to tell whethe
 | [Studying vs learning](12_Learning_to_Learn/studying_vs_learning/README.md) | Bloom's six levels climbed on the Pythagorean theorem, up to a formula that re-creates the facts a student would memorise |
 | [Spaced retrieval](12_Learning_to_Learn/spaced_retrieval/README.md) | The forgetting curve, why testing beats rereading, the study cycle, and why a geometric review schedule makes remembering cost a logarithm |
 | [Day or night: perspective taking](12_Learning_to_Learn/day_or_night/README.md) | "When does night begin?" has four exact answers in Starbuck, WA, 20:49 to 23:39, one per cutoff; the sorites, and fuzzy logic's third way out |
+| [Learned helplessness](12_Learning_to_Learn/learned_helplessness/README.md) | Honest counting, (s + 1)/(n + 2), leaves a learner who failed ten times never trying the lever that works; four small successes, or four watched ones, get them started |
 
 The books behind it, and behind the other chapters, are on the [resources](RESOURCES.md) page.
 
