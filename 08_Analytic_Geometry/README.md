@@ -23,7 +23,7 @@ Lesson 3 finds the point halfway, one [average](../05_Statistics/mean_vs_average
 
 ## All the flashcards in one file
 
-[`precalculus_chapter_1_anki.txt`](precalculus_chapter_1_anki.txt) holds every card of this chapter and of the geometry it assumes, [10_Geometry](../10_Geometry/README.md): 361 cards in nine decks, one per lesson. In Anki choose File → Import, pick the file, and click Import; the header lines put each card in its lesson's deck, under *Math*, with its tags. On a phone or a machine without a clone, download it from [this link ↗](https://raw.githubusercontent.com/masiarek/math-learning-library/master/08_Analytic_Geometry/precalculus_chapter_1_anki.txt) with the browser's "Save as".
+[`precalculus_chapter_1_anki.txt`](precalculus_chapter_1_anki.txt) holds every card of this chapter and of the geometry it assumes, [10_Geometry](../10_Geometry/README.md): 370 cards in nine decks, one per lesson. In Anki choose File → Import, pick the file, and click Import; the header lines put each card in its lesson's deck, under *Math*, with its tags. On a phone or a machine without a clone, download it from [this link ↗](https://raw.githubusercontent.com/masiarek/math-learning-library/master/08_Analytic_Geometry/precalculus_chapter_1_anki.txt) with the browser's "Save as".
 
 ## Where this is taught
 

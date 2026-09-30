@@ -43,6 +43,26 @@ Given three lengths, is it a right triangle? The recipe has two steps, and the f
 
 Problem 25 lists its sides as 6, 4, 3, with the longest first. Testing 3² against 6² + 4² asks the wrong question. The right question is whether 6² = 36 equals 4² + 3² = 25. It does not.
 
+### Alone and together: the letters are jobs, not names
+
+In a² + b² = c² the letter c does not mean "the third number written down". It is a job: *the side opposite the right angle*. The equation is shorthand for one sentence, (leg)² + (other leg)² = (hypotenuse)², and it only says something true when every side has been given its right job.
+
+Take the 3-4-5 triangle, whose right angle sits between the sides 3 and 4. There are three ways to choose which side stands alone:
+
+| Standing alone, as c | The other two, added | Alone, squared | Equal? |
+|---|---|---|---|
+| **5**, the hypotenuse | 3² + 4² = 9 + 16 = 25 | 5² = 25 | yes |
+| 4, a leg | 3² + 5² = 9 + 25 = 34 | 4² = 16 | no |
+| 3, a leg | 4² + 5² = 16 + 25 = 41 | 3² = 9 | no |
+
+It is the same triangle each time. The last two rows fail because they make a claim the theorem never made, "leg² + hypotenuse² = other leg²", and that sentence is false. They could not have worked: two squares added are bigger than either one alone, so whatever stands alone must be the *biggest* side. Put a short side there and the lone square is too small, 16 < 34 and 9 < 41.
+
+Which side of the equals sign doesn't matter. a² + b² = c² and c² = a² + b² are the same equation read in opposite directions. What matters is **alone** and **together**:
+
+1. Find the longest side. That is c.
+2. Put c² **alone** on one side of the equals sign, and the other two squares **added** on the other side.
+3. Compare.
+
 ## Why the converse is true
 
 The converse needs its own proof, and it is short. Take a triangle with sides a, b, c where a² + b² = c². Now build a second triangle on purpose: two legs a and b meeting at a right angle. By the theorem, its third side is √(a² + b²), which is √(c²) = c. So the two triangles have the same three sides, a, b and c, and by the Side-Side-Side rule of [congruent and similar triangles](../congruent_and_similar_triangles/README.md) they are the same triangle. The second one has a right angle between a and b, so the first one does too. The theorem proves its own converse, with one step of congruence in between.
