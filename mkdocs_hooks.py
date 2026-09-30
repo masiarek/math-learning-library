@@ -185,7 +185,8 @@ NAV_ORDER: dict[str, list[str]] = {
     # Bloom's levels climbed on one theorem, and spacing that keeps it cheaply;
     # then the cutoff hidden under a confident yes-or-no, and the belief that
     # stops you trying and so never meets the evidence; last, the planning
-    # fallacy, and the hour a schedule needs in reserve.
+    # fallacy, and the hour a schedule needs in reserve; and cognitive load,
+    # where the weight of a page depends on the chunks its reader has built.
     "12_Learning_to_Learn": [
         "README.md",
         "metacognition",
@@ -195,6 +196,7 @@ NAV_ORDER: dict[str, list[str]] = {
         "day_or_night",
         "learned_helplessness",
         "the_buffer_hour",
+        "cognitive_load",
     ],
     "09_Calculus": [
         "README.md",

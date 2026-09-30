@@ -6,7 +6,7 @@
 
 ## The experiment
 
-Chapter 2 of *Set Up for Success*, "Discovering Yourself as a Learner", tells the story. In 1975 Donald Hiroto and Martin Seligman gave college students a loud noise. One group had a button that stopped it; the other had a button that did nothing. Later, in a room where a lever on the wall stopped the noise, the first group quickly found the lever. The second group mostly did not look. They had learned to be helpless: when trying has not worked before, there is no reason to think it will work now. The book's everyday versions are the student who has failed statistics twice and stops enrolling, and the reader of astronomy books who rules out a science major after bad science grades at school.
+Chapter 2 of Todd Zakrajsek's *The New Science of Learning* (third edition, 2022), "Discovering Yourself as a Learner", tells the story. In 1975 Donald Hiroto and Martin Seligman gave college students a loud noise. One group had a button that stopped it; the other had a button that did nothing. Later, in a room where a lever on the wall stopped the noise, the first group quickly found the lever. The second group mostly did not look. They had learned to be helpless: when trying has not worked before, there is no reason to think it will work now. The book's everyday versions are the student who has failed statistics twice and stops enrolling, and the reader of astronomy books who rules out a science major after bad science grades at school.
 
 The book's point is that this is not a character flaw. A strong, intelligent person can be trapped in a situation an outsider thinks is easy to escape. The program shows why: helplessness is what honest counting produces, once the counting has stopped.
 

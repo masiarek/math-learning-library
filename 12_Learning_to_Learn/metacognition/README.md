@@ -237,6 +237,12 @@ It says nothing about their answers. A useful confidence separates the answers t
 3. **Stop studying a topic on a test result, not on a feeling.** "I got 9 of 10 without looking" is a reason to move on. "It looks familiar" is not.
 4. **When a grade surprises you, look at the gap before the grade.** The grade says how much you knew; the gap says how well you knew it, and you can fix that.
 
+## The same idea in Zakrajsek
+
+Todd Zakrajsek's *The New Science of Learning* (third edition, 2022), chapter 5, splits **metacognitive regulation** into three skills (after Tanner, 2012): **planning** before you study (what the exam expects, where, how long, alone or with others), **monitoring** while you study (every few pages, look away and explain the main idea to yourself, more often when the material is hard), and **evaluating** afterwards (was the time well spent; what do I understand least?). For the last he gives the **muddiest point** (Angelo and Cross, 1993): end each session by writing down what you understand least, and start the next one there.
+
+His student Jules had dropped statistics three times, each time after failing the first exam, and called themselves "bad at math". Two thoughts were banned for the fourth attempt, "I can't do math" and "statistics is stupid". "All of math" became one concept at a time, the median first, and "I can't" became "I can't *yet*". Jules also kept a log of two predictions per exam: the grade they expected after reading the first question, and the grade they expected after answering the last. As the skill grows, the two estimates should come closer together. That log is a calibration table with one row per exam, the thing this page's program builds. Jules passed with a C, stayed in the psychology programme, and at graduation said the metacognitive skills were what carried them through. Study Tip 5.2: *when you evaluate, note what you are doing well too.*
+
 ## Flashcards
 
 The page as a deck of Anki cards: [`metacognition.txt`](anki/metacognition.txt). Import with File → Import. Tags: `definition`, `calibration`, `scoring`, `trap`.
@@ -247,7 +253,7 @@ Metakognicja to według Johna Flavella „myślenie o własnym myśleniu". Saund
 
 Pierwsze trzy to nawyki. Czwarty to twierdzenie, a twierdzenie można sprawdzić: zanim odpowiesz na pytanie, zapisz, na ile procent jesteś pewien, a potem porównaj z wynikiem. Kto przeczytał notatki dwa razy, zwykle jest pewny na 90% i ma rację w połowie przypadków, bo znajome wydaje się znane. Rozpoznać coś, gdy się to widzi, a przypomnieć sobie bez podglądania, to dwie różne umiejętności, a egzamin sprawdza tę drugą.
 
-Miarą jest wynik Briera: średnia z (pewność − wynik)². Ma on ważną cechę: najmniejszą wartość oczekiwaną daje podanie dokładnie tej pewności, którą się naprawdę ma. Przechwalanie się nie opłaca, fałszywa skromność też nie. Wniosek praktyczny: kończ naukę tematu po teście, a nie po uczuciu, że „już umiem".
+Miarą jest wynik Briera: średnia z (pewność − wynik)². Ma on ważną cechę: najmniejszą wartość oczekiwaną daje podanie dokładnie tej pewności, którą się naprawdę ma. Przechwalanie się nie opłaca, fałszywa skromność też nie. Wniosek praktyczny: kończ naukę tematu po teście, a nie po uczuciu, że „już umiem". Todd Zakrajsek dodaje trzy umiejętności: planowanie przed nauką, sprawdzanie siebie w trakcie i ocenę po, na przykład zapisanie na koniec, czego rozumiemy najmniej. Jego student Jules prowadził dziennik: przewidywana ocena przed egzaminem i po nim. To ta sama tabela kalibracji, którą buduje program.
 
 ## See also
 
@@ -257,6 +263,7 @@ Miarą jest wynik Briera: średnia z (pewność − wynik)². Ma on ważną cech
 - [Resources](../../RESOURCES.md) — the books behind this chapter
 - Saundra Yancy McGuire with Stephanie McGuire, *Teach Yourself How to Learn: Strategies You Can Use to Ace Any Course at Any Level* (Stylus, 2018), chapter 3 and Figure 3.2
 - John H. Flavell, "Metacognitive aspects of problem solving", in L. B. Resnick (ed.), *The Nature of Intelligence* (Erlbaum, 1976), where the word began
+- Todd D. Zakrajsek, *The New Science of Learning: How to Learn in Harmony With Your Brain*, 3rd ed. (Stylus/Routledge, 2022), chapter 5: planning, monitoring, evaluating, the muddiest point, and Jules
 - Henry L. Roediger III and Jeffrey D. Karpicke, "Test-enhanced learning: taking memory tests improves long-term retention", *Psychological Science* 17 (2006), the rereading experiment
 - [Brier score ↗](https://en.wikipedia.org/wiki/Brier_score) and [Scoring rule ↗](https://en.wikipedia.org/wiki/Scoring_rule) — Wikipedia, for proper scoring rules
 - [Metapoznanie ↗](https://pl.wikipedia.org/wiki/Metapoznanie) — Wikipedia po polsku
