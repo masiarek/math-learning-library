@@ -29,7 +29,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
     - **Building sets** · from [Sets](04_Sets/README.md)
         - [What is a set?](04_Sets/what_is_a_set/README.md) — well-defined, extensionality, the empty set, null set, Russell's paradox, separation, no set of all sets
         - [The algebra of sets](04_Sets/algebra_of_sets/README.md) — universal set, complement, De Morgan's laws, distributive and absorption laws, Boolean algebra, Venn regions, ⊆ as a partial order (poset)
-        - [Sets in Python](04_Sets/python_sets/README.md) — creating, hashable members, operators vs methods, union, intersection, difference, symmetric difference, subset and superset, frozenset, equality, dedupe, joins as set operations
+        - [Sets in Python](04_Sets/python_sets/README.md) — the bridge: extensionality is ==, separation is a comprehension, | & - ^ as or, and, and-not, xor, no complement without U; links to the Python, Rust and ABAP pages
         - [The Cartesian product](04_Sets/cartesian_product/README.md) — ordered pairs, ℝ², and why A × B is not B × A
         - ↪ [Rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md) — the pairs of ℝ² as points of the plane
     - **Size by matching** · from [Sets](04_Sets/README.md) and [Measure Zero](02_Measure_Zero/README.md)

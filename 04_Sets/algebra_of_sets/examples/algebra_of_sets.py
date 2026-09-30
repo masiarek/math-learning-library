@@ -149,6 +149,29 @@ def main() -> None:
     print(f"   sorted(..., key=lambda s: (len(s), sorted(s))) = "
           f"{[show(d) for d in sorted(data, key=lambda s: (len(s), sorted(s)))]}")
 
+    print()
+
+    print("7. SYMMETRIC DIFFERENCE: EXCLUSIVE OR, AND A GROUP")
+    A, B = frozenset({1, 2, 3, 4}), frozenset({1, 4, 5})
+    print(f"   A = {show(A)}, B = {show(B)}:  A ^ B = {show(A ^ B)}"
+          "   2, 3 and 5 are each in one, not both")
+    print(f"   (A - B) | (B - A) = {show((A - B) | (B - A))}   (A | B) - (A & B) = {show((A | B) - (A & B))}")
+    assoc = all(((a ^ b) ^ c) == (a ^ (b ^ c)) for a, b, c in product(S, S, S))
+    ident = all((a ^ E) == a for a in S)
+    inverse = all((a ^ a) == E for a in S)
+    comm = all((a ^ b) == (b ^ a) for a, b in product(S, S))
+    print(f"   associative {assoc}   identity {{}} {ident}   A ^ A = {{}} {inverse}   commutative {comm}")
+    print("   So the 16 subsets form a group under ^, every set its own inverse,")
+    print("   which is why it is also written A + B. Adding the same set twice")
+    print("   cancels, so a chain keeps exactly what occurs an odd number of times:")
+    sets = [{1, 2, 3}, {3, 4, 5}, {5, 6, 7}, {7, 8, 1}]
+    chain = frozenset()
+    for t in sets:
+        chain = chain ^ t
+    print(f"   {' ^ '.join(show(t) for t in sets)} = {show(chain)}")
+    eq = all(((a ^ b) == E) == (a == b) for a, b in product(S, S))
+    print(f"   and A ^ B is empty exactly when A = B, for every pair: {eq}")
+
 
 if __name__ == "__main__":
     main()

@@ -50,7 +50,7 @@ Algebra with numbers invites some moves that set algebra does not allow. Section
 
 - **(A ∪ B) ∖ B = A** fails when A and B overlap: A = {1}, B = {1} gives ∅. Taking B back out also takes out the part of A that was in B. Union is not addition, and difference does not undo it.
 - **(A ∖ B) ∪ B = A** fails when B has members outside A.
-- **A ∖ (B ∖ C) = (A ∖ B) ∖ C** fails: difference is not associative, which is the "left to right" in [sets in Python](../python_sets/README.md#chaining-what--of-three-sets-means-section-5).
+- **A ∖ (B ∖ C) = (A ∖ B) ∖ C** fails: difference is not associative, which is the "left to right" of Python's `s1 - s2 - s3` (see [a set is a hash table ↗](https://masiarek.github.io/python-learning-library/04_Names_and_Objects/a_set_is_a_hash_table/index.html)).
 - **A ∖ B = B ∖ A** fails; difference is not commutative.
 - **A ∪ B = A ∪ C implies B = C** fails: A = {1}, B = ∅, C = {1}. There is no cancellation for union, because A can absorb the difference.
 
@@ -65,6 +65,12 @@ A Venn diagram of n sets draws one region for each pattern of membership: in or 
 ⊆ has the three properties of an order: every set is a subset of itself (reflexive), A ⊆ B and B ⊆ A together force A = B (antisymmetric, which is extensionality again), and A ⊆ B ⊆ C gives A ⊆ C (transitive). Unlike ≤ on numbers, it is not **total**: {1} and {2} are neither above nor below each other. Of the 120 pairs of distinct subsets of {1, 2, 3, 4}, only 65 are comparable. A set with an order like this is a **partially ordered set**, or poset, and the subsets of a set are the standard example.
 
 That has a consequence in Python. `sorted()` compares with `<`, and for sets `<` means proper subset. Given sets that are not all comparable, it returns an order that depends on the input order and means nothing: section 6 sorts the same three sets three ways and gets three answers. To sort sets, give a key that is a total order, such as `key=lambda s: (len(s), sorted(s))`.
+
+## Symmetric difference is exclusive or
+
+A △ B is the members of exactly one of A and B, (A ∖ B) ∪ (B ∖ A), which is also (A ∪ B) ∖ (A ∩ B): in logic, *exclusive or*. For A = {1, 2, 3, 4} and B = {1, 4, 5} it is {2, 3, 5}, since each of 2, 3 and 5 is in one set but not both. Books write it A △ B, A ⊖ B, A ∇ B or A + B; Wolfram MathWorld recommends ⊖, because the other symbols already mean something else elsewhere in mathematics.
+
+The A + B spelling is not a whim. Section 7 checks that △ is associative and commutative, that ∅ is an identity (A △ ∅ = A) and that every set is its own inverse (A △ A = ∅). So the subsets of U form a **group** under △, in the sense of [the laws of an operation](../../06_Algebraic_Structures/laws_of_an_operation/README.md), and with ∩ as multiplication they form a ring, the algebra of bits under XOR and AND. Two consequences are worth keeping. A chain A △ B △ C △ … keeps exactly the members that occur an odd number of times, because each pair of occurrences cancels: {1, 2, 3} △ {3, 4, 5} △ {5, 6, 7} △ {7, 8, 1} = {2, 4, 6, 8}. And A △ B = ∅ exactly when A = B, which makes the symmetric difference a test of equality.
 
 ## What the program prints
 
@@ -152,6 +158,16 @@ That has a consequence in Python. `sorted()` compares with `<`, and for sets `<`
    which for sets is 'proper subset', and {3} is neither above nor below
    the others. Sort by a key that is a total order instead:
    sorted(..., key=lambda s: (len(s), sorted(s))) = ['{1}', '{3}', '{1, 2}']
+
+7. SYMMETRIC DIFFERENCE: EXCLUSIVE OR, AND A GROUP
+   A = {1, 2, 3, 4}, B = {1, 4, 5}:  A ^ B = {2, 3, 5}   2, 3 and 5 are each in one, not both
+   (A - B) | (B - A) = {2, 3, 5}   (A | B) - (A & B) = {2, 3, 5}
+   associative True   identity {} True   A ^ A = {} True   commutative True
+   So the 16 subsets form a group under ^, every set its own inverse,
+   which is why it is also written A + B. Adding the same set twice
+   cancels, so a chain keeps exactly what occurs an odd number of times:
+   {1, 2, 3} ^ {3, 4, 5} ^ {5, 6, 7} ^ {1, 7, 8} = {2, 4, 6, 8}
+   and A ^ B is empty exactly when A = B, for every pair: True
 ```
 <!-- /output -->
 
@@ -176,7 +192,7 @@ python3 04_Sets/algebra_of_sets/examples/algebra_of_sets.py
 ## See also
 
 - [What is a set?](../what_is_a_set/README.md) — extensionality, and why there is no universal set of everything
-- [Sets in Python](../python_sets/README.md) — the same operations as operators and methods
+- [Sets in Python](../python_sets/README.md) — each law as a Python operator, and why the complement has none
 - [If A then B: converse, contrapositive and inverse](../../11_Logic/converse_and_contrapositive/README.md) — ⊆ is "if x ∈ A then x ∈ B"
 - [The laws of an operation](../../06_Algebraic_Structures/laws_of_an_operation/README.md) — commutative, associative and distributive laws for numbers
 - [Cardinality of sets](../cardinality/README.md) — why U has 2⁴ = 16 subsets
