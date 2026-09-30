@@ -1,0 +1,44 @@
+1. The sentence is a percentile, read from the other end
+
+   twenty made-up results, sorted (mg/dL): [3, 5, 6, 8, 9, 10, 11, 12, 14, 15]
+                                           [17, 20, 24, 29, 33, 41, 55, 72, 98, 140]
+   share at or above 50: 1/5 = 20%
+   16 of 20 are below 50, so 50 sits at the 80% mark:
+   '20% at or above 50' and '50 is the 80th percentile' are one fact.
+
+2. What the one fact pins down, and what it leaves free
+
+   population A: share >= 50 = 20%   median =    0   mean =    10
+   population B: share >= 50 = 20%   median =   49   mean = 139.2
+   Both satisfy the sentence. The only thing it forces on the mean
+   (Markov's inequality, for values that cannot be negative):
+      mean >= share x cutoff = 1/5 x 50 = 10
+   population A meets that bound exactly: mean = 10
+
+3. A skewed model: median 12, and 20% at or above 50
+
+   log(Lp(a)) is normal with mu = ln 12 = 2.485, sigma = 1.696
+
+   percentile   Lp(a), mg/dL
+        10th          1.4
+        25th          3.8
+        50th         12.0   <- the median
+        75th         37.7
+        80th         50.0   <- the cutoff
+        90th        105.4
+        95th        195.2
+
+   mean = exp(mu + sigma^2/2) = 50.5 mg/dL
+   share of people below the mean: 80%
+   In this model the mean, the average person, is at the cutoff,
+   and the median, the typical person, is at a quarter of it.
+
+4. Where the line is drawn decides the percentage
+
+   cutoff, mg/dL   share at or above it (same model)
+              30     29%
+              50     20%
+              70     15%
+             100     11%
+             180      6%
+   '20%' is a property of the pair (population, cutoff), not of either alone.
