@@ -24,6 +24,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - [Roots of unity](03_Complex_Numbers/roots_of_unity/README.md) — zⁿ = 1 has exactly n solutions, evenly spaced around a circle
         - [Euler's identity](03_Complex_Numbers/eulers_identity/README.md) — e^{iπ} = −1: the exponential turns adding into multiplying, so an imaginary input can only turn, and half a turn from 1 is −1
         - ↪ [Precalculus: a reading guide](reading_guides/precalculus/README.md) — where complex numbers sit in the course before calculus, what to know first, which book to read
+        - ↪ [Euler's formula: a lesson plan](reading_guides/eulers_formula/README.md) — what to learn, in order, to follow Euler's identity and the 3Blue1Brown talk on it
 - **Sets and size**
     - **Building sets** · from [Sets](04_Sets/README.md)
         - [The Cartesian product](04_Sets/cartesian_product/README.md) — ordered pairs, ℝ², and why A × B is not B × A
@@ -57,6 +58,15 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - ↪ [The Cartesian product](04_Sets/cartesian_product/README.md) — the set ℝ² that the plane is
         - ↪ [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — a complex number is a point of this plane, and multiplying by i moves it one quadrant on
         - ↪ [Precalculus: a reading guide](reading_guides/precalculus/README.md) — the course this is the first page of, and which book to read it in
+        - ↪ [Radians](09_Calculus/radians/README.md) — an angle measured by the arc it cuts from the unit circle, counterclockwise from the positive x-axis
+- **Calculus**
+    - **Change as motion** · from [Calculus](09_Calculus/README.md)
+        - [The derivative is a velocity](09_Calculus/derivative_as_velocity/README.md) — the velocity at an instant is what average velocities settle on as the time shrinks
+        - [Velocity equals position](09_Calculus/velocity_equals_position/README.md) — e^t, the number e and the law of exponents, all from one rule of motion
+        - [Radians](09_Calculus/radians/README.md) — in radians the angle is the distance walked round the circle, so d/dt sin t = cos t
+        - [Power series](09_Calculus/power_series/README.md) — "velocity = position" forces every coefficient of e^x, and cos and sin fall out of it
+        - ↪ [Euler's identity](03_Complex_Numbers/eulers_identity/README.md) — the motion whose velocity is its position turned a quarter turn goes round to −1
+        - ↪ [Euler's formula: a lesson plan](reading_guides/eulers_formula/README.md) — the chapter's lessons as steps 6 to 10 of a path to the identity
 - **Chance and data**
     - **Averages** · from [Statistics](05_Statistics/README.md)
         - [Mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md) — one calculation, three sizes of word
@@ -77,7 +87,8 @@ A computer holds a finite set of numbers, and that fact reaches well beyond chap
 4. [Probability zero](02_Measure_Zero/probability_zero/README.md) — a finite set has measure zero, so a real number picked at random is almost never a float.
 5. [Exact vs approximate](01_Precision/exact_vs_approximate/README.md) → [Mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md) — a count is exact, so dividing by it costs no significant figures.
 6. [Linear equations and their solutions](07_Linear_Systems/linear_equations/README.md) — exact fractions, so "a tuple passes" means the two sides are equal, not nearly equal.
-7. [Euler's identity](03_Complex_Numbers/eulers_identity/README.md) — `cmath.exp(1j * math.pi)` is not −1: the double nearest π falls short of it by 1.2 × 10⁻¹⁶, and the answer sits exactly that far above the axis.
+7. [The derivative is a velocity](09_Calculus/derivative_as_velocity/README.md) — a derivative measured in floats cannot shrink its step for ever: past h = 10⁻⁸ cancellation takes over.
+8. [Euler's identity](03_Complex_Numbers/eulers_identity/README.md) — `cmath.exp(1j * math.pi)` is not −1: the double nearest π falls short of it by 1.2 × 10⁻¹⁶, and the answer sits exactly that far above the axis.
 
 ### Two kinds of size
 
@@ -113,6 +124,18 @@ A definition in the axiomatic style is a test that objects pass or fail, and a t
 3. [Multiplication as pairs](03_Complex_Numbers/multiplication_as_pairs/README.md) → [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — the same points with a multiplication, which turns them; multiplying by i moves a point one quadrant counterclockwise.
 4. [Linear equations and their solutions](07_Linear_Systems/linear_equations/README.md) — one equation in x and y has a line of solutions, and each solution is a point of the plane.
 5. [A definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md) — the same pairs read as vectors, displacements rather than locations, and the axioms they pass.
+
+### From exponents to Euler's identity
+
+The path of [Euler's formula: a lesson plan](reading_guides/eulers_formula/README.md), through the pages this library has for it.
+
+1. [A definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md) → [Maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md) — the exponent laws, and the exponential as the map that turns adding into multiplying.
+2. [Rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md) → [Multiplication as pairs](03_Complex_Numbers/multiplication_as_pairs/README.md) — the plane as pairs, and a complex number as a point of it.
+3. [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — multiplying by i is a quarter turn.
+4. [Radians](09_Calculus/radians/README.md) → [Roots of unity](03_Complex_Numbers/roots_of_unity/README.md) — the unit circle measured by distance walked, and twelve points of it computed exactly.
+5. [The derivative is a velocity](09_Calculus/derivative_as_velocity/README.md) → [Velocity equals position](09_Calculus/velocity_equals_position/README.md) — the talk's two arrows, and the rule velocity = k · position.
+6. [Euler's identity](03_Complex_Numbers/eulers_identity/README.md) — k = i, and the point goes round the circle to −1.
+7. [Power series](09_Calculus/power_series/README.md) — the other road, adding arrows instead of moving.
 
 ### The complex numbers as a field
 

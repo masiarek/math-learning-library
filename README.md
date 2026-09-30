@@ -100,6 +100,17 @@ The eighth chapter is the first page of every precalculus book: two number lines
 |---|---|
 | [Rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md) | A point is two signed distances, and from the other axis than you expect; a quadrant is the pair of signs and nothing more, so the axes belong to none; and why that one word runs through trigonometry, complex numbers and the symmetry of graphs |
 
+[**09_Calculus/**](09_Calculus/README.md) — *What is a velocity, and which motion is its own velocity?*
+
+The ninth chapter is calculus as motion, the four pieces the talk behind [Euler's identity](03_Complex_Numbers/eulers_identity/README.md) leans on. Lost in that talk? [Euler's formula: a lesson plan](reading_guides/eulers_formula/README.md) says what to learn first, step by step, and which lesson here teaches each step.
+
+| Lesson | What it teaches |
+|---|---|
+| [The derivative is a velocity](09_Calculus/derivative_as_velocity/README.md) | The velocity at an instant is what average velocities settle on, exactly 6 + h for t² at t = 3; and why a float derivative cannot shrink its step for ever |
+| [Velocity equals position](09_Calculus/velocity_equals_position/README.md) | Start at 1 and always move as fast as your position: that is e^t, e is where you are at time 1, and the law of exponents, "double" and "flip and squish" follow |
+| [Radians](09_Calculus/radians/README.md) | Archimedes' polygons measure the circle, a radian is one radius of arc, and in radians the angle is the distance walked, so d/dt sin t = cos t |
+| [Power series](09_Calculus/power_series/README.md) | "Velocity = position" forces every coefficient of e^x to be 1/k!, and with an imaginary input the terms split into cos and sin |
+
 **Looking for a subject rather than a chapter?** The [topic map](TOPICS.md) sorts every lesson into branches and follows the threads that run between chapters.
 
 ## Why a math library and not a Python one

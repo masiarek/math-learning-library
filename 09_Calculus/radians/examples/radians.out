@@ -1,0 +1,63 @@
+1. HOW LONG IS THE CIRCLE? ARCHIMEDES' POLYGONS
+   Regular polygons inside the circle of radius 1, sides doubled each
+   time, starting from the hexagon, whose side is the radius:
+         6 sides   perimeter = 6.000000   half of it = 3.000000
+        12 sides   perimeter = 6.211657   half of it = 3.105829
+        24 sides   perimeter = 6.265257   half of it = 3.132629
+        48 sides   perimeter = 6.278700   half of it = 3.139350
+        96 sides   perimeter = 6.282064   half of it = 3.141032
+      6144 sides   perimeter = 6.283185   half of it = 3.141593
+   The perimeters settle on 2 pi = 6.283185. The whole circle is
+   2 pi long, half of it pi, a quarter pi/2.
+
+2. A RADIAN IS THE ANGLE WHOSE ARC IS ONE RADIUS LONG
+   Measure an angle by the length of arc it cuts from the unit circle:
+     turn         degrees   radians   as a number
+     a quarter    90        pi/2      1.570796
+     a half       180       pi        3.141593
+     a whole      360       2 pi      6.283185
+     1 radian     57.2958   1         1.000000
+   One radian is a little under 60 degrees: the arc as long as the
+   radius. It is not a round number of degrees because 2 pi is not
+   a round number.
+
+3. IN RADIANS, THE ANGLE IS THE DISTANCE WALKED
+   Walk from (1, 0) to the point at angle t in n straight steps along
+   the circle, and add up the steps:
+     n      t = 1        t = pi/2     t = pi
+     1      0.958851     1.414214     2.000000
+     2      0.989616     1.530734     2.828427
+     4      0.997398     1.560723     3.061467
+     10     0.999583     1.569182     3.128689
+     100    0.999996     1.570780     3.141463
+     1000   1.000000     1.570796     3.141591
+     t      1.000000     1.570796     3.141593
+   The walk settles on t itself. That is what radians are for: the
+   point at angle t has walked a distance t from (1, 0).
+
+4. THE VELOCITY OF A TURNING POINT
+   Let the point be at angle t at time t: position (cos t, sin t). Its
+   velocity, measured over the time from t - 0.000001 to t + 0.000001:
+     t      position                 velocity                 |velocity|   position . velocity
+     0      (1.000000, 0.000000)     (0.000000, 1.000000)     1.000000     0.000000
+     1      (0.540302, 0.841471)     (-0.841471, 0.540302)    1.000000     0.000000
+     pi/2   (0.000000, 1.000000)     (-1.000000, 0.000000)    1.000000     0.000000
+     pi     (-1.000000, 0.000000)    (0.000000, -1.000000)    1.000000     0.000000
+   The velocity is (-sin t, cos t): the position turned a quarter turn,
+   at right angles to it, and of length 1. In radians,
+     d/dt cos t = -sin t        d/dt sin t = cos t
+   Measure the same turning in degrees, the point at angle d degrees at
+   time d, and every velocity shrinks by the same factor:
+     at d = 30:  |velocity| = 0.017453    pi/180 = 0.017453
+   so in degrees d/dd sin = (pi/180) cos, with a constant that radians
+   make 1.
+
+5. sin(x) / x FOR A SMALL ANGLE
+     x          in radians     x in degrees
+     0.1        0.998334       0.017453
+     0.01       0.999983       0.017453
+     0.001      1.000000       0.017453
+   In radians a small sine is its angle, and the ratio settles on 1;
+   in degrees it settles on pi/180 = 0.017453. A small arc is almost
+   straight, and its height is its length, only when the angle IS the
+   length.

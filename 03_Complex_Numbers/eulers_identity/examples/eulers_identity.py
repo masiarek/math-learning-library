@@ -18,11 +18,17 @@ up to t. So e^(i t) is the unit point at angle t, in radians,
 
 and the point half a turn from (1, 0) is (-1, 0): e^(i pi) = -1.
 
+Section 3 is the same thing as motion, the way Grant Sanderson's talk
+"Designing Math" (Config 2026) tells it: e^(kt) is a position whose velocity
+is k times itself, and for k = i the velocity is the position turned a
+quarter turn, so the point goes round the circle. One small step of that
+motion is one factor of the compounding.
+
 The pair rule mul() is the one from the previous lessons. pi is not a
 fraction, so the compounding runs in floats; the half turn itself is reached
-exactly in section 4, with fractions and a symbolic sqrt(3), by cutting it
-into quarter, sixth, eighth and twelfth turns. Sections 3, 5 and 6 use cmath,
-the standard library's complex exponential, and section 7 the power series.
+exactly in section 5, with fractions and a symbolic sqrt(3), by cutting it
+into quarter, sixth, eighth and twelfth turns. Sections 4, 6 and 7 use cmath,
+the standard library's complex exponential, and section 8 the power series.
 """
 
 import cmath
@@ -144,7 +150,8 @@ def showf(z, d: int) -> str:
 def main() -> None:
     print("1. e ON THE REAL LINE IS COMPOUNDING")
     print("   e^3 is e . e . e, and e^(1/2) or e^pi is not e multiplied by itself")
-    print("   some number of times. What defines e^x for every x is compounding,")
+    print("   some number of times; e^(pi i) even less. What defines e^x for every x")
+    print("   is compounding,")
     print("   (1 + x/n)^n with n growing without bound. At x = 1:")
     for n in (1, 2, 3, 4):
         v = (1 + F(1, n)) ** n
@@ -189,7 +196,54 @@ def main() -> None:
     print(f"                            turn    n atan(pi/n)         = {n * math.atan(t):.8f}   -> pi")
     print()
 
-    print("3. WHY pi, AND NOT 180: THE UNIT OF ANGLE")
+    print("3. THE SAME THING AS MOTION: VELOCITY IS k TIMES POSITION")
+    print("   Read e^(kt) as a point that moves as the time t runs, starting at")
+    print("   e^0 = 1. Its velocity, d/dt e^(kt), is k times its position, and k")
+    print("   says what that does to the arrow:")
+    print("     k = 1      velocity = position               grows")
+    print("     k = 2      velocity = 2 . position           doubled: grows faster")
+    print("     k = -0.5   velocity = -0.5 . position        flipped and squished: shrinks")
+    print("     k = i      velocity = i . position           turned 90 degrees")
+    print("   Multiplying by i is lesson 2's quarter turn. On a + bi, the a becomes")
+    print("   ai and the bi becomes bi . i = -b:")
+    print(f"     (3, 2) . i = {show(mul((3, 2), (0, 1)))}          and (1, 0) . i = {show(mul((1, 0), (0, 1)))}")
+    print("   Move in small steps. Over a time dt the point moves by velocity . dt:")
+    print("     z  ->  z + (k z) dt  =  z (1 + k dt)")
+    print("   so n steps of dt = t/n multiply the start by (1 + k t/n)^n. That is")
+    print("   the compounding of sections 1 and 2: each factor is one small step of")
+    print("   motion. With n = 10^6 steps, at the moments the talk stops on:")
+    n = 10**6
+    print(f"     {'k':<6} {'t':<6} {'n small steps':<30} e^(kt), from exp")
+    for label, k, t in (("1", 1.0, 1.0), ("2", 2.0, 0.29), ("-0.5", -0.5, 0.60)):
+        stepped = (1 + k * t / n) ** n
+        print(f"     {label:<6} {t:<6.2f} {stepped:<30.6f} {math.exp(k * t):.6f}")
+    for t in (3.14, math.pi):
+        stepped = power((1.0, t / n), n)
+        exact = cmath.exp(1j * t)
+        tl = "pi" if t == math.pi else f"{t:.2f}"
+        print(f"     {'i':<6} {tl:<6} {showf(stepped, 6):<30} {showf((exact.real, exact.imag), 6)}")
+    print("   The talk's screen shows 1.78..., 0.74... and -1.00 + 0.00i at these")
+    print("   moments, with t rounded to two decimals. For k = i the velocity is")
+    print("   the position turned a quarter turn, so it is always at right angles")
+    print("   to it and exactly as long:")
+    print(f"     {'t':<6} {'position':<24} {'velocity = i . position':<26} {'position . velocity':<21} |velocity|")
+    for tl, t in (("0", 0.0), ("pi/4", math.pi / 4), ("pi/2", math.pi / 2),
+                  ("3pi/4", 3 * math.pi / 4), ("pi", math.pi)):
+        w = cmath.exp(1j * t)
+        z = (w.real, w.imag)
+        v = mul((0, 1), z)
+        dot = z[0] * v[0] + z[1] * v[1]
+        print(f"     {tl:<6} {showf(z, 6):<24} {showf(v, 6):<26} {fixed(dot, 6):<21} {math.sqrt(length_squared(v)):.6f}")
+    print("   A velocity at right angles to the position moves the point round the")
+    print("   origin and never toward it or away. A velocity of length 1 covers a")
+    print("   distance of 1 per unit of time. So at time t the point has walked a")
+    print("   distance t around the unit circle, and at t = pi it has walked half")
+    print("   of it, 2 pi / 2, to (-1, 0). Each straight step cuts the corner of the")
+    print("   circle a little, which is the stretch section 2 measured, and the")
+    print("   cut vanishes as the steps shrink.")
+    print()
+
+    print("4. WHY pi, AND NOT 180: THE UNIT OF ANGLE")
     print("   The turn that n factors add up to is n atan(t/n), and it tends to t")
     print("   itself. A point of the unit circle turned through an angle t travels")
     print("   a distance t along the circle exactly when angles are measured in")
@@ -211,7 +265,7 @@ def main() -> None:
         print(f"     {label} = {showf((w.real, w.imag), 10):<32} {note}")
     print()
 
-    print("4. THE HALF TURN, EXACTLY")
+    print("5. THE HALF TURN, EXACTLY")
     print("   Euler's formula says e^(i t) is the unit point at angle t radians, so")
     print("   e^(i pi) is the point half a turn from (1, 0). A half turn can be cut")
     print("   into equal turns that are exact, and the pair rule does the rest with")
@@ -233,7 +287,7 @@ def main() -> None:
     print("   of the previous lesson are e^(2 pi i k/n).")
     print()
 
-    print("5. HOW IT IS USED: EVERY POINT IS r e^(i theta)")
+    print("6. HOW IT IS USED: EVERY POINT IS r e^(i theta)")
     print("   A nonzero pair has a length r and an angle theta, so it is r times the")
     print("   unit point at theta: r e^(i theta), the polar form. cmath.polar reads")
     print("   r and theta off a point and cmath.rect puts them back:")
@@ -256,7 +310,7 @@ def main() -> None:
     print("   sin(a + b) are its two coordinates.")
     print()
 
-    print("6. IN A PROGRAM THE ANSWER IS NOT -1, AND THE ERROR IS pi - math.pi")
+    print("7. IN A PROGRAM THE ANSWER IS NOT -1, AND THE ERROR IS pi - math.pi")
     w = cmath.exp(1j * math.pi)
     print(f"     cmath.exp(1j * math.pi)       = {w!r}")
     print(f"     cmath.exp(1j * math.pi) == -1 : {w == -1}")
@@ -275,20 +329,29 @@ def main() -> None:
     print(f"     cmath.isclose(cmath.exp(1j * math.pi), -1): {cmath.isclose(w, -1)}")
     print()
 
-    print("7. THE SERIES, THE WAY A COURSE PROVES IT")
+    print("8. THE SERIES, THE WAY A COURSE PROVES IT")
     print("   Calculus writes e^x = 1 + x + x^2/2! + x^3/3! + ... and puts x = i pi")
     print("   in. The powers of i cycle through the four compass points, (1, 0),")
     print("   (0, 1), (-1, 0), (0, -1), so the even terms are real with alternating")
     print("   signs, the series of cos pi, and the odd terms are imaginary, the")
-    print("   series of sin pi. The sum of the first k terms:")
+    print("   series of sin pi. Each term is the one before it times pi i / k:")
+    print("   turned a quarter turn, and scaled by pi/k. Laid end to end, the terms")
+    print("   are the talk's spiral of arrows:")
+    directions = ("right", "up", "left", "down")
+    print(f"     {'k':>2}   {'term (pi i)^k / k!':<20} {'length pi^k/k!':<16} {'points':<8} sum of terms 0 to k")
     term = (1.0, 0.0)
     total = (0.0, 0.0)
-    for k in range(1, 25):
+    for k in range(25):
+        if k > 0:
+            term = mul(term, (0.0, math.pi / k))
         total = add(total, term)
-        term = mul(term, (0.0, math.pi / k))
         if k <= 10 or k % 4 == 0:
-            print(f"     k = {k:>2}   {showf(total, 6)}")
-    print("   The same point the compounding found, reached by a different road.")
+            name = {0: "1", 1: "pi i"}.get(k, f"(pi^{k}/{k}!) i^{k}")
+            length = math.pi**k / math.factorial(k)
+            print(f"     {k:>2}   {name:<20} {length:<16.6f} {directions[k % 4]:<8} {showf(total, 6)}")
+    print("   The arrows grow while pi/k is more than 1, up to the term k = 3, and")
+    print("   shrink ever faster after it, so the spiral winds in, onto (-1, 0):")
+    print("   the same point the compounding found, reached by a different road.")
 
 
 if __name__ == "__main__":

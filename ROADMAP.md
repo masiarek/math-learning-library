@@ -20,6 +20,8 @@ What exists, and what is deliberately not written yet. A topic listed here has *
 
 **[08_Analytic_Geometry](08_Analytic_Geometry/README.md)** — what it means to draw a number. One lesson so far: [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md).
 
+**[09_Calculus](09_Calculus/README.md)** — what a velocity is, and which motion is its own. Four lessons: [the derivative is a velocity](09_Calculus/derivative_as_velocity/README.md), [velocity equals position](09_Calculus/velocity_equals_position/README.md), [radians](09_Calculus/radians/README.md), [power series](09_Calculus/power_series/README.md). [Euler's formula: a lesson plan](reading_guides/eulers_formula/README.md) threads them into a path to e^{iπ} = −1.
+
 ## The rest of the precision chapter
 
 The six lessons close one argument, but they leave three doors open:
@@ -39,7 +41,7 @@ The six lessons close their argument, and leave two doors open:
 
 Five lessons define the object, say what it does, say why it is this rule, cash the geometry in for the roots of unity, and put the exponential on the plane. The doors they leave open:
 
-- **The exponential itself** — [Euler's identity](03_Complex_Numbers/eulers_identity/README.md) closed the door the first four lessons had left open, the angle as a number, by taking e^{it} to be the limit of compounding, (1 + it/n)ⁿ, and letting lesson 2's "stretches multiply, turns add" do the rest. It took three facts from calculus on trust: that (1 + x/n)ⁿ converges, that the limit obeys e^{a+b} = e^a e^b, and that the power series is the same function. A page on the real exponential that proved them, with e as the function that is its own rate of growth and the series as the way to compute it, is the natural next step. It is calculus, so it may belong in a chapter that does not exist yet.
+- **The exponential itself** — [Euler's identity](03_Complex_Numbers/eulers_identity/README.md) closed the door the first four lessons had left open, the angle as a number, by taking e^{it} to be the limit of compounding, (1 + it/n)ⁿ, and letting lesson 2's "stretches multiply, turns add" do the rest. [09_Calculus](09_Calculus/README.md) now gives the real exponential its own pages, as the motion whose velocity is its position, with the radian and the power series beside it. What is still taken on trust is listed under that chapter below.
 - **The siblings** — split-complex numbers (change the minus to a plus), dual numbers (drop the y₁y₂ term, and get automatic differentiation for free), and quaternions (do the pair construction twice). [Roots of unity](03_Complex_Numbers/roots_of_unity/README.md) already uses one more member of the family, the rule with +3 in place of −1, which is how it carries a + b√3 exactly. The same program shape as the first lesson, with a different rule each time, and a demonstration of which laws each one loses.
 - **Complex floats** — Python's `complex` is two doubles, so every warning in [01_Precision](01_Precision/README.md) applies twice over, and the naive product formula overflows on inputs that the true product does not. Connects the chapter back to chapter 1.
 ## The rest of the sets chapter
@@ -81,6 +83,14 @@ One lesson sets up the plane. The next pages of any precalculus book each have a
 - **The midpoint** — the point halfway along, ((x₁ + x₂)/2, (y₁ + y₂)/2), which is [the arithmetic mean](05_Statistics/mean_vs_average/README.md) taken one coordinate at a time. A program can check that it is the same distance from both ends and that it lies on the segment.
 - **Graphs of equations** — the graph of an equation in x and y is the set of every point whose coordinates pass it, which makes it the same object as the solution set in [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md), drawn. Intercepts are the points where the graph meets an axis, so they have a 0 coordinate; symmetry about an axis is the sign change of lesson 1's section 6. A program can plot a solution set on the text grid and find the intercepts by searching for a 0.
 
+## The rest of the calculus chapter
+
+Four lessons are the part of a calculus course that Euler's formula leans on, told as motion. They measure what they cannot prove, and they leave these doors open:
+
+- **The chain rule in general** — [velocity equals position](09_Calculus/velocity_equals_position/README.md) needs only the case of a clock running k times as fast. The general rule, d/dt f(g(t)) = f′(g(t)) · g′(t), is the same picture with a clock whose speed changes, and a program can check it by stepping both sides.
+- **Area and velocity** — the other half of calculus. Adding up velocity · dt over a time gives the distance travelled, which is what [stepping with a velocity](09_Calculus/derivative_as_velocity/README.md#stepping-with-a-velocity) already does; the theorem that this is exactly the area under the velocity's graph is the fundamental theorem of calculus.
+- **Better steps** — the chapter's steps use the velocity at the start of each step, which is Euler's method, and its error falls only as fast as the step. Averaging the velocity at both ends, or four points as Runge and Kutta did, makes the error fall much faster. The page would compare them on e^{it}, where the true answer is known and the drift off the circle is visible, and would connect back to [01_Precision](01_Precision/README.md).
+
 ## Candidate chapters
 
 Not started, and listed in rough order of how likely they are to earn a place:
@@ -89,7 +99,7 @@ Not started, and listed in rough order of how likely they are to earn a place:
 - **Proof** — induction, contradiction, construction. The part of mathematics that has nothing to do with computation, included precisely because everything else here does.
 - **Discrete** — counting, graphs, recurrences. Best served by runnable examples of anything in this library.
 - **Linear algebra, beyond systems** — worth doing only with a strong angle. Conditioning of a matrix connects it straight back to chapter 1, which is the angle, and it is planned as part of [07_Linear_Systems](07_Linear_Systems/README.md). The definitions of a vector space, a subspace and a linear map are already in [06_Algebraic_Structures](06_Algebraic_Structures/README.md), as examples of structures. Until more exists, [a reading guide](reading_guides/linear_algebra/README.md) says why the subject is useful, what to know first, and which book to learn it from.
-- **Functions and trigonometry** — the two halves of precalculus, and the widest gap here: every page uses functions and none says what one is, and the complex-numbers chapter never computes an angle. A function as a subset of A × B is listed under the sets chapter above, and the angle under the complex-numbers chapter. Until more exists, [a reading guide](reading_guides/precalculus/README.md) says what the course is for, where it sits, what to know first, and which book to learn it from.
+- **Functions and trigonometry** — the two halves of precalculus, and the widest gap here: every page uses functions and none says what one is, and angles appear only as [radians](09_Calculus/radians/README.md), which calculus needed. A function as a subset of A × B is listed under the sets chapter above. Until more exists, [a reading guide](reading_guides/precalculus/README.md) says what the course is for, where it sits, what to know first, and which book to learn it from.
 
 ## Rules for adding a chapter
 

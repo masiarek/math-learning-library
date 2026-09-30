@@ -1,6 +1,7 @@
 1. e ON THE REAL LINE IS COMPOUNDING
    e^3 is e . e . e, and e^(1/2) or e^pi is not e multiplied by itself
-   some number of times. What defines e^x for every x is compounding,
+   some number of times; e^(pi i) even less. What defines e^x for every x
+   is compounding,
    (1 + x/n)^n with n growing without bound. At x = 1:
      n = 1        (1 + 1/1)^1        = 2            = 2.000000000
      n = 2        (1 + 1/2)^2        = 9/4          = 2.250000000
@@ -45,7 +46,47 @@
      all n of them:         stretch (1 + (pi/n)^2)^(n/2) = 1.00000493   -> 1
                             turn    n atan(pi/n)         = 3.14159265   -> pi
 
-3. WHY pi, AND NOT 180: THE UNIT OF ANGLE
+3. THE SAME THING AS MOTION: VELOCITY IS k TIMES POSITION
+   Read e^(kt) as a point that moves as the time t runs, starting at
+   e^0 = 1. Its velocity, d/dt e^(kt), is k times its position, and k
+   says what that does to the arrow:
+     k = 1      velocity = position               grows
+     k = 2      velocity = 2 . position           doubled: grows faster
+     k = -0.5   velocity = -0.5 . position        flipped and squished: shrinks
+     k = i      velocity = i . position           turned 90 degrees
+   Multiplying by i is lesson 2's quarter turn. On a + bi, the a becomes
+   ai and the bi becomes bi . i = -b:
+     (3, 2) . i = (-2, 3)          and (1, 0) . i = (0, 1)
+   Move in small steps. Over a time dt the point moves by velocity . dt:
+     z  ->  z + (k z) dt  =  z (1 + k dt)
+   so n steps of dt = t/n multiply the start by (1 + k t/n)^n. That is
+   the compounding of sections 1 and 2: each factor is one small step of
+   motion. With n = 10^6 steps, at the moments the talk stops on:
+     k      t      n small steps                  e^(kt), from exp
+     1      1.00   2.718280                       2.718282
+     2      0.29   1.786038                       1.786038
+     -0.5   0.60   0.740818                       0.740818
+     i      3.14   (-1.000004, 0.001593)          (-0.999999, 0.001593)
+     i      pi     (-1.000005, 0.000000)          (-1.000000, 0.000000)
+   The talk's screen shows 1.78..., 0.74... and -1.00 + 0.00i at these
+   moments, with t rounded to two decimals. For k = i the velocity is
+   the position turned a quarter turn, so it is always at right angles
+   to it and exactly as long:
+     t      position                 velocity = i . position    position . velocity   |velocity|
+     0      (1.000000, 0.000000)     (0.000000, 1.000000)       0.000000              1.000000
+     pi/4   (0.707107, 0.707107)     (-0.707107, 0.707107)      0.000000              1.000000
+     pi/2   (0.000000, 1.000000)     (-1.000000, 0.000000)      0.000000              1.000000
+     3pi/4  (-0.707107, 0.707107)    (-0.707107, -0.707107)     0.000000              1.000000
+     pi     (-1.000000, 0.000000)    (0.000000, -1.000000)      0.000000              1.000000
+   A velocity at right angles to the position moves the point round the
+   origin and never toward it or away. A velocity of length 1 covers a
+   distance of 1 per unit of time. So at time t the point has walked a
+   distance t around the unit circle, and at t = pi it has walked half
+   of it, 2 pi / 2, to (-1, 0). Each straight step cuts the corner of the
+   circle a little, which is the stretch section 2 measured, and the
+   cut vanishes as the steps shrink.
+
+4. WHY pi, AND NOT 180: THE UNIT OF ANGLE
    The turn that n factors add up to is n atan(t/n), and it tends to t
    itself. A point of the unit circle turned through an angle t travels
    a distance t along the circle exactly when angles are measured in
@@ -62,7 +103,7 @@
      e^(2 pi i) = (1.0000000000, 0.0000000000)     a full turn:     1
      e^(180 i)  = (-0.5984600691, -0.8011526357)   180 radians, 28.65 turns
 
-4. THE HALF TURN, EXACTLY
+5. THE HALF TURN, EXACTLY
    Euler's formula says e^(i t) is the unit point at angle t radians, so
    e^(i pi) is the point half a turn from (1, 0). A half turn can be cut
    into equal turns that are exact, and the pair rule does the rest with
@@ -78,7 +119,7 @@
    marks of the clock face are e^(i pi k/6), and the n-th roots of unity
    of the previous lesson are e^(2 pi i k/n).
 
-5. HOW IT IS USED: EVERY POINT IS r e^(i theta)
+6. HOW IT IS USED: EVERY POINT IS r e^(i theta)
    A nonzero pair has a length r and an angle theta, so it is r times the
    unit point at theta: r e^(i theta), the polar form. cmath.polar reads
    r and theta off a point and cmath.rect puts them back:
@@ -95,7 +136,7 @@
    e^(i n t), and the angle-addition formulas for cos(a + b) and
    sin(a + b) are its two coordinates.
 
-6. IN A PROGRAM THE ANSWER IS NOT -1, AND THE ERROR IS pi - math.pi
+7. IN A PROGRAM THE ANSWER IS NOT -1, AND THE ERROR IS pi - math.pi
      cmath.exp(1j * math.pi)       = (-1+1.2246467991473532e-16j)
      cmath.exp(1j * math.pi) == -1 : False
      cmath.exp(1j * math.pi) + 1   = 1.2246467991473532e-16j
@@ -110,24 +151,30 @@
    whole error is in the input, and none of it in the exponential.
      cmath.isclose(cmath.exp(1j * math.pi), -1): True
 
-7. THE SERIES, THE WAY A COURSE PROVES IT
+8. THE SERIES, THE WAY A COURSE PROVES IT
    Calculus writes e^x = 1 + x + x^2/2! + x^3/3! + ... and puts x = i pi
    in. The powers of i cycle through the four compass points, (1, 0),
    (0, 1), (-1, 0), (0, -1), so the even terms are real with alternating
    signs, the series of cos pi, and the odd terms are imaginary, the
-   series of sin pi. The sum of the first k terms:
-     k =  1   (1.000000, 0.000000)
-     k =  2   (1.000000, 3.141593)
-     k =  3   (-3.934802, 3.141593)
-     k =  4   (-3.934802, -2.026120)
-     k =  5   (0.123910, -2.026120)
-     k =  6   (0.123910, 0.524044)
-     k =  7   (-1.211353, 0.524044)
-     k =  8   (-1.211353, -0.075221)
-     k =  9   (-0.976022, -0.075221)
-     k = 10   (-0.976022, 0.006925)
-     k = 12   (-1.001829, -0.000445)
-     k = 16   (-1.000004, -0.000001)
-     k = 20   (-1.000000, 0.000000)
-     k = 24   (-1.000000, 0.000000)
-   The same point the compounding found, reached by a different road.
+   series of sin pi. Each term is the one before it times pi i / k:
+   turned a quarter turn, and scaled by pi/k. Laid end to end, the terms
+   are the talk's spiral of arrows:
+      k   term (pi i)^k / k!   length pi^k/k!   points   sum of terms 0 to k
+      0   1                    1.000000         right    (1.000000, 0.000000)
+      1   pi i                 3.141593         up       (1.000000, 3.141593)
+      2   (pi^2/2!) i^2        4.934802         left     (-3.934802, 3.141593)
+      3   (pi^3/3!) i^3        5.167713         down     (-3.934802, -2.026120)
+      4   (pi^4/4!) i^4        4.058712         right    (0.123910, -2.026120)
+      5   (pi^5/5!) i^5        2.550164         up       (0.123910, 0.524044)
+      6   (pi^6/6!) i^6        1.335263         left     (-1.211353, 0.524044)
+      7   (pi^7/7!) i^7        0.599265         down     (-1.211353, -0.075221)
+      8   (pi^8/8!) i^8        0.235331         right    (-0.976022, -0.075221)
+      9   (pi^9/9!) i^9        0.082146         up       (-0.976022, 0.006925)
+     10   (pi^10/10!) i^10     0.025807         left     (-1.001829, 0.006925)
+     12   (pi^12/12!) i^12     0.001930         right    (-0.999900, -0.000445)
+     16   (pi^16/16!) i^16     0.000004         right    (-1.000000, -0.000001)
+     20   (pi^20/20!) i^20     0.000000         right    (-1.000000, 0.000000)
+     24   (pi^24/24!) i^24     0.000000         right    (-1.000000, 0.000000)
+   The arrows grow while pi/k is more than 1, up to the term k = 3, and
+   shrink ever faster after it, so the spiral winds in, onto (-1, 0):
+   the same point the compounding found, reached by a different road.
