@@ -182,13 +182,15 @@ NAV_ORDER: dict[str, list[str]] = {
     # which turning is walking, and the series that motion forces.
     # How to know that you know, then how to learn so that it stays: the
     # fourth of Flavell's abilities measured, the task deciding what is kept,
-    # Bloom's levels climbed on one theorem, and spacing that keeps it cheaply.
+    # Bloom's levels climbed on one theorem, and spacing that keeps it cheaply;
+    # then the cutoff hidden under a confident yes-or-no.
     "12_Learning_to_Learn": [
         "README.md",
         "metacognition",
         "count_the_vowels",
         "studying_vs_learning",
         "spaced_retrieval",
+        "day_or_night",
     ],
     "09_Calculus": [
         "README.md",
