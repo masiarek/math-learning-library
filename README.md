@@ -116,6 +116,7 @@ The ninth chapter is calculus as motion, the four pieces the talk behind [Euler'
 | [Velocity equals position](09_Calculus/velocity_equals_position/README.md) | Start at 1 and always move as fast as your position: that is e^t, e is where you are at time 1, and the law of exponents, "double" and "flip and squish" follow |
 | [Radians](09_Calculus/radians/README.md) | Archimedes' polygons measure the circle, a radian is one radius of arc, and in radians the angle is the distance walked, so d/dt sin t = cos t |
 | [Power series](09_Calculus/power_series/README.md) | "Velocity = position" forces every coefficient of e^x to be 1/k!, and with an imaginary input the terms split into cos and sin |
+| [Related rates](09_Calculus/related_rates/README.md) | Two quantities tied by an equation have velocities tied by its derivative; differentiate first, substitute last; balloons, ladders and kites from a Calculus I worksheet, each answer checked by measuring the motion |
 
 [**10_Geometry/**](10_Geometry/README.md) — *How few numbers fix a shape?*
 

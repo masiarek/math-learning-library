@@ -10,6 +10,7 @@ Calculus usually starts with the slopes of graphs and a careful definition of a 
 | 2 | [Velocity equals position](velocity_equals_position/README.md) | Which motion is its own velocity, and why does it obey e^(a+b) = eᵃ · eᵇ? |
 | 3 | [Radians](radians/README.md) | Why do calculus and Euler's formula measure angles in radians and not degrees? |
 | 4 | [Power series](power_series/README.md) | Why is e^x = 1 + x + x²/2 + x³/6 + ⋯, and where are cos and sin in it? |
+| 5 | [Related rates](related_rates/README.md) | When two quantities are tied by an equation, how are their velocities tied, and why do the numbers go in last? |
 
 The chapter is not a calculus course. It is the part of one that [Euler's identity](../03_Complex_Numbers/eulers_identity/README.md) and the talk lean on, and [Euler's formula: a lesson plan](../reading_guides/eulers_formula/README.md) says where each lesson fits in learning them. Integrals, the product rule, and limits done with ε and δ are not here.
 
@@ -29,7 +30,7 @@ Books, roughly easiest first: Silvanus P. Thompson, *Calculus Made Easy* (1910, 
 
 ## Po polsku, w skrócie
 
-Rachunek różniczkowy zaczyna się zwykle od nachylenia wykresu i starannej definicji granicy. Ten rozdział zaczyna tak jak wykład Granta Sandersona: od ruchu. Pierwsza lekcja mówi, czym jest prędkość w jednej chwili: liczbą, do której dążą prędkości średnie, gdy odcinek czasu maleje; to jest pochodna, i to ona pozwala zrobić następny mały krok. Druga śledzi ruch, w którym prędkość zawsze równa się położeniu, startujący z 1: to e^t, a e to położenie w chwili 1, i z tej jednej reguły wychodzi prawo potęg, „podwojenie" i „odwrócenie ze ściśnięciem" z wykładu. Trzecia wyjaśnia radiany: kąt w radianach to droga przebyta po okręgu, więc pochodna sinusa to cosinus. Czwarta zapisuje eˣ jako wielomian bez końca i pokazuje, że reguła „prędkość = położenie" wymusza każdy współczynnik, a po wstawieniu liczby urojonej wypadają z niego cos i sin. To nie jest cały kurs analizy, tylko ta jego część, na której opiera się tożsamość Eulera.
+Rachunek różniczkowy zaczyna się zwykle od nachylenia wykresu i starannej definicji granicy. Ten rozdział zaczyna tak jak wykład Granta Sandersona: od ruchu. Pierwsza lekcja mówi, czym jest prędkość w jednej chwili: liczbą, do której dążą prędkości średnie, gdy odcinek czasu maleje; to jest pochodna, i to ona pozwala zrobić następny mały krok. Druga śledzi ruch, w którym prędkość zawsze równa się położeniu, startujący z 1: to e^t, a e to położenie w chwili 1, i z tej jednej reguły wychodzi prawo potęg, „podwojenie" i „odwrócenie ze ściśnięciem" z wykładu. Trzecia wyjaśnia radiany: kąt w radianach to droga przebyta po okręgu, więc pochodna sinusa to cosinus. Czwarta zapisuje eˣ jako wielomian bez końca i pokazuje, że reguła „prędkość = położenie" wymusza każdy współczynnik, a po wstawieniu liczby urojonej wypadają z niego cos i sin. Piąta lekcja, o prędkościach powiązanych, pokazuje pochodną w użyciu: gdy dwie wielkości wiąże równanie, ich prędkości wiąże jego pochodna, a liczby z danej chwili wstawia się dopiero na końcu. To nie jest cały kurs analizy, tylko ta jego część, na której opiera się tożsamość Eulera.
 
 ## A note on the code
 

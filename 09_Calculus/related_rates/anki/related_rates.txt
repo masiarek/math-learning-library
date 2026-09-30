@@ -1,0 +1,39 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Related rates
+#tags:math calculus related-rates
+#columns:Front	Back	Tags
+#tags column:3
+Two quantities are tied by an equation at every instant. What ties their rates?	The derivative of that equation with respect to time t.	idea
+The one move in every related-rates problem?	Differentiate the equation that holds at every instant, then put in the numbers of the one instant asked about.	idea
+Why do the numbers go in only after differentiating?	They hold at one instant only. Substituted first, the equation relates constants, whose derivative is 0, and the problem becomes nonsense like 2 = 0.	idea
+Balloon: V = (4/3) pi r^3. Differentiate in t.	dV/dt = 4 pi r^2 dr/dt.	formulas
+Why is the factor in dV/dt = 4 pi r^2 dr/dt the sphere's surface?	Growing r by a little adds a skin of volume about surface times thickness: the surface is what the volume gains per unit of radius.	idea
+Circle: A = pi r^2. Differentiate in t.	dA/dt = 2 pi r dr/dt: the circumference times dr/dt.	formulas
+Cube: V = a^3. Differentiate in t.	dV/dt = 3a^2 da/dt.	formulas
+Sphere surface: S = 4 pi r^2. Differentiate in t.	dS/dt = 8 pi r dr/dt.	formulas
+Ladder of length L: x^2 + y^2 = L^2. Differentiate in t.	2x dx/dt + 2y dy/dt = 0, so dy/dt = -x (dx/dt)/y.	formulas
+Two travellers at right angles: x^2 + y^2 = z^2. Differentiate in t.	x dx/dt + y dy/dt = z dz/dt.	formulas
+The seven questions for a related-rates problem?	What quantities appear? Which change? Which are fixed? What rate is given? What rate is requested? Should it be positive or negative? What equation relates the quantities?	questions
+What is step one of every related-rates problem?	Draw the picture yourself and label every quantity.	questions
+Why decide the sign of the answer before computing?	The picture tells you whether the quantity grows or shrinks. If the algebra disagrees, the algebra is wrong.	questions
+A quantity that is decreasing has what kind of rate?	A negative one.	questions
+Circle r = 5, dr/dt = 2: dA/dt?	20 pi, about 62.83 square meters per second.	problems
+Balloon filled at 2 cm^3/s, r = 3: dr/dt?	1/(18 pi), about 0.0177 cm/s.	problems
+Cube side 4 growing at 1/2 m/s: dV/dt?	24 cubic meters per second.	problems
+Kite 80 ft up, moving away at 5 ft/s, 60 ft out: rate of the angle?	-1/25 = -0.04 rad/s: the angle falls. Use tan theta = 80/x.	problems
+Balloon rising 4 ft/s, 30 ft from observer, 40 ft up: rate of the angle?	6/125 = 0.048 rad/s. Use tan theta = y/30.	problems
+Ladder 25, pushed in at 1 ft/s from 20 ft: where is the bottom after 5 s, and how fast is the top rising?	x = 15, y = 20; the top rises at 3/4 ft/s.	problems
+Cyclists east 16 mph and north 12 mph: rate of separation after 1 h?	20 mph, and it stays 20: the distance is 20t.	problems
+Ladder 10, sliding out at 1 ft/s, bottom 6 ft out: top's rate?	-3/4 ft/s: sliding down at 0.75 ft/s.	problems
+Ladder 20, sliding out at 2 ft/s, bottom 12 ft out: angle's rate?	-1/8 rad/s. Use cos theta = x/20, with sin theta = 4/5.	problems
+Why does the ladder's top speed change but the cyclists' separation rate not?	The ladder's length is fixed, so y changes less and less as x shrinks. The cyclists' triangle keeps its shape (always similar to 4-3-5), so z = 20t.	idea
+Circle r = 7, dr/dt = 4: dC/dt? What was the 7 for?	8 pi cm/s. The 7 is not needed: C = 2 pi r is linear in r.	problems
+Why are angle rates computed in radians?	Only in radians is the derivative of sin cos and of tan sec^2. Convert to degrees at the end if asked.	idea
+What does the formula say about a ladder's top as it nears the floor, and should you believe it?	It falls faster without limit. No: the ladder leaves the wall first, and x^2 + y^2 = L^2 stops describing it.	idea
+Trap: balloon at r = 3, so V = 36 pi and dV/dt = 0?	No. r = 3 is one instant. Differentiate V = (4/3) pi r^3 first, then put r = 3.	trap
+Trap: ladder pushed towards the wall at 1 ft/s, so dx/dt = 1?	No, -1. x is the distance from the wall and it is shrinking.	trap
+Trap: kite moving away, so the angle of elevation increases?	No, it decreases: the kite sits lower in the sky. The rate is negative.	trap
+Trap: the balloon's volume grows steadily, so its radius does too?	No. dr/dt = (dV/dt)/(4 pi r^2) shrinks as the balloon grows.	trap
+Trap: an angle rate of -0.04 means 0.04 degrees per second?	No, radians per second: about 2.29 degrees per second.	trap
