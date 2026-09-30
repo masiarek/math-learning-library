@@ -26,3 +26,5 @@ jobs:
         run: python3 --version
       - name: Run every example and check it against its answer key
         run: python3 tools/run_examples.py --check
+      - name: Combined Anki decks are up to date
+        run: python3 tools/combine_anki.py 04_Sets --check
