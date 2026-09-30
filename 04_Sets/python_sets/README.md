@@ -77,7 +77,7 @@ python3 04_Sets/python_sets/examples/python_sets.py
 ## See also
 
 - [A set is a hash table ↗](https://masiarek.github.io/python-learning-library/04_Names_and_Objects/a_set_is_a_hash_table/index.html) — the Python library: how `set` behaves, operators against methods, frozenset, dict views, `Counter`, and the notes checked
-- [A first HashSet ↗](https://masiarek.github.io/rust-learning-library/26_Collections/a_first_hashset/index.html) — the Rust library: `HashSet` and `BTreeSet`, where `Eq + Hash` is checked at compile time
+- [Set operations ↗](https://masiarek.github.io/rust-learning-library/26_Collections/set_operations/index.html) — the Rust library: `HashSet` and `BTreeSet`, methods as lazy iterators, operators on references, and `Eq + Hash` checked at compile time
 - [Sets in ABAP ↗](https://masiarek.github.io/abap-learning-library/03_Topics/sets_in_abap/index.html) — the ABAP library: no set type, so a table with a unique key, `FILTER` and SQL `UNION` / `INTERSECT` / `EXCEPT`
 - [What is a set?](../what_is_a_set/README.md) — the ideas this page finds in Python
 - [The algebra of sets](../algebra_of_sets/README.md) — the laws the operators obey
