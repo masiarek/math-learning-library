@@ -94,12 +94,16 @@ The seventh chapter follows the first section of Jim Hefferon's *Linear Algebra*
 
 [**08_Analytic_Geometry/**](08_Analytic_Geometry/README.md) — *What does it mean to draw a number?*
 
-The eighth chapter is the first page of every precalculus book: two number lines at right angles turn each point of the plane into a pair of numbers, and each pair into a point. Every lesson ends with the book's questions, answers folded away, and a deck of Anki flashcards. It needs nothing but a number line.
+The eighth chapter is the first chapter of every precalculus book: two number lines at right angles turn each point of the plane into a pair of numbers, and each pair into a point; then distance, midpoint, the graph of an equation, lines and circles. Every lesson ends with the book's questions, answers folded away, and a deck of Anki flashcards. It needs nothing but a number line.
 
 | Lesson | What it teaches |
 |---|---|
 | [Rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md) | A point is two signed distances, and from the other axis than you expect; a quadrant is the pair of signs and nothing more, so the axes belong to none; and why that one word runs through trigonometry, complex numbers and the symmetry of graphs |
 | [The distance formula](08_Analytic_Geometry/distance_formula/README.md) | Pythagoras with the legs read off the coordinates; why the squares make the order of the points and the signs irrelevant, and why distances are compared by their squares |
+| [The midpoint formula](08_Analytic_Geometry/midpoint_formula/README.md) | One average per coordinate; halfway means equidistant *and* on the segment; half the difference is a trip, not a place |
+| [Graphs of equations: intercepts and symmetry](08_Analytic_Geometry/graphs_intercepts_symmetry/README.md) | A graph is the set of points that pass an equation, so intercepts are points with a 0 coordinate and symmetry is a mirror image that passes too; drawn on a text grid |
+| [Lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md) | One slope per line because of similar triangles; point-slope, slope-intercept and general forms; negative reciprocals from a quarter turn |
+| [Circles: standard form and general form](08_Analytic_Geometry/circles/README.md) | The distance formula held fixed; completing the square; when the "circle" is a point or nothing at all |
 
 [**09_Calculus/**](09_Calculus/README.md) — *What is a velocity, and which motion is its own velocity?*
 

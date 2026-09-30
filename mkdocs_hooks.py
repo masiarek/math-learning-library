@@ -145,12 +145,17 @@ NAV_ORDER: dict[str, list[str]] = {
         "linear_equations",
     ],
     # Descartes' idea, in the order a precalculus book takes it: a point is a
-    # pair of signed distances, a quadrant is the pair of signs, and distance is
-    # Pythagoras on the differences.
+    # pair of signed distances, a quadrant is the pair of signs, distance is
+    # Pythagoras on the differences, and then the graph of an equation, lines
+    # and circles: the whole of the book's first chapter.
     "08_Analytic_Geometry": [
         "README.md",
         "rectangular_coordinates",
         "distance_formula",
+        "midpoint_formula",
+        "graphs_intercepts_symmetry",
+        "lines_and_slope",
+        "circles",
     ],
     # The geometry the precalculus book assumes, in its review appendix's
     # order: when three lengths make a right angle, why a formula's power of

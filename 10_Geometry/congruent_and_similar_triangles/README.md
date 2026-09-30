@@ -235,7 +235,7 @@ The page as a deck of Anki cards: [`congruent_and_similar_triangles.txt`](anki/c
 
 ## Where this goes next
 
-Similar triangles are why the slope of a line is one number: any two points on a line make a right triangle with the same shape, so rise over run comes out the same whichever two you pick. That is the lines section of the book's first chapter. And in trigonometry, sine, cosine and tangent are ratios of sides of a right triangle, which only makes sense because all right triangles with the same angle are similar.
+Similar triangles are why the slope of a line is one number: any two points on a line make a right triangle with the same shape, so rise over run comes out the same whichever two you pick. That is [lines and slope](../../08_Analytic_Geometry/lines_and_slope/README.md), the third section of the book's first chapter. And in trigonometry, sine, cosine and tangent are ratios of sides of a right triangle, which only makes sense because all right triangles with the same angle are similar.
 
 ## Po polsku, w skrócie
 

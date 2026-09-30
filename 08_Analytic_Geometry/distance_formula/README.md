@@ -202,7 +202,7 @@ The page as a deck of Anki cards: [`distance_formula.txt`](anki/distance_formula
 
 ## Where this goes next
 
-The midpoint of a segment is the rest of section 1.1; then the graph of an equation, lines, and circles, and a circle is this formula held fixed: all points (x, y) at distance r from a center (h, k), so (x − h)² + (y − k)² = r². The [roadmap](../../ROADMAP.md) lists what is next.
+[The midpoint of a segment](../midpoint_formula/README.md) is the rest of section 1.1, and this formula is how its answer is checked. Then [the graph of an equation](../graphs_intercepts_symmetry/README.md), [lines](../lines_and_slope/README.md), and [circles](../circles/README.md), and a circle is this formula held fixed: all points (x, y) at distance r from a center (h, k), so (x − h)² + (y − k)² = r².
 
 ## Po polsku, w skrócie
 

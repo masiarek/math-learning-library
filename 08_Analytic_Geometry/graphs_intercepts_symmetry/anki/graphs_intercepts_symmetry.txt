@@ -1,0 +1,39 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Graphs, intercepts and symmetry
+#tags:math precalculus graphs intercepts symmetry
+#columns:Front	Back	Tags
+#tags column:3
+What is the graph of an equation in x and y?	The set of all points (x, y) whose coordinates satisfy the equation.	definition
+How do you tell whether a point is on a graph?	Substitute its coordinates. On the graph exactly when the equation holds.	definition
+Is (1, -3) on y = x^2 - 4?	Yes: 1 - 4 = -3.	problems
+Is (0, 4) on y = x^2 - 4?	No: 0 - 4 = -4. The point (0, -4) is.	problems
+How are the graph of an equation and its solution set related?	They are the same set: each solution (x, y) is a point of the graph.	definition
+How do you find the x-intercepts?	Set y = 0 and solve for x.	intercepts
+How do you find the y-intercepts?	Set x = 0 and solve for y.	intercepts
+Why set y = 0 for the x-intercepts?	The x-intercepts are on the x-axis, and every point of the x-axis has y = 0.	intercepts
+In Sullivan, is an intercept a number or a point?	A number: the coordinate. The x-intercept 3 means the point (3, 0).	intercepts
+Intercepts of y = x^2 - 4?	x-intercepts -2 and 2; y-intercept -4.	problems
+Intercepts of 4x^2 + 9y^2 = 36?	x-intercepts -3 and 3; y-intercepts -2 and 2.	problems
+x-intercepts of y = x^2 + 1?	None: x^2 = -1 has no real solution.	problems
+Intercepts of y = x^3 - x?	x-intercepts -1, 0, 1; y-intercept 0.	problems
+Test for symmetry about the y-axis?	Replace x by -x. An equivalent equation means symmetric.	symmetry
+Test for symmetry about the x-axis?	Replace y by -y. An equivalent equation means symmetric.	symmetry
+Test for symmetry about the origin?	Replace x by -x and y by -y. An equivalent equation means symmetric.	symmetry
+Symmetric about the y-axis and (3, -2) is on the graph: which other point?	(-3, -2).	symmetry
+Symmetric about the origin and (3, -2) is on the graph: which other point?	(-3, 2).	symmetry
+Symmetric about the x-axis and (3, -2) is on the graph: which other point?	(3, 2).	symmetry
+Symmetries of y = x^2 - 4?	y-axis only.	problems
+Symmetries of x = y^2?	x-axis only.	problems
+Symmetries of y = x^3?	Origin only.	problems
+Symmetries of x^2 + y^2 = 25?	All three: x-axis, y-axis, origin.	problems
+A graph symmetric about both axes: what else?	Symmetric about the origin: reflecting in both axes is a half turn.	symmetry
+How do you prove a graph is NOT symmetric?	Find one point on it whose mirror image is not on it.	symmetry
+What are y-axis and origin symmetry called for functions?	Even and odd functions.	symmetry
+Trap: for x-intercepts, set x = 0?	No. Set y = 0: the x-intercepts lie on the x-axis, where y = 0.	trap
+Trap: symmetric about the origin means the graph passes through the origin?	No. xy = 1 is symmetric about the origin and misses it.	trap
+Trap: -y = -x^3 + x is a different equation from y = x^3 - x, so no origin symmetry?	It is the same equation multiplied by -1, so it passes.	trap
+Trap: can the graph of y = f(x) be symmetric about the x-axis?	Only y = 0. Otherwise one x would need two y's, y and -y.	trap
+Trap: (0, 0) is either an x-intercept or a y-intercept, not both?	It is both: the origin is on both axes.	trap
+Trap: only even powers of x, so y-axis symmetric. Always safe to skip the test?	No. It is a guess, and y = (x - 1)^2 fails: the powers are hidden until expanded.	trap

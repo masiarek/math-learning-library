@@ -1,0 +1,39 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Lines and slope
+#tags:math precalculus lines slope
+#columns:Front	Back	Tags
+#tags column:3
+Slope of the line through (x1, y1) and (x2, y2)?	m = (y2 - y1)/(x2 - x1), rise over run, when x1 is not x2.	slope
+Why is the slope of a line the same for every pair of its points?	Each pair makes a right triangle with the same angles; similar triangles share the ratio rise/run.	slope
+Positive, negative, zero and undefined slope: what does each look like?	Rises left to right; falls; horizontal; vertical.	slope
+A slope of 3/4 means?	Up 3 for every 4 to the right.	slope
+Slope of a vertical line?	Undefined: the run is 0 and there is nothing to divide by.	slope
+Slope of a horizontal line?	0.	slope
+Point-slope form?	y - y1 = m(x - x1).	forms
+Slope-intercept form, and what b is?	y = mx + b. b is the y-intercept.	forms
+General form of a line?	Ax + By = C, with A and B not both 0.	forms
+Which form covers vertical lines?	Only the general form, as x = a. There is no y = mx + b with no slope.	forms
+Where does point-slope form come from?	The slope from (x1, y1) to any point (x, y) of the line is m: (y - y1)/(x - x1) = m.	forms
+Equation of a vertical line through (3, 7)?	x = 3.	forms
+Equation of a horizontal line through (3, 7)?	y = 7.	forms
+Parallel lines: slopes?	Equal slopes, different intercepts. Or both vertical.	parallel-perpendicular
+Perpendicular lines: slopes?	Product -1: each is the negative reciprocal of the other.	parallel-perpendicular
+Negative reciprocal of 2/3?	-3/2.	parallel-perpendicular
+Why does a perpendicular slope flip the fraction?	A quarter turn sends the step (a, b) to (-b, a), swapping run and rise.	parallel-perpendicular
+Slope of a line perpendicular to x = 5?	0: horizontal lines. The product rule does not apply, since x = 5 has no slope.	parallel-perpendicular
+Slope through (2, 3) and (-4, 5)?	-1/3.	problems
+Slope and y-intercept of 2x - 3y = 6?	Slope 2/3, y-intercept -2.	problems
+Line with slope 4 through (1, 2)?	y = 4x - 2.	problems
+Line through (1, 2) and (5, -3), general form?	5x + 4y = 13.	problems
+Line parallel to y = 2x + 1 through (3, 4)?	y = 2x - 2.	problems
+Line perpendicular to y = 2x + 1 through (3, 4)?	y = -x/2 + 11/2.	problems
+How can slopes show three points are on one line?	The slope from the first to the second equals the slope from the second to the third.	problems
+Trap: slope = (y2 - y1)/(x1 - x2)?	No. Both differences must start from the same point; mixing flips the sign.	trap
+Trap: slope = (x2 - x1)/(y2 - y1)?	No, that is run over rise. Slope is rise over run.	trap
+Trap: a vertical line has slope 0?	No, undefined. The horizontal line has slope 0.	trap
+Trap: y = 3x - 1 and 6x - 2y = 2 are parallel?	No, they are the same line: same slope and same intercept.	trap
+Trap: perpendicular to slope 2/3 is slope -2/3?	No. That is a mirror image. Perpendicular is -3/2: flip and change sign.	trap
+Trap: in y - 2 = 4(x + 1), the point is (1, 2)?	No. x + 1 = x - (-1), so the point is (-1, 2).	trap
+Trap: in 2x - 3y = 6, the slope is 2?	No. Solve for y first: y = (2/3)x - 2, slope 2/3.	trap

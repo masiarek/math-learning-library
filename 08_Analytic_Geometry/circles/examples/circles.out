@@ -1,0 +1,64 @@
+1. A CIRCLE IS ONE DISTANCE FROM ONE POINT: x^2 + y^2 = 25
+     6   .  .  .  .  .  .  |  .  .  .  .  .  .
+     5   .  .  .  .  .  .  *  .  .  .  .  .  .
+     4   .  .  .  *  .  .  |  .  .  *  .  .  .
+     3   .  .  *  .  .  .  |  .  .  .  *  .  .
+     2   .  .  .  .  .  .  |  .  .  .  .  .  .
+     1   .  .  .  .  .  .  |  .  .  .  .  .  .
+     0   -  *  -  -  -  -  C  -  -  -  -  *  -
+    -1   .  .  .  .  .  .  |  .  .  .  .  .  .
+    -2   .  .  .  .  .  .  |  .  .  .  .  .  .
+    -3   .  .  *  .  .  .  |  .  .  .  *  .  .
+    -4   .  .  .  *  .  .  |  .  .  *  .  .  .
+    -5   .  .  .  .  .  .  *  .  .  .  .  .  .
+    -6   .  .  .  .  .  .  |  .  .  .  .  .  .
+        -6 -5 -4 -3 -2 -1  0  1  2  3  4  5  6   x
+   12 whole-number points are exactly 5 from the origin:
+   (-5,0) (-4,-3) (-4,3) (-3,-4) (-3,4) (0,-5) (0,5) (3,-4) (3,4) (4,-3) (4,3) (5,0)
+   They come from 3-4-5 and 0-5-5: each is a right triangle's hypotenuse of 5.
+
+2. STANDARD FORM FROM CENTER AND RADIUS, THEN THE GENERAL FORM
+   center (0, 0), r = 1:
+      x^2 + y^2 = 1                   ->  x^2 + y^2 - 1 = 0
+   center (-2, 3), r = 4:
+      (x + 2)^2 + (y - 3)^2 = 16      ->  x^2 + y^2 + 4x - 6y - 3 = 0
+   center (3, -1), r = 1/2:
+      (x - 3)^2 + (y + 1)^2 = 1/4     ->  x^2 + y^2 - 6x + 2y + 39/4 = 0
+   The sign flips: center (-2, 3) is written (x + 2) and (y - 3).
+
+3. BACK AGAIN: COMPLETE THE SQUARE
+   x^2 + y^2 + 4x - 6y + 12 = 0
+   group:     (x^2 + 4x) + (y^2 - 6y) = -12
+   complete:  (x^2 + 4x + 4) + (y^2 - 6y + 9) = -12 + 4 + 9    add (half the coefficient)^2
+   so:        (x + 2)^2 + (y - 3)^2 = 1
+   center (-2, 3), radius 1. Whatever is added on the left is added on the right.
+
+4. NOT EVERY x^2 + y^2 + ax + by + c = 0 IS A CIRCLE
+   x^2 + y^2 + 4x - 6y + 12 = 0  a circle: (x + 2)^2 + (y - 3)^2 = 1, center (-2, 3), radius 1
+   x^2 + y^2 + 4x - 6y + 13 = 0  only the point (-2, 3): (x + 2)^2 + (y - 3)^2 = 0, radius 0
+   x^2 + y^2 + 4x - 6y + 14 = 0  no points at all: (x + 2)^2 + (y - 3)^2 = -1, and a sum of squares is never -1
+   x^2 + y^2 - x = 0             a circle: (x - 1/2)^2 + y^2 = 1/4, center (1/2, 0), radius 1/2
+   The right side after completing the square is r^2. Positive: a circle.
+   Zero: a single point. Negative: nothing, since squares cannot add to less than 0.
+
+5. INSIDE, ON OR OUTSIDE? COMPARE THE SQUARED DISTANCE WITH r^2
+   circle (x + 2)^2 + (y - 3)^2 = 16
+   ( 2, 3):  (x + 2)^2 + (y - 3)^2 = 16   on
+   ( 0, 0):  (x + 2)^2 + (y - 3)^2 = 13   inside
+   ( 1, 6):  (x + 2)^2 + (y - 3)^2 = 18   outside
+   (-2, 3):  (x + 2)^2 + (y - 3)^2 =  0   inside
+   ( 3, 5):  (x + 2)^2 + (y - 3)^2 = 29   outside
+
+6. INTERCEPTS OF A CIRCLE: (x - 1)^2 + (y + 2)^2 = 5
+   y = 0: (x - 1)^2 + 4 = 5, (x - 1)^2 = 1, x = 0, 2
+   x = 0: 1 + (y + 2)^2 = 5, (y + 2)^2 = 4, y = -4, 0
+   0 is in both lists, so the circle passes through the origin, since 1 + 4 = 5.
+   A circle can meet an axis twice, once (touching it), or never.
+
+7. THE UNIT CIRCLE: CENTER (0, 0), RADIUS 1, x^2 + y^2 = 1
+   (    1,     0):  x^2 + y^2 = 1
+   (  3/5,   4/5):  x^2 + y^2 = 1
+   (-5/13, 12/13):  x^2 + y^2 = 1
+   (    0,    -1):  x^2 + y^2 = 1
+   Every Pythagorean triple a, b, c gives the point (a/c, b/c) on it.
+   Trigonometry will name its points (cos t, sin t).
