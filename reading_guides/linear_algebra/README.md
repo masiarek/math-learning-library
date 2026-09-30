@@ -109,9 +109,9 @@ Less than most subjects. **High-school algebra is the only hard requirement.** W
 
 | You need | Why linear algebra uses it |
 |---|---|
-| **Solving linear equations**, including a system of two equations in two unknowns by substitution or elimination | This is where linear algebra starts, as in the balance problem above. Gaussian elimination is the same method scaled up. |
+| **[Solving linear equations](../../07_Linear_Systems/linear_equations/README.md)**, including a system of two equations in two unknowns by substitution or elimination | This is where linear algebra starts, as in the balance problem above. Gaussian elimination is the same method scaled up. |
 | **Working with algebraic expressions**, subscripts like aᵢⱼ, and **Σ notation** | Every formula for matrix multiplication and dot products is written this way. |
-| **Coordinates in the plane**, Pythagoras, and basic sin and cos | Vectors as arrows, length, angles, the dot product, rotations and projections. |
+| **[Coordinates in the plane](../../08_Analytic_Geometry/rectangular_coordinates/README.md)**, [Pythagoras](../../08_Analytic_Geometry/distance_formula/README.md), and basic sin and cos | Vectors as arrows, length, angles, the dot product, rotations and projections. |
 | **Functions**: what composition and an inverse function are | A matrix *is* a function, and multiplying matrices is composing those functions. |
 
 ### Extra for a proof-based book (Axler, Friedberg, Treil)
