@@ -136,21 +136,19 @@ The eleventh chapter is the logic the theorems in every other chapter are writte
 |---|---|
 | [If A then B: converse, contrapositive and inverse](11_Logic/converse_and_contrapositive/README.md) | "If A then B" breaks only when A is true and B false, so the contrapositive is the same claim and the converse is not; if and only if; two classic mistakes; and why examples never prove but one counterexample disproves |
 
-[**12_Learning_to_Learn/**](12_Learning_to_Learn/README.md) — *How do you know that you know?*
-
-The twelfth chapter is about the reader, not the mathematics: how to tell whether a page has been learned, and how to learn it so that it stays. It follows Saundra McGuire's *Teach Yourself How to Learn*, and it needs nothing but school arithmetic.
+[**12_Learning_to_Learn/**](12_Learning_to_Learn/README.md) — *How do you know that you know?* **Now its own library:** the [Learning to Learn library ↗](https://masiarek.github.io/learning-to-learn-library/), built the same way, where the nine lessons that began here live with pages on planning, sleep, exercise and the brain. The chapter page here points across, and the lessons still use this library's mathematics.
 
 | Lesson | What it teaches |
 |---|---|
-| [Metacognition: judging what you know](12_Learning_to_Learn/metacognition/README.md) | Flavell's four abilities, and the one a program can measure: confidence against results, the Brier score, and why honest confidence minimises it |
-| [Count the vowels](12_Learning_to_Learn/count_the_vowels/README.md) | McGuire's exercise: 3 of 15 phrases remembered after counting vowels, 12 after knowing the goal and the principle |
-| [Studying vs learning](12_Learning_to_Learn/studying_vs_learning/README.md) | Bloom's six levels climbed on the Pythagorean theorem, up to a formula that re-creates the facts a student would memorise |
-| [Spaced retrieval](12_Learning_to_Learn/spaced_retrieval/README.md) | The forgetting curve, why testing beats rereading, the study cycle, and why a geometric review schedule makes remembering cost a logarithm |
-| [Day or night: perspective taking](12_Learning_to_Learn/day_or_night/README.md) | "When does night begin?" has four exact answers in Starbuck, WA, 20:49 to 23:39, one per cutoff; the sorites, and fuzzy logic's third way out |
-| [Learned helplessness](12_Learning_to_Learn/learned_helplessness/README.md) | Honest counting, (s + 1)/(n + 2), leaves a learner who failed ten times never trying the lever that works; four small successes, or four watched ones, get them started |
-| [The buffer hour](12_Learning_to_Learn/the_buffer_hour/README.md) | Task times are skewed, so five honestly estimated one-hour tasks fit in five hours one day in thirteen; a reserved hour gives 47%, and a recorded overrun ratio corrects the estimates |
-| [Cognitive load](12_Learning_to_Learn/cognitive_load/README.md) | Working memory holds about four chunks, and a chunk is whatever practice made automatic: (a+b)² = a² + 2ab + b² is 19 items to a beginner and 1 to an expert; practice, modelled as byte-pair merging, chunks what repeats |
-| [Interleaving](12_Learning_to_Learn/interleaving/README.md) | A blocked sheet of volume problems asks you to choose a formula 4 times in 12, a mixed exam 7 in 8; a student who reuses the last formula scores 75% on the sheet and 25% on the exam |
+| [Metacognition: judging what you know ↗](https://masiarek.github.io/learning-to-learn-library/01_Knowing_What_You_Know/metacognition/) | Flavell's four abilities, and the one a program can measure: confidence against results, the Brier score, and why honest confidence minimises it |
+| [Count the vowels ↗](https://masiarek.github.io/learning-to-learn-library/01_Knowing_What_You_Know/count_the_vowels/) | McGuire's exercise: 3 of 15 phrases remembered after counting vowels, 12 after knowing the goal and the principle |
+| [Studying vs learning ↗](https://masiarek.github.io/learning-to-learn-library/01_Knowing_What_You_Know/studying_vs_learning/) | Bloom's six levels climbed on the Pythagorean theorem, up to a formula that re-creates the facts a student would memorise |
+| [Spaced retrieval ↗](https://masiarek.github.io/learning-to-learn-library/02_Making_It_Stay/spaced_retrieval/) | The forgetting curve, why testing beats rereading, the study cycle, and why a geometric review schedule makes remembering cost a logarithm |
+| [Day or night: perspective taking ↗](https://masiarek.github.io/learning-to-learn-library/03_Believing_You_Can/day_or_night/) | "When does night begin?" has four exact answers in Starbuck, WA, 20:49 to 23:39, one per cutoff; the sorites, and fuzzy logic's third way out |
+| [Learned helplessness ↗](https://masiarek.github.io/learning-to-learn-library/03_Believing_You_Can/learned_helplessness/) | Honest counting, (s + 1)/(n + 2), leaves a learner who failed ten times never trying the lever that works; four small successes, or four watched ones, get them started |
+| [The buffer hour ↗](https://masiarek.github.io/learning-to-learn-library/04_Planning_the_Work/the_buffer_hour/) | Task times are skewed, so five honestly estimated one-hour tasks fit in five hours one day in thirteen; a reserved hour gives 47%, and a recorded overrun ratio corrects the estimates |
+| [Cognitive load ↗](https://masiarek.github.io/learning-to-learn-library/02_Making_It_Stay/cognitive_load/) | Working memory holds about four chunks, and a chunk is whatever practice made automatic: (a+b)² = a² + 2ab + b² is 19 items to a beginner and 1 to an expert; practice, modelled as byte-pair merging, chunks what repeats |
+| [Interleaving ↗](https://masiarek.github.io/learning-to-learn-library/02_Making_It_Stay/interleaving/) | A blocked sheet of volume problems asks you to choose a formula 4 times in 12, a mixed exam 7 in 8; a student who reuses the last formula scores 75% on the sheet and 25% on the exam |
 
 The books behind it, and behind the other chapters, are on the [resources](RESOURCES.md) page.
 

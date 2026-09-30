@@ -180,25 +180,9 @@ NAV_ORDER: dict[str, list[str]] = {
     # Calculus as motion, the four pieces Euler's formula leans on: a velocity
     # at an instant, the motion whose velocity is its position, the unit in
     # which turning is walking, and the series that motion forces.
-    # How to know that you know, then how to learn so that it stays: the
-    # fourth of Flavell's abilities measured, the task deciding what is kept,
-    # Bloom's levels climbed on one theorem, and spacing that keeps it cheaply;
-    # then the cutoff hidden under a confident yes-or-no, and the belief that
-    # stops you trying and so never meets the evidence; last, the planning
-    # fallacy, and the hour a schedule needs in reserve; and cognitive load,
-    # where the weight of a page depends on the chunks its reader has built;
-    # and interleaving, the step a blocked practice sheet lets you skip.
+    # Moved to the Learning to Learn library; one pointer page remains.
     "12_Learning_to_Learn": [
         "README.md",
-        "metacognition",
-        "count_the_vowels",
-        "studying_vs_learning",
-        "spaced_retrieval",
-        "day_or_night",
-        "learned_helplessness",
-        "the_buffer_hour",
-        "cognitive_load",
-        "interleaving",
     ],
     "09_Calculus": [
         "README.md",

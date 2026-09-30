@@ -100,36 +100,36 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - ↪ [A definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md) — a definition as an "if and only if"
         - ↪ [What is a set?](04_Sets/what_is_a_set/README.md) — Russell's paradox: an argument by cases in which both cases fail
         - ↪ [The algebra of sets](04_Sets/algebra_of_sets/README.md) — ∪ ∩ ′ are or, and, not; ⊆ is if–then; De Morgan's laws
-        - ↪ [Day or night: perspective taking](12_Learning_to_Learn/day_or_night/README.md) — a definition by cutoff, the sorites, and fuzzy logic's "day and not day"
+        - ↪ [Day or night: perspective taking ↗](https://masiarek.github.io/learning-to-learn-library/03_Believing_You_Can/day_or_night/) — a definition by cutoff, the sorites, and fuzzy logic's "day and not day"
 - **Chance and data**
     - **Averages** · from [Statistics](05_Statistics/README.md)
         - [Mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md) — one calculation, three sizes of word
         - [A share above a cutoff](05_Statistics/share_above_a_cutoff/README.md) — percentile, median, skew, log-normal model, Markov's inequality, Lp(a)
     - **Probability** · from [Measure Zero](02_Measure_Zero/README.md)
         - [Probability zero](02_Measure_Zero/probability_zero/README.md) — probability zero is not impossible, except on a computer
-- **Learning to learn**
-    - **Knowing what you know** · from [Learning to Learn](12_Learning_to_Learn/README.md)
-        - [Metacognition: judging what you know](12_Learning_to_Learn/metacognition/README.md) — Flavell's four abilities, calibration, overconfidence, Brier score, proper scoring rule, rereading vs self-testing
-        - [Count the vowels](12_Learning_to_Learn/count_the_vowels/README.md) — McGuire's exercise, levels of processing, knowing the goal, organising principle, 15!
+- **Learning to learn**, now the [Learning to Learn library ↗](https://masiarek.github.io/learning-to-learn-library/); kept here as the map of where each lesson went
+    - **Knowing what you know** · from [Learning to Learn ↗](https://masiarek.github.io/learning-to-learn-library/)
+        - [Metacognition: judging what you know ↗](https://masiarek.github.io/learning-to-learn-library/01_Knowing_What_You_Know/metacognition/) — Flavell's four abilities, calibration, overconfidence, Brier score, proper scoring rule, rereading vs self-testing
+        - [Count the vowels ↗](https://masiarek.github.io/learning-to-learn-library/01_Knowing_What_You_Know/count_the_vowels/) — McGuire's exercise, levels of processing, knowing the goal, organising principle, 15!
         - ↪ [If A then B: converse, contrapositive and inverse](11_Logic/converse_and_contrapositive/README.md) — why many examples prove nothing: the same distrust of feeling sure
-    - **Learning that lasts** · from [Learning to Learn](12_Learning_to_Learn/README.md)
-        - [Studying vs learning: Bloom's levels on one theorem](12_Learning_to_Learn/studying_vs_learning/README.md) — whats vs hows and whys, make-an-A vs teach-the-material, Bloom's taxonomy 1956 and 2001, Euclid's formula
-        - [Spaced retrieval](12_Learning_to_Learn/spaced_retrieval/README.md) — forgetting curve, testing effect, spacing effect, SM-2, logarithmic cost, McGuire's study cycle, intense study sessions
+    - **Learning that lasts** · from [Learning to Learn ↗](https://masiarek.github.io/learning-to-learn-library/)
+        - [Studying vs learning: Bloom's levels on one theorem ↗](https://masiarek.github.io/learning-to-learn-library/01_Knowing_What_You_Know/studying_vs_learning/) — whats vs hows and whys, make-an-A vs teach-the-material, Bloom's taxonomy 1956 and 2001, Euclid's formula
+        - [Spaced retrieval ↗](https://masiarek.github.io/learning-to-learn-library/02_Making_It_Stay/spaced_retrieval/) — forgetting curve, testing effect, spacing effect, SM-2, logarithmic cost, McGuire's study cycle, intense study sessions
         - ↪ [The Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md) — the theorem Bloom's levels are climbed on
         - ↪ [Velocity equals position](09_Calculus/velocity_equals_position/README.md) — e^t, the shape of the forgetting curve
-    - **Thinking with others** · from [Learning to Learn](12_Learning_to_Learn/README.md)
-        - [Day or night: perspective taking and the cutoff under a dichotomy](12_Learning_to_Learn/day_or_night/README.md) — dichotomous thinking, perspective taking, cutoff, twilight, sorites paradox, fuzzy logic, Zakrajsek
+    - **Thinking with others** · from [Learning to Learn ↗](https://masiarek.github.io/learning-to-learn-library/)
+        - [Day or night: perspective taking and the cutoff under a dichotomy ↗](https://masiarek.github.io/learning-to-learn-library/03_Believing_You_Can/day_or_night/) — dichotomous thinking, perspective taking, cutoff, twilight, sorites paradox, fuzzy logic, Zakrajsek
         - ↪ [A share above a cutoff](05_Statistics/share_above_a_cutoff/README.md) — another cutoff on a smooth quantity
-    - **Believing you can** · from [Learning to Learn](12_Learning_to_Learn/README.md)
-        - [Learned helplessness](12_Learning_to_Learn/learned_helplessness/README.md) — Hiroto and Seligman, rule of succession, explore–exploit, start small, vicarious success, personalization, pervasiveness, permanence, ABC technique
-        - ↪ [Metacognition: judging what you know](12_Learning_to_Learn/metacognition/README.md) — the same loop turned round: a feeling of knowing that stops self-testing
-    - **Planning** · from [Learning to Learn](12_Learning_to_Learn/README.md)
-        - [The buffer hour](12_Learning_to_Learn/the_buffer_hour/README.md) — planning fallacy, skewed task times, exact convolution, buffer, actual-to-estimate ratio, SMART goals, to-do lists
+    - **Believing you can** · from [Learning to Learn ↗](https://masiarek.github.io/learning-to-learn-library/)
+        - [Learned helplessness ↗](https://masiarek.github.io/learning-to-learn-library/03_Believing_You_Can/learned_helplessness/) — Hiroto and Seligman, rule of succession, explore–exploit, start small, vicarious success, personalization, pervasiveness, permanence, ABC technique
+        - ↪ [Metacognition: judging what you know ↗](https://masiarek.github.io/learning-to-learn-library/01_Knowing_What_You_Know/metacognition/) — the same loop turned round: a feeling of knowing that stops self-testing
+    - **Planning** · from [Learning to Learn ↗](https://masiarek.github.io/learning-to-learn-library/)
+        - [The buffer hour ↗](https://masiarek.github.io/learning-to-learn-library/04_Planning_the_Work/the_buffer_hour/) — planning fallacy, skewed task times, exact convolution, buffer, actual-to-estimate ratio, SMART goals, to-do lists
         - ↪ [A share above a cutoff](05_Statistics/share_above_a_cutoff/README.md) — skew: why the mean sits far from the typical value
-    - **Working memory** · from [Learning to Learn](12_Learning_to_Learn/README.md)
-        - [Cognitive load](12_Learning_to_Learn/cognitive_load/README.md) — Sweller, intrinsic, extraneous, germane, chunk, working memory span, automaticity, schema, byte-pair encoding
-        - ↪ [Count the vowels](12_Learning_to_Learn/count_the_vowels/README.md) — an organising principle holds fifteen phrases as one idea
-        - [Interleaving](12_Learning_to_Learn/interleaving/README.md) — blocked vs interleaved practice, choosing the method, Rohrer and Taylor, volume formulas
+    - **Working memory** · from [Learning to Learn ↗](https://masiarek.github.io/learning-to-learn-library/)
+        - [Cognitive load ↗](https://masiarek.github.io/learning-to-learn-library/02_Making_It_Stay/cognitive_load/) — Sweller, intrinsic, extraneous, germane, chunk, working memory span, automaticity, schema, byte-pair encoding
+        - ↪ [Count the vowels ↗](https://masiarek.github.io/learning-to-learn-library/01_Knowing_What_You_Know/count_the_vowels/) — an organising principle holds fifteen phrases as one idea
+        - [Interleaving ↗](https://masiarek.github.io/learning-to-learn-library/02_Making_It_Stay/interleaving/) — blocked vs interleaved practice, choosing the method, Rohrer and Taylor, volume formulas
         - ↪ [Area and volume formulas](10_Geometry/area_and_volume_formulas/README.md) — the formulas the practice sheets mix
 
 ## Threads across chapters
@@ -198,7 +198,7 @@ One theorem about right triangles turns out to be how every distance in this lib
 7. [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — the length of a complex number, √(x² + y²), is the same formula measured from 0.
 8. [Catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md) — the Burj Khalifa example subtracts two nearly equal squares, and a calculator pays for it.
 9. [Related rates](09_Calculus/related_rates/README.md) — ladders and travellers: x² + y² = z², differentiated in time.
-10. [Studying vs learning](12_Learning_to_Learn/studying_vs_learning/README.md) — Bloom's six levels climbed on the theorem, up to Euclid's formula for every whole-number right triangle.
+10. [Studying vs learning ↗](https://masiarek.github.io/learning-to-learn-library/01_Knowing_What_You_Know/studying_vs_learning/) — Bloom's six levels climbed on the theorem, up to Euclid's formula for every whole-number right triangle.
 
 ### Scale factor k
 
