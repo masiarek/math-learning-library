@@ -21,3 +21,7 @@ What is a Pomodoro?	25 minutes of phone-free focus, then a short reward that is 
 Hard start, jump to easy	On a test, start a hard problem, switch to easy ones when stuck, then return.	practice
 Why is a phone a bad break?	It is new focused work and fills the attention diffuse mode needs.	trap
 Are focused and diffuse scientific terms?	No, teaching words; the default mode network is a loose match.	evidence
+Is the focused/diffuse model a literal map of brain networks?	No: a teaching picture; the match to the task networks and the default mode network is loose.	evidence
+Does curiosity before studying help memory?	Yes, good evidence (Gruber 2014); dopamine is the proposed mechanism, not the finding.	evidence
+Why can't a stuck climber tell it is on the wrong hill?	The top of any hill has only lower neighbours, so a local peak feels exactly like the best one.	mechanism
+What should be the signal to step back from a problem?	No progress for a while, not a feeling of being close.	practice
