@@ -184,7 +184,8 @@ NAV_ORDER: dict[str, list[str]] = {
     # fourth of Flavell's abilities measured, the task deciding what is kept,
     # Bloom's levels climbed on one theorem, and spacing that keeps it cheaply;
     # then the cutoff hidden under a confident yes-or-no, and the belief that
-    # stops you trying and so never meets the evidence.
+    # stops you trying and so never meets the evidence; last, the planning
+    # fallacy, and the hour a schedule needs in reserve.
     "12_Learning_to_Learn": [
         "README.md",
         "metacognition",
@@ -193,6 +194,7 @@ NAV_ORDER: dict[str, list[str]] = {
         "spaced_retrieval",
         "day_or_night",
         "learned_helplessness",
+        "the_buffer_hour",
     ],
     "09_Calculus": [
         "README.md",

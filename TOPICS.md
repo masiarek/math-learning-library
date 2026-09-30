@@ -123,6 +123,9 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
     - **Believing you can** · from [Learning to Learn](12_Learning_to_Learn/README.md)
         - [Learned helplessness](12_Learning_to_Learn/learned_helplessness/README.md) — Hiroto and Seligman, rule of succession, explore–exploit, start small, vicarious success, personalization, pervasiveness, permanence, ABC technique
         - ↪ [Metacognition: judging what you know](12_Learning_to_Learn/metacognition/README.md) — the same loop turned round: a feeling of knowing that stops self-testing
+    - **Planning** · from [Learning to Learn](12_Learning_to_Learn/README.md)
+        - [The buffer hour](12_Learning_to_Learn/the_buffer_hour/README.md) — planning fallacy, skewed task times, exact convolution, buffer, actual-to-estimate ratio, SMART goals, to-do lists
+        - ↪ [A share above a cutoff](05_Statistics/share_above_a_cutoff/README.md) — skew: why the mean sits far from the typical value
 
 ## Threads across chapters
 
