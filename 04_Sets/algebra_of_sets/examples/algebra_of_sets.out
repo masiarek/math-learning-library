@@ -5,6 +5,13 @@
    the complement of A = {1, 2} is U - A = {3, 4}.
    Python's set has no complement operator: 'everything not in A'
    means nothing until U is fixed, so the code has to write U - A.
+   U is a choice, and a different choice gives a different complement
+   of the same A = {1, 2}:
+     U = {1, 2, 3, 4}           U - A = {3, 4}
+     U = {1, 2, 3, 4, 5, 6}     U - A = {3, 4, 5, 6}
+     U = {1, 2}                 U - A = {}
+   Whatever U is, A | (U - A) = U and A & (U - A) = {}: each x in U is
+   in A or not, and none is both. Checked for the three universes: True
 
 2. EACH OPERATION IS A LOGICAL OPERATION ON MEMBERSHIP
    A = {1, 2}, B = {2, 3}; for each x in U, is x in the result?

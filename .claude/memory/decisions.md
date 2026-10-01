@@ -2,6 +2,7 @@
 
 Dated log, newest first. Each line: the decision, and why.
 
+- 2026-10-01 — "What is a universal set", with two Sullivan pages: extended `algebra_of_sets` (rectangle = U, Ā and Aᶜ notation, disjoint sets, same A under a different U) instead of a new page, because the page already covered the universal set. Sets questions from Sullivan go there or in `what_is_a_set`.
 - 2026-10-01 — Set up this second brain (`.claude/memory/`, imported from `CLAUDE.md`), at the owner's request after an "AI second brain" video. Kept inside the repository so every cloud session gets it with the clone.
 - 2026-10-01 — Added a "how sure each claim is" table to focused and diffuse, for a long pasted summary, instead of copying it: its advice was sound and several claims were overstated or invented.
 - 2026-09-30 — The book's "picture walk" went into `count_the_vowels` as a practice item, not a new page: same idea (an organising frame before reading), and `CLAUDE.md` says extend before repeating.
