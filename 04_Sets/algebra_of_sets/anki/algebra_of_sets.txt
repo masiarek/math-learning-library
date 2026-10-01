@@ -11,6 +11,9 @@ Which logical connective is the complement A′?	'not': x ∈ A′ when x ∉ A 
 Rewrite A ⊆ B as a logical statement about members.	For every x: if x ∈ A then x ∈ B. Subset is if-then applied to every member at once.	logic
 Rewrite A ∖ B in logic, and as an intersection.	x ∈ A and x ∉ B; equivalently A ∖ B = A ∩ B′.	logic
 Why does a complement only make sense relative to a universal set U?	'Everything not in A' needs an everything, and there is no set of everything (Russell). So A′ = U ∖ A for a U fixed in advance.	definition
+What is a universal set?	The set U, fixed before the problem starts, of everything under discussion: every set in the problem is a subset of it, and complements are taken out of it. Not a set of everything; there is none.	definition
+Three notations for the complement of A?	A′, Ā (a bar over A) and Aᶜ. Sullivan's Precalculus writes Ā and notes the other two in a footnote; this library writes A′.	definition
+Same A, different universal set U: does the complement change?	Yes. A = {1, 2} has complement {3, 4} in U = {1, 2, 3, 4}, {3, 4, 5, 6} in U = {1, …, 6} and ∅ in U = {1, 2}. A complement quoted without its U is an unfinished sentence.	trap
 Python has |, &, - and ^ for sets. Why is there no complement operator?	A complement needs a universe and Python cannot guess it. Name U yourself and write U - a.	python
 State De Morgan's laws for sets.	(A ∪ B)′ = A′ ∩ B′ and (A ∩ B)′ = A′ ∪ B′. Taking the complement swaps ∪ and ∩.	law
 De Morgan's laws in plain words: what is 'not either', and what is 'not both'?	Not either = neither: not in A and not in B. Not both = at least one is missing: not in A or not in B.	law
@@ -26,6 +29,8 @@ From A ∪ B = A ∪ C, can you cancel A and conclude B = C?	No. A = {1}, B = �
 Is set difference associative? Commutative?	Neither. With A = B = C = {1}: (A ∖ B) ∖ C = ∅ but A ∖ (B ∖ C) = {1}. And A ∖ B ≠ B ∖ A unless A = B.	trap
 How many regions does a Venn diagram of n sets have, and what does each stand for?	2^n, one for each pattern of in-or-out across the n sets. Three sets give 8, counting the region outside all the circles.	venn
 In a three-set Venn diagram, which set is the region outside all three circles?	(A ∪ B ∪ C)′, the complement of the union: everything in U that is in none of them.	venn
+What does the rectangle in a Venn diagram stand for, and the part of it outside a circle?	The rectangle is the universal set U, and the circles are sets inside it. The part of the rectangle outside a circle is that set's complement.	venn
+How does a Venn diagram show A ⊆ B, and A and B disjoint?	A ⊆ B: the circle A drawn inside the circle B. Disjoint (A ∩ B = ∅, no member in common): two circles drawn apart. The usual overlapping circles claim nothing; a region may be empty.	venn
 Which three properties make ⊆ an order relation?	Reflexive (A ⊆ A); antisymmetric (A ⊆ B and B ⊆ A give A = B, which is extensionality again); transitive (A ⊆ B and B ⊆ C give A ⊆ C).	order
 Why is ⊆ a partial order and not a total one?	Some pairs are incomparable: neither {1} ⊆ {2} nor {2} ⊆ {1}. A total order, like ≤ on numbers, compares every pair.	order
 What is a poset, and what is the standard example?	A partially ordered set: a set with a reflexive, antisymmetric, transitive relation that need not compare every pair. The subsets of a set under ⊆ are the standard example.	order

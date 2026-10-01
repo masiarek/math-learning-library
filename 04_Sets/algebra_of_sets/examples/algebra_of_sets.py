@@ -42,6 +42,14 @@ def main() -> None:
     print(f"   the complement of A = {show(A)} is U - A = {show(comp(A))}.")
     print("   Python's set has no complement operator: 'everything not in A'")
     print("   means nothing until U is fixed, so the code has to write U - A.")
+    print("   U is a choice, and a different choice gives a different complement")
+    print(f"   of the same A = {show(A)}:")
+    universes = [U, frozenset(range(1, 7)), frozenset({1, 2})]
+    for W in universes:
+        print(f"     U = {show(W):<22} U - A = {show(W - A)}")
+    both = all((A | (W - A)) == W and not (A & (W - A)) for W in universes)
+    print("   Whatever U is, A | (U - A) = U and A & (U - A) = {}: each x in U is")
+    print(f"   in A or not, and none is both. Checked for the three universes: {both}")
     print()
 
     print("2. EACH OPERATION IS A LOGICAL OPERATION ON MEMBERSHIP")

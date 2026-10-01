@@ -50,7 +50,7 @@ Terms used across the library, with the page that explains each in full.
 
 **Commutative** — a · b = b · a: the order of the two inputs does not matter. True for adding and multiplying numbers; false for subtraction, string concatenation, matrix multiplication and composing maps. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
 
-**Complement** — A′, the members of a fixed universal set U that are not in A: A′ = U ∖ A. It has no meaning without U, since there is no set of everything; in Python it is `U - a`. See [the algebra of sets](04_Sets/algebra_of_sets/README.md).
+**Complement** — A′, the members of a fixed universal set U that are not in A: A′ = U ∖ A; also written Ā or Aᶜ. It has no meaning without U, since there is no set of everything; in Python it is `U - a`. See [the algebra of sets](04_Sets/algebra_of_sets/README.md).
 
 **Completing the square** — rewriting x² + ax as (x + a/2)² − (a/2)², by adding half the coefficient squared to both sides. It turns the general form of a circle back into the standard form. See [circles](08_Analytic_Geometry/circles/README.md).
 
@@ -87,6 +87,8 @@ Terms used across the library, with the page that explains each in full.
 **Dense** — found inside every interval, however short. The rationals are dense in the line and still have measure zero. See [countable sets](02_Measure_Zero/countable_sets/README.md).
 
 **Dimension of a formula** — how many lengths each term multiplies together: one for a perimeter, two for an area, three for a volume. Scaling every length by k scales the result by k to that power, which catches a misremembered formula. See [area and volume formulas](10_Geometry/area_and_volume_formulas/README.md).
+
+**Disjoint** — two sets with no member in common: A ∩ B = ∅. In a Venn diagram, two circles drawn apart; in Python, `a.isdisjoint(b)`. See [the algebra of sets](04_Sets/algebra_of_sets/README.md).
 
 **Distance formula** — d(P₁, P₂) = √((x₂ − x₁)² + (y₂ − y₁)²), the Pythagorean theorem with the legs read off the coordinates. The squares erase the signs, so the order of the points does not matter. See [the distance formula](08_Analytic_Geometry/distance_formula/README.md).
 
@@ -270,8 +272,10 @@ Terms used across the library, with the page that explains each in full.
 
 **Unit roundoff** — u = 2⁻⁵³ ≈ 1.1 × 10⁻¹⁶ for binary64: the largest relative error that rounding a real number to the nearest float can make, and the bound on δ in the standard model. See [relative error and correct digits](01_Precision/relative_error/README.md) and [machine numbers](01_Precision/machine_numbers/README.md).
 
-**Universal set** — the set U, fixed in advance, that every set under discussion is a subset of; complements are taken relative to it. There is no universal set of everything. See [the algebra of sets](04_Sets/algebra_of_sets/README.md).
+**Universal set** — the set U, fixed in advance, that every set under discussion is a subset of; complements are taken relative to it, and in a Venn diagram it is the rectangle the circles are drawn in. There is no universal set of everything, so U is a choice, and the same A has a different complement under a different U. See [the algebra of sets](04_Sets/algebra_of_sets/README.md).
 
 **Vector space** — a set with an addition and a scalar multiplication satisfying eight conditions: commutativity, two associativities, an additive identity, additive inverses, 1v = v, and two distributive laws. ℝ² is one; so are the functions from any set to ℝ, and the positive numbers with multiplication as their addition. See [a definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md).
+
+**Venn diagram** — sets drawn as circles inside a rectangle that stands for the universal set U. n circles make 2ⁿ regions, one per pattern of membership, and every set operation is a choice of regions; a circle inside another draws A ⊆ B, two circles apart draw disjoint sets, and the rectangle outside a circle is its complement. See [the algebra of sets](04_Sets/algebra_of_sets/README.md).
 
 **Zero divisor** — a nonzero number that multiplies some other nonzero number to give zero. Multiplying pairs entry by entry creates them, since (1, 0)(0, 1) = (0, 0), and a zero divisor can never be divided by. Complex multiplication has none: the product's x² + y² is the product of the two factors' x² + y², which is zero only when a factor is (0, 0). See [multiplication can be undone](03_Complex_Numbers/multiplication_can_be_undone/README.md).
