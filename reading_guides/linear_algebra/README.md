@@ -119,7 +119,7 @@ Less than most subjects. **High-school algebra is the only hard requirement.** W
 | You need | Why |
 |---|---|
 | **Reading and writing proofs**: quantifiers, contrapositive, contradiction, induction | This is the real barrier. Most people who get stuck in Axler are stuck on proofs, not on linear algebra. |
-| **Sets and functions**: one-to-one, onto, bijection | "Injective" and "surjective" appear on almost every page. |
+| **Sets and functions**: [one-to-one, onto, bijection](../../04_Sets/relations_and_functions/README.md#the-three-words) | "Injective" and "surjective" appear on almost every page. |
 | **Complex numbers** | Axler works over ℂ from chapter 1. A rotation of the plane has no real eigenvalues, so you need ℂ for eigenvalues to always exist. |
 | **Polynomials**: factoring, roots, division with remainder | Axler builds eigenvalue theory on polynomials. The book proves the theory itself, but you need to be fluent with the algebra. |
 
