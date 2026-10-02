@@ -125,6 +125,8 @@ If the third is new, start with the language: Velleman, then Halmos. If the seco
 
 ### The language of sets: a first course
 
+**Before any book.** The [Math is Fun introduction to sets ↗](https://www.mathsisfun.com/sets/sets-introduction.html) is a sound first hour: sets as collections, braces and ∈, the standard number sets, equality, subsets and proper subsets, the empty set, cardinality including a first look at infinite sets, the universal set, and short "your turn" questions, with follow-on pages on set-builder notation, power sets and Venn diagrams. (Described from memory; the page could not be fetched from this session.) Two cautions for a reader going on to the books: it calls the universal set "the set that has everything", which is the one set that does not exist, as [what is a set?](../../04_Sets/what_is_a_set/README.md) explains, and it treats "a collection of things" as a definition, which [that page](../../04_Sets/what_is_a_set/README.md) shows leaves out the rule everything else relies on. Read it, then this library's [sets chapter](../../04_Sets/README.md), which covers the same ground with a program behind each claim, and then Velleman.
+
 | Book | What it is | Verdict |
 |---|---|---|
 | **Daniel Velleman, *How to Prove It*** (3rd ed., Cambridge, 2019) | A proofs course whose vehicle is sets: logic, then sets, relations, functions, induction, and a closing chapter on infinite sets. | The one book for a reader at this library's level. Its angle, that every set statement is a logic statement in disguise, is the angle of [the algebra of sets](../../04_Sets/algebra_of_sets/README.md). |
