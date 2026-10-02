@@ -97,7 +97,7 @@ def main() -> None:
     ident = frozenset((x, x) for x in BASE)
     to_strict = all((r - ident) in strict for r in po)
     to_nonstrict = all((r | ident) in po for r in strict)
-    print(f"   non-strict orders {len(po)} (12 partial + 6 linear + the identity, which is also an equivalence),")
+    print(f"   non-strict orders {len(po)} (13 partial, the identity among them, + 6 linear),")
     print(f"   strict orders {len(strict)}; remove the diagonal {to_strict}, add it back {to_nonstrict}: a one-to-one match.")
     print("   equivalences: 5, the Bell number B(3); linear orders: 6 = 3!; partial orders on 3 labelled")
     print("   points: 19, the third term of OEIS A001035 (1, 1, 3, 19, 219, ...).")

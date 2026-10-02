@@ -21,7 +21,7 @@
    strict partial order     13
    strict linear order       6
    none of these           470
-   non-strict orders 19 (12 partial + 6 linear + the identity, which is also an equivalence),
+   non-strict orders 19 (13 partial, the identity among them, + 6 linear),
    strict orders 19; remove the diagonal True, add it back True: a one-to-one match.
    equivalences: 5, the Bell number B(3); linear orders: 6 = 3!; partial orders on 3 labelled
    points: 19, the third term of OEIS A001035 (1, 1, 3, 19, 219, ...).
