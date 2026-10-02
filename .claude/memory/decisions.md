@@ -2,6 +2,7 @@
 
 Dated log, newest first. Each line: the decision, and why.
 
+- 2026-10-02 — `04_Sets/function_katas`: Hrbacek and Jech's exercises on functions with written solutions, at the owner's "add solutions". Solutions pages are allowed when the owner asks; each solution names its move, and the program still checks every claim.
 - 2026-10-02 — New chapter `13_Axioms_of_Set_Theory`, twelve lessons, from the owner's photos of Cori and Lascar chapter 7, Cunningham chapter 1, Jech chapter 1, Kunen's *Foundations* chapter I and Hrbacek and Jech chapter 1. One page per axiom, each checked by a brute-force model checker on the stages V₁ to V₄; the chapter's thesis is that an axiom is a demand on the universe, and every False is a set the universe lacks. Chosen over a single "ZF" page because the owner asked for "each axiom a page with a better explanation".
 - 2026-10-02 — New reading guide `reading_guides/set_theory`, with the founding papers (Cantor 1874, Dedekind 1888, Cantor 1891, von Neumann 1923) run as a program and a section on the Polish school. Years and journals are from memory and the page says so.
 - 2026-10-02 — `11_Logic` extended with truth tables and quantifiers, because the owner found ∀, ∃, ⇔ and "predicate" unexplained; the pages are the prerequisite of chapter 13 and say so.

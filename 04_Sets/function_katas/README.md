@@ -1,0 +1,137 @@
+# Function katas: Hrbacek and Jech's exercises on functions, with solutions
+
+**Level:** 101 · for anyone working through chapter 2 of Hrbacek and Jech's *Introduction to Set Theory* who wants the exercises checked and the solutions written out
+
+**One line:** The exercises after a first section on functions are all the same three moves, chase an element through the definitions, show two sets each contain the other, and find the one example where an inclusion is strict; the program checks every claim on all 64 partial functions on {1, 2, 3} and computes the concrete compositions and inverses exactly, and the solutions below are written move by move.
+
+## How to use the page
+
+The exercises are 3.1 to 3.13 and 4.1 of chapter 2 of Hrbacek and Jech (3rd ed., 1999), pages 28 and 32. Try each for ten minutes, run the program to see whether your reading of the claim is the book's, then compare with the solution. The program's True is a check, not a proof: {1, 2, 3} is one set, and the proof must work for all. Where an exercise asks for an example, the program finds the smallest one by search, which is also how to find one by hand: try the smallest sets first.
+
+The three moves, named in each solution:
+
+| Move | What it looks like |
+|---|---|
+| **Element chase** | "let x ∈ dom(g ∘ f); then there is z with x (g ∘ f) z; so there is y with x f y and y g z; …" |
+| **Two inclusions** | to prove two sets equal, prove ⊆ and ⊇ by two element chases |
+| **Smallest counterexample** | for "show that ⊆ cannot be replaced by =", a function that merges two inputs and a set that separates them |
+
+## Solutions
+
+**3.1** If ran f ⊆ dom g then dom(g ∘ f) = dom f. *Two inclusions.* Theorem 3.5 gives dom(g ∘ f) = dom f ∩ f⁻¹[dom g], so ⊆ is immediate. For ⊇, take x ∈ dom f; then f(x) ∈ ran f ⊆ dom g, so x ∈ f⁻¹[dom g], so x is in the intersection. Section 3.1 of the program confirms it on all 2 530 pairs with the hypothesis and shows a failure without it.
+
+**3.2** With f₁ = 2x − 1 on ℝ, f₂ = √x on x > 0, f₃ = 1/x on x ≠ 0, and dom(g ∘ f) = {x ∈ dom f : f(x) ∈ dom g}:
+
+| composite | formula | domain | range |
+|---|---|---|---|
+| f₂ ∘ f₁ | √(2x − 1) | 2x − 1 > 0, so x > ½ | (0, ∞) |
+| f₁ ∘ f₂ | 2√x − 1 | x > 0 | (−1, ∞) |
+| f₃ ∘ f₁ | 1/(2x − 1) | x ≠ ½ | ℝ ∖ {0} |
+| f₁ ∘ f₃ | 2/x − 1 | x ≠ 0 | ℝ ∖ {−1} |
+
+(The book's f₂ has domain x > 0, so f₂ ∘ f₁ excludes x = ½, where 2x − 1 = 0; with domain x ≥ 0 it would include it. The program's table marks every point outside a domain.)
+
+**3.3** Each fᵢ is one-to-one, by solving: 2x − 1 = 2x′ − 1 gives x = x′; √x = √x′ gives x = x′ by squaring; 1/x = 1/x′ gives x = x′ by inverting. The inverses, found by solving y = f(x) for x: f₁⁻¹(y) = (y + 1)/2 with domain ℝ = ran f₁; f₂⁻¹(y) = y² with domain (0, ∞) = ran f₂; f₃⁻¹(y) = 1/y with domain ℝ ∖ {0} = ran f₃, so f₃ is its own inverse. In each case dom fᵢ = ran fᵢ⁻¹ and ran fᵢ = dom fᵢ⁻¹, which is exercise 2.4(c) applied to a function.
+
+**3.4 (a)** Let f be invertible, so f⁻¹ is a function. *Element chase.* If (x, z) ∈ f⁻¹ ∘ f then for some y, (x, y) ∈ f and (y, z) ∈ f⁻¹, that is (z, y) ∈ f; f is one-to-one (Theorem 3.8), so x = z, and x ∈ dom f. Conversely (x, x) ∈ f⁻¹ ∘ f for every x ∈ dom f, via y = f(x). So f⁻¹ ∘ f = Id_dom f, and f ∘ f⁻¹ = Id_ran f is the same argument with f and f⁻¹ swapped. **(b)** Suppose g ∘ f = Id_dom f. If f(a₁) = f(a₂) then a₁ = g(f(a₁)) = g(f(a₂)) = a₂, so f is one-to-one, hence invertible; and for y ∈ ran f, y = f(a) gives g(y) = g(f(a)) = a = f⁻¹(y), so g↾ran f = f⁻¹. A right inverse proves nothing: the program's example is f constant, f = {(1, 1), (2, 1), (3, 1)}, and h = {(1, 1)}, with f ∘ h = Id_{1} = Id_ran f and f far from one-to-one. A right inverse only picks one preimage per value; a left inverse must undo f on its whole domain.
+
+**3.5** If f and g are one-to-one, so is g ∘ f: if g(f(a₁)) = g(f(a₂)) then f(a₁) = f(a₂) since g is one-to-one, then a₁ = a₂ since f is. For the inverse, *two inclusions*: (z, x) ∈ (g ∘ f)⁻¹ iff (x, z) ∈ g ∘ f iff for some y, (x, y) ∈ f and (y, z) ∈ g iff (y, x) ∈ f⁻¹ and (z, y) ∈ g⁻¹ iff (z, x) ∈ f⁻¹ ∘ g⁻¹. The order reverses: g was applied last and is undone first.
+
+**3.6** *Two inclusions*, and the reason the inclusions of exercise 2.3 become equalities for inverse images under a function. (a) x ∈ f⁻¹[A ∩ B] iff f(x) ∈ A ∩ B iff f(x) ∈ A and f(x) ∈ B iff x ∈ f⁻¹[A] and x ∈ f⁻¹[B]. (b) The same with "and not". Each "iff" uses that f(x) is *one* value; for a relation, "x is related to something in A and to something in B" need not mean the same something, and the program shows the law failing for relations.
+
+**3.7** f ∩ A² ≠ f↾A. *Smallest counterexample.* The restriction f↾A keeps every pair whose first entry is in A, whatever its value; f ∩ A² also demands the value in A. Take f = {(1, 2)} and A = {1}: f↾A = f, f ∩ A² = ∅. The program finds one of the same shape.
+
+**3.8** Every system of sets A is indexed by a function: take I = A and S = Id_A, so that Sᵢ = i and {Sᵢ : i ∈ I} = A.
+
+**3.9 (a)** B^A exists: every function on A into B is a subset of A × B, so B^A = {f ∈ 𝒫(A × B) : f is a function on A into B}, a comprehension inside a set that exists by the power set axiom. **(b)** ∏ᵢ∈I Sᵢ exists: each member is a function on I into ∪ᵢ Sᵢ, so a subset of I × ∪ᵢ Sᵢ, and the product is a comprehension inside 𝒫(I × ∪ᵢ Sᵢ). The pattern is the one [the comprehension axiom](../../13_Axioms_of_Set_Theory/comprehension/README.md) describes: name a big enough set that exists, then cut.
+
+**3.10** x ∈ ∪_{a ∈ ∪S} F_a iff there is a ∈ ∪S with x ∈ F_a iff there is C ∈ S and a ∈ C with x ∈ F_a iff there is C ∈ S with x ∈ ∪_{a ∈ C} F_a iff x ∈ ∪_{C ∈ S}(∪_{a ∈ C} F_a). For ∩, replace "there is" by "for every" throughout; the hypothesis that S and its members are nonempty is what keeps every ∩ defined.
+
+**3.11** De Morgan: x ∈ B − ∪ F_a iff x ∈ B and for no a is x ∈ F_a iff for every a, x ∈ B − F_a iff x ∈ ∩(B − F_a); the other law swaps ∪ and ∩ and "for no" with "for some a, x ∉". Distributive: x ∈ (∪F_a) ∩ (∪G_b) iff some a has x ∈ F_a and some b has x ∈ G_b iff some pair (a, b) has x ∈ F_a ∩ G_b; dually for ∩ and ∪. These are [the laws of the algebra of sets](../algebra_of_sets/README.md) with "for some" in place of ∨ and "for every" in place of ∧, which is the [quantifier distribution](../../11_Logic/predicates_and_quantifiers/README.md) that holds.
+
+**3.12** f[∪F_a] = ∪f[F_a]: y is the image of some x in some F_a, either way round. f⁻¹[∪F_a] = ∪f⁻¹[F_a] and f⁻¹[∩F_a] = ∩f⁻¹[F_a]: as in 3.6, f(x) is one value, so "f(x) ∈ every F_a" and "x ∈ every f⁻¹[F_a]" are the same sentence. f[∩F_a] ⊆ ∩f[F_a]: if x is in every F_a then f(x) is in every f[F_a]. Equality fails when f merges: f = {(1, 1), (2, 1)}, A = {1}, B = {2} gives f[A ∩ B] = ∅ and f[A] ∩ f[B] = {1}, the program's example; it holds when f is one-to-one, because then y ∈ every f[F_a] has one preimage, which must lie in every F_a.
+
+**3.13** Follow the hint. ⊇: for f ∈ B^A, F_{a, f(a)} ⊆ ∪_b F_{a, b}, so ∩_a F_{a, f(a)} ⊆ ∩_a ∪_b F_{a, b} = L. ⊆: take x ∈ L; for each a some b has x ∈ F_{a, b}, and by the disjointness hypothesis exactly one, so a ↦ that b is a function f on A into B, and x ∈ ∩_a F_{a, f(a)} ⊆ R. This is the law of [predicates and quantifiers](../../11_Logic/predicates_and_quantifiers/README.md) that ∀a ∃b becomes ∃f ∀a: a choice for each a is a function, and here no axiom of choice is needed because the b is unique.
+
+**4.1** The program's table gives the verdicts; the arguments are one line each. (a) x > y: not reflexive (x > x fails), not symmetric (3 > 2 but not 2 > 3), transitive. (b) n | m on ℤ: reflexive (n = n · 1), not symmetric (2 | 4, not 4 | 2), transitive (m = nk, p = ml give p = n(kl)). (c) x ≠ y: not reflexive, symmetric, not transitive (1 ≠ 2, 2 ≠ 1, but 1 = 1). (d) ⊆: reflexive, not symmetric, transitive, and antisymmetric, so an ordering; ⊂: not reflexive, not symmetric, transitive. (e) ∅ in ∅: reflexive, symmetric and transitive, all vacuously, since there is no element to fail them. (f) ∅ in a nonempty A: not reflexive (a ∅ a fails for a ∈ A), symmetric and transitive vacuously.
+
+**4.2** This is the kernel of f, done in full on [equivalence relations and partitions](../equivalence_and_partitions/README.md): E = ker(f) is an equivalence; φ([a]) = f(a) is well defined because [a] = [a′] means f(a) = f(a′); and φ ∘ j = f is the decomposition theorem.
+
+**4.3** (r, γ) ~ (r′, γ′) when r = r′ and γ − γ′ ∈ 2πℤ is reflexive (0 is a multiple), symmetric (negate the multiple) and transitive (add two multiples). In each class there is exactly one pair with 0 ≤ γ < 2π: subtract the right multiple of 2π to land in [0, 2π), and two such angles that differ by a multiple of 2π are equal. The set of these pairs is a set of representatives, and it is the reason a polar angle is reported in [0, 2π).
+
+## What the program prints
+
+<!-- output:function_katas -->
+*Verified output of [`function_katas.py`](examples/function_katas.py) — regenerated by `tools/run_examples.py`, never hand-typed.*
+
+```text
+3.1  IF ran f ⊆ dom g THEN dom(g ∘ f) = dom f
+     pairs of partial functions on {1, 2, 3} with ran f ⊆ dom g: 2530; dom(g ∘ f) == dom f in all: True
+     without the hypothesis it fails, e.g. f = {(1, 1), (2, 1), (3, 1)}, g = {(2, 1), (3, 1)}: dom(g ∘ f) = ∅
+
+3.2  THE FOUR COMPOSITIONS OF f1 = 2x − 1, f2 = √x (x > 0), f3 = 1/x (x ≠ 0)
+               formula      domain    range      values at x = 1/2, 5/2, 1, 4, 9/4, 0, -1, 1/4
+     f2 ∘ f1   √(2x − 1)    x ≥ 1/2   [0, ∞)     —, 2, 1, —, —, —, —, —
+     f1 ∘ f2   2√x − 1      x > 0     (−1, ∞)    —, —, 1, 3, 2, —, —, 0
+     f3 ∘ f1   1/(2x − 1)   x ≠ 1/2   ℝ ∖ {0}    —, 1/4, 1, 1/7, 2/7, -1, -1/3, -2
+     f1 ∘ f3   2/x − 1      x ≠ 0     ℝ ∖ {−1}   3, -1/5, 1, -1/2, -1/9, —, -3, 7
+     — marks a point outside the domain: dom(g ∘ f) = {x ∈ dom f : f(x) ∈ dom g} (Theorem 3.5).
+
+3.3  f1, f2, f3 ARE ONE-TO-ONE; THEIR INVERSES
+     f1⁻¹(y) = (y + 1)/2 on ℝ:        f1⁻¹∘f1 = id and f1∘f1⁻¹ = id on samples: True
+     f2⁻¹(y) = y² on (0, ∞):          same, on perfect squares: True
+     f3⁻¹(y) = 1/y on ℝ ∖ {0}:       same (f3 is its own inverse): True
+     dom f_i = ran f_i⁻¹ and ran f_i = dom f_i⁻¹: ℝ and ℝ; (0, ∞) and (0, ∞); ℝ∖{0} twice.
+
+3.4  INVERTIBLE MEANS A TWO-SIDED INVERSE; A ONE-SIDED ONE IS NOT ENOUGH
+     (a) for every one-to-one f (34 of them): f⁻¹∘f = Id_dom f and f∘f⁻¹ = Id_ran f: True
+     (b) g∘f = Id_dom f forces f one-to-one and g↾ran f = f⁻¹, all pairs: True
+         but f∘h = Id_ran f does not: f = {(1, 1), (2, 1), (3, 1)}, h = {(1, 1)}, f∘h = {(1, 1)}, f not one-to-one
+
+3.5  COMPOSITION OF ONE-TO-ONE FUNCTIONS, AND (g∘f)⁻¹ = f⁻¹∘g⁻¹
+     all 1156 pairs of one-to-one f, g: True   (the order reverses: socks on, shoes on; shoes off, socks off)
+
+3.6  INVERSE IMAGES UNDER A FUNCTION RESPECT ∩ AND −  (RELATIONS ONLY RESPECT ∪)
+     (a) f⁻¹[A ∩ B] = f⁻¹[A] ∩ f⁻¹[B]: True   (b) f⁻¹[A − B] = f⁻¹[A] − f⁻¹[B]: True   (4096 cases each)
+     the same with an arbitrary relation in place of f: False   — a function sends x to ONE value, a relation may not
+
+3.7  f ∩ A² VERSUS f ↾ A
+     f = {(1, 1), (2, 1), (3, 1)}, A = {2}: f ↾ A = {(2, 1)} but f ∩ A² = ∅
+     the restriction keeps a pair whose value lies outside A; the intersection with A² does not.
+
+3.12 IMAGES AND INVERSE IMAGES OF UNIONS AND INTERSECTIONS
+     f[∪] = ∪f[]: True   f⁻¹[∪] = ∪f⁻¹[]: True   f[∩] ⊆ ∩f[]: True   f⁻¹[∩] = ∩f⁻¹[]: True
+     f[∩] = ∩f[] when f is one-to-one: True; in general not, e.g. f = {(1, 1), (2, 1)}, A = {1}, B = {2}:
+     f[A ∩ B] = ∅, f[A] ∩ f[B] = {1}
+
+4.1  REFLEXIVE, SYMMETRIC, TRANSITIVE? SIX RELATIONS, CHECKED ON A FINITE PIECE
+     relation               reflexive symmetric transitive   note
+     (a) x > y on ℤ             False     False       True   
+     (b) n divides m on ℤ        True     False       True   not antisymmetric on ℤ: 1 | −1 and −1 | 1
+     (c) x ≠ y on ℕ             False      True      False   
+     (d) ⊆ on 𝒫({1, 2})          True     False       True   
+     (d) ⊂ on 𝒫({1, 2})         False     False       True   
+     (e) ∅ in ∅                  True      True       True   all three hold vacuously: no element to fail them
+     (f) ∅ in {1, 2}            False      True       True   1 is not related to 1, so not reflexive; the other two are vacuous
+     A finite piece can refute a property, never confirm it; the page gives the arguments.
+```
+<!-- /output -->
+
+## Po polsku, w skrócie
+
+Zadania po pierwszym rozdziale o funkcjach robi się trzema ruchami: pogonią za elementem przez definicje, dwoma zawieraniami dla równości zbiorów i najmniejszym kontrprzykładem tam, gdzie zawieranie nie jest równością. Strona zawiera zadania 3.1–3.13 i 4.1–4.3 z rozdziału 2 książki Hrbacka i Jecha z rozwiązaniami, a program sprawdza każdą tezę na wszystkich 64 funkcjach częściowych na {1, 2, 3} i liczy dokładnie złożenia oraz odwrotności funkcji 2x − 1, √x i 1/x. Najważniejsze wnioski: dziedzina złożenia g ∘ f to te x z dziedziny f, dla których f(x) leży w dziedzinie g; lewa odwrotność wymusza różnowartościowość, prawa nie; (g ∘ f)⁻¹ = f⁻¹ ∘ g⁻¹ w odwróconej kolejności; przeciwobrazy przy funkcji zachowują ∩ i −, obrazy tylko ∪, bo funkcja daje jedną wartość, a relacja może dawać wiele. Zadanie 4.2 to jądro funkcji ze strony o relacjach równoważności, a 4.3 tłumaczy, czemu kąt biegunowy podaje się z przedziału [0, 2π).
+
+## Run it yourself
+
+From the root of your clone of this repository:
+
+```bash
+python3 04_Sets/function_katas/examples/function_katas.py
+```
+
+## See also
+
+- [Relations and functions are sets of pairs](../relations_and_functions/README.md) — the definitions the exercises use, and Hrbacek and Jech's exercises 2.3 and 2.4 on images
+- [Equivalence relations, partitions and the kernel of a function](../equivalence_and_partitions/README.md) — exercise 4.2 in full
+- [Set katas](../set_katas/README.md) and [axiom katas](../../13_Axioms_of_Set_Theory/axiom_katas/README.md) — the other exercise pages
+- Karel Hrbacek and Thomas Jech, *Introduction to Set Theory* (3rd ed., Marcel Dekker, 1999), chapter 2, sections 3 and 4

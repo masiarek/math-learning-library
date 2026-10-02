@@ -129,6 +129,7 @@ NAV_ORDER: dict[str, list[str]] = {
         "relations_and_functions",
         "equivalence_and_partitions",
         "set_katas",
+        "function_katas",
     ],
     # One number standing in for many: what each kind of average keeps, and
     # why the names for them nest instead of meaning the same thing.
