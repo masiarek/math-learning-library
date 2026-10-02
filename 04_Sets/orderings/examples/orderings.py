@@ -152,7 +152,56 @@ def main() -> None:
     print("   Dictionary order: compare first entries, and only on a tie compare the second.")
     print()
 
-    print("6. THE OTHER 'PARTITION': REAL ANALYSIS CUTS AN INTERVAL, NOT A SET")
+    print("6. A RELATION AS A LOGICAL MATRIX: EACH PROPERTY IS A SHAPE")
+    S5 = "abcde"
+
+    def matrix(r, base, mark="1", blank="."):
+        return ["".join(mark if (x, y) in r else blank for y in base) for x in base]
+
+    def side_by_side(named):
+        rows = [[*m] for _, m in named]
+        print("   " + "    ".join(f"{n:<{len(S5)}}" for n, _ in named))
+        for i in range(len(S5)):
+            print("   " + "    ".join(m[i] for m in rows))
+
+    eq = frozenset({(x, y) for x in "abc" for y in "abc"} | {(x, y) for x in "de" for y in "de"})
+    po = frozenset({(x, y) for x in S5 for y in S5 if S5.index(x) <= S5.index(y)})
+    strict = frozenset((x, y) for x, y in po if x != y)
+    cyc = frozenset(zip(S5, S5[1:] + S5[0]))
+    side_by_side([("equiv", matrix(eq, S5)), ("≤", matrix(po, S5)), ("<", matrix(strict, S5)), ("cycle", matrix(cyc, S5))])
+    print("   row x, column y holds 1 when x R y. Reflexive: the diagonal is full. Symmetric: the")
+    print("   grid is its own mirror image across the diagonal. Antisymmetric: no 1 faces a 1 across")
+    print("   it except on the diagonal. Transitive: M·M, with or for + and and for ×, stays inside M.")
+    print("   An equivalence is blocks of ones along the diagonal, one block per class; a linear")
+    print("   order, with the points listed in order, is a triangle; a strict one has an empty diagonal.")
+    print("   The matrix of R⁻¹ is the transpose; of T ∘ R, the Boolean product.")
+
+    def bool_product(a, b, base):
+        return frozenset((x, z) for x in base for z in base if any((x, y) in a and (y, z) in b for y in base))
+
+    def is_transitive(r, base):
+        return bool_product(r, r, base) <= r
+
+    print(f"   transitive by M·M ⊆ M:  equivalence {is_transitive(eq, S5)}   ≤ {is_transitive(po, S5)}   cycle {is_transitive(cyc, S5)}")
+    pairs5 = [(x, y) for x in S5 for y in S5]
+
+    def refl_sym(bits):
+        r = frozenset(p for p, keep in zip(pairs5, bits) if keep)
+        return r
+
+    from itertools import product as prod
+    count = 0
+    upper = [(x, y) for x in S5 for y in S5 if x < y]
+    for bits in prod((True, False), repeat=len(upper)):
+        r = {(x, x) for x in S5} | {p for p, keep in zip(upper, bits) if keep} | {(y, x) for (x, y), keep in zip(upper, bits) if keep}
+        if is_transitive(r, S5):
+            count += 1
+    print(f"   equivalence relations on 5 points, counted as symmetric reflexive matrices that are")
+    print(f"   transitive: {count}, the Bell number B(5), which the Wikipedia picture draws as 52 grids;")
+    print(f"   {2 ** 25} logical 5 × 5 matrices in all, one per relation.")
+    print()
+
+    print("7. THE OTHER 'PARTITION': REAL ANALYSIS CUTS AN INTERVAL, NOT A SET")
     from fractions import Fraction as Fr
     pts = [Fr(0), Fr(1, 2), Fr(1), Fr(2)]
     cells = [(pts[i], pts[i + 1]) for i in range(len(pts) - 1)]

@@ -2,7 +2,7 @@
 
 **Level:** 101 → 201 · for anyone who has met "reflexive, symmetric, antisymmetric, transitive" as a list to memorise and wants to see which combinations are worth a name, and why a set can have two maximal elements and no maximum
 
-**One line:** A relation on a finite set is a set of pairs, so each of the six properties a book asks of it is a loop that can be run; running them on all 512 relations on three points sorts out which combinations have names (equivalence, partial order, linear order, their strict versions), shows the identity relation wearing two of them, and catches two examples in the book that its author got wrong.
+**One line:** A relation on a finite set is a set of pairs, so each of the six properties a book asks of it is a loop that can be run; running them on all 512 relations on three points sorts out which combinations have names (equivalence, partial order, linear order, their strict versions), shows the identity relation wearing two of them, and catches two examples in the book that its author got wrong; drawn as a logical matrix, each property is a shape in the grid.
 
 ## The six properties, as loops
 
@@ -40,9 +40,13 @@ André's Definition 6.4, run on two examples in sections 3 and 4:
 
 Mortimer's ancestors, ordered by "a is a descendant of b", are a strict partial order in which Mortimer is the minimum, two spontaneously generated ancestors A and E are each maximal, and there is no maximum, because A and E are not comparable. Divisibility on 1 to 12 is a partial order with minimum 1, six maximal elements (7 to 12, which divide nothing else in range), no maximum, the chain 1, 2, 4, 8, and the primes as an antichain. [The algebra of sets](../algebra_of_sets/README.md#is-a-partial-order) has ⊆ as the other standard poset, and divisibility read as ⊆ of factor sets is on [the set katas](../set_katas/README.md#quiz-katas). Section 5 is André's exercise 7.8, the **[lexicographic](../../GLOSSARY.md#lexicographic-order)** order on pairs: compare first entries, and only on a tie compare the second. It is the order of a dictionary and of a database sort on two columns, and the program confirms it is a partial order on 16 pairs of subsets.
 
+## A relation as a logical matrix
+
+The owner asked what a logical matrix is. It is a relation drawn as a grid instead of as arrows: list the elements along the rows and again along the columns, and put a 1 in row x, column y when x R y and a 0 otherwise. Section 6 of the program prints four. Each property of this page becomes a shape. Reflexive: the diagonal is full. Irreflexive: the diagonal is empty. Symmetric: the grid is its own mirror image across the diagonal. Antisymmetric: no 1 faces another 1 across the diagonal. An equivalence relation is blocks of 1s along the diagonal, one block per class, once the elements are listed class by class; that is what the Wikipedia picture of the 52 equivalence relations on five points shows, and the program counts them again as symmetric reflexive matrices that are transitive, 52, the Bell number B(5) from [the partitions lesson](../equivalence_and_partitions/README.md). A linear order, with the elements listed in order, is a triangle; a strict order has an empty diagonal. Transitivity is the one property that is not a shape but an operation: with *or* for addition and *and* for multiplication, the Boolean product M·M has a 1 wherever a two-step path exists, and R is transitive exactly when that product stays inside M. The matrix of R⁻¹ is the transpose, and the matrix of T ∘ R is the Boolean product, which is how a database or a graph library computes compositions. [Relations and functions](../relations_and_functions/README.md) draws the same objects as arrows; the matrix is the adjacency matrix of that graph, and there are 2ⁿ² of them on n points, one per relation.
+
 ## The other "partition"
 
-The owner asked whether this connects to the partitions of real analysis. Same word, two objects. A set-theory partition, [the previous lesson](../equivalence_and_partitions/README.md), is a family of nonempty disjoint blocks covering a set. A partition of an interval [a, b] in the Riemann sense is a finite list of cut points a = x₀ < x₁ < ⋯ < xₙ = b, and the integral is squeezed between the lower and upper sums over the cells it makes. The cells overlap at their endpoints, so they are not a partition in the first sense, though the half-open cells [xᵢ, xᵢ₊₁) are. Section 6 computes both sums for x² on [0, 2] exactly, with 3 cells and then 200, and the integral 8/3 sits between them while the gap shrinks. The connection to this page is the order: one Riemann partition **refines** another when it contains all its cut points, and refinement is a partial order on partitions, under which any two have a common refinement, their union. That is the fact the Riemann integral's definition rests on, and it is a poset fact.
+The owner asked whether this connects to the partitions of real analysis. Same word, two objects. A set-theory partition, [the previous lesson](../equivalence_and_partitions/README.md), is a family of nonempty disjoint blocks covering a set. A partition of an interval [a, b] in the Riemann sense is a finite list of cut points a = x₀ < x₁ < ⋯ < xₙ = b, and the integral is squeezed between the lower and upper sums over the cells it makes. The cells overlap at their endpoints, so they are not a partition in the first sense, though the half-open cells [xᵢ, xᵢ₊₁) are. Section 7 computes both sums for x² on [0, 2] exactly, with 3 cells and then 200, and the integral 8/3 sits between them while the gap shrinks. The connection to this page is the order: one Riemann partition **refines** another when it contains all its cut points, and refinement is a partial order on partitions, under which any two have a common refinement, their union. That is the fact the Riemann integral's definition rests on, and it is a poset fact.
 
 ## What the program prints
 
@@ -96,7 +100,25 @@ The owner asked whether this connects to the partitions of real analysis. Same w
    reflexive True, antisymmetric True, transitive True -> partial order
    Dictionary order: compare first entries, and only on a tie compare the second.
 
-6. THE OTHER 'PARTITION': REAL ANALYSIS CUTS AN INTERVAL, NOT A SET
+6. A RELATION AS A LOGICAL MATRIX: EACH PROPERTY IS A SHAPE
+   equiv    ≤        <        cycle
+   111..    11111    .1111    .1...
+   111..    .1111    ..111    ..1..
+   111..    ..111    ...11    ...1.
+   ...11    ...11    ....1    ....1
+   ...11    ....1    .....    1....
+   row x, column y holds 1 when x R y. Reflexive: the diagonal is full. Symmetric: the
+   grid is its own mirror image across the diagonal. Antisymmetric: no 1 faces a 1 across
+   it except on the diagonal. Transitive: M·M, with or for + and and for ×, stays inside M.
+   An equivalence is blocks of ones along the diagonal, one block per class; a linear
+   order, with the points listed in order, is a triangle; a strict one has an empty diagonal.
+   The matrix of R⁻¹ is the transpose; of T ∘ R, the Boolean product.
+   transitive by M·M ⊆ M:  equivalence True   ≤ True   cycle False
+   equivalence relations on 5 points, counted as symmetric reflexive matrices that are
+   transitive: 52, the Bell number B(5), which the Wikipedia picture draws as 52 grids;
+   33554432 logical 5 × 5 matrices in all, one per relation.
+
+7. THE OTHER 'PARTITION': REAL ANALYSIS CUTS AN INTERVAL, NOT A SET
    a partition of [0, 2] in the Riemann sense is a finite list of points ['0', '1/2', '1', '2'],
    cutting it into subintervals [('0', '1/2'), ('1/2', '1'), ('1', '2')], which overlap at endpoints.
    lower sum of x² over it = 9/8, upper sum = 37/8; the integral 8/3 lies between: True
@@ -113,7 +135,7 @@ Relations, orderings and partitions, with the definitions from André's chapters
 
 ## Po polsku, w skrócie
 
-Relacja na zbiorze skończonym to zbiór par, więc każda z sześciu własności z podręcznika (zwrotna, przeciwzwrotna, symetryczna, antysymetryczna, asymetryczna, przechodnia) to pętla po parach, którą można uruchomić. Program uruchamia je na wszystkich 512 relacjach na {a, b, c} i liczy, które kombinacje mają nazwy: relacja równoważności (zwrotna, symetryczna, przechodnia; 5 sztuk, liczba Bella), porządek częściowy (zwrotna, antysymetryczna, przechodnia; 19), porządek liniowy (każde dwa elementy porównywalne; 6 = 3!) i ich wersje ostre (przeciwzwrotne, zapisywane a < b; też 19). Poset to zbiór częściowo uporządkowany. Relacja identyczności jest zarazem równoważnością i porządkiem. Pętle wyłapują też dwa błędne przykłady w książce: „rodzeństwo" nie jest relacją przechodnią (x T y i y T x wymagałoby x T x), a R₃ ze strony 57 ma (a, b) i (b, c) bez (a, c). Słowa o pozycjach: łańcuch, antyłańcuch, element minimalny i maksymalny (nic pod nim, nic nad nim) kontra najmniejszy i największy (pod wszystkim, nad wszystkim); przodkowie Mortimera mają dwa elementy maksymalne i żadnego największego. Podział przedziału w analizie to inny obiekt niż podział zbioru: lista punktów cięcia, a drobnienie podziałów jest porządkiem częściowym.
+Relacja na zbiorze skończonym to zbiór par, więc każda z sześciu własności z podręcznika (zwrotna, przeciwzwrotna, symetryczna, antysymetryczna, asymetryczna, przechodnia) to pętla po parach, którą można uruchomić. Program uruchamia je na wszystkich 512 relacjach na {a, b, c} i liczy, które kombinacje mają nazwy: relacja równoważności (zwrotna, symetryczna, przechodnia; 5 sztuk, liczba Bella), porządek częściowy (zwrotna, antysymetryczna, przechodnia; 19), porządek liniowy (każde dwa elementy porównywalne; 6 = 3!) i ich wersje ostre (przeciwzwrotne, zapisywane a < b; też 19). Poset to zbiór częściowo uporządkowany. Relacja identyczności jest zarazem równoważnością i porządkiem. Pętle wyłapują też dwa błędne przykłady w książce: „rodzeństwo" nie jest relacją przechodnią (x T y i y T x wymagałoby x T x), a R₃ ze strony 57 ma (a, b) i (b, c) bez (a, c). Słowa o pozycjach: łańcuch, antyłańcuch, element minimalny i maksymalny (nic pod nim, nic nad nim) kontra najmniejszy i największy (pod wszystkim, nad wszystkim); przodkowie Mortimera mają dwa elementy maksymalne i żadnego największego. Relacja narysowana jako macierz zer i jedynek (macierz logiczna) pokazuje każdą własność jako kształt: pełna przekątna to zwrotność, symetria względem przekątnej to symetria, bloki jedynek wzdłuż przekątnej to relacja równoważności, a przechodniość to warunek, by iloczyn boolowski M·M mieścił się w M; program liczy w ten sposób 52 relacje równoważności na pięciu punktach, liczbę Bella B(5). Podział przedziału w analizie to inny obiekt niż podział zbioru: lista punktów cięcia, a drobnienie podziałów jest porządkiem częściowym.
 
 ## Run it yourself
 

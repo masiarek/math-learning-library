@@ -202,6 +202,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Log-normal distribution** — the distribution of a quantity whose logarithm is normally distributed. It is skewed to the right, so its mean e^(μ + σ²/2) lies above its median e^μ, and the gap grows fast with σ. See [a share above a cutoff](05_Statistics/share_above_a_cutoff/README.md). { #log-normal-distribution }
 
+**Logical matrix** — a relation on n elements drawn as an n × n grid of 0s and 1s, a 1 in row x and column y when x R y; also called a Boolean or adjacency matrix. Reflexive is a full diagonal, symmetric a grid equal to its transpose, an equivalence blocks of 1s along the diagonal, and transitive means the Boolean product M·M stays inside M. See [orderings](04_Sets/orderings/README.md#a-relation-as-a-logical-matrix). { #logical-matrix }
+
 **Machine number** — a member of the finite set a floating-point format can represent, fixed by its radix, precision and exponent range. Each one is an exact number; the approximation happens when a real result is rounded into the set. See [machine numbers](01_Precision/machine_numbers/README.md). { #machine-number }
 
 **Maximal and maximum** — in a poset, an element is maximal when nothing is strictly above it and the maximum when it is above everything else; a maximum is maximal, but a poset can have several maximal elements and no maximum, as Mortimer's family tree has two spontaneously generated ancestors. Minimal and minimum likewise. See [orderings](04_Sets/orderings/README.md). { #maximal-and-maximum }

@@ -44,7 +44,25 @@
    reflexive True, antisymmetric True, transitive True -> partial order
    Dictionary order: compare first entries, and only on a tie compare the second.
 
-6. THE OTHER 'PARTITION': REAL ANALYSIS CUTS AN INTERVAL, NOT A SET
+6. A RELATION AS A LOGICAL MATRIX: EACH PROPERTY IS A SHAPE
+   equiv    ≤        <        cycle
+   111..    11111    .1111    .1...
+   111..    .1111    ..111    ..1..
+   111..    ..111    ...11    ...1.
+   ...11    ...11    ....1    ....1
+   ...11    ....1    .....    1....
+   row x, column y holds 1 when x R y. Reflexive: the diagonal is full. Symmetric: the
+   grid is its own mirror image across the diagonal. Antisymmetric: no 1 faces a 1 across
+   it except on the diagonal. Transitive: M·M, with or for + and and for ×, stays inside M.
+   An equivalence is blocks of ones along the diagonal, one block per class; a linear
+   order, with the points listed in order, is a triangle; a strict one has an empty diagonal.
+   The matrix of R⁻¹ is the transpose; of T ∘ R, the Boolean product.
+   transitive by M·M ⊆ M:  equivalence True   ≤ True   cycle False
+   equivalence relations on 5 points, counted as symmetric reflexive matrices that are
+   transitive: 52, the Bell number B(5), which the Wikipedia picture draws as 52 grids;
+   33554432 logical 5 × 5 matrices in all, one per relation.
+
+7. THE OTHER 'PARTITION': REAL ANALYSIS CUTS AN INTERVAL, NOT A SET
    a partition of [0, 2] in the Riemann sense is a finite list of points ['0', '1/2', '1', '2'],
    cutting it into subintervals [('0', '1/2'), ('1/2', '1'), ('1', '2')], which overlap at endpoints.
    lower sum of x² over it = 9/8, upper sum = 37/8; the integral 8/3 lies between: True
