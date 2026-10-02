@@ -121,6 +121,7 @@ NAV_ORDER: dict[str, list[str]] = {
     "04_Sets": [
         "README.md",
         "what_is_a_set",
+        "definition_on_trial",
         "python_sets",
         "algebra_of_sets",
         "reading_set_expressions",

@@ -79,6 +79,7 @@ python3 13_Axioms_of_Set_Theory/extensionality/examples/extensionality.py
 
 - [Reading a formula](../reading_a_formula/README.md) — the symbols, and the universe the formula is checked in
 - [Pairs](../pairs/README.md) — the next axiom, and the first use of "unique by extensionality"
-- [What is a set?](../../04_Sets/what_is_a_set/README.md) — extensionality as the one rule the textbook definition leaves out
+- [What is a set?](../../04_Sets/what_is_a_set/README.md) — extensionality as the first rule of the definition, in plain words
+- [The textbook definition on trial](../../04_Sets/definition_on_trial/README.md) — extensionality as the one rule the textbook definition leaves out
 - [Sets in Python](../../04_Sets/python_sets/README.md) — `==` on sets
 - [Axiom of extensionality ↗](https://en.wikipedia.org/wiki/Axiom_of_extensionality) — Wikipedia

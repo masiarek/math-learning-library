@@ -521,7 +521,7 @@ Terms used across the library, with the page that explains each in full. For set
 **Rounding function** — a rule sending every real number to a machine number, or to an infinity. IEEE 754 defines five: toward −∞, toward +∞, toward zero, and to nearest with ties going either to the even significand or away from zero. See [machine numbers](01_Precision/machine_numbers/README.md).
 { #rounding-function }
 
-**Russell's paradox** — the rule "x is not a member of itself" is sharp, yet no set R can obey it, since R ∈ R holds exactly when it does not. It shows that a well-defined rule does not always give a set. With the axiom of separation, which only cuts a rule out of an existing set, the same argument proves that no set contains every set. See [what is a set?](04_Sets/what_is_a_set/README.md).
+**Russell's paradox** — the rule "x is not a member of itself" is sharp, yet no set R can obey it, since R ∈ R holds exactly when it does not. It shows that a well-defined rule does not always give a set. With the axiom of separation, which only cuts a rule out of an existing set, the same argument proves that no set contains every set. See [the textbook definition on trial](04_Sets/definition_on_trial/README.md).
 { #russell-s-paradox }
 
 **Scale factor** — the one ratio k shared by every pair of corresponding sides of similar figures. Lengths scale by k, areas by k², volumes by k³. See [congruent and similar triangles](10_Geometry/congruent_and_similar_triangles/README.md) and [area and volume formulas](10_Geometry/area_and_volume_formulas/README.md).

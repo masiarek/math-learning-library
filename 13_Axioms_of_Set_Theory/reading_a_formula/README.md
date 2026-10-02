@@ -140,6 +140,6 @@ python3 13_Axioms_of_Set_Theory/reading_a_formula/examples/reading_a_formula.py
 - [Extensionality](../extensionality/README.md) — the next page: the first axiom, read aloud and checked
 - [If A then B: converse, contrapositive and inverse](../../11_Logic/converse_and_contrapositive/README.md) — the ⇒ of every axiom, and why it is forbidden only when the hypothesis is true and the conclusion false
 - [The algebra of sets](../../04_Sets/algebra_of_sets/README.md) — ∪ ∩ ′ as or, and, not, and the universal set U of one problem
-- [What is a set?](../../04_Sets/what_is_a_set/README.md) — Russell's paradox, the reason the obvious list is not the list
+- [The textbook definition on trial](../../04_Sets/definition_on_trial/README.md) — Russell's paradox, the reason the obvious list is not the list
 - [Set theory: a reading guide](../../reading_guides/set_theory/README.md) — where Cori and Lascar sits among the books
 - [First-order logic ↗](https://en.wikipedia.org/wiki/First-order_logic) — Wikipedia

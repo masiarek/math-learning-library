@@ -6,7 +6,7 @@
 
 ## One question per member
 
-[What is a set?](../what_is_a_set/README.md) ended with the rule that a set is nothing but its members. So to know a set built from A and B, it is enough to know, for each object x, whether x is in it, and that answer depends only on whether x is in A and whether x is in B:
+[What is a set?](../what_is_a_set/README.md) opens with the rule that a set is nothing but its members. So to know a set built from A and B, it is enough to know, for each object x, whether x is in it, and that answer depends only on whether x is in A and whether x is in B:
 
 | Set | x is a member when | Logic | Python |
 |---|---|---|---|
@@ -21,7 +21,7 @@ Section 2 of the program prints this table for two small sets and then checks th
 
 ## The complement needs a universe
 
-A′, "everything not in A", has no meaning on its own: not in A, out of what? Not a number, the numbers 1 to 4, every object that exists? The last choice is exactly the one [Russell's paradox](../what_is_a_set/README.md#the-repair-and-the-paradox-as-a-theorem) rules out, since there is no set of everything. So a complement is always relative to a **universal set** U fixed in advance, and A′ = U ∖ A. Python's `set` has no complement operator for the same reason; the code has to name U and write `U - a`. (Books that admit *classes* as objects, such as Robert André's in [the reading guide](../../reading_guides/set_theory/README.md), write an absolute complement {x : x ∉ A} with no U, which is a class and never a set; to get a set they intersect with a chosen U, which is the same rule in different bookkeeping.)
+A′, "everything not in A", has no meaning on its own: not in A, out of what? Not a number, the numbers 1 to 4, every object that exists? The last choice is exactly the one [Russell's paradox](../definition_on_trial/README.md#the-repair-and-the-paradox-as-a-theorem) rules out, since there is no set of everything. So a complement is always relative to a **universal set** U fixed in advance, and A′ = U ∖ A. Python's `set` has no complement operator for the same reason; the code has to name U and write `U - a`. (Books that admit *classes* as objects, such as Robert André's in [the reading guide](../../reading_guides/set_theory/README.md), write an absolute complement {x : x ∉ A} with no U, which is a class and never a set; to get a set they intersect with a chosen U, which is the same rule in different bookkeeping.)
 
 The universal set is not a set of everything, then, but the set of everything *under discussion*, chosen before the problem starts: the whole numbers 1 to 9 in a textbook exercise, the 52 cards in a probability question, every student in a survey. Each set in the problem is a subset of it. Sullivan's *Precalculus* takes U = {1, 2, 3, 4, 5, 6, 7, 8, 9} and A = {1, 3, 5, 7, 9}, the odd ones, and gets Ā = {2, 4, 6, 8}, the even ones; and since every member of U is odd or not, and none is both, A ∪ Ā = U and A ∩ Ā = ∅ follow at once, which is the book's "do you see why". The bar is Sullivan's spelling of the complement; A′ and Aᶜ mean the same, and this library writes A′. Because U is a choice, the same A has a different complement under a different U, which section 1 of the program shows: A = {1, 2} has complement {3, 4} in {1, 2, 3, 4}, {3, 4, 5, 6} in {1, …, 6}, and ∅ in {1, 2}. A complement quoted without its universe is an unfinished sentence.
 

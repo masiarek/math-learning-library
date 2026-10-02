@@ -453,7 +453,7 @@ The questions below came up, in this order, while the owner of this library read
 
 The [terms map](../set_theory_terms/README.md) is the long version of this section: the owner's list of some 700 terms of set theory, each linked to the lesson or glossary entry that covers it, the rest named with the book that does.
 
-- [04_Sets](../../04_Sets/README.md) — the language: [what a set is](../../04_Sets/what_is_a_set/README.md), with extensionality, separation and Russell's paradox; [the algebra of sets](../../04_Sets/algebra_of_sets/README.md); [the Cartesian product](../../04_Sets/cartesian_product/README.md) with Kuratowski's pair; [cardinality](../../04_Sets/cardinality/README.md) with the diagonal argument.
+- [04_Sets](../../04_Sets/README.md) — the language: [what a set is](../../04_Sets/what_is_a_set/README.md), in four rules, and [the textbook definition on trial](../../04_Sets/definition_on_trial/README.md), with Russell's paradox; [the algebra of sets](../../04_Sets/algebra_of_sets/README.md); [the Cartesian product](../../04_Sets/cartesian_product/README.md) with Kuratowski's pair; [cardinality](../../04_Sets/cardinality/README.md) with the diagonal argument.
 - [13_Axioms_of_Set_Theory](../../13_Axioms_of_Set_Theory/README.md) — the axioms of Zermelo and Fraenkel one page each, read aloud and checked on a small universe, from Cori and Lascar's chapter 7.
 - [02_Measure_Zero](../../02_Measure_Zero/README.md) — [countable sets](../../02_Measure_Zero/countable_sets/README.md) and [the Cantor set](../../02_Measure_Zero/cantor_set/README.md), Cantor's other legacy.
 - [11_Logic](../../11_Logic/README.md) — the if–then that every axiom is written in.
@@ -479,7 +479,8 @@ python3 reading_guides/set_theory/examples/classic_set_theory.py
 ## See also
 
 - [13_Axioms_of_Set_Theory](../../13_Axioms_of_Set_Theory/README.md) — each axiom read aloud and checked by a program
-- [What is a set?](../../04_Sets/what_is_a_set/README.md) — extensionality, separation and Russell's paradox, the first three ideas of any of these books
+- [What is a set?](../../04_Sets/what_is_a_set/README.md) — the definition in four rules, extensionality and separation among them, the first ideas of any of these books
+- [The textbook definition on trial](../../04_Sets/definition_on_trial/README.md) — why "a well-defined collection" is not a definition, and Russell's paradox
 - [Cardinality of sets](../../04_Sets/cardinality/README.md) — the diagonal argument on sequences of bits
 - [Countable sets](../../02_Measure_Zero/countable_sets/README.md) — listing the rationals, the same trick as Cantor's height
 - [Linear algebra: a reading guide](../linear_algebra/README.md) and [Precalculus: a reading guide](../precalculus/README.md) — the other guides, same format
