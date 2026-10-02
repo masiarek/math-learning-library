@@ -153,6 +153,26 @@ A school textbook is the other good first hour, and the owner sent chapter 1 of 
 | **Patrick Suppes, *Axiomatic Set Theory*** (1960; Dover, 1972) | ZF developed with full formal care, including the construction of the number systems, by a logician. (From memory.) | The classic between Halmos and Jech, dated in notation and thorough in proofs; most readers now take Enderton or Hrbacek and Jech instead. |
 | **Robert R. Stoll, *Set Theory and Logic*** (1963; Dover, 1979) | Intuitive set theory, the number systems built from ℕ to ℝ, a logic course, Boolean algebras, then the ZF axioms in chapter 7 and first-order theories with Gödel's theorems in chapter 9, in one cheap volume. | The Dover classic: sound, patient and dated in typography and notation, with no solutions. Chapters 1 and 7 are the ones to read; Cunningham covers the same ground with more help, and Stoll is the better buy for the price. |
 
+**How accurate is André? Chapter 1, checked claim by claim.** The owner sent pages 3 to 14, which is enough to judge the care of the writing. The verdict: good, and accurate where it matters, with the slips of a self-published text that nobody copy-edited. None of them would mislead a reader for long, and two would mislead a reader for an hour.
+
+| Claim, pages 3–14 | Verdict |
+|---|---|
+| Zermelo and Fraenkel 1908–1922, with Skolem and von Neumann adjusting afterwards | right |
+| Hilbert's 1899 axioms for geometry: 21, one shown redundant in 1902, 20 since | right, and a detail most books get wrong |
+| Primitive concepts *class*, *set*, *belongs to*; a set is a class that belongs to a class; A2 makes every formula a class | right; this is the Gödel–Bernays presentation, as the row above says |
+| A1 extent, A3 pair, A4 subsets (with the footnote that it is a schema), A5 power set, A6 union, A7 replacement (footnote: a schema; images of sets are sets), A9 regularity, choice as a choice function | right |
+| A8 infinity as "a nonempty set closed under X ↦ X ∪ {X}", without requiring ∅ ∈ A | nonstandard but equivalent to the usual form over the other axioms; harmless |
+| "Some of the ZF axioms listed follow from the others" (footnote 5) | right: pairing from replacement and power set, subsets from replacement |
+| "In 1963 it was proven that neither the axiom of choice nor its negation can be proven from ZF" | half right: Cohen 1963 showed choice cannot be proved; that it cannot be refuted is Gödel, 1938 |
+| The formal axiom of pair written as ∀x∀y∃z(x ∈ z ∨ y ∈ z) | wrong: with ∨ the sentence only asks for a set containing x *or* y, which {x} already does; the axiom needs ∧ |
+| Regularity "states that non-empty classes which don't have a *least* element are not sets" | loose: it is an ∈-*minimal* member, not a least one; ∈ is not a total order |
+| Points (a, b) and rationals a/b "are two-element sets {a, b} stated in a particular order" | loose: {a, b} forgets order and collapses when a = b; a pair is {{a}, {a, b}}, which chapter 4 presumably gives |
+| Example (b), page 5: the collection U of all infinite sets "is an element of U" | deliberately naive, and never flagged: in the theory the book builds, U is a proper class, so U ∉ U |
+| "We don't know for sure whether the ZF axioms are consistent", and ZF cannot settle it from inside | right, and a point the generic abstracts in the caution below get wrong |
+| Fraenkel, Bar-Hillel and Levy on choice as "second only to Euclid's axiom of parallels" | a real quotation from *Foundations of Set Theory* (1973), from memory |
+
+The slips cluster where the book is being informal, and the axioms themselves are stated correctly; a reader who keeps this table beside chapter 1 loses nothing. The Wikipedia footnote for Russell's dates is the other sign of self-publication, and no reason to distrust the mathematics.
+
 ### The subject: graduate and research
 
 | Book | What it is | Verdict |
