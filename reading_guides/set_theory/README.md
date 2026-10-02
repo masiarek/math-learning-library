@@ -188,6 +188,8 @@ The owner asked whether [Wikipedia's *Set theory* ↗](https://en.wikipedia.org/
 
 So: read the article once for the map, especially the paragraph on NF, and come back to the books for everything else.
 
+Its companion, [Wikipedia's *Glossary of set theory* ↗](https://en.wikipedia.org/wiki/Glossary_of_set_theory), is a different kind of page: several hundred one-line entries, alphabetical, from *absolute* and *aleph* to *Zorn's lemma*, with a symbols section at the top. (Also from memory.) It is written for someone who already knows the subject and has forgotten a word, so it is the wrong place to learn a term and the right place to check one: an entry such as *club set* or *Δ-system* is a sentence, not an explanation. Use it the way this library's own [glossary](../../GLOSSARY.md) is meant to be used, as the index that points back to a page, and when an entry there has no page here, that is a gap to note in the [roadmap](../../ROADMAP.md).
+
 ### Philosophy, history and the popular shelf
 
 | Book | What it is |
