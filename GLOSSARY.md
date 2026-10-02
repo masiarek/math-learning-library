@@ -24,7 +24,7 @@ Terms used across the library, with the page that explains each in full.
 
 **Axiom of choice** — for every family of nonempty sets there is a choice function, one that picks a member of each; equivalently a product of nonempty sets is nonempty. A theorem for finite families, unnecessary when a rule exists, and independent of the other axioms (Gödel 1938, Cohen 1963). See [choice](13_Axioms_of_Set_Theory/choice/README.md).
 
-**Bijection** — a function that is both one-to-one (injective: different inputs, different outputs) and onto (surjective: every member of the target is hit). Two sets have the same cardinality exactly when a bijection runs between them; on a finite set the three properties agree. See [relations and functions](04_Sets/relations_and_functions/README.md) and [cardinality](04_Sets/cardinality/README.md).
+**Bijection** — a function that is both one-to-one (injective: different inputs, different outputs) and onto (surjective: every member of the target is hit), so every target is hit exactly once and the function can be undone; also called a one-to-one correspondence, which is not the same as "one-to-one". Two sets have the same cardinality exactly when a bijection runs between them; on a finite set the three properties agree. See [relations and functions](04_Sets/relations_and_functions/README.md) and [cardinality](04_Sets/cardinality/README.md).
 
 **Bloom's taxonomy** — six levels of working with an idea, in the 2001 revision: remembering, understanding, applying, analyzing, evaluating, creating (in 1956: knowledge, comprehension, application, analysis, synthesis, evaluation). See [studying vs learning](12_Learning_to_Learn/studying_vs_learning/README.md).
 
@@ -155,6 +155,8 @@ Terms used across the library, with the page that explains each in full.
 **If and only if** — A ⇔ B: "if A then B" and its converse both hold, so A and B are always true together. Every definition is one; the Pythagorean theorem with its converse is one. See [if A then B](11_Logic/converse_and_contrapositive/README.md).
 
 **Inductive set** — a set containing ∅ and, with each member x, its successor x ∪ {x}. The axiom of infinity says one exists; ω, the natural numbers, is the smallest. See [infinity](13_Axioms_of_Set_Theory/infinity/README.md).
+
+**Injective (one-to-one)** — a function in which different inputs always give different outputs: f(a) = f(b) forces a = b, so no two arrows land on the same target. Latin *in-icere*, to throw in. "One-to-one" means this, not bijective. See [relations and functions](04_Sets/relations_and_functions/README.md#the-three-words).
 
 **Intercept** — a coordinate of a point where a graph meets an axis. For x-intercepts set y = 0 and solve; for y-intercepts set x = 0. Sullivan means the number, 3, not the point (3, 0). See [graphs of equations: intercepts and symmetry](08_Analytic_Geometry/graphs_intercepts_symmetry/README.md).
 
@@ -293,6 +295,8 @@ Terms used across the library, with the page that explains each in full.
 **Subnormal** — a float below the smallest normal one, written with a leading zero digit at the lowest exponent. Subnormals fill the gap between zero and the smallest normal number; without them, a − b could round to 0 while a ≠ b. See [machine numbers](01_Precision/machine_numbers/README.md).
 
 **Subspace** — a subset of a vector space that is a vector space with the same operations. It needs only three checks — it contains 0, and it is closed under + and under scalar multiplication — because the other laws are inherited. The subspaces of the plane are the origin, the lines through it, and the plane. See [subsets inherit the laws](06_Algebraic_Structures/subsets_inherit_the_laws/README.md).
+
+**Surjective (onto)** — a function that reaches every member of its target: for each y in T some x has f(x) = y, so no target is missed. Latin *sur-jacere*, to throw onto. See [relations and functions](04_Sets/relations_and_functions/README.md#the-three-words).
 
 **Symmetric difference** — A △ B, the members of exactly one of two sets, (A ∖ B) ∪ (B ∖ A); `a ^ b` in Python. Chained over several sets it keeps what is in an odd number of them, not what is in exactly one, because the subsets form a group under △ in which every set cancels itself; also written A ⊖ B or A + B. See [the algebra of sets](04_Sets/algebra_of_sets/README.md).
 

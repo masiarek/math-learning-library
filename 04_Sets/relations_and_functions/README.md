@@ -14,6 +14,18 @@
 
 A **database table** is the same object a fourth time: a relation whose pairs are rows, which is why Codd called his model relational and why SQL's `JOIN` is the relation product of the next section. Simovici and Djeraba's chapter 12 is this observation at book length.
 
+## The three words
+
+Injective, surjective and bijective drive most readers mad, because they are Latin for pictures. Draw the function as arrows from the inputs on the left to the targets on the right.
+
+| Word | Latin | Picture | Plain words | Python test on a set of pairs |
+|---|---|---|---|---|
+| **injective**, one-to-one | *in-icere*, to throw in | no two arrows land on the same target | different inputs, different outputs; nothing gets merged | `len({y for x, y in f}) == len(f)` |
+| **surjective**, onto | *sur-jacere*, to throw onto | every target is hit by at least one arrow | nothing in the target is missed | `{y for x, y in f} == T` |
+| **bijective**, one-to-one correspondence | both | every target is hit exactly once | a perfect pairing, so it can be undone | both tests |
+
+Each word is a property of the arrows only, and each fails in one way: an injection fails when two inputs share an output, a surjection fails when some target is never reached. "One-to-one" is the trap: it means injective, not bijective, and "one-to-one correspondence" means bijective; the Latin words exist to end that confusion. A function is invertible exactly when it is bijective, since undoing it needs every target reached (surjective) and reached once (injective); on a finite set, the three properties coincide (Simovici and Djeraba, Theorem 1.69), which section 3 of the program counts.
+
 ## What the program checks
 
 Section 3 takes every relation on {1, 2, 3}, 512 of them, and sorts them: 64 are functions (partial ones, defined on some inputs), 27 are functions defined on all three inputs, and of those 6 are injections, 6 surjections and 6 bijections, the 3! permutations. On a finite set the three counts agree, which is Simovici's Theorem 1.69 and the reason the pigeonhole principle works; on an infinite set they come apart, which is Dedekind's definition of infinite in [the reading guide](../../reading_guides/set_theory/README.md). The theorem that ρ is a function exactly when ρ⁻¹ is one-to-one (Simovici's 1.37) is checked on all 512.
