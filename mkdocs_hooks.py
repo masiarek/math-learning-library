@@ -126,6 +126,9 @@ NAV_ORDER: dict[str, list[str]] = {
         "reading_set_expressions",
         "cartesian_product",
         "cardinality",
+        "relations_and_functions",
+        "equivalence_and_partitions",
+        "set_katas",
     ],
     # One number standing in for many: what each kind of average keeps, and
     # why the names for them nest instead of meaning the same thing.
@@ -170,6 +173,25 @@ NAV_ORDER: dict[str, list[str]] = {
     "11_Logic": [
         "README.md",
         "converse_and_contrapositive",
+        "truth_tables_and_laws",
+        "predicates_and_quantifiers",
+    ],
+    # The axioms of ZF one page each, in the order the books state them,
+    # after a page that decodes the formal language; then ordinals and katas.
+    "13_Axioms_of_Set_Theory": [
+        "README.md",
+        "reading_a_formula",
+        "extensionality",
+        "pairs",
+        "unions",
+        "power_set",
+        "comprehension",
+        "replacement",
+        "infinity",
+        "choice",
+        "foundation",
+        "ordinals",
+        "axiom_katas",
     ],
     "10_Geometry": [
         "README.md",

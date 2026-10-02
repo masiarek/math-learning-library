@@ -38,6 +38,8 @@ It begins with a question that sounds settled and is not: **are significant figu
 
 [**12_Learning_to_Learn/**](../12_Learning_to_Learn/README.md) — *How do you know that you know?* Ten lessons about learning itself, after Saundra McGuire's *Teach Yourself How to Learn*: judging what you know, measured with confidence and a score that rewards honesty; McGuire's count-the-vowels exercise, where recall goes from 3 of 15 to 12 of 15 with nothing changed but the goal and a principle; studying versus learning, with Bloom's six levels climbed on one theorem; spaced retrieval, the reason the pages here come with flashcards; and, after Zakrajsek's *The New Science of Learning*, perspective taking, where a confident "day or night" turns out to be a cutoff nobody named; learned helplessness, where a belief that stops you trying never meets the evidence; the buffer hour, why a day planned from honest estimates still overruns; cognitive load, why the same formula weighs 19 items or 1; and interleaving, the step a blocked practice sheet lets you skip. Read it first if you want to get more out of everything else, or whenever a test goes worse than you expected. The books are listed on the [resources](../RESOURCES.md) page.
 
+[**13_Axioms_of_Set_Theory/**](../13_Axioms_of_Set_Theory/README.md) — *What are the rules for building sets, and why these?* The axioms of Zermelo and Fraenkel, one page each, after a page that decodes ∀, ∃, ⇒ and v₀, v₁ into loops and lookups. Each axiom is read aloud, used, and checked on a small universe by a program; the chapter's claim is that an axiom is a demand on the universe, not a description of it. Then ordinals, with Goodstein's theorem, and a page of exercises from Jech, Cunningham and Kunen checked before you prove them. Needs [04_Sets](../04_Sets/README.md) and [11_Logic](../11_Logic/README.md).
+
 The sidebar lists the chapters A to Z. The numbers above are the suggested order, and the [topic map](../TOPICS.md) groups every lesson by subject, for when you know what you want but not where it is.
 
 ## How to run anything here
@@ -81,6 +83,8 @@ uv run --group docs mkdocs serve
 ## Reading beyond this library
 
 [**Linear algebra: a reading guide**](../reading_guides/linear_algebra/README.md) — why linear algebra is useful, what to know before starting it, and which book to learn it from, including an honest verdict on *Linear Algebra Done Right*. It is a reference page, not a lesson; its one worked example, the first problem in Hefferon's textbook, is backed by a program like everything else.
+
+[**Set theory: a reading guide**](../reading_guides/set_theory/README.md) — two subjects with one name, the language of sets every proofs course speaks and the study of the axioms themselves; which book for each, from Velleman and Halmos to Kunen and Jech, with verdicts on Cori and Lascar, Cunningham, Jech and Kunen's *Foundations*; the Polish school and *Fundamenta Mathematicae*; and the founding papers from Cantor 1874 to Cohen 1963, four of them run as a program.
 
 [**Precalculus: a reading guide**](../reading_guides/precalculus/README.md) — what the course before calculus is for, where it sits (it is not pre-algebra, which comes four years earlier), what to know before starting it, and which book to learn it from, with a verdict on Glencoe's classroom textbook. A reference page, not a lesson; its one worked example, the doubling time of money at compound interest, is backed by a program like everything else.
 

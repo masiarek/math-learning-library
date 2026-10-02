@@ -64,6 +64,9 @@ The fourth chapter is groundwork: the constructions every other page takes for g
 |---|---|
 | [The Cartesian product](04_Sets/cartesian_product/README.md) | What ℝ² is, why (2, 5) is not (5, 2), why A × B is not B × A, and why (1, 1) counts |
 | [Cardinality of sets](04_Sets/cardinality/README.md) | What \|A\| means, why size is defined by matching, and where it shows up in types, databases and computability |
+| [Relations and functions are sets of pairs](04_Sets/relations_and_functions/README.md) | A relation is a set of pairs, a function a relation with one property, a graph a relation drawn, a table a relation stored; every relation on {1, 2, 3} sorted, composition as a relation product, and a function as its table of values |
+| [Equivalence relations, partitions and the kernel of a function](04_Sets/equivalence_and_partitions/README.md) | Partitions, equivalences and kernels determine each other exactly: 5 of 512 relations on {1, 2, 3}, the Bell numbers, the decomposition of every function into surjection, bijection and inclusion, and congruence mod m |
+| [Set katas](04_Sets/set_katas/README.md) | Cunningham's first exercises checked on every choice of subsets of {1, 2, 3} before you prove them, with the four proof moves |
 
 [**05_Statistics/**](05_Statistics/README.md) — *What does one number say about many?*
 
@@ -135,6 +138,27 @@ The eleventh chapter is the logic the theorems in every other chapter are writte
 | Lesson | What it teaches |
 |---|---|
 | [If A then B: converse, contrapositive and inverse](11_Logic/converse_and_contrapositive/README.md) | "If A then B" breaks only when A is true and B false, so the contrapositive is the same claim and the converse is not; if and only if; two classic mistakes; and why examples never prove but one counterexample disproves |
+| [Truth tables and the laws of logic](11_Logic/truth_tables_and_laws/README.md) | A law of logic is two columns that agree on every row, so a 2ⁿ-row table proves it; tautology, contradiction, ↔ versus ⇔; a misprinted exercise caught by one row |
+| [Predicates and quantifiers](11_Logic/predicates_and_quantifiers/README.md) | ∀ and ∃ as loops; "everyone likes someone" versus "someone is liked by everyone" on 65 536 relations; negation flips a quantifier; which distribution laws fail |
+
+[**13_Axioms_of_Set_Theory/**](13_Axioms_of_Set_Theory/README.md) — *What are the rules for building sets, and why these?*
+
+The thirteenth chapter decodes the formal language of set theory and gives each axiom of Zermelo and Fraenkel a page: read aloud in English, what it builds, what goes wrong without it, and a program that checks it on a small universe of sets. An axiom turns out to be a demand on the universe, not a description of it, and every False the programs print is a set the axiom asks for and the universe lacks.
+
+| Lesson | What it teaches |
+|---|---|
+| [Reading a formula](13_Axioms_of_Set_Theory/reading_a_formula/README.md) | ∀ is a loop that must always succeed, ∃ one that must succeed once, ⇒ is "not p or q", ∈ is a lookup; every axiom evaluated on four small universes |
+| [Extensionality](13_Axioms_of_Set_Theory/extensionality/README.md) | Same members, same set; the proof method a ⊆ b and b ⊆ a; why "the" pair; a universe with two empty sets |
+| [Pairs](13_Axioms_of_Set_Theory/pairs/README.md) | {a, b} needs an axiom because every finite universe runs out; three pairs make Kuratowski's ordered pair |
+| [Unions](13_Axioms_of_Set_Theory/unions/README.md) | The axiom gives ∪a, not a ∪ b; why it never fails in a finite universe; why ∩∅ cannot exist |
+| [Power set](13_Axioms_of_Set_Theory/power_set/README.md) | ⊆ hidden in a ∀…⇒; V_{n+1} = 𝒫(V_n); Cantor's theorem |
+| [Comprehension](13_Axioms_of_Set_Theory/comprehension/README.md) | One axiom per formula; drop the "x ∈ a" and Russell's paradox is a truth table with no true row |
+| [Replacement](13_Axioms_of_Set_Theory/replacement/README.md) | "Functional" formulas, images, and the set Zermelo's axioms cannot collect |
+| [Infinity](13_Axioms_of_Set_Theory/infinity/README.md) | An inductive set; no finite universe has one; ω as what all inductive sets share |
+| [Choice](13_Axioms_of_Set_Theory/choice/README.md) | A theorem for finite families, unnecessary when a rule exists, an axiom only for infinitely many socks |
+| [Foundation](13_Axioms_of_Set_Theory/foundation/README.md) | No set is its own member; every set has a rank; a two-cycle breaks the axiom only once {a, b} exists |
+| [Ordinals](13_Axioms_of_Set_Theory/ordinals/README.md) | Transitive sets well-ordered by ∈; Goodstein sequences, a theorem about integers whose only proof uses ordinals |
+| [Axiom katas](13_Axioms_of_Set_Theory/axiom_katas/README.md) | Exercises from Jech, Cunningham and Kunen, each checked on a small universe before you prove it, with the five proof moves |
 
 [**12_Learning_to_Learn/**](12_Learning_to_Learn/README.md) — *How do you know that you know?*
 

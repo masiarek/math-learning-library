@@ -1,0 +1,33 @@
+1. THE AXIOM ON V_4
+   ∀v0 (¬v0 ≃ ∅ ⇒ ∃v1 (v1 ∈ v0 ∧ v1 ∩ v0 ≃ ∅))
+   every nonempty set a has a member x with no member in common with a.
+   checked for all 16 sets: True
+   e.g. a = {∅, {∅}, {{∅}}}: the members sharing nothing with a: ['∅']
+   The disjoint member is the ∈-minimal one: nothing in a is below it.
+
+2. WHAT FOLLOWS: NO x ∈ x, NO x ∈ y ∈ x (CUNNINGHAM, EXERCISES 1.5)
+   If x ∈ x, look at {x}: its only member x shares x with it. Foundation
+   says some member of {x} is disjoint from {x}, so x ∉ x.
+   If x ∈ y and y ∈ x, look at {x, y}: x shares y with it, y shares x.
+   in V_4, sets with x ∈ x: 0;  pairs with x ∈ y ∈ x: 0
+
+3. UNIVERSES THAT BREAK IT
+   q = {q}, a set that is its own only member: foundation False, failing at q: its members are ['q'], each sharing a member with it
+   a = {b}, b = {a}, and nothing else: foundation True, no point fails: a = {b} has the member b, and b ∩ a = {a} ∩ {b} = ∅
+   a = {b}, b = {a}, and p = {a, b}: foundation False, failing at p: its members are ['a', 'b'], each sharing a member with it
+   The two-cycle breaks the axiom only once the pair {a, b} is in the
+   universe, which is why the exercise says 'consider {x, y}'.
+   Such universes satisfy extensionality and can satisfy the rest; Aczel's
+   anti-foundation axiom (1988) studies them, and computer science uses
+   them for streams and processes that contain themselves.
+
+4. WITH FOUNDATION, EVERY SET HAS A RANK
+   rank(s) = 1 + max rank of its members, rank(∅) = 0: the stage where s appears
+     rank 0:  1 sets   (appear in V_1)
+     rank 1:  1 sets   (appear in V_2)
+     rank 2:  2 sets   (appear in V_3)
+     rank 3: 12 sets   (appear in V_4)
+   Going down by ∈ must stop at ∅, which is foundation; so every set is
+   built in stages, V = ∪ V_α, and a proof 'by induction on rank' covers
+   every set there is. Cori and Lascar introduce the axiom for exactly
+   that hierarchy, and show ZF cannot decide it either way.

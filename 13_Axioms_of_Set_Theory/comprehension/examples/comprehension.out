@@ -1,0 +1,35 @@
+1. ONE AXIOM PER FORMULA
+   ∀v1 ∀v2 ... ∀v(n+1) ∃v(n+2) ∀v0 (v0 ∈ v(n+2) ⇔ (v0 ∈ v(n+1) ∧ F[v0, v1, ..., vn]))
+   for every set a there is a set b whose members are the members x of a
+   that satisfy F. The book writes {x ∈ a : F[x]}; Python writes
+   {x for x in a if F(x)}. There is one axiom for each formula F:
+   a = V_3 = {∅, {∅}, {{∅}}, {∅, {∅}}}
+     {x ∈ a : x is empty}              = {∅}
+     {x ∈ a : x has exactly one member} = {{∅}, {{∅}}}
+     {x ∈ a : x ∉ x}                   = {∅, {∅}, {{∅}}, {∅, {∅}}}
+     {x ∈ a : ∅ ∈ x}                   = {{∅}, {∅, {∅}}}
+   each such set is in V_4, for every a in V_4 and these four F: True
+   A subset never has higher rank than the set, so no V_n lacks one.
+
+2. WHAT 'x ∈ a' BUYS: DROP IT AND THE UNIVERSE IS NOT ENOUGH
+   {x : x ∉ x} over all of V_4 has 16 members (no set here is its own member),
+   and that set is in V_4: False.  It has rank 4; V_4 stops at 3.
+   Unrestricted comprehension demands a set the universe does not have.
+
+3. AND WORSE: RUSSELL'S CONTRADICTION, AS A TRUTH TABLE
+   Suppose a set r with  ∀x (x ∈ r ⇔ x ∉ x).  Put x = r:  r ∈ r ⇔ r ∉ r.
+     r ∈ r    r ∉ r    r ∈ r ⇔ r ∉ r
+     True     False    False
+     False    True     False
+   No row makes it true, so no such r exists in any universe. The
+   scheme with 'x ∈ a' only ever gives {x ∈ a : x ∉ x} = a, and a ∉ a.
+   for every a in V_4, {x ∈ a : x ∉ x} == a: True
+
+4. WHAT THE BOOK DERIVES FROM IT (PAGE 114)
+   ∅     = {x ∈ a : x ≠ x}             = ∅   (any a will do)
+   a ∩ b = {x ∈ a : x ∈ b}             = [3, 4]
+   a − b = {x ∈ a : x ∉ b}             = [1, 2]
+   ∩fam  = {x ∈ c : x ∈ every m ∈ fam} = [2, 3]   for any one member c of fam
+   Each is a comprehension inside a set already in hand, which is why
+   a ∩ b and a − b never need an axiom of their own, and why ∩fam needs
+   fam ≠ ∅: there must be a c to comprehend inside.

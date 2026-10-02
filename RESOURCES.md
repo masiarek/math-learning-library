@@ -34,6 +34,7 @@ A page here cites its sources in its own **See also**; this page gathers the mai
 
 - **Michael Sullivan, *Precalculus*** (Pearson). Chapter 1 is [08_Analytic_Geometry](08_Analytic_Geometry/README.md), its review appendix is [10_Geometry](10_Geometry/README.md), and the [precalculus reading guide](reading_guides/precalculus/README.md) sets it beside the alternatives.
 - **Jim Hefferon, [*Linear Algebra* ↗](https://hefferon.net/linearalgebra/)**, free. Its first section is [07_Linear_Systems](07_Linear_Systems/README.md); the [linear algebra reading guide](reading_guides/linear_algebra/README.md) compares it with Strang and Axler.
+- **René Cori and Daniel Lascar, *Mathematical Logic: A Course with Exercises*, Part II** (Oxford, 2001), chapter 7; **Daniel W. Cunningham, *Set Theory: A First Course*** (Cambridge, 2016), chapter 1; **Thomas Jech, *Set Theory*, third millennium edition** (Springer, 2003), chapters 1 and 2; **Kenneth Kunen, *The Foundations of Mathematics*** (College Publications, 2009), chapter I. Behind [13_Axioms_of_Set_Theory](13_Axioms_of_Set_Theory/README.md) and the two new lessons of [11_Logic](11_Logic/README.md); the [set theory reading guide](reading_guides/set_theory/README.md) places them among the other books, with the founding papers.
 - **Jean-Michel Muller and others, *Handbook of Floating-Point Arithmetic*** (Birkhäuser). Behind [01_Precision](01_Precision/README.md), and the source of the doors its [roadmap](ROADMAP.md) entry leaves open.
 
 ## Talks

@@ -20,6 +20,12 @@ Terms used across the library, with the page that explains each in full.
 
 **Average** — any single value that stands for a whole set. In everyday speech it almost always means the arithmetic mean, but in statistics the median and the mode are averages too, so "the average salary" can honestly be three different numbers. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
 
+**Axiom (of set theory)** — one of the sentences of Zermelo and Fraenkel that say which sets exist: extensionality, pairs, unions, power set, comprehension, replacement, infinity, foundation, and choice (ZFC). Except for extensionality each says "there is a set whose members are …", so each is a demand on the universe, not a description of it, and a small universe can fail it. See [the axioms chapter](13_Axioms_of_Set_Theory/README.md).
+
+**Axiom of choice** — for every family of nonempty sets there is a choice function, one that picks a member of each; equivalently a product of nonempty sets is nonempty. A theorem for finite families, unnecessary when a rule exists, and independent of the other axioms (Gödel 1938, Cohen 1963). See [choice](13_Axioms_of_Set_Theory/choice/README.md).
+
+**Bijection** — a function that is both one-to-one (injective: different inputs, different outputs) and onto (surjective: every member of the target is hit). Two sets have the same cardinality exactly when a bijection runs between them; on a finite set the three properties agree. See [relations and functions](04_Sets/relations_and_functions/README.md) and [cardinality](04_Sets/cardinality/README.md).
+
 **Bloom's taxonomy** — six levels of working with an idea, in the 2001 revision: remembering, understanding, applying, analyzing, evaluating, creating (in 1956: knowledge, comprehension, application, analysis, synthesis, evaluation). See [studying vs learning](12_Learning_to_Learn/studying_vs_learning/README.md).
 
 **Brier score** — the mean of (confidence − outcome)², with outcome 1 for right and 0 for wrong: 0 is perfect, and saying 50% every time scores 0.25. It is a proper scoring rule, so its expected value is smallest when you report what you really believe. See [metacognition](12_Learning_to_Learn/metacognition/README.md).
@@ -44,6 +50,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Circle** — the set of points at a fixed distance r, the radius, from a fixed point (h, k), the center. Its equation is the distance formula held fixed: (x − h)² + (y − k)² = r². See [circles](08_Analytic_Geometry/circles/README.md).
 
+**Class** — a collection given by a formula, {x : F[x]}, which may or may not be a set. The class of all sets and the class of ordinals are **proper classes**, not sets; comprehension says a class cut down to a set is a set. See [comprehension](13_Axioms_of_Set_Theory/comprehension/README.md).
+
 **Closed under an operation** — a subset is closed under an operation when applying it to members of the subset always gives a member of the subset. The line y = 2x is closed under + and scaling; the half-plane x ≥ 0 is not closed under scaling by −1. See [subsets inherit the laws](06_Algebraic_Structures/subsets_inherit_the_laws/README.md).
 
 **Coefficient** — a fixed number standing in front of a variable in a linear combination: in 40h + 15c the coefficients are 40 and 15. In a system, aᵢ,ⱼ is the coefficient in equation i in front of variable j. Zero is allowed. See [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md).
@@ -59,6 +67,8 @@ Terms used across the library, with the page that explains each in full.
 **Complex multiplication, geometrically** — multiplying by a point z scales the plane by the distance of z from the origin and turns it by the angle of z. Lengths multiply, angles add. So (0, 1) is a quarter turn and i² = −1 says two quarter turns are a half turn. See [multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md).
 
 **Componentwise relative error** — for vectors, the largest of the individual relative errors, max |xᵢ − x̂ᵢ| / |xᵢ|. A normwise relative error ‖x − x̂‖ / ‖x‖ can report four correct digits while a small component is 10% wrong; this measure cannot. See [relative error and correct digits](01_Precision/relative_error/README.md).
+
+**Comprehension (separation, subset axiom)** — for every set a and formula F there is a set {x ∈ a : F[x]}; Python's `{x for x in a if F(x)}`. A scheme, one axiom per formula. Without the "x ∈ a" it is Cantor's comprehension principle and contradicts itself (Russell). See [comprehension](13_Axioms_of_Set_Theory/comprehension/README.md).
 
 **Conditioning** — how much a problem's output changes for a small change in its input. A property of the *problem*, not of any algorithm; an ill-conditioned problem defeats every method. See [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md).
 
@@ -94,7 +104,11 @@ Terms used across the library, with the page that explains each in full.
 
 **Distributive** — a × (b + c) = a × b + a × c, and (a + b) × c = a × c + b × c: the law that links two operations. It is what turns two groups on one set into a ring. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
 
+**Domain and range** — of a relation ρ, the set dom(ρ) of first entries of its pairs and the set ran(ρ) of second entries; Cori and Lascar write Im(f) for the range. See [relations and functions](04_Sets/relations_and_functions/README.md).
+
 **Empty set** — ∅, the set with no members. There is only one, because two sets with the same members are equal and any two empty sets have the same members: none. In Python it is `set()`, since `{}` is an empty dict. Some books call it the *null set*, but in measure theory a null set is any set of measure zero, which can be infinite. See [what is a set?](04_Sets/what_is_a_set/README.md).
+
+**Equivalence relation** — a relation that is reflexive, symmetric and transitive; its classes [u] partition the set, and every partition arises this way. Congruence mod m is the one everyone uses. See [equivalence relations and partitions](04_Sets/equivalence_and_partitions/README.md).
 
 **Euler's formula** — e^{it} = (cos t, sin t): the exponential of an imaginary number is the unit point at angle t, in radians. It is what compounding gives, since (1 + it/n)ⁿ is n small turns whose angles add up to t while their stretches fade to nothing, and it is forced by the law e^{a+b} = e^a e^b, because multiplying unit points can only add angles. See [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
 
@@ -112,9 +126,15 @@ Terms used across the library, with the page that explains each in full.
 
 **Floating point** — the machine's stand-in for the real numbers: a finite set of exact values, fixed by a radix, a precision and an exponent range, with every result rounded into it. Its errors look like measurement errors and are unrelated to them: the value was known perfectly and the *hardware* could not hold it. What the set is, and which laws of arithmetic survive rounding into it, is [machine numbers](01_Precision/machine_numbers/README.md); how its bits are laid out is covered by the sibling Rust library ([What a float actually stores ↗](https://masiarek.github.io/rust-learning-library/19_Numbers/what_a_float_stores/index.html)); what happens when you subtract two of them is [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md).
 
+**Foundation (regularity)** — every nonempty set has a member that shares no member with it. Hence no set is its own member, no membership chain descends forever, and every set has a rank. See [foundation](13_Axioms_of_Set_Theory/foundation/README.md).
+
 **Frozenset** — Python's immutable set. It cannot change after it is made, so it is hashable and can be a member of a set or a key of a dict; it has no `add`, and "adding" builds a new one with `union` or `|`. See [a set is a hash table ↗](https://masiarek.github.io/python-learning-library/04_Names_and_Objects/a_set_is_a_hash_table/index.html) in the Python library.
 
+**Function** — a relation in which each x has at most one partner y; f(x) names that y. A function is its set of pairs, the table of its values, not the formula that produced it, so x² and |x|² are one function. A Python dict is the same object. See [relations and functions](04_Sets/relations_and_functions/README.md).
+
 **Geometric mean** — the n-th root of the product of n numbers: the one number that can replace every value without changing their product. The right mean for growth rates, which multiply: +100% then −50% is a geometric mean of 0% a year, not the arithmetic +25%. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
+
+**Graph (directed, undirected)** — a relation drawn: a point for each member of the base set and an arrow from x to y for each pair (x, y). An undirected graph is a symmetric relation, or a set of two-element sets. A membership table x ∈ y is a directed graph too. See [relations and functions](04_Sets/relations_and_functions/README.md).
 
 **Graph of an equation** — the set of all points (x, y) whose coordinates satisfy the equation. A point is on it exactly when substituting it makes the equation true. See [graphs of equations: intercepts and symmetry](08_Analytic_Geometry/graphs_intercepts_symmetry/README.md).
 
@@ -134,6 +154,8 @@ Terms used across the library, with the page that explains each in full.
 
 **If and only if** — A ⇔ B: "if A then B" and its converse both hold, so A and B are always true together. Every definition is one; the Pythagorean theorem with its converse is one. See [if A then B](11_Logic/converse_and_contrapositive/README.md).
 
+**Inductive set** — a set containing ∅ and, with each member x, its successor x ∪ {x}. The axiom of infinity says one exists; ω, the natural numbers, is the smallest. See [infinity](13_Axioms_of_Set_Theory/infinity/README.md).
+
 **Intercept** — a coordinate of a point where a graph meets an axis. For x-intercepts set y = 0 and solve; for y-intercepts set x = 0. Sullivan means the number, 3, not the point (3, 0). See [graphs of equations: intercepts and symmetry](08_Analytic_Geometry/graphs_intercepts_symmetry/README.md).
 
 **Inverse** — for a member a, a member b with a · b = b · a = e, the identity. −3 is the inverse of 3 under +, and 1/2 is the inverse of 2 under ×. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
@@ -141,6 +163,8 @@ Terms used across the library, with the page that explains each in full.
 **Inverse of a statement** — of "if A then B", the statement "if not A then not B". Not to be confused with the inverse of a member under an operation. It is the contrapositive of the converse, so it is true exactly when the converse is. See [if A then B](11_Logic/converse_and_contrapositive/README.md).
 
 **Isomorphism** — a homomorphism that can be undone, showing two structures are the same one with the members renamed. The logarithm is an isomorphism from the positive numbers under × to the numbers under +, which is how a slide rule multiplies by adding lengths. See [maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md).
+
+**Kernel of a function** — ker(f) = {(u, v) : f(u) = f(v)}, the pairs f cannot tell apart; always an equivalence relation, and every equivalence is one. See [equivalence relations and partitions](04_Sets/equivalence_and_partitions/README.md).
 
 **Lebesgue's criterion** — a bounded function on a closed interval has a Riemann integral exactly when the points where it is discontinuous form a set of measure zero. Also called the *Lebesgue–Vitali theorem*. See [the fat Cantor set](02_Measure_Zero/fat_cantor_set/README.md).
 
@@ -172,15 +196,21 @@ Terms used across the library, with the page that explains each in full.
 
 **Monoid** — a set with an operation that is associative and has an identity, but where members need not have inverses. Strings under concatenation, and the integers under ×. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
 
+**Multiset** — a collection in which a member may occur more than once: formally a function M from a set S to ℕ giving each member's multiplicity, written [2, 2, 2, 5, 7, 7]. The prime factorisation of a number is a multiset of primes; Python's `collections.Counter` is one. Union takes the larger multiplicity, intersection the smaller, sum adds them, which is gcd, lcm and product on factorisations. Not a lesson here yet.
+
 **Negative reciprocal** — −1/m: the slope of a line perpendicular to one of slope m, so the two slopes multiply to −1. Flip the fraction and change its sign. See [lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md).
 
 **Nowhere dense** — for a closed set on the line, containing no interval at all: there are gaps everywhere. Both Cantor sets are nowhere dense, but only the standard one has measure zero. See [the fat Cantor set](02_Measure_Zero/fat_cantor_set/README.md).
 
 **Ordered pair** — (a, b), an object that remembers which entry is first: (a, b) = (c, d) exactly when a = c and b = d. Unlike the set {a, b}, it distinguishes (2, 5) from (5, 2) and does not collapse (3, 3). See [the Cartesian product](04_Sets/cartesian_product/README.md).
 
+**Ordinal** — a set that is transitive (every member is a subset) and well-ordered by ∈: 0 = ∅, 1 = {0}, 2 = {0, 1}, …, ω, ω + 1, …. The measuring sticks for well-orderings; a strictly decreasing sequence of ordinals is finite, which is what makes Goodstein sequences stop. See [ordinals](13_Axioms_of_Set_Theory/ordinals/README.md).
+
 **Ordinate** — the y-coordinate of a point: its signed distance from the x-axis, positive above it and negative below. The x-coordinate is the *abscissa*. See [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md).
 
 **Partial order** — a relation that is reflexive, antisymmetric and transitive but need not compare every pair. ⊆ on sets is the standard example: {1} and {2} are incomparable, which is why `sorted()` on a list of Python sets gives no meaningful order. A set with one is a *poset*. See [the algebra of sets](04_Sets/algebra_of_sets/README.md).
+
+**Partition** — a collection of nonempty, pairwise disjoint blocks whose union is the whole set; the same thing as an equivalence relation, seen as blocks instead of pairs. A set of n members has a Bell number of them: 1, 2, 5, 15, 52, …. See [equivalence relations and partitions](04_Sets/equivalence_and_partitions/README.md).
 
 **Percentile** — the p-th percentile is the value with p% of the data below it. "p% of people are at or above c" says exactly that c is the (100 − p)-th percentile, and nothing else. See [a share above a cutoff](05_Statistics/share_above_a_cutoff/README.md).
 
@@ -189,6 +219,10 @@ Terms used across the library, with the page that explains each in full.
 **Polar form** — a nonzero complex number written as r e^{iθ}: its length r times the unit point at its angle θ. Multiplying two of them multiplies the lengths and adds the angles, which is the law of exponents, and de Moivre's formula is (e^{iθ})ⁿ = e^{inθ}. `cmath.polar` reads r and θ off a number and `cmath.rect` puts them back. See [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
 
 **Power series** — a polynomial that never ends, a₀ + a₁x + a₂x² + ⋯. For e^x the rule "velocity = position" forces aₖ = 1/k!, and putting x = it splits the terms into the series for cos t and sin t. See [power series](09_Calculus/power_series/README.md).
+
+**Power set** — 𝒫(a), the set of all subsets of a, with 2ⁿ members for |a| = n and always strictly more members than a (Cantor). Jech writes P(X), Cori and Lascar ℘(a). See [power set](13_Axioms_of_Set_Theory/power_set/README.md).
+
+**Predicate** — a statement with a hole, P(x), that becomes true or false when x is filled from the universe of discourse. See [predicates and quantifiers](11_Logic/predicates_and_quantifiers/README.md).
 
 **Pythagorean theorem** — in a right triangle, the square of the hypotenuse equals the sum of the squares of the legs, c² = a² + b². Its converse is also true. See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md).
 
@@ -200,13 +234,21 @@ Terms used across the library, with the page that explains each in full.
 
 **Quadrature** — combining independent uncertainties as √(a² + b²) rather than a + b. Linear addition is the worst case and is correct only for perfectly correlated errors. See [uncertainty propagation](01_Precision/uncertainty_propagation/README.md).
 
+**Quantifier** — ∀x ("for every x", an upside-down A for All) and ∃x ("for some x", a backwards E for Exists); in code, `all(...)` and `any(...)` over the universe. A ¬ pushed through one flips it; ∀x∃y and ∃y∀x are different claims. See [predicates and quantifiers](11_Logic/predicates_and_quantifiers/README.md).
+
 **Radian** — the unit of angle in which a point of the unit circle turned through angle t travels a distance t along the circle, so a full turn is 2π and a half turn is π. It is the unit Euler's formula needs, because compounding (1 + it/n)ⁿ turns through the number t itself, and it is the reason the identity has a π in it and not 180. Only in radians is d/dt sin t = cos t. See [radians](09_Calculus/radians/README.md) and [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
+
+**Rank** — the stage V_α at which a set first appears when the universe is built from ∅ by power sets: rank(∅) = 0 and rank(s) = 1 + the largest rank of a member. Pairs and power sets raise rank, unions lower it, which is why a finite stage fails some axioms and not others. See [foundation](13_Axioms_of_Set_Theory/foundation/README.md) and [reading a formula](13_Axioms_of_Set_Theory/reading_a_formula/README.md).
 
 **Rectangular coordinates** — also *Cartesian coordinates*, after Descartes: the ordered pair (x, y) that locates a point of the plane by its signed distances from two perpendicular number lines, x from the y-axis and y from the x-axis. The origin O = (0, 0) is where the axes cross. See [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md).
 
 **Related rates** — problems where two quantities are tied by an equation at every instant, so their rates of change are tied by its derivative in time: V = (4/3)πr³ gives dV/dt = 4πr² · dr/dt. Differentiate first, then put in the numbers of the instant. See [related rates](09_Calculus/related_rates/README.md).
 
+**Relation** — a set of ordered pairs; x ρ y means (x, y) ∈ ρ and nothing more. Divides, less than, likes, ∈ and every database table are relations. See [relations and functions](04_Sets/relations_and_functions/README.md).
+
 **Relative error** — |x − x̂| / |x|, the error as a fraction of the true value (`0.81%`); equivalently |ρ| where x̂ = x(1 + ρ). Undefined at x = 0, unchanged by a change of units, and the measure numerical analysis reports in place of a count of correct digits. What `×` and `÷` propagate, and the reason their rule counts significant figures. Defined in [relative error and correct digits](01_Precision/relative_error/README.md); propagated in [uncertainty propagation](01_Precision/uncertainty_propagation/README.md).
+
+**Replacement** — if a formula F is functional (each x has at most one y) then for every set a the values {φ_F(x) : x ∈ a} form a set; Python's `{f(x) for x in a}`. The F of ZF, added by Fraenkel in 1922; needed for ω + ω and recursion along the ordinals. See [replacement](13_Axioms_of_Set_Theory/replacement/README.md).
 
 **Right triangle** — a triangle with one angle of 90°. It cannot have two, since the angles add up to 180°. See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md).
 
@@ -260,9 +302,15 @@ Terms used across the library, with the page that explains each in full.
 
 **Tablemaker's dilemma** — an entry computed as 0.124|5000000, correct to a few digits past the bar, cannot be rounded at the bar until some further digit breaks the run of zeros, and nothing says in advance how far out that digit is. An exact tie is possible only for an algebraic value. See [relative error and correct digits](01_Precision/relative_error/README.md).
 
+**Tautology** — a sentence true on every row of its truth table, like P ∨ ¬P; a **contradiction** is false on every row. Two sentences are logically equivalent, ψ ⇔ φ, when ψ ↔ φ is a tautology. See [truth tables and the laws of logic](11_Logic/truth_tables_and_laws/README.md).
+
 **Testing effect** — retrieving something from memory makes it last longer than reading it again for the same time. See [spaced retrieval](12_Learning_to_Learn/spaced_retrieval/README.md).
 
+**Transitive set** — a set every member of which is also a subset, so that y ∈ x ∈ a gives y ∈ a. Every ordinal is one; V₃ = {∅, {∅}, {{∅}}, {∅, {∅}}} is one and is not an ordinal. See [ordinals](13_Axioms_of_Set_Theory/ordinals/README.md).
+
 **Triangle inequality** — each side of a triangle is shorter than the other two added together; in coordinates, d(P, R) ≤ d(P, Q) + d(Q, R), with equality only when Q is on the segment. See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md) and [the distance formula](08_Analytic_Geometry/distance_formula/README.md).
+
+**Truth table** — a sentence of propositional logic listed on every combination of truth values of its letters, 2ⁿ rows for n letters. A law of logic is two sentences whose columns agree on every row, and the table is the proof. See [truth tables and the laws of logic](11_Logic/truth_tables_and_laws/README.md).
 
 **Tuple** — an ordered list of numbers, (s₁, …, sₙ), called an n-tuple when it has n entries; a pair is a 2-tuple and a triple a 3-tuple. ℝⁿ is the set of all n-tuples of reals. Order matters: (1, 4) is not (4, 1). See [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md) and [the Cartesian product](04_Sets/cartesian_product/README.md).
 
@@ -274,8 +322,42 @@ Terms used across the library, with the page that explains each in full.
 
 **Universal set** — the set U, fixed in advance, that every set under discussion is a subset of; complements are taken relative to it, and in a Venn diagram it is the rectangle the circles are drawn in. There is no universal set of everything, so U is a choice, and the same A has a different complement under a different U. See [the algebra of sets](04_Sets/algebra_of_sets/README.md).
 
+**Universe (of set theory)** — a collection of points with a membership relation, in which the axioms are true or false; Cori and Lascar's 𝒰 with its set of points U. The chapter's small universes V₁ to V₄ have 1, 2, 4 and 16 sets. Not the universal set of a Venn diagram, though the word has the same root. See [reading a formula](13_Axioms_of_Set_Theory/reading_a_formula/README.md).
+
 **Vector space** — a set with an addition and a scalar multiplication satisfying eight conditions: commutativity, two associativities, an additive identity, additive inverses, 1v = v, and two distributive laws. ℝ² is one; so are the functions from any set to ℝ, and the positive numbers with multiplication as their addition. See [a definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md).
 
 **Venn diagram** — sets drawn as circles inside a rectangle that stands for the universal set U. n circles make 2ⁿ regions, one per pattern of membership, and every set operation is a choice of regions; a circle inside another draws A ⊆ B, two circles apart draw disjoint sets, and the rectangle outside a circle is its complement. See [the algebra of sets](04_Sets/algebra_of_sets/README.md).
 
+**Well-ordering** — a total order in which every nonempty subset has a least member, so every descent is finite; ℕ is one, ℤ and ℚ are not. Every set can be well-ordered exactly when the axiom of choice holds. See [ordinals](13_Axioms_of_Set_Theory/ordinals/README.md).
+
 **Zero divisor** — a nonzero number that multiplies some other nonzero number to give zero. Multiplying pairs entry by entry creates them, since (1, 0)(0, 1) = (0, 0), and a zero divisor can never be divided by. Complex multiplication has none: the product's x² + y² is the product of the two factors' x² + y², which is zero only when a factor is (0, 0). See [multiplication can be undone](03_Complex_Numbers/multiplication_can_be_undone/README.md).
+
+## Symbols
+
+The same ideas in the spellings of the books this library reads. The definitions never vary; only the ink does.
+
+| Idea | This library | Cori and Lascar | Cunningham | Jech | Kunen | Simovici and Djeraba | Stoll |
+|---|---|---|---|---|---|---|---|
+| subset, equal allowed | a ⊆ b | a ⊆ b | A ⊆ B | X ⊂ Y | x ⊆ y | S ⊆ T | A ⊆ B |
+| proper subset | a ⊊ b | a ⊊ b | A ⊂ B | X ⊂ Y, X ≠ Y | x ⊊ y | — | A ⊂ B |
+| difference | a ∖ b | a ∖ b | A ∖ B | X − Y | x ∖ y | S − T | A − B |
+| complement | A′ | — | — | — | — | T̄ | Ā |
+| symmetric difference | A △ B | — | — | — | — | U ⊕ V | A + B |
+| union of a family | ∪a | ∪a, ∪ₓ∈ₐ x | ∪𝓕 | ∪X | ∪𝓕 | ∪𝒞 | ∪𝒜 |
+| power set | 𝒫(a) | ℘(a) | 𝒫(A) | P(X) | 𝒫(x) | 𝒫(S) | 𝒫(A) |
+| set builder | {x ∈ a : F[x]} | {x ∈ a : F[x]} | {x ∈ A : φ(x)} | {u ∈ X : φ(u)} | {x ∈ z : φ(x)} | {x ∈ S \| P(x)} | {x ∈ A \| P(x)} |
+| ordered pair | (a, b) | (a, b) | (a, b) | (a, b) | ⟨x, y⟩ | (x, y) | ⟨x, y⟩ |
+| relation | ρ, R | R | R | R | R | ρ, σ, δ | ρ |
+| x related to y | x ρ y, (x, y) ∈ ρ | — | x R y | x R y | x R y | x ρ y | x ρ y |
+| domain, range | dom, ran | dom(f), Im(f) | dom, ran | dom, ran | dom, ran | Dom, Ran | 𝒟, ℛ |
+| image of a set | f[a] | f̄(c) | f[A] | f"X, f(X) | F"A, F(A) | f(L) | f[A] |
+| composition of f then g | g ∘ f | g ∘ f | g ∘ f | g ∘ f | g ∘ f | gf (functions), ρσ (relations) | g ∘ f |
+| partial function | — | — | — | — | — | f : S ⇝ T | — |
+| natural numbers | ω, ℕ | ω, ℕ | ω | ω, **N** | ω = ℕ | ℕ (from 0) | ℕ |
+| cardinality words | injection, bijection, \|A\| | subpotent, equipotent, card | — | \|X\| ≤ \|Y\| | A ≼ B, A ≈ B | equinumerous, \|S\| | ~, cardinal number |
+| the ordinals | Ord | On[v₀] | — | Ord | ON | — | — |
+| if … then, iff | ⇒, ⇔ | ⇒, ⇔ | →, ↔ (in a formula); ⇒, ⇔ (between sentences) | →, ↔ | →, ↔ | — | →, ↔ |
+| equality in the formal language | = | ≃ | = | = | = | = | = |
+| regularity / foundation | foundation | foundation | regularity | regularity | foundation | — | restriction |
+
+Two conventions deserve a warning. Jech's ⊂ allows equality and Cunningham's does not, so the same symbol means ⊆ in one book and ⊊ in the other. Simovici and Djeraba write gf for "f, then g", the order most books write as g ∘ f; both mean (g ∘ f)(x) = g(f(x)).
