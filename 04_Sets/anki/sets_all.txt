@@ -181,6 +181,68 @@ What does Python do with x in A & x in B?	& binds tighter than in, so it reads x
 What does x in A and B return in Python, and why is it dangerous?	If x is in A it returns the set B itself, which is truthy even when x is not in B, so an if takes the wrong branch and nothing complains. Write x in A and x in B.	sets math python	Math::Sets::Reading a set expression
 Using Kuratowski pairs, (a, b) = {{a}, {a, b}}, what is (1, 2) ∩ (2, 1)?	{{1, 2}}. (1, 2) = {{1}, {1, 2}} and (2, 1) = {{2}, {1, 2}} share only the member {1, 2}.	sets math notation	Math::Sets::Reading a set expression
 Read as open intervals, what is (1, 2) ∪ (2, 1)?	(1, 2). The interval (2, 1) is the set of t with 2 < t < 1, which is empty. Same symbols as the ordered pair, a different set: the context decides.	sets math notation	Math::Sets::Reading a set expression
+Read the symbol: ∈  ∉  ∋  ∌	is a member of, is not, contains. Explained under: glossary entry: membership.	symbol	Math::Sets::Symbol index
+Which symbol says: is a member of, is not, contains?	∈  ∉  ∋  ∌ (explained under: glossary entry: membership)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: {a, b, c}	the set whose members are a, b, c. Explained under: what is a set.	symbol	Math::Sets::Symbol index
+Which symbol says: the set whose members are a, b, c?	{a, b, c} (explained under: what is a set)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: {x ∈ A : P(x)}, {x | P(x)}	the set of x such that P(x). Explained under: glossary entry: set builder notation.	symbol	Math::Sets::Symbol index
+Which symbol says: the set of x such that P(x)?	{x ∈ A : P(x)}, {x | P(x)} (explained under: glossary entry: set builder notation)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ∅, { }	the empty set. Explained under: glossary entry: empty set.	symbol	Math::Sets::Symbol index
+Which symbol says: the empty set?	∅, { } (explained under: glossary entry: empty set)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: U, 𝒰, E, Ω	the universal set (Ω also the class of ordinals, or ω₁). Explained under: glossary entry: universal set.	symbol	Math::Sets::Symbol index
+Which symbol says: the universal set (Ω also the class of ordinals, or ω₁)?	U, 𝒰, E, Ω (explained under: glossary entry: universal set)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ⊆  ⊂  ⊊  ⊇  ⊃  ⊄  ⊉	subset, proper subset (two conventions), superset, and their negations. Explained under: glossary entry: symbols.	symbol	Math::Sets::Symbol index
+Which symbol says: subset, proper subset (two conventions), superset, and their negations?	⊆  ⊂  ⊊  ⊇  ⊃  ⊄  ⊉ (explained under: glossary entry: symbols)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: A = B	the same members, by extensionality. Explained under: glossary entry: extensionality.	symbol	Math::Sets::Symbol index
+Which symbol says: the same members, by extensionality?	A = B (explained under: glossary entry: extensionality)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ∪  ∩	union, intersection; ∪𝓕 and ∩𝓕 over a family. Explained under: algebra of sets.	symbol	Math::Sets::Symbol index
+Which symbol says: union, intersection; ∪𝓕 and ∩𝓕 over a family?	∪  ∩ (explained under: algebra of sets)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ∖  −	difference, A ∖ B = {x ∈ A : x ∉ B}. Explained under: algebra of sets.	symbol	Math::Sets::Symbol index
+Which symbol says: difference, A ∖ B = {x ∈ A : x ∉ B}?	∖  − (explained under: algebra of sets)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: A′  Aᶜ  Ā  U − A	complement within the universal set. Explained under: glossary entry: complement.	symbol	Math::Sets::Symbol index
+Which symbol says: complement within the universal set?	A′  Aᶜ  Ā  U − A (explained under: glossary entry: complement)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: △  ⊕	symmetric difference. Explained under: glossary entry: symmetric difference.	symbol	Math::Sets::Symbol index
+Which symbol says: symmetric difference?	△  ⊕ (explained under: glossary entry: symmetric difference)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: A × B	Cartesian product, the set of ordered pairs. Explained under: glossary entry: cartesian product.	symbol	Math::Sets::Symbol index
+Which symbol says: Cartesian product, the set of ordered pairs?	A × B (explained under: glossary entry: cartesian product)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: (a, b), ⟨a, b⟩	ordered pair. Explained under: glossary entry: ordered pair.	symbol	Math::Sets::Symbol index
+Which symbol says: ordered pair?	(a, b), ⟨a, b⟩ (explained under: glossary entry: ordered pair)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: 𝒫(A), 2ᴬ	power set. Explained under: glossary entry: power set.	symbol	Math::Sets::Symbol index
+Which symbol says: power set?	𝒫(A), 2ᴬ (explained under: glossary entry: power set)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: |A|, n(A), #A, card(A)	cardinality. Explained under: glossary entry: cardinality.	symbol	Math::Sets::Symbol index
+Which symbol says: cardinality?	|A|, n(A), #A, card(A) (explained under: glossary entry: cardinality)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ℵ₀, ℵ₁, ℶ₁, 𝔠, κ⁺, ℷ	infinite cardinals, the continuum, successor, gimel. Explained under: glossary entry: aleph beth and the continuum c.	symbol	Math::Sets::Symbol index
+Which symbol says: infinite cardinals, the continuum, successor, gimel?	ℵ₀, ℵ₁, ℶ₁, 𝔠, κ⁺, ℷ (explained under: glossary entry: aleph beth and the continuum c)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ω, ω₁, ε₀, α + 1, S(α)	ordinals and successors. Explained under: glossary entry: ordinal.	symbol	Math::Sets::Symbol index
+Which symbol says: ordinals and successors?	ω, ω₁, ε₀, α + 1, S(α) (explained under: glossary entry: ordinal)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ℕ  ℤ  ℚ  ℝ  ℂ	the number sets. Explained under: glossary entry: number sets n z q r c.	symbol	Math::Sets::Symbol index
+Which symbol says: the number sets?	ℕ  ℤ  ℚ  ℝ  ℂ (explained under: glossary entry: number sets n z q r c)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: x R y, (x, y) ∈ R, dom R, ran R	a relation and its domain and range. Explained under: glossary entry: relation.	symbol	Math::Sets::Symbol index
+Which symbol says: a relation and its domain and range?	x R y, (x, y) ∈ R, dom R, ran R (explained under: glossary entry: relation)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: f: A → B, x ↦ f(x), f[A], f⁻¹, g ∘ f	function, image of a set, inverse, composition. Explained under: relations and functions.	symbol	Math::Sets::Symbol index
+Which symbol says: function, image of a set, inverse, composition?	f: A → B, x ↦ f(x), f[A], f⁻¹, g ∘ f (explained under: relations and functions)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: [x], A/~	equivalence class, quotient set. Explained under: glossary entry: equivalence relation.	symbol	Math::Sets::Symbol index
+Which symbol says: equivalence class, quotient set?	[x], A/~ (explained under: glossary entry: equivalence relation)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ≤, <, ≺ on a poset	partial order, strict order. Explained under: glossary entry: partial order.	symbol	Math::Sets::Symbol index
+Which symbol says: partial order, strict order?	≤, <, ≺ on a poset (explained under: glossary entry: partial order)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ≈, ~, ≼, |A| ≤ |B|	equinumerous, injects into. Explained under: glossary entry: symbols.	symbol	Math::Sets::Symbol index
+Which symbol says: equinumerous, injects into?	≈, ~, ≼, |A| ≤ |B| (explained under: glossary entry: symbols)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: κ → (λ)ⁿ_r	partition relation. Explained under: glossary entry: partition relation arrow notation.	symbol	Math::Sets::Symbol index
+Which symbol says: partition relation?	κ → (λ)ⁿ_r (explained under: glossary entry: partition relation arrow notation)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ∀  ∃  ∃!  ∄	for all, there exists, exactly one, none. Explained under: glossary entry: quantifier.	symbol	Math::Sets::Symbol index
+Which symbol says: for all, there exists, exactly one, none?	∀  ∃  ∃!  ∄ (explained under: glossary entry: quantifier)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ¬  ∧  ∨  ⇒  →  ⇔  ↔  ⇏	not, and, or, implies, iff, does not imply. Explained under: glossary entry: connectives.	symbol	Math::Sets::Symbol index
+Which symbol says: not, and, or, implies, iff, does not imply?	¬  ∧  ∨  ⇒  →  ⇔  ↔  ⇏ (explained under: glossary entry: connectives)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ⊢  ⊬  ⊨  ⊣	proves, does not prove, models; the reversed turnstile. Explained under: glossary entry: turnstile.	symbol	Math::Sets::Symbol index
+Which symbol says: proves, does not prove, models; the reversed turnstile?	⊢  ⊬  ⊨  ⊣ (explained under: glossary entry: turnstile)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ∴  ∵	therefore, because. Explained under: glossary entry: therefore and because.	symbol	Math::Sets::Symbol index
+Which symbol says: therefore, because?	∴  ∵ (explained under: glossary entry: therefore and because)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ∎  ■  □	end of proof. Explained under: glossary entry: end of proof qed.	symbol	Math::Sets::Symbol index
+Which symbol says: end of proof?	∎  ■  □ (explained under: glossary entry: end of proof qed)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: :=  :⟺  ≝	is defined as (a term, a statement). Explained under: README.md#three-books-three-notations.	symbol	Math::Sets::Symbol index
+Which symbol says: is defined as (a term, a statement)?	:=  :⟺  ≝ (explained under: README.md#three-books-three-notations)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ≃	equality inside Cori and Lascar's formal language. Explained under: reading a formula.	symbol	Math::Sets::Symbol index
+Which symbol says: equality inside Cori and Lascar's formal language?	≃ (explained under: reading a formula)	symbol reverse	Math::Sets::Symbol index
 How is A ∋ a read, and which symbol is it often confused with?	A contains a: the membership sign mirrored, the same fact as a ∈ A from the set's side. Not ∃, which means 'there exists'.	notation trap	Math::Sets::Symbols
 What does a ∉ A mean?	a is not a member of A.	notation	Math::Sets::Symbols
 Which symbols are used for the universal set?	U, 𝒰, E or Ω, fixed in advance. Not ξ, which a circulating chart invented.	notation	Math::Sets::Symbols
