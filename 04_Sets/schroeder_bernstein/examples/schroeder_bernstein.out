@@ -1,0 +1,31 @@
+1. THE CONSTRUCTION ON EVERY PAIR OF INJECTIONS BETWEEN TWO 4-SETS
+   576 pairs (f, g); h is a bijection every time: True; h differs from f in 0 of them.
+   On finite sets of equal size every injection is already a bijection, so the
+   finite check only shows the recipe never breaks; the infinite case is the point.
+
+2. N WITH f(n) = 2n AND g(n) = 3n: NEITHER IS ONTO, h IS
+   trace a back: a = g(b)? only if 3 | a;  b = f(a')? only if b is even; and so on.
+      a chain                              stops in  h(a)
+      0 0                                  cycle     0
+      1 1                                  A         2
+      2 2                                  A         4
+      3 3 = g(1)                           B         1
+      6 6 = g(2) = f(1)                    A         12
+      9 9 = g(3)                           B         3
+     12 12 = g(4) = f(2)                   A         24
+     18 18 = g(6) = f(3) = g(1)            B         6
+     36 36 = g(12) = f(6) = g(2) = f(1)    A         72
+     54 54 = g(18) = f(9) = g(3)           B         18
+   h one-to-one on 0..399: True;  every b in 0..79 is h(a) for some a: True.
+   Where the chain stops in A or never stops, h = f; where it stops in B, h = g⁻¹,
+   the division by 3. Every b is reached: by f if b's own chain stops in A or
+   never, by g⁻¹ from g(b) if it stops in B, and never twice.
+
+3. WHAT IT BUYS: ≤ ON SIZES IS ANTISYMMETRIC, WITHOUT THE AXIOM OF CHOICE
+   |A| ≤ |B| means an injection A -> B exists. The theorem says |A| ≤ |B| and
+   |B| ≤ |A| give |A| = |B|, so ≤ on cardinals is reflexive, antisymmetric and
+   transitive: a partial order. That any two cardinals are comparable, making it
+   linear, is equivalent to the axiom of choice; this theorem needs none of it.
+   Classic use: [0, 1] and (0, 1). x -> x injects (0, 1) into [0, 1] and
+   x -> x/2 + 1/4 injects [0, 1] into (0, 1); so the two intervals are equinumerous,
+   and the recipe above says which countably many points have to shift to show it.

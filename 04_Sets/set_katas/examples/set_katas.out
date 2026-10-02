@@ -103,3 +103,19 @@
          n(E ∪ G ∪ S) by inclusion–exclusion = 60 + 50 + 35 − (40 + 30 + 25) + 25 = 75; counted: 75
    1.3.9 56 certificates, 17 + 28 + 25 = 70 awards, 4 students with all three: pairs sum to 70 + 4 − 56 = 18,
          exactly two = 18 − 3·4 = 6  (each triple student sits in three of the pair counts)
+
+7. SOLUTION SETS: SULLIVAN 3.5, PROBLEMS 39 TO 43, ON A GRID OF RATIONALS
+   39 (x − 4)² ≤ 0 has exactly one solution       on 81 points: 1 solutions; solutions: 4
+   40 (x − 2)² > 0 misses exactly one real        on 81 points: 80 solutions; non-solutions: 2
+   41 x² + x + 1 > 0 for every real               on 81 points: 81 solutions; non-solutions: none
+   42 x² − x + 1 < 0 has empty solution set       on 81 points: 0 solutions; solutions: none
+   43 x-intercepts of y = (x − 1)(x − 3) in the solution set? (x − 1)(x − 3) ≤ 0: True   (x − 1)(x − 3) < 0: False
+   A grid refutes 'empty' or 'all' with one point and never proves them; the
+   proofs are one line each: a square is never negative, and the discriminant
+   of x² ± x + 1 is 1 − 4 < 0, so the parabola, opening up, never meets the axis.
+
+8. A SYMBOL TABLE SAYS 'A ⊆ B: THE SUBSET HAS FEWER ELEMENTS OR EQUAL'. TEST IT.
+   pairs (A, B) of subsets of {1, 2, 3}: 64;  |A| ≤ |B|: 42;  A ⊆ B: 27;  A ⊆ B and |A| ≤ |B|: 27
+   A = {1}, B = {2, 3}: |A| ≤ |B| is True, A ⊆ B is False
+   Every subset has no more elements, but having no more elements is not being a
+   subset. ⊆ is about membership: every member of A is a member of B.

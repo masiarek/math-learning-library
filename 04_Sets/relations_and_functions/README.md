@@ -53,6 +53,16 @@ Simovici and Djeraba write ρ, σ for relations, Dom and Ran in roman type, S �
 | Databases and data mining | A table is a relation, a key is a function from rows to a column, a join is a relation product, and a partition of the rows is an equivalence relation. |
 | Programming | A dictionary is a finite partial function, a type signature `f : S → T` is Jech's notation, and a pure function is one that is only its table of values. |
 
+## Functions versus sets: Sullivan's four pictures
+
+The owner sent section 2.1 of Sullivan's *Precalculus* and asked whether its definition is better than the one above, then said "functions vs sets, this is confusing". Both reactions are right, and the program's section 8 settles them.
+
+Sullivan gives a function four times. First as a **mapping diagram**, two boxes and arrows (Figures 6 to 10). Second in words: "a function from X into Y is a relation that associates with each element of X exactly one element of Y", where a relation was a "correspondence". Third, a page later, as **a set of ordered pairs in which no ordered pairs have the same first element and different second elements**, which is this page's definition word for word. Fourth as an **equation** solved for y, and as a **machine** with an input pipe and an output pipe. The confusion is that these look like four different things. They are one set of pairs seen four ways: the arrows of the diagram are the pairs, the equation is a rule that generates the pairs, the machine is the rule run once, and the words "exactly one element of Y" are the one property the set must have.
+
+So the answer to "is it better?" is: as a first description, yes, because it says what a function is *for*, certainty, one output per input, with the price of a stamp in 2018 as the relation that fails; as a definition, no, because "relation" and "associates" are left undefined, and the set-of-pairs sentence that Sullivan adds afterwards is the one that can be checked. The program runs that check on every example of the section: the specific-heat diagram, the stamp, the menu, the gestation table where 240 days has two life expectancies, Example 3's three sets of pairs, the line y = 2x − 5 and the unit circle x² + y² = 1, which fails because x = 0 has partners 1 and −1. One function `is_function` decides all nine, and it is the same function that decided section 2. Example 3(b), where the inputs 1 and 2 share the output 4, passes, as Sullivan notes: a function may merge inputs, it may not split one.
+
+Two more of Sullivan's remarks are set theory in disguise. The warning that y = f(x) "does NOT mean f times x" is the warning that f is a set of pairs and f(x) the unique partner of x in it, so there is nothing to multiply. And the footnote crediting "the broad definition" to Lejeune Dirichlet, under which X and Y can be any two sets, is the history: Dirichlet's 1837 definition of a function as an arbitrary correspondence, with no formula required, is what section 6 above demonstrates with two different formulas giving one function.
+
 ## What the program prints
 
 <!-- output:relations_and_functions -->
@@ -111,12 +121,31 @@ Simovici and Djeraba write ρ, σ for relations, Dom and Ran in roman type, S �
    A relation can merge, so the image of an intersection can be smaller
    than the intersection of the images; a one-to-one relation cannot, and
    for it (b) and (c) become equalities (Simovici–Djeraba, Theorem 1.62).
+
+8. SULLIVAN'S FOUR PICTURES OF A FUNCTION, ONE TEST FOR ALL
+   Precalculus 2.1 shows a function as a mapping diagram, a set of pairs, an
+   equation and a machine. Each is the same set of pairs, and is_function
+   asks one thing of it: no two pairs with the same first member.
+   Fig. 6, substance → specific heat      a function
+   year → price of a stamp, 2018          not a function: 2018 has two partners
+   Fig. 8, menu item → price              a function, and two inputs share the output 1, which is allowed
+   Fig. 10, gestation → life expectancy   not a function: 240 has two partners
+   Example 3(a)                           a function
+   Example 3(b)                           a function, and two inputs share the output 4, which is allowed
+   Example 3(c)                           not a function: -3 has two partners
+   Example 4, y = 2x − 5 on x = −2..2     a function
+   Example 5, x² + y² = 1 on a grid       not a function: 0.0 has two partners
+   The machine picture is the same test read aloud: one output per input.
+   'y = f(x)' names the unique partner of x, and the WARNING in the book,
+   that f(x) is not f times x, is the warning that f is a set, not a number.
 ```
 <!-- /output -->
 
 ## Po polsku, w skrócie
 
 Relacja to zbiór par uporządkowanych i nic więcej: „m dzieli n" na liczbach 1–6 to czternaście par, a zapis x ρ y znaczy tylko (x, y) ∈ ρ. Funkcja to relacja z jedną dodatkową własnością: każdy x ma co najwyżej jeden y; f(x) oznacza „ten jedyny y", a słownik w Pythonie jest dokładnie tym obiektem. Graf to relacja narysowana strzałkami; graf nieskierowany to relacja symetryczna. Tabela w bazie danych to relacja zapisana wierszami, stąd nazwa „model relacyjny". Program sprawdza na wszystkich 512 relacjach na {1, 2, 3}, że ρ jest funkcją dokładnie wtedy, gdy ρ⁻¹ jest różnowartościowa, liczy iniekcje, suriekcje i bijekcje (na zbiorze skończonym po 6), i pokazuje złożenie jako iloczyn relacji; Simovici pisze ρσ i gf, Jech i Kunen g ∘ f, ten sam zbiór. Najważniejsze: funkcja to tabela swoich wartości, nie wzór; x² i |x|² to jedna funkcja, na mocy ekstensjonalności. Autorzy piszą te same rzeczy różnymi symbolami, bo dziedziczą różne tradycje; uniwersalny jest mały rdzeń ∈, ⊆, ∪, ∩, ∅, (x, y), × i same definicje.
+
+Sullivan w *Precalculus* pokazuje funkcję na cztery sposoby: diagram ze strzałkami, zdanie „każdemu elementowi X odpowiada dokładnie jeden element Y", zbiór par bez dwóch par o tym samym pierwszym elemencie, i równanie albo maszynę. To jeden zbiór par widziany czterokrotnie; program sprawdza jednym testem wszystkie jego przykłady, w tym tabelę, gdzie 240 dni ciąży ma dwie długości życia (nie funkcja), i okrąg x² + y² = 1 (nie funkcja, bo x = 0 ma partnerów 1 i −1).
 
 ## Run it yourself
 
@@ -129,6 +158,8 @@ python3 04_Sets/relations_and_functions/examples/relations_and_functions.py
 ## See also
 
 - [The Cartesian product](../cartesian_product/README.md) — the set A × B all these pairs are drawn from
+- [Circles](../../08_Analytic_Geometry/circles/README.md) — the unit circle as a set of points, and why it is not a function of x
+- Michael Sullivan, *Precalculus* (Pearson), section 2.1 *Functions*: the four pictures, Examples 2 to 5
 - [Cardinality of sets](../cardinality/README.md) — size by bijection, the function this page counts
 - [Pairs](../../13_Axioms_of_Set_Theory/pairs/README.md) and [replacement](../../13_Axioms_of_Set_Theory/replacement/README.md) — the axioms that make pairs, and images, sets
 - [Predicates and quantifiers](../../11_Logic/predicates_and_quantifiers/README.md) — "x likes y" as a relation on four people

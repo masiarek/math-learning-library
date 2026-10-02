@@ -37,3 +37,6 @@ n(A ∪ B ∪ C) = ?	n(A) + n(B) + n(C) − [n(A ∩ B) + n(B ∩ C) + n(C ∩ A
 What does a Venn diagram show, and what are the rectangle and the regions?	Sets as circles inside a rectangle that is U; n circles make 2^n regions, one per pattern of membership, and every set operation is a choice of regions. Four sets cannot be drawn with circles.	notation
 Is 'x ∈ A ∩ x ∈ B' a meaningful expression?	No. ∩ joins sets, not statements. Write x ∈ A ∩ B, or 'x ∈ A and x ∈ B'.	trap
 Which is the right symbol: {2, 3, 4} … {1, 2, 3, 4, 5}; ∅ … {∅}; {x : x = n²} … {x : x = n³}?	⊂ (proper subset); ⊂, since ∅ is a subset of every set and ∅ ≠ {∅}; ⊄, since 4 = 2² is not a cube.	trap
+What is the solution set of an equation or inequality?	The set of every value that makes it true: set-builder notation with the equation as the test. {x : x² = 4} = {−2, 2}; {(x, y) : x² + y² = 1} is the unit circle, so a graph is a solution set drawn.	definition
+What is the solution set of x² − x + 1 < 0, and why?	∅, the empty set: the discriminant 1 − 4 is negative and the parabola opens up, so it never goes below the axis. 'No solution' is a set, not a failure.	trap
+When are the x-intercepts of a quadratic in the solution set of its inequality?	For ≤ 0 and ≥ 0, since the quadratic is 0 there; never for < 0 and > 0.	trap

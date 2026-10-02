@@ -81,7 +81,7 @@ A repo path in backticks should be a link, not bare code text: put the backticks
 
 Mark external links with `↗` so a reader knows they are leaving.
 
-Every glossary entry carries an anchor, `{ #slug }` at the end of its line, where the slug is the term in lower case with every run of other characters replaced by a hyphen: `**Injective (one-to-one)**` is `GLOSSARY.md#injective-one-to-one`. Link a term from a page's table or prose to that anchor rather than to the whole glossary. When a table names things that have pages, link them: a reader on a phone taps the name and expects to land somewhere.
+Every glossary entry carries an anchor, `{ #slug }` on its own line directly after the entry (attr_list applies a block attribute only when it stands alone on the block's last line; at the end of the text line it is printed as text and no id is made), where the slug is the term in lower case with every run of other characters replaced by a hyphen: `**Injective (one-to-one)**` is `GLOSSARY.md#injective-one-to-one`. Link a term from a page's table or prose to that anchor rather than to the whole glossary. When a table names things that have pages, link them: a reader on a phone taps the name and expects to land somewhere.
 
 ## Nav order
 

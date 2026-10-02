@@ -254,6 +254,41 @@ def main() -> None:
     print("   1.3.9 56 certificates, 17 + 28 + 25 = 70 awards, 4 students with all three: pairs sum to 70 + 4 − 56 = 18,")
     print(f"         exactly two = 18 − 3·4 = {18 - 12}  (each triple student sits in three of the pair counts)")
 
+    print()
+    print("7. SOLUTION SETS: SULLIVAN 3.5, PROBLEMS 39 TO 43, ON A GRID OF RATIONALS")
+    grid = [Fraction(k, 4) for k in range(-40, 41)]
+    claims = [
+        ("39 (x − 4)² ≤ 0 has exactly one solution", lambda x: (x - 4) ** 2 <= 0),
+        ("40 (x − 2)² > 0 misses exactly one real", lambda x: (x - 2) ** 2 > 0),
+        ("41 x² + x + 1 > 0 for every real", lambda x: x * x + x + 1 > 0),
+        ("42 x² − x + 1 < 0 has empty solution set", lambda x: x * x - x + 1 < 0),
+    ]
+    for name, test in claims:
+        sols = [x for x in grid if test(x)]
+        non = [x for x in grid if not test(x)]
+        small = sols if len(sols) <= 3 else non
+        word = "solutions" if small is sols else "non-solutions"
+        shown = ", ".join(str(x) for x in small) if small else "none"
+        print(f"   {name:<46} on {len(grid)} points: {len(sols)} solutions; {word}: {shown}")
+    print("   43 x-intercepts of y = (x − 1)(x − 3) in the solution set? (x − 1)(x − 3) ≤ 0: "
+          f"{all((x - 1) * (x - 3) <= 0 for x in (1, 3))}   (x − 1)(x − 3) < 0: {all((x - 1) * (x - 3) < 0 for x in (1, 3))}")
+    print("   A grid refutes 'empty' or 'all' with one point and never proves them; the")
+    print("   proofs are one line each: a square is never negative, and the discriminant")
+    print("   of x² ± x + 1 is 1 − 4 < 0, so the parabola, opening up, never meets the axis.")
+
+    print()
+    print("8. A SYMBOL TABLE SAYS 'A ⊆ B: THE SUBSET HAS FEWER ELEMENTS OR EQUAL'. TEST IT.")
+    subs = [frozenset(c) for r in range(4) for c in combinations((1, 2, 3), r)]
+    pairs = [(a, b) for a in subs for b in subs]
+    fewer_or_equal = sum(1 for a, b in pairs if len(a) <= len(b))
+    subset = sum(1 for a, b in pairs if a <= b)
+    both = sum(1 for a, b in pairs if a <= b and len(a) <= len(b))
+    print(f"   pairs (A, B) of subsets of {{1, 2, 3}}: {len(pairs)};  |A| ≤ |B|: {fewer_or_equal};  A ⊆ B: {subset};  A ⊆ B and |A| ≤ |B|: {both}")
+    a, b = frozenset({1}), frozenset({2, 3})
+    print(f"   A = {set(a)}, B = {set(b)}: |A| ≤ |B| is {len(a) <= len(b)}, A ⊆ B is {a <= b}")
+    print("   Every subset has no more elements, but having no more elements is not being a")
+    print("   subset. ⊆ is about membership: every member of A is a member of B.")
+
 
 if __name__ == "__main__":
     main()

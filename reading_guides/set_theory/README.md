@@ -24,6 +24,66 @@ Most people who ask "which book on sets?" want the first and are handed one on t
 | Independence proofs: why the continuum hypothesis cannot be settled | Kunen | 400 |
 | The whole subject on one shelf | Jech | 750 |
 
+## Set theory among the branches of mathematics
+
+The owner asked which branches of mathematics are related to set theory and how. Two answers, because the subject is two things, as the section above says.
+
+**As a branch**, set theory is one of the four parts of mathematical logic, beside model theory, proof theory and computability theory, and its own sub-areas are the eight the [beyond-ZFC section](#beyond-zfc-the-map-in-wikipedias-article) lists. **As a language**, it runs under everything else, and each branch takes something specific from it and, often, gave something back.
+
+| Branch | What it takes from set theory | What it gave, or what set theory does inside it |
+|---|---|---|
+| **Logic and foundations** | The axioms, the universe V, models of theories | Gödel's incompleteness, Löwenheim–Skolem, independence proofs by forcing; the question of what a proof assistant's foundation is ([tools](#tools-languages-proof-assistants-model-finders)) |
+| **Analysis** | ℝ built as Dedekind cuts or Cauchy classes, both quotient constructions; σ-algebras and measure; countable and uncountable | Set theory was born here: Cantor invented ordinals in 1872 for a question about Fourier series, and the pathologies of analysis (Vitali's non-measurable set, Banach–Tarski) are the [axiom of choice](../../13_Axioms_of_Set_Theory/choice/README.md) at work; descriptive set theory, which sets of reals are tame, is the shared border |
+| **Topology** | Open sets closed under arbitrary unions and finite intersections, which is the [unions axiom](../../13_Axioms_of_Set_Theory/unions/README.md) in use; Zorn's lemma for Tychonoff's theorem | Topology was born in Hausdorff's 1914 set theory textbook; set-theoretic topology asks which spaces exist under which axioms |
+| **Algebra** | Quotients by [equivalence relations](../../04_Sets/equivalence_and_partitions/README.md) (ℤ/mℤ, G/H), cardinality of bases, Zorn's lemma for a basis of every vector space and a maximal ideal in every ring | Boolean algebras, the structure that sets and logic share ([the algebra of sets](../../04_Sets/algebra_of_sets/README.md)); lattices and orders ([orderings](../../04_Sets/orderings/README.md)) |
+| **Number theory** | ℕ built from the [axiom of infinity](../../13_Axioms_of_Set_Theory/infinity/README.md), then forgotten; [induction](../../11_Logic/induction/README.md); factorisations as [multisets](../../04_Sets/multisets/README.md) | Goodstein's theorem, a statement about integers whose only known proof uses [ordinals](../../13_Axioms_of_Set_Theory/ordinals/README.md); the Paris–Harrington theorem likewise |
+| **Graph theory** | A graph is a set of vertices with a set of 2-element subsets, or [a relation drawn](../../04_Sets/relations_and_functions/README.md); a colouring is a partition of the edge set | [Ramsey's theorem](../../04_Sets/ramsey/README.md) and König's lemma on trees are theorems about graphs that are also theorems of set theory; Erdős made infinite graphs a set-theoretic subject |
+| **Combinatorics** | Finite sets, [partitions](../../04_Sets/equivalence_and_partitions/README.md), Bell and Stirling numbers, [inclusion–exclusion](../../04_Sets/set_katas/README.md) | Infinite combinatorics (Ramsey theory, trees, almost-disjoint families) is a research area of set theory in its own right |
+| **Probability** | Kolmogorov's 1933 axioms: a sample space, events as subsets forming a σ-algebra, a measure on them; [probability zero](../../02_Measure_Zero/probability_zero/README.md) | Measurable cardinals began with Ulam's 1930 question about measures |
+| **Geometry** | Points as ordered pairs ([the Cartesian product](../../04_Sets/cartesian_product/README.md)); congruence and similarity as [orbits](../../04_Sets/equivalence_and_partitions/README.md) of groups of motions | Banach–Tarski, a ball reassembled as two from five pieces, from the axiom of choice |
+| **Category theory** | Sets as the first example of a category | A rival foundation: Lawvere's ETCS describes sets by their functions alone, and type theory, used by Lean, by their types |
+| **Computer science** | Relations as database tables, comprehension as `WHERE`, [functions as dictionaries](../../04_Sets/relations_and_functions/README.md), induction on data types, well-founded orders for termination | Computability theory, Cantor's diagonal argument as the halting problem, and the model finders and proof assistants of the [tools table](#tools-languages-proof-assistants-model-finders) |
+| **Philosophy** | What a number is, whether the continuum hypothesis has an answer, whether a proof needs choice | Maddy's essay on the philosophy shelf below is the current state of that conversation |
+
+Functions are not in the table because they are not a branch: a function is a set of pairs with one property, as [relations and functions](../../04_Sets/relations_and_functions/README.md) shows, and so every branch that uses functions is using sets twice, once for the domain and once for the pairs. The owner's question "how is it possible that set theory is in functions, combinatorics, graphs" has that one answer: each of these objects is defined as a set with a property, so every theorem about it is a theorem about a set.
+
+The pattern repeats: a branch meets a question it cannot settle with its own tools, the question turns out to be about sets, and set theory keeps it. Fourier series gave ordinals, measure gave large cardinals, topology gave set-theoretic topology, and the halting problem is Cantor's diagonal in a new suit.
+
+### Two pasted summaries, checked
+
+The owner pasted two AI-written summaries of the branches and asked whether they are right and whether their structure is good. Claim by claim, with how sure this page is of each.
+
+The first summary listed "branches that focus on sets" and, a second time, "core branches of set theory" and "branches deeply reliant on sets".
+
+| Claim | How sure | Note |
+|---|---|---|
+| Axiomatic set theory: ZFC, the infinite, ordinals and cardinals, limits of what can be proved | sure | the [axioms chapter](../../13_Axioms_of_Set_Theory/README.md) |
+| Order theory: posets, lattices, well-ordered sets | sure | [orderings](../../04_Sets/orderings/README.md) |
+| Topology: open and closed sets instead of distance | sure | |
+| Measure theory: σ-algebras closed under complement and countable union | sure | |
+| Abstract algebra: sets with operations | sure | |
+| Combinatorics "deals with finite sets"; extremal set theory | half | the finite part is right; infinite combinatorics is a research area of set theory, see [Ramsey's theorem](../../04_Sets/ramsey/README.md) |
+| Descriptive set theory: definable sets of reals, Polish spaces, Borel and analytic sets | sure | |
+| Category theory: the category Set as a universal translator | sure | and a rival foundation, which the summary does not say |
+| Combinatorial set theory: infinite graphs, Ramsey theory, cardinal arithmetic | sure | Halbeisen's book, above |
+| Fuzzy set theory as a "core branch of set theory", "heavily used in AI" | no | Zadeh's fuzzy sets (1965) are an applied subject, mostly control engineering; no set theorist counts them as a branch, and modern AI does not use them. The second summary says this correctly |
+| What is missing | | analysis, number theory, probability, geometry, computer science and logic itself, all in the table above; and the two lists are one answer given twice with different wording |
+
+The second summary split the subject into a "mainstream foundation" to learn and "esoteric branches" that are optional.
+
+| Claim | How sure | Note |
+|---|---|---|
+| Mainstream: relations, functions, partitions; cardinality and Cantor's theorem; ordinal and cardinal arithmetic; choice and Zorn's lemma | sure, and the order is right | it is this library's chapter 4 followed by chapter 13 |
+| "You must understand transfinite induction" | half | true for a logician; most working mathematicians use Zorn's lemma and never touch an ordinal |
+| Missing from the mainstream list | | the elementary layer: [the algebra of sets](../../04_Sets/algebra_of_sets/README.md), the [Cartesian product](../../04_Sets/cartesian_product/README.md), [injective and surjective](../../04_Sets/relations_and_functions/README.md#the-three-words), and the axioms themselves |
+| Forcing, Cohen, the continuum hypothesis independent of ZFC | sure | |
+| Large cardinals measure consistency strength; inaccessible, Mahlo, Woodin | sure | |
+| Determinacy: every set of reals measurable, contradicts choice | sure on the facts | but not "a parallel universe": under large cardinals, determinacy holds inside L(ℝ), the inner model where descriptive set theorists work, within an ordinary ZFC universe |
+| Anti-foundation, x = {x}, used in computer science | sure | Aczel 1988; see [foundation](../../13_Axioms_of_Set_Theory/foundation/README.md) |
+| Quine's New Foundations: a universal set, restricted comprehension | sure | from memory: its consistency, open since 1937, was proved by Holmes and checked by machine in 2024 |
+| Fuzzy sets "kept separate from pure set theory" | sure | the honest sentence the first summary lacked |
+| The structure itself: forcing, large cardinals and determinacy as "esoteric and optional" | misleading | for a set theorist those three are the subject; they are optional only for a user of sets. New Foundations, anti-foundation and fuzzy sets are alternatives to the axioms, a different kind of thing, and belong in a separate group. The [suggested paths](#suggested-paths) below are this library's version of the same structure |
+
 ## What a founding result looks like
 
 The subject began with a few short papers, and the idea of each one fits in a few lines of code. The program takes four: Cantor's first paper (1874), which lists the algebraic numbers by a "height" and so shows they are countable; Dedekind's definition of an infinite set (1888) as one that can be matched with a proper part of itself; Cantor's diagonal argument (1891), that no set can be matched with the set of its subsets; and von Neumann's definition of the natural numbers (1923), where each number is the set of the smaller ones. Where a finite check is a proof, the program checks every case; where the claim is about an infinite set, it prints the first lines of the infinite pattern and leaves the proof to the paper.
@@ -127,7 +187,7 @@ If the third is new, start with the language: Velleman, then Halmos. If the seco
 
 **Before any book.** The [Math is Fun introduction to sets ↗](https://www.mathsisfun.com/sets/sets-introduction.html) is a sound first hour: sets as collections, braces and ∈, the standard number sets, equality, subsets and proper subsets, the empty set, cardinality including a first look at infinite sets, the universal set, and short "your turn" questions, with follow-on pages on set-builder notation, power sets and Venn diagrams. (Described from the owner's screenshots and from memory; the site could not be fetched from this session.) Its universal set is right, and in the right words: "a set that contains everything. Well, not exactly everything. Everything that is relevant to our question", with the integers for number theory, the reals for calculus and the complex numbers for complex analysis as the examples, which is what [the algebra of sets](../../04_Sets/algebra_of_sets/README.md#the-complement-needs-a-universe) says too. One caution for a reader going on to the books: it treats "a collection of things" as a definition, which [what is a set?](../../04_Sets/what_is_a_set/README.md) shows leaves out the rule everything else relies on. Its quizzes are on the [set katas](../../04_Sets/set_katas/README.md#quiz-katas) page, answered and computed.
 
-A school textbook is the other good first hour, and the owner sent chapter 1 of an Indian one at Class 11 level (the title is not on the pages; its examples are blood groups, Kho-Kho and mock tests). It is friendly and correct: roster and set-builder form, finite and infinite, ∈ and ⊆, power sets with 2ⁿ, the universal set as "a specific all-encompassing set", Venn diagrams, the four operations, De Morgan verified on numbers, and then the one topic the university books skip, counting by Venn regions: n(A ∪ B) = n(A) + n(B) − n(A ∩ B), its three-set version, and word problems about students and surveys. Its summary page is a flashcard deck already, and it now is one: the [set katas](../../04_Sets/set_katas/README.md#flashcards) deck, with its exercises worked and checked on [that page](../../04_Sets/set_katas/README.md#from-a-school-textbook--versus--nested-sets-and-counting-by-venn-regions). Read it, or Math is Fun, then this library's sets chapter, then Velleman. Read it, then this library's [sets chapter](../../04_Sets/README.md), which covers the same ground with a program behind each claim, and then Velleman.
+A school textbook is the other good first hour, and the owner sent chapter 1 of an Indian one at Class 11 level (the title is not on the pages; its examples are blood groups, Kho-Kho and mock tests). It is friendly and correct: roster and set-builder form, finite and infinite, ∈ and ⊆, power sets with 2ⁿ, the universal set as "a specific all-encompassing set", Venn diagrams, the four operations, De Morgan verified on numbers, and then the one topic the university books skip, counting by Venn regions: n(A ∪ B) = n(A) + n(B) − n(A ∩ B), its three-set version, and word problems about students and surveys. Its summary page is a flashcard deck already, and it now is one: the [set katas](../../04_Sets/set_katas/README.md#flashcards) deck, with its exercises worked and checked on [that page](../../04_Sets/set_katas/README.md#from-a-school-textbook-versus-nested-sets-and-counting-by-venn-regions). Read it, or Math is Fun, then this library's sets chapter, then Velleman. Read it, then this library's [sets chapter](../../04_Sets/README.md), which covers the same ground with a program behind each claim, and then Velleman.
 
 | Book | What it is | Verdict |
 |---|---|---|
@@ -204,7 +264,7 @@ The slips cluster where the book is being informal, cross-referencing itself, or
 | **Thomas Jech, *Set Theory*** (3rd millennium ed., Springer, 2003) | Three parts, basic to advanced: everything from the axioms to large cardinals, descriptive set theory, forcing and its iterations, and PCF theory. | The reference, not a textbook. Every set theorist owns it, and few read it in order. Chapter 1 is thirteen pages, with the axioms in one line each and a "Why axiomatic set theory?" worth reading now; the rest of Part I after an undergraduate course, Part II after Kunen. |
 | **Azriel Levy, *Basic Set Theory*** (1979; Dover, 2002) | A thorough development of ZF with every detail, up to trees and the beginnings of descriptive set theory, without forcing. | The careful book: when another text says "it is easy to see", Levy sees it for you. |
 | **Ralf Schindler, *Set Theory: Exploring Independence and Truth*** (Springer, 2014) | A fast path from the axioms to forcing and large cardinals. | For a reader who already knows the undergraduate course and wants the frontier quickly. |
-| **Lorenz Halbeisen, *Combinatorial Set Theory: With a Gentle Introduction to Forcing*** (2nd ed., Springer, 2017) | Infinite combinatorics, with forcing introduced as the tool it is there. | The friendliest road into forcing after Kunen. |
+| **Lorenz Halbeisen, *Combinatorial Set Theory: With a Gentle Introduction to Forcing*** (3rd ed., Springer, 2025; 2nd ed. 2017) | Four parts. I, the preliminaries: the setting (what combinatorics is, p. 3), first-order logic in a nutshell, the axioms of ZF and ZFC. II, "topics in combinatorial set theory": Ramsey's theorem as the overture, cardinal relations in ZF, forms of choice (chapter 6), two balls from one (chapter 7), models with atoms, thirteen cardinals, the shattering number, happy families, the dual Ramsey theorem. III, from Martin's axiom to Cohen forcing. IV, the combinatorics of forcing extensions: Sacks, Silver, Miller, Mathias and Laver forcing, Ramsey ultrafilters. | The friendliest road into forcing after Kunen, and the book that answers "how can combinatorics be relevant to sets": its first page defines combinatorics as the study of how large or small a collection satisfying some criteria can be, and never says "finite". Chapters 6 and 7 are now lessons here, [the forms of choice](../../13_Axioms_of_Set_Theory/choice/README.md#the-equivalent-forms-and-the-weaker-ones) and [two balls from one](../../13_Axioms_of_Set_Theory/two_balls_from_one/README.md), and the overture is [Ramsey's theorem](../../04_Sets/ramsey/README.md). His notation has a column in the [chapter 13 table](../../13_Axioms_of_Set_Theory/README.md#three-books-three-notations). |
 | **Akihiro Kanamori, *The Higher Infinite*** (2nd ed., Springer, 2003) | Large cardinals, from inaccessibles to the top, with the history. | The reference for large cardinals, and the best-written history in the field. |
 | **Alexander Kechris, *Classical Descriptive Set Theory*** (Springer, 1995); **Yiannis Moschovakis, *Descriptive Set Theory*** (2nd ed., AMS, 2009, free on his page) | Which sets of real numbers are tame: Borel, analytic, projective. | Kechris for the classical theory, Moschovakis for the effective one and the large-cardinal connections. |
 | **Péter Komjáth and Vilmos Totik, *Problems and Theorems in Classical Set Theory*** (Springer, 2006) | A thousand problems with solutions, from cardinal arithmetic to infinite graphs. | The problem book, Hungarian style. |
@@ -237,6 +297,10 @@ The owner asked whether [Wikipedia's *Set theory* ↗](https://en.wikipedia.org/
 So: read the article once for the map, especially the paragraph on NF, and come back to the books for everything else.
 
 **A caution about infographics.** Two pictures of the kind that circulate on social media reached the owner, and both are worth a warning. An "Areas of set theory" map listed the eight areas above correctly and drew two of them wrong: its large-cardinal pyramid put Woodin cardinals above supercompact ones, when a supercompact cardinal is the stronger notion, and its inner-model diagram nested HOD inside L, when L is the smallest inner model and L ⊆ HOD ⊆ V. A "Set theory symbols" chart was an AI-generated image whose columns had slipped: ∉ missing, two meanings on ⊂ and on ⊆, "empty set" and "universal set" listed twice, "symmetric d-" cut off, and |A| paired with "implies" and "therefore". Such a chart looks authoritative and will be learned from, which is the harm; a symbol table has to say that ⊂ means "proper subset" in some books and "subset" in others, and the [glossary's table](../../GLOSSARY.md#symbols) does. The rule the owner uses for pasted summaries applies to pictures too: a table of what is sure and what is not, never a copy.
+
+A third chart, a hand-lettered "Set Theory Symbols" with eight entries, is the one to keep, with three notes. Its ∈, ∉, ⊆, ∪, ∩, ∅ and 𝒫 are right, and 𝒫({1, 2}) = {∅, {1}, {2}, {1, 2}} is the right example. Entry 3, ⊂ as "proper subset" with {1, 2} ⊂ {1, 2, 3}, is right in Cunningham's and this library's convention and wrong in Jech's and Halmos's, where ⊂ allows equality; the chart does not say so, and that is the one trap. Entry 7's example "A = ∅" names the empty set rather than showing one; {x ∈ ℕ : x < 0} = ∅ would show it, and the chart should add that {∅} is not empty. And "total set theory symbols = 8" is the kind of sentence a chart should not make: the [glossary's table](../../GLOSSARY.md#symbols) has twenty-two rows, and ∖, the complement, ×, |A|, the set-builder braces and the quantifiers are the ones a reader meets next.
+
+A fourth, a 24-symbol "ultimate cheat sheet" from an exam-tutoring account, is correct throughout, with the same unspoken ⊂ convention as the third, and it has what the third lacked: the complement written as U − A with the universal set named, ∉, ⊄ and ⊉, the ordered pair, A × B, |A| and ∅ = { }. Two phrases to read with care: "a collection of well-defined objects" is the textbook sentence that [what is a set?](../../04_Sets/what_is_a_set/README.md) takes apart, and "|A| is the number of elements" is right for finite sets only, since [cardinality](../../04_Sets/cardinality/README.md) is defined by matching. Everything on it is in the [glossary](../../GLOSSARY.md), with the page that explains each symbol; the sheet is useful as a reminder before an exam and useless as a place to learn from, because a symbol's meaning is its definition and a card has no room for one.
 
 **An online course with its own vocabulary.** The owner also asked about [settheory.net ↗](https://settheory.net/sets/all2), Sylvain Poirier's *Set Theory and Foundations of Mathematics* (blocked from this session; from memory). It is a serious, original, self-published course that presents set theory and model theory together as one theory, with functions and operators as primitives beside sets, with the universe of sets thought of as growing in time, and with terms of its own for all of it ("meta-objects", "one-model theory"). That is its interest and its cost: a reader who knows the standard story will find a genuinely different angle, and a reader learning the subject will find words no textbook uses and no exercise sheet tests. Read it after Hrbacek and Jech or Cunningham, as a second view, and not instead of them.
 
@@ -333,6 +397,26 @@ The subject began in papers that are mostly a few pages long, and reading them i
 
 Where to read them for free: the German originals of Cantor, Zermelo and Hausdorff are scanned at the [Göttingen digitisation centre ↗](https://gdz.sub.uni-goettingen.de/), which holds Crelle's journal and the *Mathematische Annalen*; the Polish papers are at the [Polish digital mathematics library ↗](https://matwbn.icm.edu.pl/); the two-page notes of Gödel and Cohen are open at [PNAS ↗](https://www.pnas.org/); Jourdain's translation of Cantor and Beman's of Dedekind are on the [Internet Archive ↗](https://archive.org/). For English translations with context, van Heijenoort and Ewald, above.
 
+### A textbook's history box, checked
+
+Sullivan's *Precalculus* has a "Historical Feature" on counting and probability, and the owner asked whether it is good history. Mostly, with one large error and two about notation.
+
+| Claim | How sure | Note |
+|---|---|---|
+| Counting and probability took form in the 1654 letters of Fermat and Pascal on dividing the stakes of an interrupted game | sure | the standard account |
+| "Set theory" took form there too | wrong | set theory began with Boole's algebra of classes (1847) and Cantor's paper of 1874, two centuries later; the box conflates the subject with its use in counting |
+| Fermat listed the cases, Pascal used the arithmetical triangle | sure | |
+| Huygens's book of 1657 was the first on probability and introduced expectation | sure | |
+| Cardano's treatise, published only in 1663, came too late to matter | sure | written about 1564 |
+| Jakob Bernoulli's *Ars Conjectandi* (1713, posthumous) "gave the theory the form it would have until 1900" | half | the date is right; Laplace reshaped the subject in 1812 and Kolmogorov's axioms of 1933 gave it its present form |
+| C(n, r) and P(n, r) are English notation from after 1830 | from memory, cannot confirm | plausible |
+| The notation (n over r) "goes back to Euler" and "is now losing ground" | wrong twice | Euler used brackets, [n/r]; the vertical form is Ettingshausen's (1826). And it is not losing ground: it is the standard notation of mathematics, and C(n, r) survives mainly in school books and on calculators |
+| ∪ and ∩ were introduced by Peano in 1888 | sure | |
+| ⊂ was introduced by Schröder about 1890 | mostly | Schröder's 1890 sign was for subsumption; Gergonne had a C for containment in 1817 |
+| Boole wrote A + B for union and AB for intersection; statisticians still write AB | half | AB, yes; Boole's + was only for disjoint classes, and Jevons (1864) made it the union of any two. Statisticians' P(AB) for P(A ∩ B) is right |
+
+The problem of points in the box, A needing two points and B three, is the one program the box invites: list the 16 outcomes of four more plays, and A wins in 11 of them, so the stakes split 11 to 5. The founding papers section above is this page's own history of set theory, for comparison.
+
 ## Questions a learner asks, with short answers
 
 The questions below came up, in this order, while the owner of this library read the books above. Each answer is short, and names the page where the long one is.
@@ -362,6 +446,8 @@ The questions below came up, in this order, while the owner of this library read
 **Add some katas.** [Set katas](../../04_Sets/set_katas/README.md) (Cunningham 1.1), [function katas](../../04_Sets/function_katas/README.md) (Hrbacek and Jech 3.1–3.13 and 4.1–4.3, with solutions) and [axiom katas](../../13_Axioms_of_Set_Theory/axiom_katas/README.md) (Jech, Cunningham, Kunen): in each, a program checks the claim on a small universe before you look for the proof.
 
 ## What this library already covers
+
+The [terms map](../set_theory_terms/README.md) is the long version of this section: the owner's list of some 700 terms of set theory, each linked to the lesson or glossary entry that covers it, the rest named with the book that does.
 
 - [04_Sets](../../04_Sets/README.md) — the language: [what a set is](../../04_Sets/what_is_a_set/README.md), with extensionality, separation and Russell's paradox; [the algebra of sets](../../04_Sets/algebra_of_sets/README.md); [the Cartesian product](../../04_Sets/cartesian_product/README.md) with Kuratowski's pair; [cardinality](../../04_Sets/cardinality/README.md) with the diagonal argument.
 - [13_Axioms_of_Set_Theory](../../13_Axioms_of_Set_Theory/README.md) — the axioms of Zermelo and Fraenkel one page each, read aloud and checked on a small universe, from Cori and Lascar's chapter 7.

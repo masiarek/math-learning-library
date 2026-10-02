@@ -15,8 +15,11 @@ Before a chapter can talk about how long a set is, or how many points it holds, 
 | 7 | [Relations and functions are sets of pairs](relations_and_functions/README.md) | Why does a book on sets have chapters on functions and graphs, and why is a database table a relation? |
 | 8 | [Equivalence relations, partitions and the kernel of a function](equivalence_and_partitions/README.md) | Why are "reflexive, symmetric, transitive" the right three words, and what does a function's kernel have to do with cutting a set into blocks? |
 | 9 | [Orderings](orderings/README.md) | Which combinations of reflexive, symmetric, antisymmetric and transitive deserve a name, what a poset is, and why a set can have two maximal elements and no maximum? |
-| 10 | [Set katas](set_katas/README.md) | Is this exercise's claim true, and which of four moves proves it? Cunningham's first exercises, checked before you prove them |
-| 11 | [Function katas](function_katas/README.md) | Hrbacek and Jech's exercises on functions, 3.1 to 3.13 and 4.1 to 4.3, checked by program and solved move by move |
+| 10 | [Cantor–Schröder–Bernstein](schroeder_bernstein/README.md) | Why do two one-to-one maps, one each way, give a bijection, and what does that buy without the axiom of choice? |
+| 11 | [Multisets](multisets/README.md) | What is a set that counts, why are gcd and lcm its ∩ and ∪, and which set law does it lose? |
+| 12 | [Ramsey's theorem](ramsey/README.md) | How can combinatorics be relevant to sets, and why does the answer stop being a number once the set is infinite? |
+| 13 | [Set katas](set_katas/README.md) | Is this exercise's claim true, and which of four moves proves it? Cunningham's first exercises, checked before you prove them |
+| 14 | [Function katas](function_katas/README.md) | Hrbacek and Jech's exercises on functions, 3.1 to 3.13 and 4.1 to 4.3, checked by program and solved move by move |
 
 ## The through-line
 
@@ -26,7 +29,9 @@ A set forgets everything except membership: {2, 5} and {5, 2} are one set. Almos
 
 The second lesson asks how big a set is. For a finite set the answer is a count, and |A × B| = |A| · |B| is the first theorem. For an infinite set counting never finishes, and the definition that replaces it, matching members one to one, is what lets ℕ be the same size as its even numbers and ℝ be strictly bigger than both. That last fact is also the reason some functions have no program, which is where the chapter touches computing.
 
-The seventh lesson answers the surprise that functions and graphs turn up in a book on sets: a relation is a set of pairs, a function a relation with one property, a graph a relation drawn, so one definition covers them all; the eighth shows that a partition, an equivalence relation and the kernel of a function are one object three ways, and the ninth sorts all 512 relations on three points into the combinations with names, equivalences and orders, and settles the words for positions in a poset. The last two lessons are practice: the exercises of a first section on sets, each checked on every choice of subsets of {1, 2, 3} before you look for the proof, with the proof's move named. The [axioms chapter](../13_Axioms_of_Set_Theory/README.md) continues from here, putting the constructions of this chapter on the axioms of Zermelo and Fraenkel.
+The seventh lesson answers the surprise that functions and graphs turn up in a book on sets: a relation is a set of pairs, a function a relation with one property, a graph a relation drawn, so one definition covers them all; the eighth shows that a partition, an equivalence relation and the kernel of a function are one object three ways, and the ninth sorts all 512 relations on three points into the combinations with names, equivalences and orders, and settles the words for positions in a poset. The tenth is the theorem that makes "no bigger than" on sizes antisymmetric, two injections made into a bijection by an algorithm; the eleventh is the set that counts. The last two lessons are practice: the exercises of a first section on sets, each checked on every choice of subsets of {1, 2, 3} before you look for the proof, with the proof's move named. The [axioms chapter](../13_Axioms_of_Set_Theory/README.md) continues from here, putting the constructions of this chapter on the axioms of Zermelo and Fraenkel.
+
+The twelfth lesson answers the owner's "how the heck can combinatorics be relevant to sets" with Ramsey's theorem: the pigeonhole principle for pairs. Six points with their pairs coloured in two colours always hold a one-colour triangle, and the program checks all 32 768 colourings; colouring the pairs of ℕ always leaves an infinite one-colour set, and the program runs the proof as an algorithm; and the same question at the first uncountable cardinal has a different answer, which is where combinatorics becomes set theory. The two kata pages close the chapter.
 
 ## A note on the code
 
