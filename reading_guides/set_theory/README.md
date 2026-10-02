@@ -173,6 +173,21 @@ If the third is new, start with the language: Velleman, then Halmos. If the seco
 
 Read chapter 7 after Halmos or alongside Hrbacek and Jech, and read Part I's chapters on first-order logic first, which the chapter assumes. Kunen's *Foundations of Mathematics* is the same mixture of logic and set theory at twice the length and half the speed. One slip to know about: the chapter's first sentence dates the creation of set theory by Cantor to "the beginning of the twentieth century"; Cantor's papers run from 1874 to 1897, and it was the axioms, Zermelo's in 1908, that belong to the new century.
 
+### Beyond ZFC: the map in Wikipedia's article
+
+The owner asked whether [Wikipedia's *Set theory* ↗](https://en.wikipedia.org/wiki/Set_theory) adds anything. (Wikipedia is blocked from this session, so this is from memory of the article, and the table says how sure each claim is.) As a survey it is sound and short, and most of it is covered above or in the chapters. What it has that this library did not, until now, is the map of the subject *beside* ZFC: the other axiom systems, and the list of research areas. Three of those items change a sentence that this library repeats.
+
+| Claim, from memory of the article | How sure | What it changes here |
+|---|---|---|
+| **NBG** (von Neumann–Bernays–Gödel) adds proper classes as objects, proves the same theorems about sets as ZFC, and has finitely many axioms where ZFC needs schemes | sure | The [class](../../13_Axioms_of_Set_Theory/comprehension/README.md) of all sets, which ZF can only talk around, is an object in NBG; Morse–Kelley goes one step further. |
+| **New Foundations** (Quine, 1937) restricts comprehension to *stratified* formulas instead of to subsets of a given set, and in it a universal set V with V ∈ V exists | sure of the claim; the consistency of NF was open until Holmes's proof in the 2010s, and I am not sure of the date | "There is no set of everything" is a theorem of ZF, not a law of nature; the [comprehension](../../13_Axioms_of_Set_Theory/comprehension/README.md) page now says so. |
+| **Kripke–Platek** is a weak set theory without power set, used in computability; **constructive** set theories (IZF, CZF) drop the excluded middle; **type theory** is the rival foundation that proof assistants such as Lean use | sure | Explains the owner's "we need Lean": Lean's foundation is type theory, with ZFC's universe buildable inside it. |
+| Research areas: combinatorial set theory, descriptive set theory, inner model theory, large cardinals, determinacy, forcing, cardinal invariants of the continuum, set-theoretic topology, fuzzy set theory | sure, except that fuzzy sets are usually listed as an application rather than a branch | The graduate table above covers all but fuzzy sets and cardinal invariants; [day or night](../../12_Learning_to_Learn/day_or_night/README.md) has fuzzy membership. |
+| **Objections**: Poincaré ("a disease"), Brouwer and the intuitionists, Wittgenstein; and category theory, Lawvere's ETCS, as an alternative foundation | fairly sure of the names; the Poincaré quotation is disputed and may be apocryphal | Lawvere and Rosebrugh's book, above, is the category view. |
+| **Education**: the 1960s "New Math" put sets into primary school and was abandoned; Venn diagrams survived | sure | Nothing to change. |
+
+So: read the article once for the map, especially the paragraph on NF, and come back to the books for everything else.
+
 ### Philosophy, history and the popular shelf
 
 | Book | What it is |
