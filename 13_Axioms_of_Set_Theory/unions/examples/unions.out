@@ -1,0 +1,38 @@
+1. THE AXIOM, AND WHAT ∪a IS
+   ∀v0 ∃v1 ∀v2 (v2 ∈ v1 ⇔ ∃v3 (v3 ∈ v0 ∧ v2 ∈ v3))
+   for every a there is a b such that z is in b exactly when z is in
+   some member of a. That b is ∪a, the union of the family a.
+   a = ∅                      ∪a = ∅
+   a = {∅}                    ∪a = ∅
+   a = {{∅}}                  ∪a = {∅}
+   a = {{∅}, {{∅}}}           ∪a = {∅, {∅}}
+   a = {∅, {∅}, {∅, {∅}}}     ∪a = {∅, {∅}}
+   ∪3 = 2: for a von Neumann number, ∪(n + 1) = n.
+
+2. WHY IT NEVER FAILS IN V_n: A UNION HAS LOWER RANK
+   ∪a is in V_4 for all 16 sets a of V_4: True
+   and rank(∪a) ≤ rank(a) - 1 for every non-empty a: True
+   Pairs and power sets go one rank up and break V_n; unions go
+   one rank down and never do.
+
+3. a ∪ b AND {a, b, c} FROM PAIRS AND UNIONS, THE BOOK'S WAY
+   a = {∅},  b = {{∅}},  c = {∅, {∅}}
+   {a, b}            = {{∅}, {{∅}}}
+   a ∪ b = ∪{a, b}   = {∅, {∅}}
+   {a, b, c} = {a, b} ∪ {c} = {{∅}, {{∅}}, {∅, {∅}}}
+   Python: a | b is a ∪ b, and set().union(*a) is ∪a.
+   a | b == ∪{a, b}: True
+
+4. THE TRAP: ∪a IS NOT a
+   a = {{1, 2}, {3}}   has 2 members, both sets
+   ∪a = [1, 2, 3]   has 3 members, the numbers
+   ∪ opens every member one level. Applied to {1, 2, 3} it would
+   open the numbers, which in set theory are sets too.
+
+5. THE DUAL, ∩a, NEEDS a ≠ ∅
+   a = {{1,2,3}, {2,3,4}, {3,4,5}}:  ∩a = {x : x is in every member of a} = [3]
+   For a = ∅ the condition 'x is in every member of a' holds for every x,
+   because there is no member to fail it, so ∩∅ would be the set of all
+   sets, which does not exist. ∩a comes from comprehension inside one
+   member of a, and that needs a member.
+   x in every member of ∅, for x = 7: True

@@ -1,0 +1,66 @@
+1. A GROUP THAT DOUBLES ITSELF: THE FREE GROUP ON a AND b
+   reduced words in a, b and their inverses A, B, of length ≤ 7: 4373
+   split them by first letter: S(a), S(A), S(b), S(B), and the empty word
+   |S(a)| = 1093, |S(A)| = 1093, |S(b)| = 1093, |S(B)| = 1093
+   every word (length ≤ 6) is in S(a) or in a·S(A), never both: True
+   every word (length ≤ 6) is in S(b) or in b·S(B), never both: True
+   So the group is S(a) ⊔ a·S(A) and also S(b) ⊔ b·S(B): four pieces,
+   two of them moved by one letter, make two copies of the whole group.
+   (The empty word is the one leftover; a trick absorbs it.) A measure that
+   is finitely additive and invariant under left multiplication cannot exist.
+
+2. HAUSDORFF'S TWO ROTATIONS GENERATE A GROUP THAT IS JUST AS FREE
+   φ: half turn about the axis (1, 0, 1);  ψ: third turn about the z-axis
+   φ² = ι: True;   ψ³ = ι: True;   ψ·ψ⁻¹ = ι: True
+   reduced words in φ, ψ, ψ⁻¹ of length ≤ 12 (φ² = ψ³ = ι used to reduce): 442
+   distinct rotation matrices among them: 442;  non-empty words equal to ι: 0
+   Exact arithmetic in p + q√3, so 'distinct' is exact, not a float comparison.
+   Halbeisen (p. 175) states the shape of 2ⁿ·(ψ^±φ ⋯ ψ^±φ): the entries marked
+   a are even integers, those marked b are odd integers times √3 or not:
+        ⎛ a₁    b₁√3  b₂  ⎞
+        ⎜ a₂√3  b₃    b₄√3 ⎟
+        ⎝ a₃    a₄√3  a₅  ⎠
+   products of n ≤ 8 factors ψ^±φ checked: 510;  entries breaking the pattern: 0
+   The pattern shows no such product is ι (ι has odd entries where a's sit),
+   so the only relations are φ² = ψ³ = ι, and the group is the free product
+   ℤ₂ * ℤ₃. It contains a free group on two letters, so section 1 applies.
+
+3. THE LABELLED CAYLEY GRAPH: THREE PIECES, ONE A THIRD AND ALSO A HALF
+   Halbeisen's rules: ι gets ❶; φ sends ❷ or ❸ to ❶ and ❶ to ❷ (or ❸);
+   ψ sends ❶ → ❷ → ❸ → ❶. Labels by recursion on the reduced word:
+      ι     label 1
+      f     label 2
+      p     label 2
+      q     label 3
+      fp    label 1
+      pf    label 3
+      qf    label 1
+      fpf   label 1
+      pfp   label 2
+      fqf   label 2
+   Cayley-graph edges checked in the ball of radius 10: 308;  rules broken: 0
+   |A| = 94, |B| = 62, |C| = 62 in the ball
+   B = ψ[A]:      True
+   C = ψ⁻¹[A]:    True
+   B ∪ C = φ[A]:  True
+   (each identity checked on the words that stay inside the ball)
+   So A ≅ B, A ≅ C and A ≅ B ∪ C: the piece A is a third of the group and,
+   rotated by φ, also two thirds of it. Nothing here used the axiom of choice.
+
+4. WHERE THE AXIOM OF CHOICE ENTERS, AND WHAT IT COSTS
+   The group acts on the sphere. Two points are equivalent when some rotation
+   in the group moves one to the other; the classes are the orbits. Choose
+   one point in every orbit (the axiom of choice: uncountably many orbits,
+   no rule). Every other point x is ρ(chosen point) for exactly one ρ in the
+   group, and x gets ρ's label. The sphere, minus the countable set F of
+   points on some rotation axis, becomes A ⊔ B ⊔ C with B = ψ[A],
+   C = ψ⁻¹[A], B ∪ C = φ[A]: Hausdorff's paradox (1914).
+   A volume μ that is additive on disjoint sets and equal on congruent sets:
+     μ(A) = μ(B) = μ(C)            congruent pieces
+     μ(A) = μ(B ∪ C) = μ(B) + μ(C)  congruent, then additive
+     so μ(A) = 2·μ(A), μ(A) = 0, and μ(sphere ∖ F) = 3·μ(A) = 0,
+     against μ(sphere) > 0 with F countable. No such μ exists on all subsets.
+   Robinson (1947): the solid ball is five pieces that make two balls, and four
+   do not suffice; Banach and Tarski (1924) had it with more pieces. Without
+   the axiom of choice neither decomposition can be proved (Halbeisen's Related
+   Result 48): in Solovay's model every set of reals has a volume.

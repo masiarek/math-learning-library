@@ -1,0 +1,13 @@
+# Inbox
+
+Ideas and follow-ups not done yet. Delete an item when it is done.
+
+- The Collatz conjecture (Ashlock's interlude, page 39): hailstone sequences are a perfect program and a statement no one can prove; a page on "what a program can explore and not settle" would fit `11_Logic`, or the Learning to Learn library, beside induction. Also from Ashlock: proof by contradiction on its own (√2, infinitely many primes), and the permutation problems 2.55–2.64.
+- Candidates for `13_Axioms_of_Set_Theory` or a new chapter, each needing a program: cardinal arithmetic and the alephs; order types and the order of ℚ (Cantor's back-and-forth); Zorn's lemma at work (a basis of a vector space); filters and ultrafilters (on a finite set all are principal: a program can show it); trees and König's lemma; preorders and their quotient. Komjáth and Totik's problem book, chapters 1 to 11, is the source list. The terms map at `reading_guides/set_theory_terms` lists what is uncovered.
+- A reading guide for logic and proof assistants, placing Metamath, Lean and Isabelle properly, now that the set theory guide has a tools table; Lean's Natural Number Game as the first step.
+- A note on Lean or Metamath for the owner's remark "at this level Python is useless, we need Lean": the chapter page says Python checks models and a proof assistant proves theorems; a page that runs one ZFC axiom through Metamath's set.mm could make it concrete.
+- Possible pages from the same book that were judged not to be lessons (no program can show them): memory palace, procrastination and habits. Revisit only if a program idea appears.
+- The owner showed interest in an "AI second brain" video (youtu.be/ib74sLgjIBM, not watched: YouTube is blocked). If they share its transcript, compare it with this folder and adopt what fits.
+- From Halbeisen's chapter 7: Robinson's five-piece decomposition of the solid ball, with four rotations and the labelling rules of his figures on pages 178–179, could extend `two_balls_from_one` the way Hausdorff's partition is done now (labels checked on a ball of the Cayley graph). His Related Result 48 (neither decomposition provable without choice) is cited from the page, not read.
+- Sullivan's problem of points (A needs 2, B needs 3: 11 to 5 over 16 outcomes) is a two-line program; it belongs with counting, not sets, if a counting chapter ever exists.
+- The terms map `reading_guides/set_theory_terms` lists what is still uncovered; the biggest uncovered groups are trees, forcing, large cardinals and descriptive set theory, none of which has a program idea yet except König's lemma on finite trees and filters on a finite set.

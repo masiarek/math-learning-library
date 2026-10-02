@@ -81,6 +81,8 @@ A repo path in backticks should be a link, not bare code text: put the backticks
 
 Mark external links with `↗` so a reader knows they are leaving.
 
+Every glossary entry carries an anchor, `{ #slug }` on its own line directly after the entry (attr_list applies a block attribute only when it stands alone on the block's last line; at the end of the text line it is printed as text and no id is made), where the slug is the term in lower case with every run of other characters replaced by a hyphen: `**Injective (one-to-one)**` is `GLOSSARY.md#injective-one-to-one`. Link a term from a page's table or prose to that anchor rather than to the whole glossary. When a table names things that have pages, link them: a reader on a phone taps the name and expects to land somewhere.
+
 ## Nav order
 
 The owner's preference, and the rule: **the sidebar lists the chapters by name, A to Z.** People look a subject up by name, so "Algebraic Structures" comes before "Complex Numbers" whatever their numbers. The hook does this by itself: every numbered chapter lands where the `CHAPTERS` marker sits in the top-level `NAV_ORDER` list, sorted by the name shown in the sidebar, so a new chapter needs no edit there. The numbers stay in the folder names as the suggested reading order, which [Start Here](00_Start_Here/README.md) spells out.

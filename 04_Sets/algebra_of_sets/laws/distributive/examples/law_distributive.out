@@ -1,0 +1,19 @@
+1. THE LAW: A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C), A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)
+   checked on all 4096 choices of 3 subset(s) of U = {1, 2, 3, 4}: True
+
+2. ONE INSTANCE, WORKED
+   A = {1, 2}, B = {2, 3}, C = {3, 4}, A' = {3, 4}, B' = {1, 4}
+   A ∩ (B ∪ C) = {2} = (A ∩ B) ∪ (A ∩ C) = {2}
+   A ∪ (B ∩ C) = {1, 2, 3} = (A ∪ B) ∩ (A ∪ C) = {1, 2, 3}
+
+3. THE SAME LAW IN LOGIC: p ∧ (q ∨ r) = (p ∧ q) ∨ (p ∧ r), p ∨ (q ∧ r) = (p ∨ q) ∧ (p ∨ r)
+   every row of the truth table agrees, which is why the member-by-member check is a proof:
+   p  q  r   left  right
+   T  T  T   T     T
+   T  T  F   T     T
+   T  F  T   T     T
+   T  F  F   F     F
+   F  T  T   F     F
+   F  T  F   F     F
+   F  F  T   F     F
+   F  F  F   F     F

@@ -64,6 +64,14 @@ The fourth chapter is groundwork: the constructions every other page takes for g
 |---|---|
 | [The Cartesian product](04_Sets/cartesian_product/README.md) | What ℝ² is, why (2, 5) is not (5, 2), why A × B is not B × A, and why (1, 1) counts |
 | [Cardinality of sets](04_Sets/cardinality/README.md) | What \|A\| means, why size is defined by matching, and where it shows up in types, databases and computability |
+| [Relations and functions are sets of pairs](04_Sets/relations_and_functions/README.md) | A relation is a set of pairs, a function a relation with one property, a graph a relation drawn, a table a relation stored; every relation on {1, 2, 3} sorted, composition as a relation product, and a function as its table of values |
+| [Equivalence relations, partitions and the kernel of a function](04_Sets/equivalence_and_partitions/README.md) | Partitions, equivalences and kernels determine each other exactly: 5 of 512 relations on {1, 2, 3}, the Bell numbers, the decomposition of every function into surjection, bijection and inclusion, and congruence mod m |
+| [Orderings](04_Sets/orderings/README.md) | Six properties as loops on all 512 relations on three points: 5 equivalences, 19 partial orders, 6 linear; the identity wears two names; two of a textbook's examples fail the loop; chains, antichains, maximal versus maximum on Mortimer's ancestors and divisibility; the Riemann partition as the other meaning of the word |
+| [Cantor–Schröder–Bernstein](04_Sets/schroeder_bernstein/README.md) | Two injections make a bijection: the ancestor-tracing construction run on all 576 pairs of maps between two 4-sets and on ℕ with 2n and 3n; ≤ on sizes is antisymmetric without choice |
+| [Multisets](04_Sets/multisets/README.md) | A set that counts, as a function to ℕ and as `Counter`: min and max as ∩ and ∪, gcd and lcm as ∩ and ∪ of factorisations checked to 60, stars and bars, the law that is lost |
+| [Ramsey's theorem](04_Sets/ramsey/README.md) | The pigeonhole principle for pairs: R(3, 3) = 6 checked on all 32 768 colourings of six points, the infinite theorem run as an algorithm, König's lemma on the tree of bad colourings, and the arrow notation that turns a counting question into one about the axioms |
+| [Set katas](04_Sets/set_katas/README.md) | Cunningham's first exercises checked on every choice of subsets of {1, 2, 3} before you prove them, with the four proof moves |
+| [Function katas](04_Sets/function_katas/README.md) | Hrbacek and Jech's exercises on functions with solutions: compositions and inverses of 2x − 1, √x, 1/x computed exactly; left versus right inverses; why preimages respect ∩ and images do not; all 64 partial functions on {1, 2, 3} |
 
 [**05_Statistics/**](05_Statistics/README.md) — *What does one number say about many?*
 
@@ -135,8 +143,31 @@ The eleventh chapter is the logic the theorems in every other chapter are writte
 | Lesson | What it teaches |
 |---|---|
 | [If A then B: converse, contrapositive and inverse](11_Logic/converse_and_contrapositive/README.md) | "If A then B" breaks only when A is true and B false, so the contrapositive is the same claim and the converse is not; if and only if; two classic mistakes; and why examples never prove but one counterexample disproves |
+| [Truth tables and the laws of logic](11_Logic/truth_tables_and_laws/README.md) | A law of logic is two columns that agree on every row, so a 2ⁿ-row table proves it; tautology, contradiction, ↔ versus ⇔; a misprinted exercise caught by one row |
+| [Predicates and quantifiers](11_Logic/predicates_and_quantifiers/README.md) | ∀ and ∃ as loops; "everyone likes someone" versus "someone is liked by everyone" on 65 536 relations; negation flips a quantifier; which distribution laws fail |
+| [Induction](11_Logic/induction/README.md) | Base case, step, and why it works: the least counterexample; n² + n + 41 fails first at 40; the all-cars proof breaks at n = 1; Fibonacci facts with Binet computed exactly, 2ⁿ subsets, the chocolate bar, closed forms |
 
-[**12_Learning_to_Learn/**](12_Learning_to_Learn/README.md) — *How do you know that you know?* **Now its own library:** the [Learning to Learn library ↗](https://masiarek.github.io/learning-to-learn-library/), built the same way, where the nine lessons that began here live with pages on planning, sleep, exercise and the brain. The chapter page here points across, and the lessons still use this library's mathematics.
+[**13_Axioms_of_Set_Theory/**](13_Axioms_of_Set_Theory/README.md) — *What are the rules for building sets, and why these?*
+
+The thirteenth chapter decodes the formal language of set theory and gives each axiom of Zermelo and Fraenkel a page: read aloud in English, what it builds, what goes wrong without it, and a program that checks it on a small universe of sets. An axiom turns out to be a demand on the universe, not a description of it, and every False the programs print is a set the axiom asks for and the universe lacks.
+
+| Lesson | What it teaches |
+|---|---|
+| [Reading a formula](13_Axioms_of_Set_Theory/reading_a_formula/README.md) | ∀ is a loop that must always succeed, ∃ one that must succeed once, ⇒ is "not p or q", ∈ is a lookup; every axiom evaluated on four small universes |
+| [Extensionality](13_Axioms_of_Set_Theory/extensionality/README.md) | Same members, same set; the proof method a ⊆ b and b ⊆ a; why "the" pair; a universe with two empty sets |
+| [Pairs](13_Axioms_of_Set_Theory/pairs/README.md) | {a, b} needs an axiom because every finite universe runs out; three pairs make Kuratowski's ordered pair |
+| [Unions](13_Axioms_of_Set_Theory/unions/README.md) | The axiom gives ∪a, not a ∪ b; why it never fails in a finite universe; why ∩∅ cannot exist |
+| [Power set](13_Axioms_of_Set_Theory/power_set/README.md) | ⊆ hidden in a ∀…⇒; V_{n+1} = 𝒫(V_n); Cantor's theorem |
+| [Comprehension](13_Axioms_of_Set_Theory/comprehension/README.md) | One axiom per formula; drop the "x ∈ a" and Russell's paradox is a truth table with no true row |
+| [Replacement](13_Axioms_of_Set_Theory/replacement/README.md) | "Functional" formulas, images, and the set Zermelo's axioms cannot collect |
+| [Infinity](13_Axioms_of_Set_Theory/infinity/README.md) | An inductive set; no finite universe has one; ω as what all inductive sets share |
+| [Choice](13_Axioms_of_Set_Theory/choice/README.md) | A theorem for finite families, unnecessary when a rule exists, an axiom only for infinitely many socks |
+| [Two balls from one](13_Axioms_of_Set_Theory/two_balls_from_one/README.md) | Banach–Tarski taken apart: the free group doubles itself on 4 373 words, Hausdorff's two rotations are checked free in exact √3 arithmetic, the labelled Cayley graph satisfies B = ψ[A], C = ψ⁻¹[A], B ∪ C = φ[A], and the axiom of choice is the one step onto the sphere |
+| [Foundation](13_Axioms_of_Set_Theory/foundation/README.md) | No set is its own member; every set has a rank; a two-cycle breaks the axiom only once {a, b} exists |
+| [Ordinals](13_Axioms_of_Set_Theory/ordinals/README.md) | Transitive sets well-ordered by ∈; Goodstein sequences, a theorem about integers whose only proof uses ordinals |
+| [Axiom katas](13_Axioms_of_Set_Theory/axiom_katas/README.md) | Exercises from Jech, Cunningham and Kunen, each checked on a small universe before you prove it, with the five proof moves |
+
+[**12_Learning_to_Learn/**](12_Learning_to_Learn/README.md) — *How do you know that you know?* **Now its own library:** the [Learning to Learn library ↗](https://masiarek.github.io/learning-to-learn-library/), built the same way, where the ten lessons that began here live with pages on planning, sleep, exercise and the brain. The chapter page here points across, and the lessons still use this library's mathematics.
 
 | Lesson | What it teaches |
 |---|---|
@@ -149,6 +180,7 @@ The eleventh chapter is the logic the theorems in every other chapter are writte
 | [The buffer hour ↗](https://masiarek.github.io/learning-to-learn-library/04_Planning_the_Work/the_buffer_hour/) | Task times are skewed, so five honestly estimated one-hour tasks fit in five hours one day in thirteen; a reserved hour gives 47%, and a recorded overrun ratio corrects the estimates |
 | [Cognitive load ↗](https://masiarek.github.io/learning-to-learn-library/02_Making_It_Stay/cognitive_load/) | Working memory holds about four chunks, and a chunk is whatever practice made automatic: (a+b)² = a² + 2ab + b² is 19 items to a beginner and 1 to an expert; practice, modelled as byte-pair merging, chunks what repeats |
 | [Interleaving ↗](https://masiarek.github.io/learning-to-learn-library/02_Making_It_Stay/interleaving/) | A blocked sheet of volume problems asks you to choose a formula 4 times in 12, a mixed exam 7 in 8; a student who reuses the last formula scores 75% on the sheet and 25% on the exam |
+| [Focused and diffuse thinking ↗](https://masiarek.github.io/learning-to-learn-library/02_Making_It_Stay/focused_and_diffuse/) | Small uphill steps stop on the nearest hill: a thousand focused steps end where three did, a wide survey finds the right hill but not its top, and focus, step back, focus again reaches the answer in fifteen looks. |
 
 The books behind it, and behind the other chapters, are on the [resources](RESOURCES.md) page.
 

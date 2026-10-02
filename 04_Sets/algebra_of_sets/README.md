@@ -6,7 +6,7 @@
 
 ## One question per member
 
-[What is a set?](../what_is_a_set/README.md) ended with the rule that a set is nothing but its members. So to know a set built from A and B, it is enough to know, for each object x, whether x is in it, and that answer depends only on whether x is in A and whether x is in B:
+[What is a set?](../what_is_a_set/README.md) opens with the rule that a set is nothing but its members. So to know a set built from A and B, it is enough to know, for each object x, whether x is in it, and that answer depends only on whether x is in A and whether x is in B:
 
 | Set | x is a member when | Logic | Python |
 |---|---|---|---|
@@ -21,24 +21,26 @@ Section 2 of the program prints this table for two small sets and then checks th
 
 ## The complement needs a universe
 
-A′, "everything not in A", has no meaning on its own: not in A, out of what? Not a number, the numbers 1 to 4, every object that exists? The last choice is exactly the one [Russell's paradox](../what_is_a_set/README.md#the-repair-and-the-paradox-as-a-theorem) rules out, since there is no set of everything. So a complement is always relative to a **universal set** U fixed in advance, and A′ = U ∖ A. Python's `set` has no complement operator for the same reason; the code has to name U and write `U - a`.
+A′, "everything not in A", has no meaning on its own: not in A, out of what? Not a number, the numbers 1 to 4, every object that exists? The last choice is exactly the one [Russell's paradox](../definition_on_trial/README.md#the-repair-and-the-paradox-as-a-theorem) rules out, since there is no set of everything. So a complement is always relative to a **universal set** U fixed in advance, and A′ = U ∖ A. Python's `set` has no complement operator for the same reason; the code has to name U and write `U - a`. (Books that admit *classes* as objects, such as Robert André's in [the reading guide](../../reading_guides/set_theory/README.md), write an absolute complement {x : x ∉ A} with no U, which is a class and never a set; to get a set they intersect with a chosen U, which is the same rule in different bookkeeping.)
+
+The universal set is not a set of everything, then, but the set of everything *under discussion*, chosen before the problem starts: the whole numbers 1 to 9 in a textbook exercise, the 52 cards in a probability question, every student in a survey. Each set in the problem is a subset of it. Sullivan's *Precalculus* takes U = {1, 2, 3, 4, 5, 6, 7, 8, 9} and A = {1, 3, 5, 7, 9}, the odd ones, and gets Ā = {2, 4, 6, 8}, the even ones; and since every member of U is odd or not, and none is both, A ∪ Ā = U and A ∩ Ā = ∅ follow at once, which is the book's "do you see why". The bar is Sullivan's spelling of the complement; A′ and Aᶜ mean the same, and this library writes A′. Because U is a choice, the same A has a different complement under a different U, which section 1 of the program shows: A = {1, 2} has complement {3, 4} in {1, 2, 3, 4}, {3, 4, 5, 6} in {1, …, 6}, and ∅ in {1, 2}. A complement quoted without its universe is an unfinished sentence.
 
 ## The laws, and why they are true
 
-Section 3 checks the standard list on every case: each law in one set on all 16 subsets of U, in two sets on all 256 pairs, in three sets on all 4,096 triples.
+Section 3 checks the standard list on every case: each law in one set on all 16 subsets of U, in two sets on all 256 pairs, in three sets on all 4,096 triples. Each law also has [a page of its own](laws/README.md), with why it is true, where it is used, the trap beside it, and a program.
 
 | Law | Sets | Logic |
 |---|---|---|
-| identity | A ∪ ∅ = A, A ∩ U = A | p ∨ false = p, p ∧ true = p |
-| domination | A ∪ U = U, A ∩ ∅ = ∅ | p ∨ true = true, p ∧ false = false |
-| idempotent | A ∪ A = A, A ∩ A = A | p ∨ p = p |
-| complement | A ∪ A′ = U, A ∩ A′ = ∅ | p ∨ ¬p = true, p ∧ ¬p = false |
-| double complement | (A′)′ = A | ¬¬p = p |
-| commutative, associative | A ∪ B = B ∪ A, … | p ∨ q = q ∨ p, … |
-| distributive | A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C), and with ∪ and ∩ swapped | p ∧ (q ∨ r) = (p ∧ q) ∨ (p ∧ r) |
-| absorption | A ∪ (A ∩ B) = A | p ∨ (p ∧ q) = p |
-| **De Morgan** | (A ∪ B)′ = A′ ∩ B′, (A ∩ B)′ = A′ ∪ B′ | ¬(p ∨ q) = ¬p ∧ ¬q |
-| difference | A ∖ B = A ∩ B′ | p ∧ ¬q |
+| [identity](laws/identity/README.md) | A ∪ ∅ = A, A ∩ U = A | p ∨ false = p, p ∧ true = p |
+| [domination](laws/domination/README.md) | A ∪ U = U, A ∩ ∅ = ∅ | p ∨ true = true, p ∧ false = false |
+| [idempotent](laws/idempotent/README.md) | A ∪ A = A, A ∩ A = A | p ∨ p = p |
+| [complement](laws/complement/README.md) | A ∪ A′ = U, A ∩ A′ = ∅ | p ∨ ¬p = true, p ∧ ¬p = false |
+| [double complement](laws/double_complement/README.md) | (A′)′ = A | ¬¬p = p |
+| [commutative, associative](laws/commutative_associative/README.md) | A ∪ B = B ∪ A, … | p ∨ q = q ∨ p, … |
+| [distributive](laws/distributive/README.md) | A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C), and with ∪ and ∩ swapped | p ∧ (q ∨ r) = (p ∧ q) ∨ (p ∧ r) |
+| [absorption](laws/absorption/README.md) | A ∪ (A ∩ B) = A | p ∨ (p ∧ q) = p |
+| [**De Morgan**](laws/de_morgan/README.md) | (A ∪ B)′ = A′ ∩ B′, (A ∩ B)′ = A′ ∪ B′ | ¬(p ∨ q) = ¬p ∧ ¬q |
+| [difference](laws/difference/README.md) | A ∖ B = A ∩ B′ | p ∧ ¬q |
 
 Why is checking one small universe enough? Because each law is decided member by member. Whether x is on the left side of De Morgan's law depends only on whether x ∈ A and whether x ∈ B, which is one of four cases, and the law is true in all four: that is its truth table. A universe of four members with all their subsets meets every combination of memberships there is, so the exhaustive check is a proof, not a sample. The same argument makes set algebra and the logic of *and*, *or* and *not* one structure, a **Boolean algebra**; the [laws of an operation](../../06_Algebraic_Structures/laws_of_an_operation/README.md) page lists what such lists of laws have in common.
 
@@ -57,6 +59,8 @@ Algebra with numbers invites some moves that set algebra does not allow. Section
 One counterexample kills a law. For the true laws of section 3 the same search finds none, and since the search covers every case, that is the proof.
 
 ## Venn diagrams
+
+A **Venn diagram** draws sets as circles inside a rectangle, and the rectangle is U: that is why a textbook's figure carries "universal set" in its corner. The part of the rectangle outside a circle is that set's complement, so the complement can only be drawn once the rectangle is. Two positions of the circles say something on their own: a circle drawn inside another says A ⊆ B, and two circles drawn apart say A ∩ B = ∅, sets with no member in common, called **disjoint**. The usual picture of overlapping circles claims nothing yet; it only makes room for every region, and a region may turn out empty.
 
 A Venn diagram of n sets draws one region for each pattern of membership: in or out of each set, 2ⁿ patterns. Three circles make 8 regions, and the eighth, outside all three, is the complement of the union. Section 5 lists the regions for the two diagrams from the notes. In the first, red {1, 2, 5} and yellow {1, 6} overlap at 1 and green {4, 7} stands apart, so every region touching green and another colour is empty and `green.isdisjoint(red | yellow)` is True. In the second, 1 is in all three and the centre region is {1}. Every set operation is a choice of regions: union takes all regions inside any circle, intersection the centre, symmetric difference of two the pair of outer lenses.
 
@@ -95,6 +99,13 @@ The section ends with the rule that turns every set equality into two subset pro
    the complement of A = {1, 2} is U - A = {3, 4}.
    Python's set has no complement operator: 'everything not in A'
    means nothing until U is fixed, so the code has to write U - A.
+   U is a choice, and a different choice gives a different complement
+   of the same A = {1, 2}:
+     U = {1, 2, 3, 4}           U - A = {3, 4}
+     U = {1, 2, 3, 4, 5, 6}     U - A = {3, 4, 5, 6}
+     U = {1, 2}                 U - A = {}
+   Whatever U is, A | (U - A) = U and A & (U - A) = {}: each x in U is
+   in A or not, and none is both. Checked for the three universes: True
 
 2. EACH OPERATION IS A LOGICAL OPERATION ON MEMBERSHIP
    A = {1, 2}, B = {2, 3}; for each x in U, is x in the result?
@@ -132,6 +143,7 @@ The section ends with the rule that turns every set equality into two subset pro
    A - (B - C) = (A - B) - C        fails in 2800 cases, e.g. A = {1}, B = {}, C = {1}
    A - B = B - A                    fails in  240 cases, e.g. A = {}, B = {1}
    A | B = A | C  implies  B = C    fails in 1040 cases, e.g. A = {1}, B = {}, C = {1}
+   A ^ (B | C) = (A ^ B) | C        fails in 2800 cases, e.g. A = {1}, B = {}, C = {1}
    One counterexample is enough to kill a law; for the true laws of
    section 3, the search over every case is the proof that none exists.
 
@@ -197,13 +209,13 @@ The section ends with the rule that turns every set equality into two subset pro
 
 ## Flashcards
 
-The page as a deck of Anki cards: [`algebra_of_sets.txt`](anki/algebra_of_sets.txt). Import with File → Import. Tags: `definition`, `law`, `trap`, `logic`, `python`, `order`.
+The page as a deck of Anki cards: [`algebra_of_sets.txt`](anki/algebra_of_sets.txt). Import with File → Import. Tags: `logic`, `definition`, `law`, `principle`, `trap`, `venn`, `order`, `example`, `python`.
 
 ## Po polsku, w skrócie
 
 Suma, iloczyn (część wspólna) i dopełnienie zbiorów to logiczne „lub”, „i” oraz „nie” zastosowane do jednego pytania: czy x należy do zbioru? Dlatego każde prawo algebry zbiorów, na przykład prawa de Morgana (A ∪ B)′ = A′ ∩ B′ i (A ∩ B)′ = A′ ∪ B′, jest prawem logiki w przebraniu. Program sprawdza każde prawo na wszystkich podzbiorach zbioru {1, 2, 3, 4}. To jest dowód, a nie próbka, bo prawo zależy tylko od tego, do których zbiorów należy dany element, a mały uniwersum pokrywa wszystkie możliwe kombinacje.
 
-Dopełnienie ma sens tylko względem ustalonego uniwersum U: A′ = U ∖ A. Zbioru „wszystkiego” nie ma (paradoks Russella), a Python nie ma operatora dopełnienia i trzeba pisać `U - a`. Niektóre „prawa” kuszą, ale są fałszywe, np. (A ∪ B) ∖ B = A, bo różnica nie cofa sumy. Wreszcie zawieranie ⊆ jest porządkiem częściowym: zbiorów {1} i {2} nie da się porównać, więc `sorted()` na liście zbiorów daje przypadkową kolejność; trzeba podać klucz, np. `key=lambda s: (len(s), sorted(s))`.
+Dopełnienie ma sens tylko względem ustalonego uniwersum U: A′ = U ∖ A. Uniwersum to nie zbiór wszystkiego, bo takiego nie ma (paradoks Russella), lecz zbiór wszystkiego, o czym mowa w zadaniu, wybrany z góry; na diagramie Venna jest nim prostokąt, w którym rysuje się koła, a dopełnienie to część prostokąta poza kołem. Ten sam zbiór A ma inne dopełnienie w innym uniwersum, więc dopełnienie bez podanego U jest niedokończonym zdaniem. Podręczniki piszą je jako A′, Ā albo Aᶜ. Koło narysowane wewnątrz drugiego koła znaczy A ⊆ B, a dwa koła osobno to zbiory rozłączne, A ∩ B = ∅. Python nie ma operatora dopełnienia i trzeba pisać `U - a`. Niektóre „prawa” kuszą, ale są fałszywe, np. (A ∪ B) ∖ B = A, bo różnica nie cofa sumy. Wreszcie zawieranie ⊆ jest porządkiem częściowym: zbiorów {1} i {2} nie da się porównać, więc `sorted()` na liście zbiorów daje przypadkową kolejność; trzeba podać klucz, np. `key=lambda s: (len(s), sorted(s))`.
 
 ## Run it yourself
 
@@ -220,6 +232,7 @@ python3 04_Sets/algebra_of_sets/examples/algebra_of_sets.py
 - [If A then B: converse, contrapositive and inverse](../../11_Logic/converse_and_contrapositive/README.md) — ⊆ is "if x ∈ A then x ∈ B"
 - [The laws of an operation](../../06_Algebraic_Structures/laws_of_an_operation/README.md) — commutative, associative and distributive laws for numbers
 - [Cardinality of sets](../cardinality/README.md) — why U has 2⁴ = 16 subsets
+- Michael Sullivan, *Precalculus* (Pearson), Appendix A.1 *Algebra Essentials*, objective 1 *Work with Sets*: the universal set, the complement written Ā, and the Venn diagrams of subset, disjoint sets, intersection, union and complement
 - [Boolean algebra ↗](https://en.wikipedia.org/wiki/Boolean_algebra_(structure)) — Wikipedia: the structure sets and logic share
 - [De Morgan's laws ↗](https://en.wikipedia.org/wiki/De_Morgan%27s_laws) — Wikipedia
 - [Partially ordered set ↗](https://en.wikipedia.org/wiki/Partially_ordered_set) — Wikipedia

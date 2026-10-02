@@ -1,0 +1,72 @@
+1. SIX PROPERTIES, EACH A LOOP (ANDRÉ, DEFINITION 6.1)
+   relation on {a, b, c, d}           reflexi irrefle symmetr antisym asymmet transit   name
+   R1 = {(a,a),(b,b),(c,c),(d,d),(a,b)}       T       F       F       T       F       T   partial order
+   R2 = {(a,a),(b,b),(d,d),(a,b)}           F       F       F       T       F       T   none of these
+   R3 = R1 + (b,a),(b,c),(c,b)              T       F       T       F       F       F   none of these
+   Id_S                                     T       F       T       T       F       T   equivalence, partial order
+   ∅, the empty relation                    F       T       T       T       T       T   strict partial order
+   R1 is a partial order (reflexive, antisymmetric, transitive). R2 is neither reflexive
+   nor irreflexive. ∅ is irreflexive, symmetric, antisymmetric, asymmetric and transitive,
+   all vacuously, so a strict partial order. And R3, which the book calls transitive,
+   is not: it has (a, b) and (b, c) but (a, c) ∈ R3 is False. The loop catches what the eye missed.
+   The trap on page 57: symmetric + transitive does not give reflexive; R2 is the witness.
+   'distinct siblings' on three siblings: symmetric True, transitive False:
+   x T y and y T x would need x T x, and nobody is their own distinct sibling. The book
+   calls T transitive on page 56; its H on page 58, 'siblings or the same person', is.
+
+2. ALL 512 RELATIONS ON {a, b, c}, SORTED BY NAME
+   equivalence               5
+   partial order            13
+   linear order              6
+   strict partial order     13
+   strict linear order       6
+   none of these           470
+   non-strict orders 19 (13 partial, the identity among them, + 6 linear),
+   strict orders 19; remove the diagonal True, add it back True: a one-to-one match.
+   equivalences: 5, the Bell number B(3); linear orders: 6 = 3!; partial orders on 3 labelled
+   points: 19, the third term of OEIS A001035 (1, 1, 3, 19, 219, ...).
+
+3. MORTIMER'S ANCESTORS: A STRICT PARTIAL ORDER WITH MINIMUM, NO MAXIMUM, TWO MAXIMALS
+   'a is a descendant of b', 24 pairs: irreflexive True, asymmetric True, transitive True -> strict partial order
+   minimal: ['M']  minimum: ['M']  maximal: ['A', 'E']  maximum: none
+   A and E are not comparable, so there are two maximal elements and no maximum;
+   M is below everyone, so it is the minimum. Is (A, E) comparable? False
+
+4. DIVISIBILITY ON 1..12: A POSET WITH CHAINS, ANTICHAINS, MAXIMALS AND A MINIMUM
+   m | n: reflexive True, antisymmetric True, transitive True, comparable False -> partial order
+   minimum: 1 (divides everything); maximal: [7, 8, 9, 10, 11, 12] (divide nothing else in 1..12); maximum: none
+   a chain: [1, 2, 4, 8], every pair comparable: True
+   an antichain: the primes [2, 3, 5, 7, 11], no two comparable: True
+   The subset order ⊆ on P({1, 2, 3}) is the other standard poset; both are drawn as Hasse diagrams.
+
+5. LEXICOGRAPHIC ORDER ON PAIRS (ANDRÉ, EXERCISE 7.8, FOR SUBSETS OF {1, 2})
+   ((A, B), (C, D)) ∈ R iff A ⊂ C, or A = C and B ⊆ D, on 16 pairs:
+   reflexive True, antisymmetric True, transitive True -> partial order
+   Dictionary order: compare first entries, and only on a tie compare the second.
+
+6. A RELATION AS A LOGICAL MATRIX: EACH PROPERTY IS A SHAPE
+   equiv    ≤        <        cycle
+   111..    11111    .1111    .1...
+   111..    .1111    ..111    ..1..
+   111..    ..111    ...11    ...1.
+   ...11    ...11    ....1    ....1
+   ...11    ....1    .....    1....
+   row x, column y holds 1 when x R y. Reflexive: the diagonal is full. Symmetric: the
+   grid is its own mirror image across the diagonal. Antisymmetric: no 1 faces a 1 across
+   it except on the diagonal. Transitive: M·M, with or for + and and for ×, stays inside M.
+   An equivalence is blocks of ones along the diagonal, one block per class; a linear
+   order, with the points listed in order, is a triangle; a strict one has an empty diagonal.
+   The matrix of R⁻¹ is the transpose; of T ∘ R, the Boolean product.
+   transitive by M·M ⊆ M:  equivalence True   ≤ True   cycle False
+   equivalence relations on 5 points, counted as symmetric reflexive matrices that are
+   transitive: 52, the Bell number B(5), which the Wikipedia picture draws as 52 grids;
+   33554432 logical 5 × 5 matrices in all, one per relation.
+
+7. THE OTHER 'PARTITION': REAL ANALYSIS CUTS AN INTERVAL, NOT A SET
+   a partition of [0, 2] in the Riemann sense is a finite list of points ['0', '1/2', '1', '2'],
+   cutting it into subintervals [('0', '1/2'), ('1/2', '1'), ('1', '2')], which overlap at endpoints.
+   lower sum of x² over it = 9/8, upper sum = 37/8; the integral 8/3 lies between: True
+   with 200 cells: lower 2.6467, upper 2.6867, gap 0.0400; the gap goes to 0 as the mesh does.
+   Same word, two objects: a set-theory partition is a family of disjoint blocks, and the
+   half-open cells [0, 1/2), [1/2, 1), [1, 2] make it one; the Riemann partition is the
+   list of cut points, and the refinement order on those lists is itself a poset.

@@ -1,0 +1,14 @@
+1. THE LAW: A ∖ B = A ∩ B′
+   checked on all 256 choices of 2 subset(s) of U = {1, 2, 3, 4}: True
+
+2. ONE INSTANCE, WORKED
+   A = {1, 2}, B = {2, 3}, C = {3, 4}, A' = {3, 4}, B' = {1, 4}
+   A ∖ B = {1} = A ∩ B' = {1}
+
+3. THE SAME LAW IN LOGIC: p ∧ ¬q
+   every row of the truth table agrees, which is why the member-by-member check is a proof:
+   p  q   left  right
+   T  T   F     F
+   T  F   T     T
+   F  T   F     F
+   F  F   F     F

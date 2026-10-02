@@ -12,7 +12,7 @@ This page is the bridge. **The math library owns the idea; the language librarie
 |---|---|---|
 | a set is its members ([extensionality](../what_is_a_set/README.md)) | `{2, 5} == {5, 2}`, `{1, 1, 2} == {1, 2}` | `==` on sets compares membership and nothing else |
 | there is one empty set | `set()`, however it was built | `{}` was already taken by the empty dict |
-| a rule cuts a subset out of a set you have ([separation](../what_is_a_set/README.md#the-repair-and-the-paradox-as-a-theorem)) | `{x for x in source if rule(x)}` | a comprehension always has a source, so Russell's "every x" cannot be written |
+| a rule cuts a subset out of a set you have ([separation](../what_is_a_set/README.md#the-definition)) | `{x for x in source if rule(x)}` | a comprehension always has a source, so Russell's "every x" cannot be written |
 | ∪ ∩ ∖ △ are or, and, and-not, exclusive or ([the algebra](../algebra_of_sets/README.md)) | `a \| b`, `a & b`, `a - b`, `a ^ b` | each tests one member at a time |
 | A′ needs a universe | no operator; write `U - a` | "not in A" means nothing until U is named |
 | A ⊆ B, A ⊂ B | `a <= b`, `a < b` | `<` is proper subset, a partial order, which is why `sorted()` on sets fails |
@@ -58,7 +58,7 @@ This page is the bridge. **The math library owns the idea; the language librarie
 
 ## Flashcards
 
-Two decks cover Python sets, and both live here so they can be imported from one place: [`python_sets.txt`](anki/python_sets.txt) is the Python behaviour, from the Python library's page, and the chapter's other decks are on [what is a set?](../what_is_a_set/README.md#flashcards) and [the algebra of sets](../algebra_of_sets/README.md#flashcards). Import with File → Import.
+Two decks cover Python sets, and both live here so they can be imported from one place: [`python_sets.txt`](anki/python_sets.txt) is the Python behaviour, from the Python library's page, and the chapter's other decks are on [what is a set?](../what_is_a_set/README.md#flashcards), [the definition on trial](../definition_on_trial/README.md#flashcards) and [the algebra of sets](../algebra_of_sets/README.md#flashcards). Import with File → Import.
 
 ## Po polsku, w skrócie
 

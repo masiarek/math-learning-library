@@ -1,0 +1,66 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Sets::Symbol index
+Read the symbol: ∈  ∉  ∋  ∌	is a member of, is not, contains. Explained under: glossary entry: membership.	symbol
+Which symbol says: is a member of, is not, contains?	∈  ∉  ∋  ∌ (explained under: glossary entry: membership)	symbol reverse
+Read the symbol: {a, b, c}	the set whose members are a, b, c. Explained under: what is a set.	symbol
+Which symbol says: the set whose members are a, b, c?	{a, b, c} (explained under: what is a set)	symbol reverse
+Read the symbol: {x ∈ A : P(x)}, {x | P(x)}	the set of x such that P(x). Explained under: glossary entry: set builder notation.	symbol
+Which symbol says: the set of x such that P(x)?	{x ∈ A : P(x)}, {x | P(x)} (explained under: glossary entry: set builder notation)	symbol reverse
+Read the symbol: ∅, { }	the empty set. Explained under: glossary entry: empty set.	symbol
+Which symbol says: the empty set?	∅, { } (explained under: glossary entry: empty set)	symbol reverse
+Read the symbol: U, 𝒰, E, Ω	the universal set (Ω also the class of ordinals, or ω₁). Explained under: glossary entry: universal set.	symbol
+Which symbol says: the universal set (Ω also the class of ordinals, or ω₁)?	U, 𝒰, E, Ω (explained under: glossary entry: universal set)	symbol reverse
+Read the symbol: ⊆  ⊂  ⊊  ⊇  ⊃  ⊄  ⊉	subset, proper subset (two conventions), superset, and their negations. Explained under: glossary entry: symbols.	symbol
+Which symbol says: subset, proper subset (two conventions), superset, and their negations?	⊆  ⊂  ⊊  ⊇  ⊃  ⊄  ⊉ (explained under: glossary entry: symbols)	symbol reverse
+Read the symbol: A = B	the same members, by extensionality. Explained under: glossary entry: extensionality.	symbol
+Which symbol says: the same members, by extensionality?	A = B (explained under: glossary entry: extensionality)	symbol reverse
+Read the symbol: ∪  ∩	union, intersection; ∪𝓕 and ∩𝓕 over a family. Explained under: algebra of sets.	symbol
+Which symbol says: union, intersection; ∪𝓕 and ∩𝓕 over a family?	∪  ∩ (explained under: algebra of sets)	symbol reverse
+Read the symbol: ∖  −	difference, A ∖ B = {x ∈ A : x ∉ B}. Explained under: algebra of sets.	symbol
+Which symbol says: difference, A ∖ B = {x ∈ A : x ∉ B}?	∖  − (explained under: algebra of sets)	symbol reverse
+Read the symbol: A′  Aᶜ  Ā  U − A	complement within the universal set. Explained under: glossary entry: complement.	symbol
+Which symbol says: complement within the universal set?	A′  Aᶜ  Ā  U − A (explained under: glossary entry: complement)	symbol reverse
+Read the symbol: △  ⊕	symmetric difference. Explained under: glossary entry: symmetric difference.	symbol
+Which symbol says: symmetric difference?	△  ⊕ (explained under: glossary entry: symmetric difference)	symbol reverse
+Read the symbol: A × B	Cartesian product, the set of ordered pairs. Explained under: glossary entry: cartesian product.	symbol
+Which symbol says: Cartesian product, the set of ordered pairs?	A × B (explained under: glossary entry: cartesian product)	symbol reverse
+Read the symbol: (a, b), ⟨a, b⟩	ordered pair. Explained under: glossary entry: ordered pair.	symbol
+Which symbol says: ordered pair?	(a, b), ⟨a, b⟩ (explained under: glossary entry: ordered pair)	symbol reverse
+Read the symbol: 𝒫(A), 2ᴬ	power set. Explained under: glossary entry: power set.	symbol
+Which symbol says: power set?	𝒫(A), 2ᴬ (explained under: glossary entry: power set)	symbol reverse
+Read the symbol: |A|, n(A), #A, card(A)	cardinality. Explained under: glossary entry: cardinality.	symbol
+Which symbol says: cardinality?	|A|, n(A), #A, card(A) (explained under: glossary entry: cardinality)	symbol reverse
+Read the symbol: ℵ₀, ℵ₁, ℶ₁, 𝔠, κ⁺, ℷ	infinite cardinals, the continuum, successor, gimel. Explained under: glossary entry: aleph beth and the continuum c.	symbol
+Which symbol says: infinite cardinals, the continuum, successor, gimel?	ℵ₀, ℵ₁, ℶ₁, 𝔠, κ⁺, ℷ (explained under: glossary entry: aleph beth and the continuum c)	symbol reverse
+Read the symbol: ω, ω₁, ε₀, α + 1, S(α)	ordinals and successors. Explained under: glossary entry: ordinal.	symbol
+Which symbol says: ordinals and successors?	ω, ω₁, ε₀, α + 1, S(α) (explained under: glossary entry: ordinal)	symbol reverse
+Read the symbol: ℕ  ℤ  ℚ  ℝ  ℂ	the number sets. Explained under: glossary entry: number sets n z q r c.	symbol
+Which symbol says: the number sets?	ℕ  ℤ  ℚ  ℝ  ℂ (explained under: glossary entry: number sets n z q r c)	symbol reverse
+Read the symbol: x R y, (x, y) ∈ R, dom R, ran R	a relation and its domain and range. Explained under: glossary entry: relation.	symbol
+Which symbol says: a relation and its domain and range?	x R y, (x, y) ∈ R, dom R, ran R (explained under: glossary entry: relation)	symbol reverse
+Read the symbol: f: A → B, x ↦ f(x), f[A], f⁻¹, g ∘ f	function, image of a set, inverse, composition. Explained under: relations and functions.	symbol
+Which symbol says: function, image of a set, inverse, composition?	f: A → B, x ↦ f(x), f[A], f⁻¹, g ∘ f (explained under: relations and functions)	symbol reverse
+Read the symbol: [x], A/~	equivalence class, quotient set. Explained under: glossary entry: equivalence relation.	symbol
+Which symbol says: equivalence class, quotient set?	[x], A/~ (explained under: glossary entry: equivalence relation)	symbol reverse
+Read the symbol: ≤, <, ≺ on a poset	partial order, strict order. Explained under: glossary entry: partial order.	symbol
+Which symbol says: partial order, strict order?	≤, <, ≺ on a poset (explained under: glossary entry: partial order)	symbol reverse
+Read the symbol: ≈, ~, ≼, |A| ≤ |B|	equinumerous, injects into. Explained under: glossary entry: symbols.	symbol
+Which symbol says: equinumerous, injects into?	≈, ~, ≼, |A| ≤ |B| (explained under: glossary entry: symbols)	symbol reverse
+Read the symbol: κ → (λ)ⁿ_r	partition relation. Explained under: glossary entry: partition relation arrow notation.	symbol
+Which symbol says: partition relation?	κ → (λ)ⁿ_r (explained under: glossary entry: partition relation arrow notation)	symbol reverse
+Read the symbol: ∀  ∃  ∃!  ∄	for all, there exists, exactly one, none. Explained under: glossary entry: quantifier.	symbol
+Which symbol says: for all, there exists, exactly one, none?	∀  ∃  ∃!  ∄ (explained under: glossary entry: quantifier)	symbol reverse
+Read the symbol: ¬  ∧  ∨  ⇒  →  ⇔  ↔  ⇏	not, and, or, implies, iff, does not imply. Explained under: glossary entry: connectives.	symbol
+Which symbol says: not, and, or, implies, iff, does not imply?	¬  ∧  ∨  ⇒  →  ⇔  ↔  ⇏ (explained under: glossary entry: connectives)	symbol reverse
+Read the symbol: ⊢  ⊬  ⊨  ⊣	proves, does not prove, models; the reversed turnstile. Explained under: glossary entry: turnstile.	symbol
+Which symbol says: proves, does not prove, models; the reversed turnstile?	⊢  ⊬  ⊨  ⊣ (explained under: glossary entry: turnstile)	symbol reverse
+Read the symbol: ∴  ∵	therefore, because. Explained under: glossary entry: therefore and because.	symbol
+Which symbol says: therefore, because?	∴  ∵ (explained under: glossary entry: therefore and because)	symbol reverse
+Read the symbol: ∎  ■  □	end of proof. Explained under: glossary entry: end of proof qed.	symbol
+Which symbol says: end of proof?	∎  ■  □ (explained under: glossary entry: end of proof qed)	symbol reverse
+Read the symbol: :=  :⟺  ≝	is defined as (a term, a statement). Explained under: README.md#three-books-three-notations.	symbol
+Which symbol says: is defined as (a term, a statement)?	:=  :⟺  ≝ (explained under: README.md#three-books-three-notations)	symbol reverse
+Read the symbol: ≃	equality inside Cori and Lascar's formal language. Explained under: reading a formula.	symbol
+Which symbol says: equality inside Cori and Lascar's formal language?	≃ (explained under: reading a formula)	symbol reverse

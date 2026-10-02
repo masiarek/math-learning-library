@@ -158,6 +158,32 @@ def main() -> None:
         print(f"   ({fmt(x):>5}, {fmt(y):>5}):  x^2 + y^2 = {fmt(x * x + y * y)}")
     print("   Every Pythagorean triple a, b, c gives the point (a/c, b/c) on it.")
     print("   Trigonometry will name its points (cos t, sin t).")
+    print()
+
+    print("8. A CIRCLE IS A SET OF POINTS, AND A CONTINUOUS ONE")
+    on = lambda x, y: x * x + y * y == 1
+    print("   membership is a test, like any set builder: (x, y) ∈ circle iff x^2 + y^2 = 1")
+    for x, y in [(F(3, 5), F(4, 5)), (F(1, 2), F(1, 2)), (F(0), F(1))]:
+        print(f"      ({fmt(x)}, {fmt(y)}) ∈ unit circle: {on(x, y)}")
+    print("   a rational point for every fraction t: ((1 - t^2)/(1 + t^2), 2t/(1 + t^2))")
+    pts = {((F(1) - t * t) / (F(1) + t * t), 2 * t / (F(1) + t * t)) for t in
+           [F(m, n) for n in range(1, 7) for m in range(0, n + 1)]}
+    print(f"      {len(pts)} distinct points with t = m/n, n ≤ 6, all on the circle:",
+          all(on(x, y) for x, y in pts))
+    print("   between any two points of the circle there is a third, so no point has a")
+    print("   next point; the fractions t do that on their own:")
+    lo, hi = F(0), F(1)
+    for _ in range(5):
+        mid = (lo + hi) / 2
+        x = (F(1) - mid * mid) / (F(1) + mid * mid)
+        print(f"      t = {mid}: x = {x} lies between the x's for t = {lo} and t = {hi}")
+        hi = mid
+    print("   'Continuous' is not a feeling about the drawing but two facts about the set:")
+    print("   no gaps (between any two points a third, as above, and every limit of points")
+    print("   of the circle is on the circle) and one piece (it cannot be split into two")
+    print("   nonempty parts with no point of either touching the other). Both are")
+    print("   statements about which points are members. The set is uncountable: t runs")
+    print("   through all reals in [0, 1] and so cannot be listed (see cardinality).")
 
 
 def check(args: list[str]) -> None:

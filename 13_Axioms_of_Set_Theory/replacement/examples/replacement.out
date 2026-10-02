@@ -1,0 +1,33 @@
+1. 'FUNCTIONAL' FIRST: EACH INPUT HAS AT MOST ONE OUTPUT
+   F = 'y = x²' on 0..3:         [(0, 0), (1, 1), (2, 4), (3, 9)]   functional: True
+   F = 'x = y²', y in -3..3:     [(0, 0), (1, -1), (1, 1), (4, -2), (4, 2), (9, -3), (9, 3)]
+                                 functional: False   (4 has partners 2 and -2)
+   Only a functional F defines a φ_F, and only then does the scheme apply.
+
+2. THE SCHEME, AND THE IMAGE IN PYTHON
+   if F is functional:  ∀a ∃b ∀y (y ∈ b ⇔ ∃x (x ∈ a ∧ F[x, y]))
+   b = {φ_F(x) : x ∈ a}, the image of a; Python: {f(x) for x in a}.
+   a = V_3 = {∅, {∅}, {{∅}}, {∅, {∅}}}
+   { {x} : x ∈ a }  = {{∅}, {{∅}}, {{{∅}}}, {{∅, {∅}}}}
+   { ∪x  : x ∈ a }  = {∅, {∅}}   smaller: the image can merge
+
+3. WHERE V_4 RUNS OUT: IMAGES THAT GO A RANK UP
+   F = x ↦ {x}   image of a in V_4 for all 16 a: False   fails for 12 sets, e.g. a = {{{∅}}}
+   F = x ↦ ∪x    image of a in V_4 for all 16 a: True
+   Like pairs and power set, a function that lifts rank asks for a set
+   the finite universe lacks; one that lowers rank never does.
+
+4. COMPREHENSION FOR FREE (PAGE 116)
+   H[x, y] = (y ≃ x ∧ F[x]) is functional, and its image of a is {x ∈ a : F[x]}:
+   {x ∈ V_3 : x has one member}: via H = {{∅}, {{∅}}}, directly = {{∅}, {{∅}}}, equal: True
+
+5. WHY THE AXIOM EXISTS: THE FUNCTION n ↦ V_n
+   V_0 = ∅                                        rank 0
+   V_1 = {∅}                                      rank 1
+   V_2 = {∅, {∅}}                                 rank 2
+   V_3 = {∅, {∅}, {{∅}}, {∅, {∅}}}                rank 3
+   the image {V_0, V_1, V_2, V_3} has rank 4, so it is not in V_4: True
+   V_4 has every V_n for n < 4 and not the set of them. Zermelo's axioms
+   without replacement are in the same position at V_(ω+ω): they prove
+   each V_(ω+n) exists and cannot collect them, so ω + ω, ℵ_ω and every
+   construction 'by recursion on the ordinals' need Fraenkel's axiom.

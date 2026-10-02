@@ -1,0 +1,40 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Sets::Orderings
+#tags:sets math
+#columns:Front	Back	Tags
+#tags column:3
+A relation on a class or set S is what, exactly?	A set (class) of ordered pairs (x, y) with x and y in S, that is, a subset of S × S. x R y means (x, y) ∈ R and nothing more.	definition
+Membership relation ∈_C and identity relation Id_C on a class C: define both.	∈_C = {(x, y) ∈ C × C : x ∈ y}. Id_C = {(x, y) ∈ C × C : x = y}. Id_C is an equivalence and a partial order at once.	definition
+Domain and image (range) of a relation R on C.	dom R = {x : (x, y) ∈ R for some y}; im R = {y : (x, y) ∈ R for some x}. Many books say range for the image.	definition
+Inverse of a relation R.	R⁻¹ = {(x, y) : (y, x) ∈ R}. Every relation has one; it need not be a function even when R is.	definition
+Composition T ∘ R of two relations, correctly stated.	T ∘ R = {(x, y) : (x, z) ∈ R and (z, y) ∈ T for some z}: first R, then T. (André's Definition 5.5 drops the x from the condition; this is the intended one.)	definition
+R = {(x, y) : x ∈ y} and T = {(x, y) : x = {y}} on S = {a, b, c, {a}, {a, b}, {{c}}, ∅, {∅}}. What is R ∘ T?	{({a}, {a}), ({a}, {a, b}), ({∅}, {∅})}. The book lists only two pairs and misses ({a}, {a, b}): T sends {a} to a, and R sends a to {a, b} as well as to {a}.	trap
+Reflexive, irreflexive: define and contrast.	Reflexive: (x, x) ∈ R for every x in S. Irreflexive: (x, x) ∉ R for every x. A relation can be neither, e.g. {(a, a), (a, b)} on {a, b}.	definition
+Symmetric, antisymmetric, asymmetric: define all three.	Symmetric: x R y implies y R x. Antisymmetric: x R y and y R x imply x = y. Asymmetric: x R y implies not y R x. Asymmetric = antisymmetric + irreflexive.	definition
+Transitive: define, and give the smallest failure.	x R y and y R z imply x R z. R = {(a, b), (b, c)} fails: the shortcut (a, c) is missing.	definition
+Does symmetric + transitive give reflexive?	No. R = {(a, a), (b, b), (d, d), (a, b), (b, a)} on {a, b, c, d} is symmetric and transitive and (c, c) is missing. The argument x R y, y R x so x R x only reaches the x that are related to something.	trap
+Is the relation 'x and y are distinct siblings' transitive?	No. x T y and y T x would require x T x, and nobody is their own distinct sibling. 'Siblings or the same person' is an equivalence.	trap
+Which properties does the empty relation ∅ on a nonempty S have?	Irreflexive, symmetric, antisymmetric, asymmetric and transitive, all vacuously: there is no pair to fail any of them. Not reflexive.	trap
+Equivalence relation: definition and what it does to S.	Reflexive, symmetric and transitive. Its classes S_x = {y : x R y} are nonempty, pairwise disjoint and cover S: they partition S.	definition
+Partition of a set S: the three conditions.	A family of subsets of S whose union is S, pairwise disjoint (distinct blocks have empty intersection), and none empty.	definition
+Finest and coarsest partition of S.	Finest: {{x} : x ∈ S}, every element alone, from Id_S. Coarsest: {S}, one block, from the relation that relates everything. Note {S}, not S and not {{S}}.	example
+Quotient set S/R and equivalence class of x.	The class of x is S_x = [x] = {y : x R y}; the quotient set S/R is the set of all classes, which is the partition induced by R.	definition
+Partial order (non-strict): definition and symbol.	Reflexive, antisymmetric, transitive; written a ≤ b. Examples: ⊆ on subsets, divides on positive integers, ≤ on numbers.	definition
+What is a poset?	A partially ordered set: a set together with a partial order on it. Pairs of elements may be incomparable, like {1} and {2} under ⊆.	definition
+Linear (total) order.	A partial order in which every two elements are comparable: a ≤ b or b ≤ a. ≤ on numbers is one; ⊆ and divides are not.	definition
+Strict order: definition, and how it relates to the non-strict one.	Irreflexive, asymmetric, transitive; written a < b. Remove the pairs (x, x) from a partial order to get a strict one; add them back to return. The two kinds match one to one.	definition
+Comparable elements; chain; antichain.	a and b are comparable when a ≤ b or b ≤ a. A chain is a subset that is linearly ordered; an antichain is a subset with no two comparable members, like the primes under divides.	definition
+Maximal versus maximum element of a poset.	Maximal: nothing is strictly above it. Maximum: it is above every other element. A maximum is maximal; a poset can have several maximal elements and no maximum.	definition
+Mortimer's ancestors ordered by 'is a descendant of': minimum, maximal elements, maximum?	Mortimer is the minimum (below everyone). The two spontaneously generated ancestors A and E are each maximal. There is no maximum, because A and E are not comparable.	example
+Divisibility on {1, ..., 12}: minimum, maximal elements, a chain, an antichain.	Minimum 1. Maximal: 7, 8, 9, 10, 11, 12 (each divides nothing else in range). Chain: 1, 2, 4, 8. Antichain: the primes 2, 3, 5, 7, 11. No maximum.	example
+Lexicographic order on pairs.	(a, b) ≤ (c, d) when a < c, or a = c and b ≤ d: compare the first entries, and only on a tie the second. A partial order (linear if both components are); a dictionary and a two-column sort use it.	definition
+How many equivalences, partial orders and linear orders are there on a 3-element set?	5 equivalences (the Bell number B(3)), 19 partial orders, 6 linear orders (3!). The identity relation is counted among both equivalences and partial orders.	example
+Logical matrix of a relation: what is it, and which property is which shape?	An n × n grid with a 1 in row x, column y when x R y. Reflexive: full diagonal. Symmetric: equal to its transpose. Equivalence: blocks of 1s along the diagonal, one per class. Transitive: the Boolean product M·M stays inside M. R⁻¹ is the transpose; T ∘ R is the Boolean product.	notation
+Partition of an interval, in real analysis.	A finite list of cut points a = x₀ < x₁ < ... < xₙ = b. The Riemann integral is squeezed between the lower and upper sums over the cells. Not a partition of a set: the closed cells share endpoints.	definition
+How do the two meanings of partition connect?	A Riemann partition P refines Q when P contains all of Q's cut points; refinement is a partial order on partitions, and any two have a common refinement, their union. The half-open cells of a Riemann partition do form a set partition.	definition
+Universal class versus universal set.	André's 𝒰 = {x : x = x} is the class of all elements, a proper class that no theory can make a set. The universal set U of a Venn diagram is a set chosen for one problem. Same root, different levels.	class
+Proper class, element, set: André's three kinds of object.	Every object is a class. An element is a class that belongs to some class. A set is a class that is an element. A proper class is a class that is not an element, like {x : x ∉ x} or the class of all sets.	class
+Hausdorff's ordered pair.	(a, b) = {{a, ∅}, {b, {∅}}}: ∅ and {∅} tag first and second. It has the pair property, (a, b) = (c, d) iff a = c and b = d, and gives a different set from Kuratowski's {{a}, {a, b}}; either will do.	notation
+Why is C × D a set when C and D are? Which axioms?	Every pair (c, d) lies in P(P(C ∪ D)): {c} and {c, d} are subsets of C ∪ D. Union gives C ∪ D, power set twice gives P(P(C ∪ D)), and subsets (separation) cuts C × D out of it.	definition

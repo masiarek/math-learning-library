@@ -1,0 +1,38 @@
+1. THE AXIOM, AND WHAT IT BUILDS
+   ∀v0 ∀v1 ∃v2 ∀v3 (v3 ∈ v2 ⇔ (v3 ≃ v0 ∨ v3 ≃ v1))
+   for any a and b there is a c whose members are exactly a and b: {a, b}.
+   a = ∅          b = {∅}        {a, b} = {∅, {∅}}
+   a = {∅}        b = {{∅}}      {a, b} = {{∅}, {{∅}}}
+   a = {∅, {∅}}   b = ∅          {a, b} = {∅, {∅, {∅}}}
+
+2. WHERE V_4 RUNS OUT: PAIRS OF SETS FROM THE TOP RANK
+   of the 256 pairs (a, b) of sets in V_4, 16 have their {a, b} in V_4
+   and 240 do not, e.g. a = ∅, b = {{{∅}}}:
+   rank(a) = 0, rank(b) = 3, rank({a, b}) = 4, and V_4 stops at rank 3.
+   So the axiom fails in every V_n: it asks for a set one rank up.
+   A universe that satisfies it has no top rank.
+
+3. a = b GIVES THE SINGLETON {a}
+   {a, a} with a = ∅          is {∅}, one member, not two
+   {a, a} with a = {∅}        is {{∅}}, one member, not two
+   {a, a} with a = {{∅}}      is {{{∅}}}, one member, not two
+
+4. WHEN ARE TWO PAIRS EQUAL? THE BOOK'S REMARK, CHECKED
+   {a, b} = {a', b'}  iff  (a = a' and b = b') or (a = b' and b = a')
+   for every a, b, a', b' in V_3 (256 cases): True
+   so a pair forgets order: {a, b} = {b, a} always.
+
+5. THREE PAIRS MAKE AN ORDERED PAIR (KURATOWSKI 1921)
+   (a, b) := {{a}, {a, b}}, so (a, b) = (c, d) iff a = c and b = d:
+   for every a, b, c, d in V_3: True
+   (∅, {∅}) = {{∅}, {∅, {∅}}}
+   ({∅}, ∅) = {{{∅}}, {∅, {∅}}}   different sets, so order is kept
+   (∅, ∅)   = {{∅}}   the pair collapses, and still decodes
+   Pairs, then, are enough for order; the Cartesian product page
+   builds the plane from them.
+
+6. HAUSDORFF'S PAIR WORKS TOO: (a, b) := {{a, ∅}, {b, {∅}}}
+   (a, b) = (c, d) iff a = c and b = d, for every a, b, c, d in V_3: True
+   Kuratowski (∅, {∅}) = {{∅}, {∅, {∅}}}   Hausdorff (∅, {∅}) = {{∅}, {{∅}}}
+   Different sets with the same property; any set with the property will do,
+   and nobody ever unpacks one. The ∅ and {∅} are tags for 'first' and 'second'.

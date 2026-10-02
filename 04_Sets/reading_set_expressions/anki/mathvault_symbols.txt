@@ -1,0 +1,30 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Sets::Symbols (Math Vault)
+Math Vault, relational symbols: what does x ∈ A mean, and what is the example?	Set membership: the element x is in the set A. Example: i ∈ ℂ.	membership
+Math Vault, relational symbols: what does x ∉ A mean, and what is the example?	Set non-membership: x is not in A. Example: π ∉ ℚ.	membership
+Math Vault, relational symbols: what does A ∋ x mean, and what is the example?	Set inclusion read from the set's side: A includes the element x. A ∋ x ⟺ x ∈ A. The sign is a mirrored ∈, not the quantifier ∃.	membership trap
+Math Vault, relational symbols: what does A ∌ x mean, and what is the example?	Set non-inclusion: A does not include the element x. Example: {a} ∌ {a}, since the set {a} is not one of its own members.	membership
+Math Vault, relational symbols: what does A = B mean, and what is the example?	Set equality: A and B have the same members (extensionality). Example: ∅ = {}.	relation
+Math Vault, relational symbols: what does A ⊆ B mean, and what is the example?	Subset: every member of A is a member of B, equality allowed. Example: ℕ ⊆ ℚ.	relation
+Math Vault, relational symbols: what does A ⊂ B mean, and what is the example?	Proper subset, in Math Vault's convention: A ⊂ B ⟺ A ⊆ B and A ≠ B. Jech and Halmos use ⊂ for the plain subset; check the book.	relation trap
+Math Vault, relational symbols: what does A ⊄ B mean, and what is the example?	Non-subset: A is not a subset of B, so there is an x ∈ A with x ∉ B. One witness is enough.	relation
+Math Vault, relational symbols: what does A ⊇ B mean, and what is the example?	Superset: every member of B is a member of A. Example: {5, 8, 1} ⊇ {1, 8}.	relation
+Math Vault, relational symbols: what does A ⊃ B mean, and what is the example?	Proper superset: A ⊃ B ⟺ B ⊂ A, so A ⊇ B and A ≠ B.	relation
+Math Vault, relational symbols: what does A ⊉ B mean, and what is the example?	Non-superset: A is not a superset of B. Example: ℕ ⊉ ℝ.	relation
+Math Vault, cardinality symbols: what is |A|?	The cardinality of A, its size by matching. Example: |ℕ| = |ℤ|, since the integers can be listed.	cardinality
+Math Vault, cardinality symbols: what is ℵ₀, ℵ₁, ℵ₂, …?	The aleph numbers: the infinite cardinals in order of size. ℵ₀ = |ℕ|. Under the continuum hypothesis, ℵ₁ = 2^(ℵ₀).	cardinality
+Math Vault, cardinality symbols: what is ℶ₀, ℶ₁, ℶ₂, …?	The beth numbers, by repeated power set: ℶ₀ = |ℕ|, ℶ₁ = |𝒫(ℕ)|, ℶ₂ = |𝒫(𝒫(ℕ))|. ℶ₁ = ℵ₁ is the continuum hypothesis.	cardinality
+Math Vault, cardinality symbols: what is ℷ (gimel)?	The gimel function, ℷ(κ) = κ^(cf κ). By König's theorem ℷ(κ) > κ for every infinite cardinal κ.	cardinality
+Math Vault, cardinality symbols: what is 𝔠?	The cardinality of the continuum: |ℝ| = 𝔠 = |𝒫(ℕ)| = 2^(ℵ₀) = ℶ₁.	cardinality
+Math Vault, cardinality symbols: what is ω, ω₁, ω₂, …?	The omega ordinals: ω = {0, 1, 2, …} is the first infinite ordinal, and ω + 1 = ω ∪ {ω} its successor; ω₁ is the first uncountable ordinal.	ordinal
+Math Vault, cardinality symbols: what is Ω?	In Math Vault and Cantor, the first uncountable ordinal: Ω = ω₁. In Halbeisen, Ω is the class of all ordinals. Two conventions.	ordinal trap
+Math Vault, cardinality symbols: what is ε₀, ε₁, …?	The epsilon ordinals, the fixed points of α ↦ ω^α: ε₀ = ω^(ω^(ω^…)), the least ordinal with ω^ε = ε.	ordinal
+Math Vault, cardinality symbols: what is S(α)?	The successor of the ordinal α, α ∪ {α}, also written α + 1. Addition is defined by recursion: α + S(β) = S(α + β).	ordinal
+Math Vault, cardinality symbols: what is κ⁺?	The successor cardinal of κ, the least cardinal greater than κ. ℵ_α⁺ = ℵ_(α+1).	cardinality
+Which sign says that the set A includes the element x, read from the set's side?	A ∋ x, the mirrored membership sign.	membership
+Which sign says that A is a subset of B and A ≠ B, and what is its trap?	A ⊂ B in Math Vault, Cunningham and this library; in Jech and Halmos ⊂ allows equality, so a book may mean ⊆ by it.	relation trap
+What is the difference between the aleph and the beth numbers?	ℵ_α lists all infinite cardinals in order of size; ℶ_α is reached by repeated power sets from |ℕ|. ℵ₀ = ℶ₀ always; ℵ₁ = ℶ₁ is the continuum hypothesis, undecidable in ZFC.	cardinality
+Which three symbols name the same size: that of the real line?	𝔠, 2^(ℵ₀) and ℶ₁, all equal to |ℝ| = |𝒫(ℕ)|.	cardinality
+What does a witness for A ⊄ B look like?	An element x with x ∈ A and x ∉ B. One such x proves the non-subset claim.	relation

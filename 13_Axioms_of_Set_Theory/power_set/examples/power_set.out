@@ -1,0 +1,31 @@
+1. THE AXIOM, AND 2^n
+   ∀v0 ∃v1 ∀v2 (v2 ∈ v1 ⇔ ∀v3 (v3 ∈ v2 ⇒ v3 ∈ v0))
+   for every a there is a b whose members are exactly the sets z with
+   'every member of z is a member of a', the subsets of a. b is 𝒫(a).
+   a = ∅                  |a| = 0   𝒫(a) = {∅}                                |𝒫(a)| = 1 = 2^0
+   a = {∅}                |a| = 1   𝒫(a) = {∅, {∅}}                           |𝒫(a)| = 2 = 2^1
+   a = {∅, {∅}}           |a| = 2   𝒫(a) = {∅, {∅}, {{∅}}, {∅, {∅}}}          |𝒫(a)| = 4 = 2^2
+   a = {∅, {∅}, {∅, {∅}}} |a| = 3   𝒫(a) = (8 sets)                           |𝒫(a)| = 8 = 2^3
+   Each member is in or out, independently: 2 choices, n times.
+
+2. THE STAGES ARE POWER SETS OF EACH OTHER: V_{n+1} = 𝒫(V_n)
+   𝒫(V_1) == V_2: True   (1 sets -> 2 sets)
+   𝒫(V_2) == V_3: True   (2 sets -> 4 sets)
+   𝒫(V_3) == V_4: True   (4 sets -> 16 sets)
+   So V_5 has 2^16 = 65,536 sets and V_6 has 2^65536, more than the
+   atoms in the universe; the axiom is the engine of that growth.
+
+3. WHERE V_4 RUNS OUT
+   of the 16 sets in V_4, 4 have their power set in V_4 and
+   12 do not; every one of those has rank [3],
+   e.g. a = {{{∅}}}: rank(𝒫(a)) = 4, and V_4 stops at 3.
+   Like pairs, the axiom asks for a set one rank up, and every V_n fails it.
+
+4. THE INNER FORMULA IS ⊆, AND PYTHON HAS IT
+   ∀v3 (v3 ∈ z ⇒ v3 ∈ a) agrees with Python's z <= a for every z, a in V_3: True
+
+5. CANTOR: THE POWER SET IS ALWAYS STRICTLY BIGGER
+   |𝒫(a)| > |a| for every a in V_4: True  (2^n > n)
+   For infinite a counting fails and the diagonal argument takes over:
+   no map a -> 𝒫(a) is onto (the reading guide's program runs it). So
+   𝒫(ω) is uncountable, and that is where the real numbers live.

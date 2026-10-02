@@ -1,0 +1,69 @@
+1. A RELATION IS A SET OF ORDERED PAIRS
+   'm divides n' on {1, ..., 6} is the set of 14 pairs
+   {(1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (2, 2), (2, 4), (2, 6), (3, 3), (3, 6), (4, 4), (5, 5), (6, 6)}
+   2 divides 6?  (2, 6) ∈ δ: True     4 divides 6?  (4, 6) ∈ δ: False
+   dom(δ) = [1, 2, 3, 4, 5, 6]   ran(δ) = [1, 2, 3, 4, 5, 6]
+   'x ρ y' is just a way of writing (x, y) ∈ ρ; the relation IS the set.
+
+2. A FUNCTION IS A RELATION WITH ONE PROPERTY
+   square = {(-3, 9), (-2, 4), (-1, 1), (0, 0), (1, 1), (2, 4), (3, 9)}
+   is a function: True   (each x has one square)
+   root = square⁻¹ = {(0, 0), (1, -1), (1, 1), (4, -2), (4, 2), (9, -3), (9, 3)}
+   is a function: False   (4 has partners 2 and -2)
+   f(x) means 'the unique y with (x, y) ∈ f'; a Python dict is the same
+   object:  dict(square) = {-3: 9, -2: 4, -1: 1, 0: 0, 1: 1, 2: 4, 3: 9}
+
+3. FUNCTIONS, ONE-TO-ONE RELATIONS, INVERSES: EVERY RELATION ON {1, 2, 3}
+   relations on {1, 2, 3}: 512   functions (partial): 64   with domain all of {1, 2, 3}: 27 = 3^3
+   injections: 6   surjections: 6   bijections: 6 = 3!   (on a finite set, injective = surjective = bijective: True)
+   ρ is a function  iff  ρ⁻¹ is one-to-one, all 512 relations: True   (Simovici–Djeraba, Theorem 1.37)
+   (ρ⁻¹)⁻¹ = ρ and dom(ρ⁻¹) = ran(ρ): True
+
+4. COMPOSITION IS A PRODUCT OF RELATIONS
+   ρ = {(1, 2), (2, 3)}, σ = {(2, 10), (3, 20)}:  ρσ = {(1, 10), (2, 20)}   ('first ρ, then σ')
+   on all 16 relations on {1, 2}:  (ρσ)τ = ρ(στ): True   (ρσ)⁻¹ = σ⁻¹ρ⁻¹: True   product of functions is a function: True
+   Jech and Kunen write σ ∘ ρ for Simovici's ρσ: same set, letters swapped.
+
+5. A GRAPH IS A RELATION DRAWN AS ARROWS
+   'x likes y' from the quantifiers lesson: {(a, a), (b, c), (c, b), (d, c)}
+     a → a
+     b → c
+     c → b
+     d → c
+   symmetric (an undirected graph): False;  an undirected graph is a relation equal to its inverse,
+   or a set of two-element sets {x, y}. A membership table x ∈ y is a directed graph too:
+   Kunen's Exercise I.2.1 draws seven of them, and the axiom katas page evaluates the axioms on each.
+
+6. A FUNCTION IS ITS PAIRS, NOT ITS FORMULA
+   y = x² and y = |x|² on {-2, ..., 2}: same set of pairs: True   so one function, by extensionality
+   y = x² and y = x² mod 7 on {-2, ..., 2}: True   (they differ nowhere here) 
+   Two formulas that agree on every input define one function; a function
+   is the table of its values, which is why a table in a database is one.
+
+7. IMAGES OF SETS UNDER A RELATION: HRBACEK AND JECH, EXERCISES 2.3 AND 2.4
+   R[A] = {y : x R y for some x in A}; R⁻¹[B] = {x : x R y for some y in B}.
+   2.3(a) R[A ∪ B] = R[A] ∪ R[B]: True    (b) R[A ∩ B] ⊆ R[A] ∩ R[B]: True    (c) R[A − B] ⊇ R[A] − R[B]: True
+   2.3(d) ⊆ is not =: R = {(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2), (3, 3)}, A = {1}, B = {2}:
+          R[A ∩ B] = ∅ but R[A] ∩ R[B] = {1, 2, 3}
+   2.3(f) R⁻¹[R[A]] ⊇ A ∩ dom R, all 4096 cases: True
+   2.4(a) R[X] = ran R and R⁻¹[Y] = dom R: True    2.4(e) R ∘ R⁻¹ ⊇ Id on dom R: True
+   A relation can merge, so the image of an intersection can be smaller
+   than the intersection of the images; a one-to-one relation cannot, and
+   for it (b) and (c) become equalities (Simovici–Djeraba, Theorem 1.62).
+
+8. SULLIVAN'S FOUR PICTURES OF A FUNCTION, ONE TEST FOR ALL
+   Precalculus 2.1 shows a function as a mapping diagram, a set of pairs, an
+   equation and a machine. Each is the same set of pairs, and is_function
+   asks one thing of it: no two pairs with the same first member.
+   Fig. 6, substance → specific heat      a function
+   year → price of a stamp, 2018          not a function: 2018 has two partners
+   Fig. 8, menu item → price              a function, and two inputs share the output 1, which is allowed
+   Fig. 10, gestation → life expectancy   not a function: 240 has two partners
+   Example 3(a)                           a function
+   Example 3(b)                           a function, and two inputs share the output 4, which is allowed
+   Example 3(c)                           not a function: -3 has two partners
+   Example 4, y = 2x − 5 on x = −2..2     a function
+   Example 5, x² + y² = 1 on a grid       not a function: 0.0 has two partners
+   The machine picture is the same test read aloud: one output per input.
+   'y = f(x)' names the unique partner of x, and the WARNING in the book,
+   that f(x) is not f times x, is the warning that f is a set, not a number.

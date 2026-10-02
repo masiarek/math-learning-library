@@ -1,0 +1,54 @@
+1. TRANSITIVE SETS IN V_4: EVERY MEMBER IS ALSO A SUBSET
+   6 of the 16 sets are transitive:
+     ∅                                  ordinal: True
+     {∅}                                ordinal: True
+     {∅, {∅}}                           ordinal: True
+     {∅, {∅}, {{∅}}}                    ordinal: False
+     {∅, {∅}, {∅, {∅}}}                 ordinal: True
+     {∅, {∅}, {{∅}}, {∅, {∅}}}          ordinal: False
+   not transitive, e.g. {{∅}}: its member {∅} is not a subset.
+
+2. ORDINALS: TRANSITIVE AND WELL-ORDERED BY ∈ (DEFINITION 7.12)
+   the ordinals in V_4 are the von Neumann numbers [0, 1, 2, 3]:
+   ∅, {∅}, {∅, {∅}}, {∅, {∅}, {∅, {∅}}}
+   {∅, {∅}, {{∅}}, {∅, {∅}}} is transitive but not an ordinal:
+   {∅} and {{∅}} are members, and neither is a member of the other,
+   so ∈ does not order it totally (Proposition 7.17 needs that).
+
+3. THE BOOK'S REMARKS, CHECKED ON THESE ORDINALS
+   7.13  α ∉ α for every ordinal: True
+   7.14  every member of an ordinal is an ordinal: True
+   7.16  α ⊆ β iff α ≤ β (α ∈ β or α = β): True
+   7.19  α ∪ {α} is an ordinal: True
+   7.22  for ordinals α, β exactly one of α ∈ β, β ∈ α, α = β: True
+
+4. WHAT ORDINALS ARE FOR: A DECREASING SEQUENCE OF THEM MUST STOP
+   Goodstein (1944): write n in hereditary base 2 (exponents in base 2 too),
+   change every 2 to 3 and subtract 1; write that in hereditary base 3,
+   change 3 to 4, subtract 1; and so on. Replace the base by ω and each
+   step's ordinal is strictly smaller, though the numbers explode.
+   G(3):
+     step base  value   ordinal
+        0    2      3   ω + 1
+        1    3      3   ω
+        2    4      3   3
+        3    5      2   2
+        4    6      1   1
+        5    7      0   0
+   G(4):
+     step base  value   ordinal
+        0    2      4   ω^ω
+        1    3     26   ω^2·2 + ω·2 + 2
+        2    4     41   ω^2·2 + ω·2 + 1
+        3    5     60   ω^2·2 + ω·2
+        4    6     83   ω^2·2 + ω + 5
+        5    7    109   ω^2·2 + ω + 4
+        6    8    139   ω^2·2 + ω + 3
+        7    9    173   ω^2·2 + ω + 2
+        8   10    211   ω^2·2 + ω + 1
+   G(3) reaches 0 in 5 steps. G(4) grows for 3·2^402653211 − 2 steps and
+   then reaches 0, and so does every G(n), because its ordinals decrease
+   and a decreasing sequence of ordinals is finite: that is what 'well-
+   ordered' means. Kirby and Paris (1982) proved this statement about
+   natural numbers cannot be proved in Peano arithmetic at all: the
+   ordinals are not decoration here, they are the only known road.

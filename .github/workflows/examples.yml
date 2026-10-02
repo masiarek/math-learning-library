@@ -28,3 +28,5 @@ jobs:
         run: python3 tools/run_examples.py --check
       - name: Combined Anki decks are up to date
         run: python3 tools/combine_anki.py 04_Sets --check
+      - name: Symbol index deck is up to date
+        run: python3 tools/symbol_index_anki.py --check

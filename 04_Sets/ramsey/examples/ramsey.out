@@ -1,0 +1,61 @@
+1. THE PIGEONHOLE PRINCIPLE: MORE PIGEONS THAN HOLES
+   maps from 4 pigeons to 3 holes: 81; with some hole holding two or more: 81
+   The same for infinitely many pigeons in finitely many holes: some hole
+   holds infinitely many. That is the one-colour case of what follows.
+
+2. ERDŐS AND SZEKERES: EVERY FIVE NUMBERS HOLD A MONOTONE THREE
+   orderings of 1..5: 120; with an increasing or decreasing run of 3: 120
+   orderings of 1..4 with no monotone run of 3: 4, e.g. (2, 1, 4, 3) and (2, 4, 1, 3)
+   In general n² + 1 numbers force a monotone run of n + 1 (1935). It is a
+   pigeonhole statement about the set of pairs: colour each pair {i < j}
+   'up' if the later number is larger, and ask for a one-colour set.
+
+3. R(3, 3) = 6: SIX POINTS FORCE A ONE-COLOUR TRIANGLE, FIVE DO NOT
+   2-colourings of the 15 edges of K6: 32768; with a one-colour triangle: 32768
+   triangles found by the pigeonhole procedure (pick a point, 5 edges, 2 colours,
+   so 3 edges agree; among their far ends any edge of that colour closes a
+   triangle, else the three form one of the other colour): 32768
+   K5 coloured by distance round a pentagon (1 or 4 red, 2 or 3 blue):
+   one-colour triangle: None
+   So the Ramsey number R(3, 3) is exactly 6. In Halbeisen's arrow notation,
+   6 → (3)²₂ and 5 ↛ (3)²₂: 'colour the 2-subsets of a 6-set with 2 colours
+   and a 3-subset has all its 2-subsets one colour'.
+
+4. THE TREE OF BAD COLOURINGS DIES, WHICH IS KÖNIG'S LEMMA IN REVERSE
+   n = 1: colourings of K1 with no one-colour triangle: 1
+   n = 2: colourings of K2 with no one-colour triangle: 2
+   n = 3: colourings of K3 with no one-colour triangle: 6
+   n = 4: colourings of K4 with no one-colour triangle: 18
+   n = 5: colourings of K5 with no one-colour triangle: 12
+   n = 6: colourings of K6 with no one-colour triangle: 0
+   Each bad colouring of K_n restricts to a bad colouring of K_{n-1}, so the
+   bad colourings form a tree, finitely branching, one level per n. König's
+   lemma: an infinite finitely branching tree has an infinite branch. An
+   infinite branch here would colour all pairs of ℕ with no one-colour
+   triangle, which the infinite theorem (section 5) forbids. So the tree is
+   finite, and the level where it dies is the Ramsey number.
+
+5. THE INFINITE THEOREM AS AN ALGORITHM (RAMSEY 1930)
+   points 1..64; the pair {i < j} is red when i divides j, blue otherwise
+   step: take the least point left, split the rest by its colour with that
+   point, keep the larger part (on ℕ: the infinite part, by pigeonhole)
+   chosen points and the colour each sees ahead:
+   1:r, 2:r, 4:r, 8:r, 16:r, 32:r
+   the points that saw red, plus what is left: [1, 2, 4, 8, 16, 32, 64]
+   all 21 pairs among them red: True
+   On ℕ the chosen sequence is infinite; infinitely many of its points see the
+   same colour (pigeonhole again), and they are an infinite one-colour set.
+   Ramsey proved this for n-element subsets and any finite number of colours.
+
+6. WHY THIS IS SET THEORY: THE ANSWER DEPENDS ON THE SET
+   statement      what it says                                         can a program check it?
+   6 → (3)²₂      finite, checked above                                yes, by exhaustion
+   ω → (ω)ⁿ_k     Ramsey 1930, proof in section 5                      the algorithm, not the limit
+   ω₁ ↛ (ω₁)²₂    Sierpiński 1933: the first uncountable set fails     no: it needs the reals well-ordered
+   κ → (κ)²₂      defines a weakly compact cardinal (a large cardinal) no: ZFC cannot prove one exists
+   R(5, 5) = ?    between 43 and 46 (from memory, 2024)                no: 2^(C(43,2)) colourings
+   A colouring of pairs is a partition of the set of 2-subsets, and the theorem
+   asks which sets are big enough that some partition piece contains all the
+   pairs of a big subset. For finite sets the answer is a number; for infinite
+   sets it depends on the axioms. That is Halbeisen's reason for calling the
+   subject combinatorial set theory.

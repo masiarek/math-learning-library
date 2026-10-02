@@ -5,39 +5,12 @@
 #tags:sets math
 #columns:Front	Back	Tags
 #tags column:3
-What are the two undefined words that set theory starts from?	Set and member of (∈). They are described by axioms, not defined.	definition
-State the axiom of extensionality.	Two sets with the same members are the same set.	axiom
-Why is {2, 5} = {5, 2}?	Extensionality: they have the same members, and order is not membership.	axiom
-Why is {1, 1, 2} = {1, 2}?	Being listed twice is the same as being a member once; a set records membership only.	axiom
-What does distinct objects in the textbook definition of a set really mean?	Not a demand on the list: {1, 1, 2} is a legal way to write {1, 2}. It points at extensionality, the rule for when two sets are equal.	trap
-Why can one say THE empty set rather than an empty set?	Any two empty sets have the same members, none, so by extensionality they are equal. There is exactly one.	theorem
-What does well-defined mean for a set?	Every object is determinately in or out. It does not mean anyone knows which.	definition
-Give a well-defined set nobody knows to be empty or not.	The odd perfect numbers: each n can be checked, but whether any exists is an open problem.	example
-State Russell's paradox.	Let R = {x : x ∉ x}. Then R ∈ R exactly when R ∉ R, so no such set exists.	theorem
-What does Russell's paradox show about the textbook definition of a set?	A sharp, well-defined rule does not always determine a set.	trap
-Whose system did Russell's paradox break, and when?	Frege's, in a letter of 1902 (paradox found 1901): Frege assumed every rule defines a set.	history
-State the axiom of separation (Zermelo, 1908).	For a set A and a property P, {x ∈ A : P(x)} is a set. A rule selects from an existing set, never from everything.	axiom
-Under separation, what does Russell's argument prove?	For any set U, R = {x ∈ U : x ∉ x} is not a member of U. So there is no set of all sets.	theorem
-Which earlier argument is Russell's paradox a form of?	Cantor's diagonal argument: build the object that disagrees with entry y at position y.	connection
-What is the empty set a subset of?	Every set, including itself.	theorem
-What is the difference between A ⊆ B and A ⊂ B?	⊆ allows A = B; ⊂ (proper subset) requires A ⊆ B and A ≠ B.	definition
-Is every set a subset of itself? A proper subset of itself?	Yes; no.	theorem
-Define A ∪ B, A ∩ B and A ∖ B.	Members of either; members of both; members of A that are not in B.	definition
-Define the symmetric difference A △ B.	Members of exactly one of A and B: (A ∖ B) ∪ (B ∖ A), also (A ∪ B) ∖ (A ∩ B).	definition
-What is A △ B △ C, in terms of membership?	The elements that are in an odd number of the three sets, not those in exactly one.	trap
-Which of ∪, ∩, △ and ∖ are associative?	∪, ∩ and △ are; ∖ is not: (A ∖ B) ∖ C need not equal A ∖ (B ∖ C).	theorem
-When are two sets disjoint?	When they have no member in common: A ∩ B = ∅.	definition
-What does null set mean in measure theory, as opposed to algebra?	A set of measure zero, which may be infinite, such as the Cantor set. In algebra books it usually means ∅.	trap
-Is a well-defined collection of distinct objects a good definition of set?	A good first description, not a definition: collection is a synonym, equality is left out, and a well-defined rule can fail to give a set (Russell).	principle
-What does the box definition of a set do better than well-defined collection of distinct objects?	It centres on ∈ (a ∈ A, c ∉ A), treats collection as a picture rather than a definition, and says a set is a single object, so sets can contain sets.	principle
-What does the box definition of a set leave out?	Any rule for when two sets are equal (extensionality), and any notion of well-defined.	trap
-Is ∈ transitive? Example?	No: 1 ∈ {1} and {1} ∈ {{1}}, but 1 ∉ {{1}}. A member of a member is not a member. ⊆ is transitive.	trap
-Is ∅ equal to {∅}?	No: ∅ has no members, {∅} has one, the empty set. An empty box in a box.	theorem
-Where does the box picture of a set mislead?	Membership is one level only, one element can be in many sets, and copies do not count.	trap
-What does a, b ∈ A mean?	a ∈ A and b ∈ A.	definition
-Does Russell's paradox need the step C is either ordinary or not?	No. From P ↔ ¬P: assuming P gives ¬P, so ¬P; then ¬P gives P. No case split, valid even in intuitionistic logic.	theorem
-In Russell's argument, which premise does ZF give up?	That C exists: separation only allows the ordinary members of an existing set, never all ordinary sets.	axiom
-In ZF, which sets are ordinary (not members of themselves)?	All of them, by the axiom of foundation; so C would be the set of everything, which cannot exist.	theorem
-Which many-valued logic lets C ∈ C be half true?	Łukasiewicz: ½ ↔ ¬½ is fully true there. Kleene K3 and the Gödel logics do not.	logic
-Why doesn't finite-valued Łukasiewicz logic rescue naive set theory?	Curry's sets C_k = {x : x ∈ x → (… → false)} need the value k/(k+1), and finitely many values always miss one.	logic
-Name two non-classical escapes from Russell's paradox.	Paraconsistent logic (tolerate the contradiction) and contraction-free logic (block P → ¬P, therefore ¬P).	logic
+Define a set in four rules.	'Set' and 'member of' are undefined. (1) Extensionality: two sets with the same members are the same set. (2) A set is one object, so it can be a member of another set. (3) Separation: a rule picks the members of a set you already have, {x ∈ A : P(x)}, never {x : P(x)}. (4) There is an empty set, and by (1) only one.	definition
+Everything about sets is defined through one relation. Which, and how does the program check that nothing is lost?	Membership, ∈. Equality is 'each member of either is in the other' and subset is 'every member of A is in B'; written in 'in' alone, they agree with Python's == and <= on all 64 pairs of subsets of {0, 1, 2}.	definition
+What does a set record, and what does it forget?	It records which objects are its members. It forgets the order they were named in, how many times, and the rule that picked them: {2, 5} = {5, 2}, {1, 1, 2} = {1, 2}, and two different rules can give one set.	axiom
+Why is 'a set is a collection of things' not a definition, even though it is a fair description?	'Collection' is a synonym: it names the idea without reducing it to anything simpler. Something has to be the first undefined word, and for sets it is 'set' and 'member of'; the axioms say what they do, not what they are.	trap
+Which rule of the definition makes 'THE empty set' a correct phrase, and why?	Extensionality. Two rules that select nothing have the same members, none, so they select the same set. The program finds one distinct empty set among {n in 0..9 : n² < 0} and {w in [set] : len(w) > 5}.	axiom
+How many members does {∅} have, and which rule of the definition is at work?	One. A set is a single object, so ∅ can be a member of another set; {∅} is a box holding an empty box, and ∅ ≠ {∅}.	trap
+How many levels down does ∈ look?	Exactly one. 1 ∈ {1} and {1} ∈ {{1}}, but 1 ∉ {{1}}: a member of a member is not a member. ⊆ is the relation that chains.	trap
+Run Russell's rule under separation on A = {∅, {∅}, {{∅}}}. What is R = {x ∈ A : x ∉ x}, and where is it not?	R is a harmless set (here R = A, since no set is a member of itself), and R ∉ A: if R were a member y of A, 'y ∈ y' would get opposite answers from A's membership and from R's rule. So no set has every set as a member.	theorem
+Why does 'a set is one object' matter beyond ∅ versus {∅}?	Because a set can then be a member of a set: functions become sets of pairs, numbers become sets, and Russell's question 'is this set a member of itself?' can be asked. It is what makes set theory a foundation and not a notation.	connection

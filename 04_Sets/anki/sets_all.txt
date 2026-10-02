@@ -4,149 +4,342 @@
 #columns:Front	Back	Tags	Deck
 #tags column:3
 #deck column:4
-Which logical word is A ∪ B?	or: x ∈ A ∪ B when x ∈ A or x ∈ B.	sets math logic	Math::Sets::The algebra of sets
-Which logical word is A ∩ B?	and: x is in both.	sets math logic	Math::Sets::The algebra of sets
-Which logical word is the complement A′?	not: x ∈ A′ when x ∉ A.	sets math logic	Math::Sets::The algebra of sets
-Which logical statement is A ⊆ B?	For every x: if x ∈ A then x ∈ B.	sets math logic	Math::Sets::The algebra of sets
-What is A ∖ B in logic?	x ∈ A and not x ∈ B; so A ∖ B = A ∩ B′.	sets math logic	Math::Sets::The algebra of sets
-Why does a complement need a universal set U?	Not in A has no meaning without saying out of what, and there is no set of everything (Russell). So A′ = U ∖ A.	sets math definition	Math::Sets::The algebra of sets
-How do you write a complement in Python?	U - a, with the universe U named explicitly. set has no complement operator.	sets math python	Math::Sets::The algebra of sets
-State De Morgan's laws for sets.	(A ∪ B)′ = A′ ∩ B′ and (A ∩ B)′ = A′ ∪ B′.	sets math law	Math::Sets::The algebra of sets
-De Morgan's laws in words?	Not either is neither; not both is at least one missing.	sets math law	Math::Sets::The algebra of sets
-De Morgan in code: not (a or b) = ?	not a and not b.	sets math law	Math::Sets::The algebra of sets
-State the two distributive laws for sets.	A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C) and A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C).	sets math law	Math::Sets::The algebra of sets
-State the absorption law.	A ∪ (A ∩ B) = A, and A ∩ (A ∪ B) = A.	sets math law	Math::Sets::The algebra of sets
-State the identity and domination laws.	A ∪ ∅ = A, A ∩ U = A; A ∪ U = U, A ∩ ∅ = ∅.	sets math law	Math::Sets::The algebra of sets
-State the complement laws.	A ∪ A′ = U, A ∩ A′ = ∅, and (A′)′ = A.	sets math law	Math::Sets::The algebra of sets
-Why does checking a law on all subsets of a 4-element universe prove it?	Each law is decided member by member from which sets x is in; the small universe covers every combination of memberships, so it is the truth table.	sets math principle	Math::Sets::The algebra of sets
-What structure do set algebra and propositional logic share?	A Boolean algebra.	sets math definition	Math::Sets::The algebra of sets
-Is (A ∪ B) ∖ B = A? Counterexample?	No: A = {1}, B = {1} gives ∅. Difference does not undo union.	sets math trap	Math::Sets::The algebra of sets
-Does A ∪ B = A ∪ C imply B = C?	No: A = {1}, B = ∅, C = {1}. Union has no cancellation.	sets math trap	Math::Sets::The algebra of sets
-Is set difference associative? Commutative?	Neither: A ∖ (B ∖ C) ≠ (A ∖ B) ∖ C in general, and A ∖ B ≠ B ∖ A.	sets math trap	Math::Sets::The algebra of sets
-How many regions does a Venn diagram of n sets have?	2^n, one per pattern of in-or-out; for 3 sets, 8, including the outside.	sets math venn	Math::Sets::The algebra of sets
-What is the region outside all three circles of a Venn diagram?	The complement of the union: U ∖ (A ∪ B ∪ C).	sets math venn	Math::Sets::The algebra of sets
-What three properties make ⊆ an order?	Reflexive, antisymmetric (that is extensionality), transitive.	sets math order	Math::Sets::The algebra of sets
-Why is ⊆ only a partial order?	Some sets are incomparable: {1} ⊄ {2} and {2} ⊄ {1}.	sets math order	Math::Sets::The algebra of sets
-What is a poset?	A partially ordered set: a set with a reflexive, antisymmetric, transitive order, not necessarily total. The subsets of a set under ⊆ are the standard example.	sets math order	Math::Sets::The algebra of sets
-Why does sorted() on a list of Python sets give nonsense?	It compares with <, which for sets is proper subset, a partial order; the result depends on input order. Sort with a key such as (len(s), sorted(s)).	sets math python	Math::Sets::The algebra of sets
-How many subsets does U = {1, 2, 3, 4} have?	2^4 = 16.	sets math definition	Math::Sets::The algebra of sets
-Define the symmetric difference A △ B.	The members of exactly one of A and B: (A ∖ B) ∪ (B ∖ A) = (A ∪ B) ∖ (A ∩ B). Exclusive or.	sets math definition	Math::Sets::The algebra of sets
-{1, 2, 3, 4} △ {1, 4, 5} = ?	{2, 3, 5}.	sets math example	Math::Sets::The algebra of sets
-Which notations are used for symmetric difference?	A △ B, A ⊖ B, A ∇ B, A + B.	sets math definition	Math::Sets::The algebra of sets
-Why can symmetric difference be written A + B?	The subsets form a group under △: associative, commutative, identity ∅, and A △ A = ∅, so each set is its own inverse.	sets math law	Math::Sets::The algebra of sets
-What does a chain A △ B △ C △ ... keep?	The members that occur an odd number of times; pairs cancel.	sets math law	Math::Sets::The algebra of sets
-When is A △ B empty?	Exactly when A = B.	sets math law	Math::Sets::The algebra of sets
-How do ∀ and ∃ split over A ∪ B?	∀x∈A∪B p ⇔ ∀x∈A p ∧ ∀x∈B p;  ∃x∈A∪B p ⇔ ∃x∈A p ∨ ∃x∈B p.	sets math law	Math::Sets::The algebra of sets
-Does ∃x∈A p ∧ ∃x∈B p imply ∃x∈A∩B p?	No: A = {1}, B = {2}, p true on both; A ∩ B is empty.	sets math trap	Math::Sets::The algebra of sets
-Does ∀x∈A p ∨ ∀x∈B p imply ∀x∈A∪B p?	No: A = ∅ makes ∀x∈A p true vacuously while p fails on B.	sets math trap	Math::Sets::The algebra of sets
-What are ∀x∈∅ p and ∃x∈∅ p?	True and false, for every p. That is why ∅ ⊆ A.	sets math law	Math::Sets::The algebra of sets
-How is set equality proved from subsets?	A = B exactly when A ⊆ B and B ⊆ A: show both inclusions.	sets math law	Math::Sets::The algebra of sets
-How do you write the empty set in Python?	set(). {} is an empty dict.	sets python creating	Math::Sets::Sets in Python
-What does set('foo') give, and what does {'foo'} give?	{'f', 'o'} and {'foo'}: set() adds each item of one iterable; braces add each thing written, whole.	sets python creating	Math::Sets::Sets in Python
-Why does set('a', 'b', 'c') fail?	set() takes at most one argument, an iterable: TypeError set expected at most 1 argument, got 3.	sets python trap	Math::Sets::Sets in Python
-What is {('a', 'b', 'c')}?	A set with one member, the tuple ('a', 'b', 'c').	sets python trap	Math::Sets::Sets in Python
-Which of these equal {'a', 'b', 'c'}: set('abc'), set(['a', 'b', 'c']), set('a','b','c'), {('a','b','c')}?	set('abc') and set(['a', 'b', 'c']). The third raises TypeError; the fourth has one tuple member.	sets python creating	Math::Sets::Sets in Python
-What does {2*x for x in [1, 1, 2, 2, 3, 3]} give?	{2, 4, 6}: a set comprehension drops duplicates as it builds.	sets python creating	Math::Sets::Sets in Python
-What must be true of a set's members in Python?	They must be hashable: hash(x) must work and never change while x is stored.	sets python hashing	Math::Sets::Sets in Python
-Why does s.add([1, 2, 1]) fail, and what is the fix?	A list is mutable, so unhashable. Add tuple([1, 2, 1]) instead.	sets python hashing	Math::Sets::Sets in Python
-Is every tuple hashable?	No: (1, [2]) is unhashable because it holds a list. Hashable, not immutable, is the rule.	sets python hashing	Math::Sets::Sets in Python
-How many members has {True, 1, 1.0, '1', (1,)}?	3: True, 1 and 1.0 are equal with equal hashes, so they are one member.	sets python hashing	Math::Sets::Sets in Python
-Why does s1.add(s2) fail when s2 is a set?	add puts in ONE member, and a set is unhashable: TypeError unhashable type set.	sets python trap	Math::Sets::Sets in Python
-How do you put all members of s2 into s1?	s1.update(s2) or s1 |= s2; s1 | s2 makes a new set.	sets python operations	Math::Sets::Sets in Python
-How do you store a whole set as one member of another set?	Freeze it: s1.add(frozenset(s2)).	sets python frozenset	Math::Sets::Sets in Python
-Is + defined for sets?	No: TypeError. Use | for union.	sets python trap	Math::Sets::Sets in Python
-Operator and method for union, intersection, difference, symmetric difference?	| union(), & intersection(), - difference(), ^ symmetric_difference().	sets python operations	Math::Sets::Sets in Python
-Operators for subset, proper subset, superset, proper superset?	<=, <, >=, >. issubset and issuperset are the method forms of <= and >=.	sets python operations	Math::Sets::Sets in Python
-Which set test has a method but no operator?	isdisjoint(). The nearest operator form is not (a & b).	sets python operations	Math::Sets::Sets in Python
-What is the difference between a | t and a.union(t) when t is a tuple?	a | t raises TypeError; a.union(t) converts t to a set and works. Operators need sets, methods take any iterable.	sets python operators-vs-methods	Math::Sets::Sets in Python
-Does X & [1, 5, 9] work? X.intersection([1, 5, 9])?	No, TypeError; yes, it returns the common members.	sets python operators-vs-methods	Math::Sets::Sets in Python
-Which set method takes only one argument, unlike union and intersection?	symmetric_difference. Chain ^ for more sets.	sets python operators-vs-methods	Math::Sets::Sets in Python
-Can you use s.__contains__(x)?	Yes. It is what x in s calls.	sets python trap	Math::Sets::Sets in Python
-How is s1 ^ s2 ^ s3 evaluated, and what does it contain?	As (s1 ^ s2) ^ s3: the elements in an odd number of the three sets.	sets python chaining	Math::Sets::Sets in Python
-{0,1,2,3,4} ^ {2,3,4} ^ {2,5} = ?	{0, 1, 2, 5}: 2 is in all three, an odd count, so it stays.	sets python chaining	Math::Sets::Sets in Python
-How do you test whether two sets are equal?	a == b. Order is ignored; only members count.	sets python equality	Math::Sets::Sets in Python
-Why is list(a) == list(b) a wrong test for set equality?	Equal sets can iterate in different orders: list({1, 9}) is [1, 9] and list({9, 1}) is [9, 1].	sets python equality	Math::Sets::Sets in Python
-Why is a.difference(b) == set() a wrong test for set equality?	It only shows a ⊆ b: {1}.difference({1, 2}) is empty but {1} != {1, 2}.	sets python equality	Math::Sets::Sets in Python
-What is set().issubset([])?	True: the empty set is a subset of everything.	sets python trap	Math::Sets::Sets in Python
-What does if (a <= b, c): do?	Always runs: it tests a non-empty tuple. Write a <= b and a <= c.	sets python trap	Math::Sets::Sets in Python
-remove(x) vs discard(x) on a missing x?	remove raises KeyError; discard does nothing.	sets python removing	Math::Sets::Sets in Python
-What does pop() do on a set, and on an empty set?	Removes and returns an arbitrary member; KeyError on an empty set.	sets python removing	Math::Sets::Sets in Python
-Can a frozenset be changed? How do you add to one?	No, it has no add (AttributeError). Build a new one: fs.union([3, 4]) or fs | {3, 4}.	sets python frozenset	Math::Sets::Sets in Python
-Which type does {1} | frozenset({2}) have? frozenset({2}) | {1}?	set, then frozenset: the left operand decides.	sets python frozenset	Math::Sets::Sets in Python
-How do you remove duplicates from a list and keep first-seen order?	list(dict.fromkeys(L)). list(set(L)) may reorder.	sets python dedupe	Math::Sets::Sets in Python
-Why does list(set([1, 2, 1, 3])) often come out sorted?	Luck: small ints hash to themselves and land in slot n mod table size. list(set([10, 3, 8])) is [8, 10, 3].	sets python dedupe	Math::Sets::Sets in Python
-How do you sort a set?	sorted(s), which returns a list. A set itself has no order.	sets python sorting	Math::Sets::Sets in Python
-How do you sort a set holding both ints and strs?	sorted(s, key=lambda x: (isinstance(x, str), x)): numbers first, and no int is compared with a str.	sets python sorting	Math::Sets::Sets in Python
-Why use a set for visited nodes in a graph walk?	It stops cycles from looping forever, and each check is one hash lookup, not a list scan.	sets python uses	Math::Sets::Sets in Python
-Which set operation gives the keys an inner join keeps? an outer join? a left anti-join?	&, |, and - on the two key columns.	sets python uses	Math::Sets::Sets in Python
-What does B >= A mean, in English and in Polish?	B is a superset of A; B jest nadzbiorem A.	sets python operations	Math::Sets::Sets in Python
-s1 = {'a','b','c'}, s2 = {'c','d','e'}: s1 | s2 and s1 & s2?	{'a','b','c','d','e'} and {'c'}.	sets python kata	Math::Sets::Sets in Python
-set((1,2,3)) & set((2,3,4)) & set((3,4,5)) = ?	{3}.	sets python kata	Math::Sets::Sets in Python
-Is set2 < = set1 (with a space) a subset test?	No: SyntaxError. <= is one token and takes no space inside.	sets python trap	Math::Sets::Sets in Python
-What does d1.keys() & d2.keys() return?	A set of the keys the two dicts share: a keys view supports set operations.	sets python dict-views	Math::Sets::Sets in Python
-Do dict.items() views support set operations? dict.values()?	items() yes, when the values are hashable; values() no, it raises TypeError.	sets python dict-views	Math::Sets::Sets in Python
-What does {1, 2}.update({1: 'a', 5: 'e'}) give?	{1, 2, 5}: iterating a dict yields its keys.	sets python dict-views	Math::Sets::Sets in Python
-Which two decisions does every way of removing duplicates make?	Which copy represents the group (first, last, arbitrary) and what order the survivors come in (first-seen, sorted, hash order).	sets python dedupe	Math::Sets::Sets in Python
-What does {w.lower(): w for w in words}.values() keep?	The LAST spelling of each word, at the FIRST spelling's position: dict keys keep their first place, values are overwritten.	sets python dedupe	Math::Sets::Sets in Python
-How do you dedupe by a key and keep the first copy?	d.setdefault(key(x), x) in a loop: setdefault never overwrites.	sets python dedupe	Math::Sets::Sets in Python
-What does [k for k, _ in groupby(items)] remove?	Adjacent repeats only, like Rust's dedup and ABAP's DELETE ADJACENT DUPLICATES. Sort first.	sets python dedupe	Math::Sets::Sets in Python
-list(dict.fromkeys([1.0, 1, True])) = ?	[1.0]: the three are equal, and the first to arrive survives with its type.	sets python dedupe	Math::Sets::Sets in Python
-How do you dedupe a list of lists?	list(dict.fromkeys(map(tuple, rows))), or the quadratic 'if r not in out' loop; lists are unhashable.	sets python dedupe	Math::Sets::Sets in Python
-How does ABAP remove duplicates from an internal table?	SORT by the fields, then DELETE ADJACENT DUPLICATES COMPARING the same fields (keeps the first of each run); or INSERT into a UNIQUE-key table (first wins, sy-subrc 4 for the rest).	sets python dedupe	Math::Sets::Sets in Python
-How does Rust remove duplicates from a Vec?	sort then dedup (sorted, adjacent only), or filter with a HashSet: seen.insert(x) is true only the first time (first-seen order).	sets python dedupe	Math::Sets::Sets in Python
-Why does Python need frozenset at all?	A set can change after it is stored, so it cannot be hashed; frozenset drops every mutating method and so can be a set member or dict key.	sets python frozenset	Math::Sets::Sets in Python
-{1, 2} in {frozenset({1, 2})} = ?	True: set membership (and remove, discard) treats a set argument as if frozen.	sets python frozenset	Math::Sets::Sets in Python
-{frozenset({1, 2}): 'x'}[{1, 2}] = ?	TypeError: a dict does not freeze the key for you. Use frozenset({1, 2}).	sets python frozenset	Math::Sets::Sets in Python
-t = frozenset({1}); u = t; t |= {2}. What are t and u?	t = frozenset({1, 2}), u = frozenset({1}): |= builds a new frozenset and rebinds t.	sets python frozenset	Math::Sets::Sets in Python
-What does f.copy() return for a frozenset f?	f itself: nothing can change, so there is nothing to copy.	sets python frozenset	Math::Sets::Sets in Python
-Why does Rust have no frozenset?	Mutability belongs to the binding (let vs let mut), and the borrow checker never gives &mut to a stored element. Exception: interior mutability (BTreeSet<Cell<i32>> compiles; Clippy's mutable_key_type warns).	sets python frozenset	Math::Sets::Sets in Python
-Can a Rust HashSet contain HashSets?	No: HashSet does not implement Hash, so insert fails with E0599. Use BTreeSet as the element type, which does.	sets python frozenset	Math::Sets::Sets in Python
-How is a set of sets built in ABAP?	Freeze each inner set into a key (e.g. a canonical sorted string) and store it in a HASHED table WITH UNIQUE KEY.	sets python frozenset	Math::Sets::Sets in Python
-What is the usual order of set operations, tightest first?	Complement, difference, intersection, union; left to right within a level.	sets math precedence	Math::Sets::Reading a set expression
-Where does the order of set operations come from?	From logic: not before and before or, since ′ is not, ∩ is and, ∪ is or.	sets math precedence	Math::Sets::Reading a set expression
-How does Python bracket A | B & C?	A | (B & C): & binds tighter than |.	sets math python	Math::Sets::Reading a set expression
-Python's set operator precedence, tightest first?	- then & then ^ then |.	sets math python	Math::Sets::Reading a set expression
-How is A ∖ B ∖ C read?	(A ∖ B) ∖ C, left to right; A ∖ (B ∖ C) is different.	sets math precedence	Math::Sets::Reading a set expression
-With U = {1,...,5}, {5} ∪ {1,2}′ ∩ {2,3} = ?	{3, 5} by the rule (∩ first); ({5} ∪ {1,2}′) ∩ {2,3} would be {3}.	sets math precedence	Math::Sets::Reading a set expression
-What is wrong with writing x ∈ A ∩ x ∈ B?	∩ needs sets on both sides, and x ∈ A is a statement. Write x ∈ A ∧ x ∈ B or x ∈ A ∩ B.	sets math trap	Math::Sets::Reading a set expression
-What is wrong with writing x ∈ A ∧ B?	∧ needs statements on both sides, and B is a set. Write x ∈ A ∧ x ∈ B.	sets math trap	Math::Sets::Reading a set expression
-What does Python do with x in A & x in B?	Reads it as x in (A & x) in B and raises TypeError for a number x.	sets math python	Math::Sets::Reading a set expression
-What does Python return for x in A and B when x is in A?	The set B itself, which is truthy even when x is not in B: a silent bug.	sets math python	Math::Sets::Reading a set expression
-With (a, b) = {{a}, {a, b}}, what is (1, 2) ∩ (2, 1)?	{{1, 2}}.	sets math notation	Math::Sets::Reading a set expression
-As open intervals, what is (1, 2) ∪ (2, 1)?	(1, 2), because (2, 1) is empty.	sets math notation	Math::Sets::Reading a set expression
-What are the two undefined words that set theory starts from?	Set and member of (∈). They are described by axioms, not defined.	sets math definition	Math::Sets::What is a set
-State the axiom of extensionality.	Two sets with the same members are the same set.	sets math axiom	Math::Sets::What is a set
-Why is {2, 5} = {5, 2}?	Extensionality: they have the same members, and order is not membership.	sets math axiom	Math::Sets::What is a set
-Why is {1, 1, 2} = {1, 2}?	Being listed twice is the same as being a member once; a set records membership only.	sets math axiom	Math::Sets::What is a set
-What does distinct objects in the textbook definition of a set really mean?	Not a demand on the list: {1, 1, 2} is a legal way to write {1, 2}. It points at extensionality, the rule for when two sets are equal.	sets math trap	Math::Sets::What is a set
-Why can one say THE empty set rather than an empty set?	Any two empty sets have the same members, none, so by extensionality they are equal. There is exactly one.	sets math theorem	Math::Sets::What is a set
-What does well-defined mean for a set?	Every object is determinately in or out. It does not mean anyone knows which.	sets math definition	Math::Sets::What is a set
-Give a well-defined set nobody knows to be empty or not.	The odd perfect numbers: each n can be checked, but whether any exists is an open problem.	sets math example	Math::Sets::What is a set
-State Russell's paradox.	Let R = {x : x ∉ x}. Then R ∈ R exactly when R ∉ R, so no such set exists.	sets math theorem	Math::Sets::What is a set
-What does Russell's paradox show about the textbook definition of a set?	A sharp, well-defined rule does not always determine a set.	sets math trap	Math::Sets::What is a set
-Whose system did Russell's paradox break, and when?	Frege's, in a letter of 1902 (paradox found 1901): Frege assumed every rule defines a set.	sets math history	Math::Sets::What is a set
-State the axiom of separation (Zermelo, 1908).	For a set A and a property P, {x ∈ A : P(x)} is a set. A rule selects from an existing set, never from everything.	sets math axiom	Math::Sets::What is a set
-Under separation, what does Russell's argument prove?	For any set U, R = {x ∈ U : x ∉ x} is not a member of U. So there is no set of all sets.	sets math theorem	Math::Sets::What is a set
-Which earlier argument is Russell's paradox a form of?	Cantor's diagonal argument: build the object that disagrees with entry y at position y.	sets math connection	Math::Sets::What is a set
-What is the empty set a subset of?	Every set, including itself.	sets math theorem	Math::Sets::What is a set
-What is the difference between A ⊆ B and A ⊂ B?	⊆ allows A = B; ⊂ (proper subset) requires A ⊆ B and A ≠ B.	sets math definition	Math::Sets::What is a set
-Is every set a subset of itself? A proper subset of itself?	Yes; no.	sets math theorem	Math::Sets::What is a set
-Define A ∪ B, A ∩ B and A ∖ B.	Members of either; members of both; members of A that are not in B.	sets math definition	Math::Sets::What is a set
-Define the symmetric difference A △ B.	Members of exactly one of A and B: (A ∖ B) ∪ (B ∖ A), also (A ∪ B) ∖ (A ∩ B).	sets math definition	Math::Sets::What is a set
-What is A △ B △ C, in terms of membership?	The elements that are in an odd number of the three sets, not those in exactly one.	sets math trap	Math::Sets::What is a set
-Which of ∪, ∩, △ and ∖ are associative?	∪, ∩ and △ are; ∖ is not: (A ∖ B) ∖ C need not equal A ∖ (B ∖ C).	sets math theorem	Math::Sets::What is a set
-When are two sets disjoint?	When they have no member in common: A ∩ B = ∅.	sets math definition	Math::Sets::What is a set
-What does null set mean in measure theory, as opposed to algebra?	A set of measure zero, which may be infinite, such as the Cantor set. In algebra books it usually means ∅.	sets math trap	Math::Sets::What is a set
-Is a well-defined collection of distinct objects a good definition of set?	A good first description, not a definition: collection is a synonym, equality is left out, and a well-defined rule can fail to give a set (Russell).	sets math principle	Math::Sets::What is a set
-What does the box definition of a set do better than well-defined collection of distinct objects?	It centres on ∈ (a ∈ A, c ∉ A), treats collection as a picture rather than a definition, and says a set is a single object, so sets can contain sets.	sets math principle	Math::Sets::What is a set
-What does the box definition of a set leave out?	Any rule for when two sets are equal (extensionality), and any notion of well-defined.	sets math trap	Math::Sets::What is a set
-Is ∈ transitive? Example?	No: 1 ∈ {1} and {1} ∈ {{1}}, but 1 ∉ {{1}}. A member of a member is not a member. ⊆ is transitive.	sets math trap	Math::Sets::What is a set
-Is ∅ equal to {∅}?	No: ∅ has no members, {∅} has one, the empty set. An empty box in a box.	sets math theorem	Math::Sets::What is a set
-Where does the box picture of a set mislead?	Membership is one level only, one element can be in many sets, and copies do not count.	sets math trap	Math::Sets::What is a set
-What does a, b ∈ A mean?	a ∈ A and b ∈ A.	sets math definition	Math::Sets::What is a set
-Does Russell's paradox need the step C is either ordinary or not?	No. From P ↔ ¬P: assuming P gives ¬P, so ¬P; then ¬P gives P. No case split, valid even in intuitionistic logic.	sets math theorem	Math::Sets::What is a set
-In Russell's argument, which premise does ZF give up?	That C exists: separation only allows the ordinary members of an existing set, never all ordinary sets.	sets math axiom	Math::Sets::What is a set
-In ZF, which sets are ordinary (not members of themselves)?	All of them, by the axiom of foundation; so C would be the set of everything, which cannot exist.	sets math theorem	Math::Sets::What is a set
-Which many-valued logic lets C ∈ C be half true?	Łukasiewicz: ½ ↔ ¬½ is fully true there. Kleene K3 and the Gödel logics do not.	sets math logic	Math::Sets::What is a set
-Why doesn't finite-valued Łukasiewicz logic rescue naive set theory?	Curry's sets C_k = {x : x ∈ x → (… → false)} need the value k/(k+1), and finitely many values always miss one.	sets math logic	Math::Sets::What is a set
-Name two non-classical escapes from Russell's paradox.	Paraconsistent logic (tolerate the contradiction) and contraction-free logic (block P → ¬P, therefore ¬P).	sets math logic	Math::Sets::What is a set
+Which logical connective is ∪? Complete: x ∈ A ∪ B when …	'or' (inclusive): x ∈ A ∪ B when x ∈ A or x ∈ B, or both.	sets math logic	Math::Sets::The algebra of sets
+Which logical connective is ∩?	'and': x ∈ A ∩ B when x ∈ A and x ∈ B.	sets math logic	Math::Sets::The algebra of sets
+Which logical connective is the complement A′?	'not': x ∈ A′ when x ∉ A (and x is in the universe U).	sets math logic	Math::Sets::The algebra of sets
+Rewrite A ⊆ B as a logical statement about members.	For every x: if x ∈ A then x ∈ B. Subset is if-then applied to every member at once.	sets math logic	Math::Sets::The algebra of sets
+Rewrite A ∖ B in logic, and as an intersection.	x ∈ A and x ∉ B; equivalently A ∖ B = A ∩ B′.	sets math logic	Math::Sets::The algebra of sets
+Why does a complement only make sense relative to a universal set U?	'Everything not in A' needs an everything, and there is no set of everything (Russell). So A′ = U ∖ A for a U fixed in advance.	sets math definition	Math::Sets::The algebra of sets
+What is a universal set?	The set U, fixed before the problem starts, of everything under discussion: every set in the problem is a subset of it, and complements are taken out of it. Not a set of everything; there is none.	sets math definition	Math::Sets::The algebra of sets
+Three notations for the complement of A?	A′, Ā (a bar over A) and Aᶜ. Sullivan's Precalculus writes Ā and notes the other two in a footnote; this library writes A′.	sets math definition	Math::Sets::The algebra of sets
+Same A, different universal set U: does the complement change?	Yes. A = {1, 2} has complement {3, 4} in U = {1, 2, 3, 4}, {3, 4, 5, 6} in U = {1, …, 6} and ∅ in U = {1, 2}. A complement quoted without its U is an unfinished sentence.	sets math trap	Math::Sets::The algebra of sets
+Python has |, &, - and ^ for sets. Why is there no complement operator?	A complement needs a universe and Python cannot guess it. Name U yourself and write U - a.	sets math python	Math::Sets::The algebra of sets
+State De Morgan's laws for sets.	(A ∪ B)′ = A′ ∩ B′ and (A ∩ B)′ = A′ ∪ B′. Taking the complement swaps ∪ and ∩.	sets math law	Math::Sets::The algebra of sets
+De Morgan's laws in plain words: what is 'not either', and what is 'not both'?	Not either = neither: not in A and not in B. Not both = at least one is missing: not in A or not in B.	sets math law	Math::Sets::The algebra of sets
+Rewrite not (a or b) without the outer not.	not a and not b. Likewise not (a and b) is not a or not b. In SQL, NOT (x = 1 OR y = 2) is x <> 1 AND y <> 2.	sets math law	Math::Sets::The algebra of sets
+Expand A ∩ (B ∪ C), and its dual A ∪ (B ∩ C).	A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C), and A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C). Unlike + and × on numbers, each operation distributes over the other.	sets math law	Math::Sets::The algebra of sets
+Simplify A ∪ (A ∩ B) and A ∩ (A ∪ B).	Both are A (absorption). A ∩ B already lies inside A, so the union adds nothing; A ∪ B already contains A, so the intersection removes nothing.	sets math law	Math::Sets::The algebra of sets
+Simplify A ∪ ∅, A ∩ U, A ∪ U and A ∩ ∅.	A, A, U, ∅. ∅ is the identity for ∪ and U is the identity for ∩; U swallows any union and ∅ swallows any intersection (domination).	sets math law	Math::Sets::The algebra of sets
+What are A ∪ A′, A ∩ A′ and (A′)′?	U, ∅ and A. Every x is in A or out of it; none is both; not-not brings you back.	sets math law	Math::Sets::The algebra of sets
+Why does checking a law on every subset of a 4-element universe count as a proof, not a sample?	Whether x is on the left or the right side depends only on which of A, B, C contain x. The subsets of a small universe realise every combination of memberships, so the check is the law's complete truth table.	sets math principle	Math::Sets::The algebra of sets
+What single structure do the algebra of sets and the logic of and, or, not both form?	A Boolean algebra: the same laws, with ∪, ∩, ′, ∅, U matching or, and, not, false, true.	sets math definition	Math::Sets::The algebra of sets
+Is (A ∪ B) ∖ B = A? Give a counterexample if not.	No. A = {1}, B = {1}: (A ∪ B) ∖ B = ∅ ≠ A. Removing B also removes the part of A that overlapped it; difference does not undo union.	sets math trap	Math::Sets::The algebra of sets
+From A ∪ B = A ∪ C, can you cancel A and conclude B = C?	No. A = {1}, B = ∅, C = {1}: both unions are {1}. A absorbs whatever B and C differ by, so union has no cancellation law.	sets math trap	Math::Sets::The algebra of sets
+Is set difference associative? Commutative?	Neither. With A = B = C = {1}: (A ∖ B) ∖ C = ∅ but A ∖ (B ∖ C) = {1}. And A ∖ B ≠ B ∖ A unless A = B.	sets math trap	Math::Sets::The algebra of sets
+How many regions does a Venn diagram of n sets have, and what does each stand for?	2^n, one for each pattern of in-or-out across the n sets. Three sets give 8, counting the region outside all the circles.	sets math venn	Math::Sets::The algebra of sets
+In a three-set Venn diagram, which set is the region outside all three circles?	(A ∪ B ∪ C)′, the complement of the union: everything in U that is in none of them.	sets math venn	Math::Sets::The algebra of sets
+What does the rectangle in a Venn diagram stand for, and the part of it outside a circle?	The rectangle is the universal set U, and the circles are sets inside it. The part of the rectangle outside a circle is that set's complement.	sets math venn	Math::Sets::The algebra of sets
+How does a Venn diagram show A ⊆ B, and A and B disjoint?	A ⊆ B: the circle A drawn inside the circle B. Disjoint (A ∩ B = ∅, no member in common): two circles drawn apart. The usual overlapping circles claim nothing; a region may be empty.	sets math venn	Math::Sets::The algebra of sets
+Which three properties make ⊆ an order relation?	Reflexive (A ⊆ A); antisymmetric (A ⊆ B and B ⊆ A give A = B, which is extensionality again); transitive (A ⊆ B and B ⊆ C give A ⊆ C).	sets math order	Math::Sets::The algebra of sets
+Why is ⊆ a partial order and not a total one?	Some pairs are incomparable: neither {1} ⊆ {2} nor {2} ⊆ {1}. A total order, like ≤ on numbers, compares every pair.	sets math order	Math::Sets::The algebra of sets
+What is a poset, and what is the standard example?	A partially ordered set: a set with a reflexive, antisymmetric, transitive relation that need not compare every pair. The subsets of a set under ⊆ are the standard example.	sets math order	Math::Sets::The algebra of sets
+Why does sorted([{3}, {1, 2}, {1}]) give a meaningless order in Python, and what is the fix?	sorted() compares with <, which for sets is proper subset, a partial order; {3} is neither below nor above the others, so the result depends on the input order. Sort by a total key, e.g. key=lambda s: (len(s), sorted(s)).	sets math python	Math::Sets::The algebra of sets
+How many subsets does a set with n members have, and why?	2^n: each member is independently in or out. {1, 2, 3, 4} has 16 subsets.	sets math definition	Math::Sets::The algebra of sets
+Define the symmetric difference A △ B, two ways.	The members of exactly one of A and B: (A ∖ B) ∪ (B ∖ A), equivalently (A ∪ B) ∖ (A ∩ B). In logic it is exclusive or.	sets math definition	Math::Sets::The algebra of sets
+{1, 2, 3, 4} △ {1, 4, 5} = ?	{2, 3, 5}. 1 and 4 are in both and drop out; 2, 3 and 5 are each in exactly one.	sets math example	Math::Sets::The algebra of sets
+What notations exist for symmetric difference, and which does MathWorld recommend?	A △ B, A ⊖ B, A ∇ B and A + B. MathWorld recommends ⊖, because each of the others already means something else in mathematics.	sets math definition	Math::Sets::The algebra of sets
+Why is symmetric difference sometimes written A + B?	The subsets of U form a group under △: associative, commutative, identity ∅, and A △ A = ∅, so every set is its own inverse. With ∩ as multiplication they form a ring, like bits under XOR and AND.	sets math law	Math::Sets::The algebra of sets
+What does a chain A △ B △ C △ … contain?	The elements that occur in an ODD number of the sets, not those in exactly one. Each pair of occurrences cancels because A △ A = ∅. E.g. {0,1,2,3,4} △ {2,3,4} △ {2,5} = {0, 1, 2, 5}: 2 is in all three and survives.	sets math law	Math::Sets::The algebra of sets
+When is A △ B = ∅?	Exactly when A = B. So an empty symmetric difference is a test of set equality.	sets math law	Math::Sets::The algebra of sets
+How do ∀ and ∃ split over a union A ∪ B?	∀x∈A∪B p ⇔ (∀x∈A p) ∧ (∀x∈B p), and ∃x∈A∪B p ⇔ (∃x∈A p) ∨ (∃x∈B p). 'For all' over a union becomes 'and'; 'there exists' over a union becomes 'or'.	sets math law	Math::Sets::The algebra of sets
+If some x in A satisfies p and some x in B satisfies p, must some x in A ∩ B satisfy p?	No. A = {1}, B = {2}, p true on both: the witnesses differ and A ∩ B is empty. Only the converse holds: ∃x∈A∩B p implies ∃x∈A p and ∃x∈B p.	sets math trap	Math::Sets::The algebra of sets
+If every x in A satisfies p, or every x in B does, must every x in A ∪ B?	No. A = ∅ makes 'every x in A' true vacuously while p can fail on B. The valid direction is the other way: ∀ over the union implies ∀ over each part.	sets math trap	Math::Sets::The algebra of sets
+What are the truth values of ∀x∈∅ p(x) and ∃x∈∅ p(x)?	True and false, for every p: no member can fail the test, and no member can pass it. This vacuous truth is the whole proof that ∅ ⊆ A.	sets math law	Math::Sets::The algebra of sets
+How is A = B proved in practice?	Show both inclusions, A ⊆ B and B ⊆ A. Each one is a 'take any x ∈ A and show x ∈ B' argument.	sets math law	Math::Sets::The algebra of sets
+In set theory, which two words are taken as undefined and described only by axioms?	'Set' and 'is a member of' (∈). Every definition of set in words (a collection, a box) is a picture, not a definition; the axioms say what sets do.	sets math definition	Math::Sets::The definition on trial
+State the axiom of extensionality, and say what question it settles.	Two sets with the same members are the same set. It settles when two sets are equal: membership is the only thing a set records.	sets math axiom	Math::Sets::The definition on trial
+Why is {2, 5} = {5, 2}?	Same members, so equal by extensionality. Order is not membership: a set does not record which member was written first.	sets math axiom	Math::Sets::The definition on trial
+Is {1, 1, 2} a legal way to write a set? Which set is it?	Yes: it is {1, 2}. Being listed twice is the same as being a member once, because a set records only whether each object is in it.	sets math axiom	Math::Sets::The definition on trial
+The textbook says a set is a collection of 'distinct objects'. What is that word really doing?	Not forbidding repeats in the list, since {1, 1, 2} is legal. It is reaching for extensionality, the rule for when two sets are equal, which the textbook never states.	sets math trap	Math::Sets::The definition on trial
+Why is it correct to say THE empty set rather than AN empty set?	Any two empty sets have the same members (none), so by extensionality they are equal. There is exactly one, written ∅.	sets math theorem	Math::Sets::The definition on trial
+What does 'well-defined' mean when applied to a set?	For every object it is settled whether it is a member or not. It does not mean anyone knows the answer.	sets math definition	Math::Sets::The definition on trial
+Give a set that is well-defined even though nobody knows whether it is empty.	The odd perfect numbers (odd n equal to the sum of its proper divisors). Any given n can be checked, so membership is settled; whether any exists is an open problem.	sets math example	Math::Sets::The definition on trial
+State Russell's paradox.	Let R = {x : x ∉ x}, the set of all sets that are not members of themselves. Then R ∈ R holds exactly when R ∉ R, a contradiction, so no such set exists.	sets math theorem	Math::Sets::The definition on trial
+What does Russell's paradox show about the definition 'a set is a well-defined collection'?	That a perfectly sharp rule (x ∉ x) can still fail to determine a set. Being well-defined is not enough; the rule must select from a set you already have.	sets math trap	Math::Sets::The definition on trial
+Whose foundational system did Russell's paradox break, and how did he hear of it?	Frege's. Russell found the paradox in 1901 and wrote to Frege in 1902; Frege's system assumed every property defines a set.	sets math history	Math::Sets::The definition on trial
+State the axiom of separation (Zermelo, 1908).	For any set A and property P, {x ∈ A : P(x)} is a set. A rule may select members from an existing set, never from 'everything'.	sets math axiom	Math::Sets::The definition on trial
+With separation in place, what does Russell's argument prove instead of a contradiction?	For any set U, the set R = {x ∈ U : x ∉ x} is not a member of U. So no set contains every set: there is no universal set.	sets math theorem	Math::Sets::The definition on trial
+Which older argument has the same shape as Russell's paradox?	Cantor's diagonal argument: build an object that differs from the y-th item at position y, so it is on no list. Russell's R differs from each set y on the question 'is y in y?'.	sets math connection	Math::Sets::The definition on trial
+Is {1} ∈ {1, 2}? Is {1} ⊆ {1, 2}?	No and yes. ∈ asks whether the object {1} is one of the members (they are 1 and 2); ⊆ asks whether every member of {1} is in {1, 2}.	sets math trap	Math::Sets::The definition on trial
+Which sets is ∅ a subset of, and why?	Every set, including ∅ itself. A ⊆ B means every member of A is in B, and ∅ has no member that could fail the test.	sets math theorem	Math::Sets::The definition on trial
+What is the difference between A ⊆ B and A ⊂ B?	A ⊆ B allows A = B. A ⊂ B (proper subset) means A ⊆ B and A ≠ B: B has at least one member A lacks.	sets math definition	Math::Sets::The definition on trial
+Is every set a subset of itself? A proper subset of itself?	Yes: every member of A is in A. No: a proper subset must be missing something.	sets math theorem	Math::Sets::The definition on trial
+Define A ∪ B, A ∩ B and A ∖ B in one line each.	A ∪ B: members of A or of B (or both). A ∩ B: members of both. A ∖ B: members of A that are not in B.	sets math definition	Math::Sets::The definition on trial
+When are two sets disjoint?	When they have no member in common: A ∩ B = ∅. ∅ is disjoint from every set, including itself.	sets math definition	Math::Sets::The definition on trial
+Does 'null set' mean the same thing in every book?	No. In algebra and logic it means ∅. In measure theory and probability it means a set of measure zero, which can be infinite: the Cantor set is a null set.	sets math trap	Math::Sets::The definition on trial
+Verdict: is 'a set is a well-defined collection of distinct objects' a good definition?	A useful first description, not a definition. 'Collection' is a synonym; when two sets are equal is left out; and Russell shows a well-defined rule can fail to give a set.	sets math principle	Math::Sets::The definition on trial
+What does the 'box' definition (a set is a box with things inside) do better than 'a well-defined collection'?	It is built around ∈ (a ∈ A, c ∉ A), it treats the picture as a picture, and it says a set is a single object, so a set can be a member of another set.	sets math principle	Math::Sets::The definition on trial
+What does the 'box' definition of a set leave out?	Any rule for when two sets are equal (extensionality) and any notion of well-defined. It cannot explain why {1, 1} = {1} or why there is only one empty set.	sets math trap	Math::Sets::The definition on trial
+Is ∈ transitive? Give the standard counterexample.	No. 1 ∈ {1} and {1} ∈ {{1}}, yet 1 ∉ {{1}}: the only member of {{1}} is {1}. A member of a member is not a member. (⊆ is transitive.)	sets math trap	Math::Sets::The definition on trial
+Is ∅ = {∅}?	No. ∅ has no members; {∅} has exactly one member, the empty set. An empty box inside a box is a box with something in it.	sets math theorem	Math::Sets::The definition on trial
+Name three ways the 'box' picture of a set misleads.	A box in a box is inside the outer box, but ∈ is not transitive; a thing sits in one box, but one element belongs to many sets; a box can hold two identical marbles, but a set has no copies.	sets math trap	Math::Sets::The definition on trial
+What does a, b ∈ A abbreviate?	a ∈ A and b ∈ A.	sets math definition	Math::Sets::The definition on trial
+Does Russell's paradox depend on the step 'C is either ordinary or extraordinary'?	No. With P meaning C ∈ C, the definition gives P ↔ ¬P. Assuming P gives ¬P, a contradiction, so ¬P; then ¬P gives P. No case split is used, and the argument is valid even in intuitionistic logic, which rejects excluded middle.	sets math theorem	Math::Sets::The definition on trial
+A contradiction refutes its premises together. Which premise does ZF set theory give up to escape Russell?	That C, the set of all ordinary sets, exists. Separation only lets you collect the ordinary members of a set you already have.	sets math axiom	Math::Sets::The definition on trial
+In ZF, which sets are 'ordinary' (not members of themselves)?	All of them, by the axiom of foundation. So the set of all ordinary sets would be the set of everything, which does not exist.	sets math theorem	Math::Sets::The definition on trial
+Which many-valued logic gives 'C ∈ C' a consistent truth value, and which do not?	Łukasiewicz logic: the value ½, since ½ ↔ ¬½ comes out fully true. Kleene's K3 and Gödel's logics also reject excluded middle, but no value there satisfies P ↔ ¬P.	sets math logic	Math::Sets::The definition on trial
+Why does no finite-valued Łukasiewicz logic rescue naive set theory?	Curry's sets C_k = {x : x ∈ x → (x ∈ x → … → false)} with k arrows need the truth value k/(k+1). A logic with finitely many values misses some of these, so some C_k gets no value at all.	sets math logic	Math::Sets::The definition on trial
+Name two non-classical escapes from Russell's paradox, and what each gives up.	Paraconsistent logic keeps the contradiction but stops it from proving everything. Contraction-free logic blocks the step 'P gives ¬P, therefore ¬P'. Both are research programmes; mainstream mathematics instead denies that R exists.	sets math logic	Math::Sets::The definition on trial
+A relation on a class or set S is what, exactly?	A set (class) of ordered pairs (x, y) with x and y in S, that is, a subset of S × S. x R y means (x, y) ∈ R and nothing more.	sets math definition	Math::Sets::Orderings
+Membership relation ∈_C and identity relation Id_C on a class C: define both.	∈_C = {(x, y) ∈ C × C : x ∈ y}. Id_C = {(x, y) ∈ C × C : x = y}. Id_C is an equivalence and a partial order at once.	sets math definition	Math::Sets::Orderings
+Domain and image (range) of a relation R on C.	dom R = {x : (x, y) ∈ R for some y}; im R = {y : (x, y) ∈ R for some x}. Many books say range for the image.	sets math definition	Math::Sets::Orderings
+Inverse of a relation R.	R⁻¹ = {(x, y) : (y, x) ∈ R}. Every relation has one; it need not be a function even when R is.	sets math definition	Math::Sets::Orderings
+Composition T ∘ R of two relations, correctly stated.	T ∘ R = {(x, y) : (x, z) ∈ R and (z, y) ∈ T for some z}: first R, then T. (André's Definition 5.5 drops the x from the condition; this is the intended one.)	sets math definition	Math::Sets::Orderings
+R = {(x, y) : x ∈ y} and T = {(x, y) : x = {y}} on S = {a, b, c, {a}, {a, b}, {{c}}, ∅, {∅}}. What is R ∘ T?	{({a}, {a}), ({a}, {a, b}), ({∅}, {∅})}. The book lists only two pairs and misses ({a}, {a, b}): T sends {a} to a, and R sends a to {a, b} as well as to {a}.	sets math trap	Math::Sets::Orderings
+Reflexive, irreflexive: define and contrast.	Reflexive: (x, x) ∈ R for every x in S. Irreflexive: (x, x) ∉ R for every x. A relation can be neither, e.g. {(a, a), (a, b)} on {a, b}.	sets math definition	Math::Sets::Orderings
+Symmetric, antisymmetric, asymmetric: define all three.	Symmetric: x R y implies y R x. Antisymmetric: x R y and y R x imply x = y. Asymmetric: x R y implies not y R x. Asymmetric = antisymmetric + irreflexive.	sets math definition	Math::Sets::Orderings
+Transitive: define, and give the smallest failure.	x R y and y R z imply x R z. R = {(a, b), (b, c)} fails: the shortcut (a, c) is missing.	sets math definition	Math::Sets::Orderings
+Does symmetric + transitive give reflexive?	No. R = {(a, a), (b, b), (d, d), (a, b), (b, a)} on {a, b, c, d} is symmetric and transitive and (c, c) is missing. The argument x R y, y R x so x R x only reaches the x that are related to something.	sets math trap	Math::Sets::Orderings
+Is the relation 'x and y are distinct siblings' transitive?	No. x T y and y T x would require x T x, and nobody is their own distinct sibling. 'Siblings or the same person' is an equivalence.	sets math trap	Math::Sets::Orderings
+Which properties does the empty relation ∅ on a nonempty S have?	Irreflexive, symmetric, antisymmetric, asymmetric and transitive, all vacuously: there is no pair to fail any of them. Not reflexive.	sets math trap	Math::Sets::Orderings
+Equivalence relation: definition and what it does to S.	Reflexive, symmetric and transitive. Its classes S_x = {y : x R y} are nonempty, pairwise disjoint and cover S: they partition S.	sets math definition	Math::Sets::Orderings
+Partition of a set S: the three conditions.	A family of subsets of S whose union is S, pairwise disjoint (distinct blocks have empty intersection), and none empty.	sets math definition	Math::Sets::Orderings
+Finest and coarsest partition of S.	Finest: {{x} : x ∈ S}, every element alone, from Id_S. Coarsest: {S}, one block, from the relation that relates everything. Note {S}, not S and not {{S}}.	sets math example	Math::Sets::Orderings
+Quotient set S/R and equivalence class of x.	The class of x is S_x = [x] = {y : x R y}; the quotient set S/R is the set of all classes, which is the partition induced by R.	sets math definition	Math::Sets::Orderings
+Partial order (non-strict): definition and symbol.	Reflexive, antisymmetric, transitive; written a ≤ b. Examples: ⊆ on subsets, divides on positive integers, ≤ on numbers.	sets math definition	Math::Sets::Orderings
+What is a poset?	A partially ordered set: a set together with a partial order on it. Pairs of elements may be incomparable, like {1} and {2} under ⊆.	sets math definition	Math::Sets::Orderings
+Linear (total) order.	A partial order in which every two elements are comparable: a ≤ b or b ≤ a. ≤ on numbers is one; ⊆ and divides are not.	sets math definition	Math::Sets::Orderings
+Strict order: definition, and how it relates to the non-strict one.	Irreflexive, asymmetric, transitive; written a < b. Remove the pairs (x, x) from a partial order to get a strict one; add them back to return. The two kinds match one to one.	sets math definition	Math::Sets::Orderings
+Comparable elements; chain; antichain.	a and b are comparable when a ≤ b or b ≤ a. A chain is a subset that is linearly ordered; an antichain is a subset with no two comparable members, like the primes under divides.	sets math definition	Math::Sets::Orderings
+Maximal versus maximum element of a poset.	Maximal: nothing is strictly above it. Maximum: it is above every other element. A maximum is maximal; a poset can have several maximal elements and no maximum.	sets math definition	Math::Sets::Orderings
+Mortimer's ancestors ordered by 'is a descendant of': minimum, maximal elements, maximum?	Mortimer is the minimum (below everyone). The two spontaneously generated ancestors A and E are each maximal. There is no maximum, because A and E are not comparable.	sets math example	Math::Sets::Orderings
+Divisibility on {1, ..., 12}: minimum, maximal elements, a chain, an antichain.	Minimum 1. Maximal: 7, 8, 9, 10, 11, 12 (each divides nothing else in range). Chain: 1, 2, 4, 8. Antichain: the primes 2, 3, 5, 7, 11. No maximum.	sets math example	Math::Sets::Orderings
+Lexicographic order on pairs.	(a, b) ≤ (c, d) when a < c, or a = c and b ≤ d: compare the first entries, and only on a tie the second. A partial order (linear if both components are); a dictionary and a two-column sort use it.	sets math definition	Math::Sets::Orderings
+How many equivalences, partial orders and linear orders are there on a 3-element set?	5 equivalences (the Bell number B(3)), 19 partial orders, 6 linear orders (3!). The identity relation is counted among both equivalences and partial orders.	sets math example	Math::Sets::Orderings
+Logical matrix of a relation: what is it, and which property is which shape?	An n × n grid with a 1 in row x, column y when x R y. Reflexive: full diagonal. Symmetric: equal to its transpose. Equivalence: blocks of 1s along the diagonal, one per class. Transitive: the Boolean product M·M stays inside M. R⁻¹ is the transpose; T ∘ R is the Boolean product.	sets math notation	Math::Sets::Orderings
+Partition of an interval, in real analysis.	A finite list of cut points a = x₀ < x₁ < ... < xₙ = b. The Riemann integral is squeezed between the lower and upper sums over the cells. Not a partition of a set: the closed cells share endpoints.	sets math definition	Math::Sets::Orderings
+How do the two meanings of partition connect?	A Riemann partition P refines Q when P contains all of Q's cut points; refinement is a partial order on partitions, and any two have a common refinement, their union. The half-open cells of a Riemann partition do form a set partition.	sets math definition	Math::Sets::Orderings
+Universal class versus universal set.	André's 𝒰 = {x : x = x} is the class of all elements, a proper class that no theory can make a set. The universal set U of a Venn diagram is a set chosen for one problem. Same root, different levels.	sets math class	Math::Sets::Orderings
+Proper class, element, set: André's three kinds of object.	Every object is a class. An element is a class that belongs to some class. A set is a class that is an element. A proper class is a class that is not an element, like {x : x ∉ x} or the class of all sets.	sets math class	Math::Sets::Orderings
+Hausdorff's ordered pair.	(a, b) = {{a, ∅}, {b, {∅}}}: ∅ and {∅} tag first and second. It has the pair property, (a, b) = (c, d) iff a = c and b = d, and gives a different set from Kuratowski's {{a}, {a, b}}; either will do.	sets math notation	Math::Sets::Orderings
+Why is C × D a set when C and D are? Which axioms?	Every pair (c, d) lies in P(P(C ∪ D)): {c} and {c, d} are subsets of C ∪ D. Union gives C ∪ D, power set twice gives P(P(C ∪ D)), and subsets (separation) cuts C × D out of it.	sets math definition	Math::Sets::Orderings
+How do you write the empty set in Python, and why not {}?	set(). The braces {} were taken first by the empty dict, so the empty set has no literal of its own.	sets python creating	Math::Sets::Sets in Python
+Predict: set('foo') and {'foo'}.	{'f', 'o'} and {'foo'}. set() takes one iterable and adds each item it yields, characters here, with the repeat dropped; braces add each thing written between them, whole.	sets python creating	Math::Sets::Sets in Python
+Why does set('a', 'b', 'c') fail?	TypeError: set() takes at most one argument, an iterable. Write set(['a', 'b', 'c']) or {'a', 'b', 'c'}.	sets python trap	Math::Sets::Sets in Python
+What set is {('a', 'b', 'c')}?	A set with ONE member, the tuple ('a', 'b', 'c'). Braces do not unpack what is inside them.	sets python trap	Math::Sets::Sets in Python
+Which of these build {'a', 'b', 'c'}: set('abc'), set(['a', 'b', 'c']), set('a', 'b', 'c'), {('a', 'b', 'c')}?	The first two. set('a', 'b', 'c') raises TypeError (three arguments); {('a', 'b', 'c')} is a set with one tuple in it.	sets python creating	Math::Sets::Sets in Python
+Predict: {2*x for x in [1, 1, 2, 2, 3, 3]}.	{2, 4, 6}. A set comprehension applies the rule to every item and drops repeats as it builds. It always draws from a source, which is Zermelo's separation in code.	sets python creating	Math::Sets::Sets in Python
+What must be true of every member of a Python set, and why?	It must be hashable: hash(x) works and never changes while x is stored. A set is a hash table, and a changed hash would leave the member filed in the wrong slot, lost.	sets python hashing	Math::Sets::Sets in Python
+Why does s.add([1, 2, 1]) fail, and what is the fix?	TypeError: unhashable type. A list can change, so it cannot be hashed. Add a frozen copy, s.add(tuple([1, 2, 1])), which gives {(1, 2, 1)}.	sets python hashing	Math::Sets::Sets in Python
+Is every tuple hashable?	No. (1, [2]) is unhashable because it contains a list. The rule is hashable, not immutable: a tuple is only as hashable as its contents.	sets python hashing	Math::Sets::Sets in Python
+How many members does {True, 1, 1.0, '1', (1,)} have?	3. True == 1 == 1.0 and they hash alike, so they are one member (the first written, True, is the one kept); '1' and (1,) are two more.	sets python hashing	Math::Sets::Sets in Python
+Why does s1.add(s2) fail when s2 is a set, and what did you probably mean?	add puts in ONE member, and a set is unhashable, so TypeError. To merge: s1.update(s2) or s1 |= s2. To store s2 as a single member: s1.add(frozenset(s2)).	sets python trap	Math::Sets::Sets in Python
+Three ways to get the members of s2 into s1?	s1.update(s2) and s1 |= s2 change s1 in place; s1 | s2 builds a new set and leaves both alone. update() accepts any iterable, |= and | need a set on the right.	sets python operations	Math::Sets::Sets in Python
+How do you store a whole set as one member of another set?	Freeze it first: s1.add(frozenset(s2)). A frozenset cannot change, so it is hashable.	sets python frozenset	Math::Sets::Sets in Python
+Is + defined for sets?	No: {1} + {2} raises TypeError. + concatenates sequences; the set operation is union, written |. Note that - does work: it is set difference.	sets python trap	Math::Sets::Sets in Python
+Give the operator and the method for union, intersection, difference and symmetric difference.	| union(), & intersection(), - difference(), ^ symmetric_difference(). Same result on two sets; the methods also accept any iterable.	sets python operations	Math::Sets::Sets in Python
+Give the operators for subset, proper subset, superset and proper superset, and the method names.	<=, <, >=, >. Methods: issubset() for <= and issuperset() for >=; proper subset and proper superset have no method.	sets python operations	Math::Sets::Sets in Python
+Which set test has a method but no operator?	isdisjoint(). The nearest operator form is not (a & b), which builds the intersection first.	sets python operations	Math::Sets::Sets in Python
+Predict, with a = {1, 2}: a | (3, 4) and a.union((3, 4)).	a | (3, 4) raises TypeError (unsupported operand types set and tuple); a.union((3, 4)) returns {1, 2, 3, 4}. Operators need sets on both sides; methods accept any iterable.	sets python operators-vs-methods	Math::Sets::Sets in Python
+X = {1, 3, 5}. Does X & [1, 5, 9] work? Does X.intersection([1, 5, 9])?	The operator raises TypeError; the method returns {1, 5}. A method converts its argument to a set; an operator does not.	sets python operators-vs-methods	Math::Sets::Sets in Python
+a.union(b, c) works. Does a.symmetric_difference(b, c)?	No: symmetric_difference takes exactly one argument (TypeError). union, intersection and difference take several. For more sets chain the operator: a ^ b ^ c.	sets python operators-vs-methods	Math::Sets::Sets in Python
+Can you call s.__contains__(x) directly?	Yes: it is exactly what x in s calls. A note saying it cannot be used is wrong.	sets python trap	Math::Sets::Sets in Python
+How is s1 ^ s2 ^ s3 evaluated, and which elements does it keep?	Left to right, as (s1 ^ s2) ^ s3. It keeps the elements that are in an ODD number of the three sets, not those in exactly one.	sets python chaining	Math::Sets::Sets in Python
+Predict: {0, 1, 2, 3, 4} ^ {2, 3, 4} ^ {2, 5}.	{0, 1, 2, 5}. Count occurrences: 0, 1 and 5 once; 2 three times (odd, so it stays); 3 and 4 twice (even, so they cancel).	sets python chaining	Math::Sets::Sets in Python
+What are the in-place forms of the set operators?	|=, &=, -=, ^= change the left set in place: s |= {11, 22} adds two members. Each needs a set on the right; update() is the iterable-friendly form of |=.	sets python operations	Math::Sets::Sets in Python
+How do you test whether two sets are equal?	a == b. Only membership counts: {1, 9} == {9, 1} is True, whatever order they were built in.	sets python equality	Math::Sets::Sets in Python
+Why is list(a) == list(b) not a test for set equality?	Equal sets can iterate in different orders: list({1, 9}) is [1, 9] but list({9, 1}) is [9, 1], so the lists differ while the sets are equal.	sets python equality	Math::Sets::Sets in Python
+Why is a.difference(b) == set() not a test for set equality?	It only shows a is a subset of b. {1}.difference({1, 2}) is empty, yet {1} != {1, 2}. Use a == b, or check that a ^ b is empty.	sets python equality	Math::Sets::Sets in Python
+Predict: set().issubset([]).	True. The empty set is a subset of everything, so issubset() of an empty iterable is True for an empty set; it is False only for a non-empty one.	sets python trap	Math::Sets::Sets in Python
+What does if (s1 <= s2, s3): actually test?	A tuple, (s1 <= s2, s3), which is non-empty and so always true: the branch always runs. Write s1 <= s2 and s1 <= s3.	sets python trap	Math::Sets::Sets in Python
+remove(x) versus discard(x) when x is not in the set?	remove raises KeyError; discard does nothing. Both remove x when it is present.	sets python removing	Math::Sets::Sets in Python
+What does s.pop() do, and what happens on an empty set?	Removes and returns an arbitrary member, since a set has no first one. On an empty set it raises KeyError.	sets python removing	Math::Sets::Sets in Python
+fs is a frozenset. What does fs.add(3) do, and how do you get a frozenset with 3 added?	AttributeError: frozenset has no add. Build a new one, fs.union([3]) or fs | {3}; fs itself is unchanged.	sets python frozenset	Math::Sets::Sets in Python
+Predict the types of {1} | frozenset({2}) and frozenset({2}) | {1}.	set, then frozenset. When a set and a frozenset are combined, the LEFT operand decides the type of the result.	sets python frozenset	Math::Sets::Sets in Python
+How do you remove duplicates from a list and keep first-seen order?	list(dict.fromkeys(L)): a dict's keys are a set that remembers insertion order. list(set(L)) may reorder.	sets python dedupe	Math::Sets::Sets in Python
+Why does list(set([1, 2, 1, 3])) usually come out sorted, and is that reliable?	Luck, not a rule: a small int hashes to itself and lands in slot n mod table size. list(set([10, 3, 8])) is [8, 10, 3], and a set of strings changes order between runs.	sets python dedupe	Math::Sets::Sets in Python
+How do you sort a set?	sorted(s) returns a sorted list. A set itself has no order and cannot be sorted in place.	sets python sorting	Math::Sets::Sets in Python
+How do you sort a set that mixes ints and strings?	sorted(s, key=lambda x: (isinstance(x, str), x)). Plain sorted() raises TypeError (int against str); the key puts numbers first, since False < True, and never compares across types.	sets python sorting	Math::Sets::Sets in Python
+Why keep a set of visited nodes when walking a graph?	A graph with cycles would loop forever without it, and a set answers 'seen already?' with one hash lookup instead of scanning a list.	sets python uses	Math::Sets::Sets in Python
+With key sets customers and invoiced, which set operations give the keys of an inner join, an outer join and a left anti-join?	customers & invoiced, customers | invoiced, customers - invoiced. A join keeps the rows whose keys survive the set operation.	sets python uses	Math::Sets::Sets in Python
+What does B >= A mean for sets, in English and in Polish?	B is a superset of A: every member of A is in B. B jest nadzbiorem A.	sets python operations	Math::Sets::Sets in Python
+s1 = {'a', 'b', 'c'}, s2 = {'c', 'd', 'e'}. Predict s1 | s2 and s1 & s2.	{'a', 'b', 'c', 'd', 'e'} and {'c'}. Union takes every member of either; intersection only the shared 'c'.	sets python kata	Math::Sets::Sets in Python
+Predict: set((1, 2, 3)) & set((2, 3, 4)) & set((3, 4, 5)).	{3}: the only number in all three.	sets python kata	Math::Sets::Sets in Python
+Is set2 < = set1 (with a space) a subset test?	No: SyntaxError. <= is a single token; the space splits it into < and =.	sets python trap	Math::Sets::Sets in Python
+What does d1.keys() & d2.keys() return?	A set of the keys both dicts have. A keys view behaves like a set: |, &, -, ^ and <= all work, and it accepts any iterable on the other side.	sets python dict-views	Math::Sets::Sets in Python
+Do dict.items() and dict.values() views support set operations?	items() does, when the values are hashable, and it matches only equal key-value pairs. values() does not (TypeError): values can repeat and need not be hashable.	sets python dict-views	Math::Sets::Sets in Python
+Predict: s = {1, 2}; s.update({1: 'a', 5: 'e'}); s.	{1, 2, 5}. Iterating a dict yields its keys, so update adds 1 and 5 and ignores the values.	sets python dict-views	Math::Sets::Sets in Python
+'Remove duplicates' hides two decisions. Which?	Which copy represents the group (first seen, last seen, arbitrary), and what order the survivors come in (first-seen, sorted, hash order). Every idiom answers both, silently.	sets python dedupe	Math::Sets::Sets in Python
+words = ['Pear', 'fig', 'pear']. Predict list({w.lower(): w for w in words}.values()).	['pear', 'fig']: the LAST spelling at the FIRST spelling's position. A dict keeps a key's first position but overwrites its value on every repeat.	sets python dedupe	Math::Sets::Sets in Python
+How do you dedupe by a key and keep the FIRST copy of each group?	Loop with d.setdefault(key(x), x): setdefault never overwrites an existing key. Then list(d.values()).	sets python dedupe	Math::Sets::Sets in Python
+What does [k for k, _ in groupby(items)] remove?	Only ADJACENT repeats: [3, 1, 3] stays [3, 1, 3]. Sort first. It is the same rule as Rust's dedup and ABAP's DELETE ADJACENT DUPLICATES.	sets python dedupe	Math::Sets::Sets in Python
+Predict: list(dict.fromkeys([1.0, 1, True])).	[1.0]. The three are equal and hash alike, so they are one key, and the first to arrive is kept with its own type.	sets python dedupe	Math::Sets::Sets in Python
+How do you remove duplicate rows from a list of lists?	Lists are unhashable, so hash a frozen copy: list(dict.fromkeys(map(tuple, rows))). The fallback, if r not in out: out.append(r), works on anything but is quadratic.	sets python dedupe	Math::Sets::Sets in Python
+How does ABAP remove duplicates from an internal table?	SORT by the fields, then DELETE ADJACENT DUPLICATES COMPARING the same fields (adjacent only; keeps the first of each run). Or INSERT the rows into a table WITH UNIQUE KEY, where the first wins and later duplicates set sy-subrc = 4.	sets python dedupe	Math::Sets::Sets in Python
+How does Rust remove duplicates from a Vec?	sort() then dedup() gives sorted order and removes adjacent repeats. Filtering with a HashSet, where seen.insert(x) returns true only the first time, keeps first-seen order.	sets python dedupe	Math::Sets::Sets in Python
+Why does Python need a second set type, frozenset?	A set can change after it is stored, so its hash could change and the container would lose it; Python therefore refuses to hash a set. frozenset drops every mutating method, and so it can be a set member or a dict key.	sets python frozenset	Math::Sets::Sets in Python
+Predict: {1, 2} in {frozenset({1, 2})}.	True, even though {1, 2} is unhashable: set membership (and remove, discard) treat a set argument as if it were frozen.	sets python frozenset	Math::Sets::Sets in Python
+Predict: {frozenset({1, 2}): 'x'}[{1, 2}].	TypeError: unhashable type. A dict lookup does not freeze the key for you; write d[frozenset({1, 2})].	sets python frozenset	Math::Sets::Sets in Python
+t = frozenset({1}); u = t; t |= {2}. What are t and u now?	t = frozenset({1, 2}), u = frozenset({1}). A frozenset has no in-place |=, so Python builds a new frozenset and rebinds t; u still names the old one.	sets python frozenset	Math::Sets::Sets in Python
+What does f.copy() return for a frozenset f?	f itself: f.copy() is f is True. Nothing can change it, so a copy would protect nothing.	sets python frozenset	Math::Sets::Sets in Python
+Why does Rust have no frozenset?	Immutability belongs to the binding, not the type: let s is frozen, let mut s is not. And the borrow checker never hands out a &mut to a stored member. The exception is interior mutability: BTreeSet<Cell<i32>> compiles, and Clippy's mutable_key_type lint warns.	sets python frozenset	Math::Sets::Sets in Python
+Can a Rust HashSet contain HashSets?	No: HashSet does not implement Hash, because equal sets can iterate in different orders, so insert fails with E0599. Use BTreeSet as the element type; it hashes its members in sorted order.	sets python frozenset	Math::Sets::Sets in Python
+How is a set of sets built in ABAP, which has no frozenset?	Freeze each inner set into a key by hand, e.g. sort it and join it into a string with a separator, and store that in a HASHED TABLE WITH UNIQUE KEY.	sets python frozenset	Math::Sets::Sets in Python
+l1 = ['a', 'a', 'b', 'c', 'd'], l2 = ['a', 'b', 'c', 'f']. Why is set(l1) ^ set(l2) equal to {'d', 'f'} while the Counter version (c1 - c2 | c2 - c1) gives a, d, f?	A set drops the copies first, so 'a' is in both and cancels. Counter is a multiset: l1 has two 'a' and l2 one, so one 'a' is left over. Counter has no ^, and - binds tighter than |, so the line is (c1 - c2) | (c2 - c1).	sets python dedupe	Math::Sets::Sets in Python
+Predict: bool(set()) and bool({0}).	False and True. An empty set is falsy; any non-empty set is truthy, whatever its members.	sets python trap	Math::Sets::Sets in Python
+Math Vault, relational symbols: what does x ∈ A mean, and what is the example?	Set membership: the element x is in the set A. Example: i ∈ ℂ.	membership	Math::Sets::Symbols (Math Vault)
+Math Vault, relational symbols: what does x ∉ A mean, and what is the example?	Set non-membership: x is not in A. Example: π ∉ ℚ.	membership	Math::Sets::Symbols (Math Vault)
+Math Vault, relational symbols: what does A ∋ x mean, and what is the example?	Set inclusion read from the set's side: A includes the element x. A ∋ x ⟺ x ∈ A. The sign is a mirrored ∈, not the quantifier ∃.	membership trap	Math::Sets::Symbols (Math Vault)
+Math Vault, relational symbols: what does A ∌ x mean, and what is the example?	Set non-inclusion: A does not include the element x. Example: {a} ∌ {a}, since the set {a} is not one of its own members.	membership	Math::Sets::Symbols (Math Vault)
+Math Vault, relational symbols: what does A = B mean, and what is the example?	Set equality: A and B have the same members (extensionality). Example: ∅ = {}.	relation	Math::Sets::Symbols (Math Vault)
+Math Vault, relational symbols: what does A ⊆ B mean, and what is the example?	Subset: every member of A is a member of B, equality allowed. Example: ℕ ⊆ ℚ.	relation	Math::Sets::Symbols (Math Vault)
+Math Vault, relational symbols: what does A ⊂ B mean, and what is the example?	Proper subset, in Math Vault's convention: A ⊂ B ⟺ A ⊆ B and A ≠ B. Jech and Halmos use ⊂ for the plain subset; check the book.	relation trap	Math::Sets::Symbols (Math Vault)
+Math Vault, relational symbols: what does A ⊄ B mean, and what is the example?	Non-subset: A is not a subset of B, so there is an x ∈ A with x ∉ B. One witness is enough.	relation	Math::Sets::Symbols (Math Vault)
+Math Vault, relational symbols: what does A ⊇ B mean, and what is the example?	Superset: every member of B is a member of A. Example: {5, 8, 1} ⊇ {1, 8}.	relation	Math::Sets::Symbols (Math Vault)
+Math Vault, relational symbols: what does A ⊃ B mean, and what is the example?	Proper superset: A ⊃ B ⟺ B ⊂ A, so A ⊇ B and A ≠ B.	relation	Math::Sets::Symbols (Math Vault)
+Math Vault, relational symbols: what does A ⊉ B mean, and what is the example?	Non-superset: A is not a superset of B. Example: ℕ ⊉ ℝ.	relation	Math::Sets::Symbols (Math Vault)
+Math Vault, cardinality symbols: what is |A|?	The cardinality of A, its size by matching. Example: |ℕ| = |ℤ|, since the integers can be listed.	cardinality	Math::Sets::Symbols (Math Vault)
+Math Vault, cardinality symbols: what is ℵ₀, ℵ₁, ℵ₂, …?	The aleph numbers: the infinite cardinals in order of size. ℵ₀ = |ℕ|. Under the continuum hypothesis, ℵ₁ = 2^(ℵ₀).	cardinality	Math::Sets::Symbols (Math Vault)
+Math Vault, cardinality symbols: what is ℶ₀, ℶ₁, ℶ₂, …?	The beth numbers, by repeated power set: ℶ₀ = |ℕ|, ℶ₁ = |𝒫(ℕ)|, ℶ₂ = |𝒫(𝒫(ℕ))|. ℶ₁ = ℵ₁ is the continuum hypothesis.	cardinality	Math::Sets::Symbols (Math Vault)
+Math Vault, cardinality symbols: what is ℷ (gimel)?	The gimel function, ℷ(κ) = κ^(cf κ). By König's theorem ℷ(κ) > κ for every infinite cardinal κ.	cardinality	Math::Sets::Symbols (Math Vault)
+Math Vault, cardinality symbols: what is 𝔠?	The cardinality of the continuum: |ℝ| = 𝔠 = |𝒫(ℕ)| = 2^(ℵ₀) = ℶ₁.	cardinality	Math::Sets::Symbols (Math Vault)
+Math Vault, cardinality symbols: what is ω, ω₁, ω₂, …?	The omega ordinals: ω = {0, 1, 2, …} is the first infinite ordinal, and ω + 1 = ω ∪ {ω} its successor; ω₁ is the first uncountable ordinal.	ordinal	Math::Sets::Symbols (Math Vault)
+Math Vault, cardinality symbols: what is Ω?	In Math Vault and Cantor, the first uncountable ordinal: Ω = ω₁. In Halbeisen, Ω is the class of all ordinals. Two conventions.	ordinal trap	Math::Sets::Symbols (Math Vault)
+Math Vault, cardinality symbols: what is ε₀, ε₁, …?	The epsilon ordinals, the fixed points of α ↦ ω^α: ε₀ = ω^(ω^(ω^…)), the least ordinal with ω^ε = ε.	ordinal	Math::Sets::Symbols (Math Vault)
+Math Vault, cardinality symbols: what is S(α)?	The successor of the ordinal α, α ∪ {α}, also written α + 1. Addition is defined by recursion: α + S(β) = S(α + β).	ordinal	Math::Sets::Symbols (Math Vault)
+Math Vault, cardinality symbols: what is κ⁺?	The successor cardinal of κ, the least cardinal greater than κ. ℵ_α⁺ = ℵ_(α+1).	cardinality	Math::Sets::Symbols (Math Vault)
+Which sign says that the set A includes the element x, read from the set's side?	A ∋ x, the mirrored membership sign.	membership	Math::Sets::Symbols (Math Vault)
+Which sign says that A is a subset of B and A ≠ B, and what is its trap?	A ⊂ B in Math Vault, Cunningham and this library; in Jech and Halmos ⊂ allows equality, so a book may mean ⊆ by it.	relation trap	Math::Sets::Symbols (Math Vault)
+What is the difference between the aleph and the beth numbers?	ℵ_α lists all infinite cardinals in order of size; ℶ_α is reached by repeated power sets from |ℕ|. ℵ₀ = ℶ₀ always; ℵ₁ = ℶ₁ is the continuum hypothesis, undecidable in ZFC.	cardinality	Math::Sets::Symbols (Math Vault)
+Which three symbols name the same size: that of the real line?	𝔠, 2^(ℵ₀) and ℶ₁, all equal to |ℝ| = |𝒫(ℕ)|.	cardinality	Math::Sets::Symbols (Math Vault)
+What does a witness for A ⊄ B look like?	An element x with x ∈ A and x ∉ B. One such x proves the non-subset claim.	relation	Math::Sets::Symbols (Math Vault)
+In an unbracketed set expression, which operation is done first, and what is the full order?	Complement first, then difference, then intersection, then union; equals go left to right. So A ∪ B ∩ C means A ∪ (B ∩ C).	sets math precedence	Math::Sets::Reading a set expression
+Why is the order of set operations complement, difference, intersection, union?	It copies logic, where not binds tighter than and, and and tighter than or: ′ is not, ∩ is and, ∪ is or, and ∖ is 'and not'.	sets math precedence	Math::Sets::Reading a set expression
+How does Python group A | B & C?	A | (B & C): & binds tighter than |, the same as ∩ before ∪.	sets math python	Math::Sets::Reading a set expression
+List Python's set operators from tightest to loosest.	- then & then ^ then |. Inherited from C's bitwise operators, and it matches the textbook order for sets.	sets math python	Math::Sets::Reading a set expression
+How is A ∖ B ∖ C read, and does it matter?	(A ∖ B) ∖ C, left to right. It matters: A ∖ (B ∖ C) is a different set, because difference is not associative.	sets math precedence	Math::Sets::Reading a set expression
+With U = {1, 2, 3, 4, 5}, evaluate {5} ∪ {1, 2}′ ∩ {2, 3} by the precedence rule, and with the other grouping.	By the rule ∩ goes first: {5} ∪ ({3, 4, 5} ∩ {2, 3}) = {5} ∪ {3} = {3, 5}. Grouped as ({5} ∪ {3, 4, 5}) ∩ {2, 3} it is {3}. Two answers from one line of symbols, so bracket when in doubt.	sets math precedence	Math::Sets::Reading a set expression
+What is wrong with writing x ∈ A ∩ x ∈ B?	∩ needs a set on each side, but 'x ∈ A' is a statement, true or false. Write x ∈ A ∧ x ∈ B, or x ∈ A ∩ B.	sets math trap	Math::Sets::Reading a set expression
+What is wrong with writing x ∈ A ∧ B?	∧ needs a statement on each side, but B is a set. Write x ∈ A ∧ x ∈ B.	sets math trap	Math::Sets::Reading a set expression
+What does Python do with x in A & x in B?	& binds tighter than in, so it reads x in (A & x) in B, a chained comparison that tries to compute A & 2 and raises TypeError.	sets math python	Math::Sets::Reading a set expression
+What does x in A and B return in Python, and why is it dangerous?	If x is in A it returns the set B itself, which is truthy even when x is not in B, so an if takes the wrong branch and nothing complains. Write x in A and x in B.	sets math python	Math::Sets::Reading a set expression
+Using Kuratowski pairs, (a, b) = {{a}, {a, b}}, what is (1, 2) ∩ (2, 1)?	{{1, 2}}. (1, 2) = {{1}, {1, 2}} and (2, 1) = {{2}, {1, 2}} share only the member {1, 2}.	sets math notation	Math::Sets::Reading a set expression
+Read as open intervals, what is (1, 2) ∪ (2, 1)?	(1, 2). The interval (2, 1) is the set of t with 2 < t < 1, which is empty. Same symbols as the ordered pair, a different set: the context decides.	sets math notation	Math::Sets::Reading a set expression
+Read the symbol: ∈  ∉  ∋  ∌	is a member of, is not, contains. Explained under: glossary entry: membership.	symbol	Math::Sets::Symbol index
+Which symbol says: is a member of, is not, contains?	∈  ∉  ∋  ∌ (explained under: glossary entry: membership)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: {a, b, c}	the set whose members are a, b, c. Explained under: what is a set.	symbol	Math::Sets::Symbol index
+Which symbol says: the set whose members are a, b, c?	{a, b, c} (explained under: what is a set)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: {x ∈ A : P(x)}, {x | P(x)}	the set of x such that P(x). Explained under: glossary entry: set builder notation.	symbol	Math::Sets::Symbol index
+Which symbol says: the set of x such that P(x)?	{x ∈ A : P(x)}, {x | P(x)} (explained under: glossary entry: set builder notation)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ∅, { }	the empty set. Explained under: glossary entry: empty set.	symbol	Math::Sets::Symbol index
+Which symbol says: the empty set?	∅, { } (explained under: glossary entry: empty set)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: U, 𝒰, E, Ω	the universal set (Ω also the class of ordinals, or ω₁). Explained under: glossary entry: universal set.	symbol	Math::Sets::Symbol index
+Which symbol says: the universal set (Ω also the class of ordinals, or ω₁)?	U, 𝒰, E, Ω (explained under: glossary entry: universal set)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ⊆  ⊂  ⊊  ⊇  ⊃  ⊄  ⊉	subset, proper subset (two conventions), superset, and their negations. Explained under: glossary entry: symbols.	symbol	Math::Sets::Symbol index
+Which symbol says: subset, proper subset (two conventions), superset, and their negations?	⊆  ⊂  ⊊  ⊇  ⊃  ⊄  ⊉ (explained under: glossary entry: symbols)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: A = B	the same members, by extensionality. Explained under: glossary entry: extensionality.	symbol	Math::Sets::Symbol index
+Which symbol says: the same members, by extensionality?	A = B (explained under: glossary entry: extensionality)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ∪  ∩	union, intersection; ∪𝓕 and ∩𝓕 over a family. Explained under: algebra of sets.	symbol	Math::Sets::Symbol index
+Which symbol says: union, intersection; ∪𝓕 and ∩𝓕 over a family?	∪  ∩ (explained under: algebra of sets)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ∖  −	difference, A ∖ B = {x ∈ A : x ∉ B}. Explained under: algebra of sets.	symbol	Math::Sets::Symbol index
+Which symbol says: difference, A ∖ B = {x ∈ A : x ∉ B}?	∖  − (explained under: algebra of sets)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: A′  Aᶜ  Ā  U − A	complement within the universal set. Explained under: glossary entry: complement.	symbol	Math::Sets::Symbol index
+Which symbol says: complement within the universal set?	A′  Aᶜ  Ā  U − A (explained under: glossary entry: complement)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: △  ⊕	symmetric difference. Explained under: glossary entry: symmetric difference.	symbol	Math::Sets::Symbol index
+Which symbol says: symmetric difference?	△  ⊕ (explained under: glossary entry: symmetric difference)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: A × B	Cartesian product, the set of ordered pairs. Explained under: glossary entry: cartesian product.	symbol	Math::Sets::Symbol index
+Which symbol says: Cartesian product, the set of ordered pairs?	A × B (explained under: glossary entry: cartesian product)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: (a, b), ⟨a, b⟩	ordered pair. Explained under: glossary entry: ordered pair.	symbol	Math::Sets::Symbol index
+Which symbol says: ordered pair?	(a, b), ⟨a, b⟩ (explained under: glossary entry: ordered pair)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: 𝒫(A), 2ᴬ	power set. Explained under: glossary entry: power set.	symbol	Math::Sets::Symbol index
+Which symbol says: power set?	𝒫(A), 2ᴬ (explained under: glossary entry: power set)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: |A|, n(A), #A, card(A)	cardinality. Explained under: glossary entry: cardinality.	symbol	Math::Sets::Symbol index
+Which symbol says: cardinality?	|A|, n(A), #A, card(A) (explained under: glossary entry: cardinality)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ℵ₀, ℵ₁, ℶ₁, 𝔠, κ⁺, ℷ	infinite cardinals, the continuum, successor, gimel. Explained under: glossary entry: aleph beth and the continuum c.	symbol	Math::Sets::Symbol index
+Which symbol says: infinite cardinals, the continuum, successor, gimel?	ℵ₀, ℵ₁, ℶ₁, 𝔠, κ⁺, ℷ (explained under: glossary entry: aleph beth and the continuum c)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ω, ω₁, ε₀, α + 1, S(α)	ordinals and successors. Explained under: glossary entry: ordinal.	symbol	Math::Sets::Symbol index
+Which symbol says: ordinals and successors?	ω, ω₁, ε₀, α + 1, S(α) (explained under: glossary entry: ordinal)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ℕ  ℤ  ℚ  ℝ  ℂ	the number sets. Explained under: glossary entry: number sets n z q r c.	symbol	Math::Sets::Symbol index
+Which symbol says: the number sets?	ℕ  ℤ  ℚ  ℝ  ℂ (explained under: glossary entry: number sets n z q r c)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: x R y, (x, y) ∈ R, dom R, ran R	a relation and its domain and range. Explained under: glossary entry: relation.	symbol	Math::Sets::Symbol index
+Which symbol says: a relation and its domain and range?	x R y, (x, y) ∈ R, dom R, ran R (explained under: glossary entry: relation)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: f: A → B, x ↦ f(x), f[A], f⁻¹, g ∘ f	function, image of a set, inverse, composition. Explained under: relations and functions.	symbol	Math::Sets::Symbol index
+Which symbol says: function, image of a set, inverse, composition?	f: A → B, x ↦ f(x), f[A], f⁻¹, g ∘ f (explained under: relations and functions)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: [x], A/~	equivalence class, quotient set. Explained under: glossary entry: equivalence relation.	symbol	Math::Sets::Symbol index
+Which symbol says: equivalence class, quotient set?	[x], A/~ (explained under: glossary entry: equivalence relation)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ≤, <, ≺ on a poset	partial order, strict order. Explained under: glossary entry: partial order.	symbol	Math::Sets::Symbol index
+Which symbol says: partial order, strict order?	≤, <, ≺ on a poset (explained under: glossary entry: partial order)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ≈, ~, ≼, |A| ≤ |B|	equinumerous, injects into. Explained under: glossary entry: symbols.	symbol	Math::Sets::Symbol index
+Which symbol says: equinumerous, injects into?	≈, ~, ≼, |A| ≤ |B| (explained under: glossary entry: symbols)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: κ → (λ)ⁿ_r	partition relation. Explained under: glossary entry: partition relation arrow notation.	symbol	Math::Sets::Symbol index
+Which symbol says: partition relation?	κ → (λ)ⁿ_r (explained under: glossary entry: partition relation arrow notation)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ∀  ∃  ∃!  ∄	for all, there exists, exactly one, none. Explained under: glossary entry: quantifier.	symbol	Math::Sets::Symbol index
+Which symbol says: for all, there exists, exactly one, none?	∀  ∃  ∃!  ∄ (explained under: glossary entry: quantifier)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ¬  ∧  ∨  ⇒  →  ⇔  ↔  ⇏	not, and, or, implies, iff, does not imply. Explained under: glossary entry: connectives.	symbol	Math::Sets::Symbol index
+Which symbol says: not, and, or, implies, iff, does not imply?	¬  ∧  ∨  ⇒  →  ⇔  ↔  ⇏ (explained under: glossary entry: connectives)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ⊢  ⊬  ⊨  ⊣	proves, does not prove, models; the reversed turnstile. Explained under: glossary entry: turnstile.	symbol	Math::Sets::Symbol index
+Which symbol says: proves, does not prove, models; the reversed turnstile?	⊢  ⊬  ⊨  ⊣ (explained under: glossary entry: turnstile)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ∴  ∵	therefore, because. Explained under: glossary entry: therefore and because.	symbol	Math::Sets::Symbol index
+Which symbol says: therefore, because?	∴  ∵ (explained under: glossary entry: therefore and because)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ∎  ■  □	end of proof. Explained under: glossary entry: end of proof qed.	symbol	Math::Sets::Symbol index
+Which symbol says: end of proof?	∎  ■  □ (explained under: glossary entry: end of proof qed)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: :=  :⟺  ≝	is defined as (a term, a statement). Explained under: README.md#three-books-three-notations.	symbol	Math::Sets::Symbol index
+Which symbol says: is defined as (a term, a statement)?	:=  :⟺  ≝ (explained under: README.md#three-books-three-notations)	symbol reverse	Math::Sets::Symbol index
+Read the symbol: ≃	equality inside Cori and Lascar's formal language. Explained under: reading a formula.	symbol	Math::Sets::Symbol index
+Which symbol says: equality inside Cori and Lascar's formal language?	≃ (explained under: reading a formula)	symbol reverse	Math::Sets::Symbol index
+How is A ∋ a read, and which symbol is it often confused with?	A contains a: the membership sign mirrored, the same fact as a ∈ A from the set's side. Not ∃, which means 'there exists'.	notation trap	Math::Sets::Symbols
+What does a ∉ A mean?	a is not a member of A.	notation	Math::Sets::Symbols
+Which symbols are used for the universal set?	U, 𝒰, E or Ω, fixed in advance. Not ξ, which a circulating chart invented.	notation	Math::Sets::Symbols
+A ⊆ B versus A ⊂ B: what is the trap?	⊆ allows equality in every book. ⊂ means proper subset in Cunningham and this library, but allows equality in Jech and Halmos. Check the book's convention.	trap	Math::Sets::Symbols
+What does A ⊄ B say, as a witness?	There is an x ∈ A with x ∉ B.	notation	Math::Sets::Symbols
+What is {x ∈ A : P(x)}, and what else is the colon written as?	The set of members of A that satisfy P; the colon is 'such that' and a bar | means the same.	notation	Math::Sets::Symbols
+Name four spellings of the complement of A.	A′, Aᶜ, Ā and U − A, all within a universal set U.	notation	Math::Sets::Symbols
+Two spellings of the symmetric difference?	A △ B and A ⊕ B: the members of exactly one of the two sets.	notation	Math::Sets::Symbols
+Two spellings of the power set of A?	𝒫(A) and 2ᴬ: the set of all subsets of A.	notation	Math::Sets::Symbols
+Four spellings of the cardinality of A?	|A|, n(A), #A and card(A).	notation	Math::Sets::Symbols
+What are ℵ₀, ℶ₁ and 𝔠?	ℵ₀ = |ℕ|; ℶ₁ = |𝒫(ℕ)| = |ℝ| = 𝔠, the continuum. The continuum hypothesis says ℵ₁ = ℶ₁.	definition	Math::Sets::Symbols
+What is ω + 1 as a set?	ω ∪ {ω}: the successor of the first infinite ordinal.	definition	Math::Sets::Symbols
+What do ℕ, ℤ, ℚ, ℝ, ℂ stand for, and where does Z come from?	Natural numbers, integers (German Zahlen), rationals (quotients), reals, complex numbers; each is a subset of the next.	notation	Math::Sets::Symbols
+What is the difference between ∃x, ∃!x and ∄x?	There exists an x; there is exactly one x; there is no x (the same as ¬∃x).	notation	Math::Sets::Symbols
+What do ⊢ and ⊨ mean, and how do they differ?	A ⊢ B: B is provable from A (proofs). A ⊨ B: every model of A satisfies B (truth). Gödel's completeness theorem makes them agree in first-order logic.	definition	Math::Sets::Symbols
+Is A ⊣ B the sign for 'does not yield'?	No. ⊬ is 'does not prove'. ⊣ is ⊢ read right to left, or in category theory 'is left adjoint to'; Halbeisen uses it as an end-of-proof mark.	trap	Math::Sets::Symbols
+What do ∴ and ∵ mean?	∴ therefore, ∵ because: three dots pointing up or down, shorthand of school proofs.	notation	Math::Sets::Symbols
+What does ∎ or □ at the end of a proof mean?	End of proof, Halmos's tombstone, standing for QED, quod erat demonstrandum.	notation	Math::Sets::Symbols
+How are := and :⟺ read?	Is defined as: := for a term, :⟺ for a statement. Halbeisen uses both.	notation	Math::Sets::Symbols
+What does ⇏ mean?	Does not imply: A ⇏ B says A can hold while B fails.	notation	Math::Sets::Symbols
+Which symbol does Cori and Lascar use for equality inside the formal language?	≃, where every other book writes =.	notation	Math::Sets::Symbols
+What does κ → (λ)ⁿ_r say?	However the n-element subsets of a set of size κ are split into r pieces, some subset of size λ has all its n-element subsets in one piece. Ramsey's theorem is ω → (ω)ⁿ_r.	definition	Math::Sets::Symbols
+What is a set, in the school definition, and what does 'well-defined' add?	A well-defined collection of objects: for any object it is settled whether it belongs. 'The three best students' is not a set; 'the students in the quiz' is.	sets math definition	Math::Sets::Set katas
+Roster form versus set-builder form: give both for the vowels.	Roster lists the members: {a, e, i, o, u}. Set-builder states the property: {x : x is a vowel of the English alphabet}.	sets math notation	Math::Sets::Set katas
+Can every set be written in roster form?	No. The real numbers between 2 and 5 have no first member and no next member, so they can only be given by a property: {x : x is real and 2 < x < 5}.	sets math trap	Math::Sets::Set katas
+Does the order of listing or a repeated member change a set?	No. {1, 2, 3} = {3, 1, 2}, and the set of letters of BANANA is {B, A, N}, three members. A set is only its members.	sets math definition	Math::Sets::Set katas
+When is a set finite, and when infinite?	Finite when its members can be counted off by a natural number n(A) = m; otherwise infinite. The digits in the decimal expansion of √2 form a finite set (at most ten), though the expansion never ends.	sets math definition	Math::Sets::Set katas
+What is the empty set, and name two sets that are empty in disguise.	The set with no members, written ∅ or { }. Primes that are composite; rational numbers that are irrational; irrationals whose decimals terminate.	sets math definition	Math::Sets::Set katas
+Is the set of even primes empty?	No: it is {2}. One member is not none.	sets math trap	Math::Sets::Set katas
+Define A ⊆ B and A ⊂ B (proper subset).	A ⊆ B when every member of A is a member of B. A ⊂ B when also A ≠ B. Every set is a subset of itself; ∅ is a subset of every set.	sets math definition	Math::Sets::Set katas
+1 ∈ {1}?  {2} ∈ {2}?  {2} ∈ {{2}}?  ∅ ∈ {1, 2, 3}?  ∅ ⊆ {1, 2, 3}?	True, false, true, false, true. ∈ asks whether the thing is a member; ⊆ asks whether each of its members is.	sets math trap	Math::Sets::Set katas
+What is the cardinality of {a, {a}}, and of {∅, {∅}, {∅, {∅}}}?	2 and 3. A member that is itself a set counts as one member; braces inside braces do not open.	sets math trap	Math::Sets::Set katas
+What is the power set P(A), and how many members does it have?	The set of all subsets of A. If n(A) = p then n(P(A)) = 2^p, and A has 2^p − 1 proper subsets.	sets math definition	Math::Sets::Set katas
+P(∅) = ?  P({∅}) = ?	P(∅) = {∅}, one member. P({∅}) = {∅, {∅}}, two members. The power set of the empty set is not empty.	sets math trap	Math::Sets::Set katas
+n(A) = 10: how many subsets? n(A) = 100?	2^10 = 1024, and 2^100 ≈ 1.27 × 10^30.	sets math counting	Math::Sets::Set katas
+What is the universal set U, and give two examples.	The set everything under discussion is drawn from, fixed in advance: all students of the school when sets of students are discussed; the real numbers when naturals, rationals and irrationals are. The rectangle of a Venn diagram.	sets math definition	Math::Sets::Set katas
+Define A ∪ B, A ∩ B and A − B in set-builder form.	A ∪ B = {x : x ∈ A or x ∈ B}; A ∩ B = {x : x ∈ A and x ∈ B}; A − B = {x : x ∈ A and x ∉ B}.	sets math definition	Math::Sets::Set katas
+When are A and B disjoint?	When A ∩ B = ∅: no member in common. Two circles drawn apart in a Venn diagram.	sets math definition	Math::Sets::Set katas
+Define the complement A′, and say what it needs.	A′ = U − A = {x : x ∈ U and x ∉ A}. It needs a universal set U fixed first; the same A has different complements under different U.	sets math definition	Math::Sets::Set katas
+State De Morgan's laws for sets.	(A ∪ B)′ = A′ ∩ B′ and (A ∩ B)′ = A′ ∪ B′. Not either is neither; not both is at least one missing.	sets math formula	Math::Sets::Set katas
+A − B = ?  (as an intersection)	A − B = A ∩ B′: difference is intersection with the complement.	sets math formula	Math::Sets::Set katas
+n(A ∪ B) = ?	n(A) + n(B) − n(A ∩ B). The overlap was counted twice and is subtracted once (inclusion–exclusion).	sets math formula	Math::Sets::Set katas
+n(A − B) = ?  (only in A)	n(A) − n(A ∩ B).	sets math formula	Math::Sets::Set katas
+n(neither in A nor in B) = ?	n(A′ ∩ B′) = n((A ∪ B)′) = n(U) − n(A ∪ B).	sets math formula	Math::Sets::Set katas
+n(in exactly one of A, B) = ?	n((A − B) ∪ (B − A)) = n(A) + n(B) − 2 n(A ∩ B).	sets math formula	Math::Sets::Set katas
+n(A ∪ B ∪ C) = ?	n(A) + n(B) + n(C) − [n(A ∩ B) + n(B ∩ C) + n(C ∩ A)] + n(A ∩ B ∩ C). The triple overlap was added three times and subtracted three times, so it is added back once.	sets math formula	Math::Sets::Set katas
+40 students, 22 play badminton, 11 play both badminton and table tennis, 16 play neither. How many play table tennis but not badminton?	2. n(B ∪ T) = 40 − 16 = 24; n(T) = 24 − 22 + 11 = 13; only table tennis = 13 − 11 = 2.	sets math example	Math::Sets::Set katas
+120 students, 92 can teach a language, 46 can teach maths, every student teaches something. How many teach both? Exactly one?	Both: 92 + 46 − 120 = 18. Exactly one: 92 + 46 − 2 · 18 = 102.	sets math example	Math::Sets::Set katas
+100 students, 70 like physics, 60 like chemistry. Least possible number liking both? Greatest possible number liking neither?	Both ≥ 70 + 60 − 100 = 30, because n(P ∪ C) ≤ 100. Neither ≤ 100 − 70 = 30, when every chemistry student also likes physics.	sets math example	Math::Sets::Set katas
+56 students got certificates in at least one of three activities; 17, 28 and 25 got each; 4 got all three. How many got exactly two?	6. The pair overlaps sum to 17 + 28 + 25 + 4 − 56 = 18; each of the 4 triple students is in three pair counts, so exactly two = 18 − 3 · 4.	sets math example	Math::Sets::Set katas
+100 students: 60 English, 50 German, 35 Spanish; 40 E and G, 30 G and S, 25 E and S; 25 all three. At least two languages? At most one? None?	At least two: (40 + 30 + 25) − 2 · 25 = 45. At most one: 55. None: 100 − (145 − 95 + 25) = 25.	sets math example	Math::Sets::Set katas
+What does a Venn diagram show, and what are the rectangle and the regions?	Sets as circles inside a rectangle that is U; n circles make 2^n regions, one per pattern of membership, and every set operation is a choice of regions. Four sets cannot be drawn with circles.	sets math notation	Math::Sets::Set katas
+Is 'x ∈ A ∩ x ∈ B' a meaningful expression?	No. ∩ joins sets, not statements. Write x ∈ A ∩ B, or 'x ∈ A and x ∈ B'.	sets math trap	Math::Sets::Set katas
+Which is the right symbol: {2, 3, 4} … {1, 2, 3, 4, 5}; ∅ … {∅}; {x : x = n²} … {x : x = n³}?	⊂ (proper subset); ⊂, since ∅ is a subset of every set and ∅ ≠ {∅}; ⊄, since 4 = 2² is not a cube.	sets math trap	Math::Sets::Set katas
+What is the solution set of an equation or inequality?	The set of every value that makes it true: set-builder notation with the equation as the test. {x : x² = 4} = {−2, 2}; {(x, y) : x² + y² = 1} is the unit circle, so a graph is a solution set drawn.	sets math definition	Math::Sets::Set katas
+What is the solution set of x² − x + 1 < 0, and why?	∅, the empty set: the discriminant 1 − 4 is negative and the parabola opens up, so it never goes below the axis. 'No solution' is a set, not a failure.	sets math trap	Math::Sets::Set katas
+When are the x-intercepts of a quadratic in the solution set of its inequality?	For ≤ 0 and ≥ 0, since the quadratic is 0 there; never for < 0 and > 0.	sets math trap	Math::Sets::Set katas
+Define a set in four rules.	'Set' and 'member of' are undefined. (1) Extensionality: two sets with the same members are the same set. (2) A set is one object, so it can be a member of another set. (3) Separation: a rule picks the members of a set you already have, {x ∈ A : P(x)}, never {x : P(x)}. (4) There is an empty set, and by (1) only one.	sets math definition	Math::Sets::What is a set
+Everything about sets is defined through one relation. Which, and how does the program check that nothing is lost?	Membership, ∈. Equality is 'each member of either is in the other' and subset is 'every member of A is in B'; written in 'in' alone, they agree with Python's == and <= on all 64 pairs of subsets of {0, 1, 2}.	sets math definition	Math::Sets::What is a set
+What does a set record, and what does it forget?	It records which objects are its members. It forgets the order they were named in, how many times, and the rule that picked them: {2, 5} = {5, 2}, {1, 1, 2} = {1, 2}, and two different rules can give one set.	sets math axiom	Math::Sets::What is a set
+Why is 'a set is a collection of things' not a definition, even though it is a fair description?	'Collection' is a synonym: it names the idea without reducing it to anything simpler. Something has to be the first undefined word, and for sets it is 'set' and 'member of'; the axioms say what they do, not what they are.	sets math trap	Math::Sets::What is a set
+Which rule of the definition makes 'THE empty set' a correct phrase, and why?	Extensionality. Two rules that select nothing have the same members, none, so they select the same set. The program finds one distinct empty set among {n in 0..9 : n² < 0} and {w in [set] : len(w) > 5}.	sets math axiom	Math::Sets::What is a set
+How many members does {∅} have, and which rule of the definition is at work?	One. A set is a single object, so ∅ can be a member of another set; {∅} is a box holding an empty box, and ∅ ≠ {∅}.	sets math trap	Math::Sets::What is a set
+How many levels down does ∈ look?	Exactly one. 1 ∈ {1} and {1} ∈ {{1}}, but 1 ∉ {{1}}: a member of a member is not a member. ⊆ is the relation that chains.	sets math trap	Math::Sets::What is a set
+Run Russell's rule under separation on A = {∅, {∅}, {{∅}}}. What is R = {x ∈ A : x ∉ x}, and where is it not?	R is a harmless set (here R = A, since no set is a member of itself), and R ∉ A: if R were a member y of A, 'y ∈ y' would get opposite answers from A's membership and from R's rule. So no set has every set as a member.	sets math theorem	Math::Sets::What is a set
+Why does 'a set is one object' matter beyond ∅ versus {∅}?	Because a set can then be a member of a set: functions become sets of pairs, numbers become sets, and Russell's question 'is this set a member of itself?' can be asked. It is what makes set theory a foundation and not a notation.	sets math connection	Math::Sets::What is a set

@@ -8,6 +8,18 @@ Instructions for Claude Code sessions working in this repository.
 - If a push is refused, say so at once and quote the error. Don't carry on as if it worked.
 - **Always publish.** The site is built from `master` only, so work on a branch is invisible to readers. When a piece of work is complete and pushed, open a pull request against `master` in the same session, and merge it: the owner has said they do not want to check or click anything. Report the pull request URL and the page URL on the site.
 
+## Second brain: read at the start, update at the end
+
+[`.claude/memory/`](.claude/memory/README.md) holds what earlier sessions learned: how the owner works, pitfalls already met, open ideas, and a log of decisions. The three short files below are imported into every session:
+
+@.claude/memory/owner.md
+@.claude/memory/lessons_learned.md
+@.claude/memory/inbox.md
+
+Read `decisions.md` before making a choice an earlier session may already have made, and `sources.md` when working from a book.
+
+**Before the last commit of a session**, update the memory in the same pull request: a new preference or correction from the owner goes in `owner.md`, a dead end or mistake in `lessons_learned.md`, a decision with its reason in `decisions.md`, an idea left for later in `inbox.md`, and finished inbox items are deleted. Follow the rules in the folder's `README.md`; above all, the repository is public, so nothing private goes there. If a session taught nothing durable, change nothing.
+
 ## Missing topics become lessons
 
 When a conversation turns up a topic this library does not cover yet, and it is worth a page, write the lesson (or chapter) and publish it in the same session, without asking first: branch, commit, push, pull request, merge, as above. The owner has asked for this standing rule.
@@ -35,6 +47,8 @@ House rules for writing pages are in [CONTRIBUTING.md](CONTRIBUTING.md):
 ```bash
 python3 tools/run_examples.py --check
 uv run --group docs mkdocs build --strict
+python3 tools/combine_anki.py 04_Sets --check
+python3 tools/symbol_index_anki.py --check
 ```
 
-Both are what CI runs.
+All four are what CI runs. After editing a lesson deck, regenerate the combined deck with `python3 tools/combine_anki.py 04_Sets`; after editing the symbol index in `GLOSSARY.md`, regenerate its deck with `python3 tools/symbol_index_anki.py`.

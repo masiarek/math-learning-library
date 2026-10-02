@@ -1,0 +1,38 @@
+1. BANANA AS A SET AND AS A MULTISET
+   set("BANANA")     = ['A', 'B', 'N']: 3 members, repetition forgotten
+   Counter("BANANA") = {'A': 3, 'B': 1, 'N': 2}: each letter with its multiplicity
+   A multiset M on a set S is a function M: S -> N giving each member a count;
+   its members are the x with M(x) > 0, and |M| is the sum of the counts.
+   |Counter("BANANA")| = 6 = len("BANANA")
+
+2. THE OPERATIONS: & IS MIN, | IS MAX, + ADDS, - SUBTRACTS AND DROPS ZEROS
+   a = [a, a, b, b, b, c]   b = [a, b, b, d, d]
+   a & b (min)          = [a, b, b]
+   a | b (max)          = [a, a, b, b, b, c, d, d]
+   a + b (sum)          = [a, a, a, b, b, b, b, b, c, d, d]
+   a - b (difference)   = [a, b, c]
+   a ⊆ b for multisets means every count in a is at most the count in b:
+   a ⊆ a | b: True   a & b ⊆ a: True   a ⊆ b: False
+
+3. GCD AND LCM ARE ∩ AND ∪ OF PRIME FACTORISATIONS, THE PRODUCT IS +
+   360 = [2, 2, 2, 3, 3, 5]
+   84 = [2, 2, 3, 7]
+   360 & 84 = [2, 2, 3] = 12 = gcd;   360 | 84 = [2, 2, 2, 3, 3, 5, 7] = 2520 = lcm
+   checked for all x, y in 1..60: True.  'm divides n' is 'factors(m) ⊆ factors(n)', as a multiset.
+
+4. WHICH SET LAWS SURVIVE
+   c = [a, a, b]:  c | c = [a, a, b] (idempotent, like ∪)   c + c = [a, a, a, a, b, b] (not: like + on numbers)
+   c & c = [a, a, b] (idempotent)   c - c = [] (empty)
+   |, & and + are commutative and associative; | and & distribute over each other;
+   there is no complement, since a count has no 'everything above it' to subtract from.
+
+5. COUNTING MULTISETS: k THINGS FROM n KINDS, REPETITION ALLOWED
+   multisets of size 2 from {a, b, c}: 6: aa, ab, ac, bb, bc, cc
+   formula C(n + k − 1, k) = C(4, 2) = 6; against C(n, k) = 3 sets of size 2.
+   Stars and bars: write k stars and n − 1 bars, aa|b| is a a b; choose where the bars go.
+
+6. WHERE THE SET WAS THE WRONG TYPE
+   'the weights of all people in Canada', Ashlock's problem 2.1: list [70, 82, 70, 65, 82, 82]
+   as a set [65, 70, 82] loses the count; as a multiset {65: 1, 70: 2, 82: 3} keeps it,
+   and 'all weights at least one person had' is exactly the set. A histogram is a
+   multiset; so is a prime factorisation, a shopping basket, a bag of words.

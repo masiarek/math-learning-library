@@ -1,0 +1,23 @@
+LAWS REQUIRED: associative
+   integers under max
+     associative: True
+     identity:    True   it is -3
+     inverses:    False   none for -2, -1, 0
+     commutative: True
+   positive integers 1..6 under +
+     associative: True
+     identity:    False   none in the sample
+     inverses:    False
+     commutative: True
+   nonempty strings under concatenation (sample)
+     associative: True
+     identity:    False   none in the sample
+     inverses:    False
+     commutative: False   fails at 'a', 'b'
+   integers under − (the non-example)
+     associative: False   fails at -3, -3, -3
+     identity:    False   none in the sample
+     inverses:    False
+     commutative: False   fails at -3, -2
+   max and + on positives are semigroups without identity; strings are a semigroup
+   that is not commutative; subtraction is not a semigroup at all.

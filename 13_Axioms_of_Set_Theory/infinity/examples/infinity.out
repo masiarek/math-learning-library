@@ -1,0 +1,40 @@
+1. THE SUCCESSOR x ∪ {x}, AND THE AXIOM
+   ∃v0 (∅ ∈ v0 ∧ ∀v1 (v1 ∈ v0 ⇒ v1 ∪ {v1} ∈ v0))   (Cunningham's form)
+   there is a set I that contains ∅ and, with each member x, contains
+   x ∪ {x}. Such a set is called inductive.
+   0 = ∅
+   1 = {∅}
+   2 = {∅, {∅}}
+   3 = {∅, {∅}, {∅, {∅}}}
+   4 = {∅, {∅}, {∅, {∅}}, {∅, {∅}, {∅, {∅}}}}
+   Each is the set of the ones before it: the von Neumann numbers.
+
+2. NO SET IN V_4 IS INDUCTIVE, AND NO FINITE SET CAN BE
+   inductive sets among the 16 sets of V_4: 0
+   the set holding the longest run of the chain is {∅, {∅}, {∅, {∅}}}: it has [0, 1, 2],
+   so it needs 3 = {∅, {∅}, {∅, {∅}}}, which has rank 3, outside V_4.
+   An inductive set must hold 0, then 1, then 2, ... with no end, so it
+   is infinite; a finite universe has no infinite set; the axiom fails in
+   every V_n, and in V_ω, the union of them all, which satisfies every
+   other axiom of ZFC. That is why infinity is an axiom and not a theorem.
+
+3. ω IS WHAT ALL INDUCTIVE SETS SHARE
+   Two sets that hold 0..4 plus some junk (standing in for inductive sets):
+   I1 = {0, 1, 2, 3, 4, apple, pear},  I2 = {0, 1, 2, 3, 4, pear, plum}
+   I1 ∩ I2 keeps the numbers [0, 1, 2, 3, 4] and the junk ['pear']
+   The intersection of ALL inductive sets keeps only what every one
+   of them must hold: 0, 1, 2, ... and nothing else. That set is ω,
+   the smallest inductive set, and it exists by comprehension inside
+   any one inductive set the axiom provides.
+
+4. ω IS INFINITE IN DEDEKIND'S SENSE
+   n ↦ n ∪ {n} is one-to-one on ω and never hits 0:
+   0->1  1->2  2->3  3->4  4->5  5->6  ...
+   so ω matches a proper part of itself, which no finite set does.
+
+5. CORI AND LASCAR'S FORM: A LIMIT ORDINAL EXISTS
+   ∃v0 (On[v0] ∧ ¬v0 ≃ ∅ ∧ ∀v1 ¬v0 ≃ v1 ∪ {v1})
+   there is an ordinal that is not ∅ and not the successor of anything.
+   ω is that ordinal: every member n has a successor n + 1 in ω, and ω
+   itself is n + 1 for no n. The two forms are equivalent once ordinals
+   are defined, which the ordinals page does.

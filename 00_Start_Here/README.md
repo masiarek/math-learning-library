@@ -34,9 +34,11 @@ It begins with a question that sounds settled and is not: **are significant figu
 
 [**10_Geometry/**](../10_Geometry/README.md) — *How few numbers fix a shape?* The geometry a precalculus book assumes, from its review appendix: the Pythagorean theorem and its converse as a test that three lengths pass or fail, the area and volume formulas told apart by one check on their dimension, and which three measurements fix a triangle, which fix only its shape, and why side-side-angle is missing from every list. Read it just in time, when the distance formula asks for it; each lesson has the book's questions and a deck of flashcards. It needs nothing but arithmetic.
 
-[**11_Logic/**](../11_Logic/README.md) — *What does "if A then B" actually claim?* The language every theorem here is written in: the one case in which "if A then B" is false, why the contrapositive says the same thing and the converse does not, what "if and only if" adds, and why a thousand examples prove nothing while one counterexample settles it. Read it whenever a book says "the converse is also true". It needs nothing but school arithmetic.
+[**11_Logic/**](../11_Logic/README.md) — *What does "if A then B" actually claim?* The language every theorem here is written in: the one case in which "if A then B" is false, why the contrapositive says the same thing and the converse does not, what "if and only if" adds, and why a thousand examples prove nothing while one counterexample settles it. Read it whenever a book says "the converse is also true". It needs nothing but school arithmetic. Four lessons now: the conditional, truth tables, quantifiers, and induction with its least-counterexample proof.
 
 [**12_Learning_to_Learn/**](../12_Learning_to_Learn/README.md) — *How do you know that you know?* Moved to its own library, the [Learning to Learn library ↗](https://masiarek.github.io/learning-to-learn-library/): how to tell whether you have learned a page, how to learn so that it stays, what to believe about yourself while you do it, how to plan the time, and which claims about sleep, exercise and the brain to trust. Read it first if you want to get more out of everything else, or whenever a test goes worse than you expected.
+
+[**13_Axioms_of_Set_Theory/**](../13_Axioms_of_Set_Theory/README.md) — *What are the rules for building sets, and why these?* The axioms of Zermelo and Fraenkel, one page each, after a page that decodes ∀, ∃, ⇒ and v₀, v₁ into loops and lookups. Each axiom is read aloud, used, and checked on a small universe by a program; the chapter's claim is that an axiom is a demand on the universe, not a description of it. Then ordinals, with Goodstein's theorem, and a page of exercises from Jech, Cunningham and Kunen checked before you prove them. Needs [04_Sets](../04_Sets/README.md) and [11_Logic](../11_Logic/README.md).
 
 The sidebar lists the chapters A to Z. The numbers above are the suggested order, and the [topic map](../TOPICS.md) groups every lesson by subject, for when you know what you want but not where it is.
 
@@ -81,6 +83,10 @@ uv run --group docs mkdocs serve
 ## Reading beyond this library
 
 [**Linear algebra: a reading guide**](../reading_guides/linear_algebra/README.md) — why linear algebra is useful, what to know before starting it, and which book to learn it from, including an honest verdict on *Linear Algebra Done Right*. It is a reference page, not a lesson; its one worked example, the first problem in Hefferon's textbook, is backed by a program like everything else.
+
+[**Set theory: the terms**](../reading_guides/set_theory_terms/README.md) — some 700 terms of set theory, each with the page or glossary entry that covers it here, the rest with the book that does.
+
+[**Set theory: a reading guide**](../reading_guides/set_theory/README.md) — two subjects with one name, the language of sets every proofs course speaks and the study of the axioms themselves; which book for each, from Velleman and Halmos to Kunen and Jech, with verdicts on Cori and Lascar, Cunningham, Jech and Kunen's *Foundations*; the Polish school and *Fundamenta Mathematicae*; and the founding papers from Cantor 1874 to Cohen 1963, four of them run as a program.
 
 [**Precalculus: a reading guide**](../reading_guides/precalculus/README.md) — what the course before calculus is for, where it sits (it is not pre-algebra, which comes four years earlier), what to know before starting it, and which book to learn it from, with a verdict on Glencoe's classroom textbook. A reference page, not a lesson; its one worked example, the doubling time of money at compound interest, is backed by a program like everything else.
 
