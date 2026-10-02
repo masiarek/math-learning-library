@@ -118,6 +118,31 @@ def main() -> None:
     print(f"   y = x² and y = x² mod 7 on {{-2, ..., 2}}: {f == h}   (they differ nowhere here) ")
     print("   Two formulas that agree on every input define one function; a function")
     print("   is the table of its values, which is why a table in a database is one.")
+    print()
+
+    print("7. IMAGES OF SETS UNDER A RELATION: HRBACEK AND JECH, EXERCISES 2.3 AND 2.4")
+    print("   R[A] = {y : x R y for some x in A}; R⁻¹[B] = {x : x R y for some y in B}.")
+
+    def image(r, a):
+        return {y for x, y in r if x in a}
+
+    subsets = [frozenset(c) for r_ in range(4) for c in __import__("itertools").combinations(BASE, r_)]
+    a_ = all(image(r, a | b) == image(r, a) | image(r, b) for r in RELATIONS for a in subsets for b in subsets)
+    b_ = all(image(r, a & b) <= image(r, a) & image(r, b) for r in RELATIONS for a in subsets for b in subsets)
+    c_ = all(image(r, a - b) >= image(r, a) - image(r, b) for r in RELATIONS for a in subsets for b in subsets)
+    print(f"   2.3(a) R[A ∪ B] = R[A] ∪ R[B]: {a_}    (b) R[A ∩ B] ⊆ R[A] ∩ R[B]: {b_}    (c) R[A − B] ⊇ R[A] − R[B]: {c_}")
+    strict = next((r, a, b) for r in RELATIONS for a in subsets for b in subsets if image(r, a & b) != image(r, a) & image(r, b))
+    r, a, b = strict
+    print(f"   2.3(d) ⊆ is not =: R = {show(r)}, A = {set(a)}, B = {set(b)}:")
+    print(f"          R[A ∩ B] = {image(r, a & b) or '∅'} but R[A] ∩ R[B] = {image(r, a) & image(r, b)}")
+    e_ = all(image(inverse(r), image(r, a)) >= a & dom(r) for r in RELATIONS for a in subsets)
+    print(f"   2.3(f) R⁻¹[R[A]] ⊇ A ∩ dom R, all {len(RELATIONS) * len(subsets)} cases: {e_}")
+    d_ = all(image(r, frozenset(BASE)) == ran(r) and image(inverse(r), frozenset(BASE)) == dom(r) for r in RELATIONS)
+    f_ = all(compose(r, inverse(r)) >= {(x, x) for x in dom(r)} for r in RELATIONS)
+    print(f"   2.4(a) R[X] = ran R and R⁻¹[Y] = dom R: {d_}    2.4(e) R ∘ R⁻¹ ⊇ Id on dom R: {f_}")
+    print("   A relation can merge, so the image of an intersection can be smaller")
+    print("   than the intersection of the images; a one-to-one relation cannot, and")
+    print("   for it (b) and (c) become equalities (Simovici–Djeraba, Theorem 1.62).")
 
 
 if __name__ == "__main__":

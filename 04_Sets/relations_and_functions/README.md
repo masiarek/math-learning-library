@@ -20,6 +20,8 @@ Section 3 takes every relation on {1, 2, 3}, 512 of them, and sorts them: 64 are
 
 Section 4 is **composition** as a product of relations: ρσ is "first ρ, then σ", the set of (x, z) for which some y has (x, y) ∈ ρ and (y, z) ∈ σ. On all 16 relations on {1, 2} it is associative, its inverse reverses the order, (ρσ)⁻¹ = σ⁻¹ρ⁻¹, and a product of functions is a function. Here the books part company in a way worth knowing: Simovici writes ρσ and, for functions, gf meaning "f then g"; Jech, Kunen and nearly everyone else write g ∘ f for the same set, so that (g ∘ f)(x) = g(f(x)) reads in the order of evaluation. Same set, letters swapped, and section 4 says so.
 
+Section 7 runs Hrbacek and Jech's exercises 2.3 and 2.4 on images of sets under a relation, R[A] and R⁻¹[B], over all 512 relations and all subsets: the image of a union is the union of the images, but the image of an intersection is only *contained in* the intersection of the images, and the program finds the relation and sets where the two differ. A relation can send two different inputs to one output, and that is the whole reason; a one-to-one relation cannot, and for it the inclusions become equalities, which is Simovici and Djeraba's Theorem 1.62 and the shape of every "preimages behave better than images" lemma in analysis.
+
 Section 6 is the point everything rests on. Two formulas that give the same output on every input, x² and |x|² say, define *one* function, because a function is its set of pairs and [extensionality](../../13_Axioms_of_Set_Theory/extensionality/README.md) says a set is its members. A function is not a rule or a formula; it is the table of its values, which is why a database table is one and why two programs that compute the same table compute the same function.
 
 ## Why the notation differs, and what is universal
@@ -84,6 +86,17 @@ Simovici and Djeraba write ρ, σ for relations, Dom and Ran in roman type, S �
    y = x² and y = x² mod 7 on {-2, ..., 2}: True   (they differ nowhere here) 
    Two formulas that agree on every input define one function; a function
    is the table of its values, which is why a table in a database is one.
+
+7. IMAGES OF SETS UNDER A RELATION: HRBACEK AND JECH, EXERCISES 2.3 AND 2.4
+   R[A] = {y : x R y for some x in A}; R⁻¹[B] = {x : x R y for some y in B}.
+   2.3(a) R[A ∪ B] = R[A] ∪ R[B]: True    (b) R[A ∩ B] ⊆ R[A] ∩ R[B]: True    (c) R[A − B] ⊇ R[A] − R[B]: True
+   2.3(d) ⊆ is not =: R = {(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2), (3, 3)}, A = {1}, B = {2}:
+          R[A ∩ B] = ∅ but R[A] ∩ R[B] = {1, 2, 3}
+   2.3(f) R⁻¹[R[A]] ⊇ A ∩ dom R, all 4096 cases: True
+   2.4(a) R[X] = ran R and R⁻¹[Y] = dom R: True    2.4(e) R ∘ R⁻¹ ⊇ Id on dom R: True
+   A relation can merge, so the image of an intersection can be smaller
+   than the intersection of the images; a one-to-one relation cannot, and
+   for it (b) and (c) become equalities (Simovici–Djeraba, Theorem 1.62).
 ```
 <!-- /output -->
 
@@ -105,5 +118,5 @@ python3 04_Sets/relations_and_functions/examples/relations_and_functions.py
 - [Cardinality of sets](../cardinality/README.md) — size by bijection, the function this page counts
 - [Pairs](../../13_Axioms_of_Set_Theory/pairs/README.md) and [replacement](../../13_Axioms_of_Set_Theory/replacement/README.md) — the axioms that make pairs, and images, sets
 - [Predicates and quantifiers](../../11_Logic/predicates_and_quantifiers/README.md) — "x likes y" as a relation on four people
-- Thomas Jech, *Set Theory* (Springer, 2003), chapter 1, pages 10 to 12; Dan A. Simovici and Chabane Djeraba, *Mathematical Tools for Data Mining* (2nd ed., Springer, 2014), section 1.3
+- Thomas Jech, *Set Theory* (Springer, 2003), chapter 1, pages 10 to 12; Karel Hrbacek and Thomas Jech, *Introduction to Set Theory* (3rd ed., 1999), chapter 2, sections 1 to 3; Dan A. Simovici and Chabane Djeraba, *Mathematical Tools for Data Mining* (2nd ed., Springer, 2014), section 1.3
 - [Binary relation ↗](https://en.wikipedia.org/wiki/Binary_relation) — Wikipedia
