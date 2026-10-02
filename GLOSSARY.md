@@ -11,6 +11,9 @@ Terms used across the library, with the page that explains each in full. For set
 **Absolute error** — |x − x̂|, the difference between a value and the truth, in the value's own units (`±0.05 cm`). What `+` and `−` propagate. Defined in [relative error and correct digits](01_Precision/relative_error/README.md); propagated in [uncertainty propagation](01_Precision/uncertainty_propagation/README.md).
 { #absolute-error }
 
+**Aleph, beth and the continuum (ℵ, ℶ, 𝔠)** — ℵ₀ is the size of ℕ, ℵ₁ the next infinite size, ℵ_α the α-th; ℶ₀ = ℵ₀, ℶ₁ = |𝒫(ℕ)| = |ℝ| = 𝔠, the continuum, and ℶ_{n+1} = 2^ℶₙ; the continuum hypothesis is ℵ₁ = ℶ₁, which Gödel and Cohen showed the axioms cannot decide. κ⁺ is the next cardinal after κ, and the gimel function ℷ(κ) = κ^cf(κ) is always larger than κ (König). See [cardinality](04_Sets/cardinality/README.md) and the [reading guide](reading_guides/set_theory/README.md#the-founding-papers).
+{ #aleph-beth-and-the-continuum-c }
+
 **Almost everywhere** — everywhere except on a set of measure zero. The Cantor function's slope is 0 almost everywhere, and the function still climbs from 0 to 1, so an almost-everywhere fact can miss the thing that matters. Probability's name for the same idea is *almost surely*. See [the Cantor function](02_Measure_Zero/cantor_function/README.md).
 { #almost-everywhere }
 
@@ -143,6 +146,9 @@ Terms used across the library, with the page that explains each in full. For set
 **Congruent triangles** — triangles with every pair of corresponding sides and angles equal: the same triangle in two places. Three measurements prove it: SSS, SAS or ASA, never AAA or SSA. See [congruent and similar triangles](10_Geometry/congruent_and_similar_triangles/README.md).
 { #congruent-triangles }
 
+**Connectives (¬, ∧, ∨, ⇒, ⇔)** — the symbols that build statements from statements: ¬ not, ∧ and, ∨ or (inclusive), ⇒ implies (also →), ⇔ if and only if (also ↔), and ⇏ for "does not imply". Each is defined by its truth table, and the laws of the algebra of sets are their laws read through membership: ∪ is ∨, ∩ is ∧, complement is ¬. See [truth tables and laws](11_Logic/truth_tables_and_laws/README.md).
+{ #connectives }
+
 **Contrapositive** — of "if A then B", the statement "if not B then not A". It is false in exactly the same case as the original, A true and B false, so it is the same claim. See [if A then B](11_Logic/converse_and_contrapositive/README.md).
 { #contrapositive }
 
@@ -193,6 +199,9 @@ Terms used across the library, with the page that explains each in full. For set
 
 **Empty set** — ∅, the set with no members. There is only one, because two sets with the same members are equal and any two empty sets have the same members: none. In Python it is `set()`, since `{}` is an empty dict. Some books call it the *null set*, but in measure theory a null set is any set of measure zero, which can be infinite. See [what is a set?](04_Sets/what_is_a_set/README.md).
 { #empty-set }
+
+**End of proof (∎, □, QED)** — a filled or hollow square at the end of a proof, Halmos's tombstone, standing for the older *quod erat demonstrandum*, "which was to be shown". Halbeisen uses ⊣ for it. See [induction](11_Logic/induction/README.md) for proofs that end this way.
+{ #end-of-proof-qed }
 
 **Equidecomposable** — two sets of points are equidecomposable when each is cut into the same finite number of pieces, congruent in pairs (Halbeisen writes A ≃ A′, and A ≃ₙ A′ with at most n pieces). A ball is equidecomposable with two balls, in five pieces. See [two balls from one](13_Axioms_of_Set_Theory/two_balls_from_one/README.md).
 { #equidecomposable }
@@ -362,6 +371,9 @@ Terms used across the library, with the page that explains each in full. For set
 **Median** — the middle value once the numbers are sorted, or halfway between the two middle ones: at least half the values are at or below it, and at least half are at or above it. An average but not a mean, and the one a single huge value cannot drag. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
 { #median }
 
+**Membership (∈, ∉, ∋)** — a ∈ A says a is a member of A, a ∉ A that it is not, and A ∋ a is the same fact written from the set's side, read "A contains a"; ∌ negates it. The symbol ∋ is a mirrored ∈ and nothing to do with ∃, "there exists", which one circulating chart put in its place. Membership is the one primitive relation of set theory; everything else is defined from it. See [what is a set?](04_Sets/what_is_a_set/README.md).
+{ #membership }
+
 **Metacognition** — John Flavell's word (1976) for thinking about your own thinking, including the ability to judge accurately how much you have learned, the one part a program can measure. See [metacognition](12_Learning_to_Learn/metacognition/README.md).
 { #metacognition }
 
@@ -388,6 +400,9 @@ Terms used across the library, with the page that explains each in full. For set
 
 **Nowhere dense** — for a closed set on the line, containing no interval at all: there are gaps everywhere. Both Cantor sets are nowhere dense, but only the standard one has measure zero. See [the fat Cantor set](02_Measure_Zero/fat_cantor_set/README.md).
 { #nowhere-dense }
+
+**Number sets (ℕ, ℤ, ℚ, ℝ, ℂ)** — the blackboard-bold letters for the natural numbers ℕ (with or without 0, by book), the integers ℤ (German *Zahlen*), the rationals ℚ (quotients), the reals ℝ and the complex numbers ℂ, each a subset of the next; 𝔸 is sometimes the algebraic numbers and 𝕋 the circle. In set theory ℕ is ω, the first infinite ordinal, and |ℕ| is ℵ₀. See [infinity](13_Axioms_of_Set_Theory/infinity/README.md) and [countable sets](02_Measure_Zero/countable_sets/README.md).
+{ #number-sets-n-z-q-r-c }
 
 **Orbit** — of a point under a group acting on a set, the set of points it can be moved to; the orbits are the classes of the equivalence “can be moved to”, and Burnside's lemma counts them as the average number of points each group element fixes. Congruent triangles are the orbits of the rigid motions. See [equivalence relations and partitions](04_Sets/equivalence_and_partitions/README.md#where-the-textbook-sections-live-here).
 { #orbit }
@@ -461,7 +476,7 @@ Terms used across the library, with the page that explains each in full. For set
 **Quadrature** — combining independent uncertainties as √(a² + b²) rather than a + b. Linear addition is the worst case and is correct only for perfectly correlated errors. See [uncertainty propagation](01_Precision/uncertainty_propagation/README.md).
 { #quadrature }
 
-**Quantifier** — ∀x ("for every x", an upside-down A for All) and ∃x ("for some x", a backwards E for Exists); in code, `all(...)` and `any(...)` over the universe. A ¬ pushed through one flips it; ∀x∃y and ∃y∀x are different claims. See [predicates and quantifiers](11_Logic/predicates_and_quantifiers/README.md).
+**Quantifier** — ∀x ("for every x", an upside-down A for All) and ∃x ("for some x", a backwards E for Exists); in code, `all(...)` and `any(...)` over the universe. A ¬ pushed through one flips it; ∀x∃y and ∃y∀x are different claims. ∃!x means "there is exactly one x" and ∄x, or ¬∃x, "there is no x". See [predicates and quantifiers](11_Logic/predicates_and_quantifiers/README.md).
 { #quantifier }
 
 **Radian** — the unit of angle in which a point of the unit circle turned through angle t travels a distance t along the circle, so a full turn is 2π and a half turn is π. It is the unit Euler's formula needs, because compounding (1 + it/n)ⁿ turns through the number t itself, and it is the reason the identity has a π in it and not 180. Only in radians is d/dt sin t = cos t. See [radians](09_Calculus/radians/README.md) and [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
@@ -566,6 +581,9 @@ Terms used across the library, with the page that explains each in full. For set
 **Subspace** — a subset of a vector space that is a vector space with the same operations. It needs only three checks — it contains 0, and it is closed under + and under scalar multiplication — because the other laws are inherited. The subspaces of the plane are the origin, the lines through it, and the plane. See [subsets inherit the laws](06_Algebraic_Structures/subsets_inherit_the_laws/README.md).
 { #subspace }
 
+**Such that (:, |)** — the colon or bar inside set-builder notation, {x ∈ A : P(x)} or {x ∈ A | P(x)}, read "the set of x in A such that P(x)"; both spellings mean the same, and the bar is avoided when the condition itself contains a bar, as in |x| < 1. See [set-builder notation](#set-builder-notation).
+{ #such-that }
+
 **Surjective (onto)** — a function that reaches every member of its target: for each y in T some x has f(x) = y, so no target is missed. Latin *sur-jacere*, to throw onto. See [relations and functions](04_Sets/relations_and_functions/README.md#the-three-words).
 { #surjective-onto }
 
@@ -590,6 +608,9 @@ Terms used across the library, with the page that explains each in full. For set
 **Testing effect** — retrieving something from memory makes it last longer than reading it again for the same time. See [spaced retrieval](12_Learning_to_Learn/spaced_retrieval/README.md).
 { #testing-effect }
 
+**Therefore and because (∴, ∵)** — three dots pointing up, ∴, read "therefore", and pointing down, ∵, read "because"; shorthand of school proofs and older books, not of the logic that ⇒ and ⊢ formalise. See [connectives](#connectives).
+{ #therefore-and-because }
+
 **Transitive closure** — the smallest transitive relation containing R: add a shortcut (x, z) for every chain (x, y), (y, z) until none is missing. With the diagonal and the reversed pairs added first it is the equivalence generated by R, whose classes are the connected components. See [equivalence relations and partitions](04_Sets/equivalence_and_partitions/README.md#where-the-textbook-sections-live-here).
 { #transitive-closure }
 
@@ -607,6 +628,9 @@ Terms used across the library, with the page that explains each in full. For set
 
 **Tuple** — an ordered list of numbers, (s₁, …, sₙ), called an n-tuple when it has n entries; a pair is a 2-tuple and a triple a 3-tuple. ℝⁿ is the set of all n-tuples of reals. Order matters: (1, 4) is not (4, 1). See [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md) and [the Cartesian product](04_Sets/cartesian_product/README.md).
 { #tuple }
+
+**Turnstile (⊢, ⊨)** — A ⊢ B, "B is provable from A", is about proofs; A ⊨ B, "every model of A is a model of B", is about truth; Gödel's completeness theorem says they agree for first-order logic. The negations are ⊬ and ⊭. The reversed sign ⊣ is not "does not yield", as one chart says; it is ⊢ read right to left, or in category theory "is left adjoint to". Halbeisen is the one book in the [symbol table](#symbols) that uses both signs on its first pages. See [reading a formula](13_Axioms_of_Set_Theory/reading_a_formula/README.md).
+{ #turnstile }
 
 **Uncountable** — too big to be written as a list. [0, 1] is uncountable, and so is the Cantor set, which still has measure zero. See [the Cantor set](02_Measure_Zero/cantor_set/README.md).
 { #uncountable }
@@ -680,3 +704,41 @@ The same ideas in the spellings of the books this library reads. The definitions
 | regularity / foundation | foundation | foundation | regularity | regularity | foundation | — | restriction | regularity | Axiom of Foundation |
 
 Three conventions deserve a warning. Jech's ⊂ allows equality and Cunningham's does not, so the same symbol means ⊆ in one book and ⊊ in the other. André's objects are *classes*, and his {x : P(x)} is always a class, which is a set only when some axiom says so; the other books have no classes as objects at all. His complement is therefore absolute, taken in the universal class, where this library's A′ is U ∖ A for a chosen U. Simovici and Djeraba write gf for "f, then g", the order most books write as g ∘ f; both mean (g ∘ f)(x) = g(f(x)).
+
+## Symbol index
+
+Every symbol of the charts and tables the owner has sent, in one place, with where it is explained. Read a row as "symbol, how to say it, where". The cross-book table above is for the symbols whose spelling changes from book to book; this one is for finding a symbol at all.
+
+| Symbol | Read as | Where |
+|---|---|---|
+| ∈  ∉  ∋  ∌ | is a member of, is not, contains | [glossary: membership](#membership) |
+| {a, b, c} | the set whose members are a, b, c | [what is a set](04_Sets/what_is_a_set/README.md) |
+| {x ∈ A : P(x)}, {x \| P(x)} | the set of x such that P(x) | [glossary: set builder notation](#set-builder-notation) |
+| ∅, { } | the empty set | [glossary: empty set](#empty-set) |
+| U, 𝒰, E, Ω | the universal set (Ω also the class of ordinals, or ω₁) | [glossary: universal set](#universal-set) |
+| ⊆  ⊂  ⊊  ⊇  ⊃  ⊄  ⊉ | subset, proper subset (two conventions), superset, and their negations | [glossary: symbols](#symbols) |
+| A = B | the same members, by extensionality | [glossary: extensionality](#extensionality) |
+| ∪  ∩ | union, intersection; ∪𝓕 and ∩𝓕 over a family | [algebra of sets](04_Sets/algebra_of_sets/README.md) |
+| ∖  − | difference, A ∖ B = {x ∈ A : x ∉ B} | [algebra of sets](04_Sets/algebra_of_sets/laws/difference/README.md) |
+| A′  Aᶜ  Ā  U − A | complement within the universal set | [glossary: complement](#complement) |
+| △  ⊕ | symmetric difference | [glossary: symmetric difference](#symmetric-difference) |
+| A × B | Cartesian product, the set of ordered pairs | [glossary: cartesian product](#cartesian-product) |
+| (a, b), ⟨a, b⟩ | ordered pair | [glossary: ordered pair](#ordered-pair) |
+| 𝒫(A), 2ᴬ | power set | [glossary: power set](#power-set) |
+| |A|, n(A), #A, card(A) | cardinality | [glossary: cardinality](#cardinality) |
+| ℵ₀, ℵ₁, ℶ₁, 𝔠, κ⁺, ℷ | infinite cardinals, the continuum, successor, gimel | [glossary: aleph beth and the continuum c](#aleph-beth-and-the-continuum-c) |
+| ω, ω₁, ε₀, α + 1, S(α) | ordinals and successors | [glossary: ordinal](#ordinal) |
+| ℕ  ℤ  ℚ  ℝ  ℂ | the number sets | [glossary: number sets n z q r c](#number-sets-n-z-q-r-c) |
+| x R y, (x, y) ∈ R, dom R, ran R | a relation and its domain and range | [glossary: relation](#relation) |
+| f: A → B, x ↦ f(x), f[A], f⁻¹, g ∘ f | function, image of a set, inverse, composition | [relations and functions](04_Sets/relations_and_functions/README.md) |
+| [x], A/~ | equivalence class, quotient set | [glossary: equivalence relation](#equivalence-relation) |
+| ≤, <, ≺ on a poset | partial order, strict order | [glossary: partial order](#partial-order) |
+| ≈, ~, ≼, |A| ≤ |B| | equinumerous, injects into | [glossary: symbols](#symbols) |
+| κ → (λ)ⁿ_r | partition relation | [glossary: partition relation arrow notation](#partition-relation-arrow-notation) |
+| ∀  ∃  ∃!  ∄ | for all, there exists, exactly one, none | [glossary: quantifier](#quantifier) |
+| ¬  ∧  ∨  ⇒  →  ⇔  ↔  ⇏ | not, and, or, implies, iff, does not imply | [glossary: connectives](#connectives) |
+| ⊢  ⊬  ⊨  ⊣ | proves, does not prove, models; the reversed turnstile | [glossary: turnstile](#turnstile) |
+| ∴  ∵ | therefore, because | [glossary: therefore and because](#therefore-and-because) |
+| ∎  ■  □ | end of proof | [glossary: end of proof qed](#end-of-proof-qed) |
+| :=  :⟺  ≝ | is defined as (a term, a statement) | [README.md#three-books-three-notations](13_Axioms_of_Set_Theory/README.md#three-books-three-notations) |
+| ≃ | equality inside Cori and Lascar's formal language | [reading a formula](13_Axioms_of_Set_Theory/reading_a_formula/README.md) |

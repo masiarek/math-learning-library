@@ -107,7 +107,7 @@ With A = {1, 3, 5, 7}, B = {4, 5, 6, 7}, C = {1, 2, 3} and U = {0, 1, …, 9}, w
 
 ## Flashcards
 
-The page as a deck of Anki cards: [`reading_set_expressions.txt`](anki/reading_set_expressions.txt), also included in the chapter's [combined deck](../README.md#flashcards). Tags: `precedence`, `trap`, `python`, `notation`.
+The page as a deck of Anki cards: [`reading_set_expressions.txt`](anki/reading_set_expressions.txt), also included in the chapter's [combined deck](../README.md#flashcards). Tags: `precedence`, `trap`, `python`, `notation`. A second deck, [`symbols.txt`](anki/symbols.txt), has one card per symbol of the [glossary's symbol index](../../GLOSSARY.md#symbol-index), from ∋ to ⊢, with the traps the owner's charts fell into.
 
 ## Po polsku, w skrócie
 
