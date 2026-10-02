@@ -88,7 +88,7 @@ python3 13_Axioms_of_Set_Theory/comprehension/examples/comprehension.py
 
 ## See also
 
-- [What is a set?](../../04_Sets/what_is_a_set/README.md) — Russell's paradox, and separation as the repair
+- [The textbook definition on trial](../../04_Sets/definition_on_trial/README.md) — Russell's paradox, and separation as the repair
 - [Reading a set expression](../../04_Sets/reading_set_expressions/README.md) — {x ∈ a : …} in everyday use
 - [Sets in Python](../../04_Sets/python_sets/README.md) — the comprehension as a comprehension
 - [Replacement](../replacement/README.md) — the next scheme, which implies this one

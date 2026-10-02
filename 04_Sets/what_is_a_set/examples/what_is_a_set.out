@@ -1,89 +1,30 @@
-1. A SET IS ITS MEMBERSHIP AND NOTHING ELSE
-   {2, 5} == {5, 2}             is True     order is not recorded
-   {1, 1, 2} == {1, 2}          is True     repeats are not recorded
-   len({1, 1, 2})                = 2
-   {n*n for n in -3..3}          = [0, 1, 4, 9]   7 rules applied, 4 members
-   'Distinct' is not a demand on whoever writes the list. It is
-   the rule for equality: same members, same set (extensionality).
+1. MEMBERSHIP IS THE ONLY PRIMITIVE
+   Define A = B as: every member of A is in B, and every member of B is in A.
+   Define A ⊆ B as: every member of A is in B.
+   subsets of {0, 1, 2}: 8; pairs of them: 64
+   same_members(A, B) == (A == B) on every pair:  True
+   is_subset(A, B) == (A <= B) on every pair:     True
+   Python's == and <= on sets add nothing to 'in'. 'Set' and 'member of'
+   are the undefined words; equality and subset are written in them.
 
-2. THEREFORE THERE IS ONE EMPTY SET, NOT MANY
-   {n in 0..99 with n*n < 0}         = set()
-   {n in 0..99, even and odd}        = set()
-   {n in 0..99 with n > n}           = set()
-   {words of 'set' longer than 3}    = set()
-   all four equal:  True
-   Four rules, one set. 'THE empty set' is justified only by the
-   equality rule of section 1, which the textbook definition omits.
+2. EXTENSIONALITY: A SET IS ITS MEMBERS AND NOTHING ELSE
+   {2, 5} == {5, 2}                                     is True   order is not recorded
+   {1, 1, 2} == {1, 2}                                  is True   repeats are not recorded
+   {n in -5..5 : n*n < 10} == {-3..3}                   is True   the rule is not recorded
+   {n in 0..9 : n*n < 0} == {w in [set] : len(w) > 5}   is True
+   distinct empty sets among the two:  1
+   Two rules that select nothing select the same set: THE empty set.
 
-3. WELL-DEFINED IS NOT THE SAME AS KNOWN
-   P = { n : n is odd and n equals the sum of its smaller divisors }
-   The rule is sharp: for any n, adding up divisors settles it.
-   even n below 10,000 that pass the test:  [6, 28, 496, 8128]
-   odd n below 100,000 that pass the test:  []
-   Is P empty? Nobody knows; it is the odd perfect number problem,
-   open since antiquity. Every n has an answer; the set as a whole
-   does not have a known one. Well-defined means the first, not the second.
+3. A SET IS ONE OBJECT, SO A SET CAN BE A MEMBER
+   len(∅) = 0,  len({∅}) = 1,  ∅ == {∅} is False
+   1 ∈ {1}: True,  {1} ∈ {{1}}: True,  1 ∈ {{1}}: False
+   ∈ looks exactly one level down: a member of a member is not a member.
+   subsets of {0, 1, 2} that have 1 as a member:  4 of 8
+   One object is a member of many sets at once: a set is not a box it sits in.
 
-4. A SHARP RULE THAT DECIDES NOTHING: RUSSELL
-   Model a set as its rule: a function that answers 'is x a member?'.
-   Rules can be asked about rules, so a set may contain sets.
-   everything(everything) = True     russell(everything) = False
-   nothing(nothing)       = False    russell(nothing)    = True
-   russell(russell)       = no answer: RecursionError, the rule asks itself forever
-   And no answer could be right:
-     if russell(russell) were True , the rule says it is False
-     if russell(russell) were False, the rule says it is True
-   The rule 'x is not a member of itself' is perfectly well-defined
-   on every x, and still there is no set it describes.
-
-5. THE REPAIR: CUT A RULE OUT OF A SET YOU ALREADY HAVE
-   In a universe U, membership is a table: x in y is True or False.
-   R = { x in U : x not in x }. Is R one of the members of U?
-   every membership table on 3 objects: 512 universes
-   universes where R is none of the 3 objects:  512 of 512
-   Why always: if R were object y, ask whether y is in y. The table
-   and the rule for R give opposite answers at that one cell.
-   So no universe contains every set. Russell's paradox, restricted
-   to a set already in hand, stops being a contradiction and becomes
-   a theorem; it is Cantor's diagonal from the cardinality lesson.
-
-6. PYTHON BUILDS SETS FROM THE BOTTOM UP, SO IT NEVER MEETS RUSSELL
-   s = set(); s.add(s)   ->  TypeError: unhashable type: 'set'
-   frozensets from nothing:  0, 1, 2 members;  c contains b: True
-   A frozenset can hold only sets that existed before it, so none
-   contains itself and 'x not in x' is true of every one of them.
-   That is the axiomatic answer too: sets are built in stages.
-
-7. THE BOX PICTURE: WHERE IT HELPS AND WHERE IT MISLEADS
-   an empty box is not nothing:  len(∅) = 0,  len({∅}) = 1,  ∅ == {∅} is False
-   ∈ looks one level down only:  1 ∈ {1} is True,  {1} ∈ {{1}} is True,  1 ∈ {{1}} is False
-     a thing inside a box inside a box is 'in' the big box; a member of a
-     member is not a member. ∈ is not transitive; ⊆ is.
-   one object, two sets at once:  A = {1, 2}, B = {1, 3},  1 ∈ A and 1 ∈ B is True
-     a real object sits in one box; an element can be in any number of sets.
-   two copies are one element:  {1, 1} == {1} is True
-     a box can hold two identical marbles; a set cannot tell them apart.
-   So the box is a good picture of ∅ versus {∅}, and a bad one of
-   membership: take it for the first and drop it for the other three.
-
-8. CAN WE DENY 'C IS EITHER ORDINARY OR NOT'? TRY IT IN OTHER LOGICS
-   P stands for 'C ∈ C'. The definition of C says P ↔ ¬P must be TRUE.
-   Truth values run from 0 (false) to 1 (true); only 1 counts as true.
-   logic            P or not P always true?   values of P that satisfy P ↔ ¬P
-   classical        yes                       none: still a paradox
-   Kleene K3        no                        none: still a paradox
-   Godel G3         no                        none: still a paradox
-   Godel G5         no                        none: still a paradox
-   Lukasiewicz L3   no                        1/2
-   Lukasiewicz L5   no                        1/2
-   Excluded middle fails in K3 and in the Godel logics, and C still has no
-   truth value there: the paradox never needed statement 4. Only Lukasiewicz
-   logic has a 'half true' that solves it. Then Curry's version bites:
-   C_k = {x : x ∈ x → (x ∈ x → ... → false)}, with k arrows.
-   Lukasiewicz L3   no value for C_k ∈ C_k when k = 2, 3, 4, 5, 6
-   Lukasiewicz L4   no value for C_k ∈ C_k when k = 1, 3, 4, 5, 6
-   Lukasiewicz L5   no value for C_k ∈ C_k when k = 2, 4, 5, 6
-   Lukasiewicz L6   no value for C_k ∈ C_k when k = 1, 2, 3, 5, 6
-   The fixed point of C_k is k/(k+1), and a logic with finitely many values
-   always misses one. Every finite-valued repair meets a paradox it cannot
-   value; set theory instead keeps the logic and denies that C exists.
+4. SEPARATION: A RULE PICKS FROM A SET YOU ALREADY HAVE
+   A = {∅, {∅}, {{∅}}}, 3 members
+   R = {x ∈ A : x ∉ x} has 3 members;  R == A is True
+   R ∈ A is False
+   Russell's rule, cut from A, is a harmless set, and it is never a member of
+   the set it was cut from. So no set has every set as a member.

@@ -27,7 +27,8 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - ↪ [Euler's formula: a lesson plan](reading_guides/eulers_formula/README.md) — what to learn, in order, to follow Euler's identity and the 3Blue1Brown talk on it
 - **Sets and size**
     - **Building sets** · from [Sets](04_Sets/README.md)
-        - [What is a set?](04_Sets/what_is_a_set/README.md) — well-defined, extensionality, the empty set, null set, Russell's paradox, separation, no set of all sets
+        - [What is a set?](04_Sets/what_is_a_set/README.md) — the definition in four rules: undefined words, extensionality, a set is one object, separation, one empty set
+        - [The textbook definition on trial](04_Sets/definition_on_trial/README.md) — well-defined, "collection" and "distinct", the box picture, null set, Russell's paradox, separation as the repair, no set of all sets, many-valued logics
         - [The algebra of sets](04_Sets/algebra_of_sets/README.md) — universal set as the Venn rectangle, complement (A′, Ā, Aᶜ), disjoint sets, De Morgan's laws, distributive and absorption laws, Boolean algebra, Venn regions, ⊆ as a partial order (poset); [each law on its own page](04_Sets/algebra_of_sets/laws/README.md): identity, domination, idempotent, complement, double complement, commutative and associative, distributive, absorption, De Morgan, difference
         - [Reading a set expression](04_Sets/reading_set_expressions/README.md) — order of operations for sets, precedence from logic, Python's - & ^ | ladder, x ∈ A ∩ x ∈ B and x ∈ A ∧ B as bugs, (1, 2) as pair or interval
         - [Sets in Python](04_Sets/python_sets/README.md) — the bridge: extensionality is ==, separation is a comprehension, | & - ^ as or, and, and-not, xor, no complement without U; links to the Python, Rust and ABAP pages
@@ -62,7 +63,8 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - [Foundation](13_Axioms_of_Set_Theory/foundation/README.md) — ∈-minimal member, no x ∈ x, rank, Quine atoms, the two-cycle and {a, b}, anti-foundation
         - [Ordinals](13_Axioms_of_Set_Theory/ordinals/README.md) — transitive and well-ordered by ∈, the von Neumann numbers, Goodstein sequences, Kirby and Paris
         - [Axiom katas](13_Axioms_of_Set_Theory/axiom_katas/README.md) — Jech 1.1–1.15, Cunningham 1.4 and 1.5, Kunen I.2.1, checked on a small universe; the five proof moves
-        - ↪ [What is a set?](04_Sets/what_is_a_set/README.md) — extensionality, separation and Russell's paradox before the formal language
+        - ↪ [What is a set?](04_Sets/what_is_a_set/README.md) — extensionality, separation and the empty set in plain words, before the formal language
+        - ↪ [The textbook definition on trial](04_Sets/definition_on_trial/README.md) — Russell's paradox and the repair before the formal language
         - ↪ [The Cartesian product](04_Sets/cartesian_product/README.md) — Kuratowski's pair put to work
         - ↪ [Set theory: a reading guide](reading_guides/set_theory/README.md) — Cori and Lascar, Cunningham, Jech and Kunen placed among the books
     - **Size by length** · from [Measure Zero](02_Measure_Zero/README.md)
@@ -133,7 +135,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - ↪ [Reading a formula](13_Axioms_of_Set_Theory/reading_a_formula/README.md) — the same symbols inside the axioms of set theory, evaluated on a small universe
         - ↪ [The Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md) — a theorem whose converse is also true
         - ↪ [A definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md) — a definition as an "if and only if"
-        - ↪ [What is a set?](04_Sets/what_is_a_set/README.md) — Russell's paradox: an argument by cases in which both cases fail
+        - ↪ [The textbook definition on trial](04_Sets/definition_on_trial/README.md) — Russell's paradox: an argument by cases in which both cases fail
         - ↪ [The algebra of sets](04_Sets/algebra_of_sets/README.md) — ∪ ∩ ′ are or, and, not; ⊆ is if–then; De Morgan's laws
         - ↪ [Day or night: perspective taking](12_Learning_to_Learn/day_or_night/README.md) — a definition by cutoff, the sorites, and fuzzy logic's "day and not day"
 - **Chance and data**
@@ -178,7 +180,7 @@ Each thread follows one idea through lessons in different chapters. They are the
 
 The same objects three times: in everyday use, in Python, and on the axioms.
 
-1. [What is a set?](04_Sets/what_is_a_set/README.md) — extensionality and separation as the rules the textbook definition leaves out, and Russell's paradox.
+1. [What is a set?](04_Sets/what_is_a_set/README.md) → [The textbook definition on trial](04_Sets/definition_on_trial/README.md) — the definition in four rules, then the textbook's sentence, the rules it leaves out, and Russell's paradox.
 2. [The algebra of sets](04_Sets/algebra_of_sets/README.md) → [Truth tables and the laws of logic](11_Logic/truth_tables_and_laws/README.md) — ∪ ∩ ′ are ∨ ∧ ¬, so one finite table proves both lists of laws.
 3. [Predicates and quantifiers](11_Logic/predicates_and_quantifiers/README.md) → [Reading a formula](13_Axioms_of_Set_Theory/reading_a_formula/README.md) — ∀ and ∃ as loops, first over four people, then over a universe of sets.
 4. [The Cartesian product](04_Sets/cartesian_product/README.md) → [Pairs](13_Axioms_of_Set_Theory/pairs/README.md) → [Relations and functions](04_Sets/relations_and_functions/README.md) — Kuratowski's pair, the axiom that makes it, and everything built from pairs.

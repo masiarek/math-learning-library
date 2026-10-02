@@ -58,13 +58,13 @@ The list is the owner's, sent in October 2026, grouped as they grouped it. A ter
 - [Proper Superset](../../GLOSSARY.md#symbols) — the symbol table
 - [Equality of Sets](../../13_Axioms_of_Set_Theory/extensionality/README.md) — extensionality
 - [Extensionality](../../GLOSSARY.md#extensionality) — glossary
-- [Well-Defined Set](../../04_Sets/what_is_a_set/README.md) — what is a set?
+- [Well-Defined Set](../../04_Sets/definition_on_trial/README.md) — the textbook definition on trial
 - [Naive Set Theory](../../reading_guides/set_theory/README.md#two-subjects-with-one-name) — the reading guide: two subjects with one name
 - [Axiomatic Set Theory](../../13_Axioms_of_Set_Theory/README.md) — the axioms chapter
 - [Universe of Discourse](../../11_Logic/predicates_and_quantifiers/README.md) — predicates and quantifiers
 - [Class](../../GLOSSARY.md#class) — glossary
 - [Proper Class](../../GLOSSARY.md#class) — glossary
-- [Collection](../../04_Sets/what_is_a_set/README.md) — what is a set?
+- [Collection](../../04_Sets/definition_on_trial/README.md) — the textbook definition on trial
 - [Family of Sets](../../13_Axioms_of_Set_Theory/unions/README.md) — unions
 - [Primitive Notion](../../04_Sets/what_is_a_set/README.md) — what is a set?
 
