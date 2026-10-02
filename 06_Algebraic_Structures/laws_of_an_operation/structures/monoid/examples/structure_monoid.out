@@ -1,0 +1,28 @@
+LAWS REQUIRED: associative, identity
+   ℕ under ×
+     associative: True
+     identity:    True   it is 1
+     inverses:    False   none for 0, 2, 3
+     commutative: True
+   ℕ under gcd
+     associative: True
+     identity:    True   it is 0
+     inverses:    False   none for 1, 2, 3
+     commutative: True
+   strings under concatenation (sample)
+     associative: True
+     identity:    True   it is ''
+     inverses:    False   none for 'a', 'b', 'ab'
+     commutative: False   fails at 'a', 'b'
+   subsets of {1, 2} under ∪
+     associative: True
+     identity:    True   it is ∅
+     inverses:    False   none for {1}, {2}, {1, 2}
+     commutative: True
+   positive integers 1..6 under + (the non-example)
+     associative: True
+     identity:    False   none in the sample
+     inverses:    False
+     commutative: True
+   each monoid has exactly one identity, and it is the value of an empty chain:
+   sum([]) = 0, math.prod([]) = 1, ''.join([]) = ''

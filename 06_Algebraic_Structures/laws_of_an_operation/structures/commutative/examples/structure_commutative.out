@@ -1,0 +1,9 @@
+LAWS REQUIRED: any of the three, plus commutative
+   integers under +                       commutative: True
+   integers under ×                       commutative: True
+   integers under max                     commutative: True
+   ℕ under gcd                            commutative: True
+   strings under concatenation            commutative: False   witness: 'a' · 'b' ≠ 'b' · 'a'
+   permutations of 3 under composition    commutative: False   witness: (0, 2, 1) · (1, 0, 2) ≠ (1, 0, 2) · (0, 2, 1)
+   commutativity is independent of the other laws: strings form a monoid and
+   permutations a group, and neither is commutative.

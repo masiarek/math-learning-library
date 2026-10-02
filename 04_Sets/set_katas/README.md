@@ -35,6 +35,27 @@ Exercises 1.1, with the move for each:
 - **12.** Evaluate {x ∈ ℕ : 0 < x² < 24}, {y ∈ ℤ : y divides 12}, {z ∈ ℕ : 4 divides z} and {y ∈ ℝ⁻ : 1 ≤ y² ≤ 4}. Cunningham's ℕ begins at 0, so 0 divides nothing but is divisible by 4.
 - **Problem 5 of section 1.2.** x ∉ A ∖ B is equivalent to x ∉ A or x ∈ B. This is the lemma that katas 1, 3 and 7 use, and its proof is De Morgan's law applied to the definition of ∖, which [the algebra of sets](../algebra_of_sets/README.md) covers.
 
+## Quiz katas
+
+Ten multiple-choice questions from the Math is Fun quizzes on sets, which the owner sent as screenshots; section 4 of the program computes each answer, with the sets listed. They are good katas for the first hour: each tests one definition (subset, proper subset, empty set, 2ⁿ) or one convention, and each can be settled by listing the sets. They are weak where the exercises above are strong: they ask for recall, never for a proof, and one of them turns on a convention rather than on mathematics.
+
+| Question | Answer | Why |
+|---|---|---|
+| X = multiples of 3, Y of 6, Z of 9; which is true? | **D**, Z ⊂ X | every multiple of 9 is a multiple of 3, because 3 divides 9; Y ⊂ X is true too, but not offered |
+| A = factors of 6, B = prime factors, C = proper factors, D = factors of 3; which is true? | **C**, B = C | with proper factors {2, 3}; see the note below |
+| Which is the null set? | **D**, rational expressions for π | {∅} has a member; 2 is an even prime; 7 has factors 1 and 7; π is irrational |
+| Subsets of {a, b, c, d}? | **C**, 16 | 2⁴: each member in or out |
+| Proper subsets of {a, b, c, d, e}? | **B**, 31 | 2⁵ − 1: all subsets but the set itself |
+| A ⊆ B and B ⊆ C; what must hold? | **D**, A ⊆ C | ⊆ is transitive; the other three fail for A = ∅, B = C = {1} |
+| P, Q, R = factors of 5, 25, 125; which is false? | **C**, R ⊂ P | the factor sets are nested upward: {1, 5} ⊂ {1, 5, 25} ⊂ {1, 5, 25, 125} |
+| A = primes < 10, B = odd < 10, C = even < 10; how many of the six proper-subset claims hold? | **D**, none | 2 is prime and not odd, so A ⊄ B; the rest fail at once |
+| Which set is infinite? | **C**, integers less than 10 | 9, 8, …, 0, −1, −2, … has no end; the other three have 10, 4 and 4 members |
+| A = factors of 12; which is not a member? | **C**, 5 | the factors are 1, 2, 3, 4, 6, 12 |
+
+**Proper factors.** A factor of n is a positive integer that divides n. A *proper* factor excludes n itself, and on the stricter convention, which Math is Fun uses and the quiz needs, excludes 1 as well: the proper factors of 6 are 2 and 3. On the looser convention they are 1, 2 and 3, and then no option of that question is true. "Proper" works as it does for subsets: a proper subset of S is a subset other than S itself. (The Math is Fun definitions page could not be fetched from this session; the convention is inferred from the quiz having an answer.)
+
+**Is this number theory?** Yes, read as sets. The three questions about factors and multiples are one fact of number theory in set clothing: a divides b exactly when the factors of a are a subset of the factors of b, and exactly when the multiples of b are a subset of the multiples of a. Divisibility is a partial order, like ⊆, and the program checks the equivalence for every a and b up to 12. [The algebra of sets](../algebra_of_sets/README.md#is-a-partial-order) has ⊆ as a partial order; divisibility is the other standard example, and the one [Hrbacek and Jech](../function_katas/README.md) use for "incomparable" (2 and 3 are incomparable under divides).
+
 ## What the program prints
 
 <!-- output:set_katas -->
@@ -80,6 +101,36 @@ Exercises 1.1, with the move for each:
    11(b) {x ∈ ℝ : x > 0 and (x − 1)² < 1}   = (0, 2)     agrees on 81 sample points in [−5, 5]: True
    12(d) {y ∈ ℝ⁻ : 1 ≤ y² ≤ 4}              = [-2, -1]   agrees on 81 sample points in [−5, 5]: True
    The grid check is evidence, not proof: solving x² − 1 ≤ 3 is the kata.
+
+4. QUIZ KATAS: SEVEN MULTIPLE-CHOICE QUESTIONS, COMPUTED
+   Q1 X = multiples of 3, Y of 6, Z of 9 (within 1..199):
+      A  X ⊂ Y: False
+      B  X ⊂ Z: False
+      C  Z ⊂ Y: False
+      D  Z ⊂ X: True
+      every multiple of 9 is a multiple of 3, because 3 | 9; and Y ⊂ X too, since 3 | 6.
+   Q2 A = factors of 6 = [1, 2, 3, 6], B = prime factors = [2, 3], D = factors of 3 = [1, 3]
+      C = proper factors of 6: [2, 3] if 1 is excluded (Math is Fun), [1, 2, 3] if only 6 is
+      A = B False   A = C False   B = C True   C = D False   -> C, on the convention that excludes 1
+   Q3 which is the null set?
+      A  subsets of ∅: [frozenset()]   empty: False
+      B  even primes: [2]   empty: False
+      C  factors of 7: [1, 7]   empty: False
+      D  rational expressions for π: ∅   empty: True
+      {∅} has one member, ∅ itself; π is irrational, so D.
+   Q4 subsets of {a, b, c, d}: 2^4 = 16   (each of 4 members in or out)
+   Q5 proper subsets of {a, b, c, d, e}: 2^5 − 1 = 31   (all subsets but the set itself)
+   Q6 A ⊆ B and B ⊆ C imply A ⊆ C, on all triples of subsets of {1, 2, 3}: True   -> D; the other three fail e.g. A = ∅, B = C = {1}
+   Q7 factors of 5, 25, 125: [1, 5], [1, 5, 25], [1, 5, 25, 125]
+      P ⊂ Q True   Q ⊂ R True   R ⊂ P False   P ⊂ R True   -> C is the false one
+   Q8 A = primes < 10 = [2, 3, 5, 7], B = odd < 10 = [1, 3, 5, 7, 9], C = even < 10 = [0, 2, 4, 6, 8]
+      A ⊂ B False   B ⊂ A False   A ⊂ C False   C ⊂ A False   B ⊂ C False   C ⊂ B False   -> 0 true: D, None; 2 is the prime that is not odd
+   Q9 which is infinite? whole numbers < 10: 10 of them; primes < 10: 4; factors of 10: 4;
+      integers < 10: 9, 8, 7, ..., 0, −1, −2, ... with no end -> C
+   Q10 factors of 12 = [1, 2, 3, 4, 6, 12]; not a member: [5] -> C
+   Behind Q1, Q2, Q7 and Q10 is one fact of number theory read as sets:
+      a | b  iff  factors(a) ⊆ factors(b)  iff  multiples(b) ⊆ multiples(a)
+      checked for all a, b in 1..12: True
 ```
 <!-- /output -->
 

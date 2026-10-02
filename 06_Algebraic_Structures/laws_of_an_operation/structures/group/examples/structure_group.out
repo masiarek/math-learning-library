@@ -1,0 +1,25 @@
+LAWS REQUIRED: associative, identity, inverses
+   integers mod 7 under + (inverse is 7 − n)
+     associative: True
+     identity:    True   it is 0
+     inverses:    True
+     commutative: True
+   nonzero fractions (sample) under ×
+     associative: True
+     identity:    True   it is 1
+     inverses:    True
+     commutative: True
+   the 6 permutations of 3 objects under composition
+     associative: True
+     identity:    True   it is (0, 1, 2)
+     inverses:    True
+     commutative: False   fails at (0, 2, 1), (1, 0, 2)
+   ℕ 0..6 under + (the non-example)
+     associative: True
+     identity:    True   it is 0
+     inverses:    False   none for 1, 2, 3
+     commutative: True
+   in a group every row of the table is a rearrangement of the set (a Latin square):
+     (0, 1, 2) ∘ _ : True
+     (0, 2, 1) ∘ _ : True
+     (1, 0, 2) ∘ _ : True

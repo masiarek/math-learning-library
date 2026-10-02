@@ -28,13 +28,13 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
 - **Sets and size**
     - **Building sets** · from [Sets](04_Sets/README.md)
         - [What is a set?](04_Sets/what_is_a_set/README.md) — well-defined, extensionality, the empty set, null set, Russell's paradox, separation, no set of all sets
-        - [The algebra of sets](04_Sets/algebra_of_sets/README.md) — universal set as the Venn rectangle, complement (A′, Ā, Aᶜ), disjoint sets, De Morgan's laws, distributive and absorption laws, Boolean algebra, Venn regions, ⊆ as a partial order (poset)
+        - [The algebra of sets](04_Sets/algebra_of_sets/README.md) — universal set as the Venn rectangle, complement (A′, Ā, Aᶜ), disjoint sets, De Morgan's laws, distributive and absorption laws, Boolean algebra, Venn regions, ⊆ as a partial order (poset); [each law on its own page](04_Sets/algebra_of_sets/laws/README.md): identity, domination, idempotent, complement, double complement, commutative and associative, distributive, absorption, De Morgan, difference
         - [Reading a set expression](04_Sets/reading_set_expressions/README.md) — order of operations for sets, precedence from logic, Python's - & ^ | ladder, x ∈ A ∩ x ∈ B and x ∈ A ∧ B as bugs, (1, 2) as pair or interval
         - [Sets in Python](04_Sets/python_sets/README.md) — the bridge: extensionality is ==, separation is a comprehension, | & - ^ as or, and, and-not, xor, no complement without U; links to the Python, Rust and ABAP pages
         - [The Cartesian product](04_Sets/cartesian_product/README.md) — ordered pairs, ℝ², and why A × B is not B × A
         - [Relations and functions are sets of pairs](04_Sets/relations_and_functions/README.md) — relation, domain, range, inverse, function as a relation with one property, injection, surjection, bijection, composition as a relation product, graph as a relation drawn, database table
         - [Equivalence relations, partitions and the kernel of a function](04_Sets/equivalence_and_partitions/README.md) — reflexive, symmetric, transitive; classes, quotient, Bell numbers, kernel, decomposition of a function, congruence mod m
-        - [Set katas](04_Sets/set_katas/README.md) — Cunningham's exercises 1.1 checked on every choice of subsets of {1, 2, 3}; element chase, unpacking a negation, two inclusions, truth sets, intervals
+        - [Set katas](04_Sets/set_katas/README.md) — Cunningham's exercises 1.1 checked on every choice of subsets of {1, 2, 3}; element chase, unpacking a negation, two inclusions, truth sets, intervals; ten quiz questions on subsets, proper subsets, factors and multiples, with divisibility as ⊆
         - [Function katas](04_Sets/function_katas/README.md) — Hrbacek and Jech 3.1–3.13 and 4.1–4.3 with solutions: domain of a composition, inverses, left and right inverses, (g ∘ f)⁻¹, images and preimages, reflexive–symmetric–transitive table
         - ↪ [Set theory: a reading guide](reading_guides/set_theory/README.md) — the language of sets and the subject of its axioms, which book for each, the Polish school, and the founding papers from Cantor 1874 to Cohen 1963
         - ↪ [Rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md) — the pairs of ℝ² as points of the plane
@@ -67,7 +67,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - ↪ [Countable sets](02_Measure_Zero/countable_sets/README.md) — the first sets shown to have measure zero
 - **Algebra**
     - **Laws and structures** · from [Algebraic Structures](06_Algebraic_Structures/README.md)
-        - [The laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md) — every book's list of rules is the same four laws
+        - [The laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md) — every book's list of rules is the same four laws; [each structure on its own page](06_Algebraic_Structures/laws_of_an_operation/structures/README.md): semigroup, monoid, group, commutative
         - [A definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md) — axioms as a test that any set can pass or fail
         - [Subsets inherit the laws](06_Algebraic_Structures/subsets_inherit_the_laws/README.md) — why a subspace needs three checks, not eight
         - [Maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md) — linear maps, logarithms and determinants have one shape

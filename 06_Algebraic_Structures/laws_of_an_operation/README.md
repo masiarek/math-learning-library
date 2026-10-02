@@ -109,10 +109,12 @@ Section 2 names each row, and the names are nothing more than which boxes are ti
 
 | Laws that hold | Name | Row in section 2 |
 |---|---|---|
-| associative | **semigroup** | integers under max |
-| associative, identity | **monoid** | strings under concatenation |
-| associative, identity, inverses | **group** | invertible 2 × 2 matrices under × |
-| any of those, plus commutative | **commutative** semigroup, monoid or group | integers under + |
+| associative | [**semigroup**](structures/semigroup/README.md) | integers under max |
+| associative, identity | [**monoid**](structures/monoid/README.md) | strings under concatenation |
+| associative, identity, inverses | [**group**](structures/group/README.md) | invertible 2 × 2 matrices under × |
+| any of those, plus commutative | [**commutative** semigroup, monoid or group](structures/commutative/README.md) | integers under + |
+
+Each name has [a page of its own](structures/README.md), with the definition, examples and non-examples, and a program that checks the laws on finite samples.
 
 A commutative group is also called an **abelian** group, after Niels Henrik Abel. An operation with no laws at all still has a name, a *magma*, and subtraction is one. The names matter because a theorem proved for every group is proved at once for every row that says *group*, which is the subject of the [next lesson](../a_definition_is_a_test/README.md).
 

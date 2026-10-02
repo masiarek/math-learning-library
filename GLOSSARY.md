@@ -226,6 +226,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Predicate** — a statement with a hole, P(x), that becomes true or false when x is filled from the universe of discourse. See [predicates and quantifiers](11_Logic/predicates_and_quantifiers/README.md).
 
+**Proper factor** — a factor of n other than n itself; on the stricter convention, which the Math is Fun quizzes use, other than 1 as well, so the proper factors of 6 are 2 and 3. "Proper" as in proper subset: the whole thing excluded. Divisibility read as sets: a divides b exactly when the factors of a are a subset of the factors of b. See [set katas](04_Sets/set_katas/README.md#quiz-katas).
+
 **Pythagorean theorem** — in a right triangle, the square of the hypotenuse equals the sum of the squares of the legs, c² = a² + b². Its converse is also true. See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md).
 
 **Pythagorean triple** — three whole numbers with a² + b² = c², such as 3, 4, 5 or 5, 12, 13; any multiple of one is another. See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md).
