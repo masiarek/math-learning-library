@@ -1,0 +1,59 @@
+1. A TRUTH TABLE, BUILT INSIDE OUT (CUNNINGHAM, PROBLEM 1)
+   ¬P → (Q ∧ P): the outside connective is →, its parts ¬P and Q ∧ P.
+      P         Q         ¬P       Q∧P     ¬P→(Q∧P)
+      T         T         F         T         T    
+      T         F         F         F         T    
+      F         T         T         F         F    
+      F         F         T         F         F    
+   → is false in one case only, T → F; the two F rows are the rows with P false.
+
+2. TAUTOLOGY, CONTRADICTION, AND WHAT ⇔ MEANS
+    P     ¬P   P∨¬P  P∧¬P
+    T     F     T     F  
+    F     T     T     F  
+   P ∨ ¬P is true on every row: a tautology. P ∧ ¬P never: a contradiction.
+   ψ ⇔ φ ('logically equivalent') means the columns of ψ and φ agree on
+   every row, which is the same as saying ψ ↔ φ is a tautology. ↔ is a
+   connective inside a sentence; ⇔ is a claim about two sentences.
+   ¬(P∨Q) ⇔ ¬P∧¬Q: columns agree: True;   ¬(P∨Q) ↔ (¬P∧¬Q) is a tautology: True
+
+3. TWO SENTENCES THAT ARE NOT EQUIVALENT (PROBLEM 3): ONE ROW DECIDES
+      P         Q      P∨(Q∧¬P)  (P∨Q)∧¬P
+      T         T         T         F    
+      T         F         T         F    
+      F         T         T         T    
+      F         F         F         F    
+   equivalent: False. The brackets moved and the meaning changed.
+
+4. CUNNINGHAM'S LOGIC LAWS, EVERY ONE CHECKED ON EVERY ROW
+   De Morgan 1        ¬(P∨Q) ⇔ ¬P∧¬Q               rows: 8   holds: True
+   De Morgan 2        ¬(P∧Q) ⇔ ¬P∨¬Q               rows: 8   holds: True
+   commutative        P∧Q ⇔ Q∧P                    rows: 8   holds: True
+   associative        P∨(Q∨R) ⇔ (P∨Q)∨R            rows: 8   holds: True
+   idempotent         P∧P ⇔ P                      rows: 8   holds: True
+   distributive 1     P∧(Q∨R) ⇔ (P∧Q)∨(P∧R)        rows: 8   holds: True
+   distributive 2     P∨(Q∧R) ⇔ (P∨Q)∧(P∨R)        rows: 8   holds: True
+   double negation    ¬¬P ⇔ P                      rows: 8   holds: True
+   tautology law      P∧(Q∨¬Q) ⇔ P                 rows: 8   holds: True
+   contradiction law  P∨(Q∧¬Q) ⇔ P                 rows: 8   holds: True
+   conditional 1      P→Q ⇔ ¬P∨Q                   rows: 8   holds: True
+   conditional 2      P→Q ⇔ ¬(P∧¬Q)                rows: 8   holds: True
+   contrapositive     P→Q ⇔ ¬Q→¬P                  rows: 8   holds: True
+   biconditional      P↔Q ⇔ (P→Q)∧(Q→P)            rows: 8   holds: True
+   Problem 4          (P→R)∧(Q→R) ⇔ (P∨Q)→R        rows: 8   holds: True
+   Three letters, eight rows: a finite check that is a complete proof,
+   because a law says nothing about the letters except their truth values.
+
+5. EXERCISES 1.2
+   1  ¬(P→Q) ⇔ P∧¬Q              True
+   2  P↔Q ⇔ (P→Q)∧(Q→P)          True
+   3  P ⇔ ¬P→(Q∧¬Q)              True
+   4  (P∨Q)∧R ⇔ (P∧R)∨(P∧Q)      False   differ at P, Q, R = T, T, F
+   5  (P→Q)∧(P→R) ⇔ P→(Q∧R)      True
+   6  (P→R)∨(Q→R) ⇔ (P∧Q)→R      True
+   7  P→(Q→R) ⇔ (P∧Q)→R          True
+   8  (P→Q)→R ⇔ P→(Q→R)          False   differ at P, Q, R = F, T, F
+   Exercise 4 as printed is not a law: with P false, Q and R true, the
+   left side is true and the right false; the intended right side is
+   (P∧R)∨(Q∧R). Exercise 8 is the book's own example of a non-equivalence:
+   → does not associate, so the brackets in P→Q→R must be written.

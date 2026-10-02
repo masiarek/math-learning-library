@@ -10,3 +10,6 @@ How the owner of this library works, as learned from sessions. Update when a ses
 - Values honesty about evidence: popular and AI-written summaries get a "how sure is each claim" table, not a copy.
 - Keeps books as PDFs on an external drive (a Samsung T7) and some notes in Google Drive. Cloud sessions can reach Google Drive but not the drive.
 - Interests beyond this library: learning how to learn, programming (*The Programmer's Brain*, *Deep Work*), AI tools and workflows.
+- Sends tables of contents and sample pages of books as photos, often several books in one sitting, and asks "how good is this book", "what chapters first", "why is it useful". Answer with a verdict and a reading order, and put the verdict in the matching reading guide.
+- Dislikes that every book spells the same idea differently. Keep the cross-book symbol table in `GLOSSARY.md` (Symbols) and the chapter table in `13_Axioms_of_Set_Theory` up to date when a new book arrives.
+- Asks for katas: exercise pages where a program checks each claim before the proof is attempted (`04_Sets/set_katas`, `13_Axioms_of_Set_Theory/axiom_katas`). Extend those rather than adding exercises elsewhere.

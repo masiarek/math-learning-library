@@ -1,0 +1,55 @@
+1. A UNIVERSE IS POINTS AND A MEMBERSHIP RELATION, NOTHING ELSE
+   V_1:  1 points: ∅
+   V_2:  2 points: ∅, {∅}
+   V_3:  4 points: ∅, {∅}, {{∅}}, {∅, {∅}}
+   V_4: 16 points: ∅, {∅}, {{∅}}, {∅, {∅}}, ... (every set of sets of sets of ∅)
+   x ∈ y is looked up in a table: in V_3, ∅ ∈ {∅}? True   {∅} ∈ ∅? False
+
+2. THE TRANSLATION TABLE
+   formula     read aloud                                           Python
+   ∀v F        for every point v of the universe, F                 all(F(v) for v in U)
+   ∃v F        for at least one point v, F                          any(F(v) for v in U)
+   F ∧ G       F and G                                              F and G
+   F ∨ G       F or G, or both                                      F or G
+   ¬F          not F                                                not F
+   F ⇒ G       if F then G: forbidden only when F true, G false     (not F) or G
+   F ⇔ G       F and G have the same truth value                    F == G
+   x ≃ y       x and y are the same point                           x == y
+   x ∈ y       x is a member of y                                   x in U[y]
+   x ∉ y       x is not a member of y                               x not in U[y]
+   ∀x ∈ y F    for every member x of y, F                           all(F(x) for x in U[y])
+   ∃x ∈ y F    for some member x of y, F                            any(F(x) for x in U[y])
+
+3. TWO AXIOMS READ ALOUD, THEN EVALUATED
+   Extensionality:  ∀v0 ∀v1 (∀v2 (v2 ∈ v0 ⇔ v2 ∈ v1) ⇒ v0 ≃ v1)
+     for every v0, for every v1: if every v2 is in v0 exactly when it is
+     in v1, then v0 and v1 are the same point. Two sets with the same
+     members are equal.
+     all((not all((z in U[x]) == (z in U[y]) for z in U)) or x == y
+         for x in U for y in U)
+   Pairs:  ∀v0 ∀v1 ∃v2 ∀v3 (v3 ∈ v2 ⇔ (v3 ≃ v0 ∨ v3 ≃ v1))
+     for every v0 and v1 there is a v2 such that a point is in v2
+     exactly when it is v0 or v1. The pair {v0, v1} exists.
+     all(any(all((w in U[z]) == (w == x or w == y) for w in U) for z in U)
+         for x in U for y in U)
+   in V_2:  extensionality True   pairs False
+   in V_3:  extensionality True   pairs False
+   in V_4:  extensionality True   pairs False
+   Pairs fails in every V_n: the pair of two sets from the top rank
+   has a rank one higher, and that rank is not in the universe.
+
+4. EVERY AXIOM ON FOUR UNIVERSES: TRUE MEANS 'THE UNIVERSE HAS WHAT IT ASKS FOR'
+   U(atoms) is {a, b, c} with a and b memberless and c = {a}: two 'empty sets'.
+   axiom                                    V_2       V_3       V_4  U(atoms)
+   extensionality                          True      True      True     False
+   pairs                                  False     False     False     False
+   unions                                  True      True      True      True
+   power set                              False     False     False     False
+   comprehension, F = 'v is empty'         True      True      True      True
+   replacement, F = 'w ↦ {w}'             False     False     False     False
+   infinity                               False     False     False     False
+   foundation                              True      True      True      True
+   choice                                  True      True      True      True
+   Each False is a set the axiom demands and the universe lacks: a pair,
+   a power set, an image, an infinite set. Infinity fails in every finite
+   universe, which is why it is an axiom and not a theorem.

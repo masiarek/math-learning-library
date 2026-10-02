@@ -1,0 +1,66 @@
+KUNEN, EXERCISE I.2.1: WHICH AXIOMS HOLD IN SEVEN SMALL MEMBERSHIP GRAPHS?
+   (x, y) in E means x ∈ y; Pairing and Union in Kunen's weak forms.
+   #   universe                                       Ext  Found  Pair  Union
+   1   a = {}                                        True   True False   True
+   2   a = {a}                                       True  False  True   True
+   3   a = {b}, b = {a}                              True   True False   True
+   4   a = {b}, b = {a}, c = {a, b}                  True  False False   True
+   5   a = {}, b = {a}, c = {a}                     False   True False   True
+   6   0 = {}, 1 = {0}, 2 = {0, 1}, 3 = {0, 1, 2}    True   True False   True
+   7   a = {}, b = {a}, c = {b}                      True   True False   True
+   Pairing holds only in #2, as Kunen says: a ∈ a is the one point that
+   contains a pair. Extensionality fails only in #5, where b and c have
+   the same member. Foundation fails in #2 (a ∈ a) and #4 (c = {a, b} with
+   a and b members of each other); #3 has the same two-cycle and passes,
+   because the pair {a, b} is not in it. This exercise is the method of
+   the whole chapter: an axiom is checked on a universe, not believed.
+
+KATAS, CHECKED BEFORE YOU PROVE THEM
+  Jech 1.1          (a, b) = (c, d) iff a = c and b = d, with (a, b) = {{a}, {a, b}}
+                    -> True   (all 256 choices from V_3)
+  Jech 1.2          there is no set X with P(X) ⊆ X
+                    -> True   (every X in V_4; |P(X)| = 2^|X| > |X| is the proof)
+  Jech 1.3          each n in N is transitive, and n = {m ∈ N : m < n}
+                    -> True   (0 to 6, with m < n meaning m ∈ n)
+  Jech 1.5          n ∉ n and n ≠ n + 1 for each n in N
+                    -> True
+  Jech 1.7          every nonempty X ⊆ N has an ∈-minimal element
+                    -> True   (all 31 nonempty subsets of {0, ..., 4}; the hint says: pick n ∈ X, look at X ∩ n)
+  Jech 1.8          each n ≠ 0 in N is m + 1 for some m
+                    -> True
+  Jech 1.10         each n in N is T-finite (Tarski): every nonempty X ⊆ P(n) has a ⊆-maximal member
+                    -> True   (n = 0 to 3; for n = 3, P(n) has 8 members and 255 nonempty X)
+  Jech 1.14         separation follows from replacement: {x ∈ X : φ(x)} = F(X) for F = {(x, x) : φ(x)}
+                    -> True   (φ = 'x has one member', every X in V_4)
+  Jech 1.15         the weak union axiom (∃Y ⊇ ∪X) plus separation gives ∪X
+                    -> True   (Y = V_3 works for every X in V_4; the same move does power set and replacement)
+  Cunningham 1.4.1  ∃x ∀y (y ∉ x):  'there is a set with no members'
+                    -> True   (true in V_4, as in ZF)
+  Cunningham 1.4.2  ∀y ∃x (y ∉ x):  'for every set there is a set it does not belong to'
+                    -> True   (true in V_4, as in ZF)
+  Cunningham 1.4.3  ∀y ∃x (x ∉ y):  'no set contains every set'
+                    -> True   (true in V_4, as in ZF)
+  Cunningham 1.4.4  ∀y ¬∃x (x ∉ y):  'every set contains every set'
+                    -> False   (false in V_4, as in ZF: ∅ is the counterexample)
+  Cunningham 1.4.5  ∀z ∃x ∃y (x ∈ y ∧ y ∈ z):  'every set has a member that has a member'
+                    -> False   (false in V_4, as in ZF: ∅ is the counterexample)
+  Cunningham 1.5.1  {u, v, w} exists: it is ∪{{u, v}, {w}} (pairs twice, union once)
+                    -> True
+  Cunningham 1.5.2  {A} exists: it is the pair {A, A}
+                    -> True
+  Cunningham 1.5.3  A ∩ {A} = ∅, hence A ∉ A  (regularity)
+                    -> True
+  Cunningham 1.5.4  if A ∈ B then B ∉ A  (look at {A, B})
+                    -> True
+  Cunningham 1.5.5  if A ∈ B and B ∈ C then C ∉ A  (look at {A, B, C})
+                    -> True   (4096 triples)
+  Cunningham 1.5.6  P(A) ∩ B exists: separation inside P(A) with 'x ∈ B'
+                    -> True
+  Cunningham 1.5.7  A ∖ B exists: separation inside A with 'x ∉ B'
+                    -> True
+  Cunningham 1.5.8  ∅, {∅}, {∅, {∅}} are pairwise distinct
+                    -> True   (extensionality: ∅ has no member, {∅} has one, {∅, {∅}} has two)
+
+20 of 22 checks come out True; the one False is
+Cunningham 1.4.4, a sentence that is false in ZF too. A check is not a
+proof: V_4 is one universe, and the proof has to work in every one.

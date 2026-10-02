@@ -32,10 +32,32 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - [Reading a set expression](04_Sets/reading_set_expressions/README.md) — order of operations for sets, precedence from logic, Python's - & ^ | ladder, x ∈ A ∩ x ∈ B and x ∈ A ∧ B as bugs, (1, 2) as pair or interval
         - [Sets in Python](04_Sets/python_sets/README.md) — the bridge: extensionality is ==, separation is a comprehension, | & - ^ as or, and, and-not, xor, no complement without U; links to the Python, Rust and ABAP pages
         - [The Cartesian product](04_Sets/cartesian_product/README.md) — ordered pairs, ℝ², and why A × B is not B × A
+        - [Relations and functions are sets of pairs](04_Sets/relations_and_functions/README.md) — relation, domain, range, inverse, function as a relation with one property, injection, surjection, bijection, composition as a relation product, graph as a relation drawn, database table
+        - [Equivalence relations, partitions and the kernel of a function](04_Sets/equivalence_and_partitions/README.md) — reflexive, symmetric, transitive; classes, quotient, Bell numbers, kernel, decomposition of a function, congruence mod m
+        - [Set katas](04_Sets/set_katas/README.md) — Cunningham's exercises 1.1 checked on every choice of subsets of {1, 2, 3}; element chase, unpacking a negation, two inclusions, truth sets, intervals
+        - ↪ [Set theory: a reading guide](reading_guides/set_theory/README.md) — the language of sets and the subject of its axioms, which book for each, the Polish school, and the founding papers from Cantor 1874 to Cohen 1963
         - ↪ [Rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md) — the pairs of ℝ² as points of the plane
     - **Size by matching** · from [Sets](04_Sets/README.md) and [Measure Zero](02_Measure_Zero/README.md)
         - [Cardinality of sets](04_Sets/cardinality/README.md) — size defined by matching, not counting
+        - ↪ [Power set](13_Axioms_of_Set_Theory/power_set/README.md) — Cantor's theorem, |𝒫(a)| > |a|, as an axiom's consequence
+        - ↪ [Set theory: a reading guide](reading_guides/set_theory/README.md) — Cantor 1874, Dedekind 1888 and Cantor 1891 run as a program: listing the algebraic numbers, infinite as matching a proper part, the diagonal
         - [Countable sets](02_Measure_Zero/countable_sets/README.md) — any set that can be listed, even the rationals, has measure zero
+    - **The axioms of set theory** · from [Axioms of Set Theory](13_Axioms_of_Set_Theory/README.md)
+        - [Reading a formula](13_Axioms_of_Set_Theory/reading_a_formula/README.md) — ∀ ∃ ⇒ ⇔ ≃ ∈ v₀ v₁ as loops and lookups, the universe as a dictionary, every axiom evaluated on V₂, V₃, V₄ and a universe with atoms
+        - [Extensionality](13_Axioms_of_Set_Theory/extensionality/README.md) — same members, same set; a ⊆ b and b ⊆ a; "unique by extensionality"; urelements
+        - [Pairs](13_Axioms_of_Set_Theory/pairs/README.md) — {a, b}, {a}, rank, Kuratowski's ordered pair from three pairs
+        - [Unions](13_Axioms_of_Set_Theory/unions/README.md) — ∪a versus a ∪ b, rank goes down, ∩∅ does not exist
+        - [Power set](13_Axioms_of_Set_Theory/power_set/README.md) — ⊆ inside the formula, V_{n+1} = 𝒫(V_n), Cantor's theorem
+        - [Comprehension](13_Axioms_of_Set_Theory/comprehension/README.md) — a scheme, {x ∈ a : F[x]}, ∅ ∩ ∖ derived, classes, Russell's paradox as a truth table
+        - [Replacement](13_Axioms_of_Set_Theory/replacement/README.md) — functional formulas, images, comprehension for free, V_{ω+ω} and the set Zermelo cannot collect
+        - [Infinity](13_Axioms_of_Set_Theory/infinity/README.md) — successor, inductive set, ω as the intersection, no finite universe has one, limit ordinal
+        - [Choice](13_Axioms_of_Set_Theory/choice/README.md) — choice function, product of nonempty sets, finite families, shoes and socks, Zorn, well-ordering, Banach–Tarski, Gödel and Cohen
+        - [Foundation](13_Axioms_of_Set_Theory/foundation/README.md) — ∈-minimal member, no x ∈ x, rank, Quine atoms, the two-cycle and {a, b}, anti-foundation
+        - [Ordinals](13_Axioms_of_Set_Theory/ordinals/README.md) — transitive and well-ordered by ∈, the von Neumann numbers, Goodstein sequences, Kirby and Paris
+        - [Axiom katas](13_Axioms_of_Set_Theory/axiom_katas/README.md) — Jech 1.1–1.15, Cunningham 1.4 and 1.5, Kunen I.2.1, checked on a small universe; the five proof moves
+        - ↪ [What is a set?](04_Sets/what_is_a_set/README.md) — extensionality, separation and Russell's paradox before the formal language
+        - ↪ [The Cartesian product](04_Sets/cartesian_product/README.md) — Kuratowski's pair put to work
+        - ↪ [Set theory: a reading guide](reading_guides/set_theory/README.md) — Cori and Lascar, Cunningham, Jech and Kunen placed among the books
     - **Size by length** · from [Measure Zero](02_Measure_Zero/README.md)
         - [What measure zero means](02_Measure_Zero/what_measure_zero_means/README.md) — fitting a set inside intervals of total length as small as anyone asks
         - [The Cantor set](02_Measure_Zero/cantor_set/README.md) — as many points as the whole interval, and length 0
@@ -96,6 +118,9 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
 - **Logic and proof**
     - **If A then B: converse, contrapositive, if and only if** · from [Logic](11_Logic/README.md)
         - [If A then B: converse, contrapositive and inverse](11_Logic/converse_and_contrapositive/README.md) — implication, hypothesis, conclusion, truth table, converse, inverse, contrapositive, if and only if, counterexample, affirming the consequent
+        - [Truth tables and the laws of logic](11_Logic/truth_tables_and_laws/README.md) — ¬ ∧ ∨ → ↔, tautology, contradiction, logical equivalence, ↔ versus ⇔, De Morgan, distributive, contrapositive, → does not associate, a misprint caught by one row
+        - [Predicates and quantifiers](11_Logic/predicates_and_quantifiers/README.md) — predicate, universe of discourse, ∀ ∃ as loops, bounded quantifiers, interchange, negation flips a quantifier, distribution, ∃!
+        - ↪ [Reading a formula](13_Axioms_of_Set_Theory/reading_a_formula/README.md) — the same symbols inside the axioms of set theory, evaluated on a small universe
         - ↪ [The Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md) — a theorem whose converse is also true
         - ↪ [A definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md) — a definition as an "if and only if"
         - ↪ [What is a set?](04_Sets/what_is_a_set/README.md) — Russell's paradox: an argument by cases in which both cases fail
@@ -138,6 +163,17 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
 ## Threads across chapters
 
 Each thread follows one idea through lessons in different chapters. They are the links the lessons already make to one another, gathered in one place.
+
+### From a set to its axioms
+
+The same objects three times: in everyday use, in Python, and on the axioms.
+
+1. [What is a set?](04_Sets/what_is_a_set/README.md) — extensionality and separation as the rules the textbook definition leaves out, and Russell's paradox.
+2. [The algebra of sets](04_Sets/algebra_of_sets/README.md) → [Truth tables and the laws of logic](11_Logic/truth_tables_and_laws/README.md) — ∪ ∩ ′ are ∨ ∧ ¬, so one finite table proves both lists of laws.
+3. [Predicates and quantifiers](11_Logic/predicates_and_quantifiers/README.md) → [Reading a formula](13_Axioms_of_Set_Theory/reading_a_formula/README.md) — ∀ and ∃ as loops, first over four people, then over a universe of sets.
+4. [The Cartesian product](04_Sets/cartesian_product/README.md) → [Pairs](13_Axioms_of_Set_Theory/pairs/README.md) → [Relations and functions](04_Sets/relations_and_functions/README.md) — Kuratowski's pair, the axiom that makes it, and everything built from pairs.
+5. [Cardinality of sets](04_Sets/cardinality/README.md) → [Power set](13_Axioms_of_Set_Theory/power_set/README.md) → [Infinity](13_Axioms_of_Set_Theory/infinity/README.md) → [Ordinals](13_Axioms_of_Set_Theory/ordinals/README.md) — size by matching, then the axioms that give an uncountable set, an infinite one, and the ordinals that count past it.
+6. [Set theory: a reading guide](reading_guides/set_theory/README.md) — the founding papers of steps 1 to 5, four of them run as a program, and the books to continue in.
 
 ### Floats and exact numbers
 

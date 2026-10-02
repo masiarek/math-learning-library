@@ -12,6 +12,9 @@ Before a chapter can talk about how long a set is, or how many points it holds, 
 | 4 | [Reading a set expression](reading_set_expressions/README.md) | What does A ∪ B ∩ C mean without brackets, and why are two classic notation mistakes also Python bugs? |
 | 5 | [The Cartesian product](cartesian_product/README.md) | What is ℝ², and why is A × B not the same set as B × A? |
 | 6 | [Cardinality of sets](cardinality/README.md) | What do the bars in \|A\| mean, and why is "how many" defined by matching instead of counting? |
+| 7 | [Relations and functions are sets of pairs](relations_and_functions/README.md) | Why does a book on sets have chapters on functions and graphs, and why is a database table a relation? |
+| 8 | [Equivalence relations, partitions and the kernel of a function](equivalence_and_partitions/README.md) | Why are "reflexive, symmetric, transitive" the right three words, and what does a function's kernel have to do with cutting a set into blocks? |
+| 9 | [Set katas](set_katas/README.md) | Is this exercise's claim true, and which of four moves proves it? Cunningham's first exercises, checked before you prove them |
 
 ## The through-line
 
@@ -20,6 +23,8 @@ The first lesson asks what a set is, and finds that the textbook answer, a well-
 A set forgets everything except membership: {2, 5} and {5, 2} are one set. Almost all of mathematics needs more than that. A point in the plane has a first coordinate and a second, a function has an input and an output, a database row has columns in a fixed order. The **ordered pair** is the smallest object that remembers order, and the **Cartesian product** is the set of all of them. Everything from the coordinate plane to the definition of a function is built on it.
 
 The second lesson asks how big a set is. For a finite set the answer is a count, and |A × B| = |A| · |B| is the first theorem. For an infinite set counting never finishes, and the definition that replaces it, matching members one to one, is what lets ℕ be the same size as its even numbers and ℝ be strictly bigger than both. That last fact is also the reason some functions have no program, which is where the chapter touches computing.
+
+The seventh lesson answers the surprise that functions and graphs turn up in a book on sets: a relation is a set of pairs, a function a relation with one property, a graph a relation drawn, so one definition covers them all; the eighth shows that a partition, an equivalence relation and the kernel of a function are one object three ways. The last lesson is practice: the exercises of a first section on sets, each checked on every choice of subsets of {1, 2, 3} before you look for the proof, with the proof's move named. The [axioms chapter](../13_Axioms_of_Set_Theory/README.md) continues from here, putting the constructions of this chapter on the axioms of Zermelo and Fraenkel.
 
 ## A note on the code
 
