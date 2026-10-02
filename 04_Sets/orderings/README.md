@@ -10,13 +10,13 @@ Let R be a relation on S, a set of pairs (x, y) with x and y in S, as [relations
 
 | Property | Says | Loop |
 |---|---|---|
-| reflexive | every x is related to itself | every (x, x) is in R |
-| irreflexive | no x is related to itself | no (x, x) is in R |
-| symmetric | x R y gives y R x | for every pair in R, the reversed pair is in R |
-| antisymmetric | x R y and y R x force x = y | no reversed pair in R unless x = y |
-| asymmetric | x R y forbids y R x | no reversed pair in R at all |
-| transitive | x R y and y R z give x R z | for every chained pair, the shortcut is in R |
-| comparable (two elements) | x R y or y R x | at least one of the two pairs is in R |
+| [reflexive](../../GLOSSARY.md#reflexive-relation) | every x is related to itself | every (x, x) is in R |
+| [irreflexive](../../GLOSSARY.md#irreflexive-relation) | no x is related to itself | no (x, x) is in R |
+| [symmetric](../../GLOSSARY.md#symmetric-relation) | x R y gives y R x | for every pair in R, the reversed pair is in R |
+| [antisymmetric](../../GLOSSARY.md#antisymmetric-relation) | x R y and y R x force x = y | no reversed pair in R unless x = y |
+| [asymmetric](../../GLOSSARY.md#asymmetric-relation) | x R y forbids y R x | no reversed pair in R at all |
+| [transitive](../../GLOSSARY.md#transitive-relation) | x R y and y R z give x R z | for every chained pair, the shortcut is in R |
+| [comparable](../../GLOSSARY.md#comparable) (two elements) | x R y or y R x | at least one of the two pairs is in R |
 
 Each line is one `all(...)` over the pairs, and section 1 of the program runs them on André's four examples. Three things come out that are easy to miss by eye. The empty relation is irreflexive, symmetric, antisymmetric, asymmetric and transitive at once, all vacuously, since there is no pair to fail any of them. Symmetric plus transitive does not give reflexive, which the book warns about on page 57: R₂ = {(a, a), (b, b), (d, d), (a, b)} is the counterexample, and the loop shows (c, c) missing. And two of the book's own verdicts are wrong: "distinct siblings" is called transitive, but x T y and y T x would need x T x, and nobody is their own distinct sibling (the book's repair, "siblings or the same person", on page 58, is an equivalence); and R₃ on page 57 is called transitive, but it has (a, b) and (b, c) without (a, c). The program prints both failures. A relation is a set of pairs, and a claim about it is checked by looking at the pairs, which is what the loops do and the eye does not.
 
@@ -24,9 +24,9 @@ Each line is one `all(...)` over the pairs, and section 1 of the program runs th
 
 Two families of combinations have names, and section 2 counts them on all 512 relations on {a, b, c}.
 
-**Equivalence**: reflexive, symmetric, transitive. "Counts as the same." There are 5 on three points, the Bell number, because an equivalence is the same thing as a [partition](../equivalence_and_partitions/README.md).
+**[Equivalence](../../GLOSSARY.md#equivalence-relation)**: reflexive, symmetric, transitive. "Counts as the same." There are 5 on three points, the Bell number, because an equivalence is the same thing as a [partition](../equivalence_and_partitions/README.md).
 
-**Partial order** (non-strict): reflexive, antisymmetric, transitive, written a ≤ b. A **linear** (total) order is a partial order in which every two elements are comparable. The **strict** versions replace reflexive by irreflexive and antisymmetric by asymmetric, written a < b, and the two kinds match one to one: remove the diagonal pairs (x, x) from a partial order and a strict one remains; add them back and the partial order returns. On three points there are 19 partial orders, 6 of them linear (the 3! arrangements), and 19 strict ones. A **poset** is a partially ordered set, a set together with a partial order on it; André's footnote records *loset* for a linearly ordered set, which almost nobody says, the usual word being *toset* or *chain*.
+**[Partial order](../../GLOSSARY.md#partial-order)** (non-strict): reflexive, antisymmetric, transitive, written a ≤ b. A **[linear](../../GLOSSARY.md#linear-order-total-order)** (total) order is a partial order in which every two elements are comparable. The **[strict](../../GLOSSARY.md#strict-order)** versions replace reflexive by irreflexive and antisymmetric by asymmetric, written a < b, and the two kinds match one to one: remove the diagonal pairs (x, x) from a partial order and a strict one remains; add them back and the partial order returns. On three points there are 19 partial orders, 6 of them linear (the 3! arrangements), and 19 strict ones. A **[poset](../../GLOSSARY.md#poset)** is a partially ordered set, a set together with a partial order on it; André's footnote records *loset* for a linearly ordered set, which almost nobody says, the usual word being *toset* or *chain*.
 
 The identity relation wears two names: it is an equivalence (every class is a singleton) and a partial order (nothing is below anything else). It is the only relation that is both, since symmetric and antisymmetric together force every pair to be (x, x).
 
@@ -34,11 +34,11 @@ The identity relation wears two names: it is an equivalence (every class is a si
 
 André's Definition 6.4, run on two examples in sections 3 and 4:
 
-- A **chain** is a subset on which the order is linear; an **antichain** is a subset no two of whose members are comparable.
-- m is **minimal** when nothing is below it, **maximal** when nothing is above it.
+- A **[chain](../../GLOSSARY.md#chain-and-antichain)** is a subset on which the order is linear; an **antichain** is a subset no two of whose members are comparable.
+- m is **minimal** when nothing is below it, **[maximal](../../GLOSSARY.md#maximal-and-maximum)** when nothing is above it.
 - m is the **minimum** when it is below everything else, the **maximum** when above everything else. A minimum is minimal, and when every two elements are comparable the words agree; in a partial order they come apart.
 
-Mortimer's ancestors, ordered by "a is a descendant of b", are a strict partial order in which Mortimer is the minimum, two spontaneously generated ancestors A and E are each maximal, and there is no maximum, because A and E are not comparable. Divisibility on 1 to 12 is a partial order with minimum 1, six maximal elements (7 to 12, which divide nothing else in range), no maximum, the chain 1, 2, 4, 8, and the primes as an antichain. [The algebra of sets](../algebra_of_sets/README.md#is-a-partial-order) has ⊆ as the other standard poset, and divisibility read as ⊆ of factor sets is on [the set katas](../set_katas/README.md#quiz-katas). Section 5 is André's exercise 7.8, the **lexicographic** order on pairs: compare first entries, and only on a tie compare the second. It is the order of a dictionary and of a database sort on two columns, and the program confirms it is a partial order on 16 pairs of subsets.
+Mortimer's ancestors, ordered by "a is a descendant of b", are a strict partial order in which Mortimer is the minimum, two spontaneously generated ancestors A and E are each maximal, and there is no maximum, because A and E are not comparable. Divisibility on 1 to 12 is a partial order with minimum 1, six maximal elements (7 to 12, which divide nothing else in range), no maximum, the chain 1, 2, 4, 8, and the primes as an antichain. [The algebra of sets](../algebra_of_sets/README.md#is-a-partial-order) has ⊆ as the other standard poset, and divisibility read as ⊆ of factor sets is on [the set katas](../set_katas/README.md#quiz-katas). Section 5 is André's exercise 7.8, the **[lexicographic](../../GLOSSARY.md#lexicographic-order)** order on pairs: compare first entries, and only on a tie compare the second. It is the order of a dictionary and of a database sort on two columns, and the program confirms it is a partial order on 16 pairs of subsets.
 
 ## The other "partition"
 

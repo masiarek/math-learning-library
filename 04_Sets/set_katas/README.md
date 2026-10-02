@@ -12,10 +12,10 @@ The moves, which the [axiom katas](../../13_Axioms_of_Set_Theory/axiom_katas/REA
 
 | Move | What it looks like | Katas |
 |---|---|---|
-| **Element chase** | "let x ∈ A ∖ (B ∖ C); then x ∈ A and x ∉ B ∖ C; so x ∉ B or x ∈ C; …" | 1 to 7, problem 5 |
-| **Unpack a negation** | x ∉ A ∖ B means x ∉ A or x ∈ B, by De Morgan | 1, 3, 7, problem 5 |
-| **Two inclusions** | an equality of sets is two ⊆ | 9, 11 |
-| **Solve, then describe** | a truth set is the solutions of a condition; name them | 8, 10, 12 |
+| **[Element chase](../../04_Sets/algebra_of_sets/README.md#one-question-per-member)** | "let x ∈ A ∖ (B ∖ C); then x ∈ A and x ∉ B ∖ C; so x ∉ B or x ∈ C; …" | 1 to 7, problem 5 |
+| **[Unpack a negation](../../04_Sets/algebra_of_sets/laws/de_morgan/README.md)** | x ∉ A ∖ B means x ∉ A or x ∈ B, by De Morgan | 1, 3, 7, problem 5 |
+| **[Two inclusions](../../13_Axioms_of_Set_Theory/extensionality/README.md#what-it-is-for)** | an equality of sets is two ⊆ | 9, 11 |
+| **[Solve, then describe](../../04_Sets/reading_set_expressions/README.md)** | a truth set is the solutions of a condition; name them | 8, 10, 12 |
 
 ## The katas
 

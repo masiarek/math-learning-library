@@ -20,9 +20,9 @@ Injective, surjective and bijective drive most readers mad, because they are Lat
 
 | Word | Latin | Picture | Plain words | Python test on a set of pairs |
 |---|---|---|---|---|
-| **injective**, one-to-one | *in-icere*, to throw in | no two arrows land on the same target | different inputs, different outputs; nothing gets merged | `len({y for x, y in f}) == len(f)` |
-| **surjective**, onto | *sur-jacere*, to throw onto | every target is hit by at least one arrow | nothing in the target is missed | `{y for x, y in f} == T` |
-| **bijective**, one-to-one correspondence | both | every target is hit exactly once | a perfect pairing, so it can be undone | both tests |
+| **[injective](../../GLOSSARY.md#injective-one-to-one)**, one-to-one | *in-icere*, to throw in | no two arrows land on the same target | different inputs, different outputs; nothing gets merged | `len({y for x, y in f}) == len(f)` |
+| **[surjective](../../GLOSSARY.md#surjective-onto)**, onto | *sur-jacere*, to throw onto | every target is hit by at least one arrow | nothing in the target is missed | `{y for x, y in f} == T` |
+| **[bijective](../../GLOSSARY.md#bijection)**, one-to-one correspondence | both | every target is hit exactly once | a perfect pairing, so it can be undone | both tests |
 
 One more word drives people mad, and Ashlock's chapter is honest about it: **range** has two meanings. In this library and in Jech, ran(f) is the set of values actually taken, which others call the **image** and write Im(f) or f[S]. In many calculus books and in computer science, "range" means the set T in f : S → T, which others call the **codomain**, and the values actually taken are then the image. Surjective means "image equals codomain", and the word "onto" is safer than "range" when it matters.
 

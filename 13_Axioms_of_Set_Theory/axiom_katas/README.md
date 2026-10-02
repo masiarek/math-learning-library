@@ -12,12 +12,12 @@ Every proof here uses one of five moves. Name the move before you start, and the
 
 | Move | What it looks like | Katas that use it |
 |---|---|---|
-| **Double inclusion** | to show a = b, show a ⊆ b and b ⊆ a | Jech 1.3, 1.14, 1.15; Cunningham 1.5.6, 1.5.7 |
-| **Exists by an axiom, unique by extensionality** | name the axiom, write the formula, say "unique" | Cunningham 1.5.1, 1.5.2, 1.5.6, 1.5.7 |
-| **Least element** | take the least counterexample, or the ∈-minimal member foundation gives, and contradict it | Jech 1.7; Cunningham 1.5.3, 1.5.4, 1.5.5 |
-| **Induction** | show a set is inductive, so it contains ℕ | Jech 1.3, 1.5, 1.8, 1.10 |
-| **Diagonal and counting** | a set that differs from every candidate, or 2ⁿ > n | Jech 1.2; Cunningham 1.5.8 |
-| **Check the model** | evaluate the formula on a small universe, as the programs do | Kunen I.2.1, I.6.3, I.6.11, I.6.13 |
+| **[Double inclusion](../extensionality/README.md#what-it-is-for)** | to show a = b, show a ⊆ b and b ⊆ a | Jech 1.3, 1.14, 1.15; Cunningham 1.5.6, 1.5.7 |
+| **[Exists by an axiom, unique by extensionality](../extensionality/README.md#what-it-is-for)** | name the axiom, write the formula, say "unique" | Cunningham 1.5.1, 1.5.2, 1.5.6, 1.5.7 |
+| **[Least element](../../11_Logic/induction/README.md#why-it-works-the-least-counterexample)** | take the least counterexample, or the ∈-minimal member foundation gives, and contradict it | Jech 1.7; Cunningham 1.5.3, 1.5.4, 1.5.5 |
+| **[Induction](../../11_Logic/induction/README.md)** | show a set is inductive, so it contains ℕ | Jech 1.3, 1.5, 1.8, 1.10 |
+| **[Diagonal and counting](../../04_Sets/cardinality/README.md)** | a set that differs from every candidate, or 2ⁿ > n | Jech 1.2; Cunningham 1.5.8 |
+| **[Check the model](../reading_a_formula/README.md)** | evaluate the formula on a small universe, as the programs do | Kunen I.2.1, I.6.3, I.6.11, I.6.13 |
 
 ## The katas
 

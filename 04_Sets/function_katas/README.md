@@ -12,9 +12,9 @@ The three moves, named in each solution:
 
 | Move | What it looks like |
 |---|---|
-| **Element chase** | "let x ∈ dom(g ∘ f); then there is z with x (g ∘ f) z; so there is y with x f y and y g z; …" |
-| **Two inclusions** | to prove two sets equal, prove ⊆ and ⊇ by two element chases |
-| **Smallest counterexample** | for "show that ⊆ cannot be replaced by =", a function that merges two inputs and a set that separates them |
+| **[Element chase](../../04_Sets/algebra_of_sets/README.md#one-question-per-member)** | "let x ∈ dom(g ∘ f); then there is z with x (g ∘ f) z; so there is y with x f y and y g z; …" |
+| **[Two inclusions](../../13_Axioms_of_Set_Theory/extensionality/README.md#what-it-is-for)** | to prove two sets equal, prove ⊆ and ⊇ by two element chases |
+| **[Smallest counterexample](../../11_Logic/induction/README.md#why-it-works-the-least-counterexample)** | for "show that ⊆ cannot be replaced by =", a function that merges two inputs and a set that separates them |
 
 ## Solutions
 

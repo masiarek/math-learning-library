@@ -11,4 +11,5 @@ Pitfalls met in earlier sessions. Check here before repeating an approach.
 - **Studies cited from memory** (author, year, journal) should be said to be from memory in the reply, so the owner knows they were not looked up.
 - **The Polish summaries use „ and a plain " as closing quote.** When editing one with a Python script, wrap the match strings in triple quotes; a double-quoted string ends at the first ".
 - **The container's Python rejects an f-string whose expression reuses the outer quote** (`f"{"#"}"` is a SyntaxError). Use the other quote type inside.
+- **Glossary entries have `{ #slug }` anchors** (attr_list): link a term as `GLOSSARY.md#<term-slugged>`; a link to the bare glossary lands at the top, which the owner noticed. New entries need the anchor too; a script that slugs the bold term adds it.
 - **A universe for the model checker must contain the witness set.** The two-cycle a = {b}, b = {a} satisfies foundation on its own; it fails only once the pair {a, b} is a point. Build the set the exercise names into the universe before claiming an axiom fails.
