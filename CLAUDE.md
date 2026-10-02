@@ -47,6 +47,8 @@ House rules for writing pages are in [CONTRIBUTING.md](CONTRIBUTING.md):
 ```bash
 python3 tools/run_examples.py --check
 uv run --group docs mkdocs build --strict
+python3 tools/combine_anki.py 04_Sets --check
+python3 tools/symbol_index_anki.py --check
 ```
 
-Both are what CI runs.
+All four are what CI runs. After editing a lesson deck, regenerate the combined deck with `python3 tools/combine_anki.py 04_Sets`; after editing the symbol index in `GLOSSARY.md`, regenerate its deck with `python3 tools/symbol_index_anki.py`.

@@ -707,7 +707,7 @@ Three conventions deserve a warning. Jech's ⊂ allows equality and Cunningham's
 
 ## Symbol index
 
-Every symbol of the charts and tables the owner has sent, in one place, with where it is explained. Read a row as "symbol, how to say it, where". The cross-book table above is for the symbols whose spelling changes from book to book; this one is for finding a symbol at all.
+Every symbol of the charts and tables the owner has sent, in one place, with where it is explained. Read a row as "symbol, how to say it, where". The cross-book table above is for the symbols whose spelling changes from book to book; this one is for finding a symbol at all. It is also an Anki deck, [`symbol_index.txt`](04_Sets/reading_set_expressions/anki/symbol_index.txt), generated from this table.
 
 | Symbol | Read as | Where |
 |---|---|---|
@@ -725,7 +725,7 @@ Every symbol of the charts and tables the owner has sent, in one place, with whe
 | A × B | Cartesian product, the set of ordered pairs | [glossary: cartesian product](#cartesian-product) |
 | (a, b), ⟨a, b⟩ | ordered pair | [glossary: ordered pair](#ordered-pair) |
 | 𝒫(A), 2ᴬ | power set | [glossary: power set](#power-set) |
-| |A|, n(A), #A, card(A) | cardinality | [glossary: cardinality](#cardinality) |
+| \|A\|, n(A), #A, card(A) | cardinality | [glossary: cardinality](#cardinality) |
 | ℵ₀, ℵ₁, ℶ₁, 𝔠, κ⁺, ℷ | infinite cardinals, the continuum, successor, gimel | [glossary: aleph beth and the continuum c](#aleph-beth-and-the-continuum-c) |
 | ω, ω₁, ε₀, α + 1, S(α) | ordinals and successors | [glossary: ordinal](#ordinal) |
 | ℕ  ℤ  ℚ  ℝ  ℂ | the number sets | [glossary: number sets n z q r c](#number-sets-n-z-q-r-c) |
@@ -733,7 +733,7 @@ Every symbol of the charts and tables the owner has sent, in one place, with whe
 | f: A → B, x ↦ f(x), f[A], f⁻¹, g ∘ f | function, image of a set, inverse, composition | [relations and functions](04_Sets/relations_and_functions/README.md) |
 | [x], A/~ | equivalence class, quotient set | [glossary: equivalence relation](#equivalence-relation) |
 | ≤, <, ≺ on a poset | partial order, strict order | [glossary: partial order](#partial-order) |
-| ≈, ~, ≼, |A| ≤ |B| | equinumerous, injects into | [glossary: symbols](#symbols) |
+| ≈, ~, ≼, \|A\| ≤ \|B\| | equinumerous, injects into | [glossary: symbols](#symbols) |
 | κ → (λ)ⁿ_r | partition relation | [glossary: partition relation arrow notation](#partition-relation-arrow-notation) |
 | ∀  ∃  ∃!  ∄ | for all, there exists, exactly one, none | [glossary: quantifier](#quantifier) |
 | ¬  ∧  ∨  ⇒  →  ⇔  ↔  ⇏ | not, and, or, implies, iff, does not imply | [glossary: connectives](#connectives) |
