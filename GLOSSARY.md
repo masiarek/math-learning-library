@@ -713,7 +713,7 @@ Every symbol of the charts and tables the owner has sent, in one place, with whe
 |---|---|---|
 | ∈  ∉  ∋  ∌ | is a member of, is not, contains | [glossary: membership](#membership) |
 | {a, b, c} | the set whose members are a, b, c | [what is a set](04_Sets/what_is_a_set/README.md) |
-| {x ∈ A : P(x)}, {x | P(x)} | the set of x such that P(x) | [glossary: set builder notation](#set-builder-notation) |
+| {x ∈ A : P(x)}, {x \| P(x)} | the set of x such that P(x) | [glossary: set builder notation](#set-builder-notation) |
 | ∅, { } | the empty set | [glossary: empty set](#empty-set) |
 | U, 𝒰, E, Ω | the universal set (Ω also the class of ordinals, or ω₁) | [glossary: universal set](#universal-set) |
 | ⊆  ⊂  ⊊  ⊇  ⊃  ⊄  ⊉ | subset, proper subset (two conventions), superset, and their negations | [glossary: symbols](#symbols) |
