@@ -62,10 +62,16 @@ A universe with a top rank. The sets of V₄ have rank at most 3, where the rank
    (∅, ∅)   = {{∅}}   the pair collapses, and still decodes
    Pairs, then, are enough for order; the Cartesian product page
    builds the plane from them.
+
+6. HAUSDORFF'S PAIR WORKS TOO: (a, b) := {{a, ∅}, {b, {∅}}}
+   (a, b) = (c, d) iff a = c and b = d, for every a, b, c, d in V_3: True
+   Kuratowski (∅, {∅}) = {{∅}, {∅, {∅}}}   Hausdorff (∅, {∅}) = {{∅}, {{∅}}}
+   Different sets with the same property; any set with the property will do,
+   and nobody ever unpacks one. The ∅ and {∅} are tags for 'first' and 'second'.
 ```
 <!-- /output -->
 
-Section 2 is the row of the chapter's table for this axiom, with the counterexample written out: a = ∅ and b = {{{∅}}} are both in V₄, and {a, b} is not. Sections 4 and 5 are the two facts about pairs that the rest of the book uses, checked over every choice of four sets from V₃.
+Section 2 is the row of the chapter's table for this axiom, with the counterexample written out: a = ∅ and b = {{{∅}}} are both in V₄, and {a, b} is not. Sections 4 and 5 are the two facts about pairs that the rest of the book uses, checked over every choice of four sets from V₃. Section 6 checks Hausdorff's alternative pair, {{a, ∅}, {b, {∅}}}, which Robert André's book presents beside Kuratowski's: ∅ and {∅} tag the first and second entries, the defining property holds just the same, and the two constructions give different sets, which is the point: any set with the property will serve, and nobody ever looks inside one.
 
 ## Po polsku, w skrócie
 

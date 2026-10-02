@@ -46,6 +46,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Category** — a collection of objects and arrows between them, with a composition of arrows that is associative and has identities. Sets with functions, groups with homomorphisms, and vector spaces with linear maps are categories. See [maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md).
 
+**Chain and antichain** — in a poset, a chain is a subset on which every two elements are comparable, an antichain one in which no two are: under divisibility, 1, 2, 4, 8 is a chain and the primes an antichain. See [orderings](04_Sets/orderings/README.md).
+
 **Chain rule** — the rule for the velocity of a function of a function. The case the talk uses: e^(kt) is the motion e^t on a clock running k times as fast, and speeding up the clock by k multiplies every velocity by k, so d/dt e^(kt) = k · e^(kt). See [velocity equals position](09_Calculus/velocity_equals_position/README.md).
 
 **Circle** — the set of points at a fixed distance r, the radius, from a fixed point (h, k), the center. Its equation is the distance formula held fixed: (x − h)² + (y − k)² = r². See [circles](08_Analytic_Geometry/circles/README.md).
@@ -61,6 +63,8 @@ Terms used across the library, with the page that explains each in full.
 **Coefficient** — a fixed number standing in front of a variable in a linear combination: in 40h + 15c the coefficients are 40 and 15. In a system, aᵢ,ⱼ is the coefficient in equation i in front of variable j. Zero is allowed. See [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md).
 
 **Commutative** — a · b = b · a: the order of the two inputs does not matter. True for adding and multiplying numbers; false for subtraction, string concatenation, matrix multiplication and composing maps. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
+
+**Comparable** — two elements a, b of a poset with a ≤ b or b ≤ a. In a linear order every pair is; under ⊆, {1} and {2} are not. See [orderings](04_Sets/orderings/README.md).
 
 **Complement** — A′, the members of a fixed universal set U that are not in A: A′ = U ∖ A; also written Ā or Aᶜ. It has no meaning without U, since there is no set of everything; in Python it is `U - a`. See [the algebra of sets](04_Sets/algebra_of_sets/README.md).
 
@@ -180,15 +184,21 @@ Terms used across the library, with the page that explains each in full.
 
 **Legs** — of a right triangle, the two sides that form the right angle; the a and b in c² = a² + b². See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md).
 
+**Lexicographic order** — the dictionary order on pairs: (a, b) ≤ (c, d) when a < c, or a = c and b ≤ d. A partial order, linear when both coordinates are; a two-column sort uses it. See [orderings](04_Sets/orderings/README.md).
+
 **Linear combination** — a₁x₁ + a₂x₂ + ⋯ + aₙxₙ: each variable multiplied by a fixed number, then added. No powers, no products of variables, no variable inside a function. It keeps sums and multiples, which is what makes it a linear map. See [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md).
 
 **Linear equation** — a linear combination set equal to a number, the constant: a₁x₁ + ⋯ + aₙxₙ = d. It does not say what the variables are; it is a test that any n-tuple of numbers passes or fails. See [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md).
 
 **Linear map** — a map T between vector spaces with T(u + v) = Tu + Tv and T(av) = aTv. Multiplying by i and projecting onto an axis are linear; x ↦ x + 1 is not, since a linear map always sends 0 to 0. See [maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md).
 
+**Linear order (total order)** — a partial order in which every two elements are comparable: a ≤ b or b ≤ a. ≤ on numbers is one; ⊆ is not. A set of n members has n! linear orders. See [orderings](04_Sets/orderings/README.md).
+
 **Log-normal distribution** — the distribution of a quantity whose logarithm is normally distributed. It is skewed to the right, so its mean e^(μ + σ²/2) lies above its median e^μ, and the gap grows fast with σ. See [a share above a cutoff](05_Statistics/share_above_a_cutoff/README.md).
 
 **Machine number** — a member of the finite set a floating-point format can represent, fixed by its radix, precision and exponent range. Each one is an exact number; the approximation happens when a real result is rounded into the set. See [machine numbers](01_Precision/machine_numbers/README.md).
+
+**Maximal and maximum** — in a poset, an element is maximal when nothing is strictly above it and the maximum when it is above everything else; a maximum is maximal, but a poset can have several maximal elements and no maximum, as Mortimer's family tree has two spontaneously generated ancestors. Minimal and minimum likewise. See [orderings](04_Sets/orderings/README.md).
 
 **Mean** — a family of averages, each the one number that can replace every value while keeping some total unchanged. The arithmetic mean keeps the sum, the geometric mean the product, the harmonic mean the sum of reciprocals, the quadratic mean the sum of squares. With no adjective it means the arithmetic mean. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
 
@@ -218,9 +228,9 @@ Terms used across the library, with the page that explains each in full.
 
 **Ordinate** — the y-coordinate of a point: its signed distance from the x-axis, positive above it and negative below. The x-coordinate is the *abscissa*. See [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md).
 
-**Partial order** — a relation that is reflexive, antisymmetric and transitive but need not compare every pair. ⊆ on sets is the standard example: {1} and {2} are incomparable, which is why `sorted()` on a list of Python sets gives no meaningful order. A set with one is a *poset*. See [the algebra of sets](04_Sets/algebra_of_sets/README.md).
+**Partial order** — a relation that is reflexive, antisymmetric and transitive but need not compare every pair; a set with one is a poset, and [orderings](04_Sets/orderings/README.md) counts the 19 on three points. ⊆ on sets is the standard example: {1} and {2} are incomparable, which is why `sorted()` on a list of Python sets gives no meaningful order. A set with one is a *poset*. See [the algebra of sets](04_Sets/algebra_of_sets/README.md).
 
-**Partition** — a collection of nonempty, pairwise disjoint blocks whose union is the whole set; the same thing as an equivalence relation, seen as blocks instead of pairs. A set of n members has a Bell number of them: 1, 2, 5, 15, 52, …. See [equivalence relations and partitions](04_Sets/equivalence_and_partitions/README.md).
+**Partition** — a collection of nonempty, pairwise disjoint blocks whose union is the whole set; the same thing as an equivalence relation, seen as blocks instead of pairs. Real analysis uses the word for a finite list of cut points of an interval, a different object, whose refinement order is a poset; see [orderings](04_Sets/orderings/README.md#the-other-partition). A set of n members has a Bell number of them: 1, 2, 5, 15, 52, …. See [equivalence relations and partitions](04_Sets/equivalence_and_partitions/README.md).
 
 **Percentile** — the p-th percentile is the value with p% of the data below it. "p% of people are at or above c" says exactly that c is the (100 − p)-th percentile, and nothing else. See [a share above a cutoff](05_Statistics/share_above_a_cutoff/README.md).
 
@@ -229,6 +239,8 @@ Terms used across the library, with the page that explains each in full.
 **Point-slope form** — y − y₁ = m(x − x₁), the line through (x₁, y₁) with slope m; the form to write first. See [lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md).
 
 **Polar form** — a nonzero complex number written as r e^{iθ}: its length r times the unit point at its angle θ. Multiplying two of them multiplies the lengths and adds the angles, which is the law of exponents, and de Moivre's formula is (e^{iθ})ⁿ = e^{inθ}. `cmath.polar` reads r and θ off a number and `cmath.rect` puts them back. See [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
+
+**Poset** — a partially ordered set: a set with a relation that is reflexive, antisymmetric and transitive, in which some pairs may be incomparable. ⊆ on subsets and divisibility on positive integers are the standard examples; a linearly ordered set, in which every pair is comparable, is sometimes called a *toset* or a chain. See [orderings](04_Sets/orderings/README.md).
 
 **Power series** — a polynomial that never ends, a₀ + a₁x + a₂x² + ⋯. For e^x the rule "velocity = position" forces aₖ = 1/k!, and putting x = it splits the terms into the series for cos t and sin t. See [power series](09_Calculus/power_series/README.md).
 
@@ -304,6 +316,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Sterbenz's lemma** — if two floats a and b satisfy b/2 ≤ a ≤ 2b, then a − b is computed exactly. So the subtraction in a catastrophic cancellation adds no error of its own. See [machine numbers](01_Precision/machine_numbers/README.md).
 
+**Strict order** — a relation that is irreflexive, asymmetric and transitive, written a < b; the non-strict partial order a ≤ b with the pairs (x, x) removed, and the two match one to one. See [orderings](04_Sets/orderings/README.md).
+
 **Subnormal** — a float below the smallest normal one, written with a leading zero digit at the lowest exponent. Subnormals fill the gap between zero and the smallest normal number; without them, a − b could round to 0 while a ≠ b. See [machine numbers](01_Precision/machine_numbers/README.md).
 
 **Subspace** — a subset of a vector space that is a vector space with the same operations. It needs only three checks — it contains 0, and it is closed under + and under scalar multiplication — because the other laws are inherited. The subspaces of the plane are the origin, the lines through it, and the plane. See [subsets inherit the laws](06_Algebraic_Structures/subsets_inherit_the_laws/README.md).
@@ -336,6 +350,8 @@ Terms used across the library, with the page that explains each in full.
 
 **Unit roundoff** — u = 2⁻⁵³ ≈ 1.1 × 10⁻¹⁶ for binary64: the largest relative error that rounding a real number to the nearest float can make, and the bound on δ in the standard model. See [relative error and correct digits](01_Precision/relative_error/README.md) and [machine numbers](01_Precision/machine_numbers/README.md).
 
+**Universal class** — in a class theory such as Robert André's, 𝒰 = {x : x = x}, the class of all elements; a proper class, not a set, and not the universal set U of a Venn diagram, which is a set chosen for one problem. See [orderings](04_Sets/orderings/README.md) and [the reading guide](reading_guides/set_theory/README.md).
+
 **Universal set** — the set U, fixed in advance, that every set under discussion is a subset of; complements are taken relative to it, and in a Venn diagram it is the rectangle the circles are drawn in. There is no universal set of everything, so U is a choice, and the same A has a different complement under a different U. See [the algebra of sets](04_Sets/algebra_of_sets/README.md).
 
 **Universe (of set theory)** — a collection of points with a membership relation, in which the axioms are true or false; Cori and Lascar's 𝒰 with its set of points U. The chapter's small universes V₁ to V₄ have 1, 2, 4 and 16 sets. Not the universal set of a Venn diagram, though the word has the same root. See [reading a formula](13_Axioms_of_Set_Theory/reading_a_formula/README.md).
@@ -352,28 +368,28 @@ Terms used across the library, with the page that explains each in full.
 
 The same ideas in the spellings of the books this library reads. The definitions never vary; only the ink does.
 
-| Idea | This library | Cori and Lascar | Cunningham | Jech | Kunen | Simovici and Djeraba | Stoll |
-|---|---|---|---|---|---|---|---|
-| subset, equal allowed | a ⊆ b | a ⊆ b | A ⊆ B | X ⊂ Y | x ⊆ y | S ⊆ T | A ⊆ B |
-| proper subset | a ⊊ b | a ⊊ b | A ⊂ B | X ⊂ Y, X ≠ Y | x ⊊ y | — | A ⊂ B |
-| difference | a ∖ b | a ∖ b | A ∖ B | X − Y | x ∖ y | S − T | A − B |
-| complement | A′ | — | — | — | — | T̄ | Ā |
-| symmetric difference | A △ B | — | — | — | — | U ⊕ V | A + B |
-| union of a family | ∪a | ∪a, ∪ₓ∈ₐ x | ∪𝓕 | ∪X | ∪𝓕 | ∪𝒞 | ∪𝒜 |
-| power set | 𝒫(a) | ℘(a) | 𝒫(A) | P(X) | 𝒫(x) | 𝒫(S) | 𝒫(A) |
-| set builder | {x ∈ a : F[x]} | {x ∈ a : F[x]} | {x ∈ A : φ(x)} | {u ∈ X : φ(u)} | {x ∈ z : φ(x)} | {x ∈ S \| P(x)} | {x ∈ A \| P(x)} |
-| ordered pair | (a, b) | (a, b) | (a, b) | (a, b) | ⟨x, y⟩ | (x, y) | ⟨x, y⟩ |
-| relation | ρ, R | R | R | R | R | ρ, σ, δ | ρ |
-| x related to y | x ρ y, (x, y) ∈ ρ | — | x R y | x R y | x R y | x ρ y | x ρ y |
-| domain, range | dom, ran | dom(f), Im(f) | dom, ran | dom, ran | dom, ran | Dom, Ran | 𝒟, ℛ |
-| image of a set | f[a] | f̄(c) | f[A] | f"X, f(X) | F"A, F(A) | f(L) | f[A] |
-| composition of f then g | g ∘ f | g ∘ f | g ∘ f | g ∘ f | g ∘ f | gf (functions), ρσ (relations) | g ∘ f |
-| partial function | — | — | — | — | — | f : S ⇝ T | — |
-| natural numbers | ω, ℕ | ω, ℕ | ω | ω, **N** | ω = ℕ | ℕ (from 0) | ℕ |
-| cardinality words | injection, bijection, \|A\| | subpotent, equipotent, card | — | \|X\| ≤ \|Y\| | A ≼ B, A ≈ B | equinumerous, \|S\| | ~, cardinal number |
-| the ordinals | Ord | On[v₀] | — | Ord | ON | — | — |
-| if … then, iff | ⇒, ⇔ | ⇒, ⇔ | →, ↔ (in a formula); ⇒, ⇔ (between sentences) | →, ↔ | →, ↔ | — | →, ↔ |
-| equality in the formal language | = | ≃ | = | = | = | = | = |
-| regularity / foundation | foundation | foundation | regularity | regularity | foundation | — | restriction |
+| Idea | This library | Cori and Lascar | Cunningham | Jech | Kunen | Simovici and Djeraba | Stoll | André |
+|---|---|---|---|---|---|---|---|---|
+| subset, equal allowed | a ⊆ b | a ⊆ b | A ⊆ B | X ⊂ Y | x ⊆ y | S ⊆ T | A ⊆ B | A ⊆ B |
+| proper subset | a ⊊ b | a ⊊ b | A ⊂ B | X ⊂ Y, X ≠ Y | x ⊊ y | — | A ⊂ B | A ⊂ B |
+| difference | a ∖ b | a ∖ b | A ∖ B | X − Y | x ∖ y | S − T | A − B | A − B |
+| complement | A′ | — | — | — | — | T̄ | Ā | A′ = {x : x ∉ A}, absolute, a class |
+| symmetric difference | A △ B | — | — | — | — | U ⊕ V | A + B | A △ B |
+| union of a family | ∪a | ∪a, ∪ₓ∈ₐ x | ∪𝓕 | ∪X | ∪𝓕 | ∪𝒞 | ∪𝒜 | ∪_{C∈𝒜} C |
+| power set | 𝒫(a) | ℘(a) | 𝒫(A) | P(X) | 𝒫(x) | 𝒫(S) | 𝒫(A) | 𝒫(A) |
+| set builder | {x ∈ a : F[x]} | {x ∈ a : F[x]} | {x ∈ A : φ(x)} | {u ∈ X : φ(u)} | {x ∈ z : φ(x)} | {x ∈ S \| P(x)} | {x ∈ A \| P(x)} | {x : P(x)}, a class |
+| ordered pair | (a, b) | (a, b) | (a, b) | (a, b) | ⟨x, y⟩ | (x, y) | ⟨x, y⟩ | (a, b) |
+| relation | ρ, R | R | R | R | R | ρ, σ, δ | ρ | R |
+| x related to y | x ρ y, (x, y) ∈ ρ | — | x R y | x R y | x R y | x ρ y | x ρ y | x R y |
+| domain, range | dom, ran | dom(f), Im(f) | dom, ran | dom, ran | dom, ran | Dom, Ran | 𝒟, ℛ | dom, ran |
+| image of a set | f[a] | f̄(c) | f[A] | f"X, f(X) | F"A, F(A) | f(L) | f[A] | f[A] |
+| composition of f then g | g ∘ f | g ∘ f | g ∘ f | g ∘ f | g ∘ f | gf (functions), ρσ (relations) | g ∘ f | g ∘ f |
+| partial function | — | — | — | — | — | f : S ⇝ T | — | — |
+| natural numbers | ω, ℕ | ω, ℕ | ω | ω, **N** | ω = ℕ | ℕ (from 0) | ℕ | ℕ, ω |
+| cardinality words | injection, bijection, \|A\| | subpotent, equipotent, card | — | \|X\| ≤ \|Y\| | A ≼ B, A ≈ B | equinumerous, \|S\| | ~, cardinal number | equipotent, \|A\|, 𝒞 |
+| the ordinals | Ord | On[v₀] | — | Ord | ON | — | — | 𝒪 |
+| if … then, iff | ⇒, ⇔ | ⇒, ⇔ | →, ↔ (in a formula); ⇒, ⇔ (between sentences) | →, ↔ | →, ↔ | — | →, ↔ | ⇒, ⇔ |
+| equality in the formal language | = | ≃ | = | = | = | = | = | = |
+| regularity / foundation | foundation | foundation | regularity | regularity | foundation | — | restriction | regularity |
 
-Two conventions deserve a warning. Jech's ⊂ allows equality and Cunningham's does not, so the same symbol means ⊆ in one book and ⊊ in the other. Simovici and Djeraba write gf for "f, then g", the order most books write as g ∘ f; both mean (g ∘ f)(x) = g(f(x)).
+Three conventions deserve a warning. Jech's ⊂ allows equality and Cunningham's does not, so the same symbol means ⊆ in one book and ⊊ in the other. André's objects are *classes*, and his {x : P(x)} is always a class, which is a set only when some axiom says so; the other books have no classes as objects at all. His complement is therefore absolute, taken in the universal class, where this library's A′ is U ∖ A for a chosen U. Simovici and Djeraba write gf for "f, then g", the order most books write as g ∘ f; both mean (g ∘ f)(x) = g(f(x)).

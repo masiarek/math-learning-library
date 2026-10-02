@@ -30,3 +30,9 @@
    (∅, ∅)   = {{∅}}   the pair collapses, and still decodes
    Pairs, then, are enough for order; the Cartesian product page
    builds the plane from them.
+
+6. HAUSDORFF'S PAIR WORKS TOO: (a, b) := {{a, ∅}, {b, {∅}}}
+   (a, b) = (c, d) iff a = c and b = d, for every a, b, c, d in V_3: True
+   Kuratowski (∅, {∅}) = {{∅}, {∅, {∅}}}   Hausdorff (∅, {∅}) = {{∅}, {{∅}}}
+   Different sets with the same property; any set with the property will do,
+   and nobody ever unpacks one. The ∅ and {∅} are tags for 'first' and 'second'.

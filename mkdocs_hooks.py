@@ -128,6 +128,7 @@ NAV_ORDER: dict[str, list[str]] = {
         "cardinality",
         "relations_and_functions",
         "equivalence_and_partitions",
+        "orderings",
         "set_katas",
         "function_katas",
     ],
