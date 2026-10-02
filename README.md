@@ -67,6 +67,7 @@ The fourth chapter is groundwork: the constructions every other page takes for g
 | [Relations and functions are sets of pairs](04_Sets/relations_and_functions/README.md) | A relation is a set of pairs, a function a relation with one property, a graph a relation drawn, a table a relation stored; every relation on {1, 2, 3} sorted, composition as a relation product, and a function as its table of values |
 | [Equivalence relations, partitions and the kernel of a function](04_Sets/equivalence_and_partitions/README.md) | Partitions, equivalences and kernels determine each other exactly: 5 of 512 relations on {1, 2, 3}, the Bell numbers, the decomposition of every function into surjection, bijection and inclusion, and congruence mod m |
 | [Set katas](04_Sets/set_katas/README.md) | Cunningham's first exercises checked on every choice of subsets of {1, 2, 3} before you prove them, with the four proof moves |
+| [Function katas](04_Sets/function_katas/README.md) | Hrbacek and Jech's exercises on functions with solutions: compositions and inverses of 2x − 1, √x, 1/x computed exactly; left versus right inverses; why preimages respect ∩ and images do not; all 64 partial functions on {1, 2, 3} |
 
 [**05_Statistics/**](05_Statistics/README.md) — *What does one number say about many?*
 

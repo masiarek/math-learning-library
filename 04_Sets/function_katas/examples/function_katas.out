@@ -1,0 +1,49 @@
+3.1  IF ran f ⊆ dom g THEN dom(g ∘ f) = dom f
+     pairs of partial functions on {1, 2, 3} with ran f ⊆ dom g: 2530; dom(g ∘ f) == dom f in all: True
+     without the hypothesis it fails, e.g. f = {(1, 1), (2, 1), (3, 1)}, g = {(2, 1), (3, 1)}: dom(g ∘ f) = ∅
+
+3.2  THE FOUR COMPOSITIONS OF f1 = 2x − 1, f2 = √x (x > 0), f3 = 1/x (x ≠ 0)
+               formula      domain    range      values at x = 1/2, 5/2, 1, 4, 9/4, 0, -1, 1/4
+     f2 ∘ f1   √(2x − 1)    x ≥ 1/2   [0, ∞)     —, 2, 1, —, —, —, —, —
+     f1 ∘ f2   2√x − 1      x > 0     (−1, ∞)    —, —, 1, 3, 2, —, —, 0
+     f3 ∘ f1   1/(2x − 1)   x ≠ 1/2   ℝ ∖ {0}    —, 1/4, 1, 1/7, 2/7, -1, -1/3, -2
+     f1 ∘ f3   2/x − 1      x ≠ 0     ℝ ∖ {−1}   3, -1/5, 1, -1/2, -1/9, —, -3, 7
+     — marks a point outside the domain: dom(g ∘ f) = {x ∈ dom f : f(x) ∈ dom g} (Theorem 3.5).
+
+3.3  f1, f2, f3 ARE ONE-TO-ONE; THEIR INVERSES
+     f1⁻¹(y) = (y + 1)/2 on ℝ:        f1⁻¹∘f1 = id and f1∘f1⁻¹ = id on samples: True
+     f2⁻¹(y) = y² on (0, ∞):          same, on perfect squares: True
+     f3⁻¹(y) = 1/y on ℝ ∖ {0}:       same (f3 is its own inverse): True
+     dom f_i = ran f_i⁻¹ and ran f_i = dom f_i⁻¹: ℝ and ℝ; (0, ∞) and (0, ∞); ℝ∖{0} twice.
+
+3.4  INVERTIBLE MEANS A TWO-SIDED INVERSE; A ONE-SIDED ONE IS NOT ENOUGH
+     (a) for every one-to-one f (34 of them): f⁻¹∘f = Id_dom f and f∘f⁻¹ = Id_ran f: True
+     (b) g∘f = Id_dom f forces f one-to-one and g↾ran f = f⁻¹, all pairs: True
+         but f∘h = Id_ran f does not: f = {(1, 1), (2, 1), (3, 1)}, h = {(1, 1)}, f∘h = {(1, 1)}, f not one-to-one
+
+3.5  COMPOSITION OF ONE-TO-ONE FUNCTIONS, AND (g∘f)⁻¹ = f⁻¹∘g⁻¹
+     all 1156 pairs of one-to-one f, g: True   (the order reverses: socks on, shoes on; shoes off, socks off)
+
+3.6  INVERSE IMAGES UNDER A FUNCTION RESPECT ∩ AND −  (RELATIONS ONLY RESPECT ∪)
+     (a) f⁻¹[A ∩ B] = f⁻¹[A] ∩ f⁻¹[B]: True   (b) f⁻¹[A − B] = f⁻¹[A] − f⁻¹[B]: True   (4096 cases each)
+     the same with an arbitrary relation in place of f: False   — a function sends x to ONE value, a relation may not
+
+3.7  f ∩ A² VERSUS f ↾ A
+     f = {(1, 1), (2, 1), (3, 1)}, A = {2}: f ↾ A = {(2, 1)} but f ∩ A² = ∅
+     the restriction keeps a pair whose value lies outside A; the intersection with A² does not.
+
+3.12 IMAGES AND INVERSE IMAGES OF UNIONS AND INTERSECTIONS
+     f[∪] = ∪f[]: True   f⁻¹[∪] = ∪f⁻¹[]: True   f[∩] ⊆ ∩f[]: True   f⁻¹[∩] = ∩f⁻¹[]: True
+     f[∩] = ∩f[] when f is one-to-one: True; in general not, e.g. f = {(1, 1), (2, 1)}, A = {1}, B = {2}:
+     f[A ∩ B] = ∅, f[A] ∩ f[B] = {1}
+
+4.1  REFLEXIVE, SYMMETRIC, TRANSITIVE? SIX RELATIONS, CHECKED ON A FINITE PIECE
+     relation               reflexive symmetric transitive   note
+     (a) x > y on ℤ             False     False       True   
+     (b) n divides m on ℤ        True     False       True   not antisymmetric on ℤ: 1 | −1 and −1 | 1
+     (c) x ≠ y on ℕ             False      True      False   
+     (d) ⊆ on 𝒫({1, 2})          True     False       True   
+     (d) ⊂ on 𝒫({1, 2})         False     False       True   
+     (e) ∅ in ∅                  True      True       True   all three hold vacuously: no element to fail them
+     (f) ∅ in {1, 2}            False      True       True   1 is not related to 1, so not reflexive; the other two are vacuous
+     A finite piece can refute a property, never confirm it; the page gives the arguments.

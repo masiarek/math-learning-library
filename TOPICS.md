@@ -35,6 +35,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - [Relations and functions are sets of pairs](04_Sets/relations_and_functions/README.md) — relation, domain, range, inverse, function as a relation with one property, injection, surjection, bijection, composition as a relation product, graph as a relation drawn, database table
         - [Equivalence relations, partitions and the kernel of a function](04_Sets/equivalence_and_partitions/README.md) — reflexive, symmetric, transitive; classes, quotient, Bell numbers, kernel, decomposition of a function, congruence mod m
         - [Set katas](04_Sets/set_katas/README.md) — Cunningham's exercises 1.1 checked on every choice of subsets of {1, 2, 3}; element chase, unpacking a negation, two inclusions, truth sets, intervals
+        - [Function katas](04_Sets/function_katas/README.md) — Hrbacek and Jech 3.1–3.13 and 4.1–4.3 with solutions: domain of a composition, inverses, left and right inverses, (g ∘ f)⁻¹, images and preimages, reflexive–symmetric–transitive table
         - ↪ [Set theory: a reading guide](reading_guides/set_theory/README.md) — the language of sets and the subject of its axioms, which book for each, the Polish school, and the founding papers from Cantor 1874 to Cohen 1963
         - ↪ [Rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md) — the pairs of ℝ² as points of the plane
     - **Size by matching** · from [Sets](04_Sets/README.md) and [Measure Zero](02_Measure_Zero/README.md)
