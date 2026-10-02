@@ -105,5 +105,5 @@ python3 13_Axioms_of_Set_Theory/ordinals/examples/ordinals.py
 - [Foundation](../foundation/README.md) — ∈ as a well-founded relation on every set, and rank
 - [Choice](../choice/README.md) — every set can be well-ordered, hence measured by an ordinal
 - [Set theory: a reading guide](../../reading_guides/set_theory/README.md) — von Neumann's 1923 paper, run on small sets
-- [Spaced retrieval](../../12_Learning_to_Learn/spaced_retrieval/README.md) — the learning page, for a chapter that needs several passes
+- [Spaced retrieval ↗](https://masiarek.github.io/learning-to-learn-library/02_Making_It_Stay/spaced_retrieval/) — the learning page, for a chapter that needs several passes
 - [Ordinal number ↗](https://en.wikipedia.org/wiki/Ordinal_number) and [Goodstein's theorem ↗](https://en.wikipedia.org/wiki/Goodstein%27s_theorem) — Wikipedia

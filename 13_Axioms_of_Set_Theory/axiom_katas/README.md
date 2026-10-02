@@ -129,4 +129,4 @@ python3 13_Axioms_of_Set_Theory/axiom_katas/examples/axiom_katas.py
 
 - [Reading a formula](../reading_a_formula/README.md) — how to read each kata aloud before proving it
 - [Set katas](../../04_Sets/set_katas/README.md) — the same idea for the language of sets, from Cunningham's exercises 1.1
-- [Studying vs learning](../../12_Learning_to_Learn/studying_vs_learning/README.md) and [spaced retrieval](../../12_Learning_to_Learn/spaced_retrieval/README.md) — why the proof should be attempted before it is read, and repeated a week later
+- [Studying vs learning ↗](https://masiarek.github.io/learning-to-learn-library/01_Knowing_What_You_Know/studying_vs_learning/) and [spaced retrieval ↗](https://masiarek.github.io/learning-to-learn-library/02_Making_It_Stay/spaced_retrieval/) — why the proof should be attempted before it is read, and repeated a week later

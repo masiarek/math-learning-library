@@ -53,16 +53,16 @@ Terms used across the library, with the page that explains each in full. For set
 **Bijection** — a function that is both one-to-one (injective: different inputs, different outputs) and onto (surjective: every member of the target is hit), so every target is hit exactly once and the function can be undone; also called a one-to-one correspondence, which is not the same as "one-to-one". Two sets have the same cardinality exactly when a bijection runs between them; on a finite set the three properties agree. See [relations and functions](04_Sets/relations_and_functions/README.md) and [cardinality](04_Sets/cardinality/README.md).
 { #bijection }
 
-**Bloom's taxonomy** — six levels of working with an idea, in the 2001 revision: remembering, understanding, applying, analyzing, evaluating, creating (in 1956: knowledge, comprehension, application, analysis, synthesis, evaluation). See [studying vs learning](12_Learning_to_Learn/studying_vs_learning/README.md).
+**Bloom's taxonomy** — six levels of working with an idea, in the 2001 revision: remembering, understanding, applying, analyzing, evaluating, creating (in 1956: knowledge, comprehension, application, analysis, synthesis, evaluation). See [studying vs learning ↗](https://masiarek.github.io/learning-to-learn-library/01_Knowing_What_You_Know/studying_vs_learning/).
 { #bloom-s-taxonomy }
 
 **Boolean algebra** — a set with two operations + and ·, a complement −, and constants 0 and 1, satisfying commutativity, associativity, distributivity, absorption and complementation; the subsets of any set under ∪, ∩ and complement are one, and so is the two-valued logic of true and false. The structure that [the algebra of sets](04_Sets/algebra_of_sets/README.md) and [truth tables](11_Logic/truth_tables_and_laws/README.md) share. See [choice](13_Axioms_of_Set_Theory/choice/README.md#the-equivalent-forms-and-the-weaker-ones).
 { #boolean-algebra }
 
-**Brier score** — the mean of (confidence − outcome)², with outcome 1 for right and 0 for wrong: 0 is perfect, and saying 50% every time scores 0.25. It is a proper scoring rule, so its expected value is smallest when you report what you really believe. See [metacognition](12_Learning_to_Learn/metacognition/README.md).
+**Brier score** — the mean of (confidence − outcome)², with outcome 1 for right and 0 for wrong: 0 is perfect, and saying 50% every time scores 0.25. It is a proper scoring rule, so its expected value is smallest when you report what you really believe. See [metacognition ↗](https://masiarek.github.io/learning-to-learn-library/01_Knowing_What_You_Know/metacognition/).
 { #brier-score }
 
-**Calibration** — how well confidence matches results: a calibrated learner's 90% answers are right about 9 times in 10. See [metacognition](12_Learning_to_Learn/metacognition/README.md).
+**Calibration** — how well confidence matches results: a calibrated learner's 90% answers are right about 9 times in 10. See [metacognition ↗](https://masiarek.github.io/learning-to-learn-library/01_Knowing_What_You_Know/metacognition/).
 { #calibration }
 
 **Cantor function** — also the *devil's staircase*. Read x in base 3, cut after the first 1, turn 2s into 1s, and read the result in base 2. Continuous, climbing from 0 to 1, and flat on every gap of the Cantor set, so its whole rise happens on a set of length 0. See [the Cantor function](02_Measure_Zero/cantor_function/README.md).
@@ -374,7 +374,7 @@ Terms used across the library, with the page that explains each in full. For set
 **Membership (∈, ∉, ∋)** — a ∈ A says a is a member of A, a ∉ A that it is not, and A ∋ a is the same fact written from the set's side, read "A contains a"; ∌ negates it. The symbol ∋ is a mirrored ∈ and nothing to do with ∃, "there exists", which one circulating chart put in its place. Membership is the one primitive relation of set theory; everything else is defined from it. See [what is a set?](04_Sets/what_is_a_set/README.md).
 { #membership }
 
-**Metacognition** — John Flavell's word (1976) for thinking about your own thinking, including the ability to judge accurately how much you have learned, the one part a program can measure. See [metacognition](12_Learning_to_Learn/metacognition/README.md).
+**Metacognition** — John Flavell's word (1976) for thinking about your own thinking, including the ability to judge accurately how much you have learned, the one part a program can measure. See [metacognition ↗](https://masiarek.github.io/learning-to-learn-library/01_Knowing_What_You_Know/metacognition/).
 { #metacognition }
 
 **Midpoint** — the point halfway along a segment, ((x₁ + x₂)/2, (y₁ + y₂)/2): an average per coordinate. Equidistant from both ends and on the segment; equidistance alone describes the perpendicular bisector. See [the midpoint formula](08_Analytic_Geometry/midpoint_formula/README.md).
@@ -557,7 +557,7 @@ Terms used across the library, with the page that explains each in full. For set
 **Solution set** — of an equation or inequality, the set of every value, or pair of values, that makes it true: {x : x² + x + 1 > 0} is all of ℝ, written (−∞, ∞); {x : x² = 4} is {−2, 2}; {(x, y) : x² + y² = 1} is the unit circle, so the graph of an equation is its solution set drawn. It is set-builder notation with the equation as the test, which is what the comprehension axiom licenses; the solution set of a system is the intersection of the solution sets, and "no solution" means the solution set is ∅. See [graphs of equations](08_Analytic_Geometry/graphs_intercepts_symmetry/README.md) and [what is a set?](04_Sets/what_is_a_set/README.md).
 { #solution-set }
 
-**Spacing effect** — the same number of reviews works better spread out than crammed together, because a review strengthens memory most when some has been forgotten. See [spaced retrieval](12_Learning_to_Learn/spaced_retrieval/README.md).
+**Spacing effect** — the same number of reviews works better spread out than crammed together, because a review strengthens memory most when some has been forgotten. See [spaced retrieval ↗](https://masiarek.github.io/learning-to-learn-library/02_Making_It_Stay/spaced_retrieval/).
 { #spacing-effect }
 
 **Stability** — whether a particular *algorithm* preserves the accuracy a well-conditioned problem allows. The textbook quadratic formula is unstable for one of its two roots; a conjugate rearrangement fixes it for free. See [catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md).
@@ -605,7 +605,7 @@ Terms used across the library, with the page that explains each in full. For set
 **Tautology** — a sentence true on every row of its truth table, like P ∨ ¬P; a **contradiction** is false on every row. Two sentences are logically equivalent, ψ ⇔ φ, when ψ ↔ φ is a tautology. See [truth tables and the laws of logic](11_Logic/truth_tables_and_laws/README.md).
 { #tautology }
 
-**Testing effect** — retrieving something from memory makes it last longer than reading it again for the same time. See [spaced retrieval](12_Learning_to_Learn/spaced_retrieval/README.md).
+**Testing effect** — retrieving something from memory makes it last longer than reading it again for the same time. See [spaced retrieval ↗](https://masiarek.github.io/learning-to-learn-library/02_Making_It_Stay/spaced_retrieval/).
 { #testing-effect }
 
 **Therefore and because (∴, ∵)** — three dots pointing up, ∴, read "therefore", and pointing down, ∵, read "because"; shorthand of school proofs and older books, not of the logic that ⇒ and ⊢ formalise. See [connectives](#connectives).

@@ -391,7 +391,7 @@ The list is the owner's, sent in October 2026, grouped as they grouped it. A ter
 - [Multiset Union](../../04_Sets/multisets/README.md) — multisets
 - [Multiset Intersection](../../04_Sets/multisets/README.md) — multisets
 - [Multiset Sum](../../04_Sets/multisets/README.md) — multisets
-- [Fuzzy Set](../../12_Learning_to_Learn/day_or_night/README.md) — day or night
+- [Fuzzy Set ↗](https://masiarek.github.io/learning-to-learn-library/03_Believing_You_Can/day_or_night/) — day or night
 - [Hyperset](../../13_Axioms_of_Set_Theory/foundation/README.md) — foundation
 - [Non-Well-Founded Set](../../13_Axioms_of_Set_Theory/foundation/README.md) — foundation
 - [Quine Atom](../../13_Axioms_of_Set_Theory/foundation/README.md) — foundation

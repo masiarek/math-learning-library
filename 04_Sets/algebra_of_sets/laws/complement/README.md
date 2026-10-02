@@ -16,7 +16,7 @@ For each x in U, "x ∈ A or x ∉ A" is true, since one of the two must hold, a
 
 ## Where it is used, and the trap
 
-This is the law behind every case split: to prove something for all x, prove it for x ∈ A and for x ∉ A, and the two cases cover everything and overlap nowhere. It is also the one law a fuzzy or three-valued logic gives up, as [day or night](../../../../12_Learning_to_Learn/day_or_night/README.md) shows: twilight is in "day" and in "not day" a little each.
+This is the law behind every case split: to prove something for all x, prove it for x ∈ A and for x ∉ A, and the two cases cover everything and overlap nowhere. It is also the one law a fuzzy or three-valued logic gives up, as [day or night ↗](https://masiarek.github.io/learning-to-learn-library/03_Believing_You_Can/day_or_night/) shows: twilight is in "day" and in "not day" a little each.
 
 ## What the program prints
 

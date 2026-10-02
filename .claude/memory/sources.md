@@ -4,9 +4,9 @@ The books and notes behind the library, where each one is, and where it is used.
 
 | Source | Where it is | Used in |
 |---|---|---|
-| Saundra McGuire, *Teach Yourself How to Learn* (2018) | owner's copy | `12_Learning_to_Learn`, lessons 1–4 |
-| Todd Zakrajsek, *The New Science of Learning* (3rd ed., 2022) | owner's copy | `12_Learning_to_Learn`, lessons 5–9 and the chapter summaries |
-| Oakley, Sejnowski and McConville, *Learning How to Learn* (2018) | PDF on the owner's T7 drive; pages sent as photos | `focused_and_diffuse`; the picture walk in `count_the_vowels` |
+| Saundra McGuire, *Teach Yourself How to Learn* (2018) | owner's copy | the Learning to Learn library (moved from `12_Learning_to_Learn`) |
+| Todd Zakrajsek, *The New Science of Learning* (3rd ed., 2022) | owner's copy | the Learning to Learn library (moved from `12_Learning_to_Learn`) |
+| Oakley, Sejnowski and McConville, *Learning How to Learn* (2018) | PDF on the owner's T7 drive; pages sent as photos | the Learning to Learn library: `focused_and_diffuse`, the picture walk in `count_the_vowels` |
 | René Cori and Daniel Lascar, *Mathematical Logic*, Part II (Oxford, 2001), ch. 7 | pages sent as photos | `13_Axioms_of_Set_Theory` (the v₀, v₁ formulas), the reading guide |
 | Daniel Cunningham, *Set Theory: A First Course* (Cambridge, 2016), ch. 1 | pages sent as photos | `11_Logic` lessons 2–3, `04_Sets/set_katas`, `13_Axioms_of_Set_Theory` (English forms, exercises 1.4–1.5) |
 | Thomas Jech, *Set Theory* (Springer, 2003), ch. 1 | pages sent as photos | `13_Axioms_of_Set_Theory/axiom_katas` (exercises 1.1–1.15), relations page |
