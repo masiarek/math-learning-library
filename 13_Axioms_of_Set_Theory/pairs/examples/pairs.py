@@ -84,6 +84,16 @@ def main() -> None:
     print(f"   (∅, ∅)   = {show(ordered(a, a))}   the pair collapses, and still decodes")
     print("   Pairs, then, are enough for order; the Cartesian product page")
     print("   builds the plane from them.")
+    print()
+
+    print("6. HAUSDORFF'S PAIR WORKS TOO: (a, b) := {{a, ∅}, {b, {∅}}}")
+    zero, one = frozenset(), frozenset({frozenset()})
+    haus = lambda a, b: pair(pair(a, zero), pair(b, one))
+    ok = all((haus(a, b) == haus(c, d)) == (a == c and b == d) for a, b, c, d in product(V3, repeat=4))
+    print(f"   (a, b) = (c, d) iff a = c and b = d, for every a, b, c, d in V_3: {ok}")
+    print(f"   Kuratowski (∅, {{∅}}) = {show(ordered(zero, one))}   Hausdorff (∅, {{∅}}) = {show(haus(zero, one))}")
+    print("   Different sets with the same property; any set with the property will do,")
+    print("   and nobody ever unpacks one. The ∅ and {∅} are tags for 'first' and 'second'.")
 
 
 if __name__ == "__main__":
