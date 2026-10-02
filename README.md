@@ -141,6 +141,7 @@ The eleventh chapter is the logic the theorems in every other chapter are writte
 | [If A then B: converse, contrapositive and inverse](11_Logic/converse_and_contrapositive/README.md) | "If A then B" breaks only when A is true and B false, so the contrapositive is the same claim and the converse is not; if and only if; two classic mistakes; and why examples never prove but one counterexample disproves |
 | [Truth tables and the laws of logic](11_Logic/truth_tables_and_laws/README.md) | A law of logic is two columns that agree on every row, so a 2ⁿ-row table proves it; tautology, contradiction, ↔ versus ⇔; a misprinted exercise caught by one row |
 | [Predicates and quantifiers](11_Logic/predicates_and_quantifiers/README.md) | ∀ and ∃ as loops; "everyone likes someone" versus "someone is liked by everyone" on 65 536 relations; negation flips a quantifier; which distribution laws fail |
+| [Induction](11_Logic/induction/README.md) | Base case, step, and why it works: the least counterexample; n² + n + 41 fails first at 40; the all-cars proof breaks at n = 1; Fibonacci facts with Binet computed exactly, 2ⁿ subsets, the chocolate bar, closed forms |
 
 [**13_Axioms_of_Set_Theory/**](13_Axioms_of_Set_Theory/README.md) — *What are the rules for building sets, and why these?*
 

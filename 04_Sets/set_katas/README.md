@@ -56,6 +56,41 @@ Ten multiple-choice questions from the Math is Fun quizzes on sets, which the ow
 
 **Is this number theory?** Yes, read as sets. The three questions about factors and multiples are one fact of number theory in set clothing: a divides b exactly when the factors of a are a subset of the factors of b, and exactly when the multiples of b are a subset of the multiples of a. Divisibility is a partial order, like ⊆, and the program checks the equivalence for every a and b up to 12. [The algebra of sets](../algebra_of_sets/README.md#is-a-partial-order) has ⊆ as a partial order; divisibility is the other standard example, and the one [Hrbacek and Jech](../function_katas/README.md) use for "incomparable" (2 and 3 are incomparable under divides).
 
+## From Ashlock's problem set
+
+Daniel Ashlock's chapter *Basic Set Theory* (free PDF; see [the reading guide](../../reading_guides/set_theory/README.md)) ends its first section with problems of a different flavour, and section 5 of the program takes five of them.
+
+- **2.1, which of these are sets?** "The weights, to the nearest kilogram, of all people in Canada" is a list with repeats, a [multiset](../../GLOSSARY.md#multiset), not a set; "all weights at least one person had" is the set behind it. First names in a phone book, in order, are a list; the set forgets the order. {√x : x < 0} is ∅ in the reals and a set of imaginary numbers in the complex numbers, so the answer depends on the universal set, which is the warning in the problem.
+- **2.7, precedence.** Ashlock's convention is complement first, then ∩, then ∪, with ∖ and △ always bracketed, the same ladder as ¬, ∧, ∨ in [reading a set expression](../reading_set_expressions/README.md). The program shows the difference brackets make on one example.
+- **2.9 and 2.10, Venn diagrams of four sets.** A diagram of n sets needs 2ⁿ regions, and n circles in general position make at most n² − n + 2: enough for n up to 3 and short from n = 4, where 14 < 16. Venn drew four sets with ellipses, and any number can be drawn with other shapes; the program prints the two columns side by side.
+- **2.19 and 2.20, k-element subsets.** C(n, k) = n!/(k!(n − k)!), counted and compared with the formula for n = 4, and the row sums to 2ⁿ.
+- **2.21, inclusion–exclusion.** |S ∪ T| = |S| + |T| − |S ∩ T|, checked on every pair of subsets of {1, 2, 3}: the overlap was counted twice and is subtracted once.
+
+Problem 2.18, that △ does not distribute over ∪, is now in the search for false laws on [the algebra of sets](../algebra_of_sets/README.md#laws-that-look-true-and-are-not).
+
+## From a school textbook: ∈ versus ⊆, nested sets, and counting by Venn regions
+
+The owner sent chapter 1, *Sets*, of an Indian school textbook at Class 11 level (title not shown on the pages; blood groups, Kho-Kho and mock tests for examples). It is friendly and correct, its summary is already a list of flashcards, and its exercises are of two kinds the pages above lack: traps about ∈, ⊆ and nested braces, and word problems counted by Venn regions. Section 6 of the program does both.
+
+| Kata | Answer | Why |
+|---|---|---|
+| 1 ∈ {1}; {2} ∈ {2}; {2} ∈ {{2}}; ∅ ∈ {1, 2, 3}; ∅ ⊆ {1, 2, 3} | T, F, T, F, T | ∈ asks "is it a member", ⊆ asks "is every member of it a member"; ∅ is a subset of every set and a member only of sets that list it |
+| cardinality of {a}, {a, {a}}, {∅, 1, 2, {1, 2}}, {1, {1}, {1, {1}}}, {∅, {∅}, {∅, {∅}}} | 1, 2, 4, 3, 3 | a member that is itself a set counts once; inner braces do not open |
+| P(∅), P({∅}), P({∅, {∅}}) | 1, 2, 4 members | 2ⁿ for n = 0, 1, 2; P(∅) = {∅} is not empty |
+| n(A) = 10, n(A) = 100 | 2¹⁰ = 1 024, 2¹⁰⁰ ≈ 1.27 × 10³⁰ | the second is why power sets outrun everything |
+| the set of letters of BANANA | {A, B, N}, 3 members | repetition is not membership |
+| 40 students, 22 badminton, 11 both, 16 neither: table tennis only? | 2 | n(B ∪ T) = 40 − 16 = 24, so n(T) = 24 − 22 + 11 = 13, and 13 − 11 = 2 |
+| 120 students, 92 language, 46 maths, all teach: both? exactly one? | 18; 102 | 92 + 46 − 120; 92 + 46 − 2 · 18 |
+| 100 students, 70 physics, 60 chemistry: least both? most neither? | 30; 30 | n(P ∪ C) ≤ 100 forces n(P ∩ C) ≥ 30; n(P ∪ C) ≥ 70 forces neither ≤ 30 |
+| 56 certificates, 17 + 28 + 25 awards, 4 with all three: exactly two? | 6 | pair overlaps sum to 70 + 4 − 56 = 18, and each triple student is in three of them: 18 − 12 |
+| 100 students, E 60, G 50, S 35, EG 40, GS 30, ES 25, all three 25 | at least two 45, at most one 55, none 25 | n(E ∪ G ∪ S) = 145 − 95 + 25 = 75 |
+
+The program does not apply the formulas; it builds sets with the stated region sizes and counts, and then shows the formula giving the same number. That is the right order: n(A ∪ B) = n(A) + n(B) − n(A ∩ B) is a theorem about counting, and the Venn regions are its proof. The three-set version adds the triple overlap back because it was subtracted three times after being added three times.
+
+## Flashcards
+
+The textbook's summary and these katas as a deck of Anki cards: [`set_katas.txt`](anki/set_katas.txt). Import with File → Import. Tags: `definition`, `notation`, `trap`, `counting`, `formula`, `example`. The cards are also in the chapter's combined deck.
+
 ## What the program prints
 
 <!-- output:set_katas -->
@@ -131,6 +166,42 @@ Ten multiple-choice questions from the Math is Fun quizzes on sets, which the ow
    Behind Q1, Q2, Q7 and Q10 is one fact of number theory read as sets:
       a | b  iff  factors(a) ⊆ factors(b)  iff  multiples(b) ⊆ multiples(a)
       checked for all a, b in 1..12: True
+
+5. FROM ASHLOCK'S PROBLEM SET: WHICH ARE SETS, PRECEDENCE, FOUR CIRCLES, COUNTING
+   2.1  'the weights of all people in Canada' repeats values: a multiset, not a set;
+        'all weights at least one person had' drops repeats: a set. In Python:
+        list [70, 82, 70, 65, 82, 82] -> set [65, 70, 82]; 'the first names in a phone book, in order' is a list,
+        the set behind it forgets the order. {√x : x < 0} is ∅ in ℝ and a set of imaginaries in ℂ: it depends on U.
+   2.7  precedence (Ashlock: complement, then ∩, then ∪; ∖ and △ always bracketed):
+        A ∪ B ∩ C ∪ D reads A ∪ (B ∩ C) ∪ D;  Aᶜ ∩ Bᶜ ∪ C reads (Aᶜ ∩ Bᶜ) ∪ C;  A ∪ B = A ∩ C is a truth value
+        with A = [1, 2], B = [2, 3], C = [3, 4]: A ∪ (B ∩ C) = [1, 2, 3] but (A ∪ B) ∩ C = [3]
+   2.9/2.10  a Venn diagram of n sets needs 2^n regions; n circles in general position
+        make at most n² − n + 2 regions, so circles stop working at four sets (Venn used ellipses):
+        n:            1    2    3    4    5    6
+        2^n:          2    4    8   16   32   64
+        n²−n+2:       2    4    8   14   22   32
+   2.19/2.20  k-element subsets of an n-set: C(n, k) = n! / (k!(n−k)!)
+        n = 4: counted [1, 4, 6, 4, 1], formula [1, 4, 6, 4, 1], sum 16 = 2^4
+   2.21  |S ∪ T| = |S| + |T| − |S ∩ T| on all pairs of subsets of {1, 2, 3}: True   (inclusion–exclusion)
+
+6. FROM A SCHOOL TEXTBOOK: ∈ VERSUS ⊆, NESTED SETS, AND COUNTING BY VENN REGIONS
+   1.2.2 true or false:  1 ∈ {1}: True   {2} ∈ {2}: False   {2} ∈ {{2}}: True   ∅ ∈ {1, 2, 3}: False   ∅ ⊆ {1, 2, 3}: True
+         ∈ asks 'is it a member'; ⊆ asks 'is every member of it a member'. ∅ is a subset of everything and a member of almost nothing.
+   1.2.4 cardinality of nested sets: {a} -> 1   {a, {a}} -> 2   {∅, 1, 2, {1, 2}} -> 4   {1, {1}, {1, {1}}} -> 3   {∅, {∅}, {∅, {∅}}} -> 3
+         a member that is itself a set still counts once; braces inside braces do not open.
+   1.2.3 P(∅) has 1 member; P({∅}) has 2; P({∅, {∅}}) has 4;  n(A) = 10 gives 2^10 = 1024, n(A) = 100 gives 2^100 = 1267650600228229401496703205376
+   BANANA: the set of its letters is ['A', 'B', 'N'], 3 members, not 6
+   Ex.20 40 students, 22 badminton, 11 both, 16 neither -> table tennis only: build the sets and count: 2
+         check: n(U) = 40, n(B) = 22, n(B ∩ T) = 11, n(neither) = 16; formula n(T) = n(U) − n(neither) − n(B) + n(B ∩ T) = 13
+   Ex.21 120 students, 92 language, 46 maths, all teach something -> both: 18 = 92 + 46 − 120; exactly one: 102 = 92 + 46 − 2·18
+   Ex.22 100 students, 70 physics, 60 chemistry: n(P ∪ C) = 130 − n(P ∩ C) and n(P ∪ C) ≤ 100,
+         so n(P ∩ C) ≥ 30 (least both) and, with C ⊆ P, n(P ∪ C) = 70 so neither ≤ 30 (most neither)
+   1.3.10 100 students: E 60, G 50, S 35, EG 40, GS 30, ES 25, all three 25. Build 8 regions, then count:
+         sizes rebuilt: n(E) = 60, n(G) = 50, n(S) = 35, n(E ∩ G) = 40, n(G ∩ S) = 30, n(E ∩ S) = 25, all three 25
+         at least two: 45   at most one: 55   none: 25
+         n(E ∪ G ∪ S) by inclusion–exclusion = 60 + 50 + 35 − (40 + 30 + 25) + 25 = 75; counted: 75
+   1.3.9 56 certificates, 17 + 28 + 25 = 70 awards, 4 students with all three: pairs sum to 70 + 4 − 56 = 18,
+         exactly two = 18 − 3·4 = 6  (each triple student sits in three of the pair counts)
 ```
 <!-- /output -->
 

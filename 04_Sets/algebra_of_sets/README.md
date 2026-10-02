@@ -143,6 +143,7 @@ The section ends with the rule that turns every set equality into two subset pro
    A - (B - C) = (A - B) - C        fails in 2800 cases, e.g. A = {1}, B = {}, C = {1}
    A - B = B - A                    fails in  240 cases, e.g. A = {}, B = {1}
    A | B = A | C  implies  B = C    fails in 1040 cases, e.g. A = {1}, B = {}, C = {1}
+   A ^ (B | C) = (A ^ B) | C        fails in 2800 cases, e.g. A = {1}, B = {}, C = {1}
    One counterexample is enough to kill a law; for the true laws of
    section 3, the search over every case is the proof that none exists.
 

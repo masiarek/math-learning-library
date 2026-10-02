@@ -24,6 +24,8 @@ Injective, surjective and bijective drive most readers mad, because they are Lat
 | **surjective**, onto | *sur-jacere*, to throw onto | every target is hit by at least one arrow | nothing in the target is missed | `{y for x, y in f} == T` |
 | **bijective**, one-to-one correspondence | both | every target is hit exactly once | a perfect pairing, so it can be undone | both tests |
 
+One more word drives people mad, and Ashlock's chapter is honest about it: **range** has two meanings. In this library and in Jech, ran(f) is the set of values actually taken, which others call the **image** and write Im(f) or f[S]. In many calculus books and in computer science, "range" means the set T in f : S → T, which others call the **codomain**, and the values actually taken are then the image. Surjective means "image equals codomain", and the word "onto" is safer than "range" when it matters.
+
 Each word is a property of the arrows only, and each fails in one way: an injection fails when two inputs share an output, a surjection fails when some target is never reached. "One-to-one" is the trap: it means injective, not bijective, and "one-to-one correspondence" means bijective; the Latin words exist to end that confusion. A function is invertible exactly when it is bijective, since undoing it needs every target reached (surjective) and reached once (injective); on a finite set, the three properties coincide (Simovici and Djeraba, Theorem 1.69), which section 3 of the program counts.
 
 ## What the program checks

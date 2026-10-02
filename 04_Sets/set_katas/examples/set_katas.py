@@ -177,6 +177,82 @@ def main() -> None:
     print("      a | b  iff  factors(a) ⊆ factors(b)  iff  multiples(b) ⊆ multiples(a)")
     ok = all((b % a == 0) == (fac(a) <= fac(b)) == (mult(b) <= mult(a)) for a in range(1, 13) for b in range(1, 13))
     print(f"      checked for all a, b in 1..12: {ok}")
+    print()
+
+    print("5. FROM ASHLOCK'S PROBLEM SET: WHICH ARE SETS, PRECEDENCE, FOUR CIRCLES, COUNTING")
+    print("   2.1  'the weights of all people in Canada' repeats values: a multiset, not a set;")
+    print("        'all weights at least one person had' drops repeats: a set. In Python:")
+    weights = [70, 82, 70, 65, 82, 82]
+    print(f"        list {weights} -> set {sorted(set(weights))}; 'the first names in a phone book, in order' is a list,")
+    print("        the set behind it forgets the order. {√x : x < 0} is ∅ in ℝ and a set of imaginaries in ℂ: it depends on U.")
+    A, B_, C = frozenset({1, 2}), frozenset({2, 3}), frozenset({3, 4})
+    U4 = frozenset({1, 2, 3, 4})
+    print("   2.7  precedence (Ashlock: complement, then ∩, then ∪; ∖ and △ always bracketed):")
+    print(f"        A ∪ B ∩ C ∪ D reads A ∪ (B ∩ C) ∪ D;  Aᶜ ∩ Bᶜ ∪ C reads (Aᶜ ∩ Bᶜ) ∪ C;  A ∪ B = A ∩ C is a truth value")
+    print(f"        with A = {sorted(A)}, B = {sorted(B_)}, C = {sorted(C)}: A ∪ (B ∩ C) = {sorted(A | (B_ & C))} but (A ∪ B) ∩ C = {sorted((A | B_) & C)}")
+    print("   2.9/2.10  a Venn diagram of n sets needs 2^n regions; n circles in general position")
+    print("        make at most n² − n + 2 regions, so circles stop working at four sets (Venn used ellipses):")
+    print("        n:        " + "".join(f"{n:>5}" for n in range(1, 7)))
+    print("        2^n:      " + "".join(f"{2 ** n:>5}" for n in range(1, 7)))
+    print("        n²−n+2:   " + "".join(f"{n * n - n + 2:>5}" for n in range(1, 7)))
+    from math import comb
+    print("   2.19/2.20  k-element subsets of an n-set: C(n, k) = n! / (k!(n−k)!)")
+    for n in (4,):
+        items = tuple(range(1, n + 1))
+        counts = [sum(1 for _ in combinations(items, k)) for k in range(n + 1)]
+        print(f"        n = {n}: counted {counts}, formula {[comb(n, k) for k in range(n + 1)]}, sum {sum(counts)} = 2^{n}")
+    ie = all(len(S | T) == len(S) + len(T) - len(S & T) for S in SUBSETS for T in SUBSETS)
+    print(f"   2.21  |S ∪ T| = |S| + |T| − |S ∩ T| on all pairs of subsets of {{1, 2, 3}}: {ie}   (inclusion–exclusion)")
+    print()
+
+    print("6. FROM A SCHOOL TEXTBOOK: ∈ VERSUS ⊆, NESTED SETS, AND COUNTING BY VENN REGIONS")
+    E, S1, S2 = frozenset(), frozenset({frozenset()}), frozenset({frozenset(), frozenset({frozenset()})})
+    print("   1.2.2 true or false:  1 ∈ {1}: " + str(1 in {1}) + "   {2} ∈ {2}: " + str(frozenset({2}) in {2})
+          + "   {2} ∈ {{2}}: " + str(frozenset({2}) in {frozenset({2})}) + "   ∅ ∈ {1, 2, 3}: " + str(E in {1, 2, 3})
+          + "   ∅ ⊆ {1, 2, 3}: " + str(E <= {1, 2, 3}))
+    print("         ∈ asks 'is it a member'; ⊆ asks 'is every member of it a member'. ∅ is a subset of everything and a member of almost nothing.")
+    nested = [("{a}", frozenset({"a"})), ("{a, {a}}", frozenset({"a", frozenset({"a"})})),
+              ("{∅, 1, 2, {1, 2}}", frozenset({E, 1, 2, frozenset({1, 2})})),
+              ("{1, {1}, {1, {1}}}", frozenset({1, frozenset({1}), frozenset({1, frozenset({1})})})),
+              ("{∅, {∅}, {∅, {∅}}}", frozenset({E, S1, S2}))]
+    print("   1.2.4 cardinality of nested sets: " + "   ".join(f"{name} -> {len(s)}" for name, s in nested))
+    print("         a member that is itself a set still counts once; braces inside braces do not open.")
+    def power(s):
+        items = list(s)
+        return frozenset(frozenset(c) for r in range(len(items) + 1) for c in combinations(items, r))
+    print(f"   1.2.3 P(∅) has {len(power(E))} member; P({{∅}}) has {len(power(S1))}; P({{∅, {{∅}}}}) has {len(power(S2))};  n(A) = 10 gives 2^10 = {2 ** 10}, n(A) = 100 gives 2^100 = {2 ** 100}")
+    print(f"   BANANA: the set of its letters is {sorted(set('BANANA'))}, {len(set('BANANA'))} members, not 6")
+    # inclusion–exclusion word problems, solved by building the sets
+    def regions(only_a, only_b, both, neither):
+        A = set(range(0, only_a + both)); B = set(range(only_a, only_a + both + only_b))
+        U = set(range(0, only_a + both + only_b + neither))
+        return A, B, U
+    B_, T, U = regions(11, 2, 11, 16)
+    print(f"   Ex.20 40 students, 22 badminton, 11 both, 16 neither -> table tennis only: build the sets and count: {len(T - B_)}")
+    print(f"         check: n(U) = {len(U)}, n(B) = {len(B_)}, n(B ∩ T) = {len(B_ & T)}, n(neither) = {len(U - (B_ | T))}; formula n(T) = n(U) − n(neither) − n(B) + n(B ∩ T) = {40 - 16 - 22 + 11}")
+    L, M, U = regions(74, 28, 18, 0)
+    print(f"   Ex.21 120 students, 92 language, 46 maths, all teach something -> both: {len(L & M)} = 92 + 46 − 120; exactly one: {len(L ^ M)} = 92 + 46 − 2·18")
+    print("   Ex.22 100 students, 70 physics, 60 chemistry: n(P ∪ C) = 130 − n(P ∩ C) and n(P ∪ C) ≤ 100,")
+    print(f"         so n(P ∩ C) ≥ 30 (least both) and, with C ⊆ P, n(P ∪ C) = 70 so neither ≤ {100 - 70} (most neither)")
+    # three sets: languages problem, exercise 1.3.10
+    reg = {"EGS": 25, "EG": 15, "GS": 5, "ES": 0, "E": 20, "G": 5, "S": 5, "none": 25}
+    people, E3, G3, S3 = [], set(), set(), set()
+    k = 0
+    for name, n in reg.items():
+        for _ in range(n):
+            if "E" in name: E3.add(k)
+            if "G" in name: G3.add(k)
+            if "S" in name and name != "none": S3.add(k)
+            k += 1
+    U3 = set(range(k))
+    at_least_two = sum(1 for p in U3 if (p in E3) + (p in G3) + (p in S3) >= 2)
+    print(f"   1.3.10 100 students: E 60, G 50, S 35, EG 40, GS 30, ES 25, all three 25. Build 8 regions, then count:")
+    print(f"         sizes rebuilt: n(E) = {len(E3)}, n(G) = {len(G3)}, n(S) = {len(S3)}, n(E ∩ G) = {len(E3 & G3)}, n(G ∩ S) = {len(G3 & S3)}, n(E ∩ S) = {len(E3 & S3)}, all three {len(E3 & G3 & S3)}")
+    print(f"         at least two: {at_least_two}   at most one: {len(U3) - at_least_two}   none: {len(U3 - (E3 | G3 | S3))}")
+    formula = 60 + 50 + 35 - (40 + 30 + 25) + 25
+    print(f"         n(E ∪ G ∪ S) by inclusion–exclusion = 60 + 50 + 35 − (40 + 30 + 25) + 25 = {formula}; counted: {len(E3 | G3 | S3)}")
+    print("   1.3.9 56 certificates, 17 + 28 + 25 = 70 awards, 4 students with all three: pairs sum to 70 + 4 − 56 = 18,")
+    print(f"         exactly two = 18 − 3·4 = {18 - 12}  (each triple student sits in three of the pair counts)")
 
 
 if __name__ == "__main__":

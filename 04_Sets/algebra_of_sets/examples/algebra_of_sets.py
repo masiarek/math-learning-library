@@ -108,6 +108,7 @@ def main() -> None:
         ("A - (B - C) = (A - B) - C", 3, lambda a, b, c: (a - (b - c)) == ((a - b) - c)),
         ("A - B = B - A", 2, lambda a, b, c: (a - b) == (b - a)),
         ("A | B = A | C  implies  B = C", 3, lambda a, b, c: (a | b) != (a | c) or b == c),
+        ("A ^ (B | C) = (A ^ B) | C", 3, lambda a, b, c: (a ^ (b | c)) == ((a ^ b) | c)),
     ]
     for text, arity, law in tempting:
         bad = [case for case in product(S, repeat=arity) if not law(*(case + (E,) * (3 - arity)))]
