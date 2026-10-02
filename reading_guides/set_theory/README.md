@@ -153,9 +153,9 @@ A school textbook is the other good first hour, and the owner sent chapter 1 of 
 | **Patrick Suppes, *Axiomatic Set Theory*** (1960; Dover, 1972) | ZF developed with full formal care, including the construction of the number systems, by a logician. (From memory.) | The classic between Halmos and Jech, dated in notation and thorough in proofs; most readers now take Enderton or Hrbacek and Jech instead. |
 | **Robert R. Stoll, *Set Theory and Logic*** (1963; Dover, 1979) | Intuitive set theory, the number systems built from ℕ to ℝ, a logic course, Boolean algebras, then the ZF axioms in chapter 7 and first-order theories with Gödel's theorems in chapter 9, in one cheap volume. | The Dover classic: sound, patient and dated in typography and notation, with no solutions. Chapters 1 and 7 are the ones to read; Cunningham covers the same ground with more help, and Stoll is the better buy for the price. |
 
-**How accurate is André? Chapter 1, checked claim by claim.** The owner sent pages 3 to 14, which is enough to judge the care of the writing. The verdict: good, and accurate where it matters, with the slips of a self-published text that nobody copy-edited. None of them would mislead a reader for long, and two would mislead a reader for an hour.
+**How accurate is André? Chapters 1 to 3, checked claim by claim.** The owner sent pages 3 to 36, which is enough to judge the care of the writing. The verdict: good, and accurate where it matters, with the slips of a self-published text that nobody copy-edited. The axioms and the theorems are right; the slips are in asides, cross-references and one proof written in half. None would mislead a reader for long, and two or three would mislead a reader for an hour.
 
-| Claim, pages 3–14 | Verdict |
+| Claim, pages 3–36 | Verdict |
 |---|---|
 | Zermelo and Fraenkel 1908–1922, with Skolem and von Neumann adjusting afterwards | right |
 | Hilbert's 1899 axioms for geometry: 21, one shown redundant in 1902, 20 since | right, and a detail most books get wrong |
@@ -170,8 +170,20 @@ A school textbook is the other good first hour, and the owner sent chapter 1 of 
 | Example (b), page 5: the collection U of all infinite sets "is an element of U" | deliberately naive, and never flagged: in the theory the book builds, U is a proper class, so U ∉ U |
 | "We don't know for sure whether the ZF axioms are consistent", and ZF cannot settle it from inside | right, and a point the generic abstracts in the caution below get wrong |
 | Fraenkel, Bar-Hillel and Levy on choice as "second only to Euclid's axiom of parallels" | a real quotation from *Foundations of Set Theory* (1973), from memory |
+| Theorem 2.4, the class {x : x ∉ x} is not an element, and its proof | the theorem is right; the printed proof writes only one of the two cases (it assumes C ∈ C and derives C ∉ C, and never handles C ∉ C) |
+| Page 18: "By Theorem 2.3 part (a), every element is equal to itself" | wrong cross-reference: reflexivity is Theorem 2.1; 2.3(a) is symmetry |
+| Page 18: "Axiom A1: if x = y and x ∈ A then y ∈ A" | misquoted: A1 as stated on page 10 is extensionality; substitution of equals is a rule of logic, not A1 |
+| Theorem 2.7, ∅ is a set and every set is an element; the universal class and the class of all sets are proper classes | right, and cleanly proved |
+| Page 21: "No one has been able to prove that 𝒫(A) is a set", so it is postulated | misleading: it is *known* to be unprovable from the other axioms, not an open problem |
+| The formal power set axiom ∀A∃P[B ∈ P ⟺ B ⊆ A] | a quantifier over B is missing; harmless |
+| Example 2(e), page 22: z ∉ 𝒫(C) "since z does not appear as an element of C" | wrong reason: z ∈ 𝒫(C) means z ⊆ C, not z ∈ C; the verdict "cannot write it" is right |
+| Page 30: for an empty class 𝒜, the union and the intersection of its members "are ∅ by definition" | the union is; the intersection, by the book's own formula {x : x ∈ C for all C ∈ 𝒜}, is the universal class 𝒰, which the book's theory can name; the ∅ is a convention stated as a fact ([unions](../../13_Axioms_of_Set_Theory/unions/README.md) has the same point for ZF) |
+| Page 31: 𝒜 = {x : x is a set and x ∉ x}, and ∪𝒜 is not a set, via 𝒜 ⊆ 𝒫(∪𝒜) | right, and the best example in these pages: a union over a proper class fails to be a set |
+| Theorems 3.5 to 3.12: absorption, double complement, De Morgan, commutative, idempotent, associative, distributive, the laws with 𝒰 and ∅, and the generalised distributive and De Morgan laws | all right; the proofs are two-inclusion arguments written line by line, which is the book's teaching method, and [the algebra of sets](../../04_Sets/algebra_of_sets/README.md) checks the same list by program |
 
-The slips cluster where the book is being informal, and the axioms themselves are stated correctly; a reader who keeps this table beside chapter 1 loses nothing. The Wikipedia footnote for Russell's dates is the other sign of self-publication, and no reason to distrust the mathematics.
+The slips cluster where the book is being informal or cross-referencing itself, and the axioms and theorems are stated and proved correctly; a reader who keeps this table beside chapters 1 to 3 loses nothing. The Wikipedia footnote for Russell's dates is the other sign of self-publication, and no reason to distrust the mathematics.
+
+**On André's symbols, since the owner noticed them again.** Of every book in this guide, André's spelling is the closest to this library's own: A′ for the complement, C − D for difference, C △ D for symmetric difference, ⊆ for subset and ⊂ for proper subset, 𝒫(A) for the power set, {x : P(x)} for set-builder. Two things are new, and only one is notation. The script letters 𝒜, 𝒰 and 𝒮 mark a *class* of classes, the universal class and the class of all sets; that is spelling. The other is an idea: his complement C′ = {x : x ∉ C} is *absolute*, with no universal set chosen first, because in a class theory the class 𝒰 of everything exists and C′ is simply a class. [The algebra of sets](../../04_Sets/algebra_of_sets/README.md#the-complement-needs-a-universe) says a complement needs a universe fixed in advance, and both are right: in ZF there is no set of everything, so U must be chosen; in André's theory the complement of a set is always a proper class, so to get a *set* you intersect with a chosen U after all. Same practice, different bookkeeping.
 
 ### The subject: graduate and research
 

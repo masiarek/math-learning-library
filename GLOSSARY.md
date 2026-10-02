@@ -357,7 +357,7 @@ The same ideas in the spellings of the books this library reads. The definitions
 | subset, equal allowed | a ⊆ b | a ⊆ b | A ⊆ B | X ⊂ Y | x ⊆ y | S ⊆ T | A ⊆ B | A ⊆ B |
 | proper subset | a ⊊ b | a ⊊ b | A ⊂ B | X ⊂ Y, X ≠ Y | x ⊊ y | — | A ⊂ B | A ⊂ B |
 | difference | a ∖ b | a ∖ b | A ∖ B | X − Y | x ∖ y | S − T | A − B | A − B |
-| complement | A′ | — | — | — | — | T̄ | Ā | A′ |
+| complement | A′ | — | — | — | — | T̄ | Ā | A′ = {x : x ∉ A}, absolute, a class |
 | symmetric difference | A △ B | — | — | — | — | U ⊕ V | A + B | A △ B |
 | union of a family | ∪a | ∪a, ∪ₓ∈ₐ x | ∪𝓕 | ∪X | ∪𝓕 | ∪𝒞 | ∪𝒜 | ∪_{C∈𝒜} C |
 | power set | 𝒫(a) | ℘(a) | 𝒫(A) | P(X) | 𝒫(x) | 𝒫(S) | 𝒫(A) | 𝒫(A) |
@@ -376,4 +376,4 @@ The same ideas in the spellings of the books this library reads. The definitions
 | equality in the formal language | = | ≃ | = | = | = | = | = | = |
 | regularity / foundation | foundation | foundation | regularity | regularity | foundation | — | restriction | regularity |
 
-Three conventions deserve a warning. Jech's ⊂ allows equality and Cunningham's does not, so the same symbol means ⊆ in one book and ⊊ in the other. André's objects are *classes*, and his {x : P(x)} is always a class, which is a set only when some axiom says so; the other books have no classes as objects at all. Simovici and Djeraba write gf for "f, then g", the order most books write as g ∘ f; both mean (g ∘ f)(x) = g(f(x)).
+Three conventions deserve a warning. Jech's ⊂ allows equality and Cunningham's does not, so the same symbol means ⊆ in one book and ⊊ in the other. André's objects are *classes*, and his {x : P(x)} is always a class, which is a set only when some axiom says so; the other books have no classes as objects at all. His complement is therefore absolute, taken in the universal class, where this library's A′ is U ∖ A for a chosen U. Simovici and Djeraba write gf for "f, then g", the order most books write as g ∘ f; both mean (g ∘ f)(x) = g(f(x)).
