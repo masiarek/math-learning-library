@@ -1,0 +1,39 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Sets::Set katas
+#tags:sets math
+#columns:Front	Back	Tags
+#tags column:3
+What is a set, in the school definition, and what does 'well-defined' add?	A well-defined collection of objects: for any object it is settled whether it belongs. 'The three best students' is not a set; 'the students in the quiz' is.	definition
+Roster form versus set-builder form: give both for the vowels.	Roster lists the members: {a, e, i, o, u}. Set-builder states the property: {x : x is a vowel of the English alphabet}.	notation
+Can every set be written in roster form?	No. The real numbers between 2 and 5 have no first member and no next member, so they can only be given by a property: {x : x is real and 2 < x < 5}.	trap
+Does the order of listing or a repeated member change a set?	No. {1, 2, 3} = {3, 1, 2}, and the set of letters of BANANA is {B, A, N}, three members. A set is only its members.	definition
+When is a set finite, and when infinite?	Finite when its members can be counted off by a natural number n(A) = m; otherwise infinite. The digits in the decimal expansion of √2 form a finite set (at most ten), though the expansion never ends.	definition
+What is the empty set, and name two sets that are empty in disguise.	The set with no members, written ∅ or { }. Primes that are composite; rational numbers that are irrational; irrationals whose decimals terminate.	definition
+Is the set of even primes empty?	No: it is {2}. One member is not none.	trap
+Define A ⊆ B and A ⊂ B (proper subset).	A ⊆ B when every member of A is a member of B. A ⊂ B when also A ≠ B. Every set is a subset of itself; ∅ is a subset of every set.	definition
+1 ∈ {1}?  {2} ∈ {2}?  {2} ∈ {{2}}?  ∅ ∈ {1, 2, 3}?  ∅ ⊆ {1, 2, 3}?	True, false, true, false, true. ∈ asks whether the thing is a member; ⊆ asks whether each of its members is.	trap
+What is the cardinality of {a, {a}}, and of {∅, {∅}, {∅, {∅}}}?	2 and 3. A member that is itself a set counts as one member; braces inside braces do not open.	trap
+What is the power set P(A), and how many members does it have?	The set of all subsets of A. If n(A) = p then n(P(A)) = 2^p, and A has 2^p − 1 proper subsets.	definition
+P(∅) = ?  P({∅}) = ?	P(∅) = {∅}, one member. P({∅}) = {∅, {∅}}, two members. The power set of the empty set is not empty.	trap
+n(A) = 10: how many subsets? n(A) = 100?	2^10 = 1024, and 2^100 ≈ 1.27 × 10^30.	counting
+What is the universal set U, and give two examples.	The set everything under discussion is drawn from, fixed in advance: all students of the school when sets of students are discussed; the real numbers when naturals, rationals and irrationals are. The rectangle of a Venn diagram.	definition
+Define A ∪ B, A ∩ B and A − B in set-builder form.	A ∪ B = {x : x ∈ A or x ∈ B}; A ∩ B = {x : x ∈ A and x ∈ B}; A − B = {x : x ∈ A and x ∉ B}.	definition
+When are A and B disjoint?	When A ∩ B = ∅: no member in common. Two circles drawn apart in a Venn diagram.	definition
+Define the complement A′, and say what it needs.	A′ = U − A = {x : x ∈ U and x ∉ A}. It needs a universal set U fixed first; the same A has different complements under different U.	definition
+State De Morgan's laws for sets.	(A ∪ B)′ = A′ ∩ B′ and (A ∩ B)′ = A′ ∪ B′. Not either is neither; not both is at least one missing.	formula
+A − B = ?  (as an intersection)	A − B = A ∩ B′: difference is intersection with the complement.	formula
+n(A ∪ B) = ?	n(A) + n(B) − n(A ∩ B). The overlap was counted twice and is subtracted once (inclusion–exclusion).	formula
+n(A − B) = ?  (only in A)	n(A) − n(A ∩ B).	formula
+n(neither in A nor in B) = ?	n(A′ ∩ B′) = n((A ∪ B)′) = n(U) − n(A ∪ B).	formula
+n(in exactly one of A, B) = ?	n((A − B) ∪ (B − A)) = n(A) + n(B) − 2 n(A ∩ B).	formula
+n(A ∪ B ∪ C) = ?	n(A) + n(B) + n(C) − [n(A ∩ B) + n(B ∩ C) + n(C ∩ A)] + n(A ∩ B ∩ C). The triple overlap was added three times and subtracted three times, so it is added back once.	formula
+40 students, 22 play badminton, 11 play both badminton and table tennis, 16 play neither. How many play table tennis but not badminton?	2. n(B ∪ T) = 40 − 16 = 24; n(T) = 24 − 22 + 11 = 13; only table tennis = 13 − 11 = 2.	example
+120 students, 92 can teach a language, 46 can teach maths, every student teaches something. How many teach both? Exactly one?	Both: 92 + 46 − 120 = 18. Exactly one: 92 + 46 − 2 · 18 = 102.	example
+100 students, 70 like physics, 60 like chemistry. Least possible number liking both? Greatest possible number liking neither?	Both ≥ 70 + 60 − 100 = 30, because n(P ∪ C) ≤ 100. Neither ≤ 100 − 70 = 30, when every chemistry student also likes physics.	example
+56 students got certificates in at least one of three activities; 17, 28 and 25 got each; 4 got all three. How many got exactly two?	6. The pair overlaps sum to 17 + 28 + 25 + 4 − 56 = 18; each of the 4 triple students is in three pair counts, so exactly two = 18 − 3 · 4.	example
+100 students: 60 English, 50 German, 35 Spanish; 40 E and G, 30 G and S, 25 E and S; 25 all three. At least two languages? At most one? None?	At least two: (40 + 30 + 25) − 2 · 25 = 45. At most one: 55. None: 100 − (145 − 95 + 25) = 25.	example
+What does a Venn diagram show, and what are the rectangle and the regions?	Sets as circles inside a rectangle that is U; n circles make 2^n regions, one per pattern of membership, and every set operation is a choice of regions. Four sets cannot be drawn with circles.	notation
+Is 'x ∈ A ∩ x ∈ B' a meaningful expression?	No. ∩ joins sets, not statements. Write x ∈ A ∩ B, or 'x ∈ A and x ∈ B'.	trap
+Which is the right symbol: {2, 3, 4} … {1, 2, 3, 4, 5}; ∅ … {∅}; {x : x = n²} … {x : x = n³}?	⊂ (proper subset); ⊂, since ∅ is a subset of every set and ∅ ≠ {∅}; ⊄, since 4 = 2² is not a cube.	trap

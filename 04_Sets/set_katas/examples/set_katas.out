@@ -67,3 +67,39 @@
    Behind Q1, Q2, Q7 and Q10 is one fact of number theory read as sets:
       a | b  iff  factors(a) ⊆ factors(b)  iff  multiples(b) ⊆ multiples(a)
       checked for all a, b in 1..12: True
+
+5. FROM ASHLOCK'S PROBLEM SET: WHICH ARE SETS, PRECEDENCE, FOUR CIRCLES, COUNTING
+   2.1  'the weights of all people in Canada' repeats values: a multiset, not a set;
+        'all weights at least one person had' drops repeats: a set. In Python:
+        list [70, 82, 70, 65, 82, 82] -> set [65, 70, 82]; 'the first names in a phone book, in order' is a list,
+        the set behind it forgets the order. {√x : x < 0} is ∅ in ℝ and a set of imaginaries in ℂ: it depends on U.
+   2.7  precedence (Ashlock: complement, then ∩, then ∪; ∖ and △ always bracketed):
+        A ∪ B ∩ C ∪ D reads A ∪ (B ∩ C) ∪ D;  Aᶜ ∩ Bᶜ ∪ C reads (Aᶜ ∩ Bᶜ) ∪ C;  A ∪ B = A ∩ C is a truth value
+        with A = [1, 2], B = [2, 3], C = [3, 4]: A ∪ (B ∩ C) = [1, 2, 3] but (A ∪ B) ∩ C = [3]
+   2.9/2.10  a Venn diagram of n sets needs 2^n regions; n circles in general position
+        make at most n² − n + 2 regions, so circles stop working at four sets (Venn used ellipses):
+        n:            1    2    3    4    5    6
+        2^n:          2    4    8   16   32   64
+        n²−n+2:       2    4    8   14   22   32
+   2.19/2.20  k-element subsets of an n-set: C(n, k) = n! / (k!(n−k)!)
+        n = 4: counted [1, 4, 6, 4, 1], formula [1, 4, 6, 4, 1], sum 16 = 2^4
+   2.21  |S ∪ T| = |S| + |T| − |S ∩ T| on all pairs of subsets of {1, 2, 3}: True   (inclusion–exclusion)
+
+6. FROM A SCHOOL TEXTBOOK: ∈ VERSUS ⊆, NESTED SETS, AND COUNTING BY VENN REGIONS
+   1.2.2 true or false:  1 ∈ {1}: True   {2} ∈ {2}: False   {2} ∈ {{2}}: True   ∅ ∈ {1, 2, 3}: False   ∅ ⊆ {1, 2, 3}: True
+         ∈ asks 'is it a member'; ⊆ asks 'is every member of it a member'. ∅ is a subset of everything and a member of almost nothing.
+   1.2.4 cardinality of nested sets: {a} -> 1   {a, {a}} -> 2   {∅, 1, 2, {1, 2}} -> 4   {1, {1}, {1, {1}}} -> 3   {∅, {∅}, {∅, {∅}}} -> 3
+         a member that is itself a set still counts once; braces inside braces do not open.
+   1.2.3 P(∅) has 1 member; P({∅}) has 2; P({∅, {∅}}) has 4;  n(A) = 10 gives 2^10 = 1024, n(A) = 100 gives 2^100 = 1267650600228229401496703205376
+   BANANA: the set of its letters is ['A', 'B', 'N'], 3 members, not 6
+   Ex.20 40 students, 22 badminton, 11 both, 16 neither -> table tennis only: build the sets and count: 2
+         check: n(U) = 40, n(B) = 22, n(B ∩ T) = 11, n(neither) = 16; formula n(T) = n(U) − n(neither) − n(B) + n(B ∩ T) = 13
+   Ex.21 120 students, 92 language, 46 maths, all teach something -> both: 18 = 92 + 46 − 120; exactly one: 102 = 92 + 46 − 2·18
+   Ex.22 100 students, 70 physics, 60 chemistry: n(P ∪ C) = 130 − n(P ∩ C) and n(P ∪ C) ≤ 100,
+         so n(P ∩ C) ≥ 30 (least both) and, with C ⊆ P, n(P ∪ C) = 70 so neither ≤ 30 (most neither)
+   1.3.10 100 students: E 60, G 50, S 35, EG 40, GS 30, ES 25, all three 25. Build 8 regions, then count:
+         sizes rebuilt: n(E) = 60, n(G) = 50, n(S) = 35, n(E ∩ G) = 40, n(G ∩ S) = 30, n(E ∩ S) = 25, all three 25
+         at least two: 45   at most one: 55   none: 25
+         n(E ∪ G ∪ S) by inclusion–exclusion = 60 + 50 + 35 − (40 + 30 + 25) + 25 = 75; counted: 75
+   1.3.9 56 certificates, 17 + 28 + 25 = 70 awards, 4 students with all three: pairs sum to 70 + 4 − 56 = 18,
+         exactly two = 18 − 3·4 = 6  (each triple student sits in three of the pair counts)

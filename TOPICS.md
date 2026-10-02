@@ -121,6 +121,9 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - [If A then B: converse, contrapositive and inverse](11_Logic/converse_and_contrapositive/README.md) — implication, hypothesis, conclusion, truth table, converse, inverse, contrapositive, if and only if, counterexample, affirming the consequent
         - [Truth tables and the laws of logic](11_Logic/truth_tables_and_laws/README.md) — ¬ ∧ ∨ → ↔, tautology, contradiction, logical equivalence, ↔ versus ⇔, De Morgan, distributive, contrapositive, → does not associate, a misprint caught by one row
         - [Predicates and quantifiers](11_Logic/predicates_and_quantifiers/README.md) — predicate, universe of discourse, ∀ ∃ as loops, bounded quantifiers, interchange, negation flips a quantifier, distribution, ∃!
+        - [Induction](11_Logic/induction/README.md) — base case, induction hypothesis, inductive step, well-ordering principle, least counterexample, proof by contradiction, the all-cars proof, Fibonacci, Binet's formula, 2ⁿ subsets, chocolate bar, invariant, closed form, sigma notation
+        - ↪ [Infinity](13_Axioms_of_Set_Theory/infinity/README.md) — the inductive set that makes induction a sentence about ℕ
+        - ↪ [Ordinals](13_Axioms_of_Set_Theory/ordinals/README.md) — well-ordering past ℕ, and a theorem induction on ℕ cannot prove
         - ↪ [Reading a formula](13_Axioms_of_Set_Theory/reading_a_formula/README.md) — the same symbols inside the axioms of set theory, evaluated on a small universe
         - ↪ [The Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md) — a theorem whose converse is also true
         - ↪ [A definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md) — a definition as an "if and only if"

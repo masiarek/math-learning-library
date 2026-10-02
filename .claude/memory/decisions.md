@@ -2,6 +2,8 @@
 
 Dated log, newest first. Each line: the decision, and why.
 
+- 2026-10-02 — `set_katas` gets its own Anki deck, built from the summary page of an Indian Class 11 textbook the owner sent, plus the page's traps and word problems; the owner asked whether that book would make good cards. School-textbook exercises go to `set_katas` (section 6: ∈ vs ⊆, nested sets, Venn-region counting), not to new pages.
+- 2026-10-02 — New lesson `11_Logic/induction`, from Ashlock's chapter 2 (pages sent as photos): the owner asked "anything new or worth keeping", and induction was the one topic the library lacked entirely. Smaller keepers from the same pages went into `set_katas` (section 5), the algebra-of-sets false-law search (△ over ∪), the relations page (two meanings of "range") and the glossary.
 - 2026-10-02 — Sub-pages for the rows of two tables, at the owner's "create subpages and add links": `04_Sets/algebra_of_sets/laws/<law>/` (ten) and `06_Algebraic_Structures/laws_of_an_operation/structures/<name>/` (four), each with a program. They sit below a lesson, so the topic-map check does not see them; they are listed on the parent lesson's TOPICS line instead. Generated from a script kept in the session scratchpad, not in the repo.
 - 2026-10-02 — Quiz questions the owner screenshots go into the `set_katas` page's quiz table with the answer, the reason and a computed check; the Math is Fun universal-set wording was checked against a screenshot and found right.
 - 2026-10-02 — `04_Sets/function_katas`: Hrbacek and Jech's exercises on functions with written solutions, at the owner's "add solutions". Solutions pages are allowed when the owner asks; each solution names its move, and the program still checks every claim.

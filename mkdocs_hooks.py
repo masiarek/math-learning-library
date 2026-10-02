@@ -176,6 +176,7 @@ NAV_ORDER: dict[str, list[str]] = {
         "converse_and_contrapositive",
         "truth_tables_and_laws",
         "predicates_and_quantifiers",
+        "induction",
     ],
     # The axioms of ZF one page each, in the order the books state them,
     # after a page that decodes the formal language; then ordinals and katas.

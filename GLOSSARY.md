@@ -52,7 +52,11 @@ Terms used across the library, with the page that explains each in full.
 
 **Class** — a collection given by a formula, {x : F[x]}, which may or may not be a set. The class of all sets and the class of ordinals are **proper classes**, not sets; comprehension says a class cut down to a set is a set. See [comprehension](13_Axioms_of_Set_Theory/comprehension/README.md).
 
+**Closed form** — a formula for a sum or sequence with no Σ and no "…": 1 + 2 + ⋯ + n = n(n + 1)/2. Found by guessing and proved by induction. See [induction](11_Logic/induction/README.md).
+
 **Closed under an operation** — a subset is closed under an operation when applying it to members of the subset always gives a member of the subset. The line y = 2x is closed under + and scaling; the half-plane x ≥ 0 is not closed under scaling by −1. See [subsets inherit the laws](06_Algebraic_Structures/subsets_inherit_the_laws/README.md).
+
+**Codomain, image, range** — for f : S → T, the codomain is T, the image is the set of values actually taken, and "range" means the image in this library and in Jech but the codomain in many calculus and computer-science books. Surjective means image = codomain. See [relations and functions](04_Sets/relations_and_functions/README.md#the-three-words).
 
 **Coefficient** — a fixed number standing in front of a variable in a linear combination: in 40h + 15c the coefficients are 40 and 15. In a system, aᵢ,ⱼ is the coefficient in equation i in front of variable j. Zero is allowed. See [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md).
 
@@ -154,6 +158,10 @@ Terms used across the library, with the page that explains each in full.
 
 **If and only if** — A ⇔ B: "if A then B" and its converse both hold, so A and B are always true together. Every definition is one; the Pythagorean theorem with its converse is one. See [if A then B](11_Logic/converse_and_contrapositive/README.md).
 
+**Inclusion–exclusion** — |S ∪ T| = |S| + |T| − |S ∩ T|: the overlap was counted twice, so subtract it once. See [set katas](04_Sets/set_katas/README.md#from-ashlocks-problem-set).
+
+**Induction (mathematical)** — a proof of P(n) for every natural number n from a base case P(0) and a step, P(n) implies P(n + 1). Valid because of the well-ordering principle: a failure would have a least case m, and the step from m − 1 forbids it. See [induction](11_Logic/induction/README.md).
+
 **Inductive set** — a set containing ∅ and, with each member x, its successor x ∪ {x}. The axiom of infinity says one exists; ω, the natural numbers, is the smallest. See [infinity](13_Axioms_of_Set_Theory/infinity/README.md).
 
 **Injective (one-to-one)** — a function in which different inputs always give different outputs: f(a) = f(b) forces a = b, so no two arrows land on the same target. Latin *in-icere*, to throw in. "One-to-one" means this, not bijective. See [relations and functions](04_Sets/relations_and_functions/README.md#the-three-words).
@@ -215,6 +223,8 @@ Terms used across the library, with the page that explains each in full.
 **Partition** — a collection of nonempty, pairwise disjoint blocks whose union is the whole set; the same thing as an equivalence relation, seen as blocks instead of pairs. A set of n members has a Bell number of them: 1, 2, 5, 15, 52, …. See [equivalence relations and partitions](04_Sets/equivalence_and_partitions/README.md).
 
 **Percentile** — the p-th percentile is the value with p% of the data below it. "p% of people are at or above c" says exactly that c is the (100 − p)-th percentile, and nothing else. See [a share above a cutoff](05_Statistics/share_above_a_cutoff/README.md).
+
+**Permutation** — a bijection of a finite set with itself, a rearrangement; a set of n members has n! of them, and they form a group under composition, not commutative from n = 3. See [group](06_Algebraic_Structures/laws_of_an_operation/structures/group/README.md).
 
 **Point-slope form** — y − y₁ = m(x − x₁), the line through (x₁, y₁) with slope m; the form to write first. See [lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md).
 
@@ -334,7 +344,7 @@ Terms used across the library, with the page that explains each in full.
 
 **Venn diagram** — sets drawn as circles inside a rectangle that stands for the universal set U. n circles make 2ⁿ regions, one per pattern of membership, and every set operation is a choice of regions; a circle inside another draws A ⊆ B, two circles apart draw disjoint sets, and the rectangle outside a circle is its complement. See [the algebra of sets](04_Sets/algebra_of_sets/README.md).
 
-**Well-ordering** — a total order in which every nonempty subset has a least member, so every descent is finite; ℕ is one, ℤ and ℚ are not. Every set can be well-ordered exactly when the axiom of choice holds. See [ordinals](13_Axioms_of_Set_Theory/ordinals/README.md).
+**Well-ordering** — a total order in which every nonempty subset has a least member, so every descent is finite; ℕ is one, ℤ and ℚ are not. The **well-ordering principle** for ℕ is what makes [induction](11_Logic/induction/README.md) valid. Every set can be well-ordered exactly when the axiom of choice holds. See [ordinals](13_Axioms_of_Set_Theory/ordinals/README.md).
 
 **Zero divisor** — a nonzero number that multiplies some other nonzero number to give zero. Multiplying pairs entry by entry creates them, since (1, 0)(0, 1) = (0, 0), and a zero divisor can never be divided by. Complex multiplication has none: the product's x² + y² is the product of the two factors' x² + y², which is zero only when a factor is (0, 0). See [multiplication can be undone](03_Complex_Numbers/multiplication_can_be_undone/README.md).
 

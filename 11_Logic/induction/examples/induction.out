@@ -1,0 +1,54 @@
+1. THE TWO CHECKS, RUN ON A RANGE:  1 + 2 + ... + n = n(n + 1)/2
+   base case P(1): True
+   step: n(n+1)/2 + (n+1) == (n+1)(n+2)/2 for n = 0..199: True
+   and P(n) itself for n = 1..200: True
+   The range is evidence. The proof is the algebra of the step, which
+   holds for the letter n, not for 200 values of it.
+
+2. WHY IT WORKS: A FALSE CLAIM HAS A LEAST COUNTEREXAMPLE, A STEP FORBIDS ONE
+   claim: n² + n + 41 is prime for every n.  true for n = 0..39, and
+   the least counterexample is n = 40: 40² + 40 + 41 = 1681 = 41 · 41.
+   so the step P(39) → P(40) is false: there is no proof of it to find.
+   Well-ordering: every nonempty set of natural numbers has a least member.
+   If the set of failures were nonempty it would have a least member m;
+   m ≠ 0 by the base case, so P(m − 1) holds and the step gives P(m):
+   contradiction. So the set of failures is empty. That is the whole proof
+   that induction is a valid method.
+
+3. WHERE THE 'ALL CARS ARE THE SAME COLOUR' PROOF BREAKS
+   the step: in a set of n + 1 cars, {1..n} and {2..n+1} each have n cars,
+   so each is one colour by hypothesis, and they overlap, so the colours agree.
+   n = 1: [1] and [2] overlap in ∅   <- no overlap: the step from 1 car to 2 fails
+   n = 2: [1, 2] and [2, 3] overlap in [2]
+   n = 3: [1, 2, 3] and [2, 3, 4] overlap in [2, 3]
+   n = 4: [1, 2, 3, 4] and [2, 3, 4, 5] overlap in [2, 3, 4]
+   The base case is fine and the step is fine for n ≥ 2; it is false for
+   n = 1, and one missing rung is enough. Every car after that stands on it.
+
+4. FIBONACCI: f(3n) EVEN, f(4n) DIVISIBLE BY 3, f(5n) BY 5; BINET EXACTLY
+   f(3n) % 2 == 0 for n ≤ 30: True   f(4n) % 3 == 0: True   f(5n) % 5 == 0: True
+   the step for f(3n) even: f(3n+3) = f(3n+2) + f(3n+1) = 2 f(3n+1) + f(3n), even + even.
+   Binet, computed in a + b√5 with exact fractions: f(30) = 832040 + 0√5  (the √5 part cancels)
+   f(30) by addition: 832040   equal: True
+   f(n) is the integer nearest φⁿ/√5 for n = 2..59: True   (|ψ|ⁿ/√5 < 1/2 from n = 2)
+
+5. A SET OF n MEMBERS HAS 2ⁿ SUBSETS: THE PAIRING STEP, COUNTED
+   n = 1:  2 subsets = 1 containing 1 + 1 not = 2 · 2^0
+   n = 2:  4 subsets = 2 containing 2 + 2 not = 2 · 2^1
+   n = 3:  8 subsets = 4 containing 3 + 4 not = 2 · 2^2
+   n = 4: 16 subsets = 8 containing 4 + 8 not = 2 · 2^3
+   n = 5: 32 subsets = 16 containing 5 + 16 not = 2 · 2^4
+   each subset without x pairs with one subset with x (add x), so the two
+   halves are equal, and 2^n = 2 · 2^(n-1) is the step.
+
+6. THE CHOCOLATE BAR: n × m SQUARES NEED nm − 1 BREAKS, IN ANY ORDER
+   6 × 4, split the largest piece  breaks: 23
+   6 × 4, split the first piece    breaks: 23
+   invariant: every break turns one piece into two, so pieces = breaks + 1,
+   and 24 pieces need 23 breaks whatever the order. That invariant is the
+   induction: P(k) = 'k squares need k − 1 breaks', and a break splits k into
+   a + b with (a − 1) + (b − 1) + 1 = k − 1.
+
+7. CLOSED FORMS, CHECKED, AND ONE DERIVED FROM THREE
+   Σi = n(n+1)/2: True   Σi² = n(n+1)(2n+1)/6: True   Σi³ = (n(n+1)/2)²: True
+   Σ(i² + 3i + 5) = n(n+1)(2n+1)/6 + 3n(n+1)/2 + 5n: True   (sigma is linear: Σ(f + g) = Σf + Σg)

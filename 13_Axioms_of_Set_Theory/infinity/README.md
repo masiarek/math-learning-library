@@ -20,7 +20,7 @@ The operation x ∪ {x} is the **successor**: the set x with x itself added as a
 
 **Everything infinite.** ℤ, ℚ and ℝ are built from ω by pairs, products and power sets; so are sequences, series, limits and every function of analysis. Without this axiom the universe V_ω of hereditarily finite sets satisfies every other axiom of ZFC, and in it there is no ℕ, let alone ℝ.
 
-**Induction.** A proof by induction is a proof that a set of numbers is inductive, hence contains ω, hence contains every number. The axiom is what makes "and so on" a theorem.
+**Induction.** A proof by induction is a proof that a set of numbers is inductive, hence contains ω, hence contains every number. The axiom is what makes "and so on" a theorem; [the induction lesson](../../11_Logic/induction/README.md) shows the method at work and why it is valid.
 
 ## What goes wrong without it
 
