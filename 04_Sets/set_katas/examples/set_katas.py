@@ -135,6 +135,48 @@ def main() -> None:
         agree = all(pred(x) == claim.contains(x) for x in grid)
         print(f"   {num} {text:<34} = {str(claim):<10} agrees on {len(grid)} sample points in [−5, 5]: {agree}")
     print("   The grid check is evidence, not proof: solving x² − 1 ≤ 3 is the kata.")
+    print()
+
+    print("4. QUIZ KATAS: SEVEN MULTIPLE-CHOICE QUESTIONS, COMPUTED")
+    N = range(1, 200)
+    mult = lambda k: frozenset(n for n in N if n % k == 0)
+    fac = lambda n: frozenset(d for d in range(1, n + 1) if n % d == 0)
+    is_prime = lambda n: n > 1 and all(n % d for d in range(2, n))
+    X, Y, Z = mult(3), mult(6), mult(9)
+    print("   Q1 X = multiples of 3, Y of 6, Z of 9 (within 1..199):")
+    for name, claim in [("A  X ⊂ Y", X < Y), ("B  X ⊂ Z", X < Z), ("C  Z ⊂ Y", Z < Y), ("D  Z ⊂ X", Z < X)]:
+        print(f"      {name}: {claim}")
+    print("      every multiple of 9 is a multiple of 3, because 3 | 9; and Y ⊂ X too, since 3 | 6.")
+    A, B = fac(6), frozenset(d for d in fac(6) if is_prime(d))
+    C_strict, C_loose, D = fac(6) - {1, 6}, fac(6) - {6}, fac(3)
+    print(f"   Q2 A = factors of 6 = {sorted(A)}, B = prime factors = {sorted(B)}, D = factors of 3 = {sorted(D)}")
+    print(f"      C = proper factors of 6: {sorted(C_strict)} if 1 is excluded (Math is Fun), {sorted(C_loose)} if only 6 is")
+    print(f"      A = B {A == B}   A = C {A == C_strict}   B = C {B == C_strict}   C = D {C_strict == D}   -> C, on the convention that excludes 1")
+    print("   Q3 which is the null set?")
+    cands = [("A  subsets of ∅", {frozenset()}), ("B  even primes", {n for n in range(2, 100) if is_prime(n) and n % 2 == 0}),
+             ("C  factors of 7", set(fac(7))), ("D  rational expressions for π", set())]
+    for name, s in cands:
+        print(f"      {name}: {sorted(s, key=str) if s else '∅'}   empty: {not s}")
+    print("      {∅} has one member, ∅ itself; π is irrational, so D.")
+    print(f"   Q4 subsets of {{a, b, c, d}}: 2^4 = {2 ** 4}   (each of 4 members in or out)")
+    print(f"   Q5 proper subsets of {{a, b, c, d, e}}: 2^5 − 1 = {2 ** 5 - 1}   (all subsets but the set itself)")
+    subsets3 = [frozenset(c) for r in range(4) for c in combinations((1, 2, 3), r)]
+    trans = all((not (a <= b and b <= c)) or a <= c for a in subsets3 for b in subsets3 for c in subsets3)
+    print(f"   Q6 A ⊆ B and B ⊆ C imply A ⊆ C, on all triples of subsets of {{1, 2, 3}}: {trans}   -> D; the other three fail e.g. A = ∅, B = C = {{1}}")
+    P5, Q25, R125 = fac(5), fac(25), fac(125)
+    print(f"   Q7 factors of 5, 25, 125: {sorted(P5)}, {sorted(Q25)}, {sorted(R125)}")
+    print(f"      P ⊂ Q {P5 < Q25}   Q ⊂ R {Q25 < R125}   R ⊂ P {R125 < P5}   P ⊂ R {P5 < R125}   -> C is the false one")
+    A8 = frozenset(n for n in range(10) if is_prime(n)); B8 = frozenset(n for n in range(10) if n % 2); C8 = frozenset(n for n in range(10) if n % 2 == 0)
+    print(f"   Q8 A = primes < 10 = {sorted(A8)}, B = odd < 10 = {sorted(B8)}, C = even < 10 = {sorted(C8)}")
+    claims = [("A ⊂ B", A8 < B8), ("B ⊂ A", B8 < A8), ("A ⊂ C", A8 < C8), ("C ⊂ A", C8 < A8), ("B ⊂ C", B8 < C8), ("C ⊂ B", C8 < B8)]
+    print("      " + "   ".join(f"{n} {v}" for n, v in claims) + f"   -> {sum(v for _, v in claims)} true: D, None; 2 is the prime that is not odd")
+    print("   Q9 which is infinite? whole numbers < 10: 10 of them; primes < 10: 4; factors of 10: 4;")
+    print("      integers < 10: 9, 8, 7, ..., 0, −1, −2, ... with no end -> C")
+    print(f"   Q10 factors of 12 = {sorted(fac(12))}; not a member: {[n for n in (3, 4, 5, 6) if n not in fac(12)]} -> C")
+    print("   Behind Q1, Q2, Q7 and Q10 is one fact of number theory read as sets:")
+    print("      a | b  iff  factors(a) ⊆ factors(b)  iff  multiples(b) ⊆ multiples(a)")
+    ok = all((b % a == 0) == (fac(a) <= fac(b)) == (mult(b) <= mult(a)) for a in range(1, 13) for b in range(1, 13))
+    print(f"      checked for all a, b in 1..12: {ok}")
 
 
 if __name__ == "__main__":

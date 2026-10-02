@@ -27,20 +27,20 @@ The universal set is not a set of everything, then, but the set of everything *u
 
 ## The laws, and why they are true
 
-Section 3 checks the standard list on every case: each law in one set on all 16 subsets of U, in two sets on all 256 pairs, in three sets on all 4,096 triples.
+Section 3 checks the standard list on every case: each law in one set on all 16 subsets of U, in two sets on all 256 pairs, in three sets on all 4,096 triples. Each law also has [a page of its own](laws/README.md), with why it is true, where it is used, the trap beside it, and a program.
 
 | Law | Sets | Logic |
 |---|---|---|
-| identity | A ∪ ∅ = A, A ∩ U = A | p ∨ false = p, p ∧ true = p |
-| domination | A ∪ U = U, A ∩ ∅ = ∅ | p ∨ true = true, p ∧ false = false |
-| idempotent | A ∪ A = A, A ∩ A = A | p ∨ p = p |
-| complement | A ∪ A′ = U, A ∩ A′ = ∅ | p ∨ ¬p = true, p ∧ ¬p = false |
-| double complement | (A′)′ = A | ¬¬p = p |
-| commutative, associative | A ∪ B = B ∪ A, … | p ∨ q = q ∨ p, … |
-| distributive | A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C), and with ∪ and ∩ swapped | p ∧ (q ∨ r) = (p ∧ q) ∨ (p ∧ r) |
-| absorption | A ∪ (A ∩ B) = A | p ∨ (p ∧ q) = p |
-| **De Morgan** | (A ∪ B)′ = A′ ∩ B′, (A ∩ B)′ = A′ ∪ B′ | ¬(p ∨ q) = ¬p ∧ ¬q |
-| difference | A ∖ B = A ∩ B′ | p ∧ ¬q |
+| [identity](laws/identity/README.md) | A ∪ ∅ = A, A ∩ U = A | p ∨ false = p, p ∧ true = p |
+| [domination](laws/domination/README.md) | A ∪ U = U, A ∩ ∅ = ∅ | p ∨ true = true, p ∧ false = false |
+| [idempotent](laws/idempotent/README.md) | A ∪ A = A, A ∩ A = A | p ∨ p = p |
+| [complement](laws/complement/README.md) | A ∪ A′ = U, A ∩ A′ = ∅ | p ∨ ¬p = true, p ∧ ¬p = false |
+| [double complement](laws/double_complement/README.md) | (A′)′ = A | ¬¬p = p |
+| [commutative, associative](laws/commutative_associative/README.md) | A ∪ B = B ∪ A, … | p ∨ q = q ∨ p, … |
+| [distributive](laws/distributive/README.md) | A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C), and with ∪ and ∩ swapped | p ∧ (q ∨ r) = (p ∧ q) ∨ (p ∧ r) |
+| [absorption](laws/absorption/README.md) | A ∪ (A ∩ B) = A | p ∨ (p ∧ q) = p |
+| [**De Morgan**](laws/de_morgan/README.md) | (A ∪ B)′ = A′ ∩ B′, (A ∩ B)′ = A′ ∪ B′ | ¬(p ∨ q) = ¬p ∧ ¬q |
+| [difference](laws/difference/README.md) | A ∖ B = A ∩ B′ | p ∧ ¬q |
 
 Why is checking one small universe enough? Because each law is decided member by member. Whether x is on the left side of De Morgan's law depends only on whether x ∈ A and whether x ∈ B, which is one of four cases, and the law is true in all four: that is its truth table. A universe of four members with all their subsets meets every combination of memberships there is, so the exhaustive check is a proof, not a sample. The same argument makes set algebra and the logic of *and*, *or* and *not* one structure, a **Boolean algebra**; the [laws of an operation](../../06_Algebraic_Structures/laws_of_an_operation/README.md) page lists what such lists of laws have in common.
 

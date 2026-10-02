@@ -28,6 +28,8 @@ First, the universe is not big enough. Take F to be x ∉ x. In V₄ no set is a
 
 Second, it contradicts itself. Suppose r = {x : x ∉ x} exists and ask whether r ∈ r. If it is, then by its own definition it is not; if it is not, then it qualifies, so it is. Section 3 writes the sentence r ∈ r ⇔ r ∉ r as a truth table with two rows and no true row. This is Russell's paradox, which [what is a set?](../../04_Sets/what_is_a_set/README.md) tells at length; here it is the reason the axiom carries its "x ∈ a". With it, {x ∈ a : x ∉ x} is just a, since nothing is its own member, and the question "is a a member of itself?" has the harmless answer no.
 
+One qualification, which the books mostly omit: "there is no set of all sets" is a theorem *of ZF*, a consequence of this way of restricting comprehension, not a fact about sets as such. Quine's New Foundations (1937) restricts comprehension differently, to *stratified* formulas, ones whose variables can be given levels so that x ∈ y always has y one level above x; x ∉ x cannot be stratified, so Russell's set is not asked for, while x = x can be, so a universal set V with V ∈ V exists. The [reading guide](../../reading_guides/set_theory/README.md#beyond-zfc-the-map-in-wikipedias-article) places NF among the other systems.
+
 ## What the program prints
 
 <!-- output:comprehension -->
