@@ -12,10 +12,10 @@ The moves, which the [axiom katas](../../13_Axioms_of_Set_Theory/axiom_katas/REA
 
 | Move | What it looks like | Katas |
 |---|---|---|
-| **Element chase** | "let x ∈ A ∖ (B ∖ C); then x ∈ A and x ∉ B ∖ C; so x ∉ B or x ∈ C; …" | 1 to 7, problem 5 |
-| **Unpack a negation** | x ∉ A ∖ B means x ∉ A or x ∈ B, by De Morgan | 1, 3, 7, problem 5 |
-| **Two inclusions** | an equality of sets is two ⊆ | 9, 11 |
-| **Solve, then describe** | a truth set is the solutions of a condition; name them | 8, 10, 12 |
+| **[Element chase](../../04_Sets/algebra_of_sets/README.md#one-question-per-member)** | "let x ∈ A ∖ (B ∖ C); then x ∈ A and x ∉ B ∖ C; so x ∉ B or x ∈ C; …" | 1 to 7, problem 5 |
+| **[Unpack a negation](../../04_Sets/algebra_of_sets/laws/de_morgan/README.md)** | x ∉ A ∖ B means x ∉ A or x ∈ B, by De Morgan | 1, 3, 7, problem 5 |
+| **[Two inclusions](../../13_Axioms_of_Set_Theory/extensionality/README.md#what-it-is-for)** | an equality of sets is two ⊆ | 9, 11 |
+| **[Solve, then describe](../../04_Sets/reading_set_expressions/README.md)** | a truth set is the solutions of a condition; name them | 8, 10, 12 |
 
 ## The katas
 
@@ -86,6 +86,22 @@ The owner sent chapter 1, *Sets*, of an Indian school textbook at Class 11 level
 | 100 students, E 60, G 50, S 35, EG 40, GS 30, ES 25, all three 25 | at least two 45, at most one 55, none 25 | n(E ∪ G ∪ S) = 145 − 95 + 25 = 75 |
 
 The program does not apply the formulas; it builds sets with the stated region sizes and counts, and then shows the formula giving the same number. That is the right order: n(A ∪ B) = n(A) + n(B) − n(A ∩ B) is a theorem about counting, and the Venn regions are its proof. The three-set version adds the triple overlap back because it was subtracted three times after being added three times.
+
+## Solution sets: Sullivan's "explaining concepts"
+
+The owner asked whether the library has the term **solution set** (now in the [glossary](../../GLOSSARY.md#solution-set): the set of every value that makes an equation or inequality true, which is set-builder notation with the equation as the test) and sent problems 39 to 43 of section 3.5 of Sullivan's *Precalculus*, which are about nothing else. Section 7 of the program checks each on a grid of rationals from −10 to 10 before the one-line proofs.
+
+| Kata | Answer | Why |
+|---|---|---|
+| 39 (x − 4)² ≤ 0 has exactly one solution | {4} | a square is ≥ 0, so ≤ 0 forces (x − 4)² = 0, so x = 4; the solution set has one member |
+| 40 (x − 2)² > 0 has one real that is not a solution | ℝ ∖ {2} | the square is positive except where it is 0, which is x = 2 alone |
+| 41 x² + x + 1 > 0 has all reals as its solution set | (−∞, ∞) | the discriminant 1 − 4 = −3 is negative, so the parabola has no x-intercept, and it opens up, so it stays above the axis; or complete the square, (x + ½)² + ¾ ≥ ¾ > 0 |
+| 42 x² − x + 1 < 0 has the empty set as its solution set | ∅ | the same parabola mirrored: (x − ½)² + ¾ ≥ ¾, never below 0, so no x passes the test and the solution set is ∅ |
+| 43 when are the x-intercepts in the solution set of a quadratic inequality? | for ≤ and ≥, never for < and > | at an x-intercept the quadratic equals 0, which satisfies ≤ 0 and ≥ 0 and fails < 0 and > 0; the program checks (x − 1)(x − 3) at x = 1 and 3 |
+
+A symbol table the owner sent next (the RapidTables one, by its look) defines ⊆ as "subset has fewer elements or equal to the set", and ⊂, ⊇ and ⊃ the same way by counting. That is the one mistake in it, and it is the kata's favourite: {1} has fewer elements than {2, 3} and is not a subset of it. Section 8 of the program counts, over all 64 pairs of subsets of {1, 2, 3}, how often |A| ≤ |B| holds (42 pairs) and how often A ⊆ B holds (27), and finds the 27 inside the 42: a subset never has more members, but having no more members is not being a subset. The rest of that table is right, including A ∆ B = {1, 2, 9, 14} for A = {3, 9, 14} and B = {1, 2, 3}; its Aᶜ needs a universal set it does not mention, and its ⊂ is the proper subset, which is one convention of two, as the [glossary's table](../../GLOSSARY.md#symbols) says.
+
+Two of the five, 41 and 42, are the lesson: a solution set can be everything or nothing, and "no solution" is not a failure of the method but a set, ∅. A grid of points refutes "all" or "empty" with one counterexample and never proves them; the proofs are the sign of a square and the discriminant.
 
 ## Flashcards
 
@@ -202,12 +218,30 @@ The textbook's summary and these katas as a deck of Anki cards: [`set_katas.txt`
          n(E ∪ G ∪ S) by inclusion–exclusion = 60 + 50 + 35 − (40 + 30 + 25) + 25 = 75; counted: 75
    1.3.9 56 certificates, 17 + 28 + 25 = 70 awards, 4 students with all three: pairs sum to 70 + 4 − 56 = 18,
          exactly two = 18 − 3·4 = 6  (each triple student sits in three of the pair counts)
+
+7. SOLUTION SETS: SULLIVAN 3.5, PROBLEMS 39 TO 43, ON A GRID OF RATIONALS
+   39 (x − 4)² ≤ 0 has exactly one solution       on 81 points: 1 solutions; solutions: 4
+   40 (x − 2)² > 0 misses exactly one real        on 81 points: 80 solutions; non-solutions: 2
+   41 x² + x + 1 > 0 for every real               on 81 points: 81 solutions; non-solutions: none
+   42 x² − x + 1 < 0 has empty solution set       on 81 points: 0 solutions; solutions: none
+   43 x-intercepts of y = (x − 1)(x − 3) in the solution set? (x − 1)(x − 3) ≤ 0: True   (x − 1)(x − 3) < 0: False
+   A grid refutes 'empty' or 'all' with one point and never proves them; the
+   proofs are one line each: a square is never negative, and the discriminant
+   of x² ± x + 1 is 1 − 4 < 0, so the parabola, opening up, never meets the axis.
+
+8. A SYMBOL TABLE SAYS 'A ⊆ B: THE SUBSET HAS FEWER ELEMENTS OR EQUAL'. TEST IT.
+   pairs (A, B) of subsets of {1, 2, 3}: 64;  |A| ≤ |B|: 42;  A ⊆ B: 27;  A ⊆ B and |A| ≤ |B|: 27
+   A = {1}, B = {2, 3}: |A| ≤ |B| is True, A ⊆ B is False
+   Every subset has no more elements, but having no more elements is not being a
+   subset. ⊆ is about membership: every member of A is a member of B.
 ```
 <!-- /output -->
 
 ## Po polsku, w skrócie
 
 Zadania z końca pierwszego rozdziału o zbiorach mają jeden dowód: weź dowolny element i rozpakuj definicje ⊆, ∪, ∩ i ∖; i jeden sposób, by się pomylić: źle odczytać formułę. Program sprawdza każdą tezę o dowolnych zbiorach A, B, C na wszystkich 512 wyborach podzbiorów {1, 2, 3} (1 536 przypadków z elementem a), oblicza zbiory prawdziwości i przedziały dokładnie, z końcami wymiernymi, a tam, gdzie zadanie każe rozwiązać nierówność, sprawdza podany przedział na siatce punktów. True znaczy, że formuła została odczytana tak, jak chciał autor; False znaczy, że nie. Dowód pozostaje do zrobienia: ruchy to pogoń za elementem, rozpakowanie negacji (x ∉ A ∖ B to x ∉ A lub x ∈ B, prawo De Morgana), dwa zawierania dla równości i „rozwiąż, potem nazwij" dla zbiorów prawdziwości. Zadania pochodzą z podrozdziału 1.1 książki Cunninghama *Set Theory: A First Course*.
+
+Zbiór rozwiązań (ang. solution set) to zbiór wszystkich wartości spełniających równanie lub nierówność: dla (x − 4)² ≤ 0 jest to {4}, dla x² + x + 1 > 0 cały zbiór liczb rzeczywistych, a dla x² − x + 1 < 0 zbiór pusty, bo wyróżnik jest ujemny i parabola nie schodzi pod oś. Program sprawdza zadania 39–43 Sullivana na siatce ułamków, zanim przeczyta się dowody.
 
 ## Run it yourself
 
@@ -223,3 +257,5 @@ python3 04_Sets/set_katas/examples/set_katas.py
 - [Reading a set expression](../reading_set_expressions/README.md) — how to read A ∖ (B ∖ C) before chasing an element through it
 - [Axiom katas](../../13_Axioms_of_Set_Theory/axiom_katas/README.md) — the same idea for the axioms
 - [Set theory: a reading guide](../../reading_guides/set_theory/README.md) — Cunningham among the other books
+- [Graphs of equations: intercepts and symmetry](../../08_Analytic_Geometry/graphs_intercepts_symmetry/README.md) — a graph is a solution set drawn
+- Michael Sullivan, *Precalculus* (Pearson), section 3.5, problems 39 to 43

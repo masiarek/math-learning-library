@@ -179,6 +179,102 @@ def main() -> None:
         print(f"     {name:<22} {str(refl):>9} {str(sym):>9} {str(trans):>10}   {note}")
     print("     A finite piece can refute a property, never confirm it; the page gives the arguments.")
 
+    print()
+    print("S1   SULLIVAN 2.1, PROBLEMS 19 TO 30: IS THE RELATION A FUNCTION?")
+    rels = [
+        ("19 person → birthday", {("Elvis", "Jan. 8"), ("Colleen", "Mar. 15"), ("Kaleigh", "Mar. 15"), ("Marissa", "Sept. 17")}),
+        ("20 father → daughter", {("Bob", "Beth"), ("Bob", "Diane"), ("John", "Linda"), ("Chuck", "Marcia")}),
+        ("21 education → income", {("< 9th", 18120), ("9th–12th", 23251), ("HS graduate", 36055), ("some college", 45810), ("college graduate", 67165)}),
+        ("22 hours → salary", {("20 h", 200), ("20 h", 300), ("30 h", 350), ("40 h", 425)}),
+        ("23", {(2, 6), (-3, 6), (4, 9), (2, 10)}),
+        ("24", {(-2, 5), (-1, 3), (3, 7), (4, 12)}),
+        ("25", {(0, -2), (1, 3), (2, 3), (3, 7)}),
+        ("26", {(1, 3), (2, 3), (3, 3), (4, 3)}),
+        ("27", {(-4, 4), (-3, 3), (-2, 2), (-1, 1), (-4, 0)}),
+        ("28", {(3, 3), (3, 5), (0, 1), (-4, 6)}),
+        ("29", {(-2, 16), (-1, 4), (0, 3), (1, 4)}),
+        ("30", {(-1, 8), (0, 3), (2, -1), (4, 3)}),
+    ]
+    for name, r in rels:
+        d, rn = sorted(map(str, dom(r))), sorted(ran(r), key=str)
+        why = ""
+        if not is_function(r):
+            rs = sorted(r, key=lambda pair: (str(pair[0]), str(pair[1])))
+            x = next(x for x, y in rs for x2, z in rs if x == x2 and y != z)
+            why = f"   {x} is paired twice"
+        print(f"     {name:<24} dom {len(d)}, ran {len(rn)}   function: {str(is_function(r)):<5}{why}")
+    print("     One test for a diagram and for a set of pairs: no first member twice.")
+    print()
+
+    print("S2   SULLIVAN 2.1, PROBLEMS 31 TO 42: DOES THE EQUATION DEFINE y AS A FUNCTION OF x?")
+    grid = [Fr(k, 4) for k in range(-16, 17)]
+
+    def solutions(eq, x):
+        return {y for y in grid if eq(x, y)}
+
+    eqs = [
+        ("31 y = x³", lambda x, y: y == x ** 3),
+        ("32 y = 2x² − 3x + 4", lambda x, y: y == 2 * x * x - 3 * x + 4),
+        ("33 y = |x|", lambda x, y: y == abs(x)),
+        ("34 y = 1/x", lambda x, y: x != 0 and y == 1 / x),
+        ("35 y = ±√(1 − 2x)", lambda x, y: y * y == 1 - 2 * x),
+        ("36 x² = 8 − y²", lambda x, y: x * x == 8 - y * y),
+        ("37 x = y²", lambda x, y: x == y * y),
+        ("38 x + y² = 1", lambda x, y: x + y * y == 1),
+        ("39 y = (3x − 1)/(x + 2)", lambda x, y: x != -2 and y == (3 * x - 1) / (x + 2)),
+        ("40 y = ∛x", lambda x, y: y ** 3 == x),
+        ("41 x² − 4y² = 1", lambda x, y: x * x - 4 * y * y == 1),
+        ("42 |y| = 2x + 3", lambda x, y: abs(y) == 2 * x + 3),
+    ]
+    for name, eq in eqs:
+        bad = next(((x, solutions(eq, x)) for x in grid if len(solutions(eq, x)) > 1), None)
+        if bad is None:
+            print(f"     {name:<24} every x on the grid has at most one y: a function of x")
+        else:
+            x, ys = bad
+            print(f"     {name:<24} x = {x} has y ∈ {{{', '.join(str(y) for y in sorted(ys))}}}: not a function of x")
+    print("     The grid is quarter-integers from −4 to 4; a second y refutes, a single y on")
+    print("     the grid is evidence, and the solutions say why it holds for every real x.")
+    print()
+
+    print("S3   SULLIVAN 2.1, EXAMPLE 9 AND PROBLEMS 51 TO 58: THE DOMAIN OF f DEFINED BY AN EQUATION")
+
+    def exists(f, x):
+        try:
+            v = f(x)
+        except ZeroDivisionError:
+            return False
+        except ValueError:
+            return False
+        return v is not None
+
+    def root(q):
+        if q < 0:
+            raise ValueError
+        return q  # only its existence matters here
+
+    cases = [
+        ("9(a) x² + 5x", lambda x: x * x + 5 * x, lambda x: True, "all reals"),
+        ("9(b) 3x/(x² − 4)", lambda x: 3 * x / (x * x - 4), lambda x: x not in (-2, 2), "x ≠ −2, x ≠ 2"),
+        ("9(c) √(4 − 3t)", lambda t: root(4 - 3 * t), lambda t: t <= Fr(4, 3), "t ≤ 4/3"),
+        ("9(d) √(3x + 12)/(x − 5)", lambda x: root(3 * x + 12) / (x - 5), lambda x: x >= -4 and x != 5, "x ≥ −4, x ≠ 5"),
+        ("51 x² + 2", lambda x: x * x + 2, lambda x: True, "all reals"),
+        ("52 −5x + 4", lambda x: -5 * x + 4, lambda x: True, "all reals"),
+        ("53 x²/(x² + 1)", lambda x: x * x / (x * x + 1), lambda x: True, "all reals: x² + 1 > 0"),
+        ("54 (x + 1)/(2x² + 8)", lambda x: (x + 1) / (2 * x * x + 8), lambda x: True, "all reals: 2x² + 8 > 0"),
+        ("55 x/(x² − 16)", lambda x: x / (x * x - 16), lambda x: x not in (-4, 4), "x ≠ −4, x ≠ 4"),
+        ("56 2x/(x² − 4)", lambda x: 2 * x / (x * x - 4), lambda x: x not in (-2, 2), "x ≠ −2, x ≠ 2"),
+        ("57 (x + 4)/(x³ − 4x)", lambda x: (x + 4) / (x ** 3 - 4 * x), lambda x: x not in (-2, 0, 2), "x ≠ −2, 0, 2"),
+        ("58 (x − 2)/(x³ + x)", lambda x: (x - 2) / (x ** 3 + x), lambda x: x != 0, "x ≠ 0: x² + 1 > 0"),
+    ]
+    probe = [Fr(k, 3) for k in range(-18, 19)] + [Fr(-4), Fr(4, 3), Fr(5)]
+    for name, f, claimed, words in cases:
+        agree = all(exists(f, x) == claimed(x) for x in probe)
+        excluded = sorted({x for x in probe if not exists(f, x)})
+        shown = ", ".join(str(x) for x in excluded) if excluded else "none"
+        print(f"     {name:<26} {words:<24} f(x) exists iff claimed, on {len(probe)} points: {agree}   excluded: {shown}")
+    print("     Two reasons only, as the book's box says: a zero denominator and a negative radicand.")
+
 
 def is_square(q: Fr) -> bool:
     n, d = q.numerator, q.denominator

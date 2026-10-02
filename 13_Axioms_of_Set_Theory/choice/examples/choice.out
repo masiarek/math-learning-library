@@ -36,3 +36,33 @@
    Cohen 1963             AC cannot be proved from ZF either
    The first three are equivalent to the axiom over ZF, not consequences
    of it: assume any one and you have assumed choice.
+
+6. THE EQUIVALENT FORMS, ON A FINITE SET WHERE EACH IS A THEOREM
+   the divisors of 12 under 'divides': chains: 31, every chain has an
+   upper bound: True; maximal elements: [12]   (Zorn's lemma holds)
+   antichains: 9; maximal antichains: 5, e.g. (1,) and (4, 6)   (Kurepa's principle holds)
+   the 7 nonzero vectors of GF(2)³: linearly independent subsets: 57;
+   the family has finite character: True; maximal members: 28,
+   all of size {3}: the bases   (Teichmüller's principle holds)
+   generating sets: 28; each contains a basis: True   (downward basis principle holds)
+   well-orderings of a 4-set: 24, the orderings of its
+   members in a row   (well-ordering principle holds)
+   On a finite set every form is a theorem. Halbeisen's chapter 6 proves that on
+   arbitrary sets each is equivalent to the axiom: AC ⇔ Zorn ⇔ Teichmüller ⇔
+   downward basis ⇔ well-ordering ⇔ trichotomy of cardinals ⇔ m² = m, and, with
+   foundation, ⇔ Kurepa ⇔ every vector space has a basis ⇔ multiple choice.
+
+7. A BOOLEAN ALGEBRA, WHERE THE WEAKER FORM LIVES
+   commutativity    on all 512 triples of subsets of {1, 2, 3}: True
+   associativity    on all 512 triples of subsets of {1, 2, 3}: True
+   distributivity   on all 512 triples of subsets of {1, 2, 3}: True
+   absorption       on all 512 triples of subsets of {1, 2, 3}: True
+   complementation  on all 512 triples of subsets of {1, 2, 3}: True
+   De Morgan        on all 512 triples of subsets of {1, 2, 3}: True
+   ideals of this algebra (down-closed, closed under ∪): 8; prime ideals: 3:
+      the sets avoiding 3, 4 of them
+      the sets avoiding 2, 4 of them
+      the sets avoiding 1, 4 of them
+   The prime ideal theorem, 'every Boolean algebra has a prime ideal', follows
+   from choice and is strictly weaker than it (Halpern and Lévy 1971): the
+   first of the weaker forms, with countable choice and dependent choice.

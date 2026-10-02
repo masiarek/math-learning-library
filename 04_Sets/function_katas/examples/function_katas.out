@@ -47,3 +47,49 @@
      (e) ∅ in ∅                  True      True       True   all three hold vacuously: no element to fail them
      (f) ∅ in {1, 2}            False      True       True   1 is not related to 1, so not reflexive; the other two are vacuous
      A finite piece can refute a property, never confirm it; the page gives the arguments.
+
+S1   SULLIVAN 2.1, PROBLEMS 19 TO 30: IS THE RELATION A FUNCTION?
+     19 person → birthday     dom 4, ran 3   function: True 
+     20 father → daughter     dom 3, ran 4   function: False   Bob is paired twice
+     21 education → income    dom 5, ran 5   function: True 
+     22 hours → salary        dom 3, ran 4   function: False   20 h is paired twice
+     23                       dom 3, ran 3   function: False   2 is paired twice
+     24                       dom 4, ran 4   function: True 
+     25                       dom 4, ran 3   function: True 
+     26                       dom 4, ran 1   function: True 
+     27                       dom 4, ran 5   function: False   -4 is paired twice
+     28                       dom 3, ran 4   function: False   3 is paired twice
+     29                       dom 4, ran 3   function: True 
+     30                       dom 4, ran 3   function: True 
+     One test for a diagram and for a set of pairs: no first member twice.
+
+S2   SULLIVAN 2.1, PROBLEMS 31 TO 42: DOES THE EQUATION DEFINE y AS A FUNCTION OF x?
+     31 y = x³                every x on the grid has at most one y: a function of x
+     32 y = 2x² − 3x + 4      every x on the grid has at most one y: a function of x
+     33 y = |x|               every x on the grid has at most one y: a function of x
+     34 y = 1/x               every x on the grid has at most one y: a function of x
+     35 y = ±√(1 − 2x)        x = -4 has y ∈ {-3, 3}: not a function of x
+     36 x² = 8 − y²           x = -2 has y ∈ {-2, 2}: not a function of x
+     37 x = y²                x = 1/4 has y ∈ {-1/2, 1/2}: not a function of x
+     38 x + y² = 1            x = -3 has y ∈ {-2, 2}: not a function of x
+     39 y = (3x − 1)/(x + 2)  every x on the grid has at most one y: a function of x
+     40 y = ∛x                every x on the grid has at most one y: a function of x
+     41 x² − 4y² = 1          every x on the grid has at most one y: a function of x
+     42 |y| = 2x + 3          x = -5/4 has y ∈ {-1/2, 1/2}: not a function of x
+     The grid is quarter-integers from −4 to 4; a second y refutes, a single y on
+     the grid is evidence, and the solutions say why it holds for every real x.
+
+S3   SULLIVAN 2.1, EXAMPLE 9 AND PROBLEMS 51 TO 58: THE DOMAIN OF f DEFINED BY AN EQUATION
+     9(a) x² + 5x               all reals                f(x) exists iff claimed, on 40 points: True   excluded: none
+     9(b) 3x/(x² − 4)           x ≠ −2, x ≠ 2            f(x) exists iff claimed, on 40 points: True   excluded: -2, 2
+     9(c) √(4 − 3t)             t ≤ 4/3                  f(x) exists iff claimed, on 40 points: True   excluded: 5/3, 2, 7/3, 8/3, 3, 10/3, 11/3, 4, 13/3, 14/3, 5, 16/3, 17/3, 6
+     9(d) √(3x + 12)/(x − 5)    x ≥ −4, x ≠ 5            f(x) exists iff claimed, on 40 points: True   excluded: -6, -17/3, -16/3, -5, -14/3, -13/3, 5
+     51 x² + 2                  all reals                f(x) exists iff claimed, on 40 points: True   excluded: none
+     52 −5x + 4                 all reals                f(x) exists iff claimed, on 40 points: True   excluded: none
+     53 x²/(x² + 1)             all reals: x² + 1 > 0    f(x) exists iff claimed, on 40 points: True   excluded: none
+     54 (x + 1)/(2x² + 8)       all reals: 2x² + 8 > 0   f(x) exists iff claimed, on 40 points: True   excluded: none
+     55 x/(x² − 16)             x ≠ −4, x ≠ 4            f(x) exists iff claimed, on 40 points: True   excluded: -4, 4
+     56 2x/(x² − 4)             x ≠ −2, x ≠ 2            f(x) exists iff claimed, on 40 points: True   excluded: -2, 2
+     57 (x + 4)/(x³ − 4x)       x ≠ −2, 0, 2             f(x) exists iff claimed, on 40 points: True   excluded: -2, 0, 2
+     58 (x − 2)/(x³ + x)        x ≠ 0: x² + 1 > 0        f(x) exists iff claimed, on 40 points: True   excluded: 0
+     Two reasons only, as the book's box says: a zero denominator and a negative radicand.

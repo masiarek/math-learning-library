@@ -37,6 +37,14 @@ Take x² + y² + 4x − 6y + 12 = 0.
 
 Center (−2, 3), radius 1. Change the 12 to 13 and the right side becomes 0: only the point (−2, 3). Change it to 14 and the right side is −1: no points. The program runs all three.
 
+## How can a continuous thing be a set?
+
+The definition says a circle *is* a set of points, and the owner's objection is fair: a circle looks like one continuous thing, and a set sounds like a bag of separate things. The answer is in two parts, and the program's section 8 runs both.
+
+First, "set of points" means membership by test, exactly as in [what is a set?](../../04_Sets/what_is_a_set/README.md). The unit circle is {(x, y) : x² + y² = 1}, a set-builder expression, and a point is in it or not according to whether its coordinates pass the test: (3/5, 4/5) passes, (1/2, 1/2) fails. Nothing is drawn; the circle is the collection of every pair that passes. That is the whole content of Sullivan's sentence, and it is why one coordinate system turns geometric statements into algebraic ones: a figure is the solution set of its equation.
+
+Second, "continuous" is a property of that set, not something a set lacks. Between any two points of the circle there is a third (the program bisects the parameter five times and finds a new point each time, with exact fractions), so no point has a next point and there are no gaps; every limit of points of the circle is still on it; and the set is one piece, in that it cannot be split into two nonempty parts neither of which comes arbitrarily close to the other. Each of these is a sentence about which points are members, which is all a set is. The dense rational points, one for every fraction t, show the set is not a finite list of dots, and the real parameter t shows it is [uncountable](../../04_Sets/cardinality/README.md), with as many points as an interval. The idea that a line is a set of points, with its continuity captured by a property of the set, was Dedekind's in 1872, and it is the moment geometry became part of set theory; the [reading guide](../../reading_guides/set_theory/README.md#set-theory-among-the-branches-of-mathematics) places it among the branches. What a set of points can do once it is only a set, and no longer a shape, is the subject of [two balls from one](../../13_Axioms_of_Set_Theory/two_balls_from_one/README.md).
+
 ## What the program prints
 
 The picture marks every whole-number point exactly 5 from the origin. There are twelve, and each is the corner of a 3-4-5 (or 0-5-5) right triangle, which is the [Pythagorean theorem](../../10_Geometry/pythagorean_theorem/README.md) again. Inside, on, or outside is decided by comparing the squared distance with r², with no square roots.
@@ -109,6 +117,27 @@ The picture marks every whole-number point exactly 5 from the origin. There are 
    (    0,    -1):  x^2 + y^2 = 1
    Every Pythagorean triple a, b, c gives the point (a/c, b/c) on it.
    Trigonometry will name its points (cos t, sin t).
+
+8. A CIRCLE IS A SET OF POINTS, AND A CONTINUOUS ONE
+   membership is a test, like any set builder: (x, y) ∈ circle iff x^2 + y^2 = 1
+      (3/5, 4/5) ∈ unit circle: True
+      (1/2, 1/2) ∈ unit circle: False
+      (0, 1) ∈ unit circle: True
+   a rational point for every fraction t: ((1 - t^2)/(1 + t^2), 2t/(1 + t^2))
+      13 distinct points with t = m/n, n ≤ 6, all on the circle: True
+   between any two points of the circle there is a third, so no point has a
+   next point; the fractions t do that on their own:
+      t = 1/2: x = 3/5 lies between the x's for t = 0 and t = 1
+      t = 1/4: x = 15/17 lies between the x's for t = 0 and t = 1/2
+      t = 1/8: x = 63/65 lies between the x's for t = 0 and t = 1/4
+      t = 1/16: x = 255/257 lies between the x's for t = 0 and t = 1/8
+      t = 1/32: x = 1023/1025 lies between the x's for t = 0 and t = 1/16
+   'Continuous' is not a feeling about the drawing but two facts about the set:
+   no gaps (between any two points a third, as above, and every limit of points
+   of the circle is on the circle) and one piece (it cannot be split into two
+   nonempty parts with no point of either touching the other). Both are
+   statements about which points are members. The set is uncountable: t runs
+   through all reals in [0, 1] and so cannot be listed (see cardinality).
 ```
 <!-- /output -->
 
@@ -238,9 +267,14 @@ Okrąg to zbiór punktów odległych o r od środka (h, k). Wzór na odległoś�
 
 Po wymnożeniu dostajemy postać ogólną x² + y² + ax + by + c = 0, w której środka i promienia nie widać. Odzyskuje się je, uzupełniając do kwadratu: do x² + ax dodajemy (a/2)², do obu stron równania. Jeśli po prawej wyjdzie liczba dodatnia, to okrąg; zero, to jeden punkt; ujemna, to nic, bo suma kwadratów nie jest ujemna. Gdy przy x² i y² stoi ta sama liczba różna od 1, najpierw przez nią dzielimy; gdy różne liczby, to nie okrąg, tylko elipsa. Program rozstrzyga to dokładnie dla dowolnych współczynników.
 
+Jak coś ciągłego może być zbiorem? Okrąg to zbiór par (x, y), które przechodzą test x² + y² = 1; ciągłość nie jest cechą rysunku, lecz tego zbioru: między każdymi dwoma punktami leży trzeci, każda granica punktów okręgu leży na okręgu, i zbiór jest jednym kawałkiem. Program sprawdza to na dokładnych ułamkach: dla każdego t = m/n punkt ((1 − t²)/(1 + t²), 2t/(1 + t²)) leży na okręgu, a dzielenie t na pół daje wciąż nowe punkty. Punktów jest nieprzeliczalnie wiele, tyle co liczb rzeczywistych w przedziale.
+
 ## See also
 
 - [The distance formula](../distance_formula/README.md) — the equation of a circle is it, held fixed
+- [What is a set?](../../04_Sets/what_is_a_set/README.md) — membership by test, which is what "a set of points" means
+- [Cardinality of sets](../../04_Sets/cardinality/README.md) — why the points of a circle cannot be listed
+- [Two balls from one](../../13_Axioms_of_Set_Theory/two_balls_from_one/README.md) — what sets of points can do once they are only sets
 - [The midpoint formula](../midpoint_formula/README.md) — the center from the ends of a diameter
 - [The Pythagorean theorem and its converse](../../10_Geometry/pythagorean_theorem/README.md) — the twelve whole-number points on x² + y² = 25
 - [Area and volume formulas](../../10_Geometry/area_and_volume_formulas/README.md) — the circle's area and circumference

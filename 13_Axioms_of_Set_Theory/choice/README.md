@@ -26,6 +26,28 @@ The first two are the same sentence, since a member of the product *is* a choice
 
 Section 5 lists the consequences, and the first three are more than consequences: they are equivalent to the axiom over ZF. Every set can be well-ordered (Zermelo 1904, Cori and Lascar's Theorem 7.37); Zorn's lemma, the form algebra uses; every vector space has a basis. Then come the results the book names on page 120 as needing it, the Hahn–Banach theorem and Krull's theorem on maximal ideals; then the cost, a set of reals with no length (Vitali) and the Banach–Tarski decomposition of a ball into five pieces that reassemble into two balls, which the book calls paradoxical. Finally the two theorems the book promises not to prove: Gödel (1938) showed the axiom cannot be refuted from ZF, Cohen (1963) that it cannot be proved. It is independent, and mathematicians, in the book's phrase, commonly use it.
 
+## The equivalent forms, and the weaker ones
+
+Halbeisen's chapter 6, "Forms of choice", is a catalogue of statements that look nothing like the axiom and are the axiom. The owner sent its first pages, and the program's section 6 runs each form on a finite set, where every one of them is a theorem, so that the words are tied to something checkable before the infinite case is believed.
+
+| Form | What it says | Status over ZF |
+|---|---|---|
+| **Well-ordering principle** (Zermelo 1904) | every set can be well-ordered | equivalent (Theorem 3.23) |
+| **Kuratowski–Zorn lemma** | a nonempty poset in which every chain has an upper bound has a maximal element | equivalent (Theorem 6.0) |
+| **Teichmüller's principle**, also Tukey's lemma | a nonempty family of finite character has a maximal member under ⊆ | equivalent (Theorem 6.0) |
+| **Downward basis principle** | every set of vectors that generates a vector space contains a basis | equivalent (Theorem 6.1) |
+| **Vector-space-basis principle** | every vector space has a basis | equivalent, with foundation (Theorem 6.2); open without it |
+| **Multiple choice** | a function picking a nonempty finite subset of each set of a family | equivalent, with foundation (Theorem 6.2) |
+| **Kurepa's principle** | every poset has a maximal antichain | equivalent, with foundation (Theorem 6.2); not without it |
+| **Trichotomy of cardinals** | any two cardinals are comparable | equivalent (Hartogs 1915) |
+| **m² = m** for every infinite cardinal | | equivalent (Tarski 1924) |
+| **Prime ideal theorem** | every Boolean algebra has a prime ideal; equivalently every filter extends to an ultrafilter | strictly weaker (Halpern and Lévy 1971) |
+| **Countable choice**, **dependent choice** | a choice function for countable families; a sequence each term chosen from the next | strictly weaker, and all analysis needs |
+
+A family has **finite character** when a set belongs to it exactly if all its finite subsets do: the linearly independent sets of vectors are the example, since dependence is witnessed by finitely many vectors. The program takes the seven nonzero vectors of GF(2)³, lists the 57 independent subsets, checks finite character, and finds the 28 maximal members, which are the bases, each of size 3; then checks that every generating set contains one. For the divisors of 12 under divisibility it enumerates every chain and every antichain, finds the one maximal element, 12, and the maximal antichains. On a finite poset all of this is exhaustion; on an infinite one it is the axiom, and the proofs in the book run by transfinite recursion along a well-ordering that the axiom supplies.
+
+The two proofs most worth reading are Halbeisen's (b) ⇒ (c) on page 134, where a chain of sets of finite character has its union as an upper bound, and his (b) ⇒ (a) of Theorem 6.1 on pages 135 and 136, where the choice function for a family of sets is pulled out of a basis of a vector space of rational functions over a field: the axiom of choice hidden inside linear algebra. The weaker forms are where the subject becomes delicate: the prime ideal theorem, which the program's section 7 illustrates by listing the three prime ideals of the Boolean algebra of subsets of {1, 2, 3}, is enough for Tychonoff's theorem for Hausdorff spaces and the completeness theorem of logic, and not enough for a basis of every vector space.
+
 ## What the program prints
 
 <!-- output:choice -->
@@ -70,12 +92,44 @@ Section 5 lists the consequences, and the first three are more than consequences
    Cohen 1963             AC cannot be proved from ZF either
    The first three are equivalent to the axiom over ZF, not consequences
    of it: assume any one and you have assumed choice.
+
+6. THE EQUIVALENT FORMS, ON A FINITE SET WHERE EACH IS A THEOREM
+   the divisors of 12 under 'divides': chains: 31, every chain has an
+   upper bound: True; maximal elements: [12]   (Zorn's lemma holds)
+   antichains: 9; maximal antichains: 5, e.g. (1,) and (4, 6)   (Kurepa's principle holds)
+   the 7 nonzero vectors of GF(2)³: linearly independent subsets: 57;
+   the family has finite character: True; maximal members: 28,
+   all of size {3}: the bases   (Teichmüller's principle holds)
+   generating sets: 28; each contains a basis: True   (downward basis principle holds)
+   well-orderings of a 4-set: 24, the orderings of its
+   members in a row   (well-ordering principle holds)
+   On a finite set every form is a theorem. Halbeisen's chapter 6 proves that on
+   arbitrary sets each is equivalent to the axiom: AC ⇔ Zorn ⇔ Teichmüller ⇔
+   downward basis ⇔ well-ordering ⇔ trichotomy of cardinals ⇔ m² = m, and, with
+   foundation, ⇔ Kurepa ⇔ every vector space has a basis ⇔ multiple choice.
+
+7. A BOOLEAN ALGEBRA, WHERE THE WEAKER FORM LIVES
+   commutativity    on all 512 triples of subsets of {1, 2, 3}: True
+   associativity    on all 512 triples of subsets of {1, 2, 3}: True
+   distributivity   on all 512 triples of subsets of {1, 2, 3}: True
+   absorption       on all 512 triples of subsets of {1, 2, 3}: True
+   complementation  on all 512 triples of subsets of {1, 2, 3}: True
+   De Morgan        on all 512 triples of subsets of {1, 2, 3}: True
+   ideals of this algebra (down-closed, closed under ∪): 8; prime ideals: 3:
+      the sets avoiding 3, 4 of them
+      the sets avoiding 2, 4 of them
+      the sets avoiding 1, 4 of them
+   The prime ideal theorem, 'every Boolean algebra has a prime ideal', follows
+   from choice and is strictly weaker than it (Halpern and Lévy 1971): the
+   first of the weaker forms, with countable choice and dependent choice.
 ```
 <!-- /output -->
 
 ## Po polsku, w skrócie
 
 Pewnik wyboru mówi, że z każdej rodziny zbiorów niepustych można naraz wybrać po jednym elemencie: iloczyn kartezjański takiej rodziny jest niepusty, czyli istnieje funkcja wyboru f z f(x) ∈ x dla każdego x. Cori i Lascar piszą na jednej stronie, że jest „niezrozumiały na pierwszy rzut oka" i „tak oczywisty, że zbędny", i oba zdania są prawdziwe. Dla rodzin skończonych to twierdzenie: program liczy funkcje wyboru dla wszystkich 128 rodzin niepustych podzbiorów {1, 2, 3} i nigdy nie dostaje zera. Gdy istnieje reguła, na przykład „weź najmniejszy" w zbiorach liczb naturalnych, aksjomat też nie jest potrzebny. Mówi coś dopiero dla rodzin nieskończonych bez reguły: buty można wybrać regułą „lewy", skarpetek nie. Równoważne mu są twierdzenie Zermela o dobrym uporządkowaniu, lemat Zorna i istnienie bazy każdej przestrzeni liniowej; kosztem są zbiór Vitalego i paradoks Banacha–Tarskiego; Gödel (1938) i Cohen (1963) pokazali, że z ZF nie da się go ani obalić, ani udowodnić.
+
+Rozdział 6 Halbeisena wylicza postaci równoważne pewnikowi: zasadę dobrego uporządkowania, lemat Kuratowskiego–Zorna, zasadę Teichmüllera (rodzina o charakterze skończonym ma element maksymalny), zasadę Kurepy (każdy porządek częściowy ma maksymalny antyłańcuch), istnienie bazy każdej przestrzeni liniowej, porównywalność mocy; słabsze są twierdzenie o ideale pierwszym i przeliczalny wybór. Program sprawdza każdą z nich na zbiorze skończonym, gdzie wszystkie są twierdzeniami.
 
 ## Run it yourself
 
@@ -89,5 +143,8 @@ python3 13_Axioms_of_Set_Theory/choice/examples/choice.py
 
 - [Replacement](../replacement/README.md) — why a rule makes the axiom unnecessary
 - [Ordinals](../ordinals/README.md) — well-orderings, which the axiom provides for every set
+- [Two balls from one](../two_balls_from_one/README.md) — the Banach–Tarski theorem, the axiom's most famous cost, with the group it lives in checked by program
+- [Orderings](../../04_Sets/orderings/README.md) — chains, antichains and maximal elements, the words of Zorn's lemma
+- Lorenz Halbeisen, *Combinatorial Set Theory*, 3rd ed. (Springer, 2025), chapter 6, "Forms of choice": Theorems 6.0 to 6.2 and the prime ideal theorem
 - [Set theory: a reading guide](../../reading_guides/set_theory/README.md) — Zermelo 1904, Gödel 1938 and Cohen 1963 among the founding papers
 - [Axiom of choice ↗](https://en.wikipedia.org/wiki/Axiom_of_choice) — Wikipedia

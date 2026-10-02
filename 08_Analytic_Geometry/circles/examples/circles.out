@@ -62,3 +62,24 @@
    (    0,    -1):  x^2 + y^2 = 1
    Every Pythagorean triple a, b, c gives the point (a/c, b/c) on it.
    Trigonometry will name its points (cos t, sin t).
+
+8. A CIRCLE IS A SET OF POINTS, AND A CONTINUOUS ONE
+   membership is a test, like any set builder: (x, y) ∈ circle iff x^2 + y^2 = 1
+      (3/5, 4/5) ∈ unit circle: True
+      (1/2, 1/2) ∈ unit circle: False
+      (0, 1) ∈ unit circle: True
+   a rational point for every fraction t: ((1 - t^2)/(1 + t^2), 2t/(1 + t^2))
+      13 distinct points with t = m/n, n ≤ 6, all on the circle: True
+   between any two points of the circle there is a third, so no point has a
+   next point; the fractions t do that on their own:
+      t = 1/2: x = 3/5 lies between the x's for t = 0 and t = 1
+      t = 1/4: x = 15/17 lies between the x's for t = 0 and t = 1/2
+      t = 1/8: x = 63/65 lies between the x's for t = 0 and t = 1/4
+      t = 1/16: x = 255/257 lies between the x's for t = 0 and t = 1/8
+      t = 1/32: x = 1023/1025 lies between the x's for t = 0 and t = 1/16
+   'Continuous' is not a feeling about the drawing but two facts about the set:
+   no gaps (between any two points a third, as above, and every limit of points
+   of the circle is on the circle) and one piece (it cannot be split into two
+   nonempty parts with no point of either touching the other). Both are
+   statements about which points are members. The set is uncountable: t runs
+   through all reals in [0, 1] and so cannot be listed (see cardinality).

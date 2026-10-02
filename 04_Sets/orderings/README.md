@@ -2,7 +2,7 @@
 
 **Level:** 101 → 201 · for anyone who has met "reflexive, symmetric, antisymmetric, transitive" as a list to memorise and wants to see which combinations are worth a name, and why a set can have two maximal elements and no maximum
 
-**One line:** A relation on a finite set is a set of pairs, so each of the six properties a book asks of it is a loop that can be run; running them on all 512 relations on three points sorts out which combinations have names (equivalence, partial order, linear order, their strict versions), shows the identity relation wearing two of them, and catches two examples in the book that its author got wrong.
+**One line:** A relation on a finite set is a set of pairs, so each of the six properties a book asks of it is a loop that can be run; running them on all 512 relations on three points sorts out which combinations have names (equivalence, partial order, linear order, their strict versions), shows the identity relation wearing two of them, and catches two examples in the book that its author got wrong; drawn as a logical matrix, each property is a shape in the grid.
 
 ## The six properties, as loops
 
@@ -10,13 +10,13 @@ Let R be a relation on S, a set of pairs (x, y) with x and y in S, as [relations
 
 | Property | Says | Loop |
 |---|---|---|
-| reflexive | every x is related to itself | every (x, x) is in R |
-| irreflexive | no x is related to itself | no (x, x) is in R |
-| symmetric | x R y gives y R x | for every pair in R, the reversed pair is in R |
-| antisymmetric | x R y and y R x force x = y | no reversed pair in R unless x = y |
-| asymmetric | x R y forbids y R x | no reversed pair in R at all |
-| transitive | x R y and y R z give x R z | for every chained pair, the shortcut is in R |
-| comparable (two elements) | x R y or y R x | at least one of the two pairs is in R |
+| [reflexive](../../GLOSSARY.md#reflexive-relation) | every x is related to itself | every (x, x) is in R |
+| [irreflexive](../../GLOSSARY.md#irreflexive-relation) | no x is related to itself | no (x, x) is in R |
+| [symmetric](../../GLOSSARY.md#symmetric-relation) | x R y gives y R x | for every pair in R, the reversed pair is in R |
+| [antisymmetric](../../GLOSSARY.md#antisymmetric-relation) | x R y and y R x force x = y | no reversed pair in R unless x = y |
+| [asymmetric](../../GLOSSARY.md#asymmetric-relation) | x R y forbids y R x | no reversed pair in R at all |
+| [transitive](../../GLOSSARY.md#transitive-relation) | x R y and y R z give x R z | for every chained pair, the shortcut is in R |
+| [comparable](../../GLOSSARY.md#comparable) (two elements) | x R y or y R x | at least one of the two pairs is in R |
 
 Each line is one `all(...)` over the pairs, and section 1 of the program runs them on André's four examples. Three things come out that are easy to miss by eye. The empty relation is irreflexive, symmetric, antisymmetric, asymmetric and transitive at once, all vacuously, since there is no pair to fail any of them. Symmetric plus transitive does not give reflexive, which the book warns about on page 57: R₂ = {(a, a), (b, b), (d, d), (a, b)} is the counterexample, and the loop shows (c, c) missing. And two of the book's own verdicts are wrong: "distinct siblings" is called transitive, but x T y and y T x would need x T x, and nobody is their own distinct sibling (the book's repair, "siblings or the same person", on page 58, is an equivalence); and R₃ on page 57 is called transitive, but it has (a, b) and (b, c) without (a, c). The program prints both failures. A relation is a set of pairs, and a claim about it is checked by looking at the pairs, which is what the loops do and the eye does not.
 
@@ -24,9 +24,9 @@ Each line is one `all(...)` over the pairs, and section 1 of the program runs th
 
 Two families of combinations have names, and section 2 counts them on all 512 relations on {a, b, c}.
 
-**Equivalence**: reflexive, symmetric, transitive. "Counts as the same." There are 5 on three points, the Bell number, because an equivalence is the same thing as a [partition](../equivalence_and_partitions/README.md).
+**[Equivalence](../../GLOSSARY.md#equivalence-relation)**: reflexive, symmetric, transitive. "Counts as the same." There are 5 on three points, the Bell number, because an equivalence is the same thing as a [partition](../equivalence_and_partitions/README.md).
 
-**Partial order** (non-strict): reflexive, antisymmetric, transitive, written a ≤ b. A **linear** (total) order is a partial order in which every two elements are comparable. The **strict** versions replace reflexive by irreflexive and antisymmetric by asymmetric, written a < b, and the two kinds match one to one: remove the diagonal pairs (x, x) from a partial order and a strict one remains; add them back and the partial order returns. On three points there are 19 partial orders, 6 of them linear (the 3! arrangements), and 19 strict ones. A **poset** is a partially ordered set, a set together with a partial order on it; André's footnote records *loset* for a linearly ordered set, which almost nobody says, the usual word being *toset* or *chain*.
+**[Partial order](../../GLOSSARY.md#partial-order)** (non-strict): reflexive, antisymmetric, transitive, written a ≤ b. A **[linear](../../GLOSSARY.md#linear-order-total-order)** (total) order is a partial order in which every two elements are comparable. The **[strict](../../GLOSSARY.md#strict-order)** versions replace reflexive by irreflexive and antisymmetric by asymmetric, written a < b, and the two kinds match one to one: remove the diagonal pairs (x, x) from a partial order and a strict one remains; add them back and the partial order returns. On three points there are 19 partial orders, 6 of them linear (the 3! arrangements), and 19 strict ones. A **[poset](../../GLOSSARY.md#poset)** is a partially ordered set, a set together with a partial order on it; André's footnote records *loset* for a linearly ordered set, which almost nobody says, the usual word being *toset* or *chain*.
 
 The identity relation wears two names: it is an equivalence (every class is a singleton) and a partial order (nothing is below anything else). It is the only relation that is both, since symmetric and antisymmetric together force every pair to be (x, x).
 
@@ -34,15 +34,19 @@ The identity relation wears two names: it is an equivalence (every class is a si
 
 André's Definition 6.4, run on two examples in sections 3 and 4:
 
-- A **chain** is a subset on which the order is linear; an **antichain** is a subset no two of whose members are comparable.
-- m is **minimal** when nothing is below it, **maximal** when nothing is above it.
+- A **[chain](../../GLOSSARY.md#chain-and-antichain)** is a subset on which the order is linear; an **antichain** is a subset no two of whose members are comparable.
+- m is **minimal** when nothing is below it, **[maximal](../../GLOSSARY.md#maximal-and-maximum)** when nothing is above it.
 - m is the **minimum** when it is below everything else, the **maximum** when above everything else. A minimum is minimal, and when every two elements are comparable the words agree; in a partial order they come apart.
 
-Mortimer's ancestors, ordered by "a is a descendant of b", are a strict partial order in which Mortimer is the minimum, two spontaneously generated ancestors A and E are each maximal, and there is no maximum, because A and E are not comparable. Divisibility on 1 to 12 is a partial order with minimum 1, six maximal elements (7 to 12, which divide nothing else in range), no maximum, the chain 1, 2, 4, 8, and the primes as an antichain. [The algebra of sets](../algebra_of_sets/README.md#is-a-partial-order) has ⊆ as the other standard poset, and divisibility read as ⊆ of factor sets is on [the set katas](../set_katas/README.md#quiz-katas). Section 5 is André's exercise 7.8, the **lexicographic** order on pairs: compare first entries, and only on a tie compare the second. It is the order of a dictionary and of a database sort on two columns, and the program confirms it is a partial order on 16 pairs of subsets.
+Mortimer's ancestors, ordered by "a is a descendant of b", are a strict partial order in which Mortimer is the minimum, two spontaneously generated ancestors A and E are each maximal, and there is no maximum, because A and E are not comparable. Divisibility on 1 to 12 is a partial order with minimum 1, six maximal elements (7 to 12, which divide nothing else in range), no maximum, the chain 1, 2, 4, 8, and the primes as an antichain. [The algebra of sets](../algebra_of_sets/README.md#is-a-partial-order) has ⊆ as the other standard poset, and divisibility read as ⊆ of factor sets is on [the set katas](../set_katas/README.md#quiz-katas). Section 5 is André's exercise 7.8, the **[lexicographic](../../GLOSSARY.md#lexicographic-order)** order on pairs: compare first entries, and only on a tie compare the second. It is the order of a dictionary and of a database sort on two columns, and the program confirms it is a partial order on 16 pairs of subsets.
+
+## A relation as a logical matrix
+
+The owner asked what a logical matrix is. It is a relation drawn as a grid instead of as arrows: list the elements along the rows and again along the columns, and put a 1 in row x, column y when x R y and a 0 otherwise. Section 6 of the program prints four. Each property of this page becomes a shape. Reflexive: the diagonal is full. Irreflexive: the diagonal is empty. Symmetric: the grid is its own mirror image across the diagonal. Antisymmetric: no 1 faces another 1 across the diagonal. An equivalence relation is blocks of 1s along the diagonal, one block per class, once the elements are listed class by class; that is what the Wikipedia picture of the 52 equivalence relations on five points shows, and the program counts them again as symmetric reflexive matrices that are transitive, 52, the Bell number B(5) from [the partitions lesson](../equivalence_and_partitions/README.md). A linear order, with the elements listed in order, is a triangle; a strict order has an empty diagonal. Transitivity is the one property that is not a shape but an operation: with *or* for addition and *and* for multiplication, the Boolean product M·M has a 1 wherever a two-step path exists, and R is transitive exactly when that product stays inside M. The matrix of R⁻¹ is the transpose, and the matrix of T ∘ R is the Boolean product, which is how a database or a graph library computes compositions. [Relations and functions](../relations_and_functions/README.md) draws the same objects as arrows; the matrix is the adjacency matrix of that graph, and there are 2ⁿ² of them on n points, one per relation.
 
 ## The other "partition"
 
-The owner asked whether this connects to the partitions of real analysis. Same word, two objects. A set-theory partition, [the previous lesson](../equivalence_and_partitions/README.md), is a family of nonempty disjoint blocks covering a set. A partition of an interval [a, b] in the Riemann sense is a finite list of cut points a = x₀ < x₁ < ⋯ < xₙ = b, and the integral is squeezed between the lower and upper sums over the cells it makes. The cells overlap at their endpoints, so they are not a partition in the first sense, though the half-open cells [xᵢ, xᵢ₊₁) are. Section 6 computes both sums for x² on [0, 2] exactly, with 3 cells and then 200, and the integral 8/3 sits between them while the gap shrinks. The connection to this page is the order: one Riemann partition **refines** another when it contains all its cut points, and refinement is a partial order on partitions, under which any two have a common refinement, their union. That is the fact the Riemann integral's definition rests on, and it is a poset fact.
+The owner asked whether this connects to the partitions of real analysis. Same word, two objects. A set-theory partition, [the previous lesson](../equivalence_and_partitions/README.md), is a family of nonempty disjoint blocks covering a set. A partition of an interval [a, b] in the Riemann sense is a finite list of cut points a = x₀ < x₁ < ⋯ < xₙ = b, and the integral is squeezed between the lower and upper sums over the cells it makes. The cells overlap at their endpoints, so they are not a partition in the first sense, though the half-open cells [xᵢ, xᵢ₊₁) are. Section 7 computes both sums for x² on [0, 2] exactly, with 3 cells and then 200, and the integral 8/3 sits between them while the gap shrinks. The connection to this page is the order: one Riemann partition **refines** another when it contains all its cut points, and refinement is a partial order on partitions, under which any two have a common refinement, their union. That is the fact the Riemann integral's definition rests on, and it is a poset fact.
 
 ## What the program prints
 
@@ -96,7 +100,25 @@ The owner asked whether this connects to the partitions of real analysis. Same w
    reflexive True, antisymmetric True, transitive True -> partial order
    Dictionary order: compare first entries, and only on a tie compare the second.
 
-6. THE OTHER 'PARTITION': REAL ANALYSIS CUTS AN INTERVAL, NOT A SET
+6. A RELATION AS A LOGICAL MATRIX: EACH PROPERTY IS A SHAPE
+   equiv    ≤        <        cycle
+   111..    11111    .1111    .1...
+   111..    .1111    ..111    ..1..
+   111..    ..111    ...11    ...1.
+   ...11    ...11    ....1    ....1
+   ...11    ....1    .....    1....
+   row x, column y holds 1 when x R y. Reflexive: the diagonal is full. Symmetric: the
+   grid is its own mirror image across the diagonal. Antisymmetric: no 1 faces a 1 across
+   it except on the diagonal. Transitive: M·M, with or for + and and for ×, stays inside M.
+   An equivalence is blocks of ones along the diagonal, one block per class; a linear
+   order, with the points listed in order, is a triangle; a strict one has an empty diagonal.
+   The matrix of R⁻¹ is the transpose; of T ∘ R, the Boolean product.
+   transitive by M·M ⊆ M:  equivalence True   ≤ True   cycle False
+   equivalence relations on 5 points, counted as symmetric reflexive matrices that are
+   transitive: 52, the Bell number B(5), which the Wikipedia picture draws as 52 grids;
+   33554432 logical 5 × 5 matrices in all, one per relation.
+
+7. THE OTHER 'PARTITION': REAL ANALYSIS CUTS AN INTERVAL, NOT A SET
    a partition of [0, 2] in the Riemann sense is a finite list of points ['0', '1/2', '1', '2'],
    cutting it into subintervals [('0', '1/2'), ('1/2', '1'), ('1', '2')], which overlap at endpoints.
    lower sum of x² over it = 9/8, upper sum = 37/8; the integral 8/3 lies between: True
@@ -113,7 +135,7 @@ Relations, orderings and partitions, with the definitions from André's chapters
 
 ## Po polsku, w skrócie
 
-Relacja na zbiorze skończonym to zbiór par, więc każda z sześciu własności z podręcznika (zwrotna, przeciwzwrotna, symetryczna, antysymetryczna, asymetryczna, przechodnia) to pętla po parach, którą można uruchomić. Program uruchamia je na wszystkich 512 relacjach na {a, b, c} i liczy, które kombinacje mają nazwy: relacja równoważności (zwrotna, symetryczna, przechodnia; 5 sztuk, liczba Bella), porządek częściowy (zwrotna, antysymetryczna, przechodnia; 19), porządek liniowy (każde dwa elementy porównywalne; 6 = 3!) i ich wersje ostre (przeciwzwrotne, zapisywane a < b; też 19). Poset to zbiór częściowo uporządkowany. Relacja identyczności jest zarazem równoważnością i porządkiem. Pętle wyłapują też dwa błędne przykłady w książce: „rodzeństwo" nie jest relacją przechodnią (x T y i y T x wymagałoby x T x), a R₃ ze strony 57 ma (a, b) i (b, c) bez (a, c). Słowa o pozycjach: łańcuch, antyłańcuch, element minimalny i maksymalny (nic pod nim, nic nad nim) kontra najmniejszy i największy (pod wszystkim, nad wszystkim); przodkowie Mortimera mają dwa elementy maksymalne i żadnego największego. Podział przedziału w analizie to inny obiekt niż podział zbioru: lista punktów cięcia, a drobnienie podziałów jest porządkiem częściowym.
+Relacja na zbiorze skończonym to zbiór par, więc każda z sześciu własności z podręcznika (zwrotna, przeciwzwrotna, symetryczna, antysymetryczna, asymetryczna, przechodnia) to pętla po parach, którą można uruchomić. Program uruchamia je na wszystkich 512 relacjach na {a, b, c} i liczy, które kombinacje mają nazwy: relacja równoważności (zwrotna, symetryczna, przechodnia; 5 sztuk, liczba Bella), porządek częściowy (zwrotna, antysymetryczna, przechodnia; 19), porządek liniowy (każde dwa elementy porównywalne; 6 = 3!) i ich wersje ostre (przeciwzwrotne, zapisywane a < b; też 19). Poset to zbiór częściowo uporządkowany. Relacja identyczności jest zarazem równoważnością i porządkiem. Pętle wyłapują też dwa błędne przykłady w książce: „rodzeństwo" nie jest relacją przechodnią (x T y i y T x wymagałoby x T x), a R₃ ze strony 57 ma (a, b) i (b, c) bez (a, c). Słowa o pozycjach: łańcuch, antyłańcuch, element minimalny i maksymalny (nic pod nim, nic nad nim) kontra najmniejszy i największy (pod wszystkim, nad wszystkim); przodkowie Mortimera mają dwa elementy maksymalne i żadnego największego. Relacja narysowana jako macierz zer i jedynek (macierz logiczna) pokazuje każdą własność jako kształt: pełna przekątna to zwrotność, symetria względem przekątnej to symetria, bloki jedynek wzdłuż przekątnej to relacja równoważności, a przechodniość to warunek, by iloczyn boolowski M·M mieścił się w M; program liczy w ten sposób 52 relacje równoważności na pięciu punktach, liczbę Bella B(5). Podział przedziału w analizie to inny obiekt niż podział zbioru: lista punktów cięcia, a drobnienie podziałów jest porządkiem częściowym.
 
 ## Run it yourself
 

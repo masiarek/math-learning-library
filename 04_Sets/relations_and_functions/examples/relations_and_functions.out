@@ -50,3 +50,20 @@
    A relation can merge, so the image of an intersection can be smaller
    than the intersection of the images; a one-to-one relation cannot, and
    for it (b) and (c) become equalities (Simovici–Djeraba, Theorem 1.62).
+
+8. SULLIVAN'S FOUR PICTURES OF A FUNCTION, ONE TEST FOR ALL
+   Precalculus 2.1 shows a function as a mapping diagram, a set of pairs, an
+   equation and a machine. Each is the same set of pairs, and is_function
+   asks one thing of it: no two pairs with the same first member.
+   Fig. 6, substance → specific heat      a function
+   year → price of a stamp, 2018          not a function: 2018 has two partners
+   Fig. 8, menu item → price              a function, and two inputs share the output 1, which is allowed
+   Fig. 10, gestation → life expectancy   not a function: 240 has two partners
+   Example 3(a)                           a function
+   Example 3(b)                           a function, and two inputs share the output 4, which is allowed
+   Example 3(c)                           not a function: -3 has two partners
+   Example 4, y = 2x − 5 on x = −2..2     a function
+   Example 5, x² + y² = 1 on a grid       not a function: 0.0 has two partners
+   The machine picture is the same test read aloud: one output per input.
+   'y = f(x)' names the unique partner of x, and the WARNING in the book,
+   that f(x) is not f times x, is the warning that f is a set, not a number.

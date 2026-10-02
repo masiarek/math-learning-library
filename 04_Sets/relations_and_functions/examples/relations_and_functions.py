@@ -143,6 +143,42 @@ def main() -> None:
     print("   A relation can merge, so the image of an intersection can be smaller")
     print("   than the intersection of the images; a one-to-one relation cannot, and")
     print("   for it (b) and (c) become equalities (Simovici–Djeraba, Theorem 1.62).")
+    print()
+
+    print("8. SULLIVAN'S FOUR PICTURES OF A FUNCTION, ONE TEST FOR ALL")
+    print("   Precalculus 2.1 shows a function as a mapping diagram, a set of pairs, an")
+    print("   equation and a machine. Each is the same set of pairs, and is_function")
+    print("   asks one thing of it: no two pairs with the same first member.")
+    examples = [
+        ("Fig. 6, substance → specific heat",
+         {("air", 1.00), ("lead", 0.128), ("graphite", 0.711), ("copper", 0.387), ("water", 4.18)}),
+        ("year → price of a stamp, 2018",
+         {(2018, 0.49), (2018, 0.50)}),
+        ("Fig. 8, menu item → price",
+         {("Cheeseburger", 1), ("McChicken", 1), ("Bacon McDouble", 2), ("Triple Cheeseburger", 3), ("Happy Meal", 3)}),
+        ("Fig. 10, gestation → life expectancy",
+         {(122, 5), (201, 8), (284, 15), (240, 12), (240, 20)}),
+        ("Example 3(a)", {(1, 4), (2, 5), (3, 6), (4, 7)}),
+        ("Example 3(b)", {(1, 4), (2, 4), (3, 5), (6, 10)}),
+        ("Example 3(c)", {(-3, 9), (-2, 4), (0, 0), (1, 1), (-3, 8)}),
+        ("Example 4, y = 2x − 5 on x = −2..2", {(x, 2 * x - 5) for x in range(-2, 3)}),
+        ("Example 5, x² + y² = 1 on a grid",
+         {(x / 4, y / 4) for x in range(-4, 5) for y in range(-4, 5) if x * x + y * y == 16}),
+    ]
+    for name, r in examples:
+        verdict = "a function" if is_function(r) else "not a function"
+        extra = ""
+        rs = sorted(r, key=lambda pair: (str(pair[0]), str(pair[1])))
+        if not is_function(r):
+            x = next(x for x, y in rs for x2, z in rs if x == x2 and y != z)
+            extra = f": {x} has two partners"
+        elif not one_to_one(r):
+            y = next(y for x, y in rs for x2, y2 in rs if y == y2 and x != x2)
+            extra = f", and two inputs share the output {y}, which is allowed"
+        print(f"   {name:<38} {verdict}{extra}")
+    print("   The machine picture is the same test read aloud: one output per input.")
+    print("   'y = f(x)' names the unique partner of x, and the WARNING in the book,")
+    print("   that f(x) is not f times x, is the warning that f is a set, not a number.")
 
 
 if __name__ == "__main__":
