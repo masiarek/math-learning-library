@@ -1,0 +1,26 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Sets::Symbols
+How is A ∋ a read, and which symbol is it often confused with?	A contains a: the membership sign mirrored, the same fact as a ∈ A from the set's side. Not ∃, which means 'there exists'.	notation trap
+What does a ∉ A mean?	a is not a member of A.	notation
+Which symbols are used for the universal set?	U, 𝒰, E or Ω, fixed in advance. Not ξ, which a circulating chart invented.	notation
+A ⊆ B versus A ⊂ B: what is the trap?	⊆ allows equality in every book. ⊂ means proper subset in Cunningham and this library, but allows equality in Jech and Halmos. Check the book's convention.	trap
+What does A ⊄ B say, as a witness?	There is an x ∈ A with x ∉ B.	notation
+What is {x ∈ A : P(x)}, and what else is the colon written as?	The set of members of A that satisfy P; the colon is 'such that' and a bar | means the same.	notation
+Name four spellings of the complement of A.	A′, Aᶜ, Ā and U − A, all within a universal set U.	notation
+Two spellings of the symmetric difference?	A △ B and A ⊕ B: the members of exactly one of the two sets.	notation
+Two spellings of the power set of A?	𝒫(A) and 2ᴬ: the set of all subsets of A.	notation
+Four spellings of the cardinality of A?	|A|, n(A), #A and card(A).	notation
+What are ℵ₀, ℶ₁ and 𝔠?	ℵ₀ = |ℕ|; ℶ₁ = |𝒫(ℕ)| = |ℝ| = 𝔠, the continuum. The continuum hypothesis says ℵ₁ = ℶ₁.	definition
+What is ω + 1 as a set?	ω ∪ {ω}: the successor of the first infinite ordinal.	definition
+What do ℕ, ℤ, ℚ, ℝ, ℂ stand for, and where does Z come from?	Natural numbers, integers (German Zahlen), rationals (quotients), reals, complex numbers; each is a subset of the next.	notation
+What is the difference between ∃x, ∃!x and ∄x?	There exists an x; there is exactly one x; there is no x (the same as ¬∃x).	notation
+What do ⊢ and ⊨ mean, and how do they differ?	A ⊢ B: B is provable from A (proofs). A ⊨ B: every model of A satisfies B (truth). Gödel's completeness theorem makes them agree in first-order logic.	definition
+Is A ⊣ B the sign for 'does not yield'?	No. ⊬ is 'does not prove'. ⊣ is ⊢ read right to left, or in category theory 'is left adjoint to'; Halbeisen uses it as an end-of-proof mark.	trap
+What do ∴ and ∵ mean?	∴ therefore, ∵ because: three dots pointing up or down, shorthand of school proofs.	notation
+What does ∎ or □ at the end of a proof mean?	End of proof, Halmos's tombstone, standing for QED, quod erat demonstrandum.	notation
+How are := and :⟺ read?	Is defined as: := for a term, :⟺ for a statement. Halbeisen uses both.	notation
+What does ⇏ mean?	Does not imply: A ⇏ B says A can hold while B fails.	notation
+Which symbol does Cori and Lascar use for equality inside the formal language?	≃, where every other book writes =.	notation
+What does κ → (λ)ⁿ_r say?	However the n-element subsets of a set of size κ are split into r pieces, some subset of size λ has all its n-element subsets in one piece. Ramsey's theorem is ω → (ω)ⁿ_r.	definition

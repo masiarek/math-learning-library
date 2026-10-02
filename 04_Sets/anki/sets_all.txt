@@ -155,6 +155,28 @@ What does Python do with x in A & x in B?	& binds tighter than in, so it reads x
 What does x in A and B return in Python, and why is it dangerous?	If x is in A it returns the set B itself, which is truthy even when x is not in B, so an if takes the wrong branch and nothing complains. Write x in A and x in B.	sets math python	Math::Sets::Reading a set expression
 Using Kuratowski pairs, (a, b) = {{a}, {a, b}}, what is (1, 2) ∩ (2, 1)?	{{1, 2}}. (1, 2) = {{1}, {1, 2}} and (2, 1) = {{2}, {1, 2}} share only the member {1, 2}.	sets math notation	Math::Sets::Reading a set expression
 Read as open intervals, what is (1, 2) ∪ (2, 1)?	(1, 2). The interval (2, 1) is the set of t with 2 < t < 1, which is empty. Same symbols as the ordered pair, a different set: the context decides.	sets math notation	Math::Sets::Reading a set expression
+How is A ∋ a read, and which symbol is it often confused with?	A contains a: the membership sign mirrored, the same fact as a ∈ A from the set's side. Not ∃, which means 'there exists'.	notation trap	Math::Sets::Symbols
+What does a ∉ A mean?	a is not a member of A.	notation	Math::Sets::Symbols
+Which symbols are used for the universal set?	U, 𝒰, E or Ω, fixed in advance. Not ξ, which a circulating chart invented.	notation	Math::Sets::Symbols
+A ⊆ B versus A ⊂ B: what is the trap?	⊆ allows equality in every book. ⊂ means proper subset in Cunningham and this library, but allows equality in Jech and Halmos. Check the book's convention.	trap	Math::Sets::Symbols
+What does A ⊄ B say, as a witness?	There is an x ∈ A with x ∉ B.	notation	Math::Sets::Symbols
+What is {x ∈ A : P(x)}, and what else is the colon written as?	The set of members of A that satisfy P; the colon is 'such that' and a bar | means the same.	notation	Math::Sets::Symbols
+Name four spellings of the complement of A.	A′, Aᶜ, Ā and U − A, all within a universal set U.	notation	Math::Sets::Symbols
+Two spellings of the symmetric difference?	A △ B and A ⊕ B: the members of exactly one of the two sets.	notation	Math::Sets::Symbols
+Two spellings of the power set of A?	𝒫(A) and 2ᴬ: the set of all subsets of A.	notation	Math::Sets::Symbols
+Four spellings of the cardinality of A?	|A|, n(A), #A and card(A).	notation	Math::Sets::Symbols
+What are ℵ₀, ℶ₁ and 𝔠?	ℵ₀ = |ℕ|; ℶ₁ = |𝒫(ℕ)| = |ℝ| = 𝔠, the continuum. The continuum hypothesis says ℵ₁ = ℶ₁.	definition	Math::Sets::Symbols
+What is ω + 1 as a set?	ω ∪ {ω}: the successor of the first infinite ordinal.	definition	Math::Sets::Symbols
+What do ℕ, ℤ, ℚ, ℝ, ℂ stand for, and where does Z come from?	Natural numbers, integers (German Zahlen), rationals (quotients), reals, complex numbers; each is a subset of the next.	notation	Math::Sets::Symbols
+What is the difference between ∃x, ∃!x and ∄x?	There exists an x; there is exactly one x; there is no x (the same as ¬∃x).	notation	Math::Sets::Symbols
+What do ⊢ and ⊨ mean, and how do they differ?	A ⊢ B: B is provable from A (proofs). A ⊨ B: every model of A satisfies B (truth). Gödel's completeness theorem makes them agree in first-order logic.	definition	Math::Sets::Symbols
+Is A ⊣ B the sign for 'does not yield'?	No. ⊬ is 'does not prove'. ⊣ is ⊢ read right to left, or in category theory 'is left adjoint to'; Halbeisen uses it as an end-of-proof mark.	trap	Math::Sets::Symbols
+What do ∴ and ∵ mean?	∴ therefore, ∵ because: three dots pointing up or down, shorthand of school proofs.	notation	Math::Sets::Symbols
+What does ∎ or □ at the end of a proof mean?	End of proof, Halmos's tombstone, standing for QED, quod erat demonstrandum.	notation	Math::Sets::Symbols
+How are := and :⟺ read?	Is defined as: := for a term, :⟺ for a statement. Halbeisen uses both.	notation	Math::Sets::Symbols
+What does ⇏ mean?	Does not imply: A ⇏ B says A can hold while B fails.	notation	Math::Sets::Symbols
+Which symbol does Cori and Lascar use for equality inside the formal language?	≃, where every other book writes =.	notation	Math::Sets::Symbols
+What does κ → (λ)ⁿ_r say?	However the n-element subsets of a set of size κ are split into r pieces, some subset of size λ has all its n-element subsets in one piece. Ramsey's theorem is ω → (ω)ⁿ_r.	definition	Math::Sets::Symbols
 What is a set, in the school definition, and what does 'well-defined' add?	A well-defined collection of objects: for any object it is settled whether it belongs. 'The three best students' is not a set; 'the students in the quiz' is.	sets math definition	Math::Sets::Set katas
 Roster form versus set-builder form: give both for the vowels.	Roster lists the members: {a, e, i, o, u}. Set-builder states the property: {x : x is a vowel of the English alphabet}.	sets math notation	Math::Sets::Set katas
 Can every set be written in roster form?	No. The real numbers between 2 and 5 have no first member and no next member, so they can only be given by a property: {x : x is real and 2 < x < 5}.	sets math trap	Math::Sets::Set katas
