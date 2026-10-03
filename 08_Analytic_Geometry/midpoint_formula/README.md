@@ -193,3 +193,4 @@ The next section of the book turns an equation into a picture, in [graphs, inter
 - [Midpoint ↗](https://en.wikipedia.org/wiki/Midpoint) — Wikipedia
 - [Środek odcinka ↗](https://pl.wikipedia.org/wiki/%C5%9Arodek_odcinka) — Wikipedia po polsku
 - Michael Sullivan, *Precalculus* (Pearson), section 1.1 *The Distance and Midpoint Formulas*, objective 2
+- James Stewart, Lothar Redlin and Saleem Watson, *Precalculus: Mathematics for Calculus* (Cengage), section 1.9, page 94: the formula derived from two congruent triangles, and Example 3, a parallelogram proved by its diagonals sharing a midpoint; compared with Sullivan in the [reading guide](../../reading_guides/precalculus/README.md)
