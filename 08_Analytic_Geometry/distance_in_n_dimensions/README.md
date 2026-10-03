@@ -168,7 +168,7 @@ The page as a deck of Anki cards: [`distance_in_n_dimensions.txt`](anki/distance
 
 ## Where this goes next
 
-The dot product in general, u·w = |u||w| cos θ, and the Cauchy–Schwarz inequality behind the triangle inequality, belong to linear algebra; the [reading guide](../../reading_guides/linear_algebra/README.md) says which book to learn them from. Back in the plane, [circles](../circles/README.md) is the distance formula held fixed, and in three dimensions the same equation with a third square is a sphere.
+[Distance is the four properties](../other_distances/README.md) turns the table above around: the four properties are the definition of a distance, the formula is one function that has them, and taxicab, Chebyshev and Hamming distances are others. The dot product in general, u·w = |u||w| cos θ, and the Cauchy–Schwarz inequality behind the triangle inequality, belong to linear algebra; the [reading guide](../../reading_guides/linear_algebra/README.md) says which book to learn them from. Back in the plane, [circles](../circles/README.md) is the distance formula held fixed, and in three dimensions the same equation with a third square is a sphere.
 
 ## Po polsku, w skrócie
 

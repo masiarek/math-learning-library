@@ -1,0 +1,18 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Other distances
+#tags:math precalculus other-distances
+#columns:Front	Back	Tags
+#tags column:3
+What makes a function a distance (a metric)?	Four properties: never negative; zero only between a point and itself; the same both ways; and the triangle inequality, no detour shorter than the straight route. The formula is replaceable, the properties are the definition.	what
+Taxicab distance from (1, 3) to (5, 6)?	|5 - 1| + |6 - 3| = 7: the legs added, as a taxi drives a grid. The Euclidean distance is 5.	problems
+Chebyshev distance from (1, 3) to (5, 6)?	max(4, 3) = 4: the longer leg, the number of moves of a chess king.	problems
+What shape is the circle of radius 3 under the taxicab distance? Under Chebyshev?	A diamond with corners (3, 0), (0, 3), (-3, 0), (0, -3); a square with corners (3, 3), (3, -3), (-3, -3), (-3, 3). The shape of a circle is a fact about the distance.	why
+Is (sqrt|dx| + sqrt|dy|)^2 a distance?	No. For (0, 0), (1, 0), (1, 1) the straight route costs 4 and the detour through (1, 0) costs 2: the triangle inequality fails. One triple is enough.	trap
+Is the squared Euclidean distance a distance?	No. On a line, 0, 1, 2 give d(0, 2) = 4 > d(0, 1) + d(1, 2) = 2. The square root in the distance formula is what makes the triangle inequality hold.	trap
+Which p in (|dx|^p + |dy|^p)^(1/p) give a distance?	Every p >= 1 (p = 1 taxicab, p = 2 Euclidean, p -> infinity Chebyshev). Every p < 1 fails the triangle inequality. The proof for p >= 1 is Minkowski's inequality.	what
+Why does geometry use the Euclidean distance rather than the taxicab one, if both are metrics?	Only the Euclidean distance is unchanged by rotation. Rotating by the 3-4-5 angle keeps the Euclidean distance 5 and changes taxicab 7 to 5 and Chebyshev 4 to 5. A ruler does not care which way it is held.	why
+What is the Hamming distance between 011 and 110?	2: the number of positions where they differ. A metric with no coordinates behind it.	problems
+Why can a code whose codewords are pairwise at Hamming distance at least 3 correct one flipped bit?	The received word is at distance 1 from its original and, by the triangle inequality, at distance at least 2 from every other codeword; the original is the unique nearest codeword.	why
+How many properties does a candidate distance have to fail to be rejected?	One. Three out of four is not a distance: the p = 1/2 formula and the squared Euclidean distance both have the first three.	trap

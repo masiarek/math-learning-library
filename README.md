@@ -114,6 +114,7 @@ The eighth chapter is the first chapter of every precalculus book: two number li
 | [Lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md) | One slope per line because of similar triangles; point-slope, slope-intercept and general forms; negative reciprocals from a quarter turn |
 | [Circles: standard form and general form](08_Analytic_Geometry/circles/README.md) | The distance formula held fixed; completing the square; when the "circle" is a point or nothing at all |
 | [Distance in n dimensions, and the length of a vector](08_Analytic_Geometry/distance_in_n_dimensions/README.md) | Pythagoras twice gives the box diagonal 3-4-12-13, once per axis gives the formula in n dimensions by induction, √(v·v) is the distance from the origin, and the four metric properties are checked exactly on a grid |
+| [Distance is the four properties](08_Analytic_Geometry/other_distances/README.md) | A metric is four properties, not a formula: taxicab and Chebyshev circles drawn on a grid, the p = ½ formula and the squared distance both broken by one triple, only the Euclidean distance unchanged by an exact 3-4-5 rotation, and the Hamming distance checked on all 512 triples of bit strings |
 
 [**09_Calculus/**](09_Calculus/README.md) — *What is a velocity, and which motion is its own velocity?*
 

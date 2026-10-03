@@ -108,6 +108,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - [Lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md) — slope, rise over run, point-slope, slope-intercept, general form, negative reciprocal
         - [Circles: standard form and general form](08_Analytic_Geometry/circles/README.md) — center, radius, unit circle, completing the square
         - [Distance in n dimensions, and the length of a vector](08_Analytic_Geometry/distance_in_n_dimensions/README.md) — Pythagoras twice for a box diagonal, one square per axis by induction, |v| = √(v·v) as the distance from the origin, the four metric properties checked on a grid
+        - [Distance is the four properties: taxicab, Chebyshev, Hamming, and the one that fails](08_Analytic_Geometry/other_distances/README.md) — metric axioms, taxicab and Chebyshev distances and their diamond and square circles, the p-family, p = ½ fails the triangle inequality, squared distance fails it too, only the Euclidean distance survives a rotation, Hamming distance on bit strings, error-correcting codes
         - ↪ [Linear equations and their solutions](07_Linear_Systems/linear_equations/README.md) — the solution set of Ax + By = C is a line
         - ↪ [Congruent and similar triangles](10_Geometry/congruent_and_similar_triangles/README.md) — why a line has one slope
         - ↪ [The Cartesian product](04_Sets/cartesian_product/README.md) — the set ℝ² that the plane is
@@ -139,6 +140,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - ↪ [Ordinals](13_Axioms_of_Set_Theory/ordinals/README.md) — well-ordering past ℕ, and a theorem induction on ℕ cannot prove
         - ↪ [Reading a formula](13_Axioms_of_Set_Theory/reading_a_formula/README.md) — the same symbols inside the axioms of set theory, evaluated on a small universe
         - ↪ [The Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md) — a theorem whose converse is also true
+        - ↪ [Distance is the four properties](08_Analytic_Geometry/other_distances/README.md) — one triple of points disproves a metric; four properties checked on all 512 triples of bit strings
         - ↪ [A definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md) — a definition as an "if and only if"
         - ↪ [The textbook definition on trial](04_Sets/definition_on_trial/README.md) — Russell's paradox: an argument by cases in which both cases fail
         - ↪ [The algebra of sets](04_Sets/algebra_of_sets/README.md) — ∪ ∩ ′ are or, and, not; ⊆ is if–then; De Morgan's laws
@@ -253,11 +255,12 @@ One theorem about right triangles turns out to be how every distance in this lib
 5. [What a proof is](11_Logic/what_a_proof_is/README.md) — the distance formula as a ten-line chain, in which the right angle costs one named assumption.
 6. [Circles: standard form and general form](08_Analytic_Geometry/circles/README.md) — the distance formula held fixed, with twelve whole-number points on x² + y² = 25.
 7. [Distance in n dimensions, and the length of a vector](08_Analytic_Geometry/distance_in_n_dimensions/README.md) — the theorem applied twice for a box, n − 1 times for n axes, and the norm √(v·v) as its distance from the origin.
-8. [Lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md) — perpendicular slopes, checked by the converse.
-9. [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — the length of a complex number, √(x² + y²), is the same formula measured from 0.
-10. [Catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md) — the Burj Khalifa example subtracts two nearly equal squares, and a calculator pays for it.
-11. [Related rates](09_Calculus/related_rates/README.md) — ladders and travellers: x² + y² = z², differentiated in time.
-12. [Studying vs learning ↗](https://masiarek.github.io/learning-to-learn-library/01_Knowing_What_You_Know/studying_vs_learning/) — Bloom's six levels climbed on the theorem, up to Euclid's formula for every whole-number right triangle.
+8. [Distance is the four properties](08_Analytic_Geometry/other_distances/README.md) — the theorem's distance beside two others, and the rotation test that singles it out.
+9. [Lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md) — perpendicular slopes, checked by the converse.
+10. [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — the length of a complex number, √(x² + y²), is the same formula measured from 0.
+11. [Catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md) — the Burj Khalifa example subtracts two nearly equal squares, and a calculator pays for it.
+12. [Related rates](09_Calculus/related_rates/README.md) — ladders and travellers: x² + y² = z², differentiated in time.
+13. [Studying vs learning ↗](https://masiarek.github.io/learning-to-learn-library/01_Knowing_What_You_Know/studying_vs_learning/) — Bloom's six levels climbed on the theorem, up to Euclid's formula for every whole-number right triangle.
 
 ### Scale factor k
 
