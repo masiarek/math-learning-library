@@ -248,4 +248,5 @@ Kwadraty robią tu dwie rzeczy: są Pitagorasem i kasują znaki. Dlatego kolejno
 - [Euclidean distance ↗](https://en.wikipedia.org/wiki/Euclidean_distance) — Wikipedia, with the same formula in any number of dimensions
 - [Odległość ↗](https://pl.wikipedia.org/wiki/Odleg%C5%82o%C5%9B%C4%87) — Wikipedia po polsku
 - Michael Sullivan, *Precalculus* (Pearson), section 1.1 *The Distance and Midpoint Formulas*; this page follows its first objective
+- Ron Larson, *Precalculus* (Cengage), section 1.1, pages 4–5: the derivation with a reason beside every line, the converse of the Pythagorean theorem used to verify a right triangle (Example 4), and the special cases left to Exercise 62
 - James Stewart, Lothar Redlin and Saleem Watson, *Precalculus: Mathematics for Calculus* (Cengage), section 1.9, pages 93–94: the same formula derived from the number-line distance |b − a|, with the absolute values shown to drop under the square; compared with Sullivan in the [reading guide](../../reading_guides/precalculus/README.md)
