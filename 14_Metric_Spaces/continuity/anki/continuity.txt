@@ -1,0 +1,16 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Metric spaces::Continuity
+#tags:math metric-spaces continuity
+#columns:Front	Back	Tags
+#tags column:3
+Define f continuous at p, in balls.	For every eps > 0 there is delta > 0 such that f sends B(p, delta) inside B(f(p), eps): d(x, p) < delta implies d(f(x), f(p)) < eps.	what
+Find a delta for f(x) = x^2 at p = 3.	delta = min(1, eps/7): |x^2 - 9| = |x - 3| |x + 3|, and |x - 3| < 1 keeps |x + 3| < 7, so |x^2 - 9| < 7 (eps/7) = eps.	problems
+Why does the delta for x^2 at 3 need the min with 1?	To keep |x + 3| bounded: the factor is below 7 only while x stays within 1 of 3.	why
+Write the negation of 'f is continuous at p'.	There exists eps > 0 such that for every delta > 0 some x has d(x, p) < delta and d(f(x), f(p)) >= eps.	what
+Why is the step function not continuous at 0?	Take eps = 1/2. For any delta, x = -delta/2 is within delta of 0 and |s(x) - s(0)| = 1 >= 1/2. One eps, a witness for every delta.	why
+Is the distance to a fixed point a continuous function?	Yes, with delta = eps: |d(x, p) - d(y, p)| <= d(x, y) by the triangle inequality, in every metric space.	what
+What is a homeomorphism?	A continuous bijection with a continuous inverse. The two spaces then share open sets, convergent sequences and continuous functions.	what
+Is every function out of a discrete space continuous?	Yes: delta = 1/2 leaves only x = p to check, and d(f(p), f(p)) = 0. Continuity belongs to the function and both metrics together.	trap
+Continuity in terms of open sets?	f is continuous exactly when the preimage of every open set is open.	what

@@ -1,0 +1,46 @@
+1. x_n = 1/n IS CAUCHY: THE TERMS GET CLOSE TO EACH OTHER
+   eps = 1/10    N =    11: |1/m - 1/n| < eps for m, n in N..N+59: True
+   eps = 1/100   N =   101: |1/m - 1/n| < eps for m, n in N..N+59: True
+   eps = 1/1000  N =  1001: |1/m - 1/n| < eps for m, n in N..N+59: True
+   For all m, n >= N: both 1/m and 1/n lie in (0, 1/N], so |1/m - 1/n| < 1/N <= eps.
+   A Cauchy sequence need not mention a limit: the condition is about pairs of terms.
+
+2. NEWTON'S ITERATION FOR sqrt 2, IN EXACT FRACTIONS: CAUCHY IN Q, NO LIMIT IN Q
+   x_0 = 1, x_{n+1} = (x_n + 2/x_n)/2
+   x_0 = 1                            x_n^2 - 2 = -1                               |x_n - x_(n-1)| = -
+   x_1 = 3/2                          x_n^2 - 2 = 1/4                              |x_n - x_(n-1)| = 1/2
+   x_2 = 17/12                        x_n^2 - 2 = 1/144                            |x_n - x_(n-1)| = 1/12
+   x_3 = 577/408                      x_n^2 - 2 = 1/166464                         |x_n - x_(n-1)| = 1/408
+   x_4 = 665857/470832                x_n^2 - 2 = 1/221682772224                   |x_n - x_(n-1)| = 1/470832
+   x_5 = 886731088897/627013566048    x_n^2 - 2 = 1/393146012008229658338304       |x_n - x_(n-1)| = 1/627013566048
+   Writing e_n = x_n^2 - 2 (positive from n = 1 on): e_(n+1) = e_n^2 / (4 x_n^2) <= e_n^2 / 8,
+   so e_n -> 0 faster than any geometric sequence, and |x_m - x_n| <= (e_m + e_n)/2 since
+   |x_m - x_n| = |x_m^2 - x_n^2| / (x_m + x_n) and x_m + x_n > 2. So the sequence is Cauchy,
+   with every step of that argument inside Q.
+   Rationals p/q with q <= 300 whose square is 2: []
+   None, and none at all: if p^2 = 2 q^2 in lowest terms then p is even, p = 2k, 4k^2 = 2q^2,
+   2k^2 = q^2, q is even too, and p/q was not in lowest terms. (Proof by contradiction.)
+   A Cauchy sequence in Q with no limit in Q: the rationals are NOT complete.
+
+3. THE SAME SEQUENCE IN R: IT CONVERGES, AND R IS COMPLETE BY CONSTRUCTION
+   sqrt 2 to 12 decimals, from isqrt(2 * 10^24) = 1414213562373: 1.414213562373
+   x_4 = 665857/470832 = 1.414213562374... to 12 decimals
+   The two agree in the first 12 digits. The real number sqrt 2 is what the sequence
+   was heading for all along; R is Q with a limit supplied for every Cauchy sequence.
+   That is one construction of R, and 'complete' is the property it is built to have.
+
+4. COMPLETENESS IS NOT A MATTER OF OPEN SETS: (0, 1) AND R
+   f(x) = (2x - 1) / (x (1 - x)) maps (0, 1) onto R, continuously and with a continuous inverse,
+   so the two spaces have the same open sets and the same convergent sequences. (Not proved here.)
+   The sequence 1/n is Cauchy in (0, 1) and has no limit there: its only candidate, 0, is missing.
+   Its image f(1/n) for n = 2..10: 0, -3/2, -8/3, -15/4, -24/5, -35/6, -48/7, -63/8, -80/9
+   Gaps between consecutive images: 3/2, 7/6, 13/12, 21/20, 31/30, 43/42, 57/56, 73/72
+   The gaps approach 1 and never 0: the image is not Cauchy in R, and f(1/n) -> -infinity.
+   Being Cauchy depends on the metric, not only on the open sets; so does being complete.
+
+5. TWO SPACES THAT ARE COMPLETE FOR A CHEAP REASON
+   Discrete metric, the sequence ['a', 'b', 'c', 'c', 'c', 'c', 'c']:
+   from index 2 on every two terms are at distance 0, which is < 1/2. Being Cauchy with
+   eps = 1/2 forces 'eventually constant', and a constant tail converges to its constant.
+   The integers with |m - n|: the same argument, since two different integers are 1 apart.
+   And [0, 1] is complete while (0, 1) is not: the one missing point is the whole difference.

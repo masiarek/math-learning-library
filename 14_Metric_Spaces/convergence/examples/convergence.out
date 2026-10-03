@@ -1,0 +1,45 @@
+1. x_n = 1/n CONVERGES TO 0: FOR EVERY RADIUS, A TAIL INSIDE THE BALL
+   eps = 1/10    N =    11: 1/n < eps for n = N..109: True;  1/10 = 1/10 is not < eps, so N cannot be smaller.
+   eps = 1/100   N =   101: 1/n < eps for n = N..1009: True;  1/100 = 1/100 is not < eps, so N cannot be smaller.
+   eps = 1/1000  N =  1001: 1/n < eps for n = N..10009: True;  1/1000 = 1/1000 is not < eps, so N cannot be smaller.
+   The N works for ALL n >= N, not only the ones checked: 1/n < eps exactly when n > 1/eps,
+   and every n >= floor(1/eps) + 1 is bigger than 1/eps. The loop checks the arithmetic.
+
+2. x_n = (-1)^n HAS NO LIMIT: THE BALL OF RADIUS 1 AROUND ANY CANDIDATE MISSES HALF THE TERMS
+   L = -1   max(d(1, L), d(-1, L)) = 2    >= 1: the terms equal to +1 all lie outside B(L, 1).
+   L = -1/2 max(d(1, L), d(-1, L)) = 3/2  >= 1: the terms equal to +1 all lie outside B(L, 1).
+   L = 0    max(d(1, L), d(-1, L)) = 1    >= 1: the terms equal to +1 all lie outside B(L, 1).
+   L = 1/2  max(d(1, L), d(-1, L)) = 3/2  >= 1: the terms equal to -1 all lie outside B(L, 1).
+   L = 1    max(d(1, L), d(-1, L)) = 2    >= 1: the terms equal to -1 all lie outside B(L, 1).
+   L = 3    max(d(1, L), d(-1, L)) = 4    >= 1: the terms equal to -1 all lie outside B(L, 1).
+   For every L: d(1, -1) = 2 <= d(1, L) + d(L, -1), so one of the two distances is >= 1.
+   One radius with no tail inside, for every candidate: that is the negation of convergence.
+
+3. A LIMIT IS UNIQUE: TWO CANDIDATES, TWO DISJOINT BALLS
+   Suppose x_n -> L = 0 and x_n -> M = 1/5. Let r = d(L, M)/2 = 1/10.
+   Points within r of both L and M, on a grid of step 1/100: []
+   None, and none anywhere: a point in both balls would give d(L, M) <= d(L, x) + d(x, M) < 2r = d(L, M).
+   A tail of the sequence cannot lie in two disjoint balls, so L = M.
+
+4. ONE SEQUENCE IN THE PLANE, THREE METRICS, THREE N, ONE LIMIT
+   x_n = (1/n, (-1)^n / n), limit (0, 0), eps = 1/10.
+   Euclidean  first N with the tail inside the ball: N =  15   (checked 200 terms on)
+   taxicab    first N with the tail inside the ball: N =  21   (checked 200 terms on)
+   Chebyshev  first N with the tail inside the ball: N =  11   (checked 200 terms on)
+   Three different N, because the balls have three sizes; one limit, because the balls nest:
+   a tail inside the taxicab ball is inside the Euclidean and Chebyshev balls of the same radius,
+   and a tail inside the Chebyshev ball of radius r/2 is inside the taxicab ball of radius r.
+   Equivalent metrics have the same convergent sequences and the same limits.
+
+5. UNDER THE DISCRETE METRIC, 1/n DOES NOT CONVERGE TO 0
+   d(1/n, 0) for n = 1..7: 1, 1, 1, 1, 1, 1, 1
+   Every term is at distance 1 from 0, so the ball B(0, 1/2) contains no term at all.
+   Under this metric a sequence converges only if it is eventually constant. Same points,
+   same sequence, a different metric, a different answer: convergence belongs to the metric.
+
+6. IN THE PLANE, CONVERGENCE IS COORDINATE BY COORDINATE
+   Under Chebyshev, cheb(x_n, L) < eps means |x-part| < eps AND |y-part| < eps: a point is
+   in the square ball exactly when each coordinate is in its interval. So x_n -> L in the plane
+   exactly when both coordinate sequences converge, and by section 4 that holds for all three metrics.
+   x-parts: 1, 1/2, 1/3, 1/4, 1/5, ...  -> 0
+   y-parts: -1, 1/2, -1/3, 1/4, -1/5, ...  -> 0

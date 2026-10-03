@@ -1,0 +1,31 @@
+1. q(t) = |u + t w|^2 IS A QUADRATIC IN t THAT IS NEVER NEGATIVE
+   u = (1, 2), w = (3, 4): q(t) = |w|^2 t^2 + 2 (u.w) t + |u|^2 = 25 t^2 + 22 t + 5
+   t = -2: u + t w = (-5, -6)   q(t) = 61
+   t = -1: u + t w = (-2, -2)   q(t) = 8
+   t =  0: u + t w = (1, 2)     q(t) = 5
+   t =  1: u + t w = (4, 6)     q(t) = 52
+   t =  2: u + t w = (7, 10)    q(t) = 149
+   q(t) is a sum of squares, so q(t) >= 0 for every real t. A quadratic with positive
+   leading coefficient that is never negative has no two distinct real roots, so its
+   discriminant is at most 0: B^2 - 4AC = 22^2 - 4 * 25 * 5 = -16 <= 0.
+   Divide by 4: (u.w)^2 <= |u|^2 |w|^2, here 121 <= 125. That is Cauchy-Schwarz.
+
+2. EQUALITY EXACTLY WHEN ONE VECTOR IS A MULTIPLE OF THE OTHER
+   u = (1, 2), w = (2, 4) = 2u: q(t) = 20 t^2 + 20 t + 5, discriminant 0.
+   q has the double root t = -1/2: u + (-1/2) w = (0, 0), and (u.w)^2 = 100 = |u|^2 |w|^2 = 100.
+   The discriminant is 0 exactly when some u + t w is the zero vector, i.e. u is a multiple of w
+   (or w = 0). That is the equality case, and it is where the triangle inequality is an equality too.
+
+3. CAUCHY-SCHWARZ ON EVERY PAIR OF A GRID IN THREE DIMENSIONS
+   (u.w)^2 <= |u|^2 |w|^2 on 15625 pairs: True;  pairs with equality: 601
+   The check is evidence that the inequality was copied right; section 1 is the proof, and it
+   used nothing about the number of coordinates, so it holds in every dimension.
+
+4. THE TRIANGLE INEQUALITY, IN THREE LINES AND WITHOUT A SQUARE ROOT
+   |u + w|^2 = |u|^2 + 2 (u.w) + |w|^2                      expand the dot product
+            <= |u|^2 + 2 |u| |w| + |w|^2                     u.w <= |u.w| <= |u| |w|, Cauchy-Schwarz
+            = (|u| + |w|)^2,  so |u + w| <= |u| + |w|          both sides non-negative, take roots
+   With u = Q - P and w = R - Q, u + w = R - P, and the line reads d(P, R) <= d(P, Q) + d(Q, R).
+   |u + w| <= |u| + |w| on the same 15625 pairs, compared through squares: True
+   The Euclidean distance has all four properties of a metric, every one of them now proved,
+   and the chapter's main example rests on nothing but 'a square is never negative'.

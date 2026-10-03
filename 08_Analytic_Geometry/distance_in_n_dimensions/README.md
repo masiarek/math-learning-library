@@ -54,7 +54,7 @@ Four properties, called the axioms of a *metric*, which any function worth calli
 | non-negative | d(P, Q) ≥ 0 | a sum of squares is never negative, and √ is the non-negative root |
 | zero only for one point | d(P, Q) = 0 exactly when P = Q | a sum of squares is 0 only when every square is 0, so every coordinate agrees |
 | symmetric | d(P, Q) = d(Q, P) | squaring forgets the sign of each difference |
-| [triangle inequality](../../GLOSSARY.md#triangle-inequality) | d(P, R) ≤ d(P, Q) + d(Q, R) | the one with a real proof behind it, the Cauchy–Schwarz inequality, which this page does not give |
+| [triangle inequality](../../GLOSSARY.md#triangle-inequality) | d(P, R) ≤ d(P, Q) + d(Q, R) | the one with a real proof behind it, the Cauchy–Schwarz inequality, given in [the triangle inequality proved](../../14_Metric_Spaces/cauchy_schwarz/README.md) |
 
 Section 5 of the program checks all four on every pair, and the fourth on 91 125 triples, of a grid in three dimensions, exactly, with the root never taken: the triangle inequality on squared distances is c² ≤ a² + b² + 2ab, and the cross term is compared by squaring once more. The first three checks are the proofs, run on numbers; the fourth is a check and not a proof, and the page says so.
 

@@ -1,0 +1,40 @@
+1. f(x) = x^2 IS CONTINUOUS AT 3: FOR EVERY eps, A delta
+   eps = 1      delta = min(1, eps/7) = 1/7     |x^2 - 9| < eps on 1999 points within delta of 3: True
+   eps = 1/10   delta = min(1, eps/7) = 1/70    |x^2 - 9| < eps on 1999 points within delta of 3: True
+   eps = 1/100  delta = min(1, eps/7) = 1/700   |x^2 - 9| < eps on 1999 points within delta of 3: True
+   eps = 1/1000 delta = min(1, eps/7) = 1/7000  |x^2 - 9| < eps on 1999 points within delta of 3: True
+   Why delta = min(1, eps/7) works for EVERY x, not only the grid:
+     |x^2 - 9| = |x - 3| |x + 3|, and |x - 3| < 1 gives 2 < x < 4, so |x + 3| < 7,
+     so |x^2 - 9| < 7 |x - 3| < 7 (eps/7) = eps.
+
+2. THE STEP FUNCTION IS NOT CONTINUOUS AT 0: ONE eps DEFEATS EVERY delta
+   s(x) = 0 for x < 0 and 1 for x >= 0; s(0) = 1. Take eps = 1/2.
+   delta = 1       witness x = -1/2     |x - 0| = 1/2     < delta, and |s(x) - s(0)| = 1 >= eps
+   delta = 1/10    witness x = -1/20    |x - 0| = 1/20    < delta, and |s(x) - s(0)| = 1 >= eps
+   delta = 1/100   witness x = -1/200   |x - 0| = 1/200   < delta, and |s(x) - s(0)| = 1 >= eps
+   delta = 1/1000  witness x = -1/2000  |x - 0| = 1/2000  < delta, and |s(x) - s(0)| = 1 >= eps
+   The witness x = -delta/2 works for every delta > 0, so no delta works for eps = 1/2.
+   'Not continuous' is: there EXISTS an eps such that for ALL delta some x breaks it;
+   the negation of a for-all-exists is an exists-for-all, and the witness is the proof.
+
+3. THE DISTANCE TO A FIXED POINT IS CONTINUOUS, WITH delta = eps
+   Claim: |d(x, p) - d(y, p)| <= d(x, y). Proof: d(x, p) <= d(x, y) + d(y, p) is the triangle
+   inequality, so d(x, p) - d(y, p) <= d(x, y); swap x and y for the other sign.
+   Checked with the taxicab metric on 2401 pairs around p = (1, 2): True
+   So if d(x, y) < eps then |d(x, p) - d(y, p)| < eps: delta = eps, in every metric space.
+
+4. THE IDENTITY MAP BETWEEN TWO EQUIVALENT METRICS IS CONTINUOUS BOTH WAYS
+   From (plane, taxicab) to (plane, Euclidean): eucl <= taxi, so delta = eps.
+   From (plane, Euclidean) to (plane, taxicab): taxi <= 2 cheb <= 2 eucl, so delta = eps/2.
+   eucl^2 <= taxi^2 on all pairs: True;  taxi^2 <= 4 eucl^2 on all pairs: True
+   A map that is continuous both ways, with a continuous inverse, is a homeomorphism:
+   the two metric spaces have the same open sets and the same convergent sequences.
+
+5. OUT OF A DISCRETE SPACE, EVERY FUNCTION IS CONTINUOUS
+   p = a: points within delta = 1/2 of p: ['a']; |f(x) - f(p)| there is 0, below every eps.
+   p = b: points within delta = 1/2 of p: ['b']; |f(x) - f(p)| there is 0, below every eps.
+   p = c: points within delta = 1/2 of p: ['c']; |f(x) - f(p)| there is 0, below every eps.
+   p = d: points within delta = 1/2 of p: ['d']; |f(x) - f(p)| there is 0, below every eps.
+   p = e: points within delta = 1/2 of p: ['e']; |f(x) - f(p)| there is 0, below every eps.
+   The condition 'd(x, p) < delta implies d(f(x), f(p)) < eps' has only x = p to satisfy,
+   and it does. Continuity is a property of the map AND the two metrics, never of the map alone.

@@ -1,0 +1,17 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Metric spaces::Open balls
+#tags:math metric-spaces open-balls
+#columns:Front	Back	Tags
+#tags column:3
+What is the open ball B(p, r)?	The set of points at distance less than r from p. Strict: the rim is not in it.	what
+When is a set open?	When every point of it keeps some open ball around it inside the set.	what
+Why is an open ball an open set?	For x in B(p, r), the ball B(x, r - d(p, x)) fits inside, by the triangle inequality.	why
+Is the closed disc x^2 + y^2 <= 9 open?	No: every ball around (3, 0) contains (3 + r/2, 0), which is outside. One rim point is enough.	trap
+State the chain between the plane's three metrics.	cheb <= eucl <= taxi <= 2 cheb, on every pair of points; three one-line inequalities with a = |dx| and b = |dy|.	what
+How do the balls of the three metrics nest?	B_taxi(p, r) inside B_eucl(p, r) inside B_cheb(p, r) inside B_taxi(p, 2r).	what
+What are equivalent metrics, and how are they usually proved equivalent?	Metrics with the same open sets. A two-sided bound c d1 <= d2 <= C d1 nests each ball of one kind inside a ball of the other.	why
+Which pair of points makes taxi = 2 cheb?	Any pair with |dx| = |dy|, such as (0, 0) and (1, 1): taxicab 2, Chebyshev 1. The factor 2 is sharp.	problems
+What are the balls of the discrete metric?	B(p, r) is {p} for r <= 1 and the whole space for r > 1. So every subset is open.	what
+Is the discrete metric equivalent to the Euclidean one?	No. {p} is open under the discrete metric and not under the Euclidean one, where every ball of positive radius contains p + (r/2, 0).	trap

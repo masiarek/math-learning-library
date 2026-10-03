@@ -204,6 +204,16 @@ NAV_ORDER: dict[str, list[str]] = {
         "ordinals",
         "axiom_katas",
     ],
+    # A set with a distance: balls and open sets, then limits, continuity and
+    # completeness defined from the distance alone, then the one debt paid.
+    "14_Metric_Spaces": [
+        "README.md",
+        "open_balls",
+        "convergence",
+        "continuity",
+        "completeness",
+        "cauchy_schwarz",
+    ],
     "10_Geometry": [
         "README.md",
         "pythagorean_theorem",

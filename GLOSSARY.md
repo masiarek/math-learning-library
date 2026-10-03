@@ -92,6 +92,12 @@ Terms used across the library, with the page that explains each in full. For set
 **Category** — a collection of objects and arrows between them, with a composition of arrows that is associative and has identities. Sets with functions, groups with homomorphisms, and vector spaces with linear maps are categories. See [maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md).
 { #category }
 
+**Cauchy sequence** — a sequence whose terms eventually stay within any ε of each other: for every ε > 0 there is an N with d(x_m, x_n) < ε for all m, n ≥ N. Every convergent sequence is Cauchy; the converse is completeness. Newton's iteration for √2 is Cauchy in ℚ with no rational limit. See [completeness](14_Metric_Spaces/completeness/README.md).
+{ #cauchy-sequence }
+
+**Cauchy–Schwarz inequality** — (u·w)² ≤ |u|²|w|² for any two vectors, with equality exactly when one is a multiple of the other. Proved by noting that |u + tw|² is a quadratic in t that is never negative, so its discriminant is at most 0. It gives the triangle inequality for the Euclidean distance in three lines. See [the triangle inequality proved](14_Metric_Spaces/cauchy_schwarz/README.md).
+{ #cauchy-schwarz-inequality }
+
 **Cayley graph** — of a group with chosen generators: a vertex for each element and an edge labelled g from ρ to gρ for each generator g. Halbeisen labels the vertices of the Cayley graph of Hausdorff's rotation group with ❶, ❷, ❸ so that the three label classes satisfy B = ψ[A], C = ψ⁻¹[A] and B ∪ C = φ[A]. See [two balls from one](13_Axioms_of_Set_Theory/two_balls_from_one/README.md#the-labelled-cayley-graph).
 { #cayley-graph }
 
@@ -134,6 +140,9 @@ Terms used across the library, with the page that explains each in full. For set
 **Complement** — A′, the members of a fixed universal set U that are not in A: A′ = U ∖ A; also written Ā or Aᶜ. It has no meaning without U, since there is no set of everything; in Python it is `U - a`. See [the algebra of sets](04_Sets/algebra_of_sets/README.md).
 { #complement }
 
+**Complete metric space** — one in which every Cauchy sequence converges to a point of the space. ℝ is complete by construction, ℚ is not (√2 is a hole), (0, 1) is not and [0, 1] is; the discrete metric is. Not preserved by homeomorphism, so not a property of the open sets alone. See [completeness](14_Metric_Spaces/completeness/README.md).
+{ #complete-metric-space }
+
 **Completing the square** — rewriting x² + ax as (x + a/2)² − (a/2)², by adding half the coefficient squared to both sides. It turns the general form of a circle back into the standard form. See [circles](08_Analytic_Geometry/circles/README.md).
 { #completing-the-square }
 
@@ -157,6 +166,9 @@ Terms used across the library, with the page that explains each in full. For set
 
 **Connectives (¬, ∧, ∨, ⇒, ⇔)** — the symbols that build statements from statements: ¬ not, ∧ and, ∨ or (inclusive), ⇒ implies (also →), ⇔ if and only if (also ↔), and ⇏ for "does not imply". Each is defined by its truth table, and the laws of the algebra of sets are their laws read through membership: ∪ is ∨, ∩ is ∧, complement is ¬. See [truth tables and laws](11_Logic/truth_tables_and_laws/README.md).
 { #connectives }
+
+**Continuous function (ε-δ)** — f is continuous at p when for every ε > 0 there is a δ > 0 with d(x, p) < δ implying d(f(x), f(p)) < ε: a ball around p sent inside a ball around f(p). Equivalently the preimage of every open set is open. "Not continuous" is one ε that no δ survives. A property of the function together with both metrics. See [continuity](14_Metric_Spaces/continuity/README.md).
+{ #continuous-function-epsilon-delta }
 
 **Contrapositive** — of "if A then B", the statement "if not B then not A". It is false in exactly the same case as the original, A true and B false, so it is the same claim. See [if A then B](11_Logic/converse_and_contrapositive/README.md).
 { #contrapositive }
@@ -194,6 +206,9 @@ Terms used across the library, with the page that explains each in full. For set
 **Dimension of a formula** — how many lengths each term multiplies together: one for a perimeter, two for an area, three for a volume. Scaling every length by k scales the result by k to that power, which catches a misremembered formula. See [area and volume formulas](10_Geometry/area_and_volume_formulas/README.md).
 { #dimension-of-a-formula }
 
+**Discrete metric** — d(p, q) = 1 for p ≠ q and 0 for p = q. A metric whose balls are a single point or everything, so every set is open, every function out of the space is continuous, only eventually constant sequences converge, and the space is complete. The control experiment of the [metric spaces chapter](14_Metric_Spaces/README.md). See [open balls](14_Metric_Spaces/open_balls/README.md).
+{ #discrete-metric }
+
 **Disjoint** — two sets with no member in common: A ∩ B = ∅. In a Venn diagram, two circles drawn apart; in Python, `a.isdisjoint(b)`. See [the algebra of sets](04_Sets/algebra_of_sets/README.md).
 { #disjoint }
 
@@ -217,6 +232,9 @@ Terms used across the library, with the page that explains each in full. For set
 
 **Equivalence relation** — a relation that is reflexive, symmetric and transitive; its classes [u] partition the set, and every partition arises this way. Congruence mod m is the one everyone uses. See [equivalence relations and partitions](04_Sets/equivalence_and_partitions/README.md).
 { #equivalence-relation }
+
+**Equivalent metrics** — two metrics on one set with the same open sets, and so the same convergent sequences and continuous functions. The usual proof is a two-sided bound c·d₁ ≤ d₂ ≤ C·d₁, which nests each ball of one kind inside a ball of the other; cheb ≤ eucl ≤ taxi ≤ 2·cheb does it for the plane's three metrics. Equivalent metrics need not share completeness. See [open balls](14_Metric_Spaces/open_balls/README.md).
+{ #equivalent-metrics }
 
 **Euclidean norm** — the length of a vector, |v| = √(v₁² + ⋯ + vₙ²) = √(v·v); a definition in linear algebra, and a length because the distance formula says that number is the distance from the origin to the arrow's tip. The distance between two points is the norm of their difference. See [distance in n dimensions](08_Analytic_Geometry/distance_in_n_dimensions/README.md).
 { #euclidean-norm }
@@ -290,6 +308,9 @@ Terms used across the library, with the page that explains each in full. For set
 **Hashable** — in Python, an object whose `hash` works and never changes while it is stored, which is what a set member or dict key must be. Lists, dicts and sets are not; ints, strings, frozensets, and tuples of hashables are. A tuple that holds a list is not, so the rule is hashable, not immutable. See [a set is a hash table ↗](https://masiarek.github.io/python-learning-library/04_Names_and_Objects/a_set_is_a_hash_table/index.html) in the Python library.
 { #hashable }
 
+**Homeomorphism** — a continuous bijection with a continuous inverse; two spaces joined by one have the same open sets, convergent sequences and continuous functions, but need not share completeness or boundedness: (0, 1) and ℝ are homeomorphic and only one is complete. See [continuity](14_Metric_Spaces/continuity/README.md) and [completeness](14_Metric_Spaces/completeness/README.md).
+{ #homeomorphism }
+
 **Homomorphism** — a map f between two sets with operations that keeps the operation: f(a · b) = f(a) ∗ f(b). A linear map is one; so are n ↦ 2ⁿ, the logarithm, the determinant, and the length of a string. A homomorphism of groups sends the identity to the identity and inverses to inverses, which is why 2⁰ = 1, log 1 = 0, T(0) = 0 and det I = 1 are one theorem. See [maps that keep the laws](06_Algebraic_Structures/maps_that_keep_the_laws/README.md).
 { #homomorphism }
 
@@ -353,6 +374,9 @@ Terms used across the library, with the page that explains each in full. For set
 **Lexicographic order** — the dictionary order on pairs: (a, b) ≤ (c, d) when a < c, or a = c and b ≤ d. A partial order, linear when both coordinates are; a two-column sort uses it. See [orderings](04_Sets/orderings/README.md).
 { #lexicographic-order }
 
+**Limit of a sequence** — x_n → L when for every ε > 0 there is an N with d(x_n, L) < ε for all n ≥ N: every ball around L contains a tail of the sequence. The N depends on ε. A limit is unique, by two disjoint balls; the same limit under equivalent metrics, with different N. See [convergence](14_Metric_Spaces/convergence/README.md).
+{ #limit-of-a-sequence }
+
 **Linear combination** — a₁x₁ + a₂x₂ + ⋯ + aₙxₙ: each variable multiplied by a fixed number, then added. No powers, no products of variables, no variable inside a function. It keeps sums and multiples, which is what makes it a linear map. See [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md).
 { #linear-combination }
 
@@ -395,10 +419,10 @@ Terms used across the library, with the page that explains each in full. For set
 **Metacognition** — John Flavell's word (1976) for thinking about your own thinking, including the ability to judge accurately how much you have learned, the one part a program can measure. See [metacognition ↗](https://masiarek.github.io/learning-to-learn-library/01_Knowing_What_You_Know/metacognition/).
 { #metacognition }
 
-**Metric** — a distance function on a set: d(P, Q) ≥ 0, d(P, Q) = 0 exactly when P = Q, d(P, Q) = d(Q, P), and the triangle inequality d(P, R) ≤ d(P, Q) + d(Q, R). The Euclidean formula is one; the first three properties are a line each from the formula, the fourth needs the Cauchy–Schwarz inequality. The properties are the definition and the formula is replaceable: taxicab, Chebyshev and Hamming distances are metrics too, and (√|Δx| + √|Δy|)² is not. See [distance in n dimensions](08_Analytic_Geometry/distance_in_n_dimensions/README.md) and [distance is the four properties](08_Analytic_Geometry/other_distances/README.md).
+**Metric** — a distance function on a set: d(P, Q) ≥ 0, d(P, Q) = 0 exactly when P = Q, d(P, Q) = d(Q, P), and the triangle inequality d(P, R) ≤ d(P, Q) + d(Q, R). The Euclidean formula is one; the first three properties are a line each from the formula, the fourth needs the [Cauchy–Schwarz inequality](#cauchy-schwarz-inequality), proved in [the triangle inequality proved](14_Metric_Spaces/cauchy_schwarz/README.md). The properties are the definition and the formula is replaceable: taxicab, Chebyshev and Hamming distances are metrics too, and (√|Δx| + √|Δy|)² is not. See [distance in n dimensions](08_Analytic_Geometry/distance_in_n_dimensions/README.md) and [distance is the four properties](08_Analytic_Geometry/other_distances/README.md).
 { #metric }
 
-**Metric space** — a set together with a [metric](#metric) on it. The opening chapter of analysis, where a limit, a continuous function and a complete space are each defined from the distance alone and so hold at once for the line, the plane, n dimensions and spaces of functions; and the doorway to topology, which keeps the open balls and drops the distance. No chapter here yet; it is a candidate on the [roadmap](ROADMAP.md#candidate-chapters). See [distance is the four properties](08_Analytic_Geometry/other_distances/README.md) and [metric space ↗](https://en.wikipedia.org/wiki/Metric_space).
+**Metric space** — a set together with a [metric](#metric) on it. The opening chapter of analysis, where a limit, a continuous function and a complete space are each defined from the distance alone and so hold at once for the line, the plane, n dimensions and spaces of functions; and the doorway to topology, which keeps the open balls and drops the distance. The subject of [14_Metric_Spaces](14_Metric_Spaces/README.md). See [distance is the four properties](08_Analytic_Geometry/other_distances/README.md) and [metric space ↗](https://en.wikipedia.org/wiki/Metric_space).
 { #metric-space }
 
 **Midpoint** — the point halfway along a segment, ((x₁ + x₂)/2, (y₁ + y₂)/2): an average per coordinate. Equidistant from both ends and on the segment; equidistance alone describes the perpendicular bisector. See [the midpoint formula](08_Analytic_Geometry/midpoint_formula/README.md).
@@ -433,6 +457,12 @@ Terms used across the library, with the page that explains each in full. For set
 
 **Number sets (ℕ, ℤ, ℚ, ℝ, ℂ)** — the blackboard-bold letters for the natural numbers ℕ (with or without 0, by book), the integers ℤ (German *Zahlen*), the rationals ℚ (quotients), the reals ℝ and the complex numbers ℂ, each a subset of the next; 𝔸 is sometimes the algebraic numbers and 𝕋 the circle. In set theory ℕ is ω, the first infinite ordinal, and |ℕ| is ℵ₀. See [infinity](13_Axioms_of_Set_Theory/infinity/README.md) and [countable sets](02_Measure_Zero/countable_sets/README.md).
 { #number-sets-n-z-q-r-c }
+
+**Open ball** — B(p, r), the set of points at distance less than r from p; a disc without its rim in the plane's Euclidean metric, a diamond in the taxicab metric, a square in Chebyshev's. Every definition of analysis is a sentence about balls. See [open balls](14_Metric_Spaces/open_balls/README.md).
+{ #open-ball }
+
+**Open set** — a set in which every point keeps some open ball around it inside the set. A ball is open, by the triangle inequality; the closed disc is not, because a point on its rim has every ball poking out. Two metrics with the same open sets are [equivalent](#equivalent-metrics). See [open balls](14_Metric_Spaces/open_balls/README.md).
+{ #open-set }
 
 **Orbit** — of a point under a group acting on a set, the set of points it can be moved to; the orbits are the classes of the equivalence “can be moved to”, and Burnside's lemma counts them as the average number of points each group element fixes. Congruent triangles are the orbits of the rigid motions. See [equivalence relations and partitions](04_Sets/equivalence_and_partitions/README.md#where-the-textbook-sections-live-here).
 { #orbit }

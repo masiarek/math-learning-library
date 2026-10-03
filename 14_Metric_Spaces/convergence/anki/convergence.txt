@@ -1,0 +1,16 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Metric spaces::Convergence
+#tags:math metric-spaces convergence
+#columns:Front	Back	Tags
+#tags column:3
+Define x_n -> L in a metric space.	For every eps > 0 there is an N such that d(x_n, L) < eps for all n >= N: every ball around L contains a tail of the sequence.	what
+For x_n = 1/n and eps = 1/100, what is the smallest N?	N = 101: 1/n < 1/100 exactly when n > 100, and 1/100 itself is not less than eps.	problems
+Why does N = floor(1/eps) + 1 work for ALL n >= N and not only the ones checked?	1/n < eps exactly when n > 1/eps, and every n >= floor(1/eps) + 1 is bigger than 1/eps. The algebra is the proof; a loop checks the arithmetic.	why
+Write the negation of x_n -> L with the quantifiers in order.	There exists eps > 0 such that for every N there is an n >= N with d(x_n, L) >= eps.	what
+Why does (-1)^n have no limit?	For any candidate L, d(1, L) + d(L, -1) >= d(1, -1) = 2, so one is >= 1; the ball B(L, 1) misses all the odd terms or all the even ones.	why
+Why is a limit unique?	If L != M, the balls of radius d(L, M)/2 around them are disjoint by the triangle inequality, and a tail cannot lie in both.	why
+Do equivalent metrics have the same limits?	Yes, with different N: a tail inside a ball of one kind is inside a ball of each other kind. For (1/n, (-1)^n/n) and eps = 1/10 the N are 15, 21 and 11.	what
+Does 1/n converge under the discrete metric?	No. Every term is at distance 1 from 0, so B(0, 1/2) contains no term. Only eventually constant sequences converge there.	trap
+When does a sequence in the plane converge?	Exactly when both coordinate sequences converge: the Chebyshev ball is the set where each coordinate is within eps, and equivalence carries it to the other metrics.	what

@@ -1,0 +1,16 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Metric spaces::Completeness
+#tags:math metric-spaces completeness
+#columns:Front	Back	Tags
+#tags column:3
+Define a Cauchy sequence.	For every eps > 0 there is an N with d(x_m, x_n) < eps for all m, n >= N: the terms eventually stay within eps of each other. No limit is named.	what
+Why is every convergent sequence Cauchy?	If x_m and x_n are both within eps/2 of L they are within eps of each other, by the triangle inequality.	why
+Define a complete metric space.	One in which every Cauchy sequence converges to a point of the space.	what
+Why is Q not complete?	Newton's iteration x_(n+1) = (x_n + 2/x_n)/2 from 1 gives rationals 1, 3/2, 17/12, 577/408, ... that are Cauchy, and any limit L would satisfy L^2 = 2, which no rational does.	why
+Why is there no rational with square 2?	If p^2 = 2 q^2 in lowest terms, p is even, p = 2k, so q^2 = 2 k^2 and q is even too: not lowest terms. Contradiction.	why
+Why is R complete?	By construction: one standard construction of R is the Cauchy sequences of rationals with two identified when their difference tends to 0. Completeness is what R was built to have.	what
+(0, 1) and R are homeomorphic. Which is complete?	R only. 1/n is Cauchy in (0, 1) with no limit there. Completeness is a property of the distances, not of the open sets.	trap
+Is Q with the discrete metric complete?	Yes: a Cauchy sequence with eps = 1/2 is eventually constant. Completeness belongs to the metric, not the set.	trap
+Why is [0, 1] complete when (0, 1) is not?	A Cauchy sequence in [0, 1] converges in R, and its limit cannot leave a closed set; in (0, 1) the sequence 1/n leaves through the open end.	why

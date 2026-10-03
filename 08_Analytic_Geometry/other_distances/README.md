@@ -177,7 +177,7 @@ The page as a deck of Anki cards: [`other_distances.txt`](anki/other_distances.t
 
 ## Where this goes next
 
-A set with a distance on it is a [*metric space*](../../GLOSSARY.md#metric-space), the opening chapter of analysis and a candidate chapter on the [roadmap](../../ROADMAP.md#candidate-chapters): limits, continuity and completeness are all defined from d(P, Q) alone, which is why the four properties matter more than any formula. The Euclidean choice leads to inner products and the Cauchy–Schwarz inequality, in the [linear algebra reading guide](../../reading_guides/linear_algebra/README.md); the Hamming choice leads to coding theory. And the question "what does a distance look like when the surface is curved?" is where the Euclidean formula survives only in the small, as ds² = dx² + dy², the start of differential geometry.
+A set with a distance on it is a [*metric space*](../../GLOSSARY.md#metric-space), and [14_Metric_Spaces](../../14_Metric_Spaces/README.md) is the chapter that opens from here, the opening chapter of analysis: limits, continuity and completeness are all defined from d(P, Q) alone, which is why the four properties matter more than any formula. The Euclidean choice leads to inner products and the Cauchy–Schwarz inequality, in the [linear algebra reading guide](../../reading_guides/linear_algebra/README.md); the Hamming choice leads to coding theory. And the question "what does a distance look like when the surface is curved?" is where the Euclidean formula survives only in the small, as ds² = dx² + dy², the start of differential geometry.
 
 ## Po polsku, w skrócie
 
