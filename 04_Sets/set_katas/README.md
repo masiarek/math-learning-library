@@ -134,7 +134,7 @@ What else the ladder says, each line checked at the end of section 9:
 - **Sets on both sides.** `{1, 2} - [1]` raises `TypeError`, and so does `-{1, 2}`: there is no unary minus on a set. The methods, `A.difference(B)`, `A.intersection(B)` and the rest, take any iterable and have no precedence to know, which is a reason to prefer them where a reader has to trust the code.
 - **An `assert` on the final set is a weak test.** It passes whenever any reading gives that set. Try every bracketing, as section 9 does, before calling a kata a test of precedence.
 
-The katas, repaired, are in this page's deck as cards.
+The katas, repaired, are in this page's deck as cards, and are lines 12 to 15 of the Python library's kata on [a set is a hash table ↗](https://masiarek.github.io/python-learning-library/04_Names_and_Objects/a_set_is_a_hash_table/index.html#practice), whose answer key counts the bracketings that agree.
 
 ## Flashcards
 
