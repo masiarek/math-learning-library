@@ -103,9 +103,42 @@ A symbol table the owner sent next (the RapidTables one, by its look) defines �
 
 Two of the five, 41 and 42, are the lesson: a solution set can be everything or nothing, and "no solution" is not a failure of the method but a set, ∅. A grid of points refutes "all" or "empty" with one counterexample and never proves them; the proofs are the sign of a square and the discriminant.
 
+## Precedence katas: four pasted katas, and whether each tests anything
+
+The owner pasted four Python katas on the order in which Python reads `-`, `&`, `^` and `|` between sets, asking whether they are correct and what else there is to know. Their four expected sets are all right, and Python's ladder is as they say, tightest first `-`, then `&`, then `^`, then `|`, with comparisons such as `<=`, `==` and `in` below all four (the language reference's precedence table, read from CPython's source; [reading a set expression](../reading_set_expressions/README.md) asks the parser itself). Section 9 of the program then does what an `assert` on the final set does not: it evaluates each expression under every way of bracketing it, the two for three operands and the fourteen for five, and counts how many give the expected set. A kata tests a precedence claim only when the rival readings give a different set.
+
+| Kata | Expected | Right? | Bracketings that give it | Verdict |
+|---|---|---|---|---|
+| 1. `A \| B & C` with A = {1, 2, 3}, B = {3, 4, 5}, C = {5, 6, 7} | {1, 2, 3, 5} | yes | 1 of 2 | tests `&` before `\|`; the other reading gives {5} |
+| 2. `A - B & C` with A = {1, 2, 3, 4}, B = {3, 4, 5}, C = {4, 5, 6} | ∅ | yes | 1 of 2 | tests `-` before `&`; the other reading gives {1, 2, 3} |
+| 3. `A \| B ^ A & C` with A = {1, 2}, B = {2, 3}, C = {3, 4} | {1, 2, 3} | yes | 3 of 5 | tests nothing about `^`: A ∩ C = ∅ and B △ ∅ = B, so the `^` step does nothing, and both readings the kata says it rules out, `^` above `&` and `^` below `\|`, give {1, 2, 3} too |
+| 4. `A \| B ^ C - A & D` with A = {1, 2}, B = {2, 3}, C = {3, 4}, D = {2, 4} | {1, 2, 3, 4} | yes | 2 of 14 | tests `-` before `&` before `^`, not `^` before `\|`: (C ∖ A) ∩ D is disjoint from A, and (A ∪ B) △ X = A ∪ (B △ X) whenever A ∩ X = ∅, so no choice of sets mends it while the second operand of `-` is A again |
+
+The repairs, both in section 9: kata 3 with C = {2, 4} still expects {1, 2, 3}, and now only Python's reading gives it (the rivals give {1, 2} and {1, 3}); kata 4 with a fifth set, `A | B ^ C - D & E` with A = {1, 2}, B = {2, 3}, C = {1, 3}, D = {3, 4}, E = {1, 4}, expects {1, 2, 3}, and one bracketing of fourteen gives it. The pattern is the one [reading a set expression](../reading_set_expressions/README.md#where-difference-goes-and-a-pasted-answer-checked) met in a pasted answer: an example confirms a rule only when every other reading fails.
+
+The names and the prose around the katas are an AI's, by their look, and claim by claim:
+
+| Claim | How sure | Note |
+|---|---|---|
+| "The mathematical standard": intersection binds tighter than union | Right | The part every source shares, copied from ∧ before ∨. |
+| Python's order is inherited from C's arithmetic and bitwise operators | Right | `-` is C's binary minus, above `&`, `^` and `\|` in that order, and Python kept the ladder; it did not keep C's place for comparisons, which there come before `&`, so `A & B == C` compares the intersection in Python and a truth value in C. |
+| "Difference binds tighter than intersection, breaking textbook precedence" | Overstated | No textbook gives ∖ a level; Ashlock brackets it always. Lean 4 reads A ∖ B ∩ C as Python does; Isabelle, Pascal, SQL and Z read it the other way. |
+| Symmetric difference "sits exactly between intersection and union" | Right for Python | No textbook has △ anywhere either; bracket it. |
+| Kata 3 "tests where ^ falls in the hierarchy" | Wrong | It passes under the readings it claims to rule out. |
+| Kata 4 "traces the complete hierarchy" | Three rungs of four | `^` against `\|` cannot show, by construction. |
+
+What else the ladder says, each line checked at the end of section 9:
+
+- **Comparisons come last.** `A - B <= C` is (A ∖ B) ⊆ C and `A ^ B == C` compares the symmetric difference, so a claim about sets can be typed without brackets.
+- **Only `-` needs brackets within its level.** A ∖ B ∖ C is (A ∖ B) ∖ C, left to right, and the other grouping is a different set on 2 800 of the 4 096 triples of subsets of {1, 2, 3, 4}; A △ B △ C is the same set either way, as are chains of ∩ and of ∪, because those three are associative.
+- **Sets on both sides.** `{1, 2} - [1]` raises `TypeError`, and so does `-{1, 2}`: there is no unary minus on a set. The methods, `A.difference(B)`, `A.intersection(B)` and the rest, take any iterable and have no precedence to know, which is a reason to prefer them where a reader has to trust the code.
+- **An `assert` on the final set is a weak test.** It passes whenever any reading gives that set. Try every bracketing, as section 9 does, before calling a kata a test of precedence.
+
+The katas, repaired, are in this page's deck as cards.
+
 ## Flashcards
 
-The textbook's summary and these katas as a deck of Anki cards: [`set_katas.txt`](anki/set_katas.txt). Import with File → Import. Tags: `definition`, `notation`, `trap`, `counting`, `formula`, `example`. The cards are also in the chapter's combined deck.
+The textbook's summary and these katas as a deck of Anki cards: [`set_katas.txt`](anki/set_katas.txt). Import with File → Import. Tags: `definition`, `notation`, `trap`, `counting`, `formula`, `example`. The four precedence katas, repaired, are cards too. The cards are also in the chapter's combined deck.
 
 ## What the program prints
 
@@ -234,6 +267,72 @@ The textbook's summary and these katas as a deck of Anki cards: [`set_katas.txt`
    A = {1}, B = {2, 3}: |A| ≤ |B| is True, A ⊆ B is False
    Every subset has no more elements, but having no more elements is not being a
    subset. ⊆ is about membership: every member of A is a member of B.
+
+9. FOUR PASTED PRECEDENCE KATAS, TRIED UNDER EVERY BRACKETING
+   Python's ladder, tightest first: - then & then ^ then |, and comparisons
+   below all four (the language reference's precedence table). An assert on
+   the final set passes whenever any reading gives that set, so each kata is
+   evaluated under every full bracketing, and tests a step only if the rival
+   readings give a different set.
+   kata 1  A | B & C   with A = {1, 2, 3}, B = {3, 4, 5}, C = {5, 6, 7}
+      Python reads (A | (B & C)) = {1, 2, 3, 5}; the kata expects {1, 2, 3, 5}: right
+      (A | (B & C))                {1, 2, 3, 5}     Python's
+      ((A | B) & C)                {5}              
+      1 of 2 bracketings give the expected set: only Python's
+   kata 2  A - B & C   with A = {1, 2, 3, 4}, B = {3, 4, 5}, C = {4, 5, 6}
+      Python reads ((A - B) & C) = ∅; the kata expects ∅: right
+      (A - (B & C))                {1, 2, 3}        
+      ((A - B) & C)                ∅                Python's
+      1 of 2 bracketings give the expected set: only Python's
+   kata 3  A | B ^ A & C   with A = {1, 2}, B = {2, 3}, C = {3, 4}
+      Python reads (A | (B ^ (A & C))) = {1, 2, 3}; the kata expects {1, 2, 3}: right
+      (A | (B ^ (A & C)))          {1, 2, 3}        Python's
+      (A | ((B ^ A) & C))          {1, 2, 3}        also
+      ((A | B) ^ (A & C))          {1, 2, 3}        also
+      ((A | (B ^ A)) & C)          {3}              
+      (((A | B) ^ A) & C)          {3}              
+      3 of 5 bracketings give the expected set
+   kata 4  A | B ^ C - A & D   with A = {1, 2}, B = {2, 3}, C = {3, 4}, D = {2, 4}
+      Python reads (A | (B ^ ((C - A) & D))) = {1, 2, 3, 4}; the kata expects {1, 2, 3, 4}: right
+      (A | (B ^ (C - (A & D))))    {1, 2, 4}        
+      (A | (B ^ ((C - A) & D)))    {1, 2, 3, 4}     Python's
+      (A | ((B ^ C) - (A & D)))    {1, 2, 4}        
+      (A | ((B ^ (C - A)) & D))    {1, 2, 4}        
+      (A | (((B ^ C) - A) & D))    {1, 2, 4}        
+      ((A | B) ^ (C - (A & D)))    {1, 2, 4}        
+      ((A | B) ^ ((C - A) & D))    {1, 2, 3, 4}     also
+      ((A | (B ^ C)) - (A & D))    {1, 4}           
+      (((A | B) ^ C) - (A & D))    {1, 4}           
+      ((A | (B ^ (C - A))) & D)    {2, 4}           
+      ((A | ((B ^ C) - A)) & D)    {2, 4}           
+      (((A | B) ^ (C - A)) & D)    {2, 4}           
+      (((A | (B ^ C)) - A) & D)    {4}              
+      ((((A | B) ^ C) - A) & D)    {4}              
+      2 of 14 bracketings give the expected set
+   Kata 3 tests nothing about ^: A ∩ C = ∅ and B △ ∅ = B, so the ^ step changes
+   nothing, and the two readings it claims to rule out, ^ above & and ^ below |,
+   give the expected set too. Kata 4 tests - before & before ^, not ^ before |:
+   A | (B ^ ((C - A) & D)) = (A | B) ^ ((C - A) & D) on all 65536 quadruples of subsets
+   of {1, 2, 3, 4} (0 differ): (C ∖ A) ∩ D is disjoint from A, and (A ∪ B) △ X = A ∪ (B △ X)
+   whenever A ∩ X = ∅. No choice of sets mends it while the second operand of - is A.
+   Repaired:
+   kata 3  A | B ^ A & C   with A = {1, 2}, B = {2, 3}, C = {2, 4}
+      Python reads (A | (B ^ (A & C))) = {1, 2, 3}; the kata expects {1, 2, 3}: right
+      (A | (B ^ (A & C)))          {1, 2, 3}        Python's
+      (A | ((B ^ A) & C))          {1, 2}           
+      ((A | B) ^ (A & C))          {1, 3}           
+      ((A | (B ^ A)) & C)          {2}              
+      (((A | B) ^ A) & C)          ∅                
+      1 of 5 bracketings give the expected set: only Python's
+   kata 4  A | B ^ C - D & E   with A = {1, 2}, B = {2, 3}, C = {1, 3}, D = {3, 4}, E = {1, 4}
+      Python reads (A | (B ^ ((C - D) & E))) = {1, 2, 3}; the kata expects {1, 2, 3}: right
+      1 of 14 bracketings give the expected set: only Python's
+   What else the ladder says, checked:
+      comparisons come last:  A - B <= C  reads  ((A - B) <= C);   A ^ B == C  reads  ((A ^ B) == C)
+      within one level, left to right: (A - B) - C ≠ A - (B - C) on 2800 of 4096 triples of subsets of {1, 2, 3, 4};
+      (A ^ B) ^ C ≠ A ^ (B ^ C) on 0: only - needs its brackets, since △, ∩ and ∪ are associative
+      sets on both sides: {1, 2} - [1] -> TypeError: unsupported operand type(s) for -: 'set' and 'list';  -{1, 2} -> TypeError: bad operand type for unary -: 'set';
+      the methods take any iterable and have no precedence to know: {1, 2}.difference([1]) = {2}
 ```
 <!-- /output -->
 
@@ -242,6 +341,8 @@ The textbook's summary and these katas as a deck of Anki cards: [`set_katas.txt`
 Zadania z końca pierwszego rozdziału o zbiorach mają jeden dowód: weź dowolny element i rozpakuj definicje ⊆, ∪, ∩ i ∖; i jeden sposób, by się pomylić: źle odczytać formułę. Program sprawdza każdą tezę o dowolnych zbiorach A, B, C na wszystkich 512 wyborach podzbiorów {1, 2, 3} (1 536 przypadków z elementem a), oblicza zbiory prawdziwości i przedziały dokładnie, z końcami wymiernymi, a tam, gdzie zadanie każe rozwiązać nierówność, sprawdza podany przedział na siatce punktów. True znaczy, że formuła została odczytana tak, jak chciał autor; False znaczy, że nie. Dowód pozostaje do zrobienia: ruchy to pogoń za elementem, rozpakowanie negacji (x ∉ A ∖ B to x ∉ A lub x ∈ B, prawo De Morgana), dwa zawierania dla równości i „rozwiąż, potem nazwij" dla zbiorów prawdziwości. Zadania pochodzą z podrozdziału 1.1 książki Cunninghama *Set Theory: A First Course*.
 
 Zbiór rozwiązań (ang. solution set) to zbiór wszystkich wartości spełniających równanie lub nierówność: dla (x − 4)² ≤ 0 jest to {4}, dla x² + x + 1 > 0 cały zbiór liczb rzeczywistych, a dla x² − x + 1 < 0 zbiór pusty, bo wyróżnik jest ujemny i parabola nie schodzi pod oś. Program sprawdza zadania 39–43 Sullivana na siatce ułamków, zanim przeczyta się dowody.
+
+Cztery wklejone katy o kolejności działań w Pythonie (`-`, potem `&`, potem `^`, na końcu `|`) mają poprawne wyniki, ale dwie z nich niczego nie sprawdzają: w trzeciej A ∩ C = ∅, więc krok z `^` nic nie zmienia i trzy z pięciu nawiasowań dają ten sam zbiór; w czwartej C ∖ A jest rozłączne z A, więc żaden dobór zbiorów nie odróżni, czy `^` stoi nad `|`, czy pod nim. Program (sekcja 9) wylicza każde nawiasowanie, dwa dla trzech zbiorów i czternaście dla pięciu, i liczy, ile z nich daje oczekiwany wynik: kata sprawdza regułę tylko wtedy, gdy wszystkie inne odczytania dają inny zbiór. Poprawione dane: C = {2, 4} w trzeciej i piąty zbiór E zamiast drugiego A w czwartej. Przy okazji: porównania (`<=`, `==`, `in`) stoją niżej niż wszystkie cztery operatory, a nawiasów w obrębie jednego poziomu potrzebuje tylko różnica, bo △, ∩ i ∪ są łączne.
 
 ## Run it yourself
 

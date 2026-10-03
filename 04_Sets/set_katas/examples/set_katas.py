@@ -12,8 +12,10 @@ exercise asks for an algebraic solution. A check is not a proof, and the
 page says which move each proof needs.
 """
 
+import ast
 from fractions import Fraction
 from itertools import combinations, product
+from operator import and_, or_, sub, xor
 
 BASE = (1, 2, 3)
 SUBSETS = [frozenset(c) for r in range(4) for c in combinations(BASE, r)]
@@ -73,6 +75,57 @@ def difference(a, b):
     left = Interval(-INF, False, b.lo, not b.lo_closed)
     right = Interval(b.hi, not b.hi_closed, INF, False)
     return [p for p in (intersect(a, left), intersect(a, right)) if not p.empty()]
+
+
+# ---------------------------------------------------------------------------
+# Section 9: an unbracketed expression under every full bracketing
+# ---------------------------------------------------------------------------
+
+OPS = {"|": or_, "&": and_, "^": xor, "-": sub}
+
+
+def bracketings(operands, ops):
+    """Every full bracketing of operands joined by ops, as (text, value) pairs."""
+    if not ops:
+        return [operands[0]]
+    out = []
+    for k in range(len(ops)):
+        for left in bracketings(operands[: k + 1], ops[:k]):
+            for right in bracketings(operands[k + 1 :], ops[k + 1 :]):
+                out.append((f"({left[0]} {ops[k]} {right[0]})", OPS[ops[k]](left[1], right[1])))
+    return out
+
+
+def as_python_reads(expr: str) -> str:
+    """The bracketing Python's own parser gives expr, written out in full."""
+    symbols = {ast.BitOr: "|", ast.BitAnd: "&", ast.BitXor: "^", ast.Sub: "-", ast.LtE: "<=", ast.Eq: "=="}
+
+    def show(node):
+        if isinstance(node, ast.BinOp):
+            return f"({show(node.left)} {symbols[type(node.op)]} {show(node.right)})"
+        if isinstance(node, ast.Compare):
+            return f"({show(node.left)} {symbols[type(node.ops[0])]} {show(node.comparators[0])})"
+        return node.id
+
+    return show(ast.parse(expr, mode="eval").body)
+
+
+def precedence_kata(label, expr, expected, env, show_all):
+    """Evaluate expr under every bracketing and count how many give the expected set."""
+    tokens = expr.split()
+    operands = [(t, frozenset(env[t])) for t in tokens if t.isalpha()]
+    ops = [t for t in tokens if t in OPS]
+    python = eval(expr, {}, {k: frozenset(v) for k, v in env.items()})
+    trees = bracketings(operands, ops)
+    same = sum(1 for _, v in trees if v == python)
+    print(f"   {label}  {expr}   with " + ", ".join(f"{n} = {braces(s)}" for n, s in env.items()))
+    verdict = "right" if python == expected else "WRONG"
+    print(f"      Python reads {as_python_reads(expr)} = {braces(python)}; the kata expects {braces(expected)}: {verdict}")
+    if show_all:
+        for text, value in trees:
+            note = "Python's" if text == as_python_reads(expr) else ("also" if value == python else "")
+            print(f"      {text:<28} {braces(value):<16} {note}")
+    print(f"      {same} of {len(trees)} bracketings give the expected set" + (": only Python's" if same == 1 else ""))
 
 
 def main() -> None:
@@ -288,6 +341,51 @@ def main() -> None:
     print(f"   A = {set(a)}, B = {set(b)}: |A| ≤ |B| is {len(a) <= len(b)}, A ⊆ B is {a <= b}")
     print("   Every subset has no more elements, but having no more elements is not being a")
     print("   subset. ⊆ is about membership: every member of A is a member of B.")
+    print()
+    print("9. FOUR PASTED PRECEDENCE KATAS, TRIED UNDER EVERY BRACKETING")
+    print("   Python's ladder, tightest first: - then & then ^ then |, and comparisons")
+    print("   below all four (the language reference's precedence table). An assert on")
+    print("   the final set passes whenever any reading gives that set, so each kata is")
+    print("   evaluated under every full bracketing, and tests a step only if the rival")
+    print("   readings give a different set.")
+    katas = [
+        ("kata 1", "A | B & C", {1, 2, 3, 5}, dict(A={1, 2, 3}, B={3, 4, 5}, C={5, 6, 7})),
+        ("kata 2", "A - B & C", set(), dict(A={1, 2, 3, 4}, B={3, 4, 5}, C={4, 5, 6})),
+        ("kata 3", "A | B ^ A & C", {1, 2, 3}, dict(A={1, 2}, B={2, 3}, C={3, 4})),
+        ("kata 4", "A | B ^ C - A & D", {1, 2, 3, 4}, dict(A={1, 2}, B={2, 3}, C={3, 4}, D={2, 4})),
+    ]
+    for label, expr, expected, env in katas:
+        precedence_kata(label, expr, expected, env, show_all=True)
+    print("   Kata 3 tests nothing about ^: A ∩ C = ∅ and B △ ∅ = B, so the ^ step changes")
+    print("   nothing, and the two readings it claims to rule out, ^ above & and ^ below |,")
+    print("   give the expected set too. Kata 4 tests - before & before ^, not ^ before |:")
+    sub16 = [frozenset(c) for r in range(5) for c in combinations((1, 2, 3, 4), r)]
+    differ = sum(1 for A, B, C, D in product(sub16, repeat=4) if (A | (B ^ ((C - A) & D))) != ((A | B) ^ ((C - A) & D)))
+    print(f"   A | (B ^ ((C - A) & D)) = (A | B) ^ ((C - A) & D) on all {len(sub16) ** 4} quadruples of subsets")
+    print(f"   of {{1, 2, 3, 4}} ({differ} differ): (C ∖ A) ∩ D is disjoint from A, and (A ∪ B) △ X = A ∪ (B △ X)")
+    print("   whenever A ∩ X = ∅. No choice of sets mends it while the second operand of - is A.")
+    print("   Repaired:")
+    precedence_kata("kata 3", "A | B ^ A & C", {1, 2, 3}, dict(A={1, 2}, B={2, 3}, C={2, 4}), show_all=True)
+    precedence_kata("kata 4", "A | B ^ C - D & E", {1, 2, 3}, dict(A={1, 2}, B={2, 3}, C={1, 3}, D={3, 4}, E={1, 4}), show_all=False)
+    print("   What else the ladder says, checked:")
+    print(f"      comparisons come last:  A - B <= C  reads  {as_python_reads('A - B <= C')};   A ^ B == C  reads  {as_python_reads('A ^ B == C')}")
+    triples = list(product(sub16, repeat=3))
+    minus = sum(1 for A, B, C in triples if (A - B) - C != A - (B - C))
+    xor_ = sum(1 for A, B, C in triples if (A ^ B) ^ C != A ^ (B ^ C))
+    print(f"      within one level, left to right: (A - B) - C ≠ A - (B - C) on {minus} of {len(triples)} triples of subsets of {{1, 2, 3, 4}};")
+    print(f"      (A ^ B) ^ C ≠ A ^ (B ^ C) on {xor_}: only - needs its brackets, since △, ∩ and ∪ are associative")
+    try:
+        {1, 2} - [1]
+        mixed = "no error"
+    except TypeError as e:
+        mixed = f"TypeError: {e}"
+    try:
+        -{1, 2}
+        unary = "no error"
+    except TypeError as e:
+        unary = f"TypeError: {e}"
+    print(f"      sets on both sides: {{1, 2}} - [1] -> {mixed};  -{{1, 2}} -> {unary};")
+    print(f"      the methods take any iterable and have no precedence to know: {{1, 2}}.difference([1]) = {braces({1, 2}.difference([1]))}")
 
 
 if __name__ == "__main__":

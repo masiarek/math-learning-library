@@ -173,6 +173,8 @@ The owner pasted an AI-written answer to this page's first flashcard, which said
 
 This page's own earlier wording, "complement, then difference, then intersection, then union", stated Python's choice as the textbook rule, which was wrong in the same way, and the flashcards have been corrected with it. Pascal, the SQL standard and Z are cited from memory; the Lean and Isabelle lines were read in their source files, linked under See also.
 
+Four pasted Python katas on the `-`, `&`, `^`, `|` ladder got the same treatment on the [set katas](../set_katas/README.md#precedence-katas-four-pasted-katas-and-whether-each-tests-anything) page, where section 9 of its program tries every bracketing of each: the four expected sets are right, and two of the four katas pass under the readings they claim to rule out.
+
 ## Practice
 
 With A = {1, 3, 5, 7}, B = {4, 5, 6, 7}, C = {1, 2, 3} and U = {0, 1, …, 9}, write each set as a list of its members, reading it as Python does where there are no brackets: A ∪ B, A ∩ B, A ∖ B, B ∖ A, A′, A △ B, A ∪ B ∩ C, (A ∪ B) ∩ C, A ∩ B ∪ C, A ∩ (B ∪ C), A ∖ B ∖ C, A ∖ (B ∖ C), A ∪ B ∖ A ∩ C, A′ ∩ B. Section 3 of the output has the answers. Notice which pairs differ only in their brackets, and which do not differ at all. One row, A ∪ B ∖ A ∩ C, has an unbracketed ∖ beside ∪ and ∩: say what the reading with ∖ level with ∪ gives instead, then check section 6.
