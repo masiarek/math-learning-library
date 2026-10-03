@@ -242,6 +242,14 @@ It looks at where each line's reasons point: at a given or an earlier line, neve
 
 </details>
 
+**12. Isn't the distance formula just the Pythagorean theorem, so that no proof is needed?**
+
+<details><summary>Answer</summary>
+
+It is Pythagoras, and that sentence is the proof once four things are said: that there is a right triangle at all, which costs the perpendicular axes; that its legs are |x₂ − x₁| and |y₂ − y₁|, which costs A2; that the bars drop inside the squares, which is the lemma |t|² = t²; and that the formula still holds when the points are level or one above the other, where there is no triangle and Pythagoras says nothing. Those are lines 3 to 9, and line 5 is the one that says "Pythagoras". "Just Pythagoras" would hold on any axes, and the formula does not: on axes meeting at 60° it is false. A short proof is still a proof, and this one tells you which assumption the formula rests on.
+
+</details>
+
 ## How to practise
 
 1. **Before proving, write the three lists**: what is given, what is claimed, and the letters that stand for every case.
