@@ -257,6 +257,12 @@ The third classroom book. The owner sent its pages 4–5, the distance formula i
 | **One rigorous book from arithmetic up** | Serge Lang, *Basic Mathematics* (Springer). Terse and proof-flavoured, and it covers everything from pre-algebra to precalculus in one volume. |
 | **More than the course** | [Art of Problem Solving, *Precalculus* ↗](https://artofproblemsolving.com/store/book/precalculus) (Richard Rusczyk): trigonometry, complex numbers, vectors and matrices, with problems from routine to olympiad. For a strong student who finds the standard course slow. |
 
+### Other books you may meet
+
+The rest of the market, for completeness; none of these is a reason to pass over the books above. Robert Blitzer, *Precalculus* (Pearson), the fourth classroom book, with the most "real-world" dressing and the least mathematics per page. David Cohen, *Precalculus: A Problems-Oriented Approach* and *Precalculus with Unit-Circle Trigonometry* (Cengage), older, harder and better written than the big four, worth a few dollars used. Demana, Waits, Foley and Kennedy, *Precalculus: Graphical, Numerical, Algebraic* (Pearson), the graphing-calculator school's book, more pictures and less proof. Barnett, Ziegler and Byleen, *Precalculus* (McGraw-Hill), plain and interchangeable with Larson. Faires and DeFranza, *Precalculus* (Cengage), short and aimed squarely at calculus, a cheaper cousin of Axler. Schaum's *Outline of Precalculus* (McGraw-Hill), a hundred-page summary with worked problems, for review only. And the *Algebra and Trigonometry* titles from Sullivan, Stewart, Larson and Blitzer are the same books as their *Precalculus* with the final chapter on limits removed and the reviews moved forward; owning both is owning one twice.
+
+**If you have Axler, Stewart, Sullivan and Larson already**, as the owner does in PDF, you have one of each kind: the book to read (Axler), the classroom book that explains (Stewart), the one that checks (Sullivan) and the one with the most exercises (Larson). Nothing on this page adds a fifth kind; the free Stitz and Zeager is the only one worth downloading beside them, for its voice. Read Axler, keep Stewart open at the same section, and take the problems from Sullivan or Larson.
+
 ### Suggested paths
 
 - **In a school course** with Glencoe or a book like it: use it for the exercises, and keep Axler or Stitz and Zeager beside it for the explanations when a worked example is not enough.
