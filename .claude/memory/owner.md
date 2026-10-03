@@ -17,3 +17,4 @@ How the owner of this library works, as learned from sessions. Update when a ses
 - The same in prose: when a sentence names a chapter or lesson of this library ("the axioms of Zermelo–Fraenkel set theory"), the name should link to its page, not only a See also entry at the bottom.
 - Wants the positive statement first. A page called "What is a set?" must open with the definition; the case against weaker definitions is a separate page ("good def and poor def"), cross-referenced both ways.
 - Asks for katas: exercise pages where a program checks each claim before the proof is attempted (`04_Sets/set_katas`, `13_Axioms_of_Set_Theory/axiom_katas`). Extend those rather than adding exercises elsewhere.
+- Cross-checks flashcards with other AI tools and sends a screenshot when they disagree. Say first who is right, with how sure, then fix the card and the page if ours was wrong.

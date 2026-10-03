@@ -7,9 +7,10 @@
    A - B - C        is read as  ((A - B) - C)
    A | B - A & C    is read as  (A | ((B - A) & C))
    Tighter to looser:  -  then  &  then  ^  then  |,  left to right within
-   one level. The textbook order for sets is complement, difference,
-   intersection, union: the same ladder, with the complement written
-   U - A in Python and so taken before everything else by its brackets.
+   one level. The shared textbook order for sets is complement, then
+   intersection, then union: the same ladder for & and |, with the
+   complement written U - A in Python and so taken first by its brackets.
+   Where - sits is Python's own choice; section 6 shows the others.
 
 2. A WORKED EXAMPLE, BOTH WAYS
    U = {1, 2, 3, 4, 5};  {1, 2}′ = {3, 4, 5}
@@ -19,7 +20,7 @@
    Many authors never rely on it and always write the brackets; do the same
    when a reader might not know the rule.
 
-3. PRACTICE SETS, EVALUATED BY THE RULE
+3. PRACTICE SETS, EVALUATED AS PYTHON READS THEM
    A = {1, 3, 5, 7}   B = {4, 5, 6, 7}   C = {1, 2, 3}   U = {0, ..., 9}
      A ∪ B            A | B          {1, 3, 4, 5, 6, 7}
      A ∩ B            A & B          {5, 7}
@@ -55,3 +56,56 @@
      on the grid 0, 0.25, ..., 3:  (1, 2) -> [1.25, 1.5, 1.75],  (2, 1) -> []
      so (1, 2) ∪ (2, 1) = (1, 2) and (1, 2) ∩ (2, 1) = ∅.
    Same symbols, two different sets: read (a, b) by its context.
+
+6. WHERE DOES DIFFERENCE GO? THREE SYSTEMS, TWO ANSWERS
+   A = {1, 3, 5, 7}   B = {4, 5, 6, 7}   C = {1, 2, 3}   U = {0, ..., 9}
+   Python reads ∖ above ∩ (- before &). Lean 4 declares \ and ∩ at one level,
+   70, above ∪ at 65. Isabelle/HOL declares - with ∪ at 65, below ∩ at 70, as
+   Pascal, the SQL standard and Z do. Ashlock and most textbooks give ∖
+   no level at all and always bracket it. Same symbols, read by each:
+   A ∪ B ∩ C
+     Python     (A ∪ (B ∩ C))          {1, 3, 5, 7}
+     Lean 4     (A ∪ (B ∩ C))          {1, 3, 5, 7}
+     Isabelle   (A ∪ (B ∩ C))          {1, 3, 5, 7}   all agree
+   A ∪ B ∖ C
+     Python     (A ∪ (B ∖ C))          {1, 3, 4, 5, 6, 7}
+     Lean 4     (A ∪ (B ∖ C))          {1, 3, 4, 5, 6, 7}
+     Isabelle   ((A ∪ B) ∖ C)          {4, 5, 6, 7}   2 answers
+   A ∖ B ∩ C
+     Python     ((A ∖ B) ∩ C)          {1, 3}
+     Lean 4     ((A ∖ B) ∩ C)          {1, 3}
+     Isabelle   (A ∖ (B ∩ C))          {1, 3, 5, 7}   2 answers
+   A ∩ B ∖ C
+     Python     (A ∩ (B ∖ C))          {5, 7}
+     Lean 4     no parse
+     Isabelle   ((A ∩ B) ∖ C)          {5, 7}   one set, where it parses
+   A ∖ B ∖ C
+     Python     ((A ∖ B) ∖ C)          {}
+     Lean 4     no parse
+     Isabelle   ((A ∖ B) ∖ C)          {}   one set, where it parses
+   A ∪ B ∖ A ∩ C
+     Python     (A ∪ ((B ∖ A) ∩ C))    {1, 3, 5, 7}
+     Lean 4     (A ∪ ((B ∖ A) ∩ C))    {1, 3, 5, 7}
+     Isabelle   ((A ∪ B) ∖ (A ∩ C))    {4, 5, 6, 7}   2 answers
+   A ∩ B ∖ C is bracketed two ways and comes out the same, because
+     A ∩ (B ∖ C) = (A ∩ B) ∖ C:  true on all 4096 triples of subsets of {1, 2, 3, 4}
+     A ∪ (B ∖ C) = (A ∪ B) ∖ C:  false on 2800 of them
+     (A ∖ B) ∩ C = A ∖ (B ∩ C):  false on 2800 of them
+   Lean refuses A ∩ B ∖ C and A ∖ B ∖ C unbracketed: its \ is infix, not infixl,
+   so a left operand must bind tighter than 70, and A ∩ B, A ∖ B are exactly 70
+   (read off the declarations; Lean was not run here).
+   So in value there are two conventions, not three: ∖ with ∩ (Python, Lean)
+   or ∖ with ∪ (Isabelle, Pascal, SQL, Z). This page reads ∖ as Python does.
+
+   THE PASTED ANSWER'S EXAMPLE, READ BY EACH SYSTEM
+   U = {1, ..., 5}   A = {1, 2, 3}   B = {3, 4}   C = {2, 5}   D = {1, 4, 5}
+   A ∖ B ∪ C ∩ D′
+     Python     ((A ∖ B) ∪ (C ∩ D′))   {1, 2}
+     Lean 4     ((A ∖ B) ∪ (C ∩ D′))   {1, 2}
+     Isabelle   ((A ∖ B) ∪ (C ∩ D′))   {1, 2}
+   A ∪ C ∖ B
+     Python     (A ∪ (C ∖ B))          {1, 2, 3, 5}
+     Lean 4     (A ∪ (C ∖ B))          {1, 2, 3, 5}
+     Isabelle   ((A ∪ C) ∖ B)          {1, 2, 5}
+   The first is the pasted example: its ∖ is leftmost and its ∪ is lowest in
+   every system, so it cannot tell the conventions apart. The second can.
