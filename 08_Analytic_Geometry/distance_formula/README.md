@@ -32,6 +32,7 @@ Two things at once. They are Pythagoras, the squares on the legs. And they erase
 
 - **Order does not matter.** d(P₁, P₂) = d(P₂, P₁), so you can call either point "1".
 - **No absolute values needed**, though the legs are |x₂ − x₁| and |y₂ − y₁|: |t|² = t² for every t.
+- **Distance from the origin.** Put P₁ = (0, 0): the distance of a point (x, y) from the origin is √(x² + y²), the formula with nothing to subtract. It is the length of the arrow from the origin to the point, called the [length of the vector](../distance_in_n_dimensions/README.md) (x, y) in linear algebra and the absolute value |x + yi| in [the complex numbers](../../03_Complex_Numbers/multiplication_rotates/README.md); exercise 3 below works it. Axler states this special case on its own line, the other books leave it to the reader.
 - **Horizontal and vertical segments are not special cases.** If y₁ = y₂, the formula gives √((x₂ − x₁)²) = |x₂ − x₁|, the absolute value, because √(t²) = |t|, not t. The one-dimensional distance on a number line, |b − a|, is this formula with one coordinate.
 
 ## Exact answers
