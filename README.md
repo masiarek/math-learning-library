@@ -170,6 +170,18 @@ The thirteenth chapter decodes the formal language of set theory and gives each 
 | [Ordinals](13_Axioms_of_Set_Theory/ordinals/README.md) | Transitive sets well-ordered by ∈; Goodstein sequences, a theorem about integers whose only proof uses ordinals |
 | [Axiom katas](13_Axioms_of_Set_Theory/axiom_katas/README.md) | Exercises from Jech, Cunningham and Kunen, each checked on a small universe before you prove it, with the five proof moves |
 
+[**14_Metric_Spaces/**](14_Metric_Spaces/README.md) — *What does analysis need from a distance?*
+
+The fourteenth chapter takes the four properties of a distance and nothing else, and defines a limit, a continuous function and a complete space from them, so that each definition holds at once for the line, the plane under three metrics, n dimensions and strings of bits. Every definition is run: the N for an ε, the δ for an ε, the one ε that breaks the step function, the Cauchy sequence of rationals with no rational limit. The triangle inequality for the Euclidean distance, checked but not proved in the analytic geometry chapter, is proved at the end.
+
+| Lesson | What it teaches |
+|---|---|
+| [Open balls: three metrics, the same open sets](14_Metric_Spaces/open_balls/README.md) | An open ball is the points closer than r; a set is open when every point keeps a ball inside; cheb ≤ eucl ≤ taxi ≤ 2 cheb proved in three lines and checked on 2 401 pairs, so the three balls nest and the three metrics share every open set; the discrete metric, whose balls are a point or everything, does not |
+| [Convergence: a limit is a statement about every ball](14_Metric_Spaces/convergence/README.md) | x_n → L when every ball around L holds a tail; N found for 1/n and three radii with the algebra that makes it work for all n; (−1)ⁿ has no limit by one ball; limits are unique by two disjoint balls; three equivalent metrics give three N and one limit; under the discrete metric 1/n stops converging |
+| [Continuity by ε and δ](14_Metric_Spaces/continuity/README.md) | f sends a δ-ball around p into the ε-ball around f(p); δ = min(1, ε/7) for x² at 3 with the two-line reason; the step function has one ε that defeats every δ, witness x = −δ/2; the distance to a point is continuous with δ = ε by the triangle inequality; the identity between equivalent metrics is a homeomorphism; out of a discrete space every function is continuous |
+| [Cauchy sequences and completeness](14_Metric_Spaces/completeness/README.md) | Terms within ε of each other, no limit named; Newton's iteration for √2 in exact fractions is Cauchy in ℚ and no rational squares to 2, so ℚ has holes; ℝ is complete by construction, √2 to 12 decimals by isqrt; (0, 1) and ℝ share their open sets and differ in completeness, so completeness is not topological; the discrete metric and ℤ are complete cheaply |
+| [The triangle inequality proved: Cauchy–Schwarz](14_Metric_Spaces/cauchy_schwarz/README.md) | |u + tw|² is a quadratic in t that is never negative, so its discriminant is ≤ 0, which is (u·w)² ≤ |u|²|w|²; equality exactly for parallel vectors; checked on 15 625 pairs; the triangle inequality for the Euclidean distance in three lines without a square root, paying the debt the chapter ran up |
+
 [**12_Learning_to_Learn/**](12_Learning_to_Learn/README.md) — *How do you know that you know?* **Now its own library:** the [Learning to Learn library ↗](https://masiarek.github.io/learning-to-learn-library/), built the same way, where the ten lessons that began here live with pages on planning, sleep, exercise and the brain. The chapter page here points across, and the lessons still use this library's mathematics.
 
 | Lesson | What it teaches |

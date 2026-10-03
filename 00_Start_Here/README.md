@@ -40,6 +40,8 @@ It begins with a question that sounds settled and is not: **are significant figu
 
 [**13_Axioms_of_Set_Theory/**](../13_Axioms_of_Set_Theory/README.md) — *What are the rules for building sets, and why these?* The axioms of Zermelo and Fraenkel, one page each, after a page that decodes ∀, ∃, ⇒ and v₀, v₁ into loops and lookups. Each axiom is read aloud, used, and checked on a small universe by a program; the chapter's claim is that an axiom is a demand on the universe, not a description of it. Then ordinals, with Goodstein's theorem, and a page of exercises from Jech, Cunningham and Kunen checked before you prove them. Needs [04_Sets](../04_Sets/README.md) and [11_Logic](../11_Logic/README.md).
 
+[**14_Metric_Spaces/**](../14_Metric_Spaces/README.md) — *What does analysis need from a distance?* A set with a distance and nothing else. Open balls and open sets, and why the Euclidean, taxicab and Chebyshev distances agree on them; a limit as a tail inside every ball; continuity as a ball sent into a ball; Cauchy sequences, and the one of rationals that points at the hole where √2 should be; and the proof that the Euclidean distance satisfies the triangle inequality, which the analytic geometry chapter only checked. Every definition is written with ε and δ, and every one is run by a program on the ε a reader would ask about. Needs [08_Analytic_Geometry](../08_Analytic_Geometry/README.md) to the end and [11_Logic](../11_Logic/README.md) for the quantifiers.
+
 The sidebar lists the chapters A to Z. The numbers above are the suggested order, and the [topic map](../TOPICS.md) groups every lesson by subject, for when you know what you want but not where it is.
 
 ## How to run anything here

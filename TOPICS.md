@@ -128,6 +128,18 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - ↪ [The derivative is a velocity](09_Calculus/derivative_as_velocity/README.md) — what a rate is
         - ↪ [Area and volume formulas](10_Geometry/area_and_volume_formulas/README.md) — the formulas differentiated, and the surface as the volume's rate
         - ↪ [The Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md) — the ladder's equation
+- **Analysis**
+    - **Metric spaces: limits from a distance** · from [Metric Spaces](14_Metric_Spaces/README.md)
+        - [Open balls: three metrics, the same open sets](14_Metric_Spaces/open_balls/README.md) — An open ball is the points closer than r; a set is open when every point keeps a ball inside; cheb ≤ eucl ≤ taxi ≤ 2 cheb proved in three lines and checked on 2 401 pairs, so the three balls nest and the three metrics share every open set; the discrete metric, whose balls are a point or everything, does not
+        - [Convergence: a limit is a statement about every ball](14_Metric_Spaces/convergence/README.md) — x_n → L when every ball around L holds a tail; N found for 1/n and three radii with the algebra that makes it work for all n; (−1)ⁿ has no limit by one ball; limits are unique by two disjoint balls; three equivalent metrics give three N and one limit; under the discrete metric 1/n stops converging
+        - [Continuity by ε and δ](14_Metric_Spaces/continuity/README.md) — f sends a δ-ball around p into the ε-ball around f(p); δ = min(1, ε/7) for x² at 3 with the two-line reason; the step function has one ε that defeats every δ, witness x = −δ/2; the distance to a point is continuous with δ = ε by the triangle inequality; the identity between equivalent metrics is a homeomorphism; out of a discrete space every function is continuous
+        - [Cauchy sequences and completeness](14_Metric_Spaces/completeness/README.md) — Terms within ε of each other, no limit named; Newton's iteration for √2 in exact fractions is Cauchy in ℚ and no rational squares to 2, so ℚ has holes; ℝ is complete by construction, √2 to 12 decimals by isqrt; (0, 1) and ℝ share their open sets and differ in completeness, so completeness is not topological; the discrete metric and ℤ are complete cheaply
+        - [The triangle inequality proved: Cauchy–Schwarz](14_Metric_Spaces/cauchy_schwarz/README.md) — |u + tw|² is a quadratic in t that is never negative, so its discriminant is ≤ 0, which is (u·w)² ≤ |u|²|w|²; equality exactly for parallel vectors; checked on 15 625 pairs; the triangle inequality for the Euclidean distance in three lines without a square root, paying the debt the chapter ran up
+        - ↪ [Distance is the four properties](08_Analytic_Geometry/other_distances/README.md) — the four axioms and the three circles whose insides are the balls
+        - ↪ [Distance in n dimensions](08_Analytic_Geometry/distance_in_n_dimensions/README.md) — the Euclidean metric in any number of coordinates, its triangle inequality left open there and proved here
+        - ↪ [Predicates and quantifiers](11_Logic/predicates_and_quantifiers/README.md) — ∀ε ∃δ, and what negating it says
+        - ↪ [What measure zero means](02_Measure_Zero/what_measure_zero_means/README.md) — analysis on ℝ, which this chapter's completeness page says ℝ was built for
+        - ↪ [The derivative is a velocity](09_Calculus/derivative_as_velocity/README.md) — the limit that chapter used before it was defined
 - **Logic and proof**
     - **If A then B: converse, contrapositive, if and only if** · from [Logic](11_Logic/README.md)
         - [If A then B: converse, contrapositive and inverse](11_Logic/converse_and_contrapositive/README.md) — implication, hypothesis, conclusion, truth table, converse, inverse, contrapositive, if and only if, counterexample, affirming the consequent
@@ -256,11 +268,12 @@ One theorem about right triangles turns out to be how every distance in this lib
 6. [Circles: standard form and general form](08_Analytic_Geometry/circles/README.md) — the distance formula held fixed, with twelve whole-number points on x² + y² = 25.
 7. [Distance in n dimensions, and the length of a vector](08_Analytic_Geometry/distance_in_n_dimensions/README.md) — the theorem applied twice for a box, n − 1 times for n axes, and the norm √(v·v) as its distance from the origin.
 8. [Distance is the four properties](08_Analytic_Geometry/other_distances/README.md) — the theorem's distance beside two others, and the rotation test that singles it out.
-9. [Lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md) — perpendicular slopes, checked by the converse.
-10. [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — the length of a complex number, √(x² + y²), is the same formula measured from 0.
-11. [Catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md) — the Burj Khalifa example subtracts two nearly equal squares, and a calculator pays for it.
-12. [Related rates](09_Calculus/related_rates/README.md) — ladders and travellers: x² + y² = z², differentiated in time.
-13. [Studying vs learning ↗](https://masiarek.github.io/learning-to-learn-library/01_Knowing_What_You_Know/studying_vs_learning/) — Bloom's six levels climbed on the theorem, up to Euclid's formula for every whole-number right triangle.
+9. [The triangle inequality proved: Cauchy–Schwarz](14_Metric_Spaces/cauchy_schwarz/README.md) — the fourth metric property of the theorem's distance, from a quadratic with no roots.
+10. [Lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md) — perpendicular slopes, checked by the converse.
+11. [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — the length of a complex number, √(x² + y²), is the same formula measured from 0.
+12. [Catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md) — the Burj Khalifa example subtracts two nearly equal squares, and a calculator pays for it.
+13. [Related rates](09_Calculus/related_rates/README.md) — ladders and travellers: x² + y² = z², differentiated in time.
+14. [Studying vs learning ↗](https://masiarek.github.io/learning-to-learn-library/01_Knowing_What_You_Know/studying_vs_learning/) — Bloom's six levels climbed on the theorem, up to Euclid's formula for every whole-number right triangle.
 
 ### Scale factor k
 

@@ -1,0 +1,15 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Metric spaces::Cauchy-Schwarz
+#tags:math metric-spaces cauchy-schwarz
+#columns:Front	Back	Tags
+#tags column:3
+State the Cauchy-Schwarz inequality.	(u . w)^2 <= |u|^2 |w|^2 for any two vectors, with equality exactly when one is a multiple of the other.	what
+Prove Cauchy-Schwarz in one sentence.	|u + t w|^2 = |w|^2 t^2 + 2 (u . w) t + |u|^2 is a quadratic in t that is never negative, so its discriminant 4(u . w)^2 - 4|u|^2|w|^2 is at most 0.	why
+Why can a never-negative quadratic with positive leading coefficient not have a positive discriminant?	A positive discriminant means two distinct real roots, and an upward parabola is negative between them.	why
+When is Cauchy-Schwarz an equality?	When some u + t w is the zero vector, i.e. u is a multiple of w (or w = 0): the quadratic has a double root and discriminant 0.	what
+For u = (1, 2), w = (3, 4), what are the quadratic and its discriminant?	q(t) = 25 t^2 + 22 t + 5, discriminant 484 - 500 = -16; so 121 <= 125.	problems
+Derive the triangle inequality from Cauchy-Schwarz.	|u + w|^2 = |u|^2 + 2 u.w + |w|^2 <= |u|^2 + 2|u||w| + |w|^2 = (|u| + |w|)^2; both sides non-negative, take roots. With u = Q - P, w = R - Q it is d(P, R) <= d(P, Q) + d(Q, R).	why
+Does the proof depend on the number of coordinates?	No. It uses only that the dot product distributes, a sum of squares is non-negative, and the discriminant fact; it holds in every dimension and for integrals.	what
+Does Cauchy-Schwarz prove the taxicab triangle inequality?	No; that one is |a + b| <= |a| + |b| coordinate by coordinate. Cauchy-Schwarz is specific to the dot product, which is why the Euclidean distance needed it.	trap

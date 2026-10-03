@@ -1,0 +1,46 @@
+1. THE OPEN BALL OF RADIUS 2 AROUND THE ORIGIN, UNDER THREE METRICS
+   Lattice points with -3 <= x, y <= 3; # marks a point at distance LESS THAN 2.
+   Euclidean   taxicab     Chebyshev
+   .......     .......     .......
+   .......     .......     .......
+   ..###..     ...#...     ..###..
+   ..###..     ..###..     ..###..
+   ..###..     ...#...     ..###..
+   .......     .......     .......
+   .......     .......     .......
+   Strict inequality: the boundary is not in the ball. (2, 0) is at Euclidean distance
+   exactly 2 from the origin and is left out of all three.
+
+2. THE THREE METRICS ARE WITHIN A FACTOR OF 2 OF EACH OTHER, ON EVERY PAIR
+   cheb <= eucl <= taxi <= 2 cheb, compared as squares on 2401 pairs: True
+   The proof is three lines, with a = |dx| and b = |dy|:
+     max(a, b)^2 <= a^2 + b^2            one square is at most the sum of both;
+     a^2 + b^2 <= (a + b)^2               the cross term 2ab is not negative;
+     a + b <= 2 max(a, b)                 each of a, b is at most the max.
+   The grid is a check that the lines were copied right; the lines hold for every a, b.
+
+3. THE BALLS NEST: B_taxi(p, r) inside B_eucl(p, r) inside B_cheb(p, r) inside B_taxi(p, 2r)
+   r = 5/2, lattice points in each: taxi 13, eucl 21, cheb 25, taxi with 2r 41
+   taxi <= eucl <= cheb <= taxi(2r) as sets: True
+   Each inclusion is one line of section 2 read as a statement about balls:
+   taxi(p, q) < r forces eucl(p, q) < r, because eucl <= taxi; and so on round.
+
+4. ONE OPEN SET, ONE OF ITS POINTS, AND A BALL OF EACH KIND THAT FITS
+   U = the Euclidean open disc x^2 + y^2 < 9. Take p = (2, 1), which is in U: 4 + 1 = 5 < 9.
+   The Euclidean distance from p to the edge is 3 - sqrt(5), about 0.764; choose r = 7/10.
+   B_taxi(p, 7/10):  365 grid points of step 1/20, all inside U: True
+   B_Chebyshev(p, 7/20):  169 grid points of step 1/20, all inside U: True
+   B_Euclidean(p, 7/10):  609 grid points of step 1/20, all inside U: True
+   One point of one set, checked on a grid: evidence. The theorem is section 3:
+   a ball of one kind inside U contains a ball of each other kind, so 'open' means the
+   same thing under all three metrics. They are EQUIVALENT metrics.
+
+5. THE DISCRETE METRIC: d(p, q) = 1 FOR p != q, AND 0 FOR p = q
+   B(a, 1/2) = ['a']
+   B(a, 1) = ['a']
+   B(a, 2) = ['a', 'b', 'c', 'd', 'e']
+   A ball is one point or everything, so every subset is open: every point of any set
+   has the ball of radius 1/2 around it inside the set. This metric is a metric (the
+   four properties hold; the triangle inequality is 1 <= 1 + 1 at worst) and it is NOT
+   equivalent to the Euclidean one: no Euclidean ball of positive radius is a single point,
+   since B_eucl(p, r) contains p + (r/2, 0).
