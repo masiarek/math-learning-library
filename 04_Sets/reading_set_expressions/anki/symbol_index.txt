@@ -28,6 +28,8 @@ Read the symbol: A × B	Cartesian product, the set of ordered pairs. Explained u
 Which symbol says: Cartesian product, the set of ordered pairs?	A × B (explained under: glossary entry: cartesian product)	symbol reverse
 Read the symbol: (a, b), ⟨a, b⟩	ordered pair. Explained under: glossary entry: ordered pair.	symbol
 Which symbol says: ordered pair?	(a, b), ⟨a, b⟩ (explained under: glossary entry: ordered pair)	symbol reverse
+Read the symbol: (x₁, y₁), (x₂, y₂); p = (p₁, p₂), q = (q₁, q₂)	a point by its coordinates: Sullivan numbers the points and letters the axes, Wikipedia and linear algebra letter the points and number the axes, so x₂ is q₁. Explained under: distance in n dimensions.	symbol
+Which symbol says: a point by its coordinates: Sullivan numbers the points and letters the axes, Wikipedia and linear algebra letter the points and number the axes, so x₂ is q₁?	(x₁, y₁), (x₂, y₂); p = (p₁, p₂), q = (q₁, q₂) (explained under: distance in n dimensions)	symbol reverse
 Read the symbol: 𝒫(A), 2ᴬ	power set. Explained under: glossary entry: power set.	symbol
 Which symbol says: power set?	𝒫(A), 2ᴬ (explained under: glossary entry: power set)	symbol reverse
 Read the symbol: |A|, n(A), #A, card(A)	cardinality. Explained under: glossary entry: cardinality.	symbol

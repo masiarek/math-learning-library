@@ -16,6 +16,19 @@ For two points P₁ = (x₁, y₁, z₁) and P₂ = (x₂, y₂, z₂), the box 
 
 This is the proof of [the distance formula](../distance_formula/README.md) with one more line, and it costs one more given: that the z-axis is perpendicular to both the x-axis and the y-axis, which is what makes the second angle right. The lemma |t|² = t² removes the bars as before, and the no-box cases (two points sharing a coordinate) reduce to the plane formula, which is already proved.
 
+## Two ways to write a point
+
+The formula below changes spelling, and the change is worth a paragraph because every book makes it without saying so. Sullivan writes two points as (x₁, y₁) and (x₂, y₂): the letter names the axis and the subscript numbers the point, so x₂ is "the x of the second point". Wikipedia and every linear algebra book write them as p = (p₁, p₂) and q = (q₁, q₂): the letter names the point and the subscript numbers the axis, so q₁ is "the first coordinate of q". The key between them:
+
+| Sullivan | Wikipedia | Meaning |
+|---|---|---|
+| x₁ | p₁ | first point, first axis |
+| y₁ | p₂ | first point, second axis |
+| x₂ | q₁ | second point, first axis |
+| y₂ | q₂ | second point, second axis |
+
+The trap is the 2: it means "second point" in one convention and "second axis" in the other, so Sullivan's x₂ is Wikipedia's q₁ and not q₂. The second convention is the one that scales. Letters for axes run out after x, y, z; subscripts for axes go on forever, and a point in n dimensions is p = (p₁, …, pₙ) with nothing new to invent. A bold or arrowed letter, 𝐩 or p⃗, says "this is a whole point or vector, not a number", for the same reason linear algebra writes v for a vector and v₁ for its first entry. Sullivan's convention is the one that reads aloud in a plane, where the figure shows an x and a y, and this library keeps it in the plane and switches here, where the axes are numbered because they have to be.
+
 ## One square per axis
 
 Nothing in the argument used that three is three. With n coordinates, the distance between two points is the square root of the sum of n squared differences:
