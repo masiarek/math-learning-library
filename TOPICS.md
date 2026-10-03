@@ -99,6 +99,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
     - **The coordinate plane** · from [Analytic Geometry](08_Analytic_Geometry/README.md)
         - [Rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md) — a point is two signed distances, a quadrant is two signs, and the axes belong to none
         - [The distance formula](08_Analytic_Geometry/distance_formula/README.md) — distance between two points, √((x₂ − x₁)² + (y₂ − y₁)²), order and signs, comparing squared distances
+        - ↪ [What a proof is](11_Logic/what_a_proof_is/README.md) — the distance formula written out as a proof, ten lines each with its reason
         - [The midpoint formula](08_Analytic_Geometry/midpoint_formula/README.md) — midpoint, average of coordinates, perpendicular bisector, point a fraction t of the way
         - ↪ [The Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md) — the theorem the distance formula is
         - ↪ [Mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md) — each coordinate of the midpoint is one
@@ -130,6 +131,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - [If A then B: converse, contrapositive and inverse](11_Logic/converse_and_contrapositive/README.md) — implication, hypothesis, conclusion, truth table, converse, inverse, contrapositive, if and only if, counterexample, affirming the consequent
         - [Truth tables and the laws of logic](11_Logic/truth_tables_and_laws/README.md) — ¬ ∧ ∨ → ↔, tautology, contradiction, logical equivalence, ↔ versus ⇔, De Morgan, distributive, contrapositive, → does not associate, a misprint caught by one row
         - [Predicates and quantifiers](11_Logic/predicates_and_quantifiers/README.md) — predicate, universe of discourse, ∀ ∃ as loops, bounded quantifiers, interchange, negation flips a quantifier, distribution, ∃!
+        - [What a proof is](11_Logic/what_a_proof_is/README.md) — givens, claim, chain; a reason beside every line; letters cover every case where a loop cannot; proof by cases and the check that the cases are exhaustive; a circle, assuming the claim, a wrong line with a good shape; a number check refutes and never confirms; the distance formula as ten lines
         - [Induction](11_Logic/induction/README.md) — base case, induction hypothesis, inductive step, well-ordering principle, least counterexample, proof by contradiction, the all-cars proof, Fibonacci, Binet's formula, 2ⁿ subsets, chocolate bar, invariant, closed form, sigma notation
         - ↪ [Proof assistants: a reading guide](reading_guides/proof_assistants/README.md) — natural deduction checked by program: conjI, impI, mp, notI and the one classical rule; what a proof covers that a truth table does not
         - ↪ [Infinity](13_Axioms_of_Set_Theory/infinity/README.md) — the inductive set that makes induction a sentence about ℕ
@@ -247,12 +249,13 @@ One theorem about right triangles turns out to be how every distance in this lib
 2. [Area and volume formulas](10_Geometry/area_and_volume_formulas/README.md) — the diagonal of a square, and the altitude of a triangle, both found by it.
 3. [Congruent and similar triangles](10_Geometry/congruent_and_similar_triangles/README.md) — why two sides of a right triangle fix the third, the one case where SSA works.
 4. [The distance formula](08_Analytic_Geometry/distance_formula/README.md) — the theorem with the legs read off coordinates.
-5. [Circles: standard form and general form](08_Analytic_Geometry/circles/README.md) — the distance formula held fixed, with twelve whole-number points on x² + y² = 25.
-6. [Lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md) — perpendicular slopes, checked by the converse.
-7. [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — the length of a complex number, √(x² + y²), is the same formula measured from 0.
-8. [Catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md) — the Burj Khalifa example subtracts two nearly equal squares, and a calculator pays for it.
-9. [Related rates](09_Calculus/related_rates/README.md) — ladders and travellers: x² + y² = z², differentiated in time.
-10. [Studying vs learning ↗](https://masiarek.github.io/learning-to-learn-library/01_Knowing_What_You_Know/studying_vs_learning/) — Bloom's six levels climbed on the theorem, up to Euclid's formula for every whole-number right triangle.
+5. [What a proof is](11_Logic/what_a_proof_is/README.md) — the distance formula as a ten-line chain, in which the right angle costs one named assumption.
+6. [Circles: standard form and general form](08_Analytic_Geometry/circles/README.md) — the distance formula held fixed, with twelve whole-number points on x² + y² = 25.
+7. [Lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md) — perpendicular slopes, checked by the converse.
+8. [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — the length of a complex number, √(x² + y²), is the same formula measured from 0.
+9. [Catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md) — the Burj Khalifa example subtracts two nearly equal squares, and a calculator pays for it.
+10. [Related rates](09_Calculus/related_rates/README.md) — ladders and travellers: x² + y² = z², differentiated in time.
+11. [Studying vs learning ↗](https://masiarek.github.io/learning-to-learn-library/01_Knowing_What_You_Know/studying_vs_learning/) — Bloom's six levels climbed on the theorem, up to Euclid's formula for every whole-number right triangle.
 
 ### Scale factor k
 

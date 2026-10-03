@@ -1,0 +1,24 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::What a proof is
+#tags:math logic proof
+#columns:Front	Back	Tags
+#tags column:3
+What does 'prove it' ask for?	Three things, written down: what is given, what is claimed, and a chain of statements from the first to the second with a reason beside every line.	what
+What may the reason beside a line of a proof be?	A given, a definition, an earlier line, or a rule that holds for every value of the letters. Not 'obvious', not the figure, not an example.	what
+Why can ten lines prove a claim about infinitely many pairs of points?	They argue with letters: no line depends on which numbers the letters stand for, so the chain holds for all of them at once.	why
+Why is checking cases, however many, not a proof?	A loop checks the cases it reaches, and a claim about all n has cases no loop reaches; one unchecked case can be the one that fails. One counterexample does disprove.	why
+Fermat claimed 2^(2^n) + 1 is prime for every n. What happened?	True for n = 0 to 4 (3, 5, 17, 257, 65537). Euler found in 1732 that n = 5 gives 4294967297 = 641 x 6700417.	trap
+sqrt(t^2) = t holds for every positive t. What is wrong with it?	It fails for every negative t: sqrt(9) = 3, not -3. The true statement is sqrt(t^2) = |t|, proved by the cases t >= 0 and t < 0.	trap
+When is a proof by cases valid?	When the cases together cover every case. That coverage is itself a claim to check.	method
+What are the three cases in the proof of the distance formula?	Both coordinates differ (a triangle, Pythagoras applies); the y's agree (a horizontal segment, no triangle); the x's agree (a vertical segment).	method
+How does the program check that the three cases of the distance formula cover every pair of points?	A four-row truth table over the tests x1 = x2 and y1 = y2: every row lands in a case, and a finite table is a proof.	method
+Name two ways a chain of true lines fails to be a proof, caught by following the arrows.	A line that cites a later line (a circle), and a given that is the claim itself (assuming what was to be proved).	trap
+A line of a proof has a good shape but is wrong. How is it caught?	By numbers: a line that disagrees with the line it cites on one example is wrong, and one example is enough.	method
+What can a number check on a line of a proof say, and what can it not?	It can refute the line, never confirm it. What confirms a line is its reason.	why
+Why is P1P3 horizontal in the proof of the distance formula?	By definition: a horizontal line is y = c, and P1 = (x1, y1) and P3 = (x2, y1) both lie on y = y1. A definition unpacked, not a theorem.	why
+Which assumption of the distance formula does the right angle at P3 cost, and what if it fails?	That the axes are perpendicular. On axes meeting at 60 degrees the angle is not right, Pythagoras does not apply, and the formula is false.	why
+What is a lemma?	A small theorem proved on the way to another, such as |t|^2 = t^2 inside the proof of the distance formula.	what
+Where does a chain of 'why?' stop?	At the givens the proof names; below them are other proofs or axioms. No bottom is shared by every book, so a proof must say what it takes as given.	what
+Why does the last line of the distance formula's proof need both halves of the definition D2?	sqrt means the non-negative root, and a distance is never negative; d^2 = s alone leaves d = sqrt(s) or -sqrt(s).	trap

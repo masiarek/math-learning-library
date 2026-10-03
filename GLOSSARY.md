@@ -464,8 +464,14 @@ Terms used across the library, with the page that explains each in full. For set
 **Prime ideal theorem** — every Boolean algebra has a prime ideal, equivalently every filter extends to an ultrafilter. It follows from the axiom of choice and is strictly weaker (Halpern and Lévy 1971); enough for Tychonoff's theorem on Hausdorff spaces and the completeness theorem of logic. See [choice](13_Axioms_of_Set_Theory/choice/README.md#the-equivalent-forms-and-the-weaker-ones).
 { #prime-ideal-theorem }
 
+**Proof** — a chain of statements from what is given (definitions, axioms, theorems already proved) to the claim, each with its reason beside it: a given, a definition, an earlier line, or a rule that holds for every value of the letters. Because it argues with letters it covers every case at once, where a loop over cases covers only the ones it reaches; so checking cases, however many, is not one, and one counterexample ends a claim. See [what a proof is](11_Logic/what_a_proof_is/README.md).
+{ #proof }
+
 **Proof assistant** — a program that checks a proof line by line, verifying that each line has the shape its rule demands from the lines it cites, without evaluating a single formula; Isabelle, Lean, Rocq and Metamath are ones. It proves a theorem about every model, where a [model finder](#model-finder) checks one. See [proof assistants: a reading guide](reading_guides/proof_assistants/README.md).
 { #proof-assistant }
+
+**Proof by cases** — split every case into a few named cases that together cover all of them, and argue each with the letters; valid exactly when the cases are exhaustive, which is itself a claim to check. √(t²) = |t| is proved by t ≥ 0 and t < 0; the distance formula by "both coordinates differ, the y's agree, or the x's agree", a split a four-row truth table shows complete. See [what a proof is](11_Logic/what_a_proof_is/README.md).
+{ #proof-by-cases }
 
 **Proper factor** — a factor of n other than n itself; on the stricter convention, which the Math is Fun quizzes use, other than 1 as well, so the proper factors of 6 are 2 and 3. "Proper" as in proper subset: the whole thing excluded. Divisibility read as sets: a divides b exactly when the factors of a are a subset of the factors of b. See [set katas](04_Sets/set_katas/README.md#quiz-katas).
 { #proper-factor }
@@ -616,6 +622,9 @@ Terms used across the library, with the page that explains each in full. For set
 
 **Testing effect** — retrieving something from memory makes it last longer than reading it again for the same time. See [spaced retrieval ↗](https://masiarek.github.io/learning-to-learn-library/02_Making_It_Stay/spaced_retrieval/).
 { #testing-effect }
+
+**Theorem** — a claim about every case in some range, together with a proof of it from what is given; most have the shape "if A then B". A **lemma** is a small theorem proved on the way to another, such as |t|² = t² inside the distance formula's proof, and a **corollary** one that follows from a theorem in a step or two. See [what a proof is](11_Logic/what_a_proof_is/README.md) and [if A then B](11_Logic/converse_and_contrapositive/README.md).
+{ #theorem }
 
 **Therefore and because (∴, ∵)** — three dots pointing up, ∴, read "therefore", and pointing down, ∵, read "because"; shorthand of school proofs and older books, not of the logic that ⇒ and ⊢ formalise. See [connectives](#connectives).
 { #therefore-and-because }

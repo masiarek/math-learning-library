@@ -1,0 +1,84 @@
+1. CHECKING CASES IS NOT PROVING: FERMAT'S CLAIM
+   Fermat claimed that 2^(2^n) + 1 is prime for every n. The first cases:
+   n = 0:          3  prime
+   n = 1:          5  prime
+   n = 2:         17  prime
+   n = 3:        257  prime
+   n = 4:      65537  prime
+   n = 5: 4294967297  = 641 x 6700417   (Euler found this in 1732)
+   Five cases, each true; the claim about every n is false.
+   No number of cases proves a claim about all n. One case disproves it.
+
+2. A LOOP OVER t = 1..1000, AND THE TWO CASES THAT COVER EVERY t
+   Claim: sqrt(t^2) = t.   Holds for t = 1, 2, ..., 1000: True
+   t = -3: sqrt(9) = 3, not -3. The loop never reached a negative t.
+   Theorem: sqrt(t^2) = |t| for every real t. Proof, by cases:
+     t >= 0: t^2 has the non-negative root t, and |t| = t.
+     t <  0: t^2 = (-t)^2 and -t > 0, so the root is -t, and |t| = -t.
+   Two cases, and every real t is in one of them: that is what covers all t.
+   Tried on t = -1000..1000, as a check that the cases were copied right: True
+
+3. THE DISTANCE FORMULA AS A CHAIN: EVERY LINE WITH ITS REASON
+   The proof, as a list of lines.
+   Given:
+     A1  Pythagoras: a right triangle with legs a, b and hypotenuse c has c^2 = a^2 + b^2.
+     A2  Two points on one horizontal line, (x1, y) and (x2, y), are |x2 - x1| apart; on a vertical line, |y2 - y1|.
+     A3  The axes are perpendicular, so a horizontal line and a vertical line meet at a right angle.
+     D1  A horizontal line is the set of points with one fixed y, the line y = c; a vertical line has one fixed x.
+     D2  sqrt(s) is the non-negative number whose square is s, and a distance is never negative.
+   Claim: d = sqrt((x2 - x1)^2 + (y2 - y1)^2), for every P1 = (x1, y1) and P2 = (x2, y2).
+    1. Let P1 = (x1, y1), P2 = (x2, y2) be any two points, d their distance, and P3 = (x2, y1).
+       because: names
+    2. P1 and P3 share y1, so P1P3 is horizontal; P3 and P2 share x2, so P3P2 is vertical.
+       because: line 1, D1
+    3. |P1P3| = |x2 - x1| and |P3P2| = |y2 - y1|.
+       because: line 2, A2
+    4. Case 1, x1 != x2 and y1 != y2: P1, P2, P3 are three points, and the angle at P3 is right.
+       because: line 2, A3
+    5. In case 1, d^2 = |x2 - x1|^2 + |y2 - y1|^2.
+       because: line 3, line 4, A1
+    6. For every real t, |t|^2 = t^2: if t >= 0, |t| = t; if t < 0, |t| = -t and (-t)^2 = t^2.
+       because: cases
+    7. In case 1, d^2 = (x2 - x1)^2 + (y2 - y1)^2.
+       because: line 5, line 6
+    8. Case 2, y1 = y2: P3 = P2, so d = |x2 - x1|, and (x2 - x1)^2 + (y2 - y1)^2 = (x2 - x1)^2 = d^2.
+       because: line 1, A2, line 6
+    9. Case 3, x1 = x2: P3 = P1, so d = |y2 - y1|, and (x2 - x1)^2 + (y2 - y1)^2 = (y2 - y1)^2 = d^2.
+       because: line 1, A2, line 6
+   10. The cases cover every pair, so d^2 = (x2 - x1)^2 + (y2 - y1)^2; d >= 0, so d = sqrt((x2 - x1)^2 + (y2 - y1)^2).
+       because: line 7, line 8, line 9, D2
+   Shape check: every citation is a given or an earlier line, no given is
+   the claim, and the last line states the claim: OK
+   Do the three cases cover every pair? A truth table over the two tests:
+     x1 = x2   y1 = y2   lands in
+     False     False     case 1
+     False     True      case 2
+     True      False     case 3
+     True      True      case 2 and case 3
+   Four rows, each in a case: the split is exhaustive, and the table is the proof of that.
+
+4. THREE BROKEN CHAINS, AND WHICH CHECK CATCHES EACH
+   (a) Line 5 cites line 7 instead of A1, and line 7 cites line 5: a circle.
+       Shape check: NOT A PROOF
+     - line 5 cites line 7, which is not established yet
+   (b) Two lines, the second citing a new given A4, which is the distance formula.
+       Shape check: NOT A PROOF
+     - given A4 is the claim itself
+   (c) Line 7 reads 'd^2 = (|x2 - x1| + |y2 - y1|)^2', citing lines 5 and 6 as before.
+       Shape check: OK
+       On P1 = (1, 3), P2 = (5, 6): line 5 says d^2 = 25, the new line 7 says d^2 = 49.
+       A line that disagrees with the line it cites, on one example, is wrong: caught by numbers.
+   The shape check reads arrows and knows nothing about numbers. The number check
+   can refute a line and never confirm one. What confirms a line is its reason.
+
+5. EACH LINE WITH SOMETHING TO COMPUTE, ON SIX PAIRS OF POINTS
+   P1            P2            line 2  line 4  line 6  line 7  line 8  line 9
+   (1, 3)        (5, 6)        True    True    True    True    -       -
+   (5, 6)        (1, 3)        True    True    True    True    -       -
+   (-2, 4)       (5, 4)        True    -       True    True    True    -
+   (3, -1)       (3, -7)       True    -       True    True    -       True
+   (2, 2)        (2, 2)        True    -       True    True    True    True
+   (1/2, 0)      (0, 1/2)      True    True    True    True    -       -
+   A dash: the line's case does not apply to that pair. Lines 1, 3, 5 and 10
+   apply a given or a definition and compute nothing: their reason is the check.
+   Six passes are evidence that the lines were written down right. The proof is the reasons.
