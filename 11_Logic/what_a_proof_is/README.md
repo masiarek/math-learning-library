@@ -55,7 +55,7 @@ The chain, as section 3 of the program prints it. A1 is Pythagoras, A2 the dista
 | 9 | Case 3, x₁ = x₂: P₃ = P₁, so d = \|y₂ − y₁\|, and (x₂ − x₁)² + (y₂ − y₁)² = (y₂ − y₁)² = d². | 1, A2, 6 |
 | 10 | The cases cover every pair, so d² = (x₂ − x₁)² + (y₂ − y₁)²; d ≥ 0, so d = √((x₂ − x₁)² + (y₂ − y₁)²). | 7, 8, 9, D2 |
 
-Three things to notice. Line 6 is a small theorem of its own, a **lemma**, proved by cases inside the chain and used three times. Lines 8 and 9 are what the book means when it says the formula "also holds for horizontal and vertical segments": there is no triangle in those cases, A1 is never used, and A2 alone gives the distance. And every given is cited somewhere; a given that no line cites was not needed, and a proof tells you exactly what each line costs. Line 4 is the one that costs A3. On a grid whose axes meet at 60°, A3 is false, line 4 fails, and so does the formula, which is why the answer to "where is the right angle?" matters more than it looks.
+Three things to notice. Line 6 is a small theorem of its own, a **lemma**, proved by cases inside the chain and used three times. Lines 8 and 9 are the book's second and third bullets: Sullivan works the horizontal case in full, by reducing the formula to |x₂ − x₁|, and writes "a similar argument holds" for the vertical one. There is no triangle in those cases, A1 is never used, and A2 alone gives the distance. And every given is cited somewhere; a given that no line cites was not needed, and a proof tells you exactly what each line costs. Line 4 is the one that costs A3. On a grid whose axes meet at 60°, A3 is false, line 4 fails, and so does the formula, which is why the answer to "where is the right angle?" matters more than it looks.
 
 ## What the program prints
 
