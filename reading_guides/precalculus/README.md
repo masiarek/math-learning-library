@@ -37,7 +37,7 @@ Ask a calculus teacher what their students struggle with, and the answer is rare
 | **Systems, matrices and vectors** | Multivariable calculus and [linear algebra](../linear_algebra/README.md), more than calculus itself. |
 | **Limits**, informally, in the last chapter | The first chapter of the calculus book, seen once before. |
 
-The list is long, and the point of it is fluency rather than coverage. A student who can do the algebra of the first four rows without thinking is ready for calculus; one who has met every row once and can do none of them quickly is not.
+The list is long, and the point of it is fluency rather than coverage. A reader who learned this in a Polish liceum or a German Gymnasium, under other names and in other years, has the same table mapped onto those curricula in [precalculus and calculus against the Polish and German curricula](../curriculum_map/README.md). A student who can do the algebra of the first four rows without thinking is ready for calculus; one who has met every row once and can do none of them quickly is not.
 
 ## What a precalculus problem looks like
 
