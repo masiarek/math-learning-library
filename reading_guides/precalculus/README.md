@@ -203,6 +203,42 @@ The college counterpart of Glencoe: one of the four classroom books that between
 
 **Verdict.** If you have it, keep it, and use it the way it is built to be used: for the exercises and the self-checks, working each section's *Now Work* pairs and *Are You Prepared?* problems rather than reading it front to back. It is the best of the classroom books for someone checking their own work, because its apparatus was designed for exactly that. For understanding why a method works, read the same section in Axler or Stitz and Zeager first, then do Sullivan's problems; the two together are a better course than either alone.
 
+### James Stewart, Lothar Redlin and Saleem Watson, *Precalculus: Mathematics for Calculus*, 7th edition (Cengage, 2016)
+
+The other usual college choice, and the precalculus book of the author of the most-used calculus text, written to feed it. Reviewed from memory of the book and from the two pages the owner sent (section 1.9), not from a copy at hand.
+
+**What it is.** A complete course in about a thousand pages, twelve chapters plus a *Focus on Modeling* essay after most chapters, in the same order as Sullivan with two differences: the algebra review is chapter 1, not an appendix, and the book is openly aimed at calculus, with a closing chapter on limits and *Discovery Projects* that look ahead.
+
+**Strengths**
+
+- **It explains before it drills.** The derivations are on the page, not in the exercises: the midpoint formula from congruent triangles, the distance formula from the number-line distance, and the text says why a step is allowed. Of the four classroom books, it reads the most like a book.
+- **Proof appears early.** Examples prove things (Example 3 of section 1.9 proves a parallelogram by its diagonals), and the modeling essays ask the reader to set up a problem, not only to solve one.
+- **Built for calculus.** Chapter and section choices track what a calculus course will assume; the trigonometry is introduced with the unit circle first, which is the form calculus uses.
+- **Cheap used.** Editions from the fourth on are interchangeable for self-study and cost a few dollars.
+
+**Weaknesses**
+
+- **Thinner self-checking.** Each section ends with *Concepts* and *Skills* exercises and odd answers at the back, but there is no *Now Work* pair after every example, no *Are You Prepared?* opener, and no built-in spaced review. The reader has to make the checks.
+- **It sometimes takes the long way.** Example 2 of section 1.9 compares √41 with √45 instead of 41 with 45; the book is exact but not always economical.
+- **Review up front.** Chapter 1 is a hundred pages of algebra review placed first, where a reader is tempted to start; the just-in-time route below is not marked for you the way Sullivan marks it.
+
+**Verdict.** For reading, Stewart; for practising, Sullivan. If one book only: Stewart for someone teaching themselves toward calculus, Sullivan for someone in a course who needs to check every step of their own work. The content is the same, so neither choice costs anything but the price of the book.
+
+### Sullivan and Stewart side by side
+
+| | Sullivan | Stewart, Redlin and Watson |
+|---|---|---|
+| **Written for** | the course and the exercise set | the reader on the way to calculus |
+| **Explanations** | procedures and worked examples; "how" more than "why" | derivations on the page; the "why" is usually there |
+| **Self-checking** | the best of any classroom book: *Now Work*, *Are You Prepared?*, *Retain Your Knowledge* | ordinary: exercise sets with odd answers |
+| **Proof** | computed examples; proofs mostly in the exercises | some examples prove; modeling essays |
+| **Algebra review** | Appendix A, pointed to just in time by every section | Chapter 1, up front |
+| **Length** | about 1 100 pages | about 1 000 pages |
+| **Price** | high new; the Global Edition is cheap | high new; used copies of any edition are cheap |
+| **Best use** | the problem bank beside another book | the main text, with Sullivan's or Khan Academy's problems beside it |
+
+How sure: Sullivan's apparatus and Stewart's section 1.9 are from pages the owner sent; the rest of the Stewart review is from memory of the book and could be off in detail (edition counts, chapter numbers).
+
 **Sullivan against Stewart, on one section.** The owner sent the two pages of Stewart, Redlin and Watson's section 1.9 (*The Coordinate Plane; Graphs of Equations; Circles*, pages 93–94) that cover the distance and midpoint formulas, the same ground as Sullivan's section 1.1, so the two books can be compared where this library has lessons to check them against. On the explanation, Stewart does the better job. It derives the distance formula from the number-line distance |b − a| of its first section, writes the legs as |x₂ − x₁| and |y₂ − y₁| and then shows the absolute values drop under the square, which is the point the [distance formula](../../08_Analytic_Geometry/distance_formula/README.md) lesson makes too; Sullivan writes the squares straight away. It derives the midpoint formula on the page from two congruent triangles (its Figure 6), the argument the [midpoint formula](../../08_Analytic_Geometry/midpoint_formula/README.md) lesson gives; Sullivan states the formula and leaves the reasoning thinner. And its Example 3 uses the midpoint to prove something, that a quadrilateral whose diagonals share a midpoint is a parallelogram, where Sullivan's examples compute. One mark against Stewart: its Example 2 decides which of two points is nearer by taking both square roots, √41 against √45, where comparing d² needs no roots at all, as the distance lesson explains. On the practice, Sullivan does the better job, for the reasons in the review above: *Now Work* after every example, *Are You Prepared?* before every exercise set, and *Retain Your Knowledge* later. Reading order for this topic: Stewart's pages 93–94 for the two derivations, the two lessons here for what the books skip, then Sullivan's exercise set 1.1. How sure: the comparison of the derivations is read from the pages themselves; the description of Sullivan's section is from the owner's earlier screenshots and the lessons that follow them; the claim that the two books agree on the content of the rest of the course is from memory of both.
 
 ### Alternatives, by goal
