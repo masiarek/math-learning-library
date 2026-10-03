@@ -34,6 +34,11 @@ def pair(a, b):
     return frozenset({a, b})
 
 
+def powerset(s):
+    """Every subset of s, as a set of frozensets."""
+    return frozenset(frozenset(c) for r in range(len(s) + 1) for c in combinations(s, r))
+
+
 def ordered(a, b):
     """Kuratowski's (a, b) = {{a}, {a, b}}: the axiom of pairs used three times."""
     return pair(pair(a, a), pair(a, b))
@@ -94,6 +99,18 @@ def main() -> None:
     print(f"   Kuratowski (∅, {{∅}}) = {show(ordered(zero, one))}   Hausdorff (∅, {{∅}}) = {show(haus(zero, one))}")
     print("   Different sets with the same property; any set with the property will do,")
     print("   and nobody ever unpacks one. The ∅ and {∅} are tags for 'first' and 'second'.")
+    print()
+
+    print("7. PAIRS WITHOUT THE AXIOM: REPLACEMENT OVER 𝒫(𝒫(∅)) (SUPPES, ISABELLE/ZF)")
+    two = powerset(powerset(zero))
+    upair = lambda a, b: frozenset(a if x == zero else b for x in two)
+    ok = all(upair(a, b) == pair(a, b) for a, b in product(V3, repeat=2))
+    print(f"   𝒫(∅) = {show(powerset(zero))}, and 𝒫(𝒫(∅)) = {show(two)}: a set with exactly two members.")
+    print("   The rule 'send ∅ to a and {∅} to b' is a function on it, so replacement gives")
+    print(f"   its image, and the image is {{a, b}}: it agrees with the axiom for every a, b in V_3: {ok}")
+    print("   So pairing is a theorem once power set and replacement are axioms. Suppes")
+    print("   and Isabelle/ZF take it that way; Isabelle's definition is exactly this rule:")
+    print("     Upair(a,b) ≡ {y . x ∈ Pow(Pow(0)), (x = 0 ∧ y = a) ∨ (x = Pow(0) ∧ y = b)}")
 
 
 if __name__ == "__main__":
