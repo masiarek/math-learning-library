@@ -250,6 +250,22 @@ It is Pythagoras, and that sentence is the proof once four things are said: that
 
 </details>
 
+**13. An AI tool lists five "proofs" of the distance formula: by a right triangle and Pythagoras; by the arc-length integral ∫√(1 + f′(x)²) dx along the segment; by the dot product, √((v₂ − v₁)·(v₂ − v₁)); by polar coordinates and the law of cosines; and by the modulus of a complex number, |z₂ − z₁|. Which are proofs?**
+
+<details><summary>Answer</summary>
+
+Ask of each what it takes as given.
+
+- The right triangle: a proof, the chain above, with Pythagoras as its one theorem.
+- The arc-length integral: circular. The integral is derived by cutting a curve into short chords and measuring each chord with the distance formula; it also fails for a vertical segment, where y is not a function of x. The calculation does come out right, f′ = m and L = |x₂ − x₁|√(1 + m²), which is why it looks like a proof.
+- The dot product: a restatement. √(v·v) with v·v = v₁² + v₂² is the definition of a vector's length, and that this number is the geometric distance is exactly the claim.
+- Polar coordinates: valid algebra that rests on Pythagoras twice, once in r = √(x² + y²) and once in the law of cosines, whose usual proof drops a perpendicular. It is the first proof with extra steps. (The two points are not "on a circle" unless r₁ = r₂; the triangle used has the origin as its third corner.)
+- The modulus: a restatement. |z| = √(x² + y²) is the definition of the modulus, and that the modulus is the distance in the plane is the formula itself, as [multiplication rotates](../../03_Complex_Numbers/multiplication_rotates/README.md) says.
+
+One proof, one disguise of it, three costumes for the claim. The list came from an AI tool, and this sorting is what to do with any list of proofs from one: a "proof" that assumes its conclusion in other notation passes every numerical check and proves nothing.
+
+</details>
+
 ## How to practise
 
 1. **Before proving, write the three lists**: what is given, what is claimed, and the letters that stand for every case.
