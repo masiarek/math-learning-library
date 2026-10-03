@@ -13,6 +13,7 @@ Descartes' idea, and the first section of every precalculus book: two number lin
 | 5 | [Lines: slope, equations, parallel and perpendicular](lines_and_slope/README.md) | Why does a line have one slope, and why do perpendicular slopes multiply to −1? |
 | 6 | [Circles: standard form and general form](circles/README.md) | Why is a circle's equation the distance formula, and when is x² + y² + ax + by + c = 0 not a circle? |
 | 7 | [Distance in n dimensions, and the length of a vector](distance_in_n_dimensions/README.md) | What happens to the distance formula with a third coordinate, and why is √(v·v) a length? |
+| 8 | [Distance is the four properties](other_distances/README.md) | What else counts as a distance, what shape is its circle, and why did geometry pick Pythagoras? |
 
 ## The through-line
 

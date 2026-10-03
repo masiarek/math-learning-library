@@ -219,6 +219,7 @@ The ideas behind the formula, beside it, and built on it, each linked to where i
 | Built on it | Converse of Pythagoras, right-angle test by squared distances | [converse](../../GLOSSARY.md#converse), [Pythagorean triple](../../GLOSSARY.md#pythagorean-triple); question 7 above |
 | Built on it | Collinearity by distances, perpendicular bisector, locus | [collinear](../../GLOSSARY.md#collinear); question 10 above; [lines and slope](../lines_and_slope/README.md) for perpendicular lines |
 | Built on it | Distance in three and n dimensions, metric | the page [distance in n dimensions](../distance_in_n_dimensions/README.md); [metric](../../GLOSSARY.md#metric) |
+| Beside | Other distances: taxicab, Chebyshev, Hamming | [taxicab distance](../../GLOSSARY.md#taxicab-distance), [Chebyshev distance](../../GLOSSARY.md#chebyshev-distance), [Hamming distance](../../GLOSSARY.md#hamming-distance); the page [distance is the four properties](../other_distances/README.md) |
 | The proof | Theorem, proof, given, lemma, proof by cases, counterexample | [theorem](../../GLOSSARY.md#theorem), [proof](../../GLOSSARY.md#proof), [proof by cases](../../GLOSSARY.md#proof-by-cases), [counterexample](../../GLOSSARY.md#counterexample); the page [what a proof is](../../11_Logic/what_a_proof_is/README.md) |
 
 ## Flashcards
@@ -240,6 +241,7 @@ Kwadraty robią tu dwie rzeczy: są Pitagorasem i kasują znaki. Dlatego kolejno
 - [The Pythagorean theorem and its converse](../../10_Geometry/pythagorean_theorem/README.md) — the theorem this formula is, and the converse used in question 7
 - [Rectangular coordinates](../rectangular_coordinates/README.md) — the plane, and why a horizontal distance is a difference of x-coordinates
 - [Distance in n dimensions, and the length of a vector](../distance_in_n_dimensions/README.md) — the same formula with a third square, and √(v·v)
+- [Distance is the four properties](../other_distances/README.md) — what else counts as a distance, and why geometry picked this one
 - [What a proof is](../../11_Logic/what_a_proof_is/README.md) — this formula's argument as ten lines with reasons, which assumption the right angle costs, and why the program's checks are evidence rather than proof
 - [Multiplication rotates](../../03_Complex_Numbers/multiplication_rotates/README.md) — the distance from the origin as the length of a complex number
 - [Precalculus: a reading guide](../../reading_guides/precalculus/README.md) — where section 1.1 sits in the course

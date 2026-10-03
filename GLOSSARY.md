@@ -101,6 +101,9 @@ Terms used across the library, with the page that explains each in full. For set
 **Chain rule** — the rule for the velocity of a function of a function. The case the talk uses: e^(kt) is the motion e^t on a clock running k times as fast, and speeding up the clock by k multiplies every velocity by k, so d/dt e^(kt) = k · e^(kt). See [velocity equals position](09_Calculus/velocity_equals_position/README.md).
 { #chain-rule }
 
+**Chebyshev distance** — max(|x₂ − x₁|, |y₂ − y₁|), the longer leg alone: the number of moves a chess king needs. A metric, with a square for its circle, and the limit of the p-family as p grows. See [distance is the four properties](08_Analytic_Geometry/other_distances/README.md).
+{ #chebyshev-distance }
+
 **Circle** — the set of points at a fixed distance r, the radius, from a fixed point (h, k), the center. Its equation is the distance formula held fixed: (x − h)² + (y − k)² = r². See [circles](08_Analytic_Geometry/circles/README.md).
 { #circle }
 
@@ -275,6 +278,9 @@ Terms used across the library, with the page that explains each in full. For set
 **Group** — a set with an operation that is associative, has an identity, and gives every member an inverse. The integers under +, the nonzero fractions under ×, the invertible matrices under ×, and the n-th roots of unity under × are groups. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
 { #group }
 
+**Hamming distance** — between two strings of the same length, the number of positions where they differ: d(011, 110) = 2. A metric with no coordinates behind it, checked on all triples of 3-bit strings by program, and the distance error-correcting codes are built on. See [distance is the four properties](08_Analytic_Geometry/other_distances/README.md).
+{ #hamming-distance }
+
 **Harmonic mean** — n divided by the sum of the reciprocals of n numbers: the one number that keeps the sum of reciprocals. The right mean for speeds over equal distances; 30 km/h out and 60 km/h back averages 40 km/h, not 45. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
 { #harmonic-mean }
 
@@ -389,7 +395,7 @@ Terms used across the library, with the page that explains each in full. For set
 **Metacognition** — John Flavell's word (1976) for thinking about your own thinking, including the ability to judge accurately how much you have learned, the one part a program can measure. See [metacognition ↗](https://masiarek.github.io/learning-to-learn-library/01_Knowing_What_You_Know/metacognition/).
 { #metacognition }
 
-**Metric** — a distance function on a set: d(P, Q) ≥ 0, d(P, Q) = 0 exactly when P = Q, d(P, Q) = d(Q, P), and the triangle inequality d(P, R) ≤ d(P, Q) + d(Q, R). The Euclidean formula is one; the first three properties are a line each from the formula, the fourth needs the Cauchy–Schwarz inequality. See [distance in n dimensions](08_Analytic_Geometry/distance_in_n_dimensions/README.md).
+**Metric** — a distance function on a set: d(P, Q) ≥ 0, d(P, Q) = 0 exactly when P = Q, d(P, Q) = d(Q, P), and the triangle inequality d(P, R) ≤ d(P, Q) + d(Q, R). The Euclidean formula is one; the first three properties are a line each from the formula, the fourth needs the Cauchy–Schwarz inequality. The properties are the definition and the formula is replaceable: taxicab, Chebyshev and Hamming distances are metrics too, and (√|Δx| + √|Δy|)² is not. See [distance in n dimensions](08_Analytic_Geometry/distance_in_n_dimensions/README.md) and [distance is the four properties](08_Analytic_Geometry/other_distances/README.md).
 { #metric }
 
 **Midpoint** — the point halfway along a segment, ((x₁ + x₂)/2, (y₁ + y₂)/2): an average per coordinate. Equidistant from both ends and on the segment; equidistance alone describes the perpendicular bisector. See [the midpoint formula](08_Analytic_Geometry/midpoint_formula/README.md).
@@ -634,6 +640,9 @@ Terms used across the library, with the page that explains each in full. For set
 
 **Tautology** — a sentence true on every row of its truth table, like P ∨ ¬P; a **contradiction** is false on every row. Two sentences are logically equivalent, ψ ⇔ φ, when ψ ↔ φ is a tautology. See [truth tables and the laws of logic](11_Logic/truth_tables_and_laws/README.md).
 { #tautology }
+
+**Taxicab distance** — |x₂ − x₁| + |y₂ − y₁|, the Euclidean formula with the squares and the root removed: the legs of the right triangle added, as a taxi drives a city grid. A metric, with a diamond for its circle; p = 1 in the family (|Δx|ᵖ + |Δy|ᵖ)^(1/p). See [distance is the four properties](08_Analytic_Geometry/other_distances/README.md).
+{ #taxicab-distance }
 
 **Testing effect** — retrieving something from memory makes it last longer than reading it again for the same time. See [spaced retrieval ↗](https://masiarek.github.io/learning-to-learn-library/02_Making_It_Stay/spaced_retrieval/).
 { #testing-effect }
