@@ -90,6 +90,8 @@ uv run --group docs mkdocs serve
 
 [**Set theory: a reading guide**](../reading_guides/set_theory/README.md) — two subjects with one name, the language of sets every proofs course speaks and the study of the axioms themselves; which book for each, from Velleman and Halmos to Kunen and Jech, with verdicts on Cori and Lascar, Cunningham, Jech and Kunen's *Foundations*; the Polish school and *Fundamenta Mathematicae*; and the founding papers from Cantor 1874 to Cohen 1963, four of them run as a program.
 
+[**Precalculus and calculus against the Polish and German curricula**](../reading_guides/curriculum_map/README.md) — the American course names mapped onto the Polish *podstawa programowa* and the German *Bildungsstandards*, topic by topic, with a program that compares the three as sets; short companion pages [po polsku](../reading_guides/curriculum_map/po_polsku.md) and [auf Deutsch](../reading_guides/curriculum_map/auf_deutsch.md).
+
 [**Precalculus: a reading guide**](../reading_guides/precalculus/README.md) — what the course before calculus is for, where it sits (it is not pre-algebra, which comes four years earlier), what to know before starting it, and which book to learn it from, with a verdict on Glencoe's classroom textbook. A reference page, not a lesson; its one worked example, the doubling time of money at compound interest, is backed by a program like everything else.
 
 ## Sibling libraries

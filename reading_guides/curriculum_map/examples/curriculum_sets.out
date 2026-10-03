@@ -1,0 +1,101 @@
+1. THE COURSES AS SETS
+   49 topics in the table. How many each school-leaving course has met:
+      US-PRE   30   US precalculus
+      US-AB    40   US precalculus + AP Calculus AB
+      US-BC    43   US precalculus + AP Calculus BC
+      PL-P     20   Polish matura, zakres podstawowy
+      PL-R     33   Polish matura, zakres rozszerzony
+      DE-G     35   German Abitur, Grundkurs
+      DE-E     42   German Abitur, Leistungskurs
+
+2. THE COMMON CORE: taught to every school leaver on the stronger track
+   US-BC ∩ PL-R ∩ DE-E (28)
+      - Pythagorean theorem, similar triangles, area and volume formulas
+      - absolute value and intervals
+      - binomial theorem
+      - chain rule
+      - combinatorics: permutations and combinations
+      - curve sketching, extrema, optimisation
+      - exponent laws, roots, rational exponents
+      - exponential functions
+      - functions: domain, range, graph, composition
+      - inverse functions
+      - law of sines and law of cosines
+      - limit of a function, continuity
+      - limit of a sequence, sum of a geometric series
+      - lines, slope, distance and midpoint in coordinates
+      - logarithms and logarithmic functions
+      - polynomials: zeros, factoring, division
+      - probability: events, conditional probability
+      - quadratic equations and the quadratic formula
+      - rational functions and asymptotes
+      - right-triangle trigonometry
+      - sequences and series, Σ notation
+      - shifting and stretching a graph
+      - systems of linear equations
+      - the circle in coordinates
+      - the derivative and its rules
+      - trigonometric identities and equations
+      - unit circle, radians, trigonometric functions of any angle
+      - vectors in the plane
+
+3. TAUGHT BY ONE SYSTEM ONLY (strongest track of each)
+   US only: US-BC − (PL-R ∪ DE-E) (6)
+      - Taylor and power series
+      - complex numbers, polar form, de Moivre
+      - conic sections: parabola, ellipse, hyperbola
+      - parametric, polar and vector-valued functions in calculus
+      - polar coordinates
+      - related rates
+   Poland only: PL-R − (US-BC ∪ DE-E) (0)
+      (none)
+   Germany only: DE-E − (US-BC ∪ PL-R) (2)
+      - hypothesis tests and the normal distribution
+      - vectors in space, lines and planes, dot product
+
+4. WHERE THE AMERICAN PRECALCULUS YEAR LANDS
+   Of the topics American precalculus teaches, how many the other systems
+   teach before the final two years, in them, or not at all:
+   Poland: 1 before, 24 during, 5 never, of 30
+   Germany: 13 before, 13 during, 4 never, of 30
+   Precalculus is not a course anywhere but America: its content is
+   spread over the years before the Oberstufe or the liceum, and the
+   rest is either in the final years or absent.
+
+5. HOW FAR EACH SYSTEM GETS INTO CALCULUS
+      PL-P     0 of 13 AP Calculus topics
+      PL-R     4 of 13 AP Calculus topics
+      DE-G     7 of 13 AP Calculus topics
+      DE-E    10 of 13 AP Calculus topics
+      US-AB   10 of 13 AP Calculus topics
+      US-BC   13 of 13 AP Calculus topics
+   in AP Calculus AB but not in the Polish rozszerzony (11)
+      - antiderivative, definite integral, fundamental theorem
+      - area between curves, volumes
+      - complex numbers, polar form, de Moivre
+      - conic sections: parabola, ellipse, hyperbola
+      - derivatives of exponential and trigonometric functions
+      - differential equations: separable, growth and decay
+      - integration by substitution
+      - matrices and determinants
+      - parametric equations
+      - polar coordinates
+      - related rates
+   in the Polish rozszerzony or German Grundkurs calculus but not in AP AB (0)
+      (none)
+   Poland rozszerzony has, Germany Grundkurs has not (3)
+      - mathematical induction
+      - rational functions and asymptotes
+      - trigonometric identities and equations
+   Germany Grundkurs has, Poland rozszerzony has not (5)
+      - antiderivative, definite integral, fundamental theorem
+      - area between curves, volumes
+      - derivatives of exponential and trigonometric functions
+      - hypothesis tests and the normal distribution
+      - vectors in space, lines and planes, dot product
+
+6. CHECKS
+   every code in the table is a known course: True
+   every topic is taught somewhere: True
+   each system's tracks nest, lower inside higher: True
+   |only one| + |shared by two or more| = |union|: 8 + 41 = 49: True

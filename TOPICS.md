@@ -114,6 +114,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - ↪ [The Cartesian product](04_Sets/cartesian_product/README.md) — the set ℝ² that the plane is
         - ↪ [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — a complex number is a point of this plane, and multiplying by i moves it one quadrant on
         - ↪ [Precalculus: a reading guide](reading_guides/precalculus/README.md) — the course this is the first page of, and which book to read it in
+        - ↪ [Precalculus and calculus against the Polish and German curricula](reading_guides/curriculum_map/README.md) — the same topics as the Polish liceum and the German Gymnasium cut them, with the three curricula compared as sets by a program
         - ↪ [Radians](09_Calculus/radians/README.md) — an angle measured by the arc it cuts from the unit circle, counterclockwise from the positive x-axis
 - **Calculus**
     - **Change as motion** · from [Calculus](09_Calculus/README.md)
@@ -123,6 +124,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - [Power series](09_Calculus/power_series/README.md) — "velocity = position" forces every coefficient of e^x, and cos and sin fall out of it
         - ↪ [Euler's identity](03_Complex_Numbers/eulers_identity/README.md) — the motion whose velocity is its position turned a quarter turn goes round to −1
         - ↪ [Euler's formula: a lesson plan](reading_guides/eulers_formula/README.md) — the chapter's lessons as steps 6 to 10 of a path to the identity
+        - ↪ [Precalculus and calculus against the Polish and German curricula](reading_guides/curriculum_map/README.md) — where the derivative, the integral and the series sit in the podstawa programowa and the Abitur, with [Polish](reading_guides/curriculum_map/po_polsku.md) and [German](reading_guides/curriculum_map/auf_deutsch.md) companion pages
     - **Related rates: derivatives in use** · from [Calculus](09_Calculus/README.md)
         - [Related rates](09_Calculus/related_rates/README.md) — related rates, chain rule, balloon, ladder, kite, angle of elevation, differentiate first then substitute
         - ↪ [The derivative is a velocity](09_Calculus/derivative_as_velocity/README.md) — what a rate is

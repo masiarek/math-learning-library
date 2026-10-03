@@ -206,6 +206,12 @@ NAV_ORDER: dict[str, list[str]] = {
     ],
     # A set with a distance: balls and open sets, then limits, continuity and
     # completeness defined from the distance alone, then the one debt paid.
+    # The map before its two companion pages, Polish then German.
+    "reading_guides/curriculum_map": [
+        "README.md",
+        "po_polsku.md",
+        "auf_deutsch.md",
+    ],
     "14_Metric_Spaces": [
         "README.md",
         "open_balls",
