@@ -766,6 +766,7 @@ Every symbol of the charts and tables the owner has sent, in one place, with whe
 | △  ⊕ | symmetric difference | [glossary: symmetric difference](#symmetric-difference) |
 | A × B | Cartesian product, the set of ordered pairs | [glossary: cartesian product](#cartesian-product) |
 | (a, b), ⟨a, b⟩ | ordered pair | [glossary: ordered pair](#ordered-pair) |
+| (x₁, y₁), (x₂, y₂); p = (p₁, p₂), q = (q₁, q₂) | a point by its coordinates: Sullivan numbers the points and letters the axes, Wikipedia and linear algebra letter the points and number the axes, so x₂ is q₁ | [distance in n dimensions](08_Analytic_Geometry/distance_in_n_dimensions/README.md#two-ways-to-write-a-point) |
 | 𝒫(A), 2ᴬ | power set | [glossary: power set](#power-set) |
 | \|A\|, n(A), #A, card(A) | cardinality | [glossary: cardinality](#cardinality) |
 | ℵ₀, ℵ₁, ℶ₁, 𝔠, κ⁺, ℷ | infinite cardinals, the continuum, successor, gimel | [glossary: aleph beth and the continuum c](#aleph-beth-and-the-continuum-c) |
