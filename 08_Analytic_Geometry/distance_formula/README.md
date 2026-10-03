@@ -196,6 +196,31 @@ At P₃ = (x₂, y₁), where a horizontal line through P₁ meets a vertical li
 3. **Squares to compare, roots to report.** Decide "which is closer" and "is it right-angled" with d²; take the root only when a length is asked for.
 4. **Check with the program**, and do the cards, `trap` tag first.
 
+## Cross-references
+
+The ideas behind the formula, beside it, and built on it, each linked to where it lives here. A term with no link has no page or glossary entry yet.
+
+| Where it sits | Term | Here |
+|---|---|---|
+| Underneath | Pythagorean theorem, right triangle, hypotenuse | [the theorem](../../GLOSSARY.md#pythagorean-theorem), [right triangle](../../GLOSSARY.md#right-triangle), [hypotenuse](../../GLOSSARY.md#hypotenuse); the page [the Pythagorean theorem and its converse](../../10_Geometry/pythagorean_theorem/README.md) |
+| Underneath | Rectangular coordinates, ordered pair, perpendicular axes | [rectangular coordinates](../../GLOSSARY.md#rectangular-coordinates), [ordered pair](../../GLOSSARY.md#ordered-pair); the page [rectangular coordinates](../rectangular_coordinates/README.md) |
+| Underneath | Distance on a number line, \|b − a\|, signed distance | [signed distance](../../GLOSSARY.md#signed-distance) |
+| Underneath | Absolute value, \|t\|² = t², √(t²) = \|t\| | the lemma in [what a proof is](../../11_Logic/what_a_proof_is/README.md#the-distance-formula-line-by-line), and question 4 above |
+| Underneath | Principal square root, simplest radical form | the section [exact answers](#exact-answers) above |
+| Itself | Distance formula, Euclidean distance, d(P₁, P₂) | [distance formula](../../GLOSSARY.md#distance-formula) |
+| Itself | Metric: non-negative, zero only for one point, symmetric, triangle inequality | [triangle inequality](../../GLOSSARY.md#triangle-inequality); the other three are questions 2, 12 and section 2 of the program |
+| Itself | Squared distance, comparing without the root | [exact answers](#exact-answers) above |
+| Beside | Modulus of a complex number, \|z\| | [complex multiplication, geometrically](../../GLOSSARY.md#complex-multiplication-geometrically); the page [multiplication rotates](../../03_Complex_Numbers/multiplication_rotates/README.md) |
+| Beside | Polar coordinates, r = √(x² + y²) | [polar form](../../GLOSSARY.md#polar-form) |
+| Beside | Law of cosines, the general triangle | [which comes first, Pythagoras or the law of cosines](../../10_Geometry/pythagorean_theorem/README.md#what-follows-from-the-right-angle) |
+| Beside | Length of a vector, Euclidean norm | no page yet; the [linear algebra reading guide](../../reading_guides/linear_algebra/README.md) says where it would go |
+| Built on it | Midpoint formula | [midpoint](../../GLOSSARY.md#midpoint); the page [the midpoint formula](../midpoint_formula/README.md) |
+| Built on it | Circle, standard form (x − h)² + (y − k)² = r² | [circle](../../GLOSSARY.md#circle), [unit circle](../../GLOSSARY.md#unit-circle); the page [circles](../circles/README.md) |
+| Built on it | Converse of Pythagoras, right-angle test by squared distances | [converse](../../GLOSSARY.md#converse), [Pythagorean triple](../../GLOSSARY.md#pythagorean-triple); question 7 above |
+| Built on it | Collinearity by distances, perpendicular bisector, locus | question 10 above; [lines and slope](../lines_and_slope/README.md) for perpendicular lines |
+| Built on it | Distance in three and n dimensions | no page yet |
+| The proof | Theorem, proof, given, lemma, proof by cases, counterexample | [theorem](../../GLOSSARY.md#theorem), [proof](../../GLOSSARY.md#proof), [proof by cases](../../GLOSSARY.md#proof-by-cases), [counterexample](../../GLOSSARY.md#counterexample); the page [what a proof is](../../11_Logic/what_a_proof_is/README.md) |
+
 ## Flashcards
 
 The page as a deck of Anki cards: [`distance_formula.txt`](anki/distance_formula.txt). Import with File → Import. Tags: `formula`, `why`, `problems`, `trap`.
