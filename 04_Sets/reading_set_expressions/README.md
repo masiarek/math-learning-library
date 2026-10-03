@@ -2,7 +2,7 @@
 
 **Level:** 101 · for anyone who has met A ∪ B ∩ C without brackets
 
-**One line:** A ∪ B ∩ C means nothing until a convention says which operation goes first; the usual one copies logic (complement, then difference, then intersection, then union) and Python's operators happen to follow it exactly, while the two classic notation mistakes, an operation on sets between two statements and a connective between two sets, are also two real Python bugs.
+**One line:** A ∪ B ∩ C means nothing until a convention says which operation goes first; the part every source shares copies logic (complement, then intersection, then union), difference has no agreed place and three real systems put it in three spots, Python's operators follow the shared part exactly, and the two classic notation mistakes, an operation on sets between two statements and a connective between two sets, are also two real Python bugs.
 
 ## Precedence comes from logic
 
@@ -11,14 +11,16 @@
 | First | Operation | Logic | Python |
 |---|---|---|---|
 | 1 | complement A′ | ¬ | `U - a`, bracketed by its own form |
-| 2 | difference A ∖ B | ∧ ¬ | `-` |
-| 3 | intersection A ∩ B | ∧ | `&` |
-| — | symmetric difference A △ B | exclusive or | `^` |
-| 4 | union A ∪ B | ∨ | `\|` |
+| 2 | intersection A ∩ B | ∧ | `&` |
+| 3 | union A ∪ B | ∨ | `\|` |
+| no agreed place | difference A ∖ B | ∧ ¬, two connectives, not one | `-`, above `&` |
+| no agreed place | symmetric difference A △ B | exclusive or | `^`, between `&` and `\|` |
 
-Within one level, read left to right, so A ∖ B ∖ C is (A ∖ B) ∖ C. Symmetric difference has no agreed place in textbook lists; Python puts `^` between `&` and `|`.
+Within one level, read left to right, so A ∖ B ∖ C is (A ∖ B) ∖ C.
 
-Section 1 asks Python's own parser how it brackets unbracketed expressions and gets the same ladder: `-` before `&` before `^` before `|`. So a set expression typed into Python means what the textbook convention says it means. That is a coincidence of design worth knowing, not a law: Python's order was inherited from C's bitwise operators, and bits are sets of positions, which is why the two agree.
+The first three rows are the convention every source that states one shares. The last two are not in it, because neither operation is one connective: A ∖ B is *and not*, a compound, and the order of the connectives says nothing about where a compound goes. Textbooks that give a rule stop at complement, intersection, union; Ashlock, whose exercise 2.7 the [set katas](../set_katas/README.md) run, says so and brackets ∖ and △ always. Systems that have to parse the symbols had to choose, and chose differently (section 6): Python reads `-` above `&`, so A ∖ B ∩ C is (A ∖ B) ∩ C; Lean 4 declares `\` and `∩` at one level, 70, above `∪` at 65; Isabelle/HOL writes difference as `-` and declares it with `∪` at 65, below `∩` at 70, as Pascal, the SQL standard and the Z notation also do. This page reads ∖ as Python does, because its programs are Python, and says so wherever an unbracketed ∖ appears.
+
+Section 1 asks Python's own parser how it brackets unbracketed expressions and gets the ladder `-` before `&` before `^` before `|`. So a set expression typed into Python means what the shared convention says for ∩ and ∪, and what Python alone says for ∖. That is a coincidence of design worth knowing, not a law: Python's order was inherited from C's bitwise operators, and bits are sets of positions, which is why the two agree.
 
 The convention is real but not universal. Plenty of authors never rely on it and always write brackets, and a reader who does not know the rule will read A ∪ B ∩ C left to right. Section 2 shows the cost: with U = {1, …, 5}, {5} ∪ {1, 2}′ ∩ {2, 3} is {3, 5} by the rule and {3} with the other grouping. When in doubt, bracket.
 
@@ -37,9 +39,10 @@ The convention is real but not universal. Plenty of authors never rely on it and
    A - B - C        is read as  ((A - B) - C)
    A | B - A & C    is read as  (A | ((B - A) & C))
    Tighter to looser:  -  then  &  then  ^  then  |,  left to right within
-   one level. The textbook order for sets is complement, difference,
-   intersection, union: the same ladder, with the complement written
-   U - A in Python and so taken before everything else by its brackets.
+   one level. The shared textbook order for sets is complement, then
+   intersection, then union: the same ladder for & and |, with the
+   complement written U - A in Python and so taken first by its brackets.
+   Where - sits is Python's own choice; section 6 shows the others.
 
 2. A WORKED EXAMPLE, BOTH WAYS
    U = {1, 2, 3, 4, 5};  {1, 2}′ = {3, 4, 5}
@@ -49,7 +52,7 @@ The convention is real but not universal. Plenty of authors never rely on it and
    Many authors never rely on it and always write the brackets; do the same
    when a reader might not know the rule.
 
-3. PRACTICE SETS, EVALUATED BY THE RULE
+3. PRACTICE SETS, EVALUATED AS PYTHON READS THEM
    A = {1, 3, 5, 7}   B = {4, 5, 6, 7}   C = {1, 2, 3}   U = {0, ..., 9}
      A ∪ B            A | B          {1, 3, 4, 5, 6, 7}
      A ∩ B            A & B          {5, 7}
@@ -85,6 +88,59 @@ The convention is real but not universal. Plenty of authors never rely on it and
      on the grid 0, 0.25, ..., 3:  (1, 2) -> [1.25, 1.5, 1.75],  (2, 1) -> []
      so (1, 2) ∪ (2, 1) = (1, 2) and (1, 2) ∩ (2, 1) = ∅.
    Same symbols, two different sets: read (a, b) by its context.
+
+6. WHERE DOES DIFFERENCE GO? THREE SYSTEMS, TWO ANSWERS
+   A = {1, 3, 5, 7}   B = {4, 5, 6, 7}   C = {1, 2, 3}   U = {0, ..., 9}
+   Python reads ∖ above ∩ (- before &). Lean 4 declares \ and ∩ at one level,
+   70, above ∪ at 65. Isabelle/HOL declares - with ∪ at 65, below ∩ at 70, as
+   Pascal, the SQL standard and Z do. Ashlock and most textbooks give ∖
+   no level at all and always bracket it. Same symbols, read by each:
+   A ∪ B ∩ C
+     Python     (A ∪ (B ∩ C))          {1, 3, 5, 7}
+     Lean 4     (A ∪ (B ∩ C))          {1, 3, 5, 7}
+     Isabelle   (A ∪ (B ∩ C))          {1, 3, 5, 7}   all agree
+   A ∪ B ∖ C
+     Python     (A ∪ (B ∖ C))          {1, 3, 4, 5, 6, 7}
+     Lean 4     (A ∪ (B ∖ C))          {1, 3, 4, 5, 6, 7}
+     Isabelle   ((A ∪ B) ∖ C)          {4, 5, 6, 7}   2 answers
+   A ∖ B ∩ C
+     Python     ((A ∖ B) ∩ C)          {1, 3}
+     Lean 4     ((A ∖ B) ∩ C)          {1, 3}
+     Isabelle   (A ∖ (B ∩ C))          {1, 3, 5, 7}   2 answers
+   A ∩ B ∖ C
+     Python     (A ∩ (B ∖ C))          {5, 7}
+     Lean 4     no parse
+     Isabelle   ((A ∩ B) ∖ C)          {5, 7}   one set, where it parses
+   A ∖ B ∖ C
+     Python     ((A ∖ B) ∖ C)          {}
+     Lean 4     no parse
+     Isabelle   ((A ∖ B) ∖ C)          {}   one set, where it parses
+   A ∪ B ∖ A ∩ C
+     Python     (A ∪ ((B ∖ A) ∩ C))    {1, 3, 5, 7}
+     Lean 4     (A ∪ ((B ∖ A) ∩ C))    {1, 3, 5, 7}
+     Isabelle   ((A ∪ B) ∖ (A ∩ C))    {4, 5, 6, 7}   2 answers
+   A ∩ B ∖ C is bracketed two ways and comes out the same, because
+     A ∩ (B ∖ C) = (A ∩ B) ∖ C:  true on all 4096 triples of subsets of {1, 2, 3, 4}
+     A ∪ (B ∖ C) = (A ∪ B) ∖ C:  false on 2800 of them
+     (A ∖ B) ∩ C = A ∖ (B ∩ C):  false on 2800 of them
+   Lean refuses A ∩ B ∖ C and A ∖ B ∖ C unbracketed: its \ is infix, not infixl,
+   so a left operand must bind tighter than 70, and A ∩ B, A ∖ B are exactly 70
+   (read off the declarations; Lean was not run here).
+   So in value there are two conventions, not three: ∖ with ∩ (Python, Lean)
+   or ∖ with ∪ (Isabelle, Pascal, SQL, Z). This page reads ∖ as Python does.
+
+   THE PASTED ANSWER'S EXAMPLE, READ BY EACH SYSTEM
+   U = {1, ..., 5}   A = {1, 2, 3}   B = {3, 4}   C = {2, 5}   D = {1, 4, 5}
+   A ∖ B ∪ C ∩ D′
+     Python     ((A ∖ B) ∪ (C ∩ D′))   {1, 2}
+     Lean 4     ((A ∖ B) ∪ (C ∩ D′))   {1, 2}
+     Isabelle   ((A ∖ B) ∪ (C ∩ D′))   {1, 2}
+   A ∪ C ∖ B
+     Python     (A ∪ (C ∖ B))          {1, 2, 3, 5}
+     Lean 4     (A ∪ (C ∖ B))          {1, 2, 3, 5}
+     Isabelle   ((A ∪ C) ∖ B)          {1, 2, 5}
+   The first is the pasted example: its ∖ is leftmost and its ∪ is lowest in
+   every system, so it cannot tell the conventions apart. The second can.
 ```
 <!-- /output -->
 
@@ -101,9 +157,25 @@ The right forms are x ∈ A ∧ x ∈ B, which is `x in A and x in B`, or x ∈ 
 
 (1, 2) is an ordered pair and also an open interval, and set operations give different answers for each (section 5). As ordered pairs in [Kuratowski's encoding](../cartesian_product/README.md), (a, b) = {{a}, {a, b}}, so (1, 2) ∪ (2, 1) = {{1}, {2}, {1, 2}}, their intersection is {{1, 2}}, and (1, 2) ∖ (2, 1) = {{1}}. As intervals, (2, 1) is the set of t with 2 < t < 1, which is empty, so (1, 2) ∪ (2, 1) = (1, 2) and the intersection is ∅. The context decides, and a careful text says which it means.
 
+## Where difference goes, and a pasted answer checked
+
+Section 6 reads six unbracketed expressions under the three choices real systems made. A ∪ B ∩ C comes out the same everywhere. A ∪ B ∖ C and A ∖ B ∩ C each come out two ways: with A = {1, 3, 5, 7}, B = {4, 5, 6, 7} and C = {1, 2, 3}, Python and Lean read A ∪ B ∖ C as A ∪ (B ∖ C) = {1, 3, 4, 5, 6, 7}, and Isabelle, Pascal, SQL and Z read it as (A ∪ B) ∖ C = {4, 5, 6, 7}. A ∩ B ∖ C is bracketed two ways and comes out the same, because A ∩ (B ∖ C) = (A ∩ B) ∖ C is a law, true on all 4096 triples of subsets of {1, 2, 3, 4}, while the two laws that would make the other expressions safe fail on 2800 triples each. Lean refuses A ∩ B ∖ C and A ∖ B ∖ C unbracketed altogether, since its `\` is declared `infix`, not `infixl`: a left operand must bind tighter than 70, and A ∩ B is exactly 70 (read off the declarations; Lean was not run here). So in value there are two conventions, not three: ∖ at least as tight as ∩, or ∖ as loose as ∪. This page reads ∖ as Python does, and when you write for a reader, bracket it.
+
+The owner pasted an AI-written answer to this page's first flashcard, which said that "standard mathematical convention" puts intersection before difference, with union and difference on one level, left to right, and worked an example. Claim by claim, with how sure this page is of each:
+
+| Claim | How sure | Note |
+|---|---|---|
+| Complement first, then intersection, then union | Right | The part every source shares, and logic explains it. |
+| Union and difference share a level and go left to right | One convention, not *the* convention | The arithmetic analogy, × before + and −, and what Isabelle/HOL, Pascal, the SQL standard and Z do. Python and Lean put ∖ above ∪; most textbooks give it no level. |
+| "Standard mathematical convention places intersection before difference" | Overstated | No standard exists for ∖. Ashlock brackets it always; Python and Lean read A ∖ B ∩ C as (A ∖ B) ∩ C. |
+| Bracketing difference is always best practice | Right | The one point every camp agrees on. |
+| With U = {1, …, 5}, A = {1, 2, 3}, B = {3, 4}, C = {2, 5} and D = {1, 4, 5}, A ∖ B ∪ C ∩ Dᶜ = {1, 2} | Right, and it tests nothing | Section 6 reads it under all three systems and gets {1, 2} each time: its ∖ is leftmost and its ∪ is lowest everywhere. A ∪ C ∖ B, from the same sets, does separate them: {1, 2, 3, 5} against {1, 2, 5}. |
+
+This page's own earlier wording, "complement, then difference, then intersection, then union", stated Python's choice as the textbook rule, which was wrong in the same way, and the flashcards have been corrected with it. Pascal, the SQL standard and Z are cited from memory; the Lean and Isabelle lines were read in their source files, linked under See also.
+
 ## Practice
 
-With A = {1, 3, 5, 7}, B = {4, 5, 6, 7}, C = {1, 2, 3} and U = {0, 1, …, 9}, write each set as a list of its members, using the precedence rule where there are no brackets: A ∪ B, A ∩ B, A ∖ B, B ∖ A, A′, A △ B, A ∪ B ∩ C, (A ∪ B) ∩ C, A ∩ B ∪ C, A ∩ (B ∪ C), A ∖ B ∖ C, A ∖ (B ∖ C), A ∪ B ∖ A ∩ C, A′ ∩ B. Section 3 of the output has the answers. Notice which pairs differ only in their brackets, and which do not differ at all.
+With A = {1, 3, 5, 7}, B = {4, 5, 6, 7}, C = {1, 2, 3} and U = {0, 1, …, 9}, write each set as a list of its members, reading it as Python does where there are no brackets: A ∪ B, A ∩ B, A ∖ B, B ∖ A, A′, A △ B, A ∪ B ∩ C, (A ∪ B) ∩ C, A ∩ B ∪ C, A ∩ (B ∪ C), A ∖ B ∖ C, A ∖ (B ∖ C), A ∪ B ∖ A ∩ C, A′ ∩ B. Section 3 of the output has the answers. Notice which pairs differ only in their brackets, and which do not differ at all. One row, A ∪ B ∖ A ∩ C, has an unbracketed ∖ beside ∪ and ∩: say what the reading with ∖ level with ∪ gives instead, then check section 6.
 
 ## Flashcards
 
@@ -111,7 +183,7 @@ The page as a deck of Anki cards: [`reading_set_expressions.txt`](anki/reading_s
 
 ## Po polsku, w skrócie
 
-Wyrażenie A ∪ B ∩ C nic nie znaczy, dopóki nie ustalimy kolejności działań. Zwykle przejmuje się ją z logiki: najpierw dopełnienie (jak „nie”), potem różnica, potem iloczyn (jak „i”), na końcu suma (jak „lub”), a przy równych od lewej do prawej. Operatory Pythona mają dokładnie tę kolejność: `-` przed `&` przed `^` przed `|`, więc wyrażenie wpisane w Pythonie znaczy to samo co w podręczniku. Mimo to wielu autorów zawsze pisze nawiasy i warto robić tak samo.
+Wyrażenie A ∪ B ∩ C nic nie znaczy, dopóki nie ustalimy kolejności działań. Część wspólną dla wszystkich źródeł przejmuje się z logiki: najpierw dopełnienie (jak „nie”), potem iloczyn (jak „i”), na końcu suma (jak „lub”), a przy równych od lewej do prawej. Różnica zbiorów nie ma ustalonego miejsca: Python czyta ją przed iloczynem, Lean na równi z iloczynem, Isabelle, Pascal i SQL na równi z sumą, a większość podręczników zawsze bierze ją w nawias. Program pokazuje, że A ∪ B ∖ C i A ∖ B ∩ C dają w różnych systemach różne zbiory, a A ∩ B ∖ C zawsze ten sam, bo A ∩ (B ∖ C) = (A ∩ B) ∖ C jest prawem. Dlatego różnicę zawsze warto brać w nawias. Wklejona odpowiedź AI, że „standardowa konwencja” stawia iloczyn przed różnicą, opisuje jedną z konwencji, nie standard, a jej przykład daje ten sam wynik w każdym systemie, więc niczego nie rozstrzyga. Ta strona czyta ∖ tak jak Python i mówi to wprost.
 
 Dwa klasyczne błędy zapisu to też błędy w programie: „x ∈ A ∩ x ∈ B” w Pythonie kończy się wyjątkiem `TypeError`, a „x ∈ A ∧ B” (`x in A and B`) po cichu zwraca zbiór B zamiast wartości logicznej. Po obu stronach ∩ stoją zbiory, po obu stronach ∧ stoją zdania. Wreszcie (1, 2) to para uporządkowana albo przedział otwarty, a działania na zbiorach dają w tych dwóch odczytaniach różne wyniki.
 
@@ -129,4 +201,7 @@ python3 04_Sets/reading_set_expressions/examples/reading_set_expressions.py
 - [If A then B: converse, contrapositive and inverse](../../11_Logic/converse_and_contrapositive/README.md) — the connectives themselves
 - [The Cartesian product](../cartesian_product/README.md) — ordered pairs, and the Kuratowski encoding
 - [A set is a hash table ↗](https://masiarek.github.io/python-learning-library/04_Names_and_Objects/a_set_is_a_hash_table/index.html) — the Python library: operators against methods
+- [Set katas](../set_katas/README.md) — Ashlock's exercise 2.7: complement, then ∩, then ∪, with ∖ and △ always bracketed
 - [Operator precedence ↗](https://docs.python.org/3/reference/expressions.html#operator-precedence) — the Python reference: the full table
+- [Init/Core.lean ↗](https://github.com/leanprover/lean4/blob/master/src/Init/Core.lean) — Lean 4: `∪` declared at 65, `∩` and `\` at 70, `\` non-associative
+- [HOL/Set.thy ↗](https://github.com/isabelle-prover/mirror-isabelle/blob/master/src/HOL/Set.thy) — Isabelle/HOL: `∩` at 70, `∪` at 65; difference is the `-` of `Groups.thy`, also 65
