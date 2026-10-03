@@ -398,6 +398,9 @@ Terms used across the library, with the page that explains each in full. For set
 **Metric** — a distance function on a set: d(P, Q) ≥ 0, d(P, Q) = 0 exactly when P = Q, d(P, Q) = d(Q, P), and the triangle inequality d(P, R) ≤ d(P, Q) + d(Q, R). The Euclidean formula is one; the first three properties are a line each from the formula, the fourth needs the Cauchy–Schwarz inequality. The properties are the definition and the formula is replaceable: taxicab, Chebyshev and Hamming distances are metrics too, and (√|Δx| + √|Δy|)² is not. See [distance in n dimensions](08_Analytic_Geometry/distance_in_n_dimensions/README.md) and [distance is the four properties](08_Analytic_Geometry/other_distances/README.md).
 { #metric }
 
+**Metric space** — a set together with a [metric](#metric) on it. The opening chapter of analysis, where a limit, a continuous function and a complete space are each defined from the distance alone and so hold at once for the line, the plane, n dimensions and spaces of functions; and the doorway to topology, which keeps the open balls and drops the distance. No chapter here yet; it is a candidate on the [roadmap](ROADMAP.md#candidate-chapters). See [distance is the four properties](08_Analytic_Geometry/other_distances/README.md) and [metric space ↗](https://en.wikipedia.org/wiki/Metric_space).
+{ #metric-space }
+
 **Midpoint** — the point halfway along a segment, ((x₁ + x₂)/2, (y₁ + y₂)/2): an average per coordinate. Equidistant from both ends and on the segment; equidistance alone describes the perpendicular bisector. See [the midpoint formula](08_Analytic_Geometry/midpoint_formula/README.md).
 { #midpoint }
 
