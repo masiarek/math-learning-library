@@ -8,6 +8,9 @@ Terms used across the library, with the page that explains each in full. For set
 **Abscissa** — the x-coordinate of a point: its signed distance from the y-axis, positive to the right of it and negative to the left. The y-coordinate is the *ordinate*. See [rectangular coordinates](08_Analytic_Geometry/rectangular_coordinates/README.md).
 { #abscissa }
 
+**Absolute value** — |t|, the number t with its sign thrown away: t when t ≥ 0 and −t when t < 0. It is a distance, from t to 0 on the number line, and |b − a| is the distance from a to b. Two facts the distance formula lives on: |t|² = t² and √(t²) = |t|, both proved by the two cases. See [the distance formula](08_Analytic_Geometry/distance_formula/README.md) and [what a proof is](11_Logic/what_a_proof_is/README.md).
+{ #absolute-value }
+
 **Absolute error** — |x − x̂|, the difference between a value and the truth, in the value's own units (`±0.05 cm`). What `+` and `−` propagate. Defined in [relative error and correct digits](01_Precision/relative_error/README.md); propagated in [uncertainty propagation](01_Precision/uncertainty_propagation/README.md).
 { #absolute-error }
 
@@ -116,6 +119,9 @@ Terms used across the library, with the page that explains each in full. For set
 **Coefficient** — a fixed number standing in front of a variable in a linear combination: in 40h + 15c the coefficients are 40 and 15. In a system, aᵢ,ⱼ is the coefficient in equation i in front of variable j. Zero is allowed. See [linear equations and their solutions](07_Linear_Systems/linear_equations/README.md).
 { #coefficient }
 
+**Collinear** — three or more points on one line. In coordinates, P, Q, R are collinear with Q between the others exactly when d(P, Q) + d(Q, R) = d(P, R), the case of equality in the triangle inequality; otherwise the three make a real triangle. See [the distance formula](08_Analytic_Geometry/distance_formula/README.md).
+{ #collinear }
+
 **Commutative** — a · b = b · a: the order of the two inputs does not matter. True for adding and multiplying numbers; false for subtraction, string concatenation, matrix multiplication and composing maps. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
 { #commutative }
 
@@ -208,6 +214,9 @@ Terms used across the library, with the page that explains each in full. For set
 
 **Equivalence relation** — a relation that is reflexive, symmetric and transitive; its classes [u] partition the set, and every partition arises this way. Congruence mod m is the one everyone uses. See [equivalence relations and partitions](04_Sets/equivalence_and_partitions/README.md).
 { #equivalence-relation }
+
+**Euclidean norm** — the length of a vector, |v| = √(v₁² + ⋯ + vₙ²) = √(v·v); a definition in linear algebra, and a length because the distance formula says that number is the distance from the origin to the arrow's tip. The distance between two points is the norm of their difference. See [distance in n dimensions](08_Analytic_Geometry/distance_in_n_dimensions/README.md).
+{ #euclidean-norm }
 
 **Euler's formula** — e^{it} = (cos t, sin t): the exponential of an imaginary number is the unit point at angle t, in radians. It is what compounding gives, since (1 + it/n)ⁿ is n small turns whose angles add up to t while their stretches fade to nothing, and it is forced by the law e^{a+b} = e^a e^b, because multiplying unit points can only add angles. See [Euler's identity](03_Complex_Numbers/eulers_identity/README.md).
 { #euler-s-formula }
@@ -326,6 +335,9 @@ Terms used across the library, with the page that explains each in full. For set
 **Kurepa's principle** — every poset has a maximal antichain. Equivalent to the axiom of choice given foundation, and not without it (Halbeisen, Theorem 6.2). See [choice](13_Axioms_of_Set_Theory/choice/README.md#the-equivalent-forms-and-the-weaker-ones).
 { #kurepa-s-principle }
 
+**Law of cosines** — for any triangle, c² = a² + b² − 2ab cos C. At C = 90° the cosine is 0 and it is Pythagoras; it is proved from Pythagoras by dropping a perpendicular, not the other way round. See [the Pythagorean theorem and its converse](10_Geometry/pythagorean_theorem/README.md#what-follows-from-the-right-angle).
+{ #law-of-cosines }
+
 **Lebesgue's criterion** — a bounded function on a closed interval has a Riemann integral exactly when the points where it is discontinuous form a set of measure zero. Also called the *Lebesgue–Vitali theorem*. See [the fat Cantor set](02_Measure_Zero/fat_cantor_set/README.md).
 { #lebesgue-s-criterion }
 
@@ -376,6 +388,9 @@ Terms used across the library, with the page that explains each in full. For set
 
 **Metacognition** — John Flavell's word (1976) for thinking about your own thinking, including the ability to judge accurately how much you have learned, the one part a program can measure. See [metacognition ↗](https://masiarek.github.io/learning-to-learn-library/01_Knowing_What_You_Know/metacognition/).
 { #metacognition }
+
+**Metric** — a distance function on a set: d(P, Q) ≥ 0, d(P, Q) = 0 exactly when P = Q, d(P, Q) = d(Q, P), and the triangle inequality d(P, R) ≤ d(P, Q) + d(Q, R). The Euclidean formula is one; the first three properties are a line each from the formula, the fourth needs the Cauchy–Schwarz inequality. See [distance in n dimensions](08_Analytic_Geometry/distance_in_n_dimensions/README.md).
+{ #metric }
 
 **Midpoint** — the point halfway along a segment, ((x₁ + x₂)/2, (y₁ + y₂)/2): an average per coordinate. Equidistant from both ends and on the segment; equidistance alone describes the perpendicular bisector. See [the midpoint formula](08_Analytic_Geometry/midpoint_formula/README.md).
 { #midpoint }

@@ -171,6 +171,7 @@ NAV_ORDER: dict[str, list[str]] = {
         "graphs_intercepts_symmetry",
         "lines_and_slope",
         "circles",
+        "distance_in_n_dimensions",
     ],
     # The geometry the precalculus book assumes, in its review appendix's
     # order: when three lengths make a right angle, why a formula's power of

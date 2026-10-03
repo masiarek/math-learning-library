@@ -1,0 +1,44 @@
+1. A BOX 3 BY 4 BY 12: PYTHAGORAS TWICE
+   Floor diagonal: a right triangle with legs 3 and 4, so f^2 = 3^2 + 4^2 = 25, f = 5.
+   Box diagonal: a right triangle with legs f = 5 and the height 12,
+   so d^2 = f^2 + 12^2 = 25 + 144 = 169, d = 13.
+   Substituting f^2: d^2 = 3^2 + 4^2 + 12^2. Each axis adds one square.
+   The second right angle is between the floor diagonal and the vertical edge,
+   which is perpendicular to everything in the floor: that is what the z-axis being
+   perpendicular to the x- and y-axes buys.
+
+2. TWO POINTS IN SPACE, THE SAME FORMULA WITH THREE DIFFERENCES
+   P1 = (1, 3, 2), P2 = (5, 6, 14): differences [4, 3, 12], squares [16, 9, 144],
+   d^2 = 169, d = 13.
+   Swapped: d(P2, P1)^2 = 169. Order does not matter, for the same reason as in the plane.
+
+3. ONE SQUARE PER AXIS: THE SAME TWO POINTS SEEN IN 1, 2, 3, 4, 5 DIMENSIONS
+   n = 1: d^2 = 16                     =   16, d = 4
+   n = 2: d^2 = 16 + 9                 =   25, d = 5
+   n = 3: d^2 = 16 + 9 + 144           =  169, d = 13
+   n = 4: d^2 = 16 + 9 + 144 + 4       =  173, d = sqrt(173) = 13.1529
+   n = 5: d^2 = 16 + 9 + 144 + 4 + 9   =  182, d = sqrt(182) = 13.4907
+   Dropping to n - 1 dimensions drops one square; adding an axis adds one. That is the
+   induction: the n-dimensional formula is the (n - 1)-dimensional one plus Pythagoras once more.
+
+4. THE LENGTH OF A VECTOR IS THE DISTANCE FROM THE ORIGIN
+   v = (3, 4)           v . v = 25     |v| = sqrt(v . v) = 5                  d(0, v)^2 = 25
+   v = (1, 1)           v . v = 2      |v| = sqrt(v . v) = sqrt(2) = 1.4142   d(0, v)^2 = 2
+   v = (3, 4, 12)       v . v = 169    |v| = sqrt(v . v) = 13                 d(0, v)^2 = 169
+   v = (1, 1, 1, 1)     v . v = 4      |v| = sqrt(v . v) = 2                  d(0, v)^2 = 4
+   v = (1/2, 1/2)       v . v = 1/2    |v| = sqrt(v . v) = sqrt(1/2) = 0.7071 d(0, v)^2 = 1/2
+   v . v is the sum of the squares of the coordinates, which is d(0, v)^2 by the formula.
+   So sqrt(v . v) is a length because the distance formula says so, not by decree.
+   And the distance between two points is the length of their difference: w - u = (4, 3, 12),
+   |w - u|^2 = 169 = d(u, w)^2 = 169.
+
+5. THE FOUR PROPERTIES OF A DISTANCE, CHECKED ON A GRID IN 3 DIMENSIONS
+   Points: every (x, y, z) with coordinates in -2..2, 125 of them.
+   d(P, Q) >= 0 for all pairs:                   True
+   d(P, Q) = 0 exactly when P = Q:               True
+   d(P, Q) = d(Q, P):                            True
+   d(P, R) <= d(P, Q) + d(Q, R) on 27x125x27 triples: True
+   The first three follow from the formula in a line each: squares are never negative,
+   a sum of squares is 0 only when every square is, and squaring forgets the sign.
+   The fourth is the one with a real proof behind it (the Cauchy-Schwarz inequality),
+   which this page checks and does not prove.

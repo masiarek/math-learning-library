@@ -107,6 +107,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - [Graphs of equations: intercepts and symmetry](08_Analytic_Geometry/graphs_intercepts_symmetry/README.md) — graph as a set of points, x-intercept, y-intercept, symmetry about the axes and the origin
         - [Lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md) — slope, rise over run, point-slope, slope-intercept, general form, negative reciprocal
         - [Circles: standard form and general form](08_Analytic_Geometry/circles/README.md) — center, radius, unit circle, completing the square
+        - [Distance in n dimensions, and the length of a vector](08_Analytic_Geometry/distance_in_n_dimensions/README.md) — Pythagoras twice for a box diagonal, one square per axis by induction, |v| = √(v·v) as the distance from the origin, the four metric properties checked on a grid
         - ↪ [Linear equations and their solutions](07_Linear_Systems/linear_equations/README.md) — the solution set of Ax + By = C is a line
         - ↪ [Congruent and similar triangles](10_Geometry/congruent_and_similar_triangles/README.md) — why a line has one slope
         - ↪ [The Cartesian product](04_Sets/cartesian_product/README.md) — the set ℝ² that the plane is
@@ -251,11 +252,12 @@ One theorem about right triangles turns out to be how every distance in this lib
 4. [The distance formula](08_Analytic_Geometry/distance_formula/README.md) — the theorem with the legs read off coordinates.
 5. [What a proof is](11_Logic/what_a_proof_is/README.md) — the distance formula as a ten-line chain, in which the right angle costs one named assumption.
 6. [Circles: standard form and general form](08_Analytic_Geometry/circles/README.md) — the distance formula held fixed, with twelve whole-number points on x² + y² = 25.
-7. [Lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md) — perpendicular slopes, checked by the converse.
-8. [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — the length of a complex number, √(x² + y²), is the same formula measured from 0.
-9. [Catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md) — the Burj Khalifa example subtracts two nearly equal squares, and a calculator pays for it.
-10. [Related rates](09_Calculus/related_rates/README.md) — ladders and travellers: x² + y² = z², differentiated in time.
-11. [Studying vs learning ↗](https://masiarek.github.io/learning-to-learn-library/01_Knowing_What_You_Know/studying_vs_learning/) — Bloom's six levels climbed on the theorem, up to Euclid's formula for every whole-number right triangle.
+7. [Distance in n dimensions, and the length of a vector](08_Analytic_Geometry/distance_in_n_dimensions/README.md) — the theorem applied twice for a box, n − 1 times for n axes, and the norm √(v·v) as its distance from the origin.
+8. [Lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md) — perpendicular slopes, checked by the converse.
+9. [Multiplication rotates](03_Complex_Numbers/multiplication_rotates/README.md) — the length of a complex number, √(x² + y²), is the same formula measured from 0.
+10. [Catastrophic cancellation](01_Precision/catastrophic_cancellation/README.md) — the Burj Khalifa example subtracts two nearly equal squares, and a calculator pays for it.
+11. [Related rates](09_Calculus/related_rates/README.md) — ladders and travellers: x² + y² = z², differentiated in time.
+12. [Studying vs learning ↗](https://masiarek.github.io/learning-to-learn-library/01_Knowing_What_You_Know/studying_vs_learning/) — Bloom's six levels climbed on the theorem, up to Euclid's formula for every whole-number right triangle.
 
 ### Scale factor k
 
