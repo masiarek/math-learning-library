@@ -12,7 +12,7 @@ Two points, P₁ = (x₁, y₁) and P₂ = (x₂, y₂). How far apart are they?
 
 In words: subtract the x's and square, subtract the y's and square, add, take the square root.
 
-The book's Example 1 is exactly this: from (1, 3) to (5, 6), the corner is (5, 3), the legs are 4 and 3, and the distance is 5.
+The book's Example 1 is exactly this: from (1, 3) to (5, 6), the corner is (5, 3), the legs are 4 and 3, and the distance is 5. Written out as a proof, ten lines each with its reason and the horizontal and vertical pairs as cases of their own, the same argument is the worked example of [what a proof is](../../11_Logic/what_a_proof_is/README.md).
 
 This page follows the opening of section 1.1, *The Distance and Midpoint Formulas*, in Michael Sullivan's *Precalculus*, which sends the reader back to [Appendix A.2](../../10_Geometry/README.md) for the Pythagorean theorem first.
 
@@ -214,6 +214,7 @@ Kwadraty robią tu dwie rzeczy: są Pitagorasem i kasują znaki. Dlatego kolejno
 
 - [The Pythagorean theorem and its converse](../../10_Geometry/pythagorean_theorem/README.md) — the theorem this formula is, and the converse used in question 7
 - [Rectangular coordinates](../rectangular_coordinates/README.md) — the plane, and why a horizontal distance is a difference of x-coordinates
+- [What a proof is](../../11_Logic/what_a_proof_is/README.md) — this formula's argument as ten lines with reasons, which assumption the right angle costs, and why the program's checks are evidence rather than proof
 - [Multiplication rotates](../../03_Complex_Numbers/multiplication_rotates/README.md) — the distance from the origin as the length of a complex number
 - [Precalculus: a reading guide](../../reading_guides/precalculus/README.md) — where section 1.1 sits in the course
 - [Euclidean distance ↗](https://en.wikipedia.org/wiki/Euclidean_distance) — Wikipedia, with the same formula in any number of dimensions
