@@ -2,7 +2,7 @@
 
 Pitfalls met in earlier sessions. Check here before repeating an approach.
 
-- **Wikipedia, Math is Fun and the Stanford Encyclopedia are blocked** by the network policy too, like YouTube. Describe such a page from memory, say so on the page, and add a "how sure" column where the claims matter.
+- **Wikipedia, Math is Fun, ChiliMath and the Stanford Encyclopedia are blocked** by the network policy too, like YouTube. Describe such a page from memory, say so on the page, and add a "how sure" column where the claims matter.
 - **YouTube is blocked** in cloud sessions by the network policy. Find the title with a web search on the video ID, then ask the owner for the transcript or description.
 - **The owner's external drive and Downloads folder are unreachable** from cloud sessions. Search Google Drive first; otherwise ask the owner to upload the file or run a local session (`claude remote-control` in the repo folder). A manual that ships with open-source software usually has its source on GitHub: read that instead.
 - **Chapter `README.md` files have paragraphs of many kilobytes on one line.** Do not pipe them through `rev`, `cut` and friends in long chains (one such command hung until killed); slice them with a short Python script.
