@@ -68,14 +68,26 @@ A universe with a top rank. The sets of V₄ have rank at most 3, where the rank
    Kuratowski (∅, {∅}) = {{∅}, {∅, {∅}}}   Hausdorff (∅, {∅}) = {{∅}, {{∅}}}
    Different sets with the same property; any set with the property will do,
    and nobody ever unpacks one. The ∅ and {∅} are tags for 'first' and 'second'.
+
+7. PAIRS WITHOUT THE AXIOM: REPLACEMENT OVER 𝒫(𝒫(∅)) (SUPPES, ISABELLE/ZF)
+   𝒫(∅) = {∅}, and 𝒫(𝒫(∅)) = {∅, {∅}}: a set with exactly two members.
+   The rule 'send ∅ to a and {∅} to b' is a function on it, so replacement gives
+   its image, and the image is {a, b}: it agrees with the axiom for every a, b in V_3: True
+   So pairing is a theorem once power set and replacement are axioms. Suppes
+   and Isabelle/ZF take it that way; Isabelle's definition is exactly this rule:
+     Upair(a,b) ≡ {y . x ∈ Pow(Pow(0)), (x = 0 ∧ y = a) ∨ (x = Pow(0) ∧ y = b)}
 ```
 <!-- /output -->
 
 Section 2 is the row of the chapter's table for this axiom, with the counterexample written out: a = ∅ and b = {{{∅}}} are both in V₄, and {a, b} is not. Sections 4 and 5 are the two facts about pairs that the rest of the book uses, checked over every choice of four sets from V₃. Section 6 checks Hausdorff's alternative pair, {{a, ∅}, {b, {∅}}}, which Robert André's book presents beside Kuratowski's: ∅ and {∅} tag the first and second entries, the defining property holds just the same, and the two constructions give different sets, which is the point: any set with the property will serve, and nobody ever looks inside one.
 
+## Pairs without the axiom
+
+Section 7 is a remark from Paulson's manual for Isabelle/ZF, placed in the [proof assistants guide](../../reading_guides/proof_assistants/README.md): pairing need not be an axiom at all. The power set of ∅ is {∅}, and the power set of that is {∅, {∅}}, a set with exactly two members that [power set](../power_set/README.md) alone provides. The rule "send ∅ to a and {∅} to b" is a function on it, so [replacement](../replacement/README.md) yields its image, and the image is {a, b}. The program checks that this agrees with the axiom for every a and b in V₃. Suppes's *Axiomatic Set Theory* derives pairing this way, and Isabelle/ZF defines it so, as `Upair(a,b)`, with six axioms and a constant 0 in place of the chapter's seven; the axiom is kept on this page because every book the chapter reads states it, and because a universe that lacks it is the clearest way to see what it demands.
+
 ## Po polsku, w skrócie
 
-Aksjomat pary mówi: dla dowolnych zbiorów a i b istnieje zbiór, którego elementami są dokładnie a i b, czyli para {a, b}; dla a = b dostajemy singleton {a}. To pierwszy aksjomat, który coś buduje: z ∅ daje {∅}, potem {∅, {∅}} i tak dalej. Para nie pamięta kolejności ({a, b} = {b, a}), ale trzy pary dają parę uporządkowaną Kuratowskiego (a, b) = {{a}, {a, b}}, z której (a, b) = (c, d) wynika a = c i b = d; na niej stoi cała geometria współrzędnych. Aksjomat trzeba wypowiedzieć, bo uniwersum może się skończyć: w V₄, gdzie zbiory mają rangę najwyżej 3, para dwóch zbiorów rangi 3 ma rangę 4 i w V₄ jej nie ma. Program liczy, że z 256 par elementów V₄ tylko 16 ma swoją parę w środku.
+Aksjomat pary mówi: dla dowolnych zbiorów a i b istnieje zbiór, którego elementami są dokładnie a i b, czyli para {a, b}; dla a = b dostajemy singleton {a}. To pierwszy aksjomat, który coś buduje: z ∅ daje {∅}, potem {∅, {∅}} i tak dalej. Para nie pamięta kolejności ({a, b} = {b, a}), ale trzy pary dają parę uporządkowaną Kuratowskiego (a, b) = {{a}, {a, b}}, z której (a, b) = (c, d) wynika a = c i b = d; na niej stoi cała geometria współrzędnych. Aksjomat trzeba wypowiedzieć, bo uniwersum może się skończyć: w V₄, gdzie zbiory mają rangę najwyżej 3, para dwóch zbiorów rangi 3 ma rangę 4 i w V₄ jej nie ma. Program liczy, że z 256 par elementów V₄ tylko 16 ma swoją parę w środku. Sekcja 7 pokazuje uwagę z podręcznika Isabelle/ZF: para nie musi być aksjomatem, bo 𝒫(𝒫(∅)) = {∅, {∅}} ma dokładnie dwa elementy, a zastępowanie (∅ ↦ a, {∅} ↦ b) daje z niego obraz {a, b}.
 
 ## Run it yourself
 
@@ -87,6 +99,7 @@ python3 13_Axioms_of_Set_Theory/pairs/examples/pairs.py
 
 ## See also
 
+- [Proof assistants: a reading guide](../../reading_guides/proof_assistants/README.md) — Isabelle/ZF's six axioms and a constant, with pairing and separation derived
 - [Extensionality](../extensionality/README.md) — why "the" pair
 - [Unions](../unions/README.md) — the next axiom; with pairs it makes a ∪ b and every finite set
 - [The Cartesian product](../../04_Sets/cartesian_product/README.md) — Kuratowski's pair put to work

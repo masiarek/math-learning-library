@@ -36,3 +36,11 @@
    Kuratowski (∅, {∅}) = {{∅}, {∅, {∅}}}   Hausdorff (∅, {∅}) = {{∅}, {{∅}}}
    Different sets with the same property; any set with the property will do,
    and nobody ever unpacks one. The ∅ and {∅} are tags for 'first' and 'second'.
+
+7. PAIRS WITHOUT THE AXIOM: REPLACEMENT OVER 𝒫(𝒫(∅)) (SUPPES, ISABELLE/ZF)
+   𝒫(∅) = {∅}, and 𝒫(𝒫(∅)) = {∅, {∅}}: a set with exactly two members.
+   The rule 'send ∅ to a and {∅} to b' is a function on it, so replacement gives
+   its image, and the image is {a, b}: it agrees with the axiom for every a, b in V_3: True
+   So pairing is a theorem once power set and replacement are axioms. Suppes
+   and Isabelle/ZF take it that way; Isabelle's definition is exactly this rule:
+     Upair(a,b) ≡ {y . x ∈ Pow(Pow(0)), (x = 0 ∧ y = a) ∨ (x = Pow(0) ∧ y = b)}

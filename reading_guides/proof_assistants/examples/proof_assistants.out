@@ -1,0 +1,79 @@
+1. THE RULES, AS ISABELLE STATES THEM, AND A PROOF THEY ACCEPT
+   ⟹ is Isabelle's 'from these, this'; ⟦P; Q⟧ lists what is needed.
+     assume     P ⟹ P                           an assumption may be claimed
+     conjI      ⟦P; Q⟧ ⟹ P ∧ Q
+     conjunct1  P ∧ Q ⟹ P
+     conjunct2  P ∧ Q ⟹ Q
+     disjI1     P ⟹ P ∨ Q
+     disjI2     Q ⟹ P ∨ Q
+     disjE      ⟦P ∨ Q; P ⟹ R; Q ⟹ R⟧ ⟹ R
+     impI       (P ⟹ Q) ⟹ P ⟶ Q
+     mp         ⟦P ⟶ Q; P⟧ ⟹ Q
+     FalseE     False ⟹ P
+     notI       (P ⟹ False) ⟹ ¬P              derived: ¬P abbreviates P ⟶ False
+     notE       ⟦¬P; P⟧ ⟹ R                    derived
+     classical  (¬P ⟹ P) ⟹ P                  the one axiom FOL adds to IFOL
+   A proof is a list of lines: assumptions ⊢ claim, the rule, the lines it cites.
+   Claim: A ∧ B ⟶ B ∧ A.
+    1. A ∧ B ⊢ A ∧ B                      by assume
+    2. A ∧ B ⊢ B                          by conjunct2 [1]
+    3. A ∧ B ⊢ A                          by conjunct1 [1]
+    4. A ∧ B ⊢ B ∧ A                      by conjI [2, 3]
+    5. ⊢ A ∧ B ⟶ B ∧ A                    by impI [4]
+   accepted: every line has the shape its rule demands
+
+2. THE CHECKER CHECKS SHAPE, NOT TRUTH: TWO DOCTORED PROOFS
+   The same proof with line 4 claiming B ∧ A straight from line 1:
+    1. A ∧ B ⊢ A ∧ B                      by assume
+    2. A ∧ B ⊢ B                          by conjunct2 [1]
+    3. A ∧ B ⊢ A                          by conjunct1 [1]
+    4. A ∧ B ⊢ B ∧ A                      by conjunct1 [1]
+       REJECTED: conjunct1 of A ∧ B is A
+   And with line 5 discharging an assumption line 4 never had:
+    1. A ∧ B ⊢ A ∧ B                      by assume
+    2. A ∧ B ⊢ B                          by conjunct2 [1]
+    3. A ∧ B ⊢ A                          by conjunct1 [1]
+    4. A ∧ B ⊢ B ∧ A                      by conjI [2, 3]
+    5. ⊢ A ⟶ B ∧ A                        by impI [4]
+       REJECTED: a premise rests on an assumption the conclusion does not carry
+   The second is the slip a human reader misses: the conclusion is false
+   (A alone does not give B ∧ A), and only the bookkeeping of assumptions
+   catches it. The checker never evaluated a single formula.
+
+3. THE EXCLUDED MIDDLE, WITH THE ONE CLASSICAL STEP MARKED
+   Claim: A ∨ ¬A. IFOL has no rule that reaches it; FOL adds 'classical'.
+    1. A, ¬(A ∨ ¬A) ⊢ A                   by assume
+    2. A, ¬(A ∨ ¬A) ⊢ A ∨ ¬A              by disjI1 [1]
+    3. A, ¬(A ∨ ¬A) ⊢ ¬(A ∨ ¬A)           by assume
+    4. A, ¬(A ∨ ¬A) ⊢ False               by notE [3, 2]
+    5. ¬(A ∨ ¬A) ⊢ ¬A                     by notI [4]
+    6. ¬(A ∨ ¬A) ⊢ A ∨ ¬A                 by disjI2 [5]
+    7. ⊢ A ∨ ¬A                           by classical [6]
+   accepted: every line has the shape its rule demands
+   Lines 1 to 6 are intuitionistic: from ¬(A ∨ ¬A) they reach A ∨ ¬A.
+   Line 7 is the step (¬P ⟹ P) ⟹ P, which drops the assumption; without
+   it the proof stops at line 6 with ¬(A ∨ ¬A) still on the left of ⊢.
+
+4. A MODEL CHECK AND A PROOF OF THE SAME THEOREM
+   Pow(A ∩ B) = Pow(A) ∩ Pow(B) on every pair A, B ⊆ {1, 2, 3}: 64 pairs, 64 true
+   Pow(A ∪ B) = Pow(A) ∪ Pow(B): 64 pairs, 18 false; the smallest
+   counterexample is A = {1}, B = {2}: {1, 2} ⊆ A ∪ B but ⊆ neither.
+   That is what this library's programs do, and a counterexample is a finite
+   object, so it is the right tool to find one. Paulson's manual proves the
+   first law for all sets, in the proof of its section 'A proof about powersets':
+     lemma "Pow(A Int B) = Pow(A) Int Pow(B)"     
+     apply (rule equalityI)                       two inclusions, by extensionality
+     apply (rule Int_greatest)                    ⊆ of an intersection: ⊆ of each part
+     apply (rule Int_lower1 [THEN Pow_mono])      A ∩ B ⊆ A, and Pow is monotone
+     apply (rule Int_lower2 [THEN Pow_mono])      A ∩ B ⊆ B, likewise
+     apply (rule subsetI)                         the other inclusion, member by member
+     apply (erule IntE)                           x ∈ Pow(A) ∩ Pow(B) is two facts
+     apply (rule PowI)                            x ∈ Pow(A ∩ B) is x ⊆ A ∩ B
+     apply (drule PowD)+                          and the two facts are x ⊆ A, x ⊆ B
+     apply (rule Int_greatest)                    so x ⊆ A ∩ B
+     apply (assumption+)                          the two subgoals are assumptions
+     done                                         
+   Eleven steps, each a rule applied by shape, as in sections 1 to 3; the
+   manual adds that 'by blast' finds this proof by itself. 64 pairs here,
+   every set there. The checker above knows 13 rules; Isabelle/ZF's
+   difference is only size: more rules, quantifiers, and the seven axioms.

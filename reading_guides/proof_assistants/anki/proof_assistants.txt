@@ -1,0 +1,20 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Reading guides::Proof assistants
+#tags:logic math
+#columns:Front	Back	Tags
+#tags column:3
+What does a proof assistant check, and what does it never ask?	It checks that each line of a proof has the shape its rule demands, from the lines it cites. It never asks whether the claim is true; a proof that passes is the evidence.	proof_assistant
+How does a model checker differ from a proof assistant?	A model checker loops over the points of one universe and evaluates the sentence; a proof assistant loops over the lines of a proof. A check covers one model, a proof covers all of them.	proof_assistant
+Which tool finds a counterexample, and why?	A model finder: a counterexample is a finite object (A = {1}, B = {2} for Pow(A ∪ B) = Pow(A) ∪ Pow(B)). A proof assistant can only fail to prove, which is not a refutation.	proof_assistant
+What is Isabelle's conjI, in its own notation?	⟦P; Q⟧ ⟹ P ∧ Q: from a line P and a line Q, the line P ∧ Q. ⟹ is 'from these, this', at the level of rules.	isabelle
+What does impI do with assumptions?	(P ⟹ Q) ⟹ P ⟶ Q: a line Q resting on the assumption P becomes P ⟶ Q resting on everything but P. Discharging an assumption that was never there is the slip the bookkeeping catches.	isabelle
+What single rule turns Isabelle's intuitionistic IFOL into classical FOL?	classical: (¬P ⟹ P) ⟹ P. With it the excluded middle A ∨ ¬A takes seven lines; without it the proof stops with ¬(A ∨ ¬A) still assumed.	isabelle
+Which ZF axioms does Isabelle/ZF state, and which does it derive?	Axioms: extension, Union_iff, Pow_iff, infinity, foundation, replacement, plus the constant 0. Derived: pairing (replacement over Pow(Pow(0))) and separation (Collect, from Replace), as in Suppes.	isabelle
+Why is replacement one axiom in Isabelle/ZF and not a scheme?	Its P is a variable of the framework, a higher-order variable, so one statement covers every formula; the manual gives this as the reason Isabelle can use ZF rather than Bernays–Gödel.	isabelle
+What is the LCF design?	A theorem is a value of an abstract type that only the kernel's rules can build (Milner's Edinburgh LCF). Search procedures may be as clever and as buggy as they like; whatever they find still passes through the rules.	proof_assistant
+How do Lean and Metamath keep the trusted part small?	Lean keeps a proof term that a small kernel re-checks, with independent re-checkers. Metamath has no built-in logic: a verifier of a few hundred lines checks that each step is a substitution into an earlier statement.	proof_assistant
+What is Paulson's manual Isabelle's Logics: FOL and ZF, and what should a reader of this library read in it?	The reference manual for the object logics FOL and ZF, not a set theory textbook. Read the four ZF sections (which version, syntax, binding operators, the axioms) and the three worked proofs; use the rest as a dictionary of rule names.	isabelle
+Which language is best to play with finite sets, and which to prove about sets?	Play: Python, with the least ceremony; Rust has HashSet and BTreeSet with the same operators but no maths library in its standard library. Prove: Lean 4 (easiest on-ramp, type theory underneath) or Isabelle/HOL (book notation, best automation); Isabelle/ZF or Metamath to see ZF itself.	languages
+How does Rust spell set operations?	Methods union, intersection, difference, symmetric_difference (iterators), is_subset, is_disjoint, contains; or &a | &b, &a & &b, &a - &b, &a ^ &b on references, with C's precedence like Python. A HashSet cannot be a member of a HashSet; a BTreeSet can.	languages

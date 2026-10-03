@@ -52,7 +52,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
     - **The axioms of set theory** · from [Axioms of Set Theory](13_Axioms_of_Set_Theory/README.md)
         - [Reading a formula](13_Axioms_of_Set_Theory/reading_a_formula/README.md) — ∀ ∃ ⇒ ⇔ ≃ ∈ v₀ v₁ as loops and lookups, the universe as a dictionary, every axiom evaluated on V₂, V₃, V₄ and a universe with atoms
         - [Extensionality](13_Axioms_of_Set_Theory/extensionality/README.md) — same members, same set; a ⊆ b and b ⊆ a; "unique by extensionality"; urelements
-        - [Pairs](13_Axioms_of_Set_Theory/pairs/README.md) — {a, b}, {a}, rank, Kuratowski's ordered pair from three pairs
+        - [Pairs](13_Axioms_of_Set_Theory/pairs/README.md) — {a, b}, {a}, rank, Kuratowski's ordered pair from three pairs, pairing as a theorem of replacement over 𝒫(𝒫(∅))
         - [Unions](13_Axioms_of_Set_Theory/unions/README.md) — ∪a versus a ∪ b, rank goes down, ∩∅ does not exist
         - [Power set](13_Axioms_of_Set_Theory/power_set/README.md) — ⊆ inside the formula, V_{n+1} = 𝒫(V_n), Cantor's theorem
         - [Comprehension](13_Axioms_of_Set_Theory/comprehension/README.md) — a scheme, {x ∈ a : F[x]}, ∅ ∩ ∖ derived, classes, Russell's paradox as a truth table
@@ -67,6 +67,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - ↪ [The textbook definition on trial](04_Sets/definition_on_trial/README.md) — Russell's paradox and the repair before the formal language
         - ↪ [The Cartesian product](04_Sets/cartesian_product/README.md) — Kuratowski's pair put to work
         - ↪ [Set theory: a reading guide](reading_guides/set_theory/README.md) — Cori and Lascar, Cunningham, Jech and Kunen placed among the books
+        - ↪ [Proof assistants: a reading guide](reading_guides/proof_assistants/README.md) — a proof checker with Isabelle's rule names, model check against proof, the ZF axioms as Isabelle/ZF states them, Paulson's manual placed, Python, Rust, Lean and Isabelle for sets
     - **Size by length** · from [Measure Zero](02_Measure_Zero/README.md)
         - [What measure zero means](02_Measure_Zero/what_measure_zero_means/README.md) — fitting a set inside intervals of total length as small as anyone asks
         - [The Cantor set](02_Measure_Zero/cantor_set/README.md) — as many points as the whole interval, and length 0
@@ -130,6 +131,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - [Truth tables and the laws of logic](11_Logic/truth_tables_and_laws/README.md) — ¬ ∧ ∨ → ↔, tautology, contradiction, logical equivalence, ↔ versus ⇔, De Morgan, distributive, contrapositive, → does not associate, a misprint caught by one row
         - [Predicates and quantifiers](11_Logic/predicates_and_quantifiers/README.md) — predicate, universe of discourse, ∀ ∃ as loops, bounded quantifiers, interchange, negation flips a quantifier, distribution, ∃!
         - [Induction](11_Logic/induction/README.md) — base case, induction hypothesis, inductive step, well-ordering principle, least counterexample, proof by contradiction, the all-cars proof, Fibonacci, Binet's formula, 2ⁿ subsets, chocolate bar, invariant, closed form, sigma notation
+        - ↪ [Proof assistants: a reading guide](reading_guides/proof_assistants/README.md) — natural deduction checked by program: conjI, impI, mp, notI and the one classical rule; what a proof covers that a truth table does not
         - ↪ [Infinity](13_Axioms_of_Set_Theory/infinity/README.md) — the inductive set that makes induction a sentence about ℕ
         - ↪ [Ordinals](13_Axioms_of_Set_Theory/ordinals/README.md) — well-ordering past ℕ, and a theorem induction on ℕ cannot prove
         - ↪ [Reading a formula](13_Axioms_of_Set_Theory/reading_a_formula/README.md) — the same symbols inside the axioms of set theory, evaluated on a small universe
@@ -186,6 +188,7 @@ The same objects three times: in everyday use, in Python, and on the axioms.
 4. [The Cartesian product](04_Sets/cartesian_product/README.md) → [Pairs](13_Axioms_of_Set_Theory/pairs/README.md) → [Relations and functions](04_Sets/relations_and_functions/README.md) — Kuratowski's pair, the axiom that makes it, and everything built from pairs.
 5. [Cardinality of sets](04_Sets/cardinality/README.md) → [Power set](13_Axioms_of_Set_Theory/power_set/README.md) → [Infinity](13_Axioms_of_Set_Theory/infinity/README.md) → [Ordinals](13_Axioms_of_Set_Theory/ordinals/README.md) — size by matching, then the axioms that give an uncountable set, an infinite one, and the ordinals that count past it.
 6. [Set theory: a reading guide](reading_guides/set_theory/README.md) — the founding papers of steps 1 to 5, four of them run as a program, and the books to continue in.
+7. [Proof assistants: a reading guide](reading_guides/proof_assistants/README.md) — the same axioms as Isabelle/ZF states them, and a proof where steps 1 to 5 had model checks.
 
 ### Floats and exact numbers
 

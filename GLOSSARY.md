@@ -383,6 +383,9 @@ Terms used across the library, with the page that explains each in full. For set
 **Mode** — the value that occurs most often. When several values tie for most often, a set has more than one mode. An average, but not a mean. See [mean, average, arithmetic mean](05_Statistics/mean_vs_average/README.md).
 { #mode }
 
+**Model finder** — a program that looks for a universe in which given sentences are true, or one of them fails: by trying small universes exhaustively, as every program in the [axioms chapter](13_Axioms_of_Set_Theory/README.md) does, or by SAT search, as Alloy does. A counterexample is a finite object, so this is the tool that finds one; a proof assistant can only fail to prove. See [proof assistants: a reading guide](reading_guides/proof_assistants/README.md).
+{ #model-finder }
+
 **Monoid** — a set with an operation that is associative and has an identity, but where members need not have inverses. Strings under concatenation, and the integers under ×. See [the laws of an operation](06_Algebraic_Structures/laws_of_an_operation/README.md).
 { #monoid }
 
@@ -391,6 +394,9 @@ Terms used across the library, with the page that explains each in full. For set
 
 **Multiset** — a collection in which a member may occur more than once: formally a function M from a set S to ℕ giving each member's multiplicity, written [2, 2, 2, 5, 7, 7]. The prime factorisation of a number is a multiset of primes; Python's `collections.Counter` is one. Union takes the larger multiplicity, intersection the smaller, sum adds them, which is gcd, lcm and product on factorisations. See [multisets](04_Sets/multisets/README.md).
 { #multiset }
+
+**Natural deduction** — Gentzen's way of writing proofs: for each connective, rules that introduce it (conjI: from P and Q, P ∧ Q) and rules that eliminate it (conjunct1: from P ∧ Q, P), with assumptions made and later discharged (impI turns Q-under-the-assumption-P into P ⟶ Q). Isabelle's FOL is one, and the program of [proof assistants: a reading guide](reading_guides/proof_assistants/README.md) checks proofs written in it.
+{ #natural-deduction }
 
 **Negative reciprocal** — −1/m: the slope of a line perpendicular to one of slope m, so the two slopes multiply to −1. Flip the fraction and change its sign. See [lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md).
 { #negative-reciprocal }
@@ -457,6 +463,9 @@ Terms used across the library, with the page that explains each in full. For set
 
 **Prime ideal theorem** — every Boolean algebra has a prime ideal, equivalently every filter extends to an ultrafilter. It follows from the axiom of choice and is strictly weaker (Halpern and Lévy 1971); enough for Tychonoff's theorem on Hausdorff spaces and the completeness theorem of logic. See [choice](13_Axioms_of_Set_Theory/choice/README.md#the-equivalent-forms-and-the-weaker-ones).
 { #prime-ideal-theorem }
+
+**Proof assistant** — a program that checks a proof line by line, verifying that each line has the shape its rule demands from the lines it cites, without evaluating a single formula; Isabelle, Lean, Rocq and Metamath are ones. It proves a theorem about every model, where a [model finder](#model-finder) checks one. See [proof assistants: a reading guide](reading_guides/proof_assistants/README.md).
+{ #proof-assistant }
 
 **Proper factor** — a factor of n other than n itself; on the stricter convention, which the Math is Fun quizzes use, other than 1 as well, so the proper factors of 6 are 2 and 3. "Proper" as in proper subset: the whole thing excluded. Divisibility read as sets: a divides b exactly when the factors of a are a subset of the factors of b. See [set katas](04_Sets/set_katas/README.md#quiz-katas).
 { #proper-factor }
@@ -677,31 +686,31 @@ Terms used across the library, with the page that explains each in full. For set
 
 ## Symbols
 
-The same ideas in the spellings of the books this library reads. The definitions never vary; only the ink does.
+The same ideas in the spellings of the books this library reads. The definitions never vary; only the ink does. The last column is not a book but a machine, Isabelle/ZF, read in its theory files for the [proof assistants guide](reading_guides/proof_assistants/README.md); its composition, `g O f`, is from memory.
 
-| Idea | This library | Cori and Lascar | Cunningham | Jech | Kunen | Simovici and Djeraba | Stoll | André | Halbeisen |
-|---|---|---|---|---|---|---|---|---|---|
-| subset, equal allowed | a ⊆ b | a ⊆ b | A ⊆ B | X ⊂ Y | x ⊆ y | S ⊆ T | A ⊆ B | A ⊆ B | C ⊆ P |
-| proper subset | a ⊊ b | a ⊊ b | A ⊂ B | X ⊂ Y, X ≠ Y | x ⊊ y | — | A ⊂ B | A ⊂ B | — |
-| difference | a ∖ b | a ∖ b | A ∖ B | X − Y | x ∖ y | S − T | A − B | A − B | P ∖ A |
-| complement | A′ | — | — | — | — | T̄ | Ā | A′ = {x : x ∉ A}, absolute, a class | S ∖ X, and −X in a Boolean algebra |
-| symmetric difference | A △ B | — | — | — | — | U ⊕ V | A + B | A △ B | — |
-| union of a family | ∪a | ∪a, ∪ₓ∈ₐ x | ∪𝓕 | ∪X | ∪𝓕 | ∪𝒞 | ∪𝒜 | ∪_{C∈𝒜} C | ∪𝒞 |
-| power set | 𝒫(a) | ℘(a) | 𝒫(A) | P(X) | 𝒫(x) | 𝒫(S) | 𝒫(A) | 𝒫(A) | 𝒫(S) |
-| set builder | {x ∈ a : F[x]} | {x ∈ a : F[x]} | {x ∈ A : φ(x)} | {u ∈ X : φ(u)} | {x ∈ z : φ(x)} | {x ∈ S \| P(x)} | {x ∈ A \| P(x)} | {x : P(x)}, a class | {x ∈ S : …} |
-| ordered pair | (a, b) | (a, b) | (a, b) | (a, b) | ⟨x, y⟩ | (x, y) | ⟨x, y⟩ | (a, b) | ⟨a, b⟩ |
-| relation | ρ, R | R | R | R | R | ρ, σ, δ | ρ | R | a binary relation ≤ on P |
-| x related to y | x ρ y, (x, y) ∈ ρ | — | x R y | x R y | x R y | x ρ y | x ρ y | x R y | p ≤ q |
-| domain, range | dom, ran | dom(f), Im(f) | dom, ran | dom, ran | dom, ran | Dom, Ran | 𝒟, ℛ | dom, ran | dom(f) |
-| image of a set | f[a] | f̄(c) | f[A] | f"X, f(X) | F"A, F(A) | f(L) | f[A] | f[A] | f[A] |
-| composition of f then g | g ∘ f | g ∘ f | g ∘ f | g ∘ f | g ∘ f | gf (functions), ρσ (relations) | g ∘ f | g ∘ f | gf, written right to left, as in σρσ⁻¹ |
-| partial function | — | — | — | — | — | f : S ⇝ T | — | — | — |
-| natural numbers | ω, ℕ | ω, ℕ | ω | ω, **N** | ω = ℕ | ℕ (from 0) | ℕ | ℕ, ω | ω |
-| cardinality words | injection, bijection, \|A\| | subpotent, equipotent, card | — | \|X\| ≤ \|Y\| | A ≼ B, A ≈ B | equinumerous, \|S\| | ~, cardinal number | equipotent, \|A\|, 𝒞 | 𝔪, 𝔫; \|x\|; ≤*; ℵ(𝔪) |
-| the ordinals | Ord | On[v₀] | — | Ord | ON | — | — | 𝒪 | Ω |
-| if … then, iff | ⇒, ⇔ | ⇒, ⇔ | →, ↔ (in a formula); ⇒, ⇔ (between sentences) | →, ↔ | →, ↔ | — | →, ↔ | ⇒, ⇔ | →, ↔; :⟺ in definitions |
-| equality in the formal language | = | ≃ | = | = | = | = | = | = | = |
-| regularity / foundation | foundation | foundation | regularity | regularity | foundation | — | restriction | regularity | Axiom of Foundation |
+| Idea | This library | Cori and Lascar | Cunningham | Jech | Kunen | Simovici and Djeraba | Stoll | André | Halbeisen | Isabelle/ZF |
+|---|---|---|---|---|---|---|---|---|---|---|
+| subset, equal allowed | a ⊆ b | a ⊆ b | A ⊆ B | X ⊂ Y | x ⊆ y | S ⊆ T | A ⊆ B | A ⊆ B | C ⊆ P | A ⊆ B |
+| proper subset | a ⊊ b | a ⊊ b | A ⊂ B | X ⊂ Y, X ≠ Y | x ⊊ y | — | A ⊂ B | A ⊂ B | — | — |
+| difference | a ∖ b | a ∖ b | A ∖ B | X − Y | x ∖ y | S − T | A − B | A − B | P ∖ A | A − B |
+| complement | A′ | — | — | — | — | T̄ | Ā | A′ = {x : x ∉ A}, absolute, a class | S ∖ X, and −X in a Boolean algebra | — |
+| symmetric difference | A △ B | — | — | — | — | U ⊕ V | A + B | A △ B | — | — |
+| union of a family | ∪a | ∪a, ∪ₓ∈ₐ x | ∪𝓕 | ∪X | ∪𝓕 | ∪𝒞 | ∪𝒜 | ∪_{C∈𝒜} C | ∪𝒞 | ⋃(C) |
+| power set | 𝒫(a) | ℘(a) | 𝒫(A) | P(X) | 𝒫(x) | 𝒫(S) | 𝒫(A) | 𝒫(A) | 𝒫(S) | Pow(A) |
+| set builder | {x ∈ a : F[x]} | {x ∈ a : F[x]} | {x ∈ A : φ(x)} | {u ∈ X : φ(u)} | {x ∈ z : φ(x)} | {x ∈ S \| P(x)} | {x ∈ A \| P(x)} | {x : P(x)}, a class | {x ∈ S : …} | {x ∈ A . P(x)} |
+| ordered pair | (a, b) | (a, b) | (a, b) | (a, b) | ⟨x, y⟩ | (x, y) | ⟨x, y⟩ | (a, b) | ⟨a, b⟩ | ⟨a, b⟩ |
+| relation | ρ, R | R | R | R | R | ρ, σ, δ | ρ | R | a binary relation ≤ on P | r |
+| x related to y | x ρ y, (x, y) ∈ ρ | — | x R y | x R y | x R y | x ρ y | x ρ y | x R y | p ≤ q | ⟨x, y⟩ ∈ r |
+| domain, range | dom, ran | dom(f), Im(f) | dom, ran | dom, ran | dom, ran | Dom, Ran | 𝒟, ℛ | dom, ran | dom(f) | domain(r), range(r) |
+| image of a set | f[a] | f̄(c) | f[A] | f"X, f(X) | F"A, F(A) | f(L) | f[A] | f[A] | f[A] | `r``A` |
+| composition of f then g | g ∘ f | g ∘ f | g ∘ f | g ∘ f | g ∘ f | gf (functions), ρσ (relations) | g ∘ f | g ∘ f | gf, written right to left, as in σρσ⁻¹ | g O f |
+| partial function | — | — | — | — | — | f : S ⇝ T | — | — | — | — |
+| natural numbers | ω, ℕ | ω, ℕ | ω | ω, **N** | ω = ℕ | ℕ (from 0) | ℕ | ℕ, ω | ω | nat |
+| cardinality words | injection, bijection, \|A\| | subpotent, equipotent, card | — | \|X\| ≤ \|Y\| | A ≼ B, A ≈ B | equinumerous, \|S\| | ~, cardinal number | equipotent, \|A\|, 𝒞 | 𝔪, 𝔫; \|x\|; ≤*; ℵ(𝔪) | A ≈ B, A ≲ B, \|A\| |
+| the ordinals | Ord | On[v₀] | — | Ord | ON | — | — | 𝒪 | Ω | Ord(i), a predicate |
+| if … then, iff | ⇒, ⇔ | ⇒, ⇔ | →, ↔ (in a formula); ⇒, ⇔ (between sentences) | →, ↔ | →, ↔ | — | →, ↔ | ⇒, ⇔ | →, ↔; :⟺ in definitions | ⟶, ⟷ in formulas; ⟹ between rules |
+| equality in the formal language | = | ≃ | = | = | = | = | = | = | = | = |
+| regularity / foundation | foundation | foundation | regularity | regularity | foundation | — | restriction | regularity | Axiom of Foundation | foundation |
 
 Three conventions deserve a warning. Jech's ⊂ allows equality and Cunningham's does not, so the same symbol means ⊆ in one book and ⊊ in the other. André's objects are *classes*, and his {x : P(x)} is always a class, which is a set only when some axiom says so; the other books have no classes as objects at all. His complement is therefore absolute, taken in the universal class, where this library's A′ is U ∖ A for a chosen U. Simovici and Djeraba write gf for "f, then g", the order most books write as g ∘ f; both mean (g ∘ f)(x) = g(f(x)).
 

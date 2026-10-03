@@ -9,7 +9,7 @@ How the owner of this library works, as learned from sessions. Update when a ses
 - Asks "why is it useful" about advice: answer that directly, in plain words, before or alongside any page change.
 - Values honesty about evidence: popular and AI-written summaries get a "how sure is each claim" table, not a copy.
 - Keeps books as PDFs on an external drive (a Samsung T7) and some notes in Google Drive. Cloud sessions can reach Google Drive but not the drive.
-- Interests beyond this library: learning how to learn (now its own repository, `learning-to-learn-library`, where such material goes), programming (*The Programmer's Brain*, *Deep Work*), AI tools and workflows.
+- Interests beyond this library: learning how to learn (now its own repository, `learning-to-learn-library`, where such material goes), programming (*The Programmer's Brain*, *Deep Work*; asked how Rust handles sets), AI tools and workflows.
 - Sends tables of contents and sample pages of books as photos, often several books in one sitting, and asks "how good is this book", "what chapters first", "why is it useful". Answer with a verdict and a reading order, and put the verdict in the matching reading guide.
 - Dislikes that every book spells the same idea differently. Keep the cross-book symbol table in `GLOSSARY.md` (Symbols) and the chapter table in `13_Axioms_of_Set_Theory` up to date when a new book arrives.
 - Sends symbol charts and symbol tables from the web, several in a sitting, asking "is it correct" or "any mistakes": check every tile, record the verdict in the reading guide's infographic paragraph, and keep the symbol index at the end of `GLOSSARY.md` complete so each symbol is findable here. Math Vault's table is the one found correct so far.
@@ -18,3 +18,4 @@ How the owner of this library works, as learned from sessions. Update when a ses
 - Wants the positive statement first. A page called "What is a set?" must open with the definition; the case against weaker definitions is a separate page ("good def and poor def"), cross-referenced both ways.
 - Asks for katas: exercise pages where a program checks each claim before the proof is attempted (`04_Sets/set_katas`, `13_Axioms_of_Set_Theory/axiom_katas`). Extend those rather than adding exercises elsewhere.
 - Cross-checks flashcards with other AI tools and sends a screenshot when they disagree. Say first who is right, with how sure, then fix the card and the page if ours was wrong.
+- Downloads a book or manual and asks "anything new for the sets pages?": answer in three lists, what is new (and add it), what the pages already have, and what goes to the inbox.
