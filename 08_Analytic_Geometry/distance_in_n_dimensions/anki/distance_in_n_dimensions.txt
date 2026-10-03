@@ -1,0 +1,19 @@
+#separator:tab
+#html:false
+#notetype:Basic
+#deck:Math::Distance in n dimensions
+#tags:math precalculus distance-n-dimensions
+#columns:Front	Back	Tags
+#tags column:3
+How long is the diagonal of a box 3 by 4 by 12?	13: the floor diagonal is 5 (3-4-5), then sqrt(25 + 144) = 13 (5-12-13). Pythagoras twice.	formula
+State the distance formula in three dimensions.	d = sqrt((x2 - x1)^2 + (y2 - y1)^2 + (z2 - z1)^2): the plane formula with one more square.	formula
+Why is the three-dimensional distance formula Pythagoras twice?	Once in the floor, for the floor diagonal; once standing up, with the floor diagonal and the vertical edge as legs. Substituting the first into the second collapses them into one sum of three squares.	why
+Where does the three-dimensional formula use that the z-axis is perpendicular to the floor?	In the second right triangle: the angle between the floor diagonal and the vertical edge is right only because the vertical edge is perpendicular to every line in the floor.	why
+How is the distance formula in n dimensions justified when nobody can draw a fourth axis?	By induction: the formula in n dimensions is the formula in n - 1 dimensions plus Pythagoras once more. The step is algebra on a sum of squares, which does not care how many terms it has.	why
+What is the length of a vector v?	The distance from the origin to its tip: |v| = sqrt(v1^2 + ... + vn^2) = sqrt(v . v).	formula
+Why is sqrt(v . v) a length and not just a number called one?	v . v is the sum of the squares of the coordinates, which the distance formula says is the squared distance from the origin to the point. The norm is defined in algebra; the geometry earns it the name.	why
+Is 'the distance formula follows from |v| = sqrt(v . v)' a proof?	No. The dependence runs the other way: sqrt(v . v) is a length because of the distance formula. As a proof of the formula it assumes its conclusion in vector notation.	trap
+What are the four properties a distance (a metric) must have?	Non-negative; zero exactly when the two points are the same; symmetric; and the triangle inequality d(P, R) <= d(P, Q) + d(Q, R).	formula
+Which metric property of the Euclidean distance does not follow from the formula in one line?	The triangle inequality. Its proof goes through the Cauchy-Schwarz inequality; the other three are a sum of squares being non-negative, zero only when every term is, and blind to sign.	trap
+Two points in four dimensions share their last coordinate. What does the formula reduce to?	The three-dimensional formula: the fourth square is 0 and drops out, as the plane formula reduces to |x2 - x1| for two level points.	formula
+The distance between two points, in vector language?	The length of their difference: d(u, w) = |w - u|, because the differences of the coordinates are the coordinates of the difference.	formula

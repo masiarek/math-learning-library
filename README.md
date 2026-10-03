@@ -113,6 +113,7 @@ The eighth chapter is the first chapter of every precalculus book: two number li
 | [Graphs of equations: intercepts and symmetry](08_Analytic_Geometry/graphs_intercepts_symmetry/README.md) | A graph is the set of points that pass an equation, so intercepts are points with a 0 coordinate and symmetry is a mirror image that passes too; drawn on a text grid |
 | [Lines: slope, equations, parallel and perpendicular](08_Analytic_Geometry/lines_and_slope/README.md) | One slope per line because of similar triangles; point-slope, slope-intercept and general forms; negative reciprocals from a quarter turn |
 | [Circles: standard form and general form](08_Analytic_Geometry/circles/README.md) | The distance formula held fixed; completing the square; when the "circle" is a point or nothing at all |
+| [Distance in n dimensions, and the length of a vector](08_Analytic_Geometry/distance_in_n_dimensions/README.md) | Pythagoras twice gives the box diagonal 3-4-12-13, once per axis gives the formula in n dimensions by induction, √(v·v) is the distance from the origin, and the four metric properties are checked exactly on a grid |
 
 [**09_Calculus/**](09_Calculus/README.md) — *What is a velocity, and which motion is its own velocity?*
 

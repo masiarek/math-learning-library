@@ -198,27 +198,27 @@ At P₃ = (x₂, y₁), where a horizontal line through P₁ meets a vertical li
 
 ## Cross-references
 
-The ideas behind the formula, beside it, and built on it, each linked to where it lives here. A term with no link has no page or glossary entry yet.
+The ideas behind the formula, beside it, and built on it, each linked to where it lives here.
 
 | Where it sits | Term | Here |
 |---|---|---|
 | Underneath | Pythagorean theorem, right triangle, hypotenuse | [the theorem](../../GLOSSARY.md#pythagorean-theorem), [right triangle](../../GLOSSARY.md#right-triangle), [hypotenuse](../../GLOSSARY.md#hypotenuse); the page [the Pythagorean theorem and its converse](../../10_Geometry/pythagorean_theorem/README.md) |
 | Underneath | Rectangular coordinates, ordered pair, perpendicular axes | [rectangular coordinates](../../GLOSSARY.md#rectangular-coordinates), [ordered pair](../../GLOSSARY.md#ordered-pair); the page [rectangular coordinates](../rectangular_coordinates/README.md) |
 | Underneath | Distance on a number line, \|b − a\|, signed distance | [signed distance](../../GLOSSARY.md#signed-distance) |
-| Underneath | Absolute value, \|t\|² = t², √(t²) = \|t\| | the lemma in [what a proof is](../../11_Logic/what_a_proof_is/README.md#the-distance-formula-line-by-line), and question 4 above |
+| Underneath | Absolute value, \|t\|² = t², √(t²) = \|t\| | [absolute value](../../GLOSSARY.md#absolute-value); the lemma in [what a proof is](../../11_Logic/what_a_proof_is/README.md#the-distance-formula-line-by-line), and question 4 above |
 | Underneath | Principal square root, simplest radical form | the section [exact answers](#exact-answers) above |
 | Itself | Distance formula, Euclidean distance, d(P₁, P₂) | [distance formula](../../GLOSSARY.md#distance-formula) |
-| Itself | Metric: non-negative, zero only for one point, symmetric, triangle inequality | [triangle inequality](../../GLOSSARY.md#triangle-inequality); the other three are questions 2, 12 and section 2 of the program |
+| Itself | Metric: non-negative, zero only for one point, symmetric, triangle inequality | [metric](../../GLOSSARY.md#metric), [triangle inequality](../../GLOSSARY.md#triangle-inequality); the other three are questions 2, 12 and section 2 of the program |
 | Itself | Squared distance, comparing without the root | [exact answers](#exact-answers) above |
 | Beside | Modulus of a complex number, \|z\| | [complex multiplication, geometrically](../../GLOSSARY.md#complex-multiplication-geometrically); the page [multiplication rotates](../../03_Complex_Numbers/multiplication_rotates/README.md) |
 | Beside | Polar coordinates, r = √(x² + y²) | [polar form](../../GLOSSARY.md#polar-form) |
-| Beside | Law of cosines, the general triangle | [which comes first, Pythagoras or the law of cosines](../../10_Geometry/pythagorean_theorem/README.md#what-follows-from-the-right-angle) |
-| Beside | Length of a vector, Euclidean norm | no page yet; the [linear algebra reading guide](../../reading_guides/linear_algebra/README.md) says where it would go |
+| Beside | Law of cosines, the general triangle | [law of cosines](../../GLOSSARY.md#law-of-cosines); [which comes first, Pythagoras or the law of cosines](../../10_Geometry/pythagorean_theorem/README.md#what-follows-from-the-right-angle) |
+| Beside | Length of a vector, Euclidean norm, \|v\| = √(v·v) | [Euclidean norm](../../GLOSSARY.md#euclidean-norm); the page [distance in n dimensions](../distance_in_n_dimensions/README.md) |
 | Built on it | Midpoint formula | [midpoint](../../GLOSSARY.md#midpoint); the page [the midpoint formula](../midpoint_formula/README.md) |
 | Built on it | Circle, standard form (x − h)² + (y − k)² = r² | [circle](../../GLOSSARY.md#circle), [unit circle](../../GLOSSARY.md#unit-circle); the page [circles](../circles/README.md) |
 | Built on it | Converse of Pythagoras, right-angle test by squared distances | [converse](../../GLOSSARY.md#converse), [Pythagorean triple](../../GLOSSARY.md#pythagorean-triple); question 7 above |
-| Built on it | Collinearity by distances, perpendicular bisector, locus | question 10 above; [lines and slope](../lines_and_slope/README.md) for perpendicular lines |
-| Built on it | Distance in three and n dimensions | no page yet |
+| Built on it | Collinearity by distances, perpendicular bisector, locus | [collinear](../../GLOSSARY.md#collinear); question 10 above; [lines and slope](../lines_and_slope/README.md) for perpendicular lines |
+| Built on it | Distance in three and n dimensions, metric | the page [distance in n dimensions](../distance_in_n_dimensions/README.md); [metric](../../GLOSSARY.md#metric) |
 | The proof | Theorem, proof, given, lemma, proof by cases, counterexample | [theorem](../../GLOSSARY.md#theorem), [proof](../../GLOSSARY.md#proof), [proof by cases](../../GLOSSARY.md#proof-by-cases), [counterexample](../../GLOSSARY.md#counterexample); the page [what a proof is](../../11_Logic/what_a_proof_is/README.md) |
 
 ## Flashcards
@@ -239,6 +239,7 @@ Kwadraty robią tu dwie rzeczy: są Pitagorasem i kasują znaki. Dlatego kolejno
 
 - [The Pythagorean theorem and its converse](../../10_Geometry/pythagorean_theorem/README.md) — the theorem this formula is, and the converse used in question 7
 - [Rectangular coordinates](../rectangular_coordinates/README.md) — the plane, and why a horizontal distance is a difference of x-coordinates
+- [Distance in n dimensions, and the length of a vector](../distance_in_n_dimensions/README.md) — the same formula with a third square, and √(v·v)
 - [What a proof is](../../11_Logic/what_a_proof_is/README.md) — this formula's argument as ten lines with reasons, which assumption the right angle costs, and why the program's checks are evidence rather than proof
 - [Multiplication rotates](../../03_Complex_Numbers/multiplication_rotates/README.md) — the distance from the origin as the length of a complex number
 - [Precalculus: a reading guide](../../reading_guides/precalculus/README.md) — where section 1.1 sits in the course
