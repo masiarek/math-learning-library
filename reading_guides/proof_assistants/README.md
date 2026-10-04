@@ -165,7 +165,7 @@ Rust has no mathematics library in its standard library beyond the methods on `f
 
 1. [Truth tables and the laws of logic](../../11_Logic/truth_tables_and_laws/README.md) and [predicates and quantifiers](../../11_Logic/predicates_and_quantifiers/README.md), then [reading a formula](../../13_Axioms_of_Set_Theory/reading_a_formula/README.md): the object language.
 2. The program on this page: thirteen rules, three proofs, two rejections. Write a fourth proof, A ⟶ B ⟶ A or De Morgan's ¬(A ∨ B) ⟶ ¬A ∧ ¬B, as a list of lines and run `check` on it; then break it and watch which line fails.
-3. Lean's *Natural Number Game*, in the browser, no installation: induction and rewriting as a game, with Lean's real tactics.
+3. Lean's *Natural Number Game*, in the browser, no installation: induction and rewriting as a game, with Lean's real tactics. For Lean itself, its books and its definitions run as a program, the [Lean reading guide](../lean/README.md).
 4. Paulson's manual, the four ZF sections and the three worked proofs, with the table above beside the chapter's pages.
 5. Then one of: *Mathematics in Lean* (Avigad and Massot, free) for Lean; *Concrete Semantics* (Nipkow and Klein, free) or its first part, *Programming and Proving in Isabelle/HOL*, for Isabelle; the *Metamath* book (Megill) for set.mm. Titles from memory.
 

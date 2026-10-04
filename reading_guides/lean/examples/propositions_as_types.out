@@ -1,0 +1,50 @@
+1. THREE THEOREMS WRITTEN AS PROGRAMS, THEN TYPE-CHECKED
+   Lean: a proposition is a type, a proof is a term of that type.
+   theorem and_swap : ((A ∧ B) → (B ∧ A))
+     fun h => ⟨h.right, h.left⟩
+   and_swap: accepted  the term has type ((A ∧ B) → (B ∧ A))
+   theorem const : (A → (B → A))
+     fun a => fun b => a
+   const: accepted  the term has type (A → (B → A))
+   theorem de_morgan : (¬(A ∨ B) → (¬A ∧ ¬B))
+     fun h => ⟨fun a => h (Or.inl a), fun b => h (Or.inr b)⟩
+   de_morgan: accepted  the term has type (¬(A ∨ B) → (¬A ∧ ¬B))
+   ¬A is the function type A → False, so a proof of ¬A is a function
+   that would turn any proof of A into a proof of False.
+
+2. THE PROOF OF A ∧ B → B ∧ A, RUN AS THE PROGRAM IT IS
+   and_swap applied to (1, 'one') gives ('one', 1)
+   and_swap applied to ('x', 'y') gives ('y', 'x')
+   And.intro builds a pair, And.left and And.right take it apart:
+   the proof is the swap function. Lean erases such programs at
+   run time (Prop is proof-irrelevant), but the type checker ran them.
+
+3. TWO WRONG PROOFS, REJECTED AT THE STEP THAT IS WRONG
+   fun h => ⟨h.left, h.left⟩  offered for A ∧ B → B ∧ A
+   wrong1: REJECTED  the term has type ((A ∧ B) → (A ∧ A))
+   fun h => h.left  offered for A ∨ B → A
+   wrong2: REJECTED  (And.left needs a conjunction, got (A ∨ B))
+   The first is a well-typed program that proves the wrong theorem;
+   the second is not a program at all. Lean reports both as type errors.
+
+4. WHY False HAS NO PROOF
+   False is an inductive type with no constructors, so no closed term
+   has type False; the checker above can only reach False by applying
+   a hypothesis of type ¬A to a proof of A. The one rule about False,
+   False.elim, says a proof of it would prove anything:
+   ex_falso: accepted  the term has type (False → C)
+
+5. A SET IS A PREDICATE: Mathlib's  def Set (α : Type u) := α → Prop
+   α = {a, b, c, d}   s = {a, b}   t = {b, c}
+   b ∈ s is the application s b = True;  d ∈ s is s d = False
+   s ∪ t = {a, b, c}  (x ∈ s ∨ x ∈ t)
+   s ∩ t = {b}      (x ∈ s ∧ x ∈ t)
+   sᶜ    = {c, d}  (x ∈ s → False)
+   Laws checked by Set.ext, that is by ∀ x, x ∈ lhs ↔ x ∈ rhs:
+     (s ∪ t)ᶜ = sᶜ ∩ tᶜ           True
+     (s ∩ t)ᶜ = sᶜ ∪ tᶜ           True
+     s ∩ (s ∪ t) = s              True
+     (sᶜ)ᶜ = s                    True
+     s ∪ t = s ∩ t  (false)       False
+   Each law is a law of logic read through the arrow: De Morgan for sets
+   is De Morgan for ∨ and ∧, which section 1 proved as a program.

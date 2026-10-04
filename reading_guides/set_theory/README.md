@@ -348,7 +348,7 @@ The owner asked whether any programming language is related to set theory, and w
 | **Z notation**, **VDM** | The older specification notations built on sets and schemas, ISO-standardised, taught in formal-methods courses. | History, and still read. |
 | **OEIS** | The On-Line Encyclopedia of Integer Sequences: Bell numbers (A000110), partial orders on n points (A001035), equivalence relations, posets up to isomorphism. | Where [orderings](../../04_Sets/orderings/README.md) checked its count of 19. |
 
-The path from here: Python for finite models (this library), Alloy or TLC when the models get large, Metamath to see ZFC run with no interpretation at all, Lean when the goal is a proof. The [proof assistants guide](../proof_assistants/README.md) places them: a proof checker with Isabelle's rule names, the ZF axioms as Isabelle/ZF states them, Paulson's manual, and Python, Rust, Lean and Isabelle compared for playing with sets.
+The path from here: Python for finite models (this library), Alloy or TLC when the models get large, Metamath to see ZFC run with no interpretation at all, Lean when the goal is a proof (the [Lean guide](../lean/README.md) has its books and its two founding definitions run as a program). The [proof assistants guide](../proof_assistants/README.md) places them: a proof checker with Isabelle's rule names, the ZF axioms as Isabelle/ZF states them, Paulson's manual, and Python, Rust, Lean and Isabelle compared for playing with sets.
 
 ### Po polsku: the Polish school
 

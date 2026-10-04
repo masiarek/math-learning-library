@@ -67,6 +67,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - ↪ [The textbook definition on trial](04_Sets/definition_on_trial/README.md) — Russell's paradox and the repair before the formal language
         - ↪ [The Cartesian product](04_Sets/cartesian_product/README.md) — Kuratowski's pair put to work
         - ↪ [Set theory: a reading guide](reading_guides/set_theory/README.md) — Cori and Lascar, Cunningham, Jech and Kunen placed among the books
+        - ↪ [Lean: a reading guide](reading_guides/lean/README.md) — Mathlib's Set α := α → Prop run on a four-element type, the laws of set algebra proved by extensionality the way Set.ext does
         - ↪ [Proof assistants: a reading guide](reading_guides/proof_assistants/README.md) — a proof checker with Isabelle's rule names, model check against proof, the ZF axioms as Isabelle/ZF states them, Paulson's manual placed, Python, Rust, Lean and Isabelle for sets
     - **Size by length** · from [Measure Zero](02_Measure_Zero/README.md)
         - [What measure zero means](02_Measure_Zero/what_measure_zero_means/README.md) — fitting a set inside intervals of total length as small as anyone asks
@@ -149,6 +150,7 @@ The chapter numbers are the suggested reading order, and each chapter is one arg
         - [Predicates and quantifiers](11_Logic/predicates_and_quantifiers/README.md) — predicate, universe of discourse, ∀ ∃ as loops, bounded quantifiers, interchange, negation flips a quantifier, distribution, ∃!
         - [What a proof is](11_Logic/what_a_proof_is/README.md) — givens, claim, chain; a reason beside every line; letters cover every case where a loop cannot; proof by cases and the check that the cases are exhaustive; a circle, assuming the claim, a wrong line with a good shape; a number check refutes and never confirms; the distance formula as ten lines
         - [Induction](11_Logic/induction/README.md) — base case, induction hypothesis, inductive step, well-ordering principle, least counterexample, proof by contradiction, the all-cars proof, Fibonacci, Binet's formula, 2ⁿ subsets, chocolate bar, invariant, closed form, sigma notation
+        - ↪ [Lean: a reading guide](reading_guides/lean/README.md) — a proposition is a type and a proof is a program: And is a pair, Or a tagged value, ¬A a function into False; a type checker for proof terms, and Mathlib's sets as predicates; the free books and Lean Beam
         - ↪ [Proof assistants: a reading guide](reading_guides/proof_assistants/README.md) — natural deduction checked by program: conjI, impI, mp, notI and the one classical rule; what a proof covers that a truth table does not
         - ↪ [Infinity](13_Axioms_of_Set_Theory/infinity/README.md) — the inductive set that makes induction a sentence about ℕ
         - ↪ [Ordinals](13_Axioms_of_Set_Theory/ordinals/README.md) — well-ordering past ℕ, and a theorem induction on ℕ cannot prove
