@@ -122,6 +122,12 @@ From the root of your clone of this repository:
 python3 01_Precision/uncertainty_propagation/examples/uncertainty_propagation.py
 ```
 
+## Auf Deutsch: Stichwörter
+
+Die strenge Fassung der Stellenregeln: wie sich eine Unsicherheit durch Summe, Produkt und Funktion fortpflanzt.
+
+**Stichwörter:** Fehlerfortpflanzung (uncertainty propagation), Standardabweichung, Varianz, quadratische Addition, partielle Ableitung, Messunsicherheit.
+
 ## See also
 
 - [Significant figures](../significant_figures/README.md) — the rules this page derives

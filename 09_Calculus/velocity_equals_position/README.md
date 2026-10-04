@@ -126,6 +126,12 @@ Punkt startuje z 1 i w każdej chwili porusza się z prędkością równą swoje
 
 Każdy krok mnoży przez ten sam czynnik bez względu na to, gdzie jest punkt, więc ruch zaczęty dwa razy dalej jest w każdej chwili dwa razy dalej. Stąd prawo potęg: po czasie a punkt jest w eᵃ, reszta ruchu to ruch z 1 przeskalowany przez eᵃ, więc po dalszym czasie b jest w eᵃ · eᵇ, a razem minęło a + b. Prędkość k razy położenie to ten sam ruch na zegarze chodzącym k razy szybciej: e^(kt), a pochodna ma czynnik k (reguła łańcuchowa). k = 2 podwaja, k = −0,5 odwraca i ściska, a k = i obraca o 90° i prowadzi po okręgu, do tożsamości Eulera.
 
+## Auf Deutsch: Stichwörter
+
+Die Bewegung, deren Geschwindigkeit ihr Ort ist, ist eˣ; die Zahl e und das Potenzgesetz e^{a+b} = eᵃ·eᵇ folgen aus der einen Regel.
+
+**Stichwörter:** Exponentialfunktion, eulersche Zahl e, Differentialgleichung y′ = y, stetige Verzinsung, Euler-Verfahren, Potenzgesetz, Wachstum.
+
 ## See also
 
 - [The derivative is a velocity](../derivative_as_velocity/README.md) — what d/dt means, and the stepping this page runs

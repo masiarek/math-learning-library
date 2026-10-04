@@ -44,6 +44,12 @@ These are the short-circuit rules of every programming language: `a or True` is 
 
 Prawa pochłaniania przez U i ∅: uniwersum pochłania każdą sumę, zbiór pusty każdy przekrój, więc A przestaje mieć znaczenie. W kodzie to „leniwe" `or True` i `and False`.
 
+## Auf Deutsch: Stichwörter
+
+Dominanzgesetze: A ∪ U = U und A ∩ ∅ = ∅.
+
+**Stichwörter:** Dominanzgesetz (absorbierendes Element), Grundmenge, leere Menge.
+
 ## See also
 
 - [The algebra of sets](../../README.md) — all the laws in one table, and the ones that look true and are not

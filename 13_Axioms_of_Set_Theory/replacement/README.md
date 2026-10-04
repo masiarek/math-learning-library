@@ -74,6 +74,12 @@ Section 5 is the same failure in miniature. In V₄, the function n ↦ V_n is d
 
 Aksjomat zastępowania mówi: jeśli formuła F zachowuje się jak funkcja, czyli każdy argument ma co najwyżej jedną wartość (Cori i Lascar: F jest „funkcjonalna"), to wartości na dowolnym zbiorze argumentów tworzą zbiór, obraz {φ_F(x) : x ∈ a}; Python pisze `{f(x) for x in a}`. To litera F w ZF, dodana przez Fraenkela w 1922 roku; z niej wynika za darmo aksjomat wyróżniania, a potrzebna jest do konstrukcji przez rekursję po liczbach porządkowych, bo w granicy trzeba wcześniejsze etapy zebrać w zbiór. Bez niej aksjomaty Zermela spełnia uniwersum V_{ω+ω}, w którym każdy etap V_{ω+n} istnieje, ale zbiór wszystkich tych etapów już nie. Program pokazuje to samo w miniaturze: w V₄ funkcja n ↦ V_n ma wartości V₀, V₁, V₂, V₃, a zbiór tych czterech wartości ma rangę 4 i w V₄ go nie ma.
 
+## Auf Deutsch: Stichwörter
+
+Ersetzung: das Bild einer Menge unter einer definierbaren Funktion ist eine Menge; was Aussonderung nicht erreicht.
+
+**Stichwörter:** Ersetzungsaxiom (Ersetzungsschema), definierbare Funktion, Bild, Funktionalformel, Vergleich mit Aussonderung, ω + ω.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

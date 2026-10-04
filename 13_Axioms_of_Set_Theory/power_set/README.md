@@ -70,6 +70,12 @@ Section 4 is the one line that connects the formula to code: the inner ∀v₃(v
 
 Aksjomat zbioru potęgowego mówi: dla każdego zbioru a istnieje zbiór 𝒫(a), którego elementami są dokładnie podzbiory a. W formule nie ma znaku ⊆; zastępuje go ∀v₃(v₃ ∈ v₂ ⇒ v₃ ∈ v₀), czyli „każdy element z jest elementem a", a Python pisze to `z <= a`. Zbiór n-elementowy ma 2ⁿ podzbiorów, bo każdy element jest w podzbiorze albo nie. To silnik wzrostu uniwersum: V₂ = 𝒫(V₁), V₃ = 𝒫(V₂), V₄ = 𝒫(V₃), a rozmiary rosną 1, 2, 4, 16, 65 536. W V₄ brakuje zbiorów potęgowych wszystkich zbiorów rangi 3, więc aksjomat nie zachodzi w żadnym skończonym V_n. Twierdzenie Cantora mówi, że 𝒫(a) jest zawsze ściśle większy od a, także dla a nieskończonego; dlatego 𝒫(ω) jest nieprzeliczalny, a tam mieszkają liczby rzeczywiste.
 
+## Auf Deutsch: Stichwörter
+
+Potenzmengenaxiom: die Teilmengen einer Menge bilden eine Menge, 2ⁿ viele; Cantors Satz |𝒫(A)| > |A|.
+
+**Stichwörter:** Potenzmenge, Teilmenge, 2ⁿ, Satz von Cantor, Diagonalargument, charakteristische Funktion.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

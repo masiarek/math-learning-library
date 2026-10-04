@@ -139,6 +139,12 @@ From the root of your clone of this repository:
 python3 02_Measure_Zero/countable_sets/examples/countable_sets.py
 ```
 
+## Auf Deutsch: Stichwörter
+
+Eine abzählbare Menge lässt sich mit Intervallen beliebig kleiner Gesamtlänge überdecken; die rationalen Zahlen haben Maß null.
+
+**Stichwörter:** abzählbar (countable), Abzählung, Bijektion mit ℕ, rationale Zahlen, Überdeckung, geometrische Reihe.
+
 ## See also
 
 - [What measure zero means](../what_measure_zero_means/README.md) — the definition this page applies

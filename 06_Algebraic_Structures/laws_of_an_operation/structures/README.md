@@ -14,3 +14,9 @@ Each page gives the definition, the examples and non-examples, what the extra la
 ## Po polsku, w skrócie
 
 Cztery nazwy z tabeli na stronie nadrzędnej, każda na osobnej stronie: półgrupa (łączność), monoid (plus element neutralny), grupa (plus odwrotności) i przymiotnik „przemienny", który jest niezależny od pozostałych. Każda strona podaje definicję, przykłady i kontrprzykłady, co kupuje dodatkowe prawo, i program, który sprawdza prawa na skończonych próbkach.
+
+## Auf Deutsch: Stichwörter
+
+Die Strukturen, je eine Seite: Halbgruppe, Monoid, Gruppe, kommutativ.
+
+**Stichwörter:** Halbgruppe, Monoid, Gruppe, abelsch (kommutativ), Verknüpfungstafel.

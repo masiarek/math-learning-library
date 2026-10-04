@@ -43,6 +43,12 @@ In code, `not not x` is `bool(x)`, and two negations in a condition are a sign t
 
 Prawo podwójnego dopełnienia: dopełnienie dopełnienia to wyjściowy zbiór, bo „nie nie p" to p. W kodzie `not not x` to `bool(x)`; w logice intuicjonistycznej to jedyne prawo, które nie zachodzi.
 
+## Auf Deutsch: Stichwörter
+
+Doppeltes Komplement: (A′)′ = A.
+
+**Stichwörter:** doppeltes Komplement, Involution, doppelte Negation.
+
 ## See also
 
 - [The algebra of sets](../../README.md) — all the laws in one table, and the ones that look true and are not

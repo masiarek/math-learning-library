@@ -243,6 +243,12 @@ Trójkąty przystające to ten sam trójkąt w dwóch miejscach: wszystkie boki 
 
 Trzy kąty (kkk) ustalają tylko kształt, nie rozmiar, i to jest cecha podobieństwa, nie przystawania. Dwa boki i kąt, który nie leży między nimi, to pułapka: drugi bok może się „wahnąć" i trafić w podstawę w dwóch miejscach, więc pasują dwa różne trójkąty. Program to buduje i liczy. Przy podobieństwie odpowiadające sobie boki dobiera się po kątach, między którymi leżą, a nie po położeniu na rysunku; pola figur podobnych rosną jak k².
 
+## Auf Deutsch: Stichwörter
+
+SSS, SWS, WSW legen ein Dreieck fest, WWW und SSW nicht; ähnliche Dreiecke haben einen Streckfaktor und proportionale Seiten.
+
+**Stichwörter:** kongruent (deckungsgleich), ähnlich, Kongruenzsätze SSS, SWS, WSW, Streckfaktor, proportionale Seiten, Strahlensatz, Flächen im Verhältnis k².
+
 ## See also
 
 - [The Pythagorean theorem and its converse](../pythagorean_theorem/README.md) — why two sides of a right triangle fix the third, the one time SSA works

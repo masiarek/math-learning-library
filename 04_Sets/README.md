@@ -45,3 +45,9 @@ Every set card in one file: [`sets_all.txt`](anki/sets_all.txt), the decks of [w
 ## Po polsku, w skrócie
 
 Ten rozdział to fundament: czym jest zbiór i jak z jednych zbiorów buduje się nowe. Zbiór to wyłącznie jego elementy, bez kolejności i bez powtórzeń, więc {2, 5} i {5, 2} to ten sam zbiór; para uporządkowana (2, 5) pamięta już kolejność, a iloczyn kartezjański A × B to zbiór wszystkich takich par. Moc zbioru |A| mierzy jego wielkość przez parowanie elementów, a nie liczenie, i dzięki temu ma sens także dla zbiorów nieskończonych. Programy w Pythonie nie symulują tych definicji, tylko je sprawdzają, bo `set` i `tuple` są w języku wbudowane.
+
+## Auf Deutsch: Stichwörter
+
+Was eine Menge genau ist: Elemente ohne Reihenfolge und ohne Wiederholung, die Operationen darauf, Paare, Relationen, Funktionen und Mächtigkeit.
+
+**Stichwörter:** Menge (set), Element, Teilmenge, Vereinigung, Schnitt, Differenz, Komplement, kartesisches Produkt, Relation, Funktion, Mächtigkeit (cardinality).

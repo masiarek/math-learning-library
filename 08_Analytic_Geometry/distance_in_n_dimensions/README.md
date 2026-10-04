@@ -191,6 +191,12 @@ Długość wektora to odległość od początku układu do jego końca, więc |v
 
 Odległość musi spełniać cztery warunki: jest nieujemna, zerowa tylko dla jednego punktu, symetryczna i spełnia nierówność trójkąta. Trzy pierwsze wynikają ze wzoru w jednej linii każdy; czwarty ma prawdziwy dowód (nierówność Cauchy'ego–Schwarza), którego ta strona nie podaje. Program sprawdza wszystkie cztery na siatce punktów, dokładnie, bez pierwiastków.
 
+## Auf Deutsch: Stichwörter
+
+Pythagoras zweimal gibt die Raumdiagonale, Induktion gibt ein Quadrat pro Achse; |v| = √(v·v) ist der Abstand vom Ursprung.
+
+**Stichwörter:** Abstand im ℝⁿ, euklidische Norm, Betrag eines Vektors, Skalarprodukt, Raumdiagonale, Induktion über die Dimension, Dreiecksungleichung.
+
 ## See also
 
 - [The distance formula](../distance_formula/README.md) — the plane case this page extends, and its cross-reference table

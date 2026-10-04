@@ -52,6 +52,12 @@ LAWS REQUIRED: associative
 
 Półgrupa to zbiór z jednym działaniem łącznym: (a · b) · c = a · (b · c), więc łańcuch a · b · c ma jedną wartość bez nawiasów. Nic więcej nie jest obiecane: ani element neutralny, ani odwrotności. Przykłady: liczby całkowite z max, dodatnie liczby całkowite z +, napisy ze sklejaniem; odejmowanie nie jest łączne, więc ℤ z − półgrupą nie jest. Półgrupa to dokładnie to, czego potrzebuje fold po liście bez ustalonej kolejności.
 
+## Auf Deutsch: Stichwörter
+
+Halbgruppe: eine assoziative Verknüpfung und sonst nichts versprochen.
+
+**Stichwörter:** Halbgruppe, Assoziativgesetz, Verkettung, Maximum.
+
 ## See also
 
 - [The laws of an operation](../../README.md) — the four laws and the table of names

@@ -185,6 +185,12 @@ Zadania po pierwszym rozdziale o funkcjach robi się trzema ruchami: pogonią za
 
 Na końcu są zadania z rozdziału 2.1 *Precalculus* Sullivana, ta sama definicja funkcji poziom niżej: diagramy ze strzałkami i zbiory par (jeden test: żaden pierwszy element dwa razy), równania (rozwiąż względem y; dwie wartości dla jednego x to nie funkcja) i dziedzina funkcji zadanej wzorem (wszystkie liczby rzeczywiste poza zerem w mianowniku i ujemną liczbą pod pierwiastkiem). Program sprawdza każdą odpowiedź, zanim przeczyta się rozwiązanie.
 
+## Auf Deutsch: Stichwörter
+
+Die Aufgaben von Hrbacek und Jech über Funktionen, mit Lösungen, jede Behauptung vorher vom Programm geprüft.
+
+**Stichwörter:** Übungsaufgabe (kata), Funktion, injektiv, surjektiv, bijektiv, Umkehrfunktion, Komposition, Bild, Urbild.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

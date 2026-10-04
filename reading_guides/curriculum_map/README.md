@@ -255,6 +255,12 @@ Three lines are worth reading twice.
 
 „Precalculus" i „calculus" to nazwy amerykańskich kursów, nie działów matematyki. W polskim liceum nie ma roku, w którym zbiera się „funkcje potrzebne do analizy": wielomiany, funkcja wymierna, logarytm, trygonometria i ciągi są rozłożone na pierwsze trzy klasy, a rachunek różniczkowy (dział XIII podstawy programowej) pojawia się dopiero w zakresie rozszerzonym i kończy się na pochodnej wielomianu i funkcji wymiernej, bez całki. Niemiecka Oberstufe dochodzi do całki i do geometrii wektorowej w przestrzeni nawet na poziomie podstawowym (Grundkurs); amerykański kurs jako jedyny uczy w szkole krzywych stożkowych, współrzędnych biegunowych, liczb zespolonych i szeregów. Polska matura rozszerzona wyróżnia się czym innym: dowodem, indukcją, tożsamościami trygonometrycznymi. Program na tej stronie traktuje trzy programy nauczania jak zbiory i liczy ich część wspólną i różnice, więc każde zdanie „X tego uczy, a Y nie" można sprawdzić i poprawić, zmieniając jeden wiersz tabeli. Krótsza wersja tej strony po polsku: [Po polsku](po_polsku.md).
 
+## Auf Deutsch: Stichwörter
+
+Precalculus und Calculus sind amerikanische Kursnamen; dieselben Themen stehen in der polnischen podstawa programowa und den deutschen Bildungsstandards, anders auf die Jahre verteilt; die ganze Seite auf Deutsch ist [Auf Deutsch](auf_deutsch.md).
+
+**Stichwörter:** Lehrplan, Bildungsstandards, Sekundarstufe I, Oberstufe, Grundkurs, Leistungskurs, Abitur, matura, Analysis, Analytische Geometrie, Stochastik, Precalculus, AP Calculus.
+
 ## See also
 
 - [Po polsku](po_polsku.md) and [Auf Deutsch](auf_deutsch.md), the two companion pages, each a short table from the Polish or German names to the American ones and to the pages here.

@@ -171,6 +171,12 @@ From the root of your clone of this repository:
 python3 01_Precision/significant_figures/examples/significant_figures.py
 ```
 
+## Auf Deutsch: Stichwörter
+
+Runden ist die Handlung; signifikante Stellen sind die Regel, die sagt, wo die Handlung aufhören muss, und + und × folgen verschiedenen Regeln.
+
+**Stichwörter:** signifikante Stellen (significant figures), Runden, Dezimalstellen, führende und nachfolgende Nullen, Regel für Addition, Regel für Multiplikation.
+
 ## See also
 
 - [Exact vs approximate](../exact_vs_approximate/README.md) — which numbers have significant figures at all, and which have infinitely many

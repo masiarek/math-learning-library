@@ -43,3 +43,9 @@ These books now belong to the [Learning to Learn library ↗](https://masiarek.g
 ## Talks
 
 - **Grant Sanderson (3Blue1Brown) on e^{iπ} = −1.** [Euler's formula: a lesson plan](reading_guides/eulers_formula/README.md) maps each screen of the talk to the lesson that explains it, and [09_Calculus](09_Calculus/README.md) tells calculus as motion, the way the talk does.
+
+## Auf Deutsch: Stichwörter
+
+Die Bücher, Vorträge und Werkzeuge hinter den Lektionen, mit dem Kapitel, das aus jedem entstand.
+
+**Stichwörter:** Quellen, Lehrbuch (textbook), Vortrag (talk), Werkzeug (tool), Lesehilfe, frei verfügbar (free).

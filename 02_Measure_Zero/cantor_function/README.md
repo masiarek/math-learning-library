@@ -209,6 +209,12 @@ From the root of your clone of this repository:
 python3 02_Measure_Zero/cantor_function/examples/cantor_function.py
 ```
 
+## Auf Deutsch: Stichwörter
+
+Eine stetige, wachsende Funktion, deren ganzer Anstieg auf einer Menge der Länge null stattfindet.
+
+**Stichwörter:** Cantor-Funktion (Teufelstreppe), stetig, monoton wachsend, Ableitung null fast überall, singuläre Funktion.
+
 ## See also
 
 - [The Cantor set](../cantor_set/README.md) — the halve-the-digits map this function stretches across the gaps

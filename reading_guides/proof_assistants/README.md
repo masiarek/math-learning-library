@@ -179,6 +179,12 @@ Asystent dowodzenia (proof assistant) to program, który sprawdza dowód tak, ja
 
 Podręcznik Paulsona *Isabelle's Logics: FOL and ZF* to instrukcja, nie podręcznik teorii mnogości: warto przeczytać cztery sekcje o ZF (która wersja, składnia, kwantyfikatory, aksjomaty) i trzy przykładowe dowody; reszta to słownik reguł. Tabela wyżej zestawia aksjomaty rozdziału z ich zapisem w Isabelle: para i wyróżnianie nie są tam aksjomatami, lecz twierdzeniami z zastępowania. Do zabawy ze zbiorami najlepszy jest Python (Rust też ma zbiory, `HashSet` i `BTreeSet`, z tymi samymi operatorami co Python, ale bez biblioteki matematycznej w standardzie); do dowodzenia Lean 4 (najłatwiejsze wejście, gra Natural Number Game) albo Isabelle/HOL (notacja jak w książkach, najlepsza automatyzacja); do zobaczenia samych aksjomatów ZF Isabelle/ZF albo Metamath.
 
+## Auf Deutsch: Stichwörter
+
+Beweisassistenten: ein Prüfer für natürliches Schließen mit Isabelles Regelnamen, Modellprüfung gegen Beweis, die ZF-Axiome wie Isabelle/ZF sie formuliert, Paulsons Handbuch eingeordnet.
+
+**Stichwörter:** Beweisassistent, Isabelle, Lean, natürliches Schließen, Schlussregel (conjI, impI, mp), Modellprüfung, Axiom, formaler Beweis, Typtheorie vs. Mengenlehre.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

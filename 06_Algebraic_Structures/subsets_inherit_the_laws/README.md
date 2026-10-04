@@ -108,6 +108,12 @@ From the root of your clone of this repository:
 python3 06_Algebraic_Structures/subsets_inherit_the_laws/examples/subsets_inherit_the_laws.py
 ```
 
+## Auf Deutsch: Stichwörter
+
+Eine Teilmenge erbt Assoziativität und Kommutativität umsonst; ein Unterraum braucht nur drei Prüfungen, nicht acht.
+
+**Stichwörter:** Unterraum, Untergruppe, Abgeschlossenheit (closure), geerbte Gesetze, Unterraumkriterium, Teilmenge.
+
 ## See also
 
 - [A definition is a test](../a_definition_is_a_test/README.md) — the previous lesson: the eight conditions, and the two theorems this one uses

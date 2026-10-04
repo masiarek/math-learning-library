@@ -116,3 +116,9 @@ Not started, and listed in rough order of how likely they are to earn a place:
 A chapter earns its place by having an **argument**, not a syllabus. `01_Precision` began as four lessons because that is how many it took to get from "is this just rounding?" to "the textbook quadratic formula is 25% wrong"; it was not four because four is a nice number, and each lesson added since had to answer a question the argument had left open.
 
 Every lesson needs a program. If an idea cannot be demonstrated by something that runs and prints, it may still be a good idea — but it belongs somewhere other than this library.
+
+## Auf Deutsch: Stichwörter
+
+Was geschrieben ist und was absichtlich noch fehlt; ein Thema ohne Argument und ohne Programm bekommt keine Seite.
+
+**Stichwörter:** Fahrplan (roadmap), offene Themen, Kapitelplan, Regel „ein Programm pro Behauptung“, kein Platzhalter (no stub).

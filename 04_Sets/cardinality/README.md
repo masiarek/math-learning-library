@@ -256,6 +256,12 @@ From the root of your clone of this repository:
 python3 04_Sets/cardinality/examples/cardinality.py
 ```
 
+## Auf Deutsch: Stichwörter
+
+Zwei Mengen sind gleich groß, wenn eine Bijektion zwischen ihnen besteht; ℕ und ℚ sind abzählbar, ℝ ist es nach Cantors Diagonalargument nicht.
+
+**Stichwörter:** Mächtigkeit (cardinality), Bijektion, abzählbar unendlich, überabzählbar, Diagonalargument, Kardinalzahl, ℵ₀.
+
 ## See also
 
 - [The Cartesian product](../cartesian_product/README.md) — where |A × B| = |A| · |B| comes from

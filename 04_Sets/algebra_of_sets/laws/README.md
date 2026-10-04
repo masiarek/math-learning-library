@@ -20,3 +20,9 @@ Each page states one law for sets, for logic and in Python, says in a sentence w
 ## Po polsku, w skrócie
 
 Dziesięć praw algebry zbiorów z tabeli na stronie nadrzędnej, każde na osobnej stronie: dla zbiorów, dla logiki i w Pythonie, z jednym zdaniem dlaczego zachodzi, z zastosowaniem i pułapką obok, i z programem, który sprawdza prawo na wszystkich podzbiorach czteroelementowego uniwersum.
+
+## Auf Deutsch: Stichwörter
+
+Die zehn Gesetze der Mengenalgebra, je eine Seite mit Programm.
+
+**Stichwörter:** Gesetz (law), Mengenalgebra, Absorption, Kommutativität, Assoziativität, Komplement, De Morgan, Differenz, Distributivität, Idempotenz, neutrales Element.

@@ -135,6 +135,12 @@ From the root of your clone of this repository:
 python3 01_Precision/catastrophic_cancellation/examples/catastrophic_cancellation.py
 ```
 
+## Auf Deutsch: Stichwörter
+
+Die Subtraktion zweier fast gleicher Zahlen vernichtet fast alle gültigen Stellen auf einmal; die Lösungsformel der quadratischen Gleichung ist das Schulbeispiel.
+
+**Stichwörter:** Auslöschung (catastrophic cancellation), Subtraktion fast gleicher Zahlen, Lösungsformel (quadratic formula), Kondition (conditioning), gültige Stellen, Umformung als Abhilfe.
+
 ## See also
 
 - [Uncertainty propagation](../uncertainty_propagation/README.md) — where the ±0.00007 came from

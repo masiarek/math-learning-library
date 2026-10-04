@@ -131,6 +131,12 @@ Pewnik wyboru mówi, że z każdej rodziny zbiorów niepustych można naraz wybr
 
 Rozdział 6 Halbeisena wylicza postaci równoważne pewnikowi: zasadę dobrego uporządkowania, lemat Kuratowskiego–Zorna, zasadę Teichmüllera (rodzina o charakterze skończonym ma element maksymalny), zasadę Kurepy (każdy porządek częściowy ma maksymalny antyłańcuch), istnienie bazy każdej przestrzeni liniowej, porównywalność mocy; słabsze są twierdzenie o ideale pierwszym i przeliczalny wybór. Program sprawdza każdą z nich na zbiorze skończonym, gdzie wszystkie są twierdzeniami.
 
+## Auf Deutsch: Stichwörter
+
+Auswahlaxiom: ein Produkt nichtleerer Mengen ist nichtleer; seine Formen, Zorns Lemma, Wohlordnungssatz, und was ohne es verloren geht.
+
+**Stichwörter:** Auswahlaxiom, Auswahlfunktion, Zornsches Lemma, Wohlordnungssatz, Produkt von Mengen, abzählbare Auswahl, Äquivalenzen.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

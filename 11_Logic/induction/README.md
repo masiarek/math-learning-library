@@ -100,6 +100,12 @@ Induction is the proof method of anything defined by recursion: the natural numb
 
 Dowód przez indukcję pokazuje przypadek początkowy P(0) i krok: że z P(n) wynika P(n + 1); wniosek brzmi, że P(n) zachodzi dla każdego n. Metoda jest poprawna dzięki zasadzie dobrego uporządkowania: każdy niepusty zbiór liczb naturalnych ma element najmniejszy. Gdyby zdanie gdzieś zawodziło, zawodziłoby po raz pierwszy dla pewnego m; m ≠ 0 z przypadku początkowego, więc P(m − 1) zachodzi, a krok daje P(m), sprzeczność. Program pokazuje to na fałszywym zdaniu „n² + n + 41 jest pierwsze": najmniejszy kontrprzykład to n = 40, i właśnie tam krok jest fałszywy. Słynny błędny dowód, że wszystkie samochody mają ten sam kolor, zawodzi w kroku od jednego samochodu do dwóch, bo zbiory {1} i {2} się nie nakładają; brakujący jeden szczebel wystarczy. Dalej program przechodzi przykłady z rozdziału Ashlocka: parzystość f(3n) i wzór Bineta liczony dokładnie w liczbach a + b√5, 2ⁿ podzbiorów przez parowanie, tabliczka czekolady n × m wymagająca nm − 1 łamań w dowolnej kolejności (niezmiennik: kawałki = łamania + 1) i postacie zwarte sum Σi, Σi², Σi³.
 
+## Auf Deutsch: Stichwörter
+
+Induktion: ein Anfang, ein Schritt, der ewig läuft, und das kleinste Gegenbeispiel, das es nicht geben kann.
+
+**Stichwörter:** vollständige Induktion, Induktionsanfang, Induktionsschritt, Induktionsannahme, kleinstes Gegenbeispiel, Wohlordnung, Summenformel.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

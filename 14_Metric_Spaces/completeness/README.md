@@ -174,6 +174,12 @@ Iteracja Newtona dla √2, x₀ = 1, x_{n+1} = (x_n + 2/x_n)/2, daje same liczby
 
 Zupełność nie jest sprawą zbiorów otwartych. Przedział (0, 1) i cała prosta ℝ są homeomorficzne, mają te same zbiory otwarte, te same ciągi zbieżne i te same funkcje ciągłe, a tylko ℝ jest zupełna: ciąg 1/n jest ciągiem Cauchy'ego w (0, 1) bez granicy w (0, 1), a jego obraz pod homeomorfizmem w ℝ nie jest nawet ciągiem Cauchy'ego. Bycie ciągiem Cauchy'ego zależy od samych odległości. Metryka dyskretna jest zupełna z taniego powodu: ciąg Cauchy'ego z ε = ½ jest od pewnego miejsca stały.
 
+## Auf Deutsch: Stichwörter
+
+Cauchy-Folgen und Vollständigkeit: die rationalen Zahlen haben Löcher, die reellen nicht; √2 als Folge, die in ℚ nirgends ankommt.
+
+**Stichwörter:** Cauchy-Folge, Vollständigkeit, vollständiger metrischer Raum, Lücke in ℚ, Konvergenz vs. Cauchy, Vervollständigung.
+
 ## See also
 
 - [Convergence](../convergence/README.md) — the definition that names a limit, which this one deliberately does not

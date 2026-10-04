@@ -153,6 +153,12 @@ From the root of your clone of this repository:
 python3 02_Measure_Zero/fat_cantor_set/examples/fat_cantor_set.py
 ```
 
+## Auf Deutsch: Stichwörter
+
+Dieselbe Bauart wie die Cantor-Menge, aber die entfernten Stücke schrumpfen schneller: nirgends dicht und doch positive Länge.
+
+**Stichwörter:** fette Cantor-Menge (Smith–Volterra–Cantor), positives Maß, nirgends dicht, mager (meagre), Inneres leer.
+
 ## See also
 
 - [The Cantor set](../cantor_set/README.md) — the a = 1/3 setting of the same dial

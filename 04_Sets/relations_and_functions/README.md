@@ -147,6 +147,12 @@ Relacja to zbiór par uporządkowanych i nic więcej: „m dzieli n" na liczbach
 
 Sullivan w *Precalculus* pokazuje funkcję na cztery sposoby: diagram ze strzałkami, zdanie „każdemu elementowi X odpowiada dokładnie jeden element Y", zbiór par bez dwóch par o tym samym pierwszym elemencie, i równanie albo maszynę. To jeden zbiór par widziany czterokrotnie; program sprawdza jednym testem wszystkie jego przykłady, w tym tabelę, gdzie 240 dni ciąży ma dwie długości życia (nie funkcja), i okrąg x² + y² = 1 (nie funkcja, bo x = 0 ma partnerów 1 i −1).
 
+## Auf Deutsch: Stichwörter
+
+Eine Relation ist eine Teilmenge von A × B, eine Funktion eine Relation mit genau einem Paar pro erstem Eintrag; der Graph ist die Funktion.
+
+**Stichwörter:** Relation, Funktion als Paarmenge, Definitionsbereich, Wertebereich, Bild, Graph, injektiv, surjektiv, Komposition.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

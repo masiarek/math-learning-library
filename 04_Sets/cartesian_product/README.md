@@ -132,6 +132,12 @@ From the root of your clone of this repository:
 python3 04_Sets/cartesian_product/examples/cartesian_product.py
 ```
 
+## Auf Deutsch: Stichwörter
+
+A × B ist die Menge der geordneten Paare; die Reihenfolge wird aus Mengen gebaut, die keine kennen, und |A × B| = |A|·|B| ist ein Gitter.
+
+**Stichwörter:** kartesisches Produkt, geordnetes Paar (Kuratowski), Koordinatenebene ℝ², Gitter, Tupel, Zählregel.
+
 ## See also
 
 - [Rectangular coordinates](../../08_Analytic_Geometry/rectangular_coordinates/README.md) — the pairs of ℝ² as points of the plane: each coordinate a signed distance from an axis, and the four quadrants as the four pairs of signs

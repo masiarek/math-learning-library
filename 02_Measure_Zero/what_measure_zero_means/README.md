@@ -119,6 +119,12 @@ From the root of your clone of this repository:
 python3 02_Measure_Zero/what_measure_zero_means/examples/what_measure_zero_means.py
 ```
 
+## Auf Deutsch: Stichwörter
+
+Eine Menge hat Maß null, wenn sie sich für jedes ε durch Intervalle mit Gesamtlänge unter ε überdecken lässt; messen muss man dafür nur Intervalle.
+
+**Stichwörter:** Maß null, Definition über ε, Überdeckung (cover), Gesamtlänge, Intervall, endlich viele Punkte.
+
 ## See also
 
 - [Countable sets](../countable_sets/README.md) — the definition at work on a set that is everywhere

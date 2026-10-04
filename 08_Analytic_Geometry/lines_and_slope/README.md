@@ -239,6 +239,12 @@ Nachylenie prostej to przyrost y przez przyrost x: m = (y₂ − y₁)/(x₂ −
 
 Proste równoległe mają równe nachylenia; prostopadłe mają nachylenia o iloczynie −1, bo obrót o ćwierć obrotu zamienia krok (a, b) na (−b, a). Pułapki: przy odejmowaniu obie różnice muszą zaczynać się od tego samego punktu; to samo nachylenie i ten sam wyraz wolny to jedna prosta, nie dwie równoległe. Program sprawdza to na dokładnych ułamkach.
 
+## Auf Deutsch: Stichwörter
+
+Eine Gerade hat eine Steigung, weil ähnliche Dreiecke dasselbe Verhältnis haben; Punkt-Steigungs-Form, Normalform, parallel und senkrecht.
+
+**Stichwörter:** Gerade, Steigung (Anstieg), Steigungsdreieck, Punkt-Steigungs-Form, Normalform y = mx + b, allgemeine Form, parallel, senkrecht (negativer Kehrwert).
+
 ## See also
 
 - [Congruent and similar triangles](../../10_Geometry/congruent_and_similar_triangles/README.md) — why the slope is one number

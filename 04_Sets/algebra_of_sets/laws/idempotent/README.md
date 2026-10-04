@@ -44,6 +44,12 @@ Idempotence is what makes a set operation safe to repeat: a database `UNION` app
 
 Prawa idempotentności: suma i przekrój zbioru z samym sobą to ten sam zbiór, bo powtórzony element to nie drugi element. Liczby tego nie mają (a + a = 2a), max i min mają.
 
+## Auf Deutsch: Stichwörter
+
+Idempotenzgesetze: A ∪ A = A und A ∩ A = A.
+
+**Stichwörter:** Idempotenz, Vereinigung, Schnitt, keine Wiederholung in Mengen.
+
 ## See also
 
 - [The algebra of sets](../../README.md) — all the laws in one table, and the ones that look true and are not

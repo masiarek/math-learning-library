@@ -70,6 +70,12 @@ Such universes are consistent with the other axioms, which is what the book mean
 
 Aksjomat regularności (ufundowania) mówi: każdy niepusty zbiór a ma element x, który nie ma z a żadnego wspólnego elementu, czyli element ∈-minimalny. Stąd żaden zbiór nie jest swoim elementem: gdyby x ∈ x, to zbiór {x} nie miałby elementu rozłącznego z sobą. Tak samo odpada x ∈ y ∈ x i każdy cykl; to zadania 3–5 z rozdziału 1.5 Cunninghama. Ważniejsze: schodząc w dół po ∈ zawsze dochodzi się do ∅, więc każdy zbiór powstaje w pewnym etapie hierarchii V₀ = ∅, V_{α+1} = 𝒫(V_α) i ma rangę; program liczy szesnaście zbiorów V₄ według rangi: 1, 1, 2, 12. Bez aksjomatu możliwe jest uniwersum z punktem q = {q}; para a = {b}, b = {a} sama w sobie aksjomatu nie łamie, łamie go dopiero zbiór {a, b}, dokładnie ten, o którym mówi zadanie. ZF bez tego aksjomatu nie rozstrzyga, czy zbiór może należeć do siebie; Cori i Lascar wprowadzają go na końcu, razem z hierarchią V_α.
 
+## Auf Deutsch: Stichwörter
+
+Fundierung: jede nichtleere Menge hat ein Element, das mit ihr nichts gemeinsam hat; keine Menge enthält sich selbst, keine ∈-Kette fällt ewig.
+
+**Stichwörter:** Fundierungsaxiom (Regularität), ∈-minimales Element, keine unendliche absteigende ∈-Kette, x ∉ x, kumulative Hierarchie, wohlfundiert.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

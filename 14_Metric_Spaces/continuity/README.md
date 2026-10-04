@@ -167,6 +167,12 @@ Funkcja f jest ciągła w punkcie p, gdy dla każdej kuli o promieniu ε wokół
 
 Odległość od ustalonego punktu jest ciągła z δ = ε, bo z nierówności trójkąta |d(x, p) − d(y, p)| ≤ d(x, y). Ciągłość da się też wyrazić zbiorami otwartymi: przeciwobraz zbioru otwartego jest otwarty, więc metryki równoważne mają te same funkcje ciągłe, a identyczność między metryką taksówkową i euklidesową jest ciągła w obie strony, czyli jest homeomorfizmem. Z przestrzeni dyskretnej każda funkcja jest ciągła, bo δ = ½ izoluje punkt i warunek nie ma czego sprawdzać. Wniosek: ciągłość to własność funkcji razem z obiema metrykami, nigdy samej funkcji.
 
+## Auf Deutsch: Stichwörter
+
+Stetigkeit mit ε und δ: eine Kugel um den Ausgabewert, eine Kugel um den Eingabewert, die hineinpasst; geprüft für ε = 1/10, 1/100, 1/1000.
+
+**Stichwörter:** Stetigkeit, ε-δ-Definition, Kugel um f(a), Kugel um a, stetig in einem Punkt, unstetig, Sprungstelle, gleichmäßig stetig.
+
 ## See also
 
 - [Convergence](../convergence/README.md) — the same ∀ε ∃ shape, with N in place of δ

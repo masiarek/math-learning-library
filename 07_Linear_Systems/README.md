@@ -21,3 +21,9 @@ The first section of [Jim Hefferon, *Linear Algebra* ↗](https://hefferon.net/l
 ## A note on the code
 
 Every number is a `fractions.Fraction`, so a tuple satisfies an equation when the two sides are equal, not nearly equal. Solving a system in floating point is a different question, how many digits the answer keeps, and it is the one [01_Precision](../01_Precision/README.md) prepares for.
+
+## Auf Deutsch: Stichwörter
+
+Was es heißt, ein Gleichungssystem zu lösen: eine Gleichung ist ein Test, eine Lösung besteht jeden.
+
+**Stichwörter:** lineares Gleichungssystem, Lösung, Lösungsmenge, Unbekannte, Gauß-Verfahren, Hefferon.

@@ -66,6 +66,12 @@ Każda idea z tego rozdziału to jedna linijka Pythona. Ekstensjonalność to `=
 
 Szczegóły zachowania typu `set` w Pythonie (haszowanie, operatory a metody, `frozenset`, widoki słowników, `Counter`) są w bibliotece Pythona, na stronie „A set is a hash table”.
 
+## Auf Deutsch: Stichwörter
+
+Pythons set ist eine endliche Menge mit den Mengenoperationen als Operatoren; was es kann und wo es von der Mathematik abweicht.
+
+**Stichwörter:** Menge in Python, set, frozenset, Hashbarkeit, Operatoren | & − ^, Teilmengentest, Mengenbildung (comprehension).
+
 ## Run it yourself
 
 From the root of your clone of this repository:

@@ -307,3 +307,9 @@ What the library does not cover are the two halves of the course itself: functio
 ## Po polsku, w skrócie
 
 „Precalculus" to nie osobny przedmiot, tylko lista kontrolna przed analizą: funkcje, które analiza zaraz rozłoży na części, i algebra, którą będzie zakładać. Dlatego podręczniki różnią się bardziej stylem i ceną niż treścią. Przykład z pieniędzmi pokazuje, o co w kursie chodzi: odsetki proste dodają co roku tyle samo i dają funkcję liniową, a składane mnożą co roku przez ten sam czynnik i dają funkcję wykładniczą; pytanie „po ilu latach kwota się podwoi?" nie ma odpowiedzi w samej arytmetyce, i tę odpowiedź nazywa się logarytmem. Najczęstsza luka przed kursem to prawa potęg, a przed analizą trygonometria. Dodatku z powtórką algebry nie czyta się na początku, tylko wtedy, gdy konkretna sekcja go wymaga. Rozdział 09_Calculus i plan lekcji o wzorze Eulera pokazują, dokąd ten kurs prowadzi.
+
+## Auf Deutsch: Stichwörter
+
+Precalculus ist eine Checkliste, kein Fach: die Funktionen, die die Analysis gleich zerlegt, und die Algebra, die sie voraussetzt; die Bücher unterscheiden sich in Stil und Preis, kaum im Inhalt.
+
+**Stichwörter:** Precalculus (Vorbereitung auf die Analysis), Funktionen, Polynome, Exponential- und Logarithmusfunktion, Trigonometrie, Folgen und Reihen, Kegelschnitte, Lehrbuchvergleich (Sullivan, Stewart, Larson, Axler), Zinseszins, Verdopplungszeit.

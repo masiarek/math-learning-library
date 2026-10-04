@@ -67,6 +67,12 @@ Section 1 evaluates the formula literally on V₄: two nested loops over the six
 
 Aksjomat ekstensjonalności mówi, kiedy dwa zbiory są równe: gdy mają te same elementy. Czyta się go tak: dla każdych a i b, jeśli każdy zbiór należy do a dokładnie wtedy, gdy należy do b, to a i b są tym samym zbiorem. To jedyny aksjomat, który nie mówi, że jakiś zbiór istnieje; mówi, co to znaczy „ten sam". Z niego wynika, że zbiór pamięta tylko swoje elementy, nie kolejność ani powtórzenia ({2, 5} = {5, 2}), że równość a = b dowodzi się przez dwa zawierania a ⊆ b i b ⊆ a, i że zbiór obiecany przez każdy inny aksjomat jest jedyny, więc wolno mówić „para {a, b}". Program sprawdza formułę na szesnastu zbiorach uniwersum V₄ i buduje uniwersum z dwoma punktami bez elementów, w którym aksjomat nie zachodzi; takie punkty to atomy, których ZF nie ma.
 
+## Auf Deutsch: Stichwörter
+
+Extensionalität: eine Menge ist ihre Elemente, zwei Mengen mit denselben Elementen sind gleich.
+
+**Stichwörter:** Extensionalitätsaxiom, Gleichheit von Mengen, Elemente, Teilmenge in beide Richtungen, intensional vs. extensional.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

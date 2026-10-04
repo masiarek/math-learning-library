@@ -749,7 +749,6 @@ Terms used across the library, with the page that explains each in full. For set
 **Zorn's lemma** — if every chain in a nonempty poset has an upper bound, the poset has a maximal element; also the Kuratowski–Zorn lemma. Equivalent to the axiom of choice over ZF, and the form algebra uses: a basis for every vector space, a maximal ideal in every ring. See [choice](13_Axioms_of_Set_Theory/choice/README.md#the-equivalent-forms-and-the-weaker-ones).
 { #zorn-s-lemma }
 
-
 ## Symbols
 
 The same ideas in the spellings of the books this library reads. The definitions never vary; only the ink does. The last column is not a book but a machine, Isabelle/ZF, read in its theory files for the [proof assistants guide](reading_guides/proof_assistants/README.md); its composition, `g O f`, is from memory.
@@ -818,3 +817,9 @@ Every symbol of the charts and tables the owner has sent, in one place, with whe
 | ∎  ■  □ | end of proof | [glossary: end of proof qed](#end-of-proof-qed) |
 | :=  :⟺  ≝ | is defined as (a term, a statement) | [README.md#three-books-three-notations](13_Axioms_of_Set_Theory/README.md#three-books-three-notations) |
 | ≃ | equality inside Cori and Lascar's formal language | [reading a formula](13_Axioms_of_Set_Theory/reading_a_formula/README.md) |
+
+## Auf Deutsch: Stichwörter
+
+Jeder Begriff dieser Bibliothek in einem Satz, mit Anker, Symboltabelle über die Bücher hinweg und Symbolindex.
+
+**Stichwörter:** Glossar, Begriff (term), Definition, Symbol, Notation, Symboltabelle, Symbolindex, Verweis (cross-reference).

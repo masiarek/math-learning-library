@@ -146,6 +146,12 @@ Section 6 shows why the name *linear* fits. A linear combination keeps sums and 
 
 The theorem right after the definition is what makes solving possible. Three operations never change the set of solutions: swapping two equations, multiplying an equation by a number that is not zero, and adding a multiple of one equation to another. Gauss's method applies them until the answer can be read off. [The reading guide's balance example](../../reading_guides/linear_algebra/README.md#what-a-first-problem-looks-like) runs it once on the same two equations and finds h = 1 and c = 4.
 
+## Auf Deutsch: Stichwörter
+
+Eine lineare Gleichung ist ein Test für ein n-Tupel, und eine Lösung des Systems besteht jede Gleichung; keine, eine oder unendlich viele Lösungen.
+
+**Stichwörter:** lineare Gleichung, Koeffizient, n-Tupel, Lösungsmenge, Gleichungssystem, eindeutig lösbar, unlösbar, unendlich viele Lösungen, Gerade und Ebene als Lösungsmenge.
+
 ## See also
 
 - [The Cartesian product](../../04_Sets/cartesian_product/README.md) — what ℝ² is, and why (1, 4) is not (4, 1)

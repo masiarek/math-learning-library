@@ -26,3 +26,9 @@ So measure zero is an idea of its own, and a precise one. It is the exact meanin
 The examples compute with exact fractions (`fractions.Fraction`), so a printed total is the true total, not a floating-point estimate of it. A chapter about lengths too small to see cannot afford rounding.
 
 But a program only ever checks finitely many things, and measure zero is about infinitely many. So the pages keep a clear line between the two. Where a program checks the first 5,000 intervals, the page says 5,000, and then gives the short proof that covers the rest. The program is the evidence that the pattern is real; the proof is why it never stops.
+
+## Auf Deutsch: Stichwörter
+
+Wie unendlich viele Punkte keinen Platz brauchen: Maß null, abzählbare Mengen, die Cantor-Menge, ihre fette Schwester, die Cantor-Funktion, Wahrscheinlichkeit null.
+
+**Stichwörter:** Maß null (measure zero), Länge, Überdeckung durch Intervalle, abzählbar, überabzählbar, Cantor-Menge, Nullmenge.

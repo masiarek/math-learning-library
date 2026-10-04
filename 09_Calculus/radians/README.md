@@ -120,6 +120,12 @@ Kąt w radianach to długość łuku, który ten kąt wycina z okręgu o promien
 
 Stąd jedyne, co radiany wnoszą: punkt pod kątem t przeszedł po okręgu drogę t. Jeśli punkt w chwili t jest pod kątem t, to porusza się z prędkością 1, a jego prędkość (−sin t, cos t) to położenie obrócone o 90°. Dlatego pochodna sin t to cos t tylko w radianach; w stopniach każda pochodna ma dodatkowy czynnik π/180. I dlatego w tożsamości Eulera jest π, a nie 180: ruch e^{it} to właśnie taki obracający się punkt, a po czasie π przeszedł pół okręgu i jest w −1.
 
+## Auf Deutsch: Stichwörter
+
+Im Bogenmaß ist der Winkel die auf dem Einheitskreis zurückgelegte Strecke, und nur dann gilt (sin t)′ = cos t.
+
+**Stichwörter:** Bogenmaß (Radiant), Gradmaß, Einheitskreis, Bogenlänge, Umfang 2π, Ableitung des Sinus, Umrechnung.
+
 ## See also
 
 - [Velocity equals position](../velocity_equals_position/README.md) — the previous lesson, whose last case, velocity = i · position, is this page's turning point

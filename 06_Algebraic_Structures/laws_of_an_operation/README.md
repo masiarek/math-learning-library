@@ -171,6 +171,12 @@ From the root of your clone of this repository:
 python3 06_Algebraic_Structures/laws_of_an_operation/examples/laws_of_an_operation.py
 ```
 
+## Auf Deutsch: Stichwörter
+
+Jede Liste von Rechenregeln ist dieselbe Speisekarte aus vier Gesetzen; Halbgruppe, Monoid, Gruppe und abelsche Gruppe sind die Auswahl daraus.
+
+**Stichwörter:** Verknüpfung, Assoziativgesetz, neutrales Element, inverses Element, Kommutativgesetz, Halbgruppe, Monoid, Gruppe, abelsche Gruppe, Verknüpfungstafel.
+
 ## See also
 
 - [A definition is a test](../a_definition_is_a_test/README.md) — the next lesson: once the laws are a definition, a theorem proved from them holds in every set that passes

@@ -115,6 +115,12 @@ Halbeisen records, as Related Result 48, that without the axiom of choice neithe
 
 Twierdzenie Banacha–Tarskiego: kulę można pociąć na pięć części (Robinson 1947; Banach i Tarski w 1924 potrzebowali ich więcej) i złożyć z nich, samymi obrotami i przesunięciami, dwie kule tej samej wielkości. To nie paradoks, tylko fakt o zbiorach punktów, które nie mają objętości. Konstrukcja ma trzy piętra. Pierwsze: grupa wolna o dwóch generatorach dzieli się na cztery kawałki, z których dwa przesunięte o jedną literę dają razem z pozostałymi dwie kopie całej grupy; program sprawdza to na 4373 słowach. Drugie: dwa obroty Hausdorffa, φ (pół obrotu) i ψ (jedna trzecia obrotu), spełniają tylko relacje φ² = ψ³ = ι, więc ich grupa jest równie wolna; program liczy dokładnie, w liczbach p + q√3, 442 słowa i 442 różne macierze, i sprawdza kształt iloczynów z ćwiczenia Halbeisena ze strony 175. Trzecie, na którym stoi etykietowany graf Cayleya ze strony 176: wierzchołki grupy dostają etykiety ❶❷❸ tak, że B = ψ[A], C = ψ⁻¹[A], B ∪ C = φ[A]; kawałek A jest jedną trzecią grupy i zarazem dwiema trzecimi. Dopiero przeniesienie tego z grupy na punkty sfery wymaga pewnika wyboru: z każdej orbity trzeba wybrać jeden punkt, a orbit jest nieprzeliczalnie wiele i nie ma reguły. Bez pewnika wyboru twierdzenia nie da się udowodnić: w modelu Solovaya każdy zbiór liczb rzeczywistych ma miarę.
 
+## Auf Deutsch: Stichwörter
+
+Zwei Kugeln aus einer: wo das Banach-Tarski-Paradoxon wirklich sitzt (die freie Gruppe), und wo das Auswahlaxiom eintritt.
+
+**Stichwörter:** Banach-Tarski-Paradoxon, zerlegungsgleich, freie Gruppe mit zwei Erzeugern, Drehungen, Hausdorff-Paradoxon, Auswahlaxiom, nicht messbare Menge.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

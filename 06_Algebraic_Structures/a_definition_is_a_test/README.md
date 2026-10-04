@@ -160,6 +160,12 @@ From the root of your clone of this repository:
 python3 06_Algebraic_Structures/a_definition_is_a_test/examples/a_definition_is_a_test.py
 ```
 
+## Auf Deutsch: Stichwörter
+
+Eine Definition ist ein Test, den eine Menge mit Verknüpfung besteht oder nicht; die Potenzgesetze beweisen x⁰ = 1 und x⁻¹ = 1/x.
+
+**Stichwörter:** Definition als Test, Axiom, Vektorraum, Potenzgesetze, Beweis aus Axiomen, Gegenbeispiel.
+
 ## See also
 
 - [The laws of an operation](../laws_of_an_operation/README.md) — the previous lesson: the four laws and the names for their combinations

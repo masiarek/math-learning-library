@@ -237,6 +237,12 @@ Wzór na odległość dwóch punktów to twierdzenie Pitagorasa zapisane we wsp�
 
 Kwadraty robią tu dwie rzeczy: są Pitagorasem i kasują znaki. Dlatego kolejność punktów nie ma znaczenia i nie potrzeba wartości bezwzględnej; √(t²) = |t|, a nie t. Najczęstsze błędy: zgubiony minus przy ujemnej współrzędnej i „pierwiastek z sumy to suma pierwiastków", co jest nieprawdą: √(9 + 16) = 5, nie 7. Żeby porównać odległości, wystarczy porównać ich kwadraty i pierwiastka w ogóle nie liczyć. Program sprawdza to wszystko na dokładnych liczbach i liczy odległość dowolnych dwóch punktów podanych w wierszu poleceń.
 
+## Auf Deutsch: Stichwörter
+
+Der Abstand zweier Punkte ist Pythagoras auf den Koordinatendifferenzen; Vorzeichen und Reihenfolge fallen unter dem Quadrat weg, und Abstände vergleicht man quadriert.
+
+**Stichwörter:** Abstandsformel, Satz des Pythagoras, Koordinatendifferenz, Betrag, Quadratwurzel, Abstand vom Ursprung, Vergleich quadrierter Abstände.
+
 ## See also
 
 - [The Pythagorean theorem and its converse](../../10_Geometry/pythagorean_theorem/README.md) — the theorem this formula is, and the converse used in question 7

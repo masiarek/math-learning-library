@@ -73,6 +73,12 @@ Section 5 ends with "exactly one", ∃!x P(x), written with the two quantifiers 
 
 Predykat P(x) to zdanie z luką, która wypełnia się elementem uniwersum; P(7) „7 jest pierwsza" jest prawdą, P(8) fałszem. ∀x P(x) (odwrócone A od *All*) mówi, że P zachodzi dla każdego x: pętla, która musi się udać za każdym razem, w Pythonie `all(P(x) for x in U)`. ∃x P(x) (odwrócone E od *Exists*) mówi, że dla jakiegoś x: pętla, która musi się udać raz, `any(...)`. Kwantyfikatory tego samego rodzaju można zamieniać, mieszanych nie: ∀x∃y „każdy kogoś lubi" i ∃y∀x „ktoś jest lubiany przez wszystkich" to różne zdania, i program sprawdza na wszystkich 65 536 relacjach na czterech osobach, że drugie pociąga pierwsze, ale nie odwrotnie. Negacja odwraca kwantyfikator: „nie każdy" to „ktoś nie", „nikt" to „każdy nie". ∃ rozdziela się względem ∨, a ∀ względem ∧; dwa pozostałe „prawa" są fałszywe i program podaje kontrprzykłady. „Dokładnie jeden" (∃!) zapisuje się przez ∃ i ∀: ktoś ma własność P, a każdych dwóch, którzy ją mają, to ta sama osoba.
 
+## Auf Deutsch: Stichwörter
+
+∀ ist eine Schleife, die immer gelingen muss, ∃ eine Suche, die einmal fündig wird; Negation vertauscht die beiden.
+
+**Stichwörter:** Prädikat, Allquantor ∀, Existenzquantor ∃, Variable, Grundbereich, Negation von Quantoren, Reihenfolge der Quantoren, Schleife und Suche.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

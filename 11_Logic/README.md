@@ -22,6 +22,12 @@ Lesson 2 widens the view from one connective to all five. A sentence built from 
 
 Prawie każde twierdzenie ma postać „jeśli A, to B". Ten rozdział wyjaśnia, co to zdanie naprawdę twierdzi: jest fałszywe tylko wtedy, gdy A jest prawdziwe, a B fałszywe. Z tego wynika, że transpozycja („jeśli nie B, to nie A") mówi to samo, a twierdzenie odwrotne („jeśli B, to A") trzeba udowodnić osobno. Gdy oba kierunki są prawdziwe, mówimy „wtedy i tylko wtedy", jak w twierdzeniu Pitagorasa z jego odwrotnym. Druga lekcja pokazuje, że prawo logiki to dwie kolumny tabeli prawdy, które zgadzają się w każdym wierszu, więc skończona tabela jest dowodem, a ↔ wewnątrz zdania i ⇔ między zdaniami to dwie różne rzeczy. Trzecia dodaje kwantyfikatory ∀ i ∃ jako pętle po uniwersum: negacja odwraca kwantyfikator, kwantyfikatory tego samego rodzaju można zamieniać, mieszanych nie. W tym języku zapisane są aksjomaty teorii mnogości z rozdziału 13. Czwarta lekcja mówi, czym w ogóle jest dowód: łańcuchem zdań od założeń do tezy, z powodem przy każdej linii, zapisanym literami, więc obejmującym wszystkie przypadki naraz, czego pętla po przypadkach nie potrafi; wzór na odległość jest w niej rozpisany na dziesięć takich linii. Piąta lekcja to indukcja: pierwsza metoda dowodu, poprawna dzięki zasadzie dobrego uporządkowania, z błędnym dowodem o samochodach, który zawodzi na jednym szczeblu.
 
+## Auf Deutsch: Stichwörter
+
+Was „wenn A, dann B“ behauptet: Umkehrung, Kontraposition, Wahrheitstafeln, Quantoren, was ein Beweis ist, Induktion.
+
+**Stichwörter:** Logik, Implikation, Umkehrung (converse), Kontraposition, Wahrheitstafel, Aussage, Prädikat, Quantor, Beweis, vollständige Induktion.
+
 ## A note on the code
 
 Each "if A then B" is a pair of Python functions, and the program lists every case in a finite range where A holds and B fails. An empty list is evidence, not proof; the lesson says so, and shows a claim that survives four tests and fails the fifth. Lesson 4 turns that into a checker: a proof is data, a list of lines with their reasons, and the program verifies the shape of the chain, then tries each line on numbers, which can refute a line and never confirm one. Lessons 2 and 3 are different: a truth table over n letters, or a quantifier over a universe of four points, has finitely many cases and the programs run all of them, so there the check is the proof, and the pages say why.

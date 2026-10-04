@@ -110,6 +110,12 @@ For contrast, the finite side has its own wall: R(5, 5) is unknown, somewhere be
 
 Zasada szufladkowa: więcej gołębi niż szufladek, więc w którejś siedzą dwa. Twierdzenie Ramseya to ta sama zasada dla par: pokoloruj każdą z 15 par sześciu punktów na czerwono lub niebiesko, a znajdą się trzy punkty, których wszystkie trzy pary mają jeden kolor; dla pięciu punktów tak nie jest (boki pięciokąta czerwone, przekątne niebieskie). Liczba Ramseya R(3, 3) = 6, a program sprawdza wszystkie 32 768 kolorowań. Wersja nieskończona (Ramsey 1930): pokoloruj wszystkie pary liczb naturalnych, a istnieje nieskończony zbiór o parach jednego koloru; dowód to zasada szufladkowa stosowana w kółko, i program wykonuje go jako algorytm na liczbach od 1 do 64. Wersję skończoną wyprowadza się z nieskończonej przez lemat Königa o drzewach: drzewo „złych" kolorowań ma poziomy 1, 2, 6, 18, 12, 0 i umiera na poziomie 6. Dlaczego to teoria mnogości? Bo pytanie „jak duży musi być zbiór, żeby wzór był wymuszony" dla zbiorów skończonych ma odpowiedź liczbową, a dla nieskończonych zależy od aksjomatów: ω₁ już nie ma tej własności (Sierpiński 1933), a kardynał κ z κ → (κ)²₂ to duży kardynał, którego istnienia ZFC nie dowodzi. Stąd nazwa książki Halbeisena: kombinatoryczna teoria mnogości.
 
+## Auf Deutsch: Stichwörter
+
+Ramseys Satz als Schubfachprinzip für Paare: unter sechs Personen kennen sich drei oder drei kennen sich nicht; alle Färbungen durchprobiert.
+
+**Stichwörter:** Satz von Ramsey, Schubfachprinzip (pigeonhole), Färbung, vollständiger Graph K₆, Clique, unabhängige Menge, Ramsey-Zahl R(3,3) = 6.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

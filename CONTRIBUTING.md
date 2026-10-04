@@ -37,6 +37,8 @@ Do not hard-wrap paragraphs. Write each paragraph as one long line and let the e
 
 Every new lesson ends with a section `## Po polsku, w skrócie`, placed just before **See also**, and every new chapter `README.md` carries one before its closing notes. It is a few paragraphs that explain the idea in Polish, in the author's own words: what the claim is, where the trap is, what the program shows. It is an explanation, not a translation of the page, so it may leave things out and may say them differently; a reader who knows only Polish should come away with the idea, and a reader who knows both should not find the page repeated. The owner asked for this on every page written from October 2026 on, and older pages get it when they are next touched.
 
+After it, every page carries `## Auf Deutsch: Stichwörter`: one German sentence stating the page's claim, then a **Stichwörter:** line of the German terms for the page's topics, with the English term in brackets where the two differ. It is a keyword index for a reader who knows the German names, not a summary; one sentence and one line. Every page has one as of October 2026, so a new page needs one too.
+
 ## Output is generated, never typed
 
 Mark the spot and let the tool fill it:

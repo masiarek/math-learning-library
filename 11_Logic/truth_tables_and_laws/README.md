@@ -106,6 +106,12 @@ Section 5 runs the eight exercises of the section. Six are laws. One, exercise 8
 
 Zdanie zbudowane z liter P, Q, R i spójników ¬ (nie), ∧ (i), ∨ (lub), → (jeśli, to), ↔ (wtedy i tylko wtedy) jest funkcją wartości logicznych tych liter, a tabela prawdy wypisuje ją dla każdego z 2ⁿ wierszy. Tautologia jest prawdziwa w każdym wierszu, sprzeczność w żadnym, a dwa zdania są logicznie równoważne (ψ ⇔ φ), gdy ich kolumny zgadzają się w każdym wierszu; to samo, co powiedzieć, że ψ ↔ φ jest tautologią. Stąd różnica między strzałkami: ↔ to spójnik wewnątrz zdania, ⇔ to twierdzenie o dwóch zdaniach, i właśnie takim twierdzeniem jest każde „prawo logiki". Tabela jest dowodem, a nie próbką, bo prawo nie mówi o literach nic poza ich wartościami logicznymi, a tabela wyczerpuje wszystkie kombinacje. Program sprawdza całą listę praw Cunninghama (de Morgan, rozdzielność, kontrapozycja), znajduje jeden wiersz, w którym dwa podobne zdania się różnią, pokazuje, że → nie jest łączna, i wyłapuje błąd drukarski w zadaniu 4.
 
+## Auf Deutsch: Stichwörter
+
+Ein Gesetz der Logik sind zwei Spalten einer Wahrheitstafel, die in jeder Zeile übereinstimmen; Tautologie, Kontradiktion, De Morgan.
+
+**Stichwörter:** Wahrheitstafel, Junktor (und, oder, nicht, wenn-dann), Tautologie, Kontradiktion, logische Äquivalenz, De-Morgan-Gesetze, Aussagenlogik.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

@@ -92,6 +92,12 @@ Every program here keeps a universe as a Python dictionary from points to sets o
 
 Aksjomaty Zermela–Fraenkla to dziewięć zdań, a czytelnik ma do nich dwa zarzuty naraz: są nieczytelne, bo zapisane w języku formalnym z ∀, ∃, ⇒ i zmiennymi v₀, v₁, i są oczywiste, bo mówią rzeczy w rodzaju „dwa zbiory można włożyć do pary". Ten rozdział traktuje oba zarzuty poważnie. Pierwsza lekcja rozszyfrowuje symbole: formuła to program, który przebiega uniwersum, ∀ to pętla, która musi się udać zawsze, ∃ pętla, która musi się udać raz. Potem każdy aksjomat ma własną stronę: odczytany po angielsku, z tym, co buduje, z tym, co się psuje bez niego, i z programem, który sprawdza go na małym uniwersum V₄ szesnastu zbiorów. Tabela wyników to teza rozdziału: aksjomat jest żądaniem, nie opisem; każde False to zbiór, którego aksjomat żąda, a uniwersum nie ma. Lista „oczywistych" reguł jest sprzeczna (paradoks Russella), więc każdy aksjomat na liście jest tam dlatego, że matematyka go potrzebowała. Lekcja o liczbach porządkowych pokazuje, po co to komu: ciągi Goodsteina to twierdzenie o liczbach naturalnych, którego jedyny znany dowód idzie przez liczby porządkowe. Strona kata zbiera zadania z Jecha i Cunninghama, a tabela notacji tłumaczy między trzema książkami (uwaga: ⊂ u Jecha to „zawiera się lub równa", u Cunninghama „zawiera się właściwie"). Jak się tego uczyć: nie twierdzeń, lecz pięciu ruchów dowodowych; najpierw Cunningham rozdziały 1–4, rozdział 1 Jecha, a Cori i Lascar potem.
 
+## Auf Deutsch: Stichwörter
+
+Die Regeln zum Bauen von Mengen, je ein Axiom pro Seite: ein Axiom ist eine Forderung an das Universum, und jedes False ist eine Menge, die dem Universum fehlt.
+
+**Stichwörter:** Axiome der Mengenlehre, Zermelo–Fraenkel (ZF, ZFC), Extensionalität, Paarmenge, Vereinigung, Potenzmenge, Aussonderung, Ersetzung, Unendlichkeit, Auswahl, Fundierung, Ordinalzahl, Modell.
+
 ## See also
 
 - [04_Sets](../04_Sets/README.md) — the language of sets, which this chapter puts on axioms

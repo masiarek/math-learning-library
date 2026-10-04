@@ -78,6 +78,12 @@ One qualification, which the books mostly omit: "there is no set of all sets" is
 
 Aksjomat wyróżniania (u Coriego i Lascara: schemat comprehension, u Cunninghama: subset axiom, po polsku też aksjomat podzbiorów) mówi: dla każdego zbioru a i każdej własności F istnieje zbiór {x ∈ a : F[x]} tych elementów a, które mają własność F. Python pisze to `{x for x in a if F(x)}`. To nie jeden aksjomat, lecz schemat: osobny aksjomat dla każdej formuły, nieskończenie wiele. Z niego wynikają ∅, a ∩ b, a ∖ b i przekrój rodziny (który wymaga rodziny niepustej). Kluczowe jest „x ∈ a": bez niego reguła „każda własność wyznacza zbiór" (zasada Cantora) żąda zbioru, którego uniwersum nie ma, i sama sobie przeczy: r = {x : x ∉ x} należy do siebie dokładnie wtedy, gdy nie należy, a tabela prawdy tego zdania nie ma żadnego prawdziwego wiersza. To paradoks Russella, powód, dla którego lista aksjomatów w ogóle istnieje.
 
+## Auf Deutsch: Stichwörter
+
+Aussonderung: eine Eigenschaft wählt eine Teilmenge einer Menge aus, die man schon hat; uneingeschränkt führt sie zu Russell.
+
+**Stichwörter:** Aussonderungsaxiom (Komprehension, Separation), Eigenschaft, Formel, Teilmenge, Russellsche Antinomie, Axiomenschema.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

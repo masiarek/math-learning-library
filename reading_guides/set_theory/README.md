@@ -468,6 +468,12 @@ Po angielsku droga wygląda tak: Velleman albo darmowy Hammack (język), potem H
 
 Polska szkoła tę dziedzinę współtworzyła: *Fundamenta Mathematicae*, założone w Warszawie w 1920 roku, było pierwszym czasopismem poświęconym jednej dziedzinie, a pisali w nim Sierpiński, Kuratowski, Tarski, Banach, Ulam i Mostowski. Dawne tomy są darmowe w Bibliotece Wirtualnej Matematyki. Program na tej stronie uruchamia cztery wyniki założycielskie na małych zbiorach: wyliczenie liczb algebraicznych według „wysokości" (Cantor 1874), definicję zbioru nieskończonego jako równolicznego ze swoją właściwą częścią (Dedekind 1888), argument przekątniowy (Cantor 1891) i liczby naturalne von Neumanna, gdzie każda liczba jest zbiorem mniejszych (1923).
 
+## Auf Deutsch: Stichwörter
+
+Zwei Fächer mit einem Namen: die Sprache der Mengen jedes Beweiskurses und das Studium der Axiome selbst; welches Buch für welches, die polnische Schule, und die Gründungsarbeiten von Cantor 1874 bis Cohen 1963, vier davon als Programm.
+
+**Stichwörter:** Mengenlehre, naive und axiomatische Mengenlehre, Lehrbuch (Velleman, Halmos, Jech, Kunen, Cunningham), Cantor, Dedekind, Diagonalargument, polnische Schule, Fundamenta Mathematicae, Kontinuumshypothese, Forcing.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

@@ -459,6 +459,12 @@ The list is the owner's, sent in October 2026, grouped as they grouped it. A ter
 
 Właściciel biblioteki przysłał listę 646 terminów teorii mnogości, od „zbioru" po kardynały Berkeley, i spytał, które mają tu swoje strony. Ta strona jest odpowiedzią: 261 terminów ma lekcję albo hasło w słowniku i jest do nich podlinkowanych, 385 nie ma i są wymienione w każdym dziale pod „jeszcze nie tutaj" razem z książką, która je omawia. Pustych stron-zalążków nie zrobiono, bo reguła biblioteki (ROADMAP) mówi, że strona bez argumentu i bez programu nie powstaje; ta lista jest tym, co taka strona by i tak zawierała. Cztery tematy z listy, które mają argument i program, dostały w tej samej sesji lekcje: twierdzenie Cantora–Schrödera–Bernsteina, multizbiory, twierdzenie Ramseya i liczenie podziałów. Reszta wartych strony tematów czeka w skrzynce pomysłów.
 
+## Auf Deutsch: Stichwörter
+
+Die Liste von rund 650 Begriffen der Mengenlehre, jeder mit der Seite oder dem Glossareintrag, der ihn hier erklärt, der Rest mit dem Buch, das es tut.
+
+**Stichwörter:** Begriffsliste, Mengenlehre, Glossareintrag, Kardinalzahl, Ordinalzahl, Forcing, große Kardinalzahlen, deskriptive Mengenlehre, Filter und Ultrafilter, Bäume, nicht abgedeckt.
+
 ## See also
 
 - [Set theory: a reading guide](../set_theory/README.md) — the books, the founding papers, the tools, and set theory among the branches

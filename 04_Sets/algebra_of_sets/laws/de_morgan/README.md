@@ -46,6 +46,12 @@ x ∉ A ∪ B means x is in neither, so x ∉ A and x ∉ B; x ∉ A ∩ B means
 
 Prawa De Morgana: dopełnienie zamienia sumę z przekrojem; „nie (któryś)" to „żaden", a „nie (oba)" to „co najmniej jednego brak". To prawo warto umieć na pamięć słowami, bo właśnie je psuje się w kodzie: `not (a or b)` to `not a and not b`.
 
+## Auf Deutsch: Stichwörter
+
+De-Morgan-Gesetze: das Komplement einer Vereinigung ist der Schnitt der Komplemente, und umgekehrt.
+
+**Stichwörter:** De-Morgan-Gesetze, Komplement, Negation von „oder“ und „und“, Dualität.
+
 ## See also
 
 - [The algebra of sets](../../README.md) — all the laws in one table, and the ones that look true and are not

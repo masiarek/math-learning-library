@@ -32,6 +32,12 @@ Books, roughly easiest first: Silvanus P. Thompson, *Calculus Made Easy* (1910, 
 
 Rachunek różniczkowy zaczyna się zwykle od nachylenia wykresu i starannej definicji granicy. Ten rozdział zaczyna tak jak wykład Granta Sandersona: od ruchu. Pierwsza lekcja mówi, czym jest prędkość w jednej chwili: liczbą, do której dążą prędkości średnie, gdy odcinek czasu maleje; to jest pochodna, i to ona pozwala zrobić następny mały krok. Druga śledzi ruch, w którym prędkość zawsze równa się położeniu, startujący z 1: to e^t, a e to położenie w chwili 1, i z tej jednej reguły wychodzi prawo potęg, „podwojenie" i „odwrócenie ze ściśnięciem" z wykładu. Trzecia wyjaśnia radiany: kąt w radianach to droga przebyta po okręgu, więc pochodna sinusa to cosinus. Czwarta zapisuje eˣ jako wielomian bez końca i pokazuje, że reguła „prędkość = położenie" wymusza każdy współczynnik, a po wstawieniu liczby urojonej wypadają z niego cos i sin. Piąta lekcja, o prędkościach powiązanych, pokazuje pochodną w użyciu: gdy dwie wielkości wiąże równanie, ich prędkości wiąże jego pochodna, a liczby z danej chwili wstawia się dopiero na końcu. To nie jest cały kurs analizy, tylko ta jego część, na której opiera się tożsamość Eulera.
 
+## Auf Deutsch: Stichwörter
+
+Analysis als Bewegung: die Ableitung als Geschwindigkeit, die Bewegung, die ihre eigene Geschwindigkeit ist, das Bogenmaß und die Potenzreihe.
+
+**Stichwörter:** Analysis (calculus), Ableitung, Geschwindigkeit, Exponentialfunktion, eulersche Zahl e, Bogenmaß, Potenzreihe, Taylorreihe, verkettete Änderungsraten.
+
 ## A note on the code
 
 Where the argument is exact, the programs are exact: the average velocities of t² are fractions, so "6 + h" is an equality, and the coefficients of the series are built as fractions from the rule k·aₖ = aₖ₋₁. Where the function is e^t, sin or cos, whose values are not fractions, they use `math.exp`, `math.sin` and `math.cos` and print six decimals, and velocities are measured over a time of 10⁻⁶, near the best a double allows, for the reason [the derivative is a velocity](derivative_as_velocity/README.md#in-floats-the-step-cannot-shrink-forever) shows in its last section.

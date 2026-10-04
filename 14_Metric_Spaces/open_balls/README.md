@@ -179,6 +179,12 @@ Kula otwarta o promieniu r wokół p to zbiór punktów odległych od p o mniej 
 
 Metryka dyskretna, d = 1 dla różnych punktów, ma kule będące jednym punktem albo wszystkim, więc każdy podzbiór jest otwarty; pod metryką euklidesową żaden jednopunktowy zbiór otwarty nie jest. Te dwie metryki nie są równoważne i żadne stałe ich nie wiążą. Metryka dyskretna jest w tym rozdziale eksperymentem kontrolnym: każda kolejna definicja zostanie na niej uruchomiona.
 
+## Auf Deutsch: Stichwörter
+
+Drei Metriken, dieselben offenen Mengen: Kugeln sind Scheibe, Raute und Quadrat, aber jede passt in jede.
+
+**Stichwörter:** offene Kugel, offene Menge, innerer Punkt, euklidische Metrik, Manhattan-Metrik, Maximumsmetrik, äquivalente Metriken, diskrete Metrik, Topologie.
+
 ## See also
 
 - [Distance is the four properties](../../08_Analytic_Geometry/other_distances/README.md) — the three circles whose insides are these balls, and the four axioms

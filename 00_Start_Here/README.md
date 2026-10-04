@@ -99,3 +99,9 @@ uv run --group docs mkdocs serve
 - [rust-learning-library ↗](https://masiarek.github.io/rust-learning-library/) — same format, for Rust
 - [star-voting-library ↗](https://masiarek.github.io/star-voting-library/) — voting methods, with a tabulation engine behind every example
 - [biology-learning-library ↗](https://masiarek.github.io/biology-learning-library/) — high-school biology, bilingual EN/PL
+
+## Auf Deutsch: Stichwörter
+
+Wo man anfängt: die Kapitel in Lesereihenfolge, die Selbsttests und die Lesehilfen.
+
+**Stichwörter:** Einstieg, Lesereihenfolge, Voraussetzungen (prerequisites), Selbsttest (self-check), Lesehilfe (reading guide), Schwesterbibliotheken.

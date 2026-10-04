@@ -45,6 +45,12 @@ Rewrite ∖ as ∩ B′ and the laws above do the rest: (A ∖ B) ∖ C = A ∩ 
 
 Prawo różnicy: A ∖ B to A ∩ B′, więc różnica nie jest nowym działaniem i nie ma własnych praw; każdą tożsamość z ∖ dowodzi się, zamieniając ją na przekrój z dopełnieniem. Python pisze `a - b` i nie potrzebuje U.
 
+## Auf Deutsch: Stichwörter
+
+Differenzgesetz: A ∖ B = A ∩ B′, die Differenz ist ein Schnitt mit einem Komplement.
+
+**Stichwörter:** Mengendifferenz, relatives Komplement, Schnitt, Umschreibung.
+
 ## See also
 
 - [The algebra of sets](../../README.md) — all the laws in one table, and the ones that look true and are not

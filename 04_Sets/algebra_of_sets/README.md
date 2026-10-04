@@ -217,6 +217,12 @@ Suma, iloczyn (część wspólna) i dopełnienie zbiorów to logiczne „lub”,
 
 Dopełnienie ma sens tylko względem ustalonego uniwersum U: A′ = U ∖ A. Uniwersum to nie zbiór wszystkiego, bo takiego nie ma (paradoks Russella), lecz zbiór wszystkiego, o czym mowa w zadaniu, wybrany z góry; na diagramie Venna jest nim prostokąt, w którym rysuje się koła, a dopełnienie to część prostokąta poza kołem. Ten sam zbiór A ma inne dopełnienie w innym uniwersum, więc dopełnienie bez podanego U jest niedokończonym zdaniem. Podręczniki piszą je jako A′, Ā albo Aᶜ. Koło narysowane wewnątrz drugiego koła znaczy A ⊆ B, a dwa koła osobno to zbiory rozłączne, A ∩ B = ∅. Python nie ma operatora dopełnienia i trzeba pisać `U - a`. Niektóre „prawa” kuszą, ale są fałszywe, np. (A ∪ B) ∖ B = A, bo różnica nie cofa sumy. Wreszcie zawieranie ⊆ jest porządkiem częściowym: zbiorów {1} i {2} nie da się porównać, więc `sorted()` na liście zbiorów daje przypadkową kolejność; trzeba podać klucz, np. `key=lambda s: (len(s), sorted(s))`.
 
+## Auf Deutsch: Stichwörter
+
+Die Gesetze von ∪, ∩ und Komplement, jedes an allen Teilmengen einer kleinen Grundmenge geprüft; die Grundmenge U entscheidet mit.
+
+**Stichwörter:** Mengenalgebra, Vereinigung, Schnitt, Komplement, Grundmenge (universal set), De-Morgan-Gesetze, Distributivgesetz, disjunkt, Venn-Diagramm.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

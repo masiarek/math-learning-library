@@ -89,6 +89,12 @@ Section 7 is a remark from Paulson's manual for Isabelle/ZF, placed in the [proo
 
 Aksjomat pary mówi: dla dowolnych zbiorów a i b istnieje zbiór, którego elementami są dokładnie a i b, czyli para {a, b}; dla a = b dostajemy singleton {a}. To pierwszy aksjomat, który coś buduje: z ∅ daje {∅}, potem {∅, {∅}} i tak dalej. Para nie pamięta kolejności ({a, b} = {b, a}), ale trzy pary dają parę uporządkowaną Kuratowskiego (a, b) = {{a}, {a, b}}, z której (a, b) = (c, d) wynika a = c i b = d; na niej stoi cała geometria współrzędnych. Aksjomat trzeba wypowiedzieć, bo uniwersum może się skończyć: w V₄, gdzie zbiory mają rangę najwyżej 3, para dwóch zbiorów rangi 3 ma rangę 4 i w V₄ jej nie ma. Program liczy, że z 256 par elementów V₄ tylko 16 ma swoją parę w środku. Sekcja 7 pokazuje uwagę z podręcznika Isabelle/ZF: para nie musi być aksjomatem, bo 𝒫(𝒫(∅)) = {∅, {∅}} ma dokładnie dwa elementy, a zastępowanie (∅ ↦ a, {∅} ↦ b) daje z niego obraz {a, b}.
 
+## Auf Deutsch: Stichwörter
+
+Paarmengenaxiom: je zwei Mengen passen zusammen in eine Menge; daraus Einermenge und geordnetes Paar.
+
+**Stichwörter:** Paarmengenaxiom, ungeordnetes Paar {a, b}, Einermenge {a}, geordnetes Paar (Kuratowski), Ersetzung über 𝒫(𝒫(∅)).
+
 ## Run it yourself
 
 From the root of your clone of this repository:

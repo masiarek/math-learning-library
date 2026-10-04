@@ -137,6 +137,12 @@ Załóżmy, że eˣ da się zapisać jako wielomian, który się nie kończy: a�
 
 Po wstawieniu it potęgi i krążą: 1, i, −1, −i, więc wyrazy parzyste są rzeczywiste, a nieparzyste urojone. Część rzeczywista to szereg cos t, a urojona to szereg sin t, i stąd e^{it} = cos t + i sin t, wzór Eulera odczytany ze współczynników. Na wykładzie te wyrazy to strzałki, każda obrócona o 90° względem poprzedniej, które najpierw rosną, a potem maleją i zwijają się w spiralę kończącą się w −1.
 
+## Auf Deutsch: Stichwörter
+
+„Geschwindigkeit = Ort“ erzwingt jeden Koeffizienten von eˣ = 1 + x + x²/2 + x³/6 + ⋯, und cos und sin fallen heraus.
+
+**Stichwörter:** Potenzreihe, Taylorreihe, Koeffizient, Fakultät, Exponentialreihe, Sinus- und Kosinusreihe, Konvergenz, Partialsumme.
+
 ## See also
 
 - [Velocity equals position](../velocity_equals_position/README.md) — the rule that forces the coefficients
