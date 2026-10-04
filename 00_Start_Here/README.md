@@ -86,6 +86,8 @@ uv run --group docs mkdocs serve
 
 [**Linear algebra: a reading guide**](../reading_guides/linear_algebra/README.md) — why linear algebra is useful, what to know before starting it, and which book to learn it from, including an honest verdict on *Linear Algebra Done Right*. It is a reference page, not a lesson; its one worked example, the first problem in Hefferon's textbook, is backed by a program like everything else.
 
+[**Lean: a reading guide**](../reading_guides/lean/README.md) — what Lean is (a proof assistant and a programming language, because a proposition is a type and a proof is a program), its free books and which to open first, Lean's definitions of And, Or, Not and Set read from its source and run as a small type checker, and the Lean FRO's agent tooling, Lean Beam.
+
 [**Set theory: the terms**](../reading_guides/set_theory_terms/README.md) — some 700 terms of set theory, each with the page or glossary entry that covers it here, the rest with the book that does.
 
 [**Set theory: a reading guide**](../reading_guides/set_theory/README.md) — two subjects with one name, the language of sets every proofs course speaks and the study of the axioms themselves; which book for each, from Velleman and Halmos to Kunen and Jech, with verdicts on Cori and Lascar, Cunningham, Jech and Kunen's *Foundations*; the Polish school and *Fundamenta Mathematicae*; and the founding papers from Cantor 1874 to Cohen 1963, four of them run as a program.
