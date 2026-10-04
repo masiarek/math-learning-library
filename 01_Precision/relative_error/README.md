@@ -309,6 +309,12 @@ python3 01_Precision/relative_error/examples/relative_error.py
 - Jean-Michel Muller et al., *Handbook of Floating-Point Arithmetic*, 2nd edition, Springer 2018 ([doi:10.1007/978-3-319-76526-6 ↗](https://doi.org/10.1007/978-3-319-76526-6)) — chapter 10 "Evaluating Floating-Point Elementary Functions", §10.5 "The Table Maker's Dilemma".
 - [PEP 485 — A function for testing approximate equality ↗](https://peps.python.org/pep-0485/) — the design of `math.isclose`, including why it divides by the larger value and why `abs_tol` defaults to zero.
 
+## Auf Deutsch: Stichwörter
+
+Statt „auf p Stellen richtig“ meldet man den relativen Fehler, die eine Zahl, die unabhängig von der Größenordnung ist.
+
+**Stichwörter:** relativer Fehler, absoluter Fehler, gültige Stellen (correct digits), Größenordnung, Fehlerschranke.
+
 ## See also
 
 - [Significant figures](../significant_figures/README.md) — the previous lesson: the counting rule, and the two arithmetic rules that absolute and relative error explain

@@ -303,3 +303,9 @@ The path of [Euler's formula: a lesson plan](reading_guides/eulers_formula/READM
 1. [Multiplication as pairs](03_Complex_Numbers/multiplication_as_pairs/README.md) — the pairs, with their rule, form a field.
 2. [A definition is a test](06_Algebraic_Structures/a_definition_is_a_test/README.md) — in any field, a polynomial of degree n has at most n roots.
 3. [Roots of unity](03_Complex_Numbers/roots_of_unity/README.md) — which is how the lesson knows that the n solutions of zⁿ = 1 it finds are all of them.
+
+## Auf Deutsch: Stichwörter
+
+Jede Lektion nach Fachgebiet sortiert: ein Baum mit Zweigen, Querverweisen und Fäden, die eine Idee durch mehrere Kapitel verfolgen.
+
+**Stichwörter:** Themenkarte, Fachgebiet (subject), Zweig (branch), Querverweis (↪), Faden (thread), Lesepfad.

@@ -5,7 +5,7 @@ How the owner of this library works, as learned from sessions. Update when a ses
 - Writes short, fast messages, often from a phone; typos are normal. Read for intent, and ask only when two readings lead to different work.
 - A photo of a book page with a short note ("add to learning") means: find where it belongs in the library and publish it.
 - Does not want to check or click anything: every finished piece of work goes all the way to merged on `master` in the same session (see `CLAUDE.md`).
-- Reads Polish; every new page carries `## Po polsku, w skrócie`.
+- Reads Polish; every new page carries `## Po polsku, w skrócie`. Reads German too and wanted German as keywords, not prose: every page carries `## Auf Deutsch: Stichwörter` (one sentence, one line of terms).
 - Asks "why is it useful" about advice: answer that directly, in plain words, before or alongside any page change.
 - Values honesty about evidence: popular and AI-written summaries get a "how sure is each claim" table, not a copy.
 - Keeps books as PDFs on an external drive (a Samsung T7) and some notes in Google Drive. Cloud sessions can reach Google Drive but not the drive.

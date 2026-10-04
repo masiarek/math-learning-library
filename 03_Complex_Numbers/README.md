@@ -60,6 +60,12 @@ Textbooks for the course itself, which needs calculus, roughly in order of diffi
 
 Zwykły podręcznik każe uwierzyć w liczbę, której kwadrat to −1, i zaufać, że arytmetyka dalej działa. Ten rozdział idzie drogą Hamiltona: liczba zespolona **jest** parą liczb rzeczywistych, a mnożenie to spisana reguła na parach, (x₁, y₁) · (x₂, y₂) = (x₁x₂ − y₁y₂, x₁y₂ + x₂y₁). Niczego się nie zakłada; to, że (0, 1)² = (−1, 0), wychodzi z reguły na końcu, zamiast wchodzić na początku jako aksjomat. Druga lekcja mówi, co reguła robi: skaluje i obraca płaszczyznę, więc i² = −1 to tylko dwa ćwierćobroty dające półobrót. Trzecia mówi, czemu reguła jest właśnie taka: oczywiste mnożenie po współrzędnych pozwala dwóm niezerowym parom dać zero, a reguła zespolona nigdy, więc tylko ją da się zawsze odwrócić. Czwarta zbiera plon: punkt okręgu mnożony przez siebie obchodzi okrąg równymi krokami, więc zⁿ = 1 ma dokładnie n rozwiązań, a program znajduje dwanaście znaków tarczy zegara z √3 niesionym dokładnie. Piąta odpowiada na pytanie, które cztery pierwsze odkładały, o kąt jako liczbę: e^{iπ} = −1 to prawo potęg, dodawanie na wejściu to mnożenie na wyjściu, przeniesione na płaszczyznę, gdzie mnożenie może z punktem okręgu zrobić tylko jedno, obrócić go, a pół obrotu od 1 to −1.
 
+## Auf Deutsch: Stichwörter
+
+Eine komplexe Zahl ist ein Paar reeller Zahlen mit einer Multiplikationsregel; √−1 ist eine Folge, keine Annahme.
+
+**Stichwörter:** komplexe Zahl, Paar (a, b), Realteil, Imaginärteil, Multiplikationsregel, Drehung, Betrag, Argument, Einheitswurzeln, eulersche Identität.
+
 ## A note on the code
 
 The examples compute with exact fractions (`fractions.Fraction`), never with Python's built-in `complex` type, except in one section each of lessons 1 and 4 that compares the two. The point is that the rule is nothing but real arithmetic, and a program that quietly used `complex` would hide exactly the thing the page is trying to show. Lesson 4 needs √3, and carries it as a symbol with the rule √3 · √3 = 3 rather than as a float, so that h¹² = (1, 0) is an equality and not an approximation. Lesson 5 is the exception the rule was waiting for: π is not a fraction, so its compounding of (1 + iπ/n)ⁿ runs in floats, and its last sections use `cmath`, the standard library's complex exponential, because a program that asks Python for e^{iπ} and gets −1 + 1.2 × 10⁻¹⁶ i is the point. The half turn itself it still reaches exactly, as powers of the clock's marks.

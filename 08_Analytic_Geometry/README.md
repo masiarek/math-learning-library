@@ -35,6 +35,12 @@ The opening section of the chapter on graphs in any precalculus book; the lesson
 
 Pomysł Kartezjusza: dwie osie liczbowe pod kątem prostym zamieniają każdy punkt płaszczyzny w parę liczb, a każdą parę liczb w punkt. Od tej chwili pytanie o rysunek jest pytaniem o arytmetykę, a równanie ma swój obraz. Potem odległość i środek odcinka, wykres równania jako zbiór punktów, które je spełniają, prosta i jej nachylenie, okrąg jako wzór na odległość ze stałym r. Rozdział idzie w kolejności podręcznika do precalculusu, strona po stronie, z pytaniami z książki na końcu każdej lekcji i talią fiszek Anki obok.
 
+## Auf Deutsch: Stichwörter
+
+Was es heißt, eine Zahl zu zeichnen: Koordinaten, Abstand, Mittelpunkt, Graphen, Geraden und Kreise, das erste Kapitel eines Precalculus-Buchs.
+
+**Stichwörter:** analytische Geometrie, Koordinatensystem, Abstandsformel, Mittelpunkt, Graph einer Gleichung, Gerade, Steigung, Kreis, Vektor, Metrik.
+
 ## A note on the code
 
 Every point is a Python tuple of integers, so "is in quadrant II" is a check on two signs and every count is exact. Nothing is drawn: the one picture in the chapter is a grid of text cells, which is enough to see where four points land.

@@ -164,6 +164,12 @@ Rozdział traktował odległość euklidesową jako metrykę, a jej czwarta wła
 
 Nierówność trójkąta wynika z niej w trzech linijkach: |u + w|² = |u|² + 2(u·w) + |w|² ≤ |u|² + 2|u||w| + |w|² = (|u| + |w|)², a obie strony są nieujemne, więc można wyciągnąć pierwiastek. Z u = Q − P i w = R − Q to jest d(P, R) ≤ d(P, Q) + d(Q, R). Program liczy trójmian dokładnie dla przykładowych wektorów, pokazuje przypadek równości, sprawdza nierówność na 15 625 parach wektorów całkowitych w trzech wymiarach i wyprowadza nierówność trójkąta bez ani jednego pierwiastka. Dowód nie używa liczby współrzędnych, więc działa w każdym wymiarze i dla całek; cała odległość euklidesowa spoczywa na tym, że kwadrat nigdy nie jest ujemny.
 
+## Auf Deutsch: Stichwörter
+
+Die Dreiecksungleichung bewiesen: Cauchy–Schwarz aus einer quadratischen Funktion ohne Nullstellen, und damit ist die euklidische Metrik eine Metrik.
+
+**Stichwörter:** Cauchy-Schwarz-Ungleichung, Dreiecksungleichung, Skalarprodukt, Norm, Diskriminante, quadratische Funktion ohne reelle Nullstelle.
+
 ## See also
 
 - [Distance in n dimensions](../../08_Analytic_Geometry/distance_in_n_dimensions/README.md) — where the four properties were checked and this one left open

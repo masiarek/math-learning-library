@@ -187,6 +187,12 @@ Wzór (√|Δx| + √|Δy|)² wygląda jak członek tej samej rodziny i odległo
 
 Dlaczego geometria wybrała Pitagorasa? Bo po obrocie płaszczyzny tylko odległość euklidesowa się nie zmienia; program obraca punkty o kąt z trójkąta 3-4-5, dokładnie, i taksówkowa oraz Czebyszewa zmieniają wartość. Linijka nie dba o to, jak ją trzymamy. Na koniec odległość Hamminga między ciągami bitów, liczba pozycji, na których się różnią: bez współrzędnych i bez Pitagorasa, a program sprawdza wszystkie cztery własności na wszystkich 512 trójkach ciągów trzybitowych. To na niej opierają się kody korekcyjne.
 
+## Auf Deutsch: Stichwörter
+
+Ein Abstand ist vier Eigenschaften: Manhattan-, Tschebyschew- und Hamming-Abstand erfüllen sie, p = ½ nicht, und ein 3-4-5-Dreieck zeichnet Euklid aus.
+
+**Stichwörter:** Metrik, metrische Axiome, Dreiecksungleichung, Manhattan-Abstand (Taxi), Tschebyschew-Abstand, Hamming-Abstand, p-Norm, Einheitskreis einer Metrik.
+
 ## See also
 
 - [The distance formula](../distance_formula/README.md) — the Euclidean member of the family, and its cross-reference table

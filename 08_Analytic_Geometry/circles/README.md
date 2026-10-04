@@ -269,6 +269,12 @@ Po wymnożeniu dostajemy postać ogólną x² + y² + ax + by + c = 0, w której
 
 Jak coś ciągłego może być zbiorem? Okrąg to zbiór par (x, y), które przechodzą test x² + y² = 1; ciągłość nie jest cechą rysunku, lecz tego zbioru: między każdymi dwoma punktami leży trzeci, każda granica punktów okręgu leży na okręgu, i zbiór jest jednym kawałkiem. Program sprawdza to na dokładnych ułamkach: dla każdego t = m/n punkt ((1 − t²)/(1 + t²), 2t/(1 + t²)) leży na okręgu, a dzielenie t na pół daje wciąż nowe punkty. Punktów jest nieprzeliczalnie wiele, tyle co liczb rzeczywistych w przedziale.
 
+## Auf Deutsch: Stichwörter
+
+Ein Kreis in Normalform (x − a)² + (y − b)² = r² und in allgemeiner Form; quadratische Ergänzung macht aus der einen die andere.
+
+**Stichwörter:** Kreisgleichung, Mittelpunkt, Radius, Normalform, allgemeine Form, quadratische Ergänzung, Einheitskreis.
+
 ## See also
 
 - [The distance formula](../distance_formula/README.md) — the equation of a circle is it, held fixed

@@ -44,6 +44,12 @@ The identity elements are what make the subsets of U a [monoid](../../../../06_A
 
 Prawa identyczności: suma ze zbiorem pustym i przekrój z uniwersum nie zmieniają A, tak jak dodanie 0 i pomnożenie przez 1 nie zmieniają liczby. W logice to „lub fałsz" i „i prawda".
 
+## Auf Deutsch: Stichwörter
+
+Neutrale Elemente: A ∪ ∅ = A und A ∩ U = A.
+
+**Stichwörter:** neutrales Element (identity), leere Menge, Grundmenge.
+
 ## See also
 
 - [The algebra of sets](../../README.md) — all the laws in one table, and the ones that look true and are not

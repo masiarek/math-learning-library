@@ -54,6 +54,12 @@ LAWS REQUIRED: associative, identity, inverses
 
 Grupa to monoid, w którym każdy element ma odwrotność: x · y = e = y · x. Przykłady: ℤ z + (odwrotność −n), ułamki niezerowe z × (odwrotność 1/q), sześć permutacji trzech obiektów ze składaniem, najmniejsza grupa nieprzemienna. Kontrprzykłady: ℕ z + (3 nie ma odwrotności), ℤ z × (2 nie ma). Odwrotności dają rozwiązywanie równań: a · x = b ma dokładnie jedno rozwiązanie x = a⁻¹ · b, a tabela działania jest kwadratem łacińskim.
 
+## Auf Deutsch: Stichwörter
+
+Gruppe: assoziativ, mit neutralem Element und einem Inversen für jedes Element.
+
+**Stichwörter:** Gruppe, neutrales Element, Inverses, Assoziativgesetz, Gruppentafel, lateinisches Quadrat.
+
 ## See also
 
 - [The laws of an operation](../../README.md) — the four laws and the table of names

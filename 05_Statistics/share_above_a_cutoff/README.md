@@ -129,6 +129,12 @@ Pułapka tkwi w skośności. Lp(a) zależy głównie od genów: większość lud
 
 Ta sama grupa ludzi daje inny procent, gdy przesunąć próg, a ten sam próg daje inny procent w innej populacji. Trzeba też uważać na jednostkę: mg/dL i nmol/L nie przeliczają się jednym stałym współczynnikiem. To nie jest porada medyczna. Własny wynik warto omówić z lekarzem.
 
+## Auf Deutsch: Stichwörter
+
+Aus einer Schlagzeile einen Anteil über einer Schwelle ablesen: Perzentil, Normalverteilung und was die Zahl annimmt.
+
+**Stichwörter:** Anteil (share), Schwelle (cutoff), Perzentil, Normalverteilung, Standardabweichung, z-Wert, Annahme.
+
 ## See also
 
 - [Mean, average, arithmetic mean](../mean_vs_average/README.md): the same pull of a few large values, on salaries

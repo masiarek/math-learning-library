@@ -74,6 +74,12 @@ Zbiór to pojedynczy obiekt, który ma elementy. Słów *zbiór* i *należy do* 
 
 Program sprawdza każdą regułę: że równość i zawieranie dają się zdefiniować przez samo należenie (zgodność z `==` i `<=` Pythona na wszystkich 64 parach podzbiorów {0, 1, 2}), że {2, 5} = {5, 2} i {1, 1, 2} = {1, 2}, że 1 ∈ {1} ∈ {{1}}, ale 1 ∉ {{1}}, oraz że zbiór wycięty regułą Russella ze zbioru A jest zwykłym zbiorem, który nigdy nie należy do A. Dlaczego podręcznikowa „dobrze określona kolekcja różnych obiektów" nie jest definicją, pokazuje osobna strona, na której ta definicja staje przed sądem.
 
+## Auf Deutsch: Stichwörter
+
+Eine Menge ist durch ihre Elemente bestimmt: keine Reihenfolge, keine Wiederholung, Zugehörigkeit entscheidbar, Gleichheit durch Extensionalität.
+
+**Stichwörter:** Menge, Element, Zugehörigkeit (∈), Extensionalität, keine Reihenfolge, keine Wiederholung, leere Menge, Teilmenge, aufzählende und beschreibende Schreibweise.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

@@ -183,6 +183,12 @@ Wykład *Designing Math* Granta Sandersona zakłada dziesięć rzeczy z czterech
 
 Najpierw zrób test z pytaniami powyżej: pierwsze pytanie, na które nie znasz odpowiedzi, wskazuje krok, od którego zacząć. Każdy krok odsyła do lekcji w tej bibliotece, a tabela „slajd po slajdzie" mówi, który krok jest potrzebny do którego ekranu wykładu.
 
+## Auf Deutsch: Stichwörter
+
+Ein Lernplan für e^{iπ} = −1: zehn Ideen in der Reihenfolge, in der man sie braucht, mit Selbsttest und der Lektion zu jedem Schritt des 3Blue1Brown-Vortrags.
+
+**Stichwörter:** eulersche Formel, eulersche Identität, Lernplan, Voraussetzungen, Potenzgesetze, Exponentialfunktion, komplexe Zahlen, Bogenmaß, Potenzreihe, Drehung.
+
 ## See also
 
 - [Euler's identity](../../03_Complex_Numbers/eulers_identity/README.md) — the lesson this plan leads to

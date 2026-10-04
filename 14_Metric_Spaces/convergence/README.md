@@ -164,6 +164,12 @@ Ciąg zbiega do L, gdy każda kula wokół L, choćby najmniejsza, zawiera cały
 
 Zaprzeczenie zbieżności to jedno ε, dla którego żaden ogon nie mieści się w kuli. Dla ciągu (−1)ⁿ kula o promieniu 1 wokół dowolnego kandydata L omija połowę wyrazów, bo z nierówności trójkąta d(1, L) + d(L, −1) ≥ 2. Granica jest jedyna: wokół dwóch różnych kandydatów można narysować dwie rozłączne kule, znów z nierówności trójkąta, a ogon nie zmieści się w obu. Ten sam ciąg na płaszczyźnie pod trzema równoważnymi metrykami ma trzy różne N (15, 21, 11 dla ε = 1/10) i jedną granicę, bo kule są zagnieżdżone. Pod metryką dyskretną ciąg 1/n przestaje zbiegać: każdy wyraz jest w odległości 1 od zera, więc kula o promieniu ½ nie zawiera żadnego. Zbieżność należy do metryki, nie do punktów.
 
+## Auf Deutsch: Stichwörter
+
+Ein Grenzwert ist eine Aussage über jede Kugel: ab einem N liegen alle Folgenglieder darin; Eindeutigkeit, Teilfolgen, Divergenz mit Zeugen.
+
+**Stichwörter:** Konvergenz, Grenzwert einer Folge, ε-N-Definition, Folgenglied, Eindeutigkeit des Grenzwerts, Divergenz, Teilfolge, äquivalente Metriken.
+
 ## See also
 
 - [Open balls](../open_balls/README.md) — the balls this definition quantifies over, and why equivalent metrics share them

@@ -156,6 +156,12 @@ The owner then sent Wikipedia's picture of the 52 partitions of a five-element s
 
 Podział zbioru na rozłączne, niepuste bloki pokrywające całość; relacja równoważności, czyli zwrotna, symetryczna i przechodnia; jądro funkcji, czyli relacja „f nie odróżnia u od v": to jedna idea w trzech postaciach. Podział daje relację „mamy wspólny blok", relacja daje podział na klasy, i program sprawdza na {1, 2, 3}, że każda z tych konstrukcji odwraca drugą; z 512 relacji na tym zbiorze dokładnie 5 to równoważności, tyle ile podziałów (liczby Bella: 1, 2, 5, 15, 52). Bez przechodniości klasy by się nakładały. Każda funkcja ma jądro, a każda równoważność jest jądrem funkcji „w której klasie jestem"; stąd twierdzenie o rozkładzie: każda funkcja to suriekcja na klasy, potem bijekcja, potem włożenie. Przykład, którego używają wszyscy, to przystawanie modulo m: jądro funkcji „reszta z dzielenia przez m", klasy to reszty, iloraz to ℤ/mℤ. Sekcje 6–9 programu dodają resztę hasła z Wikipedii: przekrój dwóch relacji równoważności jest relacją równoważności, suma zwykle nie; każdą relację można domknąć do najmniejszej relacji równoważności, której klasy to składowe spójne grafu; działanie na klasach jest dobrze określone tylko wtedy, gdy nie zależy od wyboru reprezentanta (dodawanie modulo 5 tak, „n mod 3" na klasach modulo 5 nie); orbity działania grupy, na przykład obroty naszyjnika z czterech koralików, są klasami równoważności, a lemat Burnside'a je liczy. Sekcja 10 liczy podziały: liczby Stirlinga drugiego rodzaju S(n, k) to podziały na dokładnie k bloków, ich suma to liczba Bella, trójkąt Bella je generuje, a podziały nieprzecinające się pięciu punktów na okręgu liczy liczba Catalana 42.
 
+## Auf Deutsch: Stichwörter
+
+Eine Äquivalenzrelation und eine Partition sind dieselbe Sache; der Kern einer Funktion ist das Beispiel, und Partitionen lassen sich zählen.
+
+**Stichwörter:** Äquivalenzrelation, reflexiv, symmetrisch, transitiv, Äquivalenzklasse, Partition (Zerlegung), Quotientenmenge, Kern einer Funktion, Bell-Zahlen.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

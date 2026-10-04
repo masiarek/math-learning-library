@@ -17,3 +17,9 @@ The lessons still use this library's mathematics, the [Pythagorean theorem](../1
 ## Po polsku, w skrócie
 
 Rozdział o uczeniu się urósł z czterech lekcji do dziesięciu, a potem potrzebował stron, których nie da się poprzeć programem (sen, ruch, mózg), więc stał się osobną biblioteką: [Learning to Learn ↗](https://masiarek.github.io/learning-to-learn-library/). Wszystko, co tu było, jest tam, pod tymi samymi nazwami folderów.
+
+## Auf Deutsch: Stichwörter
+
+Lernen lernen ist in eine eigene Bibliothek umgezogen; diese Seite ist der Wegweiser.
+
+**Stichwörter:** Lernen lernen, Metakognition, Abruf (retrieval), verteiltes Lernen, Lernkarten, eigene Bibliothek.

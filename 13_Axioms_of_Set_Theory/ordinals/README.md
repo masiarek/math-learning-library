@@ -91,6 +91,12 @@ What the output shows is the gap between the two readings. G(3) is over in five 
 
 Liczba porządkowa (ordinal) to zbiór przechodni, czyli taki, którego każdy element jest też podzbiorem, dobrze uporządkowany przez relację należenia ∈. W skończonym uniwersum V₄ liczbami porządkowymi są tylko liczby von Neumanna 0, 1, 2, 3; zbiór V₃ jest przechodni, ale nie jest liczbą porządkową, bo jego elementów {∅} i {{∅}} relacja ∈ nie porównuje. Program sprawdza na tych liczbach uwagi 7.13–7.22 z książki Coriego i Lascara. Po co to wszystko: liczby porządkowe liczą dalej niż liczby naturalne (ω, ω + 1, …, ω^ω), pozwalają na indukcję i rekursję pozaskończoną, a przede wszystkim dają prawo powiedzieć „ta wielkość maleje w każdym kroku, więc proces się skończy". Ciągi Goodsteina pokazują to na liczbach naturalnych: zapis w bazie dziedzicznej, zamiana bazy na następną i odjęcie 1; liczby rosną astronomicznie, a przypisane im liczby porządkowe maleją, więc ciąg dochodzi do zera. G(4) potrzebuje na to 3 · 2^402653211 − 2 kroków. Kirby i Paris (1982) udowodnili, że tego twierdzenia o liczbach naturalnych nie da się udowodnić w arytmetyce Peana: jedyna znana droga wiedzie przez liczby porządkowe.
 
+## Auf Deutsch: Stichwörter
+
+Ordinalzahlen sind transitive, durch ∈ wohlgeordnete Mengen; die Beweise, die sie ermöglichen, und was ω + 1 ≠ 1 + ω bedeutet.
+
+**Stichwörter:** Ordinalzahl, transitive Menge, Wohlordnung, Nachfolgerordinalzahl, Limesordinalzahl, ω, transfinite Induktion, Ordinalarithmetik.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

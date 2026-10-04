@@ -344,6 +344,12 @@ Zbiór rozwiązań (ang. solution set) to zbiór wszystkich wartości spełniaj�
 
 Cztery wklejone katy o kolejności działań w Pythonie (`-`, potem `&`, potem `^`, na końcu `|`) mają poprawne wyniki, ale dwie z nich niczego nie sprawdzają: w trzeciej A ∩ C = ∅, więc krok z `^` nic nie zmienia i trzy z pięciu nawiasowań dają ten sam zbiór; w czwartej C ∖ A jest rozłączne z A, więc żaden dobór zbiorów nie odróżni, czy `^` stoi nad `|`, czy pod nim. Program (sekcja 9) wylicza każde nawiasowanie, dwa dla trzech zbiorów i czternaście dla pięciu, i liczy, ile z nich daje oczekiwany wynik: kata sprawdza regułę tylko wtedy, gdy wszystkie inne odczytania dają inny zbiór. Poprawione dane: C = {2, 4} w trzeciej i piąty zbiór E zamiast drugiego A w czwartej. Przy okazji: porównania (`<=`, `==`, `in`) stoją niżej niż wszystkie cztery operatory, a nawiasów w obrębie jednego poziomu potrzebuje tylko różnica, bo △, ∩ i ∪ są łączne.
 
+## Auf Deutsch: Stichwörter
+
+Cunninghams erste Übungen und Schulbuchaufgaben zu Mengen, jede vom Programm geprüft, bevor man sie beweist.
+
+**Stichwörter:** Übungsaufgabe (kata), Element vs. Teilmenge, verschachtelte Mengen, Venn-Diagramm, Zählen von Regionen, Vorrangregeln, Quizfragen.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

@@ -200,6 +200,12 @@ Częsty zarzut: może winne jest założenie „każdy zbiór jest zwykły albo 
 
 Naprawa Zermela polega na tym, że regułą wycina się elementy z już istniejącego zbioru. Wtedy paradoks zamienia się w twierdzenie: nie istnieje zbiór wszystkich zbiorów. Program sprawdza to na wszystkich 512 możliwych „wszechświatach” złożonych z trzech obiektów. Uwaga językowa: „zbiór zerowy” (ang. *null set*) w teorii miary oznacza zbiór miary zero, niekoniecznie pusty.
 
+## Auf Deutsch: Stichwörter
+
+Die Schulbuchdefinition „eine Menge ist eine Sammlung von Objekten“ vor Gericht: was sie offen lässt und wo Russell sie bricht.
+
+**Stichwörter:** Definition, Sammlung (collection), Russellsche Antinomie, uneingeschränkte Komprehension, Element, wohldefiniert.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

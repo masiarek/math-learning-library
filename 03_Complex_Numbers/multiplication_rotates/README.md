@@ -181,6 +181,12 @@ Mnożenie liczb zespolonych na płaszczyźnie robi dwie rzeczy naraz: mnoży dł
 
 Program sprawdza obie połowy dokładnie, na ułamkach. Kwadraty długości się mnożą. Kąty się dodają, co widać bez liczenia żadnego kąta: iloczyn obrócony z powrotem o pierwszy kąt daje drugi punkt. Ta sama reguła zapisana macierzą to [[x, −y], [y, x]], a dla i to zwykła macierz obrotu o 90°. Na tym ćwierćobrocie opiera się tożsamość Eulera: prędkość i · położenie to położenie obrócone o 90°, więc punkt krąży po okręgu.
 
+## Auf Deutsch: Stichwörter
+
+Multiplizieren streckt um den Betrag und dreht um das Argument: Beträge multiplizieren sich, Winkel addieren sich.
+
+**Stichwörter:** Drehung (rotation), Streckung, Betrag, Argument (Winkel), Polarform, Satz von de Moivre, Multiplikation mit i als Vierteldrehung.
+
 ## See also
 
 - [Multiplication as pairs](../multiplication_as_pairs/README.md) — the rule this page is the geometry of, and where the two-squares identity first appears

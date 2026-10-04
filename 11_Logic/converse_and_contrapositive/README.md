@@ -243,6 +243,12 @@ Z tego zdania powstają trzy inne. **Twierdzenie odwrotne**: „jeśli B, to A".
 
 Dwa klasyczne błędy: z „jeśli A, to B" i z B wnioskować A, albo z „nie A" wnioskować „nie B". Poprawny jest tylko wniosek z „nie B" na „nie A". I jeszcze jedno: żadna liczba przykładów nie dowodzi twierdzenia o nieskończenie wielu przypadkach, a jeden kontrprzykład je obala (2¹¹ − 1 = 2047 = 23 · 89).
 
+## Auf Deutsch: Stichwörter
+
+Aus „wenn A, dann B“ folgt die Kontraposition „wenn nicht B, dann nicht A“ umsonst; Umkehrung und Inversion brauchen eigene Beweise.
+
+**Stichwörter:** Implikation, Umkehrung (converse), Kontraposition, Inversion (inverse), Äquivalenz (genau dann, wenn), notwendig und hinreichend, Gegenbeispiel.
+
 ## See also
 
 - [The Pythagorean theorem and its converse](../../10_Geometry/pythagorean_theorem/README.md) — the converse this page is about, with its proof

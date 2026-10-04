@@ -160,6 +160,12 @@ From the root of your clone of this repository:
 python3 05_Statistics/mean_vs_average/examples/mean_vs_average.py
 ```
 
+## Auf Deutsch: Stichwörter
+
+„Mittelwert“, „Durchschnitt“ und „arithmetisches Mittel“ sind drei Namen, die ineinander geschachtelt sind, nicht gleichbedeutend; dazu geometrisches, harmonisches und quadratisches Mittel.
+
+**Stichwörter:** arithmetisches Mittel, Durchschnitt (average), Mittelwert (mean), geometrisches Mittel, harmonisches Mittel, quadratisches Mittel, Median, Modus, gewichtetes Mittel.
+
 ## See also
 
 - [Exact vs approximate](../../01_Precision/exact_vs_approximate/README.md) — its section 4 averages three measured lengths, and explains why dividing by the count 3 costs no significant figures

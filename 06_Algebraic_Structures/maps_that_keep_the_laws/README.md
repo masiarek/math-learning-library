@@ -154,6 +154,12 @@ Odwzorowanie liniowe spełnia T(u + v) = Tu + Tv i T(av) = aTv: najpierw dodać,
 
 Homomorfizm, który da się odwrócić, to izomorfizm: logarytm i potęga zamieniają mnożenie w dodawanie i z powrotem, i na tym działa suwak logarytmiczny. Funkcja wykładnicza wraca w rozdziale o analizie jako ruch, którego prędkość równa się położeniu, i tam to samo prawo potęg wynika z samego ruchu.
 
+## Auf Deutsch: Stichwörter
+
+Lineare Abbildungen, Logarithmen und Determinanten haben eine Gestalt: Abbildungen, die die Verknüpfung bewahren, f(a ∘ b) = f(a) ∗ f(b).
+
+**Stichwörter:** Homomorphismus, strukturerhaltende Abbildung, lineare Abbildung, Logarithmus (Multiplikation wird Addition), Determinante, Isomorphismus, Rechenschieber.
+
 ## See also
 
 - [Subsets inherit the laws](../subsets_inherit_the_laws/README.md) — the previous lesson

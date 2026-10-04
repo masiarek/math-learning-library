@@ -26,3 +26,9 @@ The chapter ends in **numerical analysis**, which is where this stops being a sc
 ## A note on the code
 
 The examples are Python, stdlib-only, and they are illustrations rather than the subject. Python is used here because it happens to encode two of this chapter's distinctions in runnable syntax — `:.2f` versus `:.2g`, and `decimal.getcontext().prec` — which makes them things you can try instead of things you have to take on faith.
+
+## Auf Deutsch: Stichwörter
+
+Wie viel von dieser Zahl ist echt: von der Rundung über signifikante Stellen und relativen Fehler bis zur Gleitkommazahl und zur Auslöschung.
+
+**Stichwörter:** Genauigkeit (precision), Rundung, signifikante Stellen, relativer Fehler, Fehlerfortpflanzung, Gleitkommazahl (floating point), Auslöschung (cancellation).

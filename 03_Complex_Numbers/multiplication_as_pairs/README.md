@@ -196,6 +196,12 @@ From the root of your clone of this repository:
 python3 03_Complex_Numbers/multiplication_as_pairs/examples/multiplication_as_pairs.py
 ```
 
+## Auf Deutsch: Stichwörter
+
+Multiplikation ist eine Regel auf Paaren: (a, b)(c, d) = (ac − bd, ad + bc), und aus ihr folgt (0, 1)² = (−1, 0).
+
+**Stichwörter:** komplexe Zahl als Paar, Multiplikationsregel, imaginäre Einheit i, Körper, Rechengesetze geprüft.
+
 ## See also
 
 - [Machine numbers](../../01_Precision/machine_numbers/README.md) — Python's `complex` holds two floats, so each component is a member of the finite set described there

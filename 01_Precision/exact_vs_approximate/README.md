@@ -104,6 +104,12 @@ From the root of your clone of this repository:
 python3 01_Precision/exact_vs_approximate/examples/exact_vs_approximate.py
 ```
 
+## Auf Deutsch: Stichwörter
+
+Eine gezählte oder definierte Zahl hat unendlich viele signifikante Stellen; eine gemessene nur so viele, wie das Messgerät hergibt.
+
+**Stichwörter:** exakt und näherungsweise (exact vs approximate), gezählte Zahl, gemessene Zahl, definierte Konstante, Messunsicherheit, signifikante Stellen.
+
 ## See also
 
 - [Significant figures](../significant_figures/README.md) — the rules, once you know which numbers they apply to

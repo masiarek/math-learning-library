@@ -264,6 +264,12 @@ Wzorów na pola i objętości jest jedenaście, ale wystarczy jedna kontrola, ż
 
 Ta kontrola ma granice: (4/3)πr² ma kształt pola, a jednak nie jest polem powierzchni kuli, bo zła jest stała; poprawnie 4πr². Pułapki z zadań: wysokość trójkąta to nie jego bok, tylko odcinek prostopadły do podstawy; koło podane średnicą trzeba najpierw podzielić na pół; ramka szerokości 2 wokół kwadratu 6 daje kwadrat 10, nie 8. Program liczy odpowiedzi dokładnie, jako a + bπ, i zaokrągla dopiero na końcu, a także pokazuje, że pole powierzchni kuli to przyrost objętości na jednostkę promienia.
 
+## Auf Deutsch: Stichwörter
+
+Rechteck, Dreieck, Kreis, Quader, Kugel, Zylinder; die Potenz der Länge in einer Formel ist ihre Dimension, Streckung um k vervielfacht um k² und k³.
+
+**Stichwörter:** Flächenformel, Volumenformel, Umfang, Oberfläche, Dimension, Streckfaktor k, k² und k³, Kreiszahl π, Kugel, Zylinder.
+
 ## See also
 
 - [The Pythagorean theorem and its converse](../pythagorean_theorem/README.md) — the diagonal of a square in problems 41–42, and the altitude in question 11

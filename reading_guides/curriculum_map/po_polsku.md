@@ -47,3 +47,9 @@ Jeśli ktoś zdał maturę rozszerzoną, amerykański podręcznik „precalculus
 - [Strona główna mapy](README.md), z pełną tabelą, programem i tabelą pewności.
 - [Auf Deutsch](auf_deutsch.md), ta sama mapa od strony niemieckiej.
 - [Precalculus: a reading guide](../precalculus/README.md), który podręcznik wybrać.
+
+## Auf Deutsch: Stichwörter
+
+Die polnische Seite derselben Karte: die dreizehn Inhaltsbereiche der podstawa programowa gegen die amerikanischen Kurse; die deutsche Seite ist [Auf Deutsch](auf_deutsch.md).
+
+**Stichwörter:** podstawa programowa, zakres podstawowy (Grundniveau), zakres rozszerzony (erweitertes Niveau), matura, liceum, Inhaltsbereich I–XIII, rachunek różniczkowy (Differentialrechnung).

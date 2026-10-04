@@ -38,6 +38,12 @@ LAWS REQUIRED: any of the three, plus commutative
 
 Przemienność, a · b = b · a, jest niezależna od pozostałych trzech praw, więc nazywa odmianę, a nie poziom: półgrupa, monoid lub grupa mogą być przemienne albo nie. Grupa przemienna to grupa abelowa, od Nielsa Abela, z działaniem pisanym zwykle jako +. Przemienne: ℤ z + i ×, max, gcd, ∪, ∩. Nieprzemienne: sklejanie napisów, składanie permutacji, mnożenie macierzy; tam kolejność jest całą treścią.
 
+## Auf Deutsch: Stichwörter
+
+Kommutativ (abelsch): die Reihenfolge der beiden Operanden ist gleichgültig; die Tafel ist symmetrisch zur Diagonale.
+
+**Stichwörter:** Kommutativgesetz, abelsche Gruppe, symmetrische Verknüpfungstafel, Gegenbeispiel Matrizen.
+
 ## See also
 
 - [The laws of an operation](../../README.md) — the four laws and the table of names

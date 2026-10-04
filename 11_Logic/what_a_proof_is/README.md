@@ -289,6 +289,12 @@ Sprawdzanie przypadków to nie dowód. Fermat twierdził, że 2^(2ⁿ) + 1 jest 
 
 Program zapisuje dowód wzoru na odległość jako dziesięć linii z powodami i sprawdza kształt łańcucha: każdy powód wskazuje założenie albo wcześniejszą linię, żadne założenie nie jest samym twierdzeniem, ostatnia linia jest twierdzeniem. Potem psuje łańcuch na trzy sposoby. Koło i założenie tezy łapie sprawdzenie kształtu; błędną linię o dobrym kształcie łapie jeden przykład liczbowy. Liczby mogą linię obalić, ale nigdy potwierdzić; potwierdza ją jej powód.
 
+## Auf Deutsch: Stichwörter
+
+Ein Beweis ist eine Kette geprüfter Schritte von den Annahmen zur Behauptung, jeder mit seinem Grund; die Abstandsformel in zehn Zeilen.
+
+**Stichwörter:** Beweis, Annahme (Voraussetzung), Behauptung, Schritt mit Begründung, Definition, Satz, Axiom, Gegeben, wo ein Beweis aufhört.
+
 ## See also
 
 - [The distance formula](../../08_Analytic_Geometry/distance_formula/README.md) — the theorem this page proves line by line, with its program and exercises

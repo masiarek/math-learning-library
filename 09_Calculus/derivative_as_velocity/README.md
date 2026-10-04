@@ -142,6 +142,12 @@ Punkt porusza się po osi liczbowej, a x(t) to jego położenie w chwili t. Śre
 
 Prędkość mówi, gdzie punkt będzie za chwilę: nowe położenie ≈ położenie + prędkość · dt. To dokładnie obrazek z wykładu, strzałka prędkości zaczepiona na końcu strzałki położenia, i to z niego następna lekcja buduje e^t. Pułapka jest w komputerze: w liczbach zmiennoprzecinkowych h nie może maleć bez końca, bo odejmowanie prawie równych liczb zjada cyfry, i najlepsze h to około 10⁻⁸.
 
+## Auf Deutsch: Stichwörter
+
+Die Geschwindigkeit in einem Augenblick ist der Wert, auf den sich Durchschnittsgeschwindigkeiten einpendeln, wenn das Zeitintervall schrumpft: die Ableitung.
+
+**Stichwörter:** Ableitung, Momentangeschwindigkeit, Durchschnittsgeschwindigkeit, Differenzenquotient, Grenzwert, Differentialquotient, numerische Ableitung, Schrittweite.
+
 ## See also
 
 - [Velocity equals position](../velocity_equals_position/README.md) — the next lesson: the motion whose velocity is its own position, which is e^t

@@ -178,6 +178,12 @@ python3 03_Complex_Numbers/multiplication_can_be_undone/examples/multiplication_
 
 - Titu Andreescu and Dorin Andrica, *Complex Numbers from A to … Z*, 2nd edition, Birkhäuser 2014 ([doi:10.1007/978-0-8176-8415-0 ↗](https://doi.org/10.1007/978-0-8176-8415-0)). §1.1.1 "Definition of Complex Numbers" gives the pair definition, the two worked examples in kata 1, and ℂ*.
 
+## Auf Deutsch: Stichwörter
+
+Jedes Paar außer (0, 0) hat ein Inverses; Division ist Multiplikation mit dem Konjugierten geteilt durch den Betrag im Quadrat.
+
+**Stichwörter:** Inverses, Division, konjugiert komplexe Zahl, Betrag, Umkehrung, Nullteilerfreiheit.
+
 ## See also
 
 - [Multiplication as pairs](../multiplication_as_pairs/README.md): the rule itself, and the reciprocal in its section 6

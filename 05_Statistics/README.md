@@ -16,3 +16,9 @@ The arithmetic mean is the one number that can stand in for every value without 
 ## A note on the code
 
 Every average in this chapter is computed with `fractions.Fraction`, so when a program says a total was kept, it has checked that the total is exactly equal, not equal to fifteen decimal places. Where Python or SQL has a built-in name for the same calculation, the program calls that too, so you can see the name and the arithmetic agree.
+
+## Auf Deutsch: Stichwörter
+
+Was eine Zahl über viele sagt: die Mittelwerte und ihre Namen, und ein Anteil über einer Schwelle.
+
+**Stichwörter:** Statistik, Mittelwert, Durchschnitt, Median, Anteil, Perzentil, Verteilung.

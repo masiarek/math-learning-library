@@ -168,6 +168,12 @@ From the root of your clone of this repository:
 python3 02_Measure_Zero/cantor_set/examples/cantor_set.py
 ```
 
+## Auf Deutsch: Stichwörter
+
+Das mittlere Drittel immer wieder entfernt: überabzählbar viele Punkte und trotzdem Länge null.
+
+**Stichwörter:** Cantor-Menge, mittleres Drittel, Ternärdarstellung, überabzählbar, Maß null, nirgends dicht, perfekte Menge.
+
 ## See also
 
 - [Countable sets](../countable_sets/README.md) — the listable case, where measure zero comes for free

@@ -147,6 +147,12 @@ From the root of your clone of this repository:
 python3 02_Measure_Zero/probability_zero/examples/probability_zero.py
 ```
 
+## Auf Deutsch: Stichwörter
+
+Wahrscheinlichkeit null heißt nicht unmöglich: ein zufälliger Punkt trifft eine Nullmenge mit Wahrscheinlichkeit null und liegt doch irgendwo.
+
+**Stichwörter:** Wahrscheinlichkeit null, fast sicher (almost surely), Gleichverteilung, Nullmenge, stetige Verteilung, unmöglich vs. wahrscheinlichkeitslos.
+
 ## See also
 
 - [Countable sets](../countable_sets/README.md) — why the rationals have probability zero

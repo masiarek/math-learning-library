@@ -44,6 +44,12 @@ This is the law behind every case split: to prove something for all x, prove it 
 
 Prawa dopełnienia: każdy element uniwersum należy do A albo do A′, i żaden do obu; to prawo wyłączonego środka i prawo niesprzeczności zapisane dla zbiorów. Dopełnienie wymaga ustalonego wcześniej U.
 
+## Auf Deutsch: Stichwörter
+
+Komplementgesetze: A ∪ A′ = U und A ∩ A′ = ∅.
+
+**Stichwörter:** Komplement, Grundmenge U, leere Menge, Partition in A und A′.
+
 ## See also
 
 - [The algebra of sets](../../README.md) — all the laws in one table, and the ones that look true and are not

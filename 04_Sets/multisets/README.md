@@ -67,6 +67,12 @@ Counts replace membership, so each operation becomes arithmetic on counts, secti
 
 Multizbiór (wielozbiór) to zbiór, który liczy: funkcja M ze zbioru S w liczby naturalne, podająca krotność każdego elementu; zapisuje się go jak zbiór z powtórzeniami, [2, 2, 2, 5, 7, 7], a w Pythonie jest nim `collections.Counter`. Przekrój to minimum krotności, suma mnogościowa to maksimum, a dodawanie dodaje krotności; dodawanie nie jest idempotentne ([2] + [2] = [2, 2]), dopełnienia nie ma. Rozkład liczby na czynniki pierwsze jest multizbiorem, i program sprawdza dla wszystkich par do 60, że NWD to przekrój rozkładów, NWW to ich suma mnogościowa, a iloczyn to dodawanie. Multizbiorów rozmiaru k z n rodzajów jest C(n + k − 1, k). Histogram, worek słów i lista wag mieszkańców Kanady z zadania Ashlocka to multizbiory; zbiór to to, co zostaje po zapomnieniu krotności.
 
+## Auf Deutsch: Stichwörter
+
+Eine Multimenge zählt, wie oft ein Element vorkommt; Vereinigung, Schnitt und Summe bekommen dadurch verschiedene Bedeutungen.
+
+**Stichwörter:** Multimenge (multiset), Vielfachheit, Summe, Vereinigung als Maximum, Schnitt als Minimum, Primfaktorzerlegung, Counter in Python.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

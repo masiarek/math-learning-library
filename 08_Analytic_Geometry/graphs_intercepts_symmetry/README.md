@@ -253,6 +253,12 @@ Wykres równania to zbiór wszystkich punktów (x, y), których współrzędne s
 
 Symetria: wykres jest symetryczny względem osi y, jeśli razem z punktem (x, y) zawiera (−x, y); test to zamiana x na −x i sprawdzenie, czy wychodzi to samo równanie. Względem osi x zamieniamy y na −y, względem początku układu obie zmienne. Dwie symetrie wymuszają trzecią. Symetria względem początku nie znaczy, że wykres przez niego przechodzi (xy = 1). Program rysuje wykresy na siatce tekstowej i sprawdza wszystko dokładnie.
 
+## Auf Deutsch: Stichwörter
+
+Der Graph einer Gleichung ist die Menge ihrer Lösungen; Achsenschnittpunkte und Symmetrie liest man an der Gleichung ab.
+
+**Stichwörter:** Graph einer Gleichung, Lösungsmenge, Nullstelle (x-Achsenabschnitt), y-Achsenabschnitt, Achsensymmetrie, Punktsymmetrie zum Ursprung, Probe durch Einsetzen.
+
 ## See also
 
 - [Linear equations and their solutions](../../07_Linear_Systems/linear_equations/README.md) — an equation as a test, and its solution set, the same object as a graph

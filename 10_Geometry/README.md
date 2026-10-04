@@ -22,6 +22,12 @@ Every classroom precalculus book has a geometry review: Sullivan's Appendix A.2,
 
 Rozdział z geometrii, którą zakłada każdy podręcznik do precalculusu: twierdzenie Pitagorasa i twierdzenie do niego odwrotne, wzory na pola i objętości, trójkąty przystające i podobne. Wspólna myśl: kształt wyznacza kilka długości, a reszta z nich wynika. Dwa boki trójkąta prostokątnego wyznaczają trzeci; pole to dwie długości pomnożone, objętość trzy, więc przy skali k pole rośnie k², a objętość k³; trzy dobrze wybrane pomiary wyznaczają cały trójkąt, a trzy kąty tylko jego kształt. To rozdział „do przeczytania w porę": wraca się do niego, gdy wzór na odległość w rozdziale 1 podręcznika tego wymaga. Powrót do podstaw nie jest porażką, tylko zwykłą drogą każdego, kto uczy się matematyki.
 
+## Auf Deutsch: Stichwörter
+
+Wie wenige Zahlen eine Figur festlegen: Pythagoras und seine Umkehrung, Flächen- und Volumenformeln, kongruente und ähnliche Dreiecke.
+
+**Stichwörter:** Geometrie, Satz des Pythagoras, Fläche, Volumen, Dimension, Kongruenz, Ähnlichkeit, Dreieck.
+
 ## A note on the code
 
 Lengths are whole numbers or fractions wherever they can be, so "equal" in the Pythagorean test means equal, and answers with π are carried exactly as a + bπ until the last step. Only the construction of a triangle from an angle, in lesson 3, needs sines and cosines, and there the output is rounded to two decimals.

@@ -195,3 +195,9 @@ Two chapters already teach the opening of a course, and several other pages are 
 - [Relative error and correct digits](../../01_Precision/relative_error/README.md) and [catastrophic cancellation](../../01_Precision/catastrophic_cancellation/README.md) — the errors a computer makes when it solves Ax = b in floating point. A matrix's *condition number* says roughly how many significant digits the answer loses, which is the angle the [roadmap](../../ROADMAP.md) names for a linear algebra chapter here.
 
 What the library does not cover yet are two of the prerequisites above: proofs, and functions (one-to-one and onto). The [roadmap](../../ROADMAP.md) lists both.
+
+## Auf Deutsch: Stichwörter
+
+Lineare Algebra: wozu sie nützt, was man vorher können muss, welches Buch (Hefferon frei, Strang, Axler), mit einem ehrlichen Urteil über *Linear Algebra Done Right*.
+
+**Stichwörter:** lineare Algebra, lineares Gleichungssystem, Vektorraum, lineare Abbildung, Matrix, Determinante, Eigenwert, Lehrbuch, Leseempfehlung.

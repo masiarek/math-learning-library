@@ -81,6 +81,12 @@ Section 4 is Dedekind's own definition of infinite applied to ω: the successor 
 
 Aksjomat nieskończoności nie zawiera słowa „nieskończony". Mówi: istnieje zbiór I, który zawiera ∅ i wraz z każdym elementem x zawiera jego następnik x ∪ {x}; taki zbiór nazywa się induktywny. Od ∅ następnik daje {∅}, {∅, {∅}}, {∅, {∅}, {∅, {∅}}}, czyli liczby von Neumanna 0, 1, 2, 3, z których każda jest zbiorem poprzednich. Zbiór induktywny musi je zawierać wszystkie, więc jest nieskończony; żadne skończone uniwersum go nie ma (program sprawdza szesnaście zbiorów V₄) i nie ma go też V_ω, suma wszystkich etapów skończonych, która spełnia wszystkie pozostałe aksjomaty ZFC. Dlatego to aksjomat, a nie twierdzenie. Najmniejszy zbiór induktywny, przekrój wszystkich, to ω, czyli liczby naturalne; na nim Cori i Lascar definiują 0, następnik, dodawanie i mnożenie, i stąd bierze się cała arytmetyka. Dowód przez indukcję to dowód, że pewien zbiór liczb jest induktywny.
 
+## Auf Deutsch: Stichwörter
+
+Unendlichkeit: eine Menge enthält ∅ und mit jedem Element dessen Nachfolger; ω ist die kleinste solche.
+
+**Stichwörter:** Unendlichkeitsaxiom, Nachfolger x ∪ {x}, induktive Menge, ω, natürliche Zahlen nach von Neumann.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

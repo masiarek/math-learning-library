@@ -137,6 +137,12 @@ Relations, orderings and partitions, with the definitions from André's chapters
 
 Relacja na zbiorze skończonym to zbiór par, więc każda z sześciu własności z podręcznika (zwrotna, przeciwzwrotna, symetryczna, antysymetryczna, asymetryczna, przechodnia) to pętla po parach, którą można uruchomić. Program uruchamia je na wszystkich 512 relacjach na {a, b, c} i liczy, które kombinacje mają nazwy: relacja równoważności (zwrotna, symetryczna, przechodnia; 5 sztuk, liczba Bella), porządek częściowy (zwrotna, antysymetryczna, przechodnia; 19), porządek liniowy (każde dwa elementy porównywalne; 6 = 3!) i ich wersje ostre (przeciwzwrotne, zapisywane a < b; też 19). Poset to zbiór częściowo uporządkowany. Relacja identyczności jest zarazem równoważnością i porządkiem. Pętle wyłapują też dwa błędne przykłady w książce: „rodzeństwo" nie jest relacją przechodnią (x T y i y T x wymagałoby x T x), a R₃ ze strony 57 ma (a, b) i (b, c) bez (a, c). Słowa o pozycjach: łańcuch, antyłańcuch, element minimalny i maksymalny (nic pod nim, nic nad nim) kontra najmniejszy i największy (pod wszystkim, nad wszystkim); przodkowie Mortimera mają dwa elementy maksymalne i żadnego największego. Relacja narysowana jako macierz zer i jedynek (macierz logiczna) pokazuje każdą własność jako kształt: pełna przekątna to zwrotność, symetria względem przekątnej to symetria, bloki jedynek wzdłuż przekątnej to relacja równoważności, a przechodniość to warunek, by iloczyn boolowski M·M mieścił się w M; program liczy w ten sposób 52 relacje równoważności na pięciu punktach, liczbę Bella B(5). Podział przedziału w analizie to inny obiekt niż podział zbioru: lista punktów cięcia, a drobnienie podziałów jest porządkiem częściowym.
 
+## Auf Deutsch: Stichwörter
+
+Sechs Eigenschaften, vier Namen: Präordnung, Halbordnung (poset), lineare Ordnung, strikte Ordnung, an allen 512 Relationen auf drei Punkten geprüft.
+
+**Stichwörter:** Ordnungsrelation, Halbordnung (partial order, poset), lineare (totale) Ordnung, strikte Ordnung, Präordnung, antisymmetrisch, Hasse-Diagramm, vergleichbar.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

@@ -77,6 +77,12 @@ Section 4 is the mistake everyone makes once: ∪a is not a. Applied to a set of
 
 Aksjomat sumy nie mówi o a ∪ b. Mówi: dla każdego zbioru a istnieje zbiór ∪a, którego elementami są elementy elementów a, czyli to, co wysypie się z członków a po otwarciu każdego o jeden poziom. Suma dwóch zbiorów to przypadek szczególny: a ∪ b = ∪{a, b}, najpierw para, potem aksjomat. Dzięki temu jeden aksjomat daje też sumę nieskończenie wielu zbiorów. W uniwersum skończonym V₄ aksjomat zawsze zachodzi, bo otwarcie zbioru obniża jego rangę; para i zbiór potęgowy podnoszą rangę i psują każde V_n, suma nie. Odbicie lustrzane, przekrój ∩a, wymaga a ≠ ∅: dla a = ∅ warunek „x należy do każdego elementu a" jest spełniony pusto przez wszystko, więc ∩∅ byłby zbiorem wszystkich zbiorów, którego nie ma. Pułapka: ∪a to nie a; ∪{{1, 2}, {3}} = {1, 2, 3}.
 
+## Auf Deutsch: Stichwörter
+
+Vereinigungsaxiom: die Elemente der Elemente bilden eine Menge; ⋃A, und daraus A ∪ B.
+
+**Stichwörter:** Vereinigungsaxiom, große Vereinigung ⋃, Vereinigung zweier Mengen, Elemente der Elemente, Nachfolger.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

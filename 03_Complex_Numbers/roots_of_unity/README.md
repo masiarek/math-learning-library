@@ -221,6 +221,12 @@ Mnożenie przez punkt okręgu jednostkowego obraca płaszczyznę o kąt tego pun
 
 Program znajduje dwanaście znaków tarczy zegara dokładnie, bez zaokrągleń, niosąc √3 jako symbol z regułą √3 · √3 = 3. Na koniec pokazuje pułapkę: z liczbą zmiennoprzecinkową zamiast √3/2 dwunasta potęga nie daje dokładnie (1, 0), bo błąd z pierwszego zaokrąglenia jedzie przez wszystkie mnożenia. W zapisie z tożsamości Eulera znaki tarczy to e^{iπk/6}, a pierwiastki z jedynki to e^{2πik/n}.
 
+## Auf Deutsch: Stichwörter
+
+Die n-ten Einheitswurzeln sind die n Marken auf dem Einheitskreis; mit √3 exakt gerechnet, nicht als Dezimalzahl.
+
+**Stichwörter:** Einheitswurzeln, Einheitskreis, regelmäßiges n-Eck, exakte Arithmetik mit √3, zyklische Gruppe, primitive Wurzel.
+
 ## See also
 
 - [Multiplication rotates](../multiplication_rotates/README.md) — angles add, which this page applies n times over

@@ -117,6 +117,12 @@ proof: V_4 is one universe, and the proof has to work in every one.
 
 Kata to krótkie ćwiczenie powtarzane, aż ruch stanie się automatyczny, a ruchów w aksjomatycznej teorii mnogości jest pięć: podwójne zawieranie (a ⊆ b i b ⊆ a), „istnieje na mocy aksjomatu, jedyny na mocy ekstensjonalności", element najmniejszy (albo ∈-minimalny z aksjomatu regularności), indukcja (zbiór jest induktywny, więc zawiera ℕ) i przekątna lub liczenie (2ⁿ > n). Strona zbiera dwadzieścia dwa zadania z rozdziału 1 Jecha (1.1–1.15) i rozdziału 1 Cunninghama (1.4, 1.5); do każdego program sprawdza tezę na małym uniwersum, V₃, V₄ albo liczbach von Neumanna do 6. True nie jest dowodem, bo dowód musi działać w każdym uniwersum, ale mówi, że zdanie zostało dobrze odczytane; False oznacza błędne odczytanie, a jedno zadanie Cunninghama (1.4.4) jest zdaniem fałszywym także w ZF. Przed dowodem nazwij ruch; wtedy zadanie jest w połowie zrobione.
 
+## Auf Deutsch: Stichwörter
+
+Die ersten Übungen von Jech und Cunningham, jede im Modell geprüft, bevor man sie beweist.
+
+**Stichwörter:** Übungsaufgabe (kata), Axiom, Modellprüfung, Stufen V₁ bis V₄, Gegenbeispiel, Beweis.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

@@ -283,6 +283,12 @@ Pół obrotu od (1, 0) to (−1, 0), i to cała tożsamość. Program sprawdza t
 
 Do czego to służy: każdy punkt płaszczyzny to r e^{iθ}, postać biegunowa, i mnożenie punktów to jedno prawo potęg: długości się mnożą, kąty dodają. Wzór de Moivre'a i wzory na cos(a + b) i sin(a + b) wychodzą z tego w dwóch linijkach. A w programie `cmath.exp(1j * math.pi)` nie daje −1, tylko −1 + 1,2246 · 10⁻¹⁶ i, bo `math.pi` nie jest liczbą π: najbliższa jej liczba zmiennoprzecinkowa jest o dokładnie tyle za mała, i o dokładnie tyle punkt nie dochodzi do półobrotu. Błąd jest w danych, nie we wzorze.
 
+## Auf Deutsch: Stichwörter
+
+e^{iπ} = −1 ist die halbe Drehung: e^{it} als Grenzwert der Verzinsung (1 + it/n)ⁿ, und die Polarform r·e^{iθ}.
+
+**Stichwörter:** eulersche Identität, eulersche Formel, Polarform, Exponentialfunktion, stetige Verzinsung, Grenzwert, Bogenmaß, Drehung.
+
 ## See also
 
 - [Multiplication rotates](../multiplication_rotates/README.md) — lengths multiply and angles add, the two facts each factor of the compounding obeys

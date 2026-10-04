@@ -46,6 +46,12 @@ Absorption is the rule a simplifier uses to delete redundant conditions: `a or (
 
 Prawa absorpcji: A ∩ B leży wewnątrz A, więc suma nic nie dodaje; A ∪ B zawiera A, więc przekrój nic nie zabiera; B znika. Tak upraszcza się warunki: `a or (a and b)` to `a`.
 
+## Auf Deutsch: Stichwörter
+
+Absorptionsgesetze: A ∪ (A ∩ B) = A und A ∩ (A ∪ B) = A.
+
+**Stichwörter:** Absorptionsgesetz, Vereinigung, Schnitt, Verband (lattice).
+
 ## See also
 
 - [The algebra of sets](../../README.md) — all the laws in one table, and the ones that look true and are not

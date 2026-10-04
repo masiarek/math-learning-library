@@ -50,6 +50,12 @@ Distributivity is how a condition is put into normal form before a database or a
 
 Prawa rozdzielności: każde z działań ∪ i ∩ jest rozdzielne względem drugiego, inaczej niż u liczb, gdzie × jest rozdzielne względem +, ale nie odwrotnie. Dowód: „x ∈ A i (x ∈ B lub x ∈ C)" to „(x ∈ A i x ∈ B) lub (x ∈ A i x ∈ C)".
 
+## Auf Deutsch: Stichwörter
+
+Distributivgesetze: ∪ und ∩ distribuieren jedes über das andere, anders als + und · bei Zahlen.
+
+**Stichwörter:** Distributivgesetz, Vereinigung, Schnitt, Vergleich mit Addition und Multiplikation.
+
 ## See also
 
 - [The algebra of sets](../../README.md) — all the laws in one table, and the ones that look true and are not

@@ -237,4 +237,10 @@ There is a second block kind, `source:`, which pastes the program itself for pag
 
 Conventions for anyone writing a page: [CONTRIBUTING.md](CONTRIBUTING.md). What is planned and deliberately not written yet: [ROADMAP.md](ROADMAP.md).
 
+## Auf Deutsch: Stichwörter
+
+Eine Bibliothek kurzer Mathematik-Lektionen, jede mit einem Programm, das die Behauptung vorführt.
+
+**Stichwörter:** Lektion, Kapitel, Programm (example), Ausgabe (output), Glossar, Themenkarte (topic map), Lesehilfe (reading guide), Lernkarten (flashcards, Anki).
+
 <!-- --8<-- [end:below-hero] -->

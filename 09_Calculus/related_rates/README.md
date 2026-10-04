@@ -364,6 +364,12 @@ Gdy dwie wielkości są związane równaniem w każdej chwili, ich prędkości z
 
 Zadania pochodzą z karty pracy Shalmali Bandyopadhyay, która celowo nie podaje gotowej procedury: rysunek i odpowiedź na siedem pytań (jakie wielkości, które się zmieniają, które są stałe, jaka prędkość jest dana, jakiej szukamy, jaki powinna mieć znak, jakie równanie je wiąże) to właśnie ta część myślenia, której trzeba się nauczyć. Znak warto przewidzieć z rysunku przed rachunkiem. Program liczy każdą odpowiedź dwa razy: ze wzoru i bez rachunku różniczkowego, mierząc ruch w odstępie milionowej części sekundy.
 
+## Auf Deutsch: Stichwörter
+
+Verkettete Änderungsraten: erst ableiten, dann einsetzen; Ballon, Leiter, Drachen und Höhenwinkel.
+
+**Stichwörter:** verkettete Änderungsraten (related rates), Kettenregel, implizites Differenzieren, Änderungsrate, Leiteraufgabe, Volumen und Oberfläche.
+
 ## See also
 
 - [The derivative is a velocity](../derivative_as_velocity/README.md) — what dV/dt means, and how the program measures it

@@ -60,6 +60,12 @@ Take a ∈ A and trace its ancestry backwards. Is a in the image of g? If a = g(
 
 Twierdzenie Cantora–Schrödera–Bernsteina: jeśli istnieją funkcje różnowartościowe f: A → B i g: B → A, to istnieje bijekcja A → B, więc |A| ≤ |B| i |B| ≤ |A| dają |A| = |B|. Dowód jest algorytmem: każdy element a śledzi się wstecz (a = g(b)? b = f(a′)? …), aż łańcuch urwie się w A, urwie się w B albo nie urwie się nigdy; h(a) = f(a) w pierwszym i trzecim przypadku, h(a) = g⁻¹(a) w drugim. Program uruchamia przepis na wszystkich 576 parach funkcji między dwoma zbiorami czteroelementowymi i na ℕ z f(n) = 2n, g(n) = 3n, gdzie żadna z funkcji nie jest „na", a h jest. Wniosek: relacja „nie większy niż" na mocach zbiorów jest antysymetryczna, czyli jest porządkiem częściowym, bez pewnika wyboru; że każde dwie moce są porównywalne, to już równoważnik pewnika wyboru.
 
+## Auf Deutsch: Stichwörter
+
+Satz von Cantor–Schröder–Bernstein: zwei Injektionen in beide Richtungen ergeben eine Bijektion, konstruiert über Ketten.
+
+**Stichwörter:** Satz von Cantor–Schröder–Bernstein, Injektion, Bijektion, Kettenkonstruktion, gleichmächtig, Antisymmetrie der Mächtigkeit.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

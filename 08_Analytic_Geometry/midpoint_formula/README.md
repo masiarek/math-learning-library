@@ -184,6 +184,12 @@ The next section of the book turns an equation into a picture, in [graphs, inter
 
 „W połowie drogi" to dwa warunki: jednakowa odległość od obu końców i leżenie na odcinku. Sam pierwszy warunek spełnia cała prosta, symetralna odcinka. Pułapki: połowa różnicy, ((x₂ − x₁)/2, (y₂ − y₁)/2), to nie środek, tylko połowa przesunięcia; a gdy znamy jeden koniec i środek, drugi koniec to 2M − P₁, nie kolejna średnia. Program sprawdza wszystko wzorem na odległość, na dokładnych ułamkach.
 
+## Auf Deutsch: Stichwörter
+
+Der Mittelpunkt ist der Durchschnitt der Koordinaten, bewiesen mit kongruenten Dreiecken; der Punkt beim Anteil t der Strecke ist dieselbe Formel.
+
+**Stichwörter:** Mittelpunkt einer Strecke, arithmetisches Mittel der Koordinaten, Mittelsenkrechte, kongruente Dreiecke, Teilungspunkt.
+
 ## See also
 
 - [The distance formula](../distance_formula/README.md) — the tool for checking a midpoint

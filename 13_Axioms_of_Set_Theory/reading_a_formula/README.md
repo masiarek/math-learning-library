@@ -127,6 +127,12 @@ Section 2 is the table above, section 3 reads two axioms aloud and evaluates the
 
 Formuła teorii mnogości to program, który przebiega uniwersum: ∀ (odwrócone A, od *All*) to pętla, która musi się udać za każdym razem, ∃ (odwrócone E, od *Exists*) to pętla, która musi się udać choć raz, ⇒ to „nie p lub q", ⇔ to równość wartości logicznych, a x ∈ y to sprawdzenie w tablicy należenia. Zmienne v₀, v₁, v₂ to tylko nazwy; czytając v₀ jako a, v₁ jako b, każdy aksjomat staje się zdaniem po polsku. Kolejność kwantyfikatorów ma znaczenie: ∀x∃y to „każdy ma matkę", ∃y∀x to „ktoś jest matką wszystkich". Uniwersum 𝒰 w książce Coriego i Lascara to model aksjomatów oglądany z zewnątrz; w środku „zbiór" znaczy punkt tego modelu, a zbioru wszystkich punktów nie ma. Aksjomaty wydają się zarazem oczywiste i niepoważne, bo mówią to, co i tak każdy robi; ale „oczywista" lista jest sprzeczna (paradoks Russella), a każdy aksjomat to żądanie, by uniwersum było dość duże: program sprawdza wszystkie aksjomaty na małych uniwersach V₂, V₃, V₄ i pokazuje, który z nich żąda zbioru, którego tam nie ma.
 
+## Auf Deutsch: Stichwörter
+
+Eine Formel lesen: ∀ ist eine Schleife, ∃ eine Suche, und jede Formel der Mengenlehre ist in ∈, =, Junktoren und Quantoren geschrieben.
+
+**Stichwörter:** Formel, Sprache der Mengenlehre, Allquantor, Existenzquantor, Junktor, freie und gebundene Variable, Abkürzungen (⊆, ∅, ∪).
+
 ## Run it yourself
 
 From the root of your clone of this repository:

@@ -57,6 +57,12 @@ LAWS REQUIRED: associative, identity
 
 Monoid to półgrupa z elementem neutralnym e, takim że e · x = x = x · e. Przykłady: ℕ z mnożeniem i 1, ℕ z gcd i 0 (bo gcd(0, n) = n), napisy ze sklejaniem i pustym napisem, podzbiory z ∪ i ∅. Element neutralny daje wartość pustemu łańcuchowi: suma niczego to 0, iloczyn niczego to 1, `sum([])` to 0. Dodatnie liczby całkowite z + to półgrupa, ale nie monoid, bo brakuje 0.
 
+## Auf Deutsch: Stichwörter
+
+Monoid: assoziativ, mit neutralem Element, aber nicht jedes Element hat ein Inverses.
+
+**Stichwörter:** Monoid, neutrales Element, Zeichenketten unter Verkettung, natürliche Zahlen unter Addition.
+
 ## See also
 
 - [The laws of an operation](../../README.md) — the four laws and the table of names

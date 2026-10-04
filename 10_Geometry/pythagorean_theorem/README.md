@@ -381,6 +381,12 @@ Pułapka: test ma sens tylko dla najdłuższego boku. W zadaniu 25 boki podano j
 
 W przykładzie z Burdż Chalifa odejmuje się dwie prawie równe liczby, co na kalkulatorze niszczy cyfry; postać 2Rh + h² jest bezpieczna. I nie ma wstydu w powrocie do podstaw: każdy matematyk robi to przez całe życie.
 
+## Auf Deutsch: Stichwörter
+
+c² = a² + b² im rechtwinkligen Dreieck, und die Umkehrung als Test: drei Längen bilden einen rechten Winkel genau dann, wenn die Gleichung gilt.
+
+**Stichwörter:** Satz des Pythagoras, Hypotenuse, Kathete, Umkehrung (Kehrsatz), spitzwinklig, stumpfwinklig, Dreiecksungleichung, pythagoreisches Tripel.
+
 ## See also
 
 - [Area and volume formulas](../area_and_volume_formulas/README.md) — the areas the proof uses, and the diagonal of a square

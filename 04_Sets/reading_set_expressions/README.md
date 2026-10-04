@@ -189,6 +189,12 @@ Wyrażenie A ∪ B ∩ C nic nie znaczy, dopóki nie ustalimy kolejności dział
 
 Dwa klasyczne błędy zapisu to też błędy w programie: „x ∈ A ∩ x ∈ B” w Pythonie kończy się wyjątkiem `TypeError`, a „x ∈ A ∧ B” (`x in A and B`) po cichu zwraca zbiór B zamiast wartości logicznej. Po obu stronach ∩ stoją zbiory, po obu stronach ∧ stoją zdania. Wreszcie (1, 2) to para uporządkowana albo przedział otwarty, a działania na zbiorach dają w tych dwóch odczytaniach różne wyniki.
 
+## Auf Deutsch: Stichwörter
+
+Wie man einen Mengenausdruck liest: Vorrang von Komplement, ∩, ∪, und warum die Differenz keinen vereinbarten Platz hat.
+
+**Stichwörter:** Mengenausdruck lesen, Vorrang (precedence), Klammerung, Komplement, Differenz, Notation, Symbolliste, Lernkarten.
+
 ## Run it yourself
 
 From the root of your clone of this repository:

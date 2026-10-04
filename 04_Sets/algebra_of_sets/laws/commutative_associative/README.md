@@ -50,6 +50,12 @@ Associativity is what lets Python write `set().union(a, b, c)` and `a | b | c` w
 
 Prawa przemienności i łączności: w sumie i przekroju kolejność ani nawiasy nie mają znaczenia, bo „x jest w co najmniej jednym" i „x jest we wszystkich" nie zależą od kolejności. Różnica zbiorów nie ma żadnej z tych własności i zawsze wymaga nawiasów.
 
+## Auf Deutsch: Stichwörter
+
+Kommutativ- und Assoziativgesetz: Reihenfolge und Klammerung sind bei ∪ und ∩ gleichgültig, bei ∖ nicht.
+
+**Stichwörter:** Kommutativgesetz, Assoziativgesetz, Klammerung, Differenz als Gegenbeispiel.
+
 ## See also
 
 - [The algebra of sets](../../README.md) — all the laws in one table, and the ones that look true and are not

@@ -436,10 +436,6 @@ One in each: (2, 1) in I, (−1, 2.5) in II, (−2.5, −2.5) in III, (3, −2) 
 
 </details>
 
-
-
-
-
 ## Plot it yourself, and let the program check it
 
 The book's own exercise after this section is to plot six points and say which quadrant or axis each lies on, and a drawing is a poor thing to check: the check is a pair of numbers, and a pencil dot is neither. So the second program, [`plot_points.py`](examples/plot_points.py), does the checking. Run with no arguments it plots the two exercises, problems 15 and 16, and that is its recorded output:
@@ -539,6 +535,12 @@ Dwie osie liczbowe, pozioma i pionowa, przecinają się pod kątem prostym w pun
 Ćwiartka to nic więcej niż para znaków. Pierwsza: x > 0 i y > 0; druga: x < 0 i y > 0; trzecia: obie ujemne; czwarta: x > 0 i y < 0. Wielkość liczb nie ma znaczenia: (1, 1) i (1000, 5) leżą w tej samej ćwiartce. Punkty na osiach nie należą do żadnej ćwiartki, bo zero nie ma znaku; gdyby definicja używała ≥ zamiast >, początek układu leżałby we wszystkich czterech naraz. Ćwiartki numeruje się przeciwnie do ruchu wskazówek zegara, bo w tę stronę biegnie kąt od dodatniej osi x ku dodatniej osi y. Ta jedna umowa decyduje o znaku kątów, nachyleń i obrotów: ekran komputera odwraca oś y i ten sam wzór na obrót kręci w drugą stronę.
 
 Programy na tej stronie sprawdzają każde z tych twierdzeń na konkretnych punktach, a `plot_points.py` rysuje dowolne punkty i podaje dla każdego ćwiartkę albo oś, więc można nim sprawdzić własny rysunek.
+
+## Auf Deutsch: Stichwörter
+
+Ein Punkt ist ein Paar vorzeichenbehafteter Abstände, ein Quadrant ein Paar von Vorzeichen, und die Achsen gehören zu keinem Quadranten.
+
+**Stichwörter:** kartesisches Koordinatensystem, Abszisse, Ordinate, Ursprung, Quadrant, Vorzeichen, geordnetes Paar, Zahlengerade.
 
 ## See also
 

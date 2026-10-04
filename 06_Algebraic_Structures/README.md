@@ -40,3 +40,9 @@ The place where "write it once" is enforced by a machine is the **Lean** proof a
 ## A note on the code
 
 Everything is exact, with `fractions.Fraction`, except where a program uses floats on purpose to show which laws they lose. A program can only try finitely many members, so a failure always comes with a **witness**, the actual values that break the law, which you can check by hand. A pass is only as strong as the theorem behind it, and each page says what that theorem is. [Lesson 1](laws_of_an_operation/README.md#a-sample-can-refute-a-law-not-prove-one) shows a sample getting it wrong.
+
+## Auf Deutsch: Stichwörter
+
+Warum jedes Buch dieselben Gesetze aufzählt: vier Gesetze, eine Definition als Test, Teilmengen, die die Gesetze erben, und Abbildungen, die sie bewahren.
+
+**Stichwörter:** algebraische Struktur, Verknüpfung (operation), Assoziativgesetz, neutrales Element, Inverses, Kommutativgesetz, Gruppe, Körper, Vektorraum, Homomorphismus.

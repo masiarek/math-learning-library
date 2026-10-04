@@ -303,6 +303,12 @@ python3 01_Precision/machine_numbers/examples/machine_numbers.py
 - Jean-Michel Muller et al., *Handbook of Floating-Point Arithmetic*, 2nd edition, Springer 2018 ([doi:10.1007/978-3-319-76526-6 ↗](https://doi.org/10.1007/978-3-319-76526-6)) — chapter 1 for the famous bugs, chapter 2 for rounding functions and the properties they keep.
 - Michael L. Overton, *Numerical Computing with IEEE Floating Point Arithmetic*, SIAM 2001 — a gentler route to the same ground.
 
+## Auf Deutsch: Stichwörter
+
+Eine Gleitkommazahl ist ein exaktes Element einer endlichen Menge; welche Rechengesetze das überlebt und welche nicht.
+
+**Stichwörter:** Maschinenzahl, Gleitkommazahl (float, binary64), Mantisse, Exponent, Maschinengenauigkeit (machine epsilon), Rundungsfehler, Assoziativgesetz verletzt.
+
 ## See also
 
 - [Significant figures](../significant_figures/README.md) — the fixed-significant-digits idea a float is built on
