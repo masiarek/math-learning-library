@@ -13,7 +13,7 @@ and are not, and shows that <= orders sets only partially, which is why
 sorted() on a list of sets returns nonsense.
 """
 
-from itertools import combinations, product
+from itertools import combinations, product, permutations
 
 U = frozenset({1, 2, 3, 4})
 
@@ -149,14 +149,22 @@ def main() -> None:
     print(f"   reflexive {refl},  antisymmetric {anti},  transitive {trans}")
     print(f"   but of the {pairs} pairs of distinct subsets only {comparable} are comparable;")
     print(f"   {pairs - comparable} pairs, like {{1}} and {{2}}, have neither {{1}} <= {{2}} nor {{2}} <= {{1}}.")
-    for data in ([{3}, {1, 2}, {1}], [{1, 2}, {1}, {3}], [{1}, {3}, {1, 2}]):
-        print(f"   sorted({[show(d) for d in data]}) = {[show(d) for d in sorted(data)]}")
-    print("   Same three sets, three different 'sorted' orders: sorted() uses <,")
-    print("   which for sets is 'proper subset', and {3} is neither above nor below")
-    print("   the others. Sort by a key that is a total order instead:")
-    data = [{3}, {1, 2}, {1}]
+    three = [{3}, {1, 2}, {1}]
+    print(f"   {{3}} < {{1}}: {({3} < {1})}   {{1}} < {{3}}: {({1} < {3})}   "
+          f"{{3}} < {{1, 2}}: {({3} < {1, 2})}   {{1, 2}} < {{3}}: {({1, 2} < {3})}")
+    print("   sorted() only asks <, so it learns nothing about where {3} goes; where it")
+    print("   lands depends on the input order and even on the Python version (3.12 and")
+    print("   3.13 differ), so no such order is recorded here. What holds every time:")
+    unsorted_every_time = all(
+        any(not (a <= b) for a, b in zip(out, out[1:]))
+        for perm in permutations(three)
+        for out in [sorted(perm)]
+    )
+    print(f"   for all 6 input orders of {[show(d) for d in three]} the result has a")
+    print(f"   neighbouring pair that is not in <= order: {unsorted_every_time}")
+    print("   Sort by a key that is a total order instead:")
     print(f"   sorted(..., key=lambda s: (len(s), sorted(s))) = "
-          f"{[show(d) for d in sorted(data, key=lambda s: (len(s), sorted(s)))]}")
+          f"{[show(d) for d in sorted(three, key=lambda s: (len(s), sorted(s)))]}")
 
     print()
 

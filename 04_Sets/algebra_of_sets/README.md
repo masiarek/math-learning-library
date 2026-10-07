@@ -68,7 +68,7 @@ A Venn diagram of n sets draws one region for each pattern of membership: in or 
 
 ⊆ has the three properties of an order: every set is a subset of itself (reflexive), A ⊆ B and B ⊆ A together force A = B (antisymmetric, which is extensionality again), and A ⊆ B ⊆ C gives A ⊆ C (transitive). Unlike ≤ on numbers, it is not **total**: {1} and {2} are neither above nor below each other. Of the 120 pairs of distinct subsets of {1, 2, 3, 4}, only 65 are comparable. A set with an order like this is a **partially ordered set**, or poset, and the subsets of a set are the standard example.
 
-That has a consequence in Python. `sorted()` compares with `<`, and for sets `<` means proper subset. Given sets that are not all comparable, it returns an order that depends on the input order and means nothing: section 6 sorts the same three sets three ways and gets three answers. To sort sets, give a key that is a total order, such as `key=lambda s: (len(s), sorted(s))`.
+That has a consequence in Python. `sorted()` compares with `<`, and for sets `<` means proper subset. Given sets that are not all comparable, it returns an order that depends on the input order and means nothing: section 6 checks that for every input order of three such sets the result has a neighbouring pair not in ⊆ order, and where the incomparable set lands even differs between Python 3.12 and 3.13. To sort sets, give a key that is a total order, such as `key=lambda s: (len(s), sorted(s))`.
 
 ## Symmetric difference is exclusive or
 
@@ -173,12 +173,13 @@ The section ends with the rule that turns every set equality into two subset pro
    reflexive True,  antisymmetric True,  transitive True
    but of the 120 pairs of distinct subsets only 65 are comparable;
    55 pairs, like {1} and {2}, have neither {1} <= {2} nor {2} <= {1}.
-   sorted(['{3}', '{1, 2}', '{1}']) = ['{3}', '{1}', '{1, 2}']
-   sorted(['{1, 2}', '{1}', '{3}']) = ['{1}', '{1, 2}', '{3}']
-   sorted(['{1}', '{3}', '{1, 2}']) = ['{1}', '{3}', '{1, 2}']
-   Same three sets, three different 'sorted' orders: sorted() uses <,
-   which for sets is 'proper subset', and {3} is neither above nor below
-   the others. Sort by a key that is a total order instead:
+   {3} < {1}: False   {1} < {3}: False   {3} < {1, 2}: False   {1, 2} < {3}: False
+   sorted() only asks <, so it learns nothing about where {3} goes; where it
+   lands depends on the input order and even on the Python version (3.12 and
+   3.13 differ), so no such order is recorded here. What holds every time:
+   for all 6 input orders of ['{3}', '{1, 2}', '{1}'] the result has a
+   neighbouring pair that is not in <= order: True
+   Sort by a key that is a total order instead:
    sorted(..., key=lambda s: (len(s), sorted(s))) = ['{1}', '{3}', '{1, 2}']
 
 7. SYMMETRIC DIFFERENCE: EXCLUSIVE OR, AND A GROUP
