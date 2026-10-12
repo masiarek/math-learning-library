@@ -3,6 +3,7 @@
 How the owner of this library works, as learned from sessions. Update when a session shows something new.
 
 - Writes short, fast messages, often from a phone; typos are normal. Read for intent, and ask only when two readings lead to different work.
+- Wants replies terse: no wordy writing (said 2026-10-12). Short lines, tables, no padding.
 - A photo of a book page with a short note ("add to learning") means: find where it belongs in the library and publish it.
 - Does not want to check or click anything: every finished piece of work goes all the way to merged on `master` in the same session (see `CLAUDE.md`).
 - Reads Polish; every new page carries `## Po polsku, w skrócie`. Reads German too and wanted German as keywords, not prose: every page carries `## Auf Deutsch: Stichwörter` (one sentence, one line of terms).
